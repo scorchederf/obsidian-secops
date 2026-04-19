@@ -24,6 +24,3 @@ Adversaries may leverage a variety of tools to execute commands on ESXi-hosted V
 
 - ESXi
 
-## Tools
-
-

@@ -23,6 +23,7 @@ Once forged, adversaries may use these web credentials to access resources (ex: 
 ## Subtechniques
 
 ### T1606.001: Web Cookies
+
 ^t1606001-web-cookies
 
 **Parent Technique**
@@ -37,17 +38,8 @@ Adversaries may generate these cookies in order to gain access to web resources.
 
 Once forged, adversaries may use these web cookies to access resources ([Web Session Cookie](https://attack.mitre.org/techniques/T1550/004)), which may bypass multi-factor and other authentication protection mechanisms.(Citation: Volexity SolarWinds)(Citation: Pass The Cookie)(Citation: Unit 42 Mac Crypto Cookies January 2019)
 
-#### Properties
-
-- id: T1606.001
-- name: Web Cookies
-- created: 2020-12-17 02:14:34.178000+00:00
-- modified: 2025-10-24 17:49:04.036000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1606.002: SAML Tokens
+
 ^t1606002-saml-tokens
 
 **Parent Technique**
@@ -61,16 +53,6 @@ An adversary may forge SAML tokens with any permissions claims and lifetimes if 
 An adversary may utilize [Private Keys](https://attack.mitre.org/techniques/T1552/004) to compromise an organization's token-signing certificate to create forged SAML tokens. If the adversary has sufficient permissions to establish a new federation trust with their own Active Directory Federation Services (AD FS) server, they may instead generate their own trusted token-signing certificate.(Citation: Microsoft SolarWinds Customer Guidance) This differs from [Steal Application Access Token](https://attack.mitre.org/techniques/T1528) and other similar behaviors in that the tokens are new and forged by the adversary, rather than stolen or intercepted from legitimate users.
 
 An adversary may gain administrative Entra ID privileges if a SAML token is forged which claims to represent a highly privileged account. This may lead to [Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550), which may bypass multi-factor and other authentication protection mechanisms.(Citation: Microsoft SolarWinds Customer Guidance)
-
-#### Properties
-
-- id: T1606.002
-- name: SAML Tokens
-- created: 2020-12-17 15:24:12.240000+00:00
-- modified: 2025-10-24 17:48:30.302000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

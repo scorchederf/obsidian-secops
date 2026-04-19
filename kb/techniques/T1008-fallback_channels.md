@@ -25,7 +25,3 @@ Adversaries may use fallback or alternate communication channels if the primary 
 - macOS
 - ESXi
 
-## Tools
-
-- [[mythic|Mythic]]
-

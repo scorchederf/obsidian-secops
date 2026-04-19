@@ -21,6 +21,7 @@ When an adversary takes control of such a boundary device, they can bypass its p
 ## Subtechniques
 
 ### T1599.001: Network Address Translation Traversal
+
 ^t1599001-network-address-translation-traversal
 
 **Parent Technique**
@@ -36,16 +37,6 @@ Network devices such as routers and firewalls that connect multiple networks tog
 When an adversary gains control of a network boundary device, they may modify NAT configurations to send traffic between two separated networks, or to obscure their activities.  In network designs that require NAT to function, such modifications enable the adversary to overcome inherent routing limitations that would normally prevent them from accessing protected systems behind the border device.  In network designs that do not require NAT, adversaries may use address translation to further obscure their activities, as changing the addresses of packets that traverse a network boundary device can make monitoring data transmissions more challenging for defenders.  
 
 Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T1601/001) to change the operating system of a network device, implementing their own custom NAT mechanisms to further obscure their activities.
-
-#### Properties
-
-- id: T1599.001
-- name: Network Address Translation Traversal
-- created: 2020-10-19 16:48:08.241000+00:00
-- modified: 2025-10-24 17:48:46.071000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

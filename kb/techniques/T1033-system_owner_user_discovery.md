@@ -25,14 +25,3 @@ On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T10
 - Network Devices
 - Windows
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-- [[bloodhound|BloodHound]]
-- [[empire|Empire]]
-- [[koadic|Koadic]]
-- [[nbtscan|NBTscan]]
-- [[pupy|Pupy]]
-- [[quasarrat|QuasarRAT]]
-- [[silenttrinity|SILENTTRINITY]]
-

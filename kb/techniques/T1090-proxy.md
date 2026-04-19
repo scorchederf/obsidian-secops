@@ -19,6 +19,7 @@ Adversaries can also take advantage of routing schemes in Content Delivery Netwo
 ## Subtechniques
 
 ### T1090.001: Internal Proxy
+
 ^t1090001-internal-proxy
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may use an internal proxy to direct command and control traffic betw
 
 By using a compromised internal system as a proxy, adversaries may conceal the true destination of C2 traffic while reducing the need for numerous connections to external systems.
 
-#### Properties
-
-- id: T1090.001
-- name: Internal Proxy
-- created: 2020-03-14 23:08:20.244000+00:00
-- modified: 2025-10-24 17:49:37.574000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1090.002: External Proxy
+
 ^t1090002-external-proxy
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may use an external proxy to act as an intermediary for network comm
 
 External connection proxies are used to mask the destination of C2 traffic and are typically implemented with port redirectors. Compromised systems outside of the victim environment may be used for these purposes, as well as purchased infrastructure such as cloud-based resources or virtual private servers. Proxies may be chosen based on the low likelihood that a connection to them from a compromised system would be investigated. Victim systems would communicate directly with the external proxy on the Internet and then the proxy would forward communications to the C2 server.
 
-#### Properties
-
-- id: T1090.002
-- name: External Proxy
-- created: 2020-03-14 23:12:18.466000+00:00
-- modified: 2025-10-24 17:48:54.165000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1090.003: Multi-hop Proxy
+
 ^t1090003-multi-hop-proxy
 
 **Parent Technique**
@@ -81,17 +64,8 @@ In the case of network infrastructure, it is possible for an adversary to levera
 
 Similarly, adversaries may abuse peer-to-peer (P2P) and blockchain-oriented infrastructure to implement routing between a decentralized network of peers.(Citation: NGLite Trojan)
 
-#### Properties
-
-- id: T1090.003
-- name: Multi-hop Proxy
-- created: 2020-03-14 23:23:41.770000+00:00
-- modified: 2025-10-24 17:49:11.774000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ### T1090.004: Domain Fronting
+
 ^t1090004-domain-fronting
 
 **Parent Technique**
@@ -103,16 +77,6 @@ Similarly, adversaries may abuse peer-to-peer (P2P) and blockchain-oriented infr
 Adversaries may take advantage of routing schemes in Content Delivery Networks (CDNs) and other services which host multiple domains to obfuscate the intended destination of HTTPS traffic or traffic tunneled through HTTPS. (Citation: Fifield Blocking Resistent Communication through domain fronting 2015) Domain fronting involves using different domain names in the SNI field of the TLS header and the Host field of the HTTP header. If both domains are served from the same CDN, then the CDN may route to the address specified in the HTTP header after unwrapping the TLS header. A variation of the the technique, "domainless" fronting, utilizes a SNI field that is left blank; this may allow the fronting to work even when the CDN attempts to validate that the SNI and HTTP Host fields match (if the blank SNI fields are ignored).
 
 For example, if domain-x and domain-y are customers of the same CDN, it is possible to place domain-x in the TLS header and domain-y in the HTTP header. Traffic will appear to be going to domain-x, however the CDN may route it to domain-y.
-
-#### Properties
-
-- id: T1090.004
-- name: Domain Fronting
-- created: 2020-03-14 23:29:19.581000+00:00
-- modified: 2025-10-24 17:49:23.135000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -127,14 +91,4 @@ For example, if domain-x and domain-y are customers of the same CDN, it is possi
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
-- [[frp|FRP]]
-- [[htran|HTRAN]]
-- [[netsh|netsh]]
-- [[ngrok|ngrok]]
-- [[poshc2|PoshC2]]
-- [[quasarrat|QuasarRAT]]
-- [[remcos|Remcos]]
 

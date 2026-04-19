@@ -31,6 +31,3 @@ Aware that some malware cannot survive system reboots, adversaries may entirely 
 - macOS
 - Network Devices
 
-## Tools
-
-

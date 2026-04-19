@@ -33,6 +33,3 @@ Due to the potentially immense business impact of financial theft, an adversary 
 - SaaS
 - Windows
 
-## Tools
-
-

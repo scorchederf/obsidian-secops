@@ -19,6 +19,7 @@ To change the operating system, the adversary typically only needs to affect thi
 ## Subtechniques
 
 ### T1601.001: Patch System Image
+
 ^t1601001-patch-system-image
 
 **Parent Technique**
@@ -43,17 +44,8 @@ When the operating system is patched in storage, this can be achieved in either 
 
 When the technique is performed on the running operating system in memory and not on the stored copy, this technique will not survive across reboots.  However, live memory modification of the operating system can be combined with [ROMMONkit](https://attack.mitre.org/techniques/T1542/004) to achieve persistence. 
 
-#### Properties
-
-- id: T1601.001
-- name: Patch System Image
-- created: 2020-10-19 19:49:24.129000+00:00
-- modified: 2025-10-24 17:49:26.083000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1601.002: Downgrade System Image
+
 ^t1601002-downgrade-system-image
 
 **Parent Technique**
@@ -67,16 +59,6 @@ Adversaries may install an older version of the operating system of a network de
 On embedded devices, downgrading the version typically only requires replacing the operating system file in storage.  With most embedded devices, this can be achieved by downloading a copy of the desired version of the operating system file and reconfiguring the device to boot from that file on next system restart.  The adversary could then restart the device to implement the change immediately or they could wait until the next time the system restarts.
 
 Downgrading the system image to an older versions may allow an adversary to evade defenses by enabling behaviors such as [Weaken Encryption](https://attack.mitre.org/techniques/T1600).  Downgrading of a system image can be done on its own, or it can be used in conjunction with [Patch System Image](https://attack.mitre.org/techniques/T1601/001).  
-
-#### Properties
-
-- id: T1601.002
-- name: Downgrade System Image
-- created: 2020-10-19 19:53:10.576000+00:00
-- modified: 2025-10-24 17:49:39.331000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

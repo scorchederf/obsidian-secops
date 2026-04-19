@@ -20,10 +20,3 @@ The Registry contains a significant amount of information about the operating sy
 
 - Windows
 
-## Tools
-
-- [[pcshare|PcShare]]
-- [[powersploit|PowerSploit]]
-- [[reg|Reg]]
-- [[silenttrinity|SILENTTRINITY]]
-

@@ -19,6 +19,7 @@ The type of modification and the impact it will have depends on the target appli
 ## Subtechniques
 
 ### T1565.001: Stored Data Manipulation
+
 ^t1565001-stored-data-manipulation
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may insert, delete, or manipulate data at rest in order to influence
 
 Stored data could include a variety of file formats, such as Office files, databases, stored emails, and custom file formats. The type of modification and the impact it will have depends on the type of data as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
 
-#### Properties
-
-- id: T1565.001
-- name: Stored Data Manipulation
-- created: 2020-03-02 14:22:24.410000+00:00
-- modified: 2025-10-24 17:48:29.225000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1565.002: Transmitted Data Manipulation
+
 ^t1565002-transmitted-data-manipulation
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may alter data en route to storage or other systems in order to mani
 
 Manipulation may be possible over a network connection or between system processes where there is an opportunity deploy a tool that will intercept and change information. The type of modification and the impact it will have depends on the target transmission mechanism as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
 
-#### Properties
-
-- id: T1565.002
-- name: Transmitted Data Manipulation
-- created: 2020-03-02 14:27:00.693000+00:00
-- modified: 2025-10-24 17:49:25.162000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1565.003: Runtime Data Manipulation
+
 ^t1565003-runtime-data-manipulation
 
 **Parent Technique**
@@ -76,16 +59,6 @@ Manipulation may be possible over a network connection or between system process
 Adversaries may modify systems in order to manipulate the data as it is accessed and displayed to an end user, thus threatening the integrity of the data.(Citation: FireEye APT38 Oct 2018)(Citation: DOJ Lazarus Sony 2018) By manipulating runtime data, adversaries may attempt to affect a business process, organizational understanding, and decision making.
 
 Adversaries may alter application binaries used to display data in order to cause runtime manipulations. Adversaries may also conduct [Change Default File Association](https://attack.mitre.org/techniques/T1546/001) and [Masquerading](https://attack.mitre.org/techniques/T1036) to cause a similar effect. The type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
-
-#### Properties
-
-- id: T1565.003
-- name: Runtime Data Manipulation
-- created: 2020-03-02 14:30:05.252000+00:00
-- modified: 2025-10-24 17:48:37.277000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

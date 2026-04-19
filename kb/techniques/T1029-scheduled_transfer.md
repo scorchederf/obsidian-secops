@@ -26,6 +26,3 @@ When scheduled exfiltration is used, other exfiltration techniques likely apply 
 - macOS
 - Windows
 
-## Tools
-
-

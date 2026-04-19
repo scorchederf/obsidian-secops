@@ -19,6 +19,7 @@ Adversaries may maliciously modify a part of this process to either reveal crede
 ## Subtechniques
 
 ### T1556.001: Domain Controller Authentication
+
 ^t1556001-domain-controller-authentication
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may patch the authentication process on a domain controller to bypas
 
 Malware may be used to inject false credentials into the authentication process on a domain controller with the intent of creating a backdoor used to access any user’s account and/or credentials (ex: [Skeleton Key](https://attack.mitre.org/software/S0007)). Skeleton key works through a patch on an enterprise domain controller authentication process (LSASS) with credentials that adversaries may use to bypass the standard authentication system. Once patched, an adversary can use the injected password to successfully authenticate as any domain user account (until the the skeleton key is erased from memory by a reboot of the domain controller). Authenticated access may enable unfettered access to hosts and/or resources within single-factor authentication environments.(Citation: Dell Skeleton)
 
-#### Properties
-
-- id: T1556.001
-- name: Domain Controller Authentication
-- created: 2020-02-11 19:05:02.399000+00:00
-- modified: 2025-10-24 17:49:27.324000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1556.002: Password Filter DLL
+
 ^t1556002-password-filter-dll
 
 **Parent Technique**
@@ -56,17 +48,8 @@ Windows password filters are password policy enforcement mechanisms for both dom
 
 Adversaries can register malicious password filters to harvest credentials from local computers and/or entire domains. To perform proper validation, filters must receive plain-text credentials from the LSA. A malicious password filter would receive these plain-text credentials every time a password request is made.(Citation: Carnal Ownage Password Filters Sept 2013)
 
-#### Properties
-
-- id: T1556.002
-- name: Password Filter DLL
-- created: 2020-02-11 19:05:45.829000+00:00
-- modified: 2025-10-24 17:48:39.067000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1556.003: Pluggable Authentication Modules
+
 ^t1556003-pluggable-authentication-modules
 
 **Parent Technique**
@@ -81,17 +64,8 @@ Adversaries may modify components of the PAM system to create backdoors. PAM com
 
 Malicious modifications to the PAM system may also be abused to steal credentials. Adversaries may infect PAM resources with code to harvest user credentials, since the values exchanged with PAM components may be plain-text since PAM does not store passwords.(Citation: PAM Creds)(Citation: Apple PAM)
 
-#### Properties
-
-- id: T1556.003
-- name: Pluggable Authentication Modules
-- created: 2020-06-26 04:01:09.648000+00:00
-- modified: 2025-10-24 17:48:21.118000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1556.004: Network Device Authentication
+
 ^t1556004-network-device-authentication
 
 **Parent Technique**
@@ -104,17 +78,8 @@ Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T16
 
 [Modify System Image](https://attack.mitre.org/techniques/T1601) may include implanted code to the operating system for network devices to provide access for adversaries using a specific password.  The modification includes a specific password which is implanted in the operating system image via the patch.  Upon authentication attempts, the inserted code will first check to see if the user input is the password. If so, access is granted. Otherwise, the implanted code will pass the credentials on for verification of potentially valid credentials.(Citation: Mandiant - Synful Knock)
 
-#### Properties
-
-- id: T1556.004
-- name: Network Device Authentication
-- created: 2020-10-19 17:58:04.155000+00:00
-- modified: 2025-10-24 17:49:38.719000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1556.005: Reversible Encryption
+
 ^t1556005-reversible-encryption
 
 **Parent Technique**
@@ -136,17 +101,8 @@ With this information, an adversary may be able to reproduce the encryption key 
 
 An adversary may set this property at various scopes through Local Group Policy Editor, user properties, Fine-Grained Password Policy (FGPP), or via the ActiveDirectory [PowerShell](https://attack.mitre.org/techniques/T1059/001) module. For example, an adversary may implement and apply a FGPP to users or groups if the Domain Functional Level is set to "Windows Server 2008" or higher.(Citation: dump_pwd_dcsync) In PowerShell, an adversary may make associated changes to user settings using commands similar to <code>Set-ADUser -AllowReversiblePasswordEncryption $true</code>.
 
-#### Properties
-
-- id: T1556.005
-- name: Reversible Encryption
-- created: 2022-01-13 20:02:28.349000+00:00
-- modified: 2025-10-24 17:49:27.587000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1556.006: Multi-Factor Authentication
+
 ^t1556006-multi-factor-authentication
 
 **Parent Technique**
@@ -163,17 +119,8 @@ For example, modifying the Windows hosts file (`C:\windows\system32\drivers\etc\
 
 Depending on the scope, goals, and privileges of the adversary, MFA defenses may be disabled for individual accounts or for all accounts tied to a larger group, such as all domain accounts in a victim's network environment.(Citation: Russians Exploit Default MFA Protocol - CISA March 2022) 
 
-#### Properties
-
-- id: T1556.006
-- name: Multi-Factor Authentication
-- created: 2022-05-31 19:31:38.431000+00:00
-- modified: 2025-04-15 19:58:59.338000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1556.007: Hybrid Identity
+
 ^t1556007-hybrid-identity
 
 **Parent Technique**
@@ -196,17 +143,8 @@ By modifying authentication processes tied to hybrid identities, an adversary ma
 
 In some cases, adversaries may be able to modify the hybrid identity authentication process from the cloud. For example, adversaries who compromise a Global Administrator account in an Entra ID tenant may be able to register a new PTA agent via the web console, similarly allowing them to harvest credentials and log into the Entra ID environment as any user.(Citation: Mandiant Azure AD Backdoors)
 
-#### Properties
-
-- id: T1556.007
-- name: Hybrid Identity
-- created: 2022-09-28 13:29:53.354000+00:00
-- modified: 2025-04-15 22:40:10.913000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1556.008: Network Provider DLL
+
 ^t1556008-network-provider-dll
 
 **Parent Technique**
@@ -221,17 +159,8 @@ Adversaries can configure a malicious network provider DLL to receive credential
 
 Adversaries may target planting malicious network provider DLLs on systems known to have increased logon activity and/or administrator logon activity, such as servers and domain controllers.(Citation: NPPSPY - Huntress)
 
-#### Properties
-
-- id: T1556.008
-- name: Network Provider DLL
-- created: 2023-03-30 22:45:00.431000+00:00
-- modified: 2025-04-15 22:51:56.379000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1556.009: Conditional Access Policies
+
 ^t1556009-conditional-access-policies
 
 **Parent Technique**
@@ -245,16 +174,6 @@ Adversaries may disable or modify conditional access policies to enable persiste
 For example, in Entra ID, Okta, and JumpCloud, users can be denied access to applications based on their IP address, device enrollment status, and use of multi-factor authentication.(Citation: Microsoft Conditional Access)(Citation: JumpCloud Conditional Access Policies)(Citation: Okta Conditional Access Policies) In some cases, identity providers may also support the use of risk-based metrics to deny sign-ins based on a variety of indicators. In AWS and GCP, IAM policies can contain `condition` attributes that verify arbitrary constraints such as the source IP, the date the request was made, and the nature of the resources or regions being requested.(Citation: AWS IAM Conditions)(Citation: GCP IAM Conditions) These measures help to prevent compromised credentials from resulting in unauthorized access to data or resources, as well as limit user permissions to only those required. 
 
 By modifying conditional access policies, such as adding additional trusted IP ranges, removing [Multi-Factor Authentication](https://attack.mitre.org/techniques/T1556/006) requirements, or allowing additional [Unused/Unsupported Cloud Regions](https://attack.mitre.org/techniques/T1535), adversaries may be able to ensure persistent access to accounts and circumvent defensive measures.
-
-#### Properties
-
-- id: T1556.009
-- name: Conditional Access Policies
-- created: 2024-01-02 13:43:37.389000+00:00
-- modified: 2025-04-15 22:09:03.621000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -278,8 +197,4 @@ By modifying conditional access policies, such as adding additional trusted IP r
 - SaaS
 - Office Suite
 - Identity Provider
-
-## Tools
-
-- [[silenttrinity|SILENTTRINITY]]
 

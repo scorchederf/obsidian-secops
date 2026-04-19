@@ -54,14 +54,6 @@ Cross-Platform Solutions:
 - Wazuh or OSSEC: File integrity monitoring for library changes.
 - Tripwire: Detect and alert on unauthorized library modifications.
 
-## Properties
-
-- id: M1044
-- name: Restrict Library Loading
-- created: 2019-06-11 17:00:01.740000+00:00
-- modified: 2024-12-18 20:22:48.602000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]

@@ -34,6 +34,3 @@ Adversaries may also compromise shared network directories through binary infect
 - macOS
 - Office Suite
 
-## Tools
-
-

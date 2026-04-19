@@ -17,6 +17,7 @@ Adversaries may use trusted scripts, often signed with certificates, to proxy th
 ## Subtechniques
 
 ### T1216.001: PubPrn
+
 ^t1216001-pubprn
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may abuse PubPrn to execute malicious payloads hosted on remote site
 
 In later versions of Windows (10+), <code>PubPrn.vbs</code> has been updated to prevent proxying execution from a remote site. This is done by limiting the protocol specified in the second parameter to <code>LDAP://</code>, vice the <code>script:</code> moniker which could be used to reference remote code via HTTP(S).
 
-#### Properties
-
-- id: T1216.001
-- name: PubPrn
-- created: 2020-02-03 16:49:57.788000+00:00
-- modified: 2025-10-24 17:48:22.022000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1216.002: SyncAppvPublishingServer
+
 ^t1216002-syncappvpublishingserver
 
 **Parent Technique**
@@ -59,16 +51,6 @@ Adversaries may abuse SyncAppvPublishingServer.vbs to bypass [PowerShell](https:
 For example,  [PowerShell](https://attack.mitre.org/techniques/T1059/001) commands may be invoked using:(Citation: 5 - appv)
 
 `SyncAppvPublishingServer.vbs "n; {PowerShell}"`
-
-#### Properties
-
-- id: T1216.002
-- name: SyncAppvPublishingServer
-- created: 2024-02-06 16:20:41.647000+00:00
-- modified: 2025-04-15 23:13:55.573000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

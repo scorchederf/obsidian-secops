@@ -30,6 +30,7 @@ For attacks attempting to saturate the providing network, see [Network Denial of
 ## Subtechniques
 
 ### T1499.001: OS Exhaustion Flood
+
 ^t1499001-os-exhaustion-flood
 
 **Parent Technique**
@@ -44,17 +45,8 @@ Different ways to achieve this exist, including TCP state-exhaustion attacks suc
 
 ACK floods leverage the stateful nature of the TCP protocol. A flood of ACK packets are sent to the target. This forces the OS to search its state table for a related TCP connection that has already been established. Because the ACK packets are for connections that do not exist, the OS will have to search the entire state table to confirm that no match exists. When it is necessary to do this for a large flood of packets, the computational requirements can cause the server to become sluggish and/or unresponsive, due to the work it must do to eliminate the rogue ACK packets. This greatly reduces the resources available for providing the targeted service.(Citation: Corero SYN-ACKflood)
 
-#### Properties
-
-- id: T1499.001
-- name: OS Exhaustion Flood
-- created: 2020-02-20 15:27:18.581000+00:00
-- modified: 2025-10-24 17:48:23.935000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1499.002: Service Exhaustion Flood
+
 ^t1499002-service-exhaustion-flood
 
 **Parent Technique**
@@ -69,17 +61,8 @@ One example of this type of attack is known as a simple HTTP flood, where an adv
 
 Another variation, known as a SSL renegotiation attack, takes advantage of a protocol feature in SSL/TLS. The SSL/TLS protocol suite includes mechanisms for the client and server to agree on an encryption algorithm to use for subsequent secure connections. If SSL renegotiation is enabled, a request can be made for renegotiation of the crypto algorithm. In a renegotiation attack, the adversary establishes a SSL/TLS connection and then proceeds to make a series of renegotiation requests. Because the cryptographic renegotiation has a meaningful cost in computation cycles, this can cause an impact to the availability of the service when done in volume.(Citation: Arbor SSLDoS April 2012)
 
-#### Properties
-
-- id: T1499.002
-- name: Service Exhaustion Flood
-- created: 2020-02-20 15:31:43.613000+00:00
-- modified: 2025-10-24 17:48:39.609000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1499.003: Application Exhaustion Flood
+
 ^t1499003-application-exhaustion-flood
 
 **Parent Technique**
@@ -90,17 +73,8 @@ Another variation, known as a SSL renegotiation attack, takes advantage of a pro
 
 Adversaries may target resource intensive features of applications to cause a denial of service (DoS), denying availability to those applications. For example, specific features in web applications may be highly resource intensive. Repeated requests to those features may be able to exhaust system resources and deny access to the application or the server itself.(Citation: Arbor AnnualDoSreport Jan 2018)
 
-#### Properties
-
-- id: T1499.003
-- name: Application Exhaustion Flood
-- created: 2020-02-20 15:35:00.025000+00:00
-- modified: 2025-10-24 17:48:27.259000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1499.004: Application or System Exploitation
+
 ^t1499004-application-or-system-exploitation
 
 **Parent Technique**
@@ -113,16 +87,6 @@ Adversaries may exploit software vulnerabilities that can cause an application o
 
 Adversaries may exploit known or zero-day vulnerabilities to crash applications and/or systems, which may also lead to dependent applications and/or systems to be in a DoS condition. Crashed or restarted applications or systems may also have other effects such as [Data Destruction](https://attack.mitre.org/techniques/T1485), [Firmware Corruption](https://attack.mitre.org/techniques/T1495), [Service Stop](https://attack.mitre.org/techniques/T1489) etc. which may further cause a DoS condition and deny availability to critical information, applications and/or systems. 
 
-#### Properties
-
-- id: T1499.004
-- name: Application or System Exploitation
-- created: 2020-02-20 15:37:27.052000+00:00
-- modified: 2025-10-24 17:48:34.531000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1037-filter_network_traffic|M1037: Filter Network Traffic]]
@@ -134,7 +98,4 @@ Adversaries may exploit known or zero-day vulnerabilities to crash applications 
 - macOS
 - Containers
 - IaaS
-
-## Tools
-
 

@@ -28,6 +28,7 @@ For example, tech support scams can be facilitated through [Phishing](https://at
 ## Subtechniques
 
 ### T1204.001: Malicious Link
+
 ^t1204001-malicious-link
 
 **Parent Technique**
@@ -38,17 +39,8 @@ For example, tech support scams can be facilitated through [Phishing](https://at
 
 An adversary may rely upon a user clicking a malicious link in order to gain execution. Users may be subjected to social engineering to get them to click on a link that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Link](https://attack.mitre.org/techniques/T1566/002). Clicking on a link may also lead to other execution techniques such as exploitation of a browser or application vulnerability via [Exploitation for Client Execution](https://attack.mitre.org/techniques/T1203). Links may also lead users to download files that require execution via [Malicious File](https://attack.mitre.org/techniques/T1204/002).
 
-#### Properties
-
-- id: T1204.001
-- name: Malicious Link
-- created: 2020-03-11 14:43:31.706000+00:00
-- modified: 2025-10-24 17:49:35.144000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1204.002: Malicious File
+
 ^t1204002-malicious-file
 
 **Parent Technique**
@@ -63,17 +55,8 @@ Adversaries may employ various forms of [Masquerading](https://attack.mitre.org/
 
 While [Malicious File](https://attack.mitre.org/techniques/T1204/002) frequently occurs shortly after Initial Access it may occur at other phases of an intrusion, such as when an adversary places a file in a shared directory or on a user's desktop hoping that a user will click on it. This activity may also be seen shortly after [Internal Spearphishing](https://attack.mitre.org/techniques/T1534).
 
-#### Properties
-
-- id: T1204.002
-- name: Malicious File
-- created: 2020-03-11 14:49:36.954000+00:00
-- modified: 2025-10-24 17:48:31.674000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ### T1204.003: Malicious Image
+
 ^t1204003-malicious-image
 
 **Parent Technique**
@@ -86,17 +69,8 @@ Adversaries may rely on a user running a malicious image to facilitate execution
 
 Adversaries may also name images a certain way to increase the chance of users mistakenly deploying an instance or container from the image (ex: [Match Legitimate Resource Name or Location](https://attack.mitre.org/techniques/T1036/005)).(Citation: Aqua Security Cloud Native Threat Report June 2021)
 
-#### Properties
-
-- id: T1204.003
-- name: Malicious Image
-- created: 2021-03-30 17:20:05.789000+00:00
-- modified: 2025-10-24 17:49:13.999000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1204.004: Malicious Copy and Paste
+
 ^t1204004-malicious-copy-and-paste
 
 **Parent Technique**
@@ -113,17 +87,8 @@ Adversaries may also leverage phishing emails for this purpose. When a user atte
 
 Tricking a user into executing a command themselves may help to bypass email filtering, browser sandboxing, or other mitigations designed to protect users against malicious downloaded files. 
 
-#### Properties
-
-- id: T1204.004
-- name: Malicious Copy and Paste
-- created: 2025-03-18 12:57:50.188000+00:00
-- modified: 2025-10-05 17:30:01.834000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1204.005: Malicious Library
+
 ^t1204005-malicious-library
 
 **Parent Technique**
@@ -135,16 +100,6 @@ Tricking a user into executing a command themselves may help to bypass email fil
 Adversaries may rely on a user installing a malicious library to facilitate execution. Threat actors may [Upload Malware](https://attack.mitre.org/techniques/T1608/001) to package managers such as NPM and PyPi, as well as to public code repositories such as GitHub. User may install libraries without realizing they are malicious, thus bypassing techniques that specifically achieve Initial Access. This can lead to the execution of malicious code, such as code that establishes persistence, steals data, or mines cryptocurrency.(Citation: Datadog Security Labs Malicious PyPi Packages 2024)(Citation: Fortinet Malicious NPM Packages 2023)
 
 In some cases, threat actors may compromise and backdoor existing popular libraries (i.e., [Compromise Software Dependencies and Development Tools](https://attack.mitre.org/techniques/T1195/001)). Alternatively, they may create entirely new packages and leverage behaviors such as typosquatting to encourage users to install them.
-
-#### Properties
-
-- id: T1204.005
-- name: Malicious Library
-- created: 2025-05-22 19:50:18.472000+00:00
-- modified: 2025-05-22 21:22:40.822000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -162,7 +117,4 @@ In some cases, threat actors may compromise and backdoor existing popular librar
 - macOS
 - IaaS
 - Containers
-
-## Tools
-
 

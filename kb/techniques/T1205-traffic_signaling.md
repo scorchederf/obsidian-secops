@@ -25,6 +25,7 @@ Adversaries may also use the Wake-on-LAN feature to turn on powered off systems.
 ## Subtechniques
 
 ### T1205.001: Port Knocking
+
 ^t1205001-port-knocking
 
 **Parent Technique**
@@ -39,17 +40,8 @@ This technique has been observed both for the dynamic opening of a listening por
 
 The observation of the signal packets to trigger the communication can be conducted through different methods. One means, originally implemented by Cd00r (Citation: Hartrell cd00r 2002), is to use the libpcap libraries to sniff for the packets in question. Another method leverages raw sockets, which enables the malware to use ports that are already open for use by other programs.
 
-#### Properties
-
-- id: T1205.001
-- name: Port Knocking
-- created: 2020-07-01 18:23:25.002000+00:00
-- modified: 2025-10-24 17:49:04.301000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1205.002: Socket Filters
+
 ^t1205002-socket-filters
 
 **Parent Technique**
@@ -64,16 +56,6 @@ To establish a connection, an adversary sends a crafted packet to the targeted h
 
 Filters can be installed on any Unix-like platform with `libpcap` installed or on Windows hosts using `Winpcap`.  Adversaries may use either `libpcap` with `pcap_setfilter` or the standard library function `setsockopt` with `SO_ATTACH_FILTER` options. Since the socket connection is not active until the packet is received, this behavior may be difficult to detect due to the lack of activity on a host, low CPU overhead, and limited visibility into raw socket usage.
 
-#### Properties
-
-- id: T1205.002
-- name: Socket Filters
-- created: 2022-09-30 21:18:41.930000+00:00
-- modified: 2025-10-24 17:48:19.274000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1037-filter_network_traffic|M1037: Filter Network Traffic]]
@@ -85,7 +67,4 @@ Filters can be installed on any Unix-like platform with `libpcap` installed or o
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
 

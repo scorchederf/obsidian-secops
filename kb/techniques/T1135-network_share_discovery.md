@@ -26,12 +26,3 @@ File sharing over a Windows network occurs over the SMB protocol. (Citation: Wik
 - macOS
 - Windows
 
-## Tools
-
-- [[crackmapexec|CrackMapExec]]
-- [[empire|Empire]]
-- [[koadic|Koadic]]
-- [[net|Net]]
-- [[pupy|Pupy]]
-- [[silenttrinity|SILENTTRINITY]]
-

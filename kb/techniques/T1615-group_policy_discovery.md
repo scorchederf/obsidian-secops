@@ -20,8 +20,3 @@ Adversaries may use commands such as <code>gpresult</code> or various publicly a
 
 - Windows
 
-## Tools
-
-- [[bloodhound|BloodHound]]
-- [[empire|Empire]]
-

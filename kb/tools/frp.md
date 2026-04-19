@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [FRP](https://attack.mitre.org/software/S1144), which stands for Fast Reverse Proxy, is an openly available tool that is capable of exposing a server located behind a firewall or Network Address Translation (NAT) to the Internet. [FRP](https://attack.mitre.org/software/S1144) can support multiple protocols including TCP, UDP, and HTTP(S) and has been abused by threat actors to proxy command and control communications.(Citation: FRP GitHub)(Citation: Joint Cybersecurity Advisory Volt Typhoon June 2023)(Citation: RedCanary Mockingbird May 2020)(Citation: DFIR Phosphorus November 2021)
 
-## Properties
-
-- id: S1144
-- name: FRP
-- created: 2024-07-10 18:46:33.555000+00:00
-- modified: 2024-07-30 18:17:09.725000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1046-network_service_discovery|T1046: Network Service Discovery]]

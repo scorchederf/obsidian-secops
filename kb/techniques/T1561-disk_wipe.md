@@ -21,6 +21,7 @@ On network devices, adversaries may wipe configuration files and other data from
 ## Subtechniques
 
 ### T1561.001: Disk Content Wipe
+
 ^t1561001-disk-content-wipe
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Adversaries may partially or completely overwrite the contents of a storage devi
 
 To maximize impact on the target organization in operations where network-wide availability interruption is the goal, malware used for wiping disk content may have worm-like features to propagate across a network by leveraging additional techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002).(Citation: Novetta Blockbuster Destructive Malware)
 
-#### Properties
-
-- id: T1561.001
-- name: Disk Content Wipe
-- created: 2020-02-20 22:06:41.739000+00:00
-- modified: 2025-10-24 17:49:38.983000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1561.002: Disk Structure Wipe
+
 ^t1561002-disk-structure-wipe
 
 **Parent Technique**
@@ -61,16 +53,6 @@ Adversaries may attempt to render the system unable to boot by overwriting criti
 On a network devices, adversaries may reformat the file system using [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `format`.(Citation: format_cmd_cisco)
 
 To maximize impact on the target organization, malware designed for destroying disk structures may have worm-like features to propagate across a network by leveraging other techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002).(Citation: Symantec Shamoon 2012)(Citation: FireEye Shamoon Nov 2016)(Citation: Palo Alto Shamoon Nov 2016)(Citation: Kaspersky StoneDrill 2017)
-
-#### Properties
-
-- id: T1561.002
-- name: Disk Structure Wipe
-- created: 2020-02-20 22:10:20.484000+00:00
-- modified: 2025-10-24 17:48:22.482000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

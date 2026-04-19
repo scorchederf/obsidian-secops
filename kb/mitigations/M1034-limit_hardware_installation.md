@@ -67,14 +67,6 @@ BIOS/UEFI Security:
 - Secure Boot (Windows/Linux)
 Firmware management tools like Dell Command Update or HP Sure Start
 
-## Properties
-
-- id: M1034
-- name: Limit Hardware Installation
-- created: 2019-06-11 16:28:41.809000+00:00
-- modified: 2024-12-18 16:09:24.873000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1052-exfiltration_over_physical_medium|T1052: Exfiltration Over Physical Medium]]

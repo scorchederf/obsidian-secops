@@ -19,6 +19,7 @@ Adversaries may use dynamic resolution for the purpose of [Fallback Channels](ht
 ## Subtechniques
 
 ### T1568.001: Fast Flux DNS
+
 ^t1568001-fast-flux-dns
 
 **Parent Technique**
@@ -33,17 +34,8 @@ The simplest, "single-flux" method, involves registering and de-registering an a
 
 In contrast, the "double-flux" method registers and de-registers an address as part of the DNS Name Server record list for the DNS zone, providing additional resilience for the connection. With double-flux additional hosts can act as a proxy to the C2 host, further insulating the true source of the C2 channel.
 
-#### Properties
-
-- id: T1568.001
-- name: Fast Flux DNS
-- created: 2020-03-11 14:11:16.560000+00:00
-- modified: 2025-10-24 17:48:33.501000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1568.002: Domain Generation Algorithms
+
 ^t1568002-domain-generation-algorithms
 
 **Parent Technique**
@@ -58,17 +50,8 @@ DGAs can take the form of apparently random or “gibberish” strings (ex: istg
 
 Adversaries may use DGAs for the purpose of [Fallback Channels](https://attack.mitre.org/techniques/T1008). When contact is lost with the primary command and control server malware may employ a DGA as a means to reestablishing command and control.(Citation: Talos CCleanup 2017)(Citation: FireEye POSHSPY April 2017)(Citation: ESET Sednit 2017 Activity)
 
-#### Properties
-
-- id: T1568.002
-- name: Domain Generation Algorithms
-- created: 2020-03-10 17:44:59.787000+00:00
-- modified: 2025-10-24 17:48:25.458000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1568.003: DNS Calculation
+
 ^t1568003-dns-calculation
 
 **Parent Technique**
@@ -81,16 +64,6 @@ Adversaries may perform calculations on addresses returned in DNS results to det
 
 One implementation of [DNS Calculation](https://attack.mitre.org/techniques/T1568/003) is to take the first three octets of an IP address in a DNS response and use those values to calculate the port for command and control traffic.(Citation: Meyers Numbered Panda)(Citation: Moran 2014)(Citation: Rapid7G20Espionage)
 
-#### Properties
-
-- id: T1568.003
-- name: DNS Calculation
-- created: 2020-03-11 14:56:34.154000+00:00
-- modified: 2025-10-24 17:49:03.093000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]
@@ -102,8 +75,4 @@ One implementation of [DNS Calculation](https://attack.mitre.org/techniques/T156
 - macOS
 - Windows
 - ESXi
-
-## Tools
-
-- [[asyncrat|AsyncRAT]]
 

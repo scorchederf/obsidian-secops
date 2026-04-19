@@ -37,7 +37,3 @@ Gaining access to the host may provide the adversary with the opportunity to ach
 - Containers
 - ESXi
 
-## Tools
-
-- [[peirates|Peirates]]
-

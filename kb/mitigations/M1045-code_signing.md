@@ -43,14 +43,6 @@ Script Integrity in CI/CD Pipelines:
 - Hash Integrity Check: Confirms that code has not been altered since signing by comparing cryptographic hashes.
 
 
-## Properties
-
-- id: M1045
-- name: Code Signing
-- created: 2019-06-11 17:01:25.405000+00:00
-- modified: 2024-12-10 18:52:40.747000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1036-masquerading|T1036: Masquerading]]

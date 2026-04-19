@@ -17,6 +17,7 @@ Adversaries may encode data to make the content of command and control traffic m
 ## Subtechniques
 
 ### T1132.001: Standard Encoding
+
 ^t1132001-standard-encoding
 
 **Parent Technique**
@@ -27,17 +28,8 @@ Adversaries may encode data to make the content of command and control traffic m
 
 Adversaries may encode data with a standard data encoding system to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using a standard data encoding system that adheres to existing protocol specifications. Common data encoding schemes include ASCII, Unicode, hexadecimal, Base64, and MIME.(Citation: Wikipedia Binary-to-text Encoding)(Citation: Wikipedia Character Encoding) Some data encoding systems may also result in data compression, such as gzip.
 
-#### Properties
-
-- id: T1132.001
-- name: Standard Encoding
-- created: 2020-03-14 23:36:52.095000+00:00
-- modified: 2025-10-24 17:48:20.938000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1132.002: Non-Standard Encoding
+
 ^t1132002-non-standard-encoding
 
 **Parent Technique**
@@ -47,16 +39,6 @@ Adversaries may encode data with a standard data encoding system to make the con
 - [[command_and_control|Command and Control]]
 
 Adversaries may encode data with a non-standard data encoding system to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using a non-standard data encoding system that diverges from existing protocol specifications. Non-standard data encoding schemes may be based on or related to standard data encoding schemes, such as a modified Base64 encoding for the message body of an HTTP request.(Citation: Wikipedia Binary-to-text Encoding) (Citation: Wikipedia Character Encoding) 
-
-#### Properties
-
-- id: T1132.002
-- name: Non-Standard Encoding
-- created: 2020-03-14 23:39:50.117000+00:00
-- modified: 2025-10-24 17:49:27.237000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -68,8 +50,4 @@ Adversaries may encode data with a non-standard data encoding system to make the
 - macOS
 - Windows
 - ESXi
-
-## Tools
-
-- [[mythic|Mythic]]
 

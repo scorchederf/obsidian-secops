@@ -64,14 +64,6 @@ Kernel Protection:
 - SELinux (Mandatory Access Control for Linux)
 - AppArmor
 
-## Properties
-
-- id: M1025
-- name: Privileged Process Integrity
-- created: 2019-06-06 21:08:58.465000+00:00
-- modified: 2024-12-18 18:51:02.792000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

@@ -30,8 +30,3 @@ This information could be useful for performing other techniques, such as execut
 - Network Devices
 - Windows
 
-## Tools
-
-- [[net|Net]]
-- [[silenttrinity|SILENTTRINITY]]
-

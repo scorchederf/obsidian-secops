@@ -19,6 +19,7 @@ There are many ways an adversary may hijack the flow of execution, including by 
 ## Subtechniques
 
 ### T1574.001: DLL
+
 ^t1574001-dll
 
 **Parent Technique**
@@ -58,17 +59,8 @@ Remote DLL hijacking can occur when a program sets its current directory to a re
 
 If a valid DLL is configured to run at a higher privilege level, then the adversary-controlled DLL that is loaded will also be executed at the higher level. In this case, the technique could be used for privilege escalation.
 
-#### Properties
-
-- id: T1574.001
-- name: DLL
-- created: 2020-03-13 18:11:08.357000+00:00
-- modified: 2025-11-06 17:52:37.747000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.004: Dylib Hijacking
+
 ^t1574004-dylib-hijacking
 
 **Parent Technique**
@@ -81,17 +73,8 @@ Adversaries may execute their own payloads by placing a malicious dynamic librar
 
 Adversaries may gain execution by inserting malicious dylibs with the name of the missing dylib in the identified path.(Citation: Wardle Dylib Hijack Vulnerable Apps)(Citation: Wardle Dylib Hijacking OSX 2015)(Citation: Github EmpireProject HijackScanner)(Citation: Github EmpireProject CreateHijacker Dylib) Dylibs are loaded into an application's address space allowing the malicious dylib to inherit the application's privilege level and resources. Based on the application, this could result in privilege escalation and uninhibited network access. This method may also evade detection from security products since the execution is masked under a legitimate process.(Citation: Writing Bad Malware for OSX)(Citation: wardle artofmalware volume1)(Citation: MalwareUnicorn macOS Dylib Injection MachO)
 
-#### Properties
-
-- id: T1574.004
-- name: Dylib Hijacking
-- created: 2020-03-16 15:23:30.896000+00:00
-- modified: 2025-10-24 17:49:39.243000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.005: Executable Installer File Permissions Weakness
+
 ^t1574005-executable-installer-file-permissions-weakness
 
 **Parent Technique**
@@ -106,17 +89,8 @@ Another variation of this technique can be performed by taking advantage of a we
 
 Adversaries may use this technique to replace legitimate binaries with malicious ones as a means of executing code at a higher permissions level. Some installers may also require elevated privileges that will result in privilege escalation when executing adversary controlled code. This behavior is related to [Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002). Several examples of this weakness in existing common installers have been reported to software vendors.(Citation: mozilla_sec_adv_2012)  (Citation: Executable Installers are Vulnerable) If the executing process is set to run at a specific time or during a certain event (e.g., system bootup) then this technique can also be used for persistence.
 
-#### Properties
-
-- id: T1574.005
-- name: Executable Installer File Permissions Weakness
-- created: 2020-03-13 11:12:18.558000+00:00
-- modified: 2025-10-24 17:48:56.875000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.006: Dynamic Linker Hijacking
+
 ^t1574006-dynamic-linker-hijacking
 
 **Parent Technique**
@@ -131,17 +105,8 @@ Hijacking dynamic linker variables may grant access to the victim process's memo
 
 Hijacking dynamic linker variables may grant access to the victim process's memory, system/network resources, and possibly elevated privileges.
 
-#### Properties
-
-- id: T1574.006
-- name: Dynamic Linker Hijacking
-- created: 2020-03-13 20:09:59.569000+00:00
-- modified: 2025-10-24 17:48:51.810000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.007: Path Interception by PATH Environment Variable
+
 ^t1574007-path-interception-by-path-environment-variable
 
 **Parent Technique**
@@ -158,17 +123,8 @@ For example, on Windows if an adversary places a malicious program named "net.ex
 
 Adversaries may also directly modify the $PATH variable specifying the directories to be searched.  An adversary can modify the `$PATH` variable to point to a directory they have write access. When a program using the $PATH variable is called, the OS searches the specified directory and executes the malicious binary. On macOS, this can also be performed through modifying the $HOME variable. These variables can be modified using the command-line, launchctl, [Unix Shell Configuration Modification](https://attack.mitre.org/techniques/T1546/004), or modifying the `/etc/paths.d` folder contents.(Citation: uptycs Fake POC linux malware 2023)(Citation: nixCraft macOS PATH variables)(Citation: Elastic Rules macOS launchctl 2022)
 
-#### Properties
-
-- id: T1574.007
-- name: Path Interception by PATH Environment Variable
-- created: 2020-03-13 14:10:43.424000+00:00
-- modified: 2025-10-24 17:48:22.736000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1574.008: Path Interception by Search Order Hijacking
+
 ^t1574008-path-interception-by-search-order-hijacking
 
 **Parent Technique**
@@ -185,17 +141,8 @@ For example, "example.exe" runs "cmd.exe" with the command-line argument <code>n
 
 Search order hijacking is also a common practice for hijacking DLL loads and is covered in [DLL](https://attack.mitre.org/techniques/T1574/001).
 
-#### Properties
-
-- id: T1574.008
-- name: Path Interception by Search Order Hijacking
-- created: 2020-03-13 17:48:58.999000+00:00
-- modified: 2025-10-24 17:48:49.665000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.009: Path Interception by Unquoted Path
+
 ^t1574009-path-interception-by-unquoted-path
 
 **Parent Technique**
@@ -210,17 +157,8 @@ Service paths (Citation: Microsoft CurrentControlSet Services) and shortcut path
 
 This technique can be used for persistence if executables are called on a regular basis, as well as privilege escalation if intercepted executables are started by a higher privileged process.
 
-#### Properties
-
-- id: T1574.009
-- name: Path Interception by Unquoted Path
-- created: 2020-03-13 13:51:58.519000+00:00
-- modified: 2025-10-24 17:49:19.228000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.010: Services File Permissions Weakness
+
 ^t1574010-services-file-permissions-weakness
 
 **Parent Technique**
@@ -233,17 +171,8 @@ Adversaries may execute their own malicious payloads by hijacking the binaries u
 
 Adversaries may use this technique to replace legitimate binaries with malicious ones as a means of executing code at a higher permissions level. If the executing process is set to run at a specific time or during a certain event (e.g., system bootup) then this technique can also be used for persistence.
 
-#### Properties
-
-- id: T1574.010
-- name: Services File Permissions Weakness
-- created: 2020-03-12 20:43:53.998000+00:00
-- modified: 2025-10-24 17:49:09.575000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.011: Services Registry Permissions Weakness
+
 ^t1574011-services-registry-permissions-weakness
 
 **Parent Technique**
@@ -268,17 +197,8 @@ For example, the registry path(Citation: MDSec) <code>HKEY_LOCAL_MACHINE\SYSTEM\
 
 This ensures persistence, as it causes the DLL (in this case, foo.dll) to be loaded each time the Winsock 2 library is invoked.
 
-#### Properties
-
-- id: T1574.011
-- name: Services Registry Permissions Weakness
-- created: 2020-03-13 11:42:14.444000+00:00
-- modified: 2025-10-24 17:48:27.075000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1574.012: COR_PROFILER
+
 ^t1574012-cor-profiler
 
 **Parent Technique**
@@ -293,17 +213,8 @@ The COR_PROFILER environment variable can be set at various scopes (system, user
 
 Adversaries may abuse COR_PROFILER to establish persistence that executes a malicious DLL in the context of all .NET processes every time the CLR is invoked. The COR_PROFILER can also be used to elevate privileges (ex: [Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002)) if the victim .NET process executes at a higher permission level, as well as to hook and [Impair Defenses](https://attack.mitre.org/techniques/T1562) provided by .NET processes.(Citation: RedCanary Mockingbird May 2020)(Citation: Red Canary COR_PROFILER May 2020)(Citation: Almond COR_PROFILER Apr 2019)(Citation: GitHub OmerYa Invisi-Shell)(Citation: subTee .NET Profilers May 2017)
 
-#### Properties
-
-- id: T1574.012
-- name: COR_PROFILER
-- created: 2020-06-24 22:30:55.843000+00:00
-- modified: 2025-10-24 17:49:40.510000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1574.013: KernelCallbackTable
+
 ^t1574013-kernelcallbacktable
 
 **Parent Technique**
@@ -320,17 +231,8 @@ A pointer to the memory address of the <code>KernelCallbackTable</code> can be o
 
 The tampered function is typically invoked using a Windows message. After the process is hijacked and malicious code is executed, the <code>KernelCallbackTable</code> may also be restored to its original state by the rest of the malicious payload.(Citation: Lazarus APT January 2022) Use of the <code>KernelCallbackTable</code> to hijack execution flow may evade detection from security products since the execution can be masked under a legitimate process.
 
-#### Properties
-
-- id: T1574.013
-- name: KernelCallbackTable
-- created: 2022-02-25 15:27:44.927000+00:00
-- modified: 2025-10-24 17:49:11.077000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1574.014: AppDomainManager
+
 ^t1574014-appdomainmanager
 
 **Parent Technique**
@@ -342,16 +244,6 @@ The tampered function is typically invoked using a Windows message. After the pr
 Adversaries may execute their own malicious payloads by hijacking how the .NET `AppDomainManager` loads assemblies. The .NET framework uses the `AppDomainManager` class to create and manage one or more isolated runtime environments (called application domains) inside a process to host the execution of .NET applications. Assemblies (`.exe` or `.dll` binaries compiled to run as .NET code) may be loaded into an application domain as executable code.(Citation: Microsoft App Domains) 
 
 Known as "AppDomainManager injection," adversaries may execute arbitrary code by hijacking how .NET applications load assemblies. For example, malware may create a custom application domain inside a target process to load and execute an arbitrary assembly. Alternatively, configuration files (`.config`) or process environment variables that define .NET runtime settings may be tampered with to instruct otherwise benign .NET applications to load a malicious assembly (identified by name) into the target process.(Citation: PenTestLabs AppDomainManagerInject)(Citation: PwC Yellow Liderc)(Citation: Rapid7 AppDomain Manager Injection)
-
-#### Properties
-
-- id: T1574.014
-- name: AppDomainManager
-- created: 2024-03-28 15:36:34.141000+00:00
-- modified: 2025-04-15 21:48:08.401000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -371,7 +263,4 @@ Known as "AppDomainManager injection," adversaries may execute arbitrary code by
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

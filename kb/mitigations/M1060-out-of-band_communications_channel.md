@@ -10,14 +10,6 @@ type: course-of-action
 
 Establish secure out-of-band communication channels to ensure the continuity of critical communications during security incidents, data integrity attacks, or in-network communication failures. Out-of-band communication refers to using an alternative, separate communication path that is not dependent on the potentially compromised primary network infrastructure. This method can include secure messaging apps, encrypted phone lines, satellite communications, or dedicated emergency communication systems. Leveraging these alternative channels reduces the risk of adversaries intercepting, disrupting, or tampering with sensitive communications and helps coordinate an effective incident response.(Citation: TrustedSec OOB Communications)(Citation: NIST Special Publication 800-53 Revision 5)
 
-## Properties
-
-- id: M1060
-- name: Out-of-Band Communications Channel
-- created: 2024-08-30 13:08:10.349000+00:00
-- modified: 2024-10-12 15:34:54.912000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1114-email_collection|T1114: Email Collection]]

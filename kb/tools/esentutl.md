@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [esentutl](https://attack.mitre.org/software/S0404) is a command-line tool that provides database utilities for the Windows Extensible Storage Engine.(Citation: Microsoft Esentutl)
 
-## Properties
-
-- id: S0404
-- name: esentutl
-- created: 2019-09-03 18:25:36.963000+00:00
-- modified: 2023-09-28 03:45:36.045000+00:00
-- type: tool
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

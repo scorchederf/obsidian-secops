@@ -24,15 +24,3 @@ In macOS, there are a few different malware samples that record the user's webca
 - macOS
 - Linux
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-- [[connectwise|ConnectWise]]
-- [[empire|Empire]]
-- [[imminent_monitor|Imminent Monitor]]
-- [[pcshare|PcShare]]
-- [[pupy|Pupy]]
-- [[quasarrat|QuasarRAT]]
-- [[quick_assist|Quick Assist]]
-- [[remcos|Remcos]]
-

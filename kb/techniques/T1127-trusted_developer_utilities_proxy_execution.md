@@ -19,6 +19,7 @@ Smart App Control is a feature of Windows that blocks applications it considers 
 ## Subtechniques
 
 ### T1127.001: MSBuild
+
 ^t1127001-msbuild
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may use MSBuild to proxy execution of code through a trusted Windows
 
 Adversaries can abuse MSBuild to proxy execution of malicious code. The inline task capability of MSBuild that was introduced in .NET version 4 allows for C# or Visual Basic code to be inserted into an XML project file.(Citation: MSDN MSBuild)(Citation: Microsoft MSBuild Inline Tasks 2017) MSBuild will compile and execute the inline task. MSBuild.exe is a signed Microsoft binary, so when it is used this way it can execute arbitrary code and bypass application control defenses that are configured to allow MSBuild.exe execution.(Citation: LOLBAS Msbuild)
 
-#### Properties
-
-- id: T1127.001
-- name: MSBuild
-- created: 2020-03-27 21:50:26.042000+00:00
-- modified: 2025-10-24 17:49:22.881000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1127.002: ClickOnce
+
 ^t1127002-clickonce
 
 **Parent Technique**
@@ -60,17 +52,8 @@ Adversaries may also abuse ClickOnce to execute malware via a [Rundll32](https:/
 
 Additionally, an adversary can move the ClickOnce application file to a remote user’s startup folder for continued malicious code deployment (i.e., [Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001)).(Citation: Burke/CISA ClickOnce BlackHat)(Citation: Burke/CISA ClickOnce Paper)
 
-#### Properties
-
-- id: T1127.002
-- name: ClickOnce
-- created: 2024-09-09 14:39:28.637000+00:00
-- modified: 2025-04-15 19:59:08.154000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1127.003: JamPlus
+
 ^t1127003-jamplus
 
 **Parent Technique**
@@ -82,16 +65,6 @@ Additionally, an adversary can move the ClickOnce application file to a remote u
 Adversaries may use `JamPlus` to proxy the execution of a malicious script. `JamPlus` is a build utility tool for code and data build systems. It works with several popular compilers and can be used for generating workspaces in code editors such as Visual Studio.(Citation: JamPlus manual)
 
 Adversaries may abuse the `JamPlus` build utility to execute malicious scripts via a `.jam` file, which describes the build process and required dependencies. Because the malicious script is executed from a reputable developer tool, it may subvert application control security systems such as Smart App Control.(Citation: Cyble)(Citation: Elastic Security Labs)
-
-#### Properties
-
-- id: T1127.003
-- name: JamPlus
-- created: 2025-03-21 13:36:48.710000+00:00
-- modified: 2025-04-17 21:42:31.066000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

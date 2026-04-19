@@ -33,6 +33,3 @@ In cloud environments, storage objects within compromised accounts may also be e
 - macOS
 - Windows
 
-## Tools
-
-

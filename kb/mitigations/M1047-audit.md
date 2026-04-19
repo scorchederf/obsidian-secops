@@ -37,14 +37,6 @@ Network Audits:
 - Use Case: Examine network traffic, firewall rules, and endpoint communications to identify unauthorized or insecure connections.
 - Implementation: Utilize tools such as Wireshark, or Zeek to monitor and log suspicious network behavior.
 
-## Properties
-
-- id: M1047
-- name: Audit
-- created: 2019-06-11 17:06:14.029000+00:00
-- modified: 2024-12-10 16:28:27.046000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

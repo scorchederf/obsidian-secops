@@ -19,6 +19,7 @@ Adversaries may target these repositories in order to collect large quantities o
 ## Subtechniques
 
 ### T1602.001: SNMP (MIB Dump)
+
 ^t1602001-snmp-(mib-dump)
 
 **Parent Technique**
@@ -33,17 +34,8 @@ The MIB is a configuration repository that stores variable information accessibl
 
 Adversaries may use SNMP queries to collect MIB content directly from SNMP-managed devices in order to collect network information that allows the adversary to build network maps and facilitate future targeted exploitation.(Citation: US-CERT-TA18-106A)(Citation: Cisco Blog Legacy Device Attacks) 
 
-#### Properties
-
-- id: T1602.001
-- name: SNMP (MIB Dump)
-- created: 2020-10-19 23:51:05.953000+00:00
-- modified: 2025-10-24 17:49:34.969000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1602.002: Network Device Configuration Dump
+
 ^t1602002-network-device-configuration-dump
 
 **Parent Technique**
@@ -55,16 +47,6 @@ Adversaries may use SNMP queries to collect MIB content directly from SNMP-manag
 Adversaries may access network configuration files to collect sensitive data about the device and the network. The network configuration is a file containing parameters that determine the operation of the device. The device typically stores an in-memory copy of the configuration while operating, and a separate configuration on non-volatile storage to load after device reset. Adversaries can inspect the configuration files to reveal information about the target network and its layout, the network device and its software, or identifying legitimate accounts and credentials for later use.
 
 Adversaries can use common management tools and protocols, such as Simple Network Management Protocol (SNMP) and Smart Install (SMI), to access network configuration files.(Citation: US-CERT TA18-106A Network Infrastructure Devices 2018)(Citation: Cisco Blog Legacy Device Attacks) These tools may be used to query specific data from a configuration repository or configure the device to export the configuration for later analysis. 
-
-#### Properties
-
-- id: T1602.002
-- name: Network Device Configuration Dump
-- created: 2020-10-20 00:08:21.745000+00:00
-- modified: 2025-10-24 17:48:47.219000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

@@ -33,9 +33,3 @@ Password policies can be discovered in cloud environments using available APIs s
 - SaaS
 - Office Suite
 
-## Tools
-
-- [[crackmapexec|CrackMapExec]]
-- [[net|Net]]
-- [[poshc2|PoshC2]]
-

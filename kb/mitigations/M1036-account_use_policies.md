@@ -43,14 +43,6 @@ Account Expiration and Deactivation:
 - Multi-Factor Authentication (MFA) Tools: To further enforce secure login attempts, preventing brute-force or credential stuffing attacks.
 
 
-## Properties
-
-- id: M1036
-- name: Account Use Policies
-- created: 2019-06-11 16:32:21.854000+00:00
-- modified: 2024-12-10 15:55:53.913000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1078-valid_accounts|T1078: Valid Accounts]]

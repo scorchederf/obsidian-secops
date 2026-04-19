@@ -21,6 +21,7 @@ Services, daemons, or agents may be created with administrator privileges but ex
 ## Subtechniques
 
 ### T1543.001: Launch Agent
+
 ^t1543001-launch-agent
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Adversaries may create or modify launch agents to repeatedly execute malicious p
  
 Adversaries may install a new Launch Agent that executes at login by placing a .plist file into the appropriate folders with the <code>RunAtLoad</code> or <code>KeepAlive</code> keys set to <code>true</code>.(Citation: Sofacy Komplex Trojan)(Citation: Methods of Mac Malware Persistence) The Launch Agent name may be disguised by using a name from the related operating system or benign software. Launch Agents are created with user level privileges and execute with user level permissions.(Citation: OSX Malware Detection)(Citation: OceanLotus for OS X) 
 
-#### Properties
-
-- id: T1543.001
-- name: Launch Agent
-- created: 2020-01-17 16:10:58.592000+00:00
-- modified: 2025-10-24 17:49:25.367000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1543.002: Systemd Service
+
 ^t1543002-systemd-service
 
 **Parent Technique**
@@ -70,17 +62,8 @@ The `.service` file’s User directive can be used to run service as a specific 
 
 Systemd services can be created via systemd generators, which support the dynamic generation of unit files. Systemd generators are small executables that run during boot or configuration reloads to dynamically create or modify systemd unit files by converting non-native configurations into services, symlinks, or drop-ins (i.e., [Boot or Logon Initialization Scripts](https://attack.mitre.org/techniques/T1037)).(Citation: Elastic Security Labs Linux Persistence 2024)(Citation: Pepe Berba Systemd 2022)
 
-#### Properties
-
-- id: T1543.002
-- name: Systemd Service
-- created: 2020-01-17 16:15:19.870000+00:00
-- modified: 2025-10-24 17:49:29.942000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ### T1543.003: Windows Service
+
 ^t1543003-windows-service
 
 **Parent Technique**
@@ -99,17 +82,8 @@ Services may be created with administrator privileges but are executed under SYS
 
 To make detection analysis more challenging, malicious services may also incorporate [Masquerade Task or Service](https://attack.mitre.org/techniques/T1036/004) (ex: using a service and/or payload name related to a legitimate OS or benign software component). Adversaries may also create ‘hidden’ services (i.e., [Hide Artifacts](https://attack.mitre.org/techniques/T1564)), for example by using the `sc sdset` command to set service permissions via the Service Descriptor Definition Language (SDDL). This may hide a Windows service from the view of standard service enumeration methods such as `Get-Service`, `sc query`, and `services.exe`.(Citation: SANS 1)(Citation: SANS 2)
 
-#### Properties
-
-- id: T1543.003
-- name: Windows Service
-- created: 2020-01-17 19:13:50.402000+00:00
-- modified: 2025-10-24 17:48:33.408000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ### T1543.004: Launch Daemon
+
 ^t1543004-launch-daemon
 
 **Parent Technique**
@@ -124,17 +98,8 @@ Adversaries may install a Launch Daemon configured to execute at startup by usin
 
 Additionally, system configuration changes (such as the installation of third party package managing software) may cause folders such as <code>usr/local/bin</code> to become globally writeable. So, it is possible for poor configurations to allow an adversary to modify executables referenced by current Launch Daemon's plist files.(Citation: LaunchDaemon Hijacking)(Citation: sentinelone macos persist Jun 2019)
 
-#### Properties
-
-- id: T1543.004
-- name: Launch Daemon
-- created: 2020-01-17 19:23:15.227000+00:00
-- modified: 2025-10-24 17:48:49.387000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1543.005: Container Service
+
 ^t1543005-container-service
 
 **Parent Technique**
@@ -150,16 +115,6 @@ For example, by using the `docker run` or `podman run` command with the `restart
 In Kubernetes environments, DaemonSets allow an adversary to persistently [Deploy Container](https://attack.mitre.org/techniques/T1610)s on all nodes, including ones added later to the cluster.(Citation: Aquasec Kubernetes Attack 2023)(Citation: Kubernetes DaemonSet) Pods can also be deployed to specific nodes using the `nodeSelector` or `nodeName` fields in the pod spec.(Citation: Kubernetes Assigning Pods to Nodes)(Citation: AppSecco Kubernetes Namespace Breakout 2020)
 
 Note that containers can also be configured to run as [Systemd Service](https://attack.mitre.org/techniques/T1543/002)s.(Citation: Podman Systemd)(Citation: Docker Systemd)
-
-#### Properties
-
-- id: T1543.005
-- name: Container Service
-- created: 2024-02-15 13:41:46.784000+00:00
-- modified: 2025-04-15 22:10:00.252000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -179,7 +134,4 @@ Note that containers can also be configured to run as [Systemd Service](https://
 - macOS
 - Linux
 - Containers
-
-## Tools
-
 

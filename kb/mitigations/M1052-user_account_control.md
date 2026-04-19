@@ -52,14 +52,6 @@ Third-Party Security Tools:
 - Process Monitor (Sysinternals): Tracks real-time processes interacting with UAC.
 - EventSentry: Monitors Windows Event Logs for UAC-related alerts.
 
-## Properties
-
-- id: M1052
-- name: User Account Control
-- created: 2019-06-11 17:14:35.170000+00:00
-- modified: 2024-12-24 14:26:43.340000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1546-event_triggered_execution|T1546: Event Triggered Execution]]

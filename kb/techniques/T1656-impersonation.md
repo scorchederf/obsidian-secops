@@ -35,7 +35,3 @@ There is the potential for multiple victims in campaigns involving impersonation
 - SaaS
 - Windows
 
-## Tools
-
-- [[nppspy|NPPSPY]]
-

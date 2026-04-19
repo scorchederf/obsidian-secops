@@ -69,14 +69,6 @@ Community and Collaboration Tools:
 - ISAC Memberships: Join industry-specific ISACs for intelligence sharing.
 - Slack/Discord Channels: Participate in threat intelligence communities for real-time collaboration.
 
-## Properties
-
-- id: M1019
-- name: Threat Intelligence Program
-- created: 2019-06-06 19:55:50.927000+00:00
-- modified: 2024-12-24 14:05:21.946000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]

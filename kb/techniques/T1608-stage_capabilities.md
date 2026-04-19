@@ -24,6 +24,7 @@ Staging of capabilities can aid the adversary in a number of initial access and 
 ## Subtechniques
 
 ### T1608.001: Upload Malware
+
 ^t1608001-upload-malware
 
 **Parent Technique**
@@ -38,17 +39,8 @@ Malware may be placed on infrastructure that was previously purchased/rented by 
 
 Adversaries may upload backdoored files, such as software packages, application binaries, virtual machine images, or container images, to third-party software stores, package libraries, extension marketplaces, or repositories (ex: GitHub, CNET, AWS Community AMIs, Docker Hub, PyPi, NPM).(Citation: Datadog Security Labs Malicious PyPi Packages 2024) By chance encounter, victims may directly download/install these backdoored files via [User Execution](https://attack.mitre.org/techniques/T1204). Masquerading, including typo-squatting legitimate software, may increase the chance of users mistakenly executing these files. 
 
-#### Properties
-
-- id: T1608.001
-- name: Upload Malware
-- created: 2021-03-17 20:09:13.222000+00:00
-- modified: 2025-10-24 17:48:41.583000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1608.002: Upload Tool
+
 ^t1608002-upload-tool
 
 **Parent Technique**
@@ -63,17 +55,8 @@ Tools may be placed on infrastructure that was previously purchased/rented by th
 
 Adversaries can avoid the need to upload a tool by having compromised victim machines download the tool directly from a third-party hosting location (ex: a non-adversary controlled GitHub repo), including the original hosting site of the tool.
 
-#### Properties
-
-- id: T1608.002
-- name: Upload Tool
-- created: 2021-03-17 20:31:07.828000+00:00
-- modified: 2025-10-24 17:48:46.160000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1608.003: Install Digital Certificate
+
 ^t1608003-install-digital-certificate
 
 **Parent Technique**
@@ -88,17 +71,8 @@ Adversaries may install SSL/TLS certificates that can be used to further their o
 
 Adversaries can obtain digital certificates (see [Digital Certificates](https://attack.mitre.org/techniques/T1588/004)) or create self-signed certificates (see [Digital Certificates](https://attack.mitre.org/techniques/T1587/003)). Digital certificates can then be installed on adversary controlled infrastructure that may have been acquired ([Acquire Infrastructure](https://attack.mitre.org/techniques/T1583)) or previously compromised ([Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)).
 
-#### Properties
-
-- id: T1608.003
-- name: Install Digital Certificate
-- created: 2021-03-17 20:32:13.793000+00:00
-- modified: 2025-10-24 17:49:19.322000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1608.004: Drive-by Target
+
 ^t1608004-drive-by-target
 
 **Parent Technique**
@@ -121,17 +95,8 @@ Websites compromised by an adversary and used to stage a drive-by may be ones vi
 
 Adversaries may purchase domains similar to legitimate domains (ex: homoglyphs, typosquatting, different top-level domain, etc.) during acquisition of infrastructure ([Domains](https://attack.mitre.org/techniques/T1583/001)) to help facilitate [Drive-by Compromise](https://attack.mitre.org/techniques/T1189).
 
-#### Properties
-
-- id: T1608.004
-- name: Drive-by Target
-- created: 2021-03-17 20:33:20.127000+00:00
-- modified: 2025-10-24 17:48:36.634000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1608.005: Link Target
+
 ^t1608005-link-target
 
 **Parent Technique**
@@ -150,17 +115,8 @@ Links can be written by adversaries to mask the true destination in order to dec
 
 Adversaries may also use free or paid accounts on link shortening services and Platform-as-a-Service providers to host link targets while taking advantage of the widely trusted domains of those providers to avoid being blocked while redirecting victims to malicious pages.(Citation: Netskope GCP Redirection)(Citation: Netskope Cloud Phishing)(Citation: Intezer App Service Phishing)(Citation: Cofense-redirect) In addition, adversaries may serve a variety of malicious links through uniquely generated URIs/URLs (including one-time, single use links).(Citation: iOS URL Scheme)(Citation: URI)(Citation: URI Use)(Citation: URI Unique) Finally, adversaries may take advantage of the decentralized nature of the InterPlanetary File System (IPFS) to host link targets that are difficult to remove.(Citation: Talos IPFS 2022)
 
-#### Properties
-
-- id: T1608.005
-- name: Link Target
-- created: 2021-03-17 20:35:08.429000+00:00
-- modified: 2025-10-24 17:49:03.552000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1608.006: SEO Poisoning
+
 ^t1608006-seo-poisoning
 
 **Parent Technique**
@@ -178,16 +134,6 @@ In addition to internet search engines (such as Google), adversaries may also ai
 Adversaries may also purchase or plant incoming links to staged capabilities in order to boost the site’s calculated relevance and reputation.(Citation: MalwareBytes SEO)(Citation: DFIR Report Gootloader)
 
 SEO poisoning may also be combined with evasive redirects and other cloaking mechanisms (such as measuring mouse movements or serving content based on browser user agents, user language/localization settings, or HTTP headers) in order to feed SEO inputs while avoiding scrutiny from defenders.(Citation: ZScaler SEO)(Citation: Sophos Gootloader)
-
-#### Properties
-
-- id: T1608.006
-- name: SEO Poisoning
-- created: 2022-09-30 21:14:12.284000+00:00
-- modified: 2025-04-15 23:01:38.651000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

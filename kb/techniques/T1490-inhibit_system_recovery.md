@@ -48,6 +48,3 @@ Adversaries may also delete “online” backups that are connected to their net
 - Network Devices
 - Windows
 
-## Tools
-
-

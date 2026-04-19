@@ -21,6 +21,7 @@ Since the execution can be proxied by an account with higher permissions, such a
 ## Subtechniques
 
 ### T1546.001: Change Default File Association
+
 ^t1546001-change-default-file-association
 
 **Parent Technique**
@@ -39,17 +40,8 @@ System file associations are listed under <code>HKEY_CLASSES_ROOT\.[extension]</
 
 The values of the keys listed are commands that are executed when the handler opens the file extension. Adversaries can modify these values to continually execute arbitrary commands.(Citation: TrendMicro TROJ-FAKEAV OCT 2012)
 
-#### Properties
-
-- id: T1546.001
-- name: Change Default File Association
-- created: 2020-01-24 13:40:47.282000+00:00
-- modified: 2025-10-24 17:49:07.854000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.002: Screensaver
+
 ^t1546002-screensaver
 
 **Parent Technique**
@@ -69,17 +61,8 @@ The following screensaver settings are stored in the Registry (<code>HKCU\Contro
 
 Adversaries can use screensaver settings to maintain persistence by setting the screensaver to run malware after a certain timeframe of user inactivity.(Citation: ESET Gazer Aug 2017)
 
-#### Properties
-
-- id: T1546.002
-- name: Screensaver
-- created: 2020-01-24 13:51:01.210000+00:00
-- modified: 2025-10-24 17:49:24.634000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1546.003: Windows Management Instrumentation Event Subscription
+
 ^t1546003-windows-management-instrumentation-event-subscription
 
 **Parent Technique**
@@ -94,17 +77,8 @@ Adversaries may use the capabilities of WMI to subscribe to an event and execute
 
 WMI subscription execution is proxied by the WMI Provider Host process (WmiPrvSe.exe) and thus may result in elevated SYSTEM privileges.
 
-#### Properties
-
-- id: T1546.003
-- name: Windows Management Instrumentation Event Subscription
-- created: 2020-01-24 14:07:56.276000+00:00
-- modified: 2025-10-24 17:49:06.119000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1546.004: Unix Shell Configuration Modification
+
 ^t1546004-unix-shell-configuration-modification
 
 **Parent Technique**
@@ -119,17 +93,8 @@ Adversaries may attempt to establish persistence by inserting commands into scri
 
 For macOS, the functionality of this technique is similar but may leverage zsh, the default shell for macOS 10.15+. When the Terminal.app is opened, the application launches a zsh login shell and a zsh interactive shell. The login shell configures the system environment using <code>/etc/profile</code>, <code>/etc/zshenv</code>, <code>/etc/zprofile</code>, and <code>/etc/zlogin</code>.(Citation: ScriptingOSX zsh)(Citation: PersistentJXA_leopitt)(Citation: code_persistence_zsh)(Citation: macOS MS office sandbox escape) The login shell then configures the user environment with <code>~/.zprofile</code> and <code>~/.zlogin</code>. The interactive shell uses the <code>~/.zshrc</code> to configure the user environment. Upon exiting, <code>/etc/zlogout</code> and <code>~/.zlogout</code> are executed. For legacy programs, macOS executes <code>/etc/bashrc</code> on startup.
 
-#### Properties
-
-- id: T1546.004
-- name: Unix Shell Configuration Modification
-- created: 2020-01-24 14:13:45.936000+00:00
-- modified: 2025-10-24 17:49:15.960000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1546.005: Trap
+
 ^t1546005-trap
 
 **Parent Technique**
@@ -142,17 +107,8 @@ Adversaries may establish persistence by executing malicious content triggered b
 
 Adversaries can use this to register code to be executed when the shell encounters specific interrupts as a persistence mechanism. Trap commands are of the following format <code>trap 'command list' signals</code> where "command list" will be executed when "signals" are received.(Citation: Trap Manual)(Citation: Cyberciti Trap Statements)
 
-#### Properties
-
-- id: T1546.005
-- name: Trap
-- created: 2020-01-24 14:17:43.906000+00:00
-- modified: 2025-10-24 17:48:51.725000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.006: LC_LOAD_DYLIB Addition
+
 ^t1546006-lc-load-dylib-addition
 
 **Parent Technique**
@@ -165,17 +121,8 @@ Adversaries may establish persistence by executing malicious content triggered b
 
 Adversaries may modify Mach-O binary headers to load and execute malicious dylibs every time the binary is executed. Although any changes will invalidate digital signatures on binaries because the binary is being modified, this can be remediated by simply removing the LC_CODE_SIGNATURE command from the binary so that the signature isn’t checked at load time.(Citation: Malware Persistence on OS X)
 
-#### Properties
-
-- id: T1546.006
-- name: LC_LOAD_DYLIB Addition
-- created: 2020-01-24 14:21:52.750000+00:00
-- modified: 2025-10-24 17:48:25.182000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.007: Netsh Helper DLL
+
 ^t1546007-netsh-helper-dll
 
 **Parent Technique**
@@ -188,17 +135,8 @@ Adversaries may establish persistence by executing malicious content triggered b
 
 Adversaries can use netsh.exe helper DLLs to trigger execution of arbitrary code in a persistent manner. This execution would take place anytime netsh.exe is executed, which could happen automatically, with another persistence technique, or if other software (ex: VPN) is present on the system that executes netsh.exe as part of its normal functionality.(Citation: Github Netsh Helper CS Beacon)(Citation: Demaske Netsh Persistence)
 
-#### Properties
-
-- id: T1546.007
-- name: Netsh Helper DLL
-- created: 2020-01-24 14:26:51.207000+00:00
-- modified: 2025-10-24 17:49:37.405000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.008: Accessibility Features
+
 ^t1546008-accessibility-features
 
 **Parent Technique**
@@ -223,17 +161,8 @@ Other accessibility features exist that may also be leveraged in a similar fashi
 * Display Switcher: <code>C:\Windows\System32\DisplaySwitch.exe</code>
 * App Switcher: <code>C:\Windows\System32\AtBroker.exe</code>
 
-#### Properties
-
-- id: T1546.008
-- name: Accessibility Features
-- created: 2020-01-24 14:32:40.315000+00:00
-- modified: 2025-10-24 17:48:56.964000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1546.009: AppCert DLLs
+
 ^t1546009-appcert-dlls
 
 **Parent Technique**
@@ -246,17 +175,8 @@ Adversaries may establish persistence and/or elevate privileges by executing mal
 
 Similar to [Process Injection](https://attack.mitre.org/techniques/T1055), this value can be abused to obtain elevated privileges by causing a malicious DLL to be loaded and run in the context of separate processes on the computer. Malicious AppCert DLLs may also provide persistence by continuously being triggered by API activity. 
 
-#### Properties
-
-- id: T1546.009
-- name: AppCert DLLs
-- created: 2020-01-24 14:47:41.795000+00:00
-- modified: 2025-10-24 17:49:00.663000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.010: AppInit DLLs
+
 ^t1546010-appinit-dlls
 
 **Parent Technique**
@@ -271,17 +191,8 @@ Similar to Process Injection, these values can be abused to obtain elevated priv
 
 The AppInit DLL functionality is disabled in Windows 8 and later versions when secure boot is enabled. (Citation: AppInit Secure Boot)
 
-#### Properties
-
-- id: T1546.010
-- name: AppInit DLLs
-- created: 2020-01-24 14:52:25.589000+00:00
-- modified: 2025-10-24 17:49:24.008000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1546.011: Application Shimming
+
 ^t1546011-application-shimming
 
 **Parent Technique**
@@ -308,17 +219,8 @@ To keep shims secure, Windows designed them to run in user mode so they cannot m
 
 Utilizing these shims may allow an adversary to perform several malicious acts such as elevate privileges, install backdoors, disable defenses like Windows Defender, etc. (Citation: FireEye Application Shimming) Shims can also be abused to establish persistence by continuously being invoked by affected programs.
 
-#### Properties
-
-- id: T1546.011
-- name: Application Shimming
-- created: 2020-01-24 14:56:24.231000+00:00
-- modified: 2025-10-24 17:48:42.703000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.012: Image File Execution Options Injection
+
 ^t1546012-image-file-execution-options-injection
 
 **Parent Technique**
@@ -339,17 +241,8 @@ Similar to [Process Injection](https://attack.mitre.org/techniques/T1055), these
 
 Malware may also use IFEO to [Impair Defenses](https://attack.mitre.org/techniques/T1562) by registering invalid debuggers that redirect and effectively disable various system and security applications. (Citation: FSecure Hupigon) (Citation: Symantec Ushedix June 2008)
 
-#### Properties
-
-- id: T1546.012
-- name: Image File Execution Options Injection
-- created: 2020-01-24 15:05:58.384000+00:00
-- modified: 2025-10-24 17:48:55.526000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1546.013: PowerShell Profile
+
 ^t1546013-powershell-profile
 
 **Parent Technique**
@@ -366,17 +259,8 @@ Adversaries may modify these profiles to include arbitrary commands, functions, 
 
 An adversary may also be able to escalate privileges if a script in a PowerShell profile is loaded and executed by an account with higher privileges, such as a domain administrator. (Citation: Wits End and Shady PowerShell Profiles)
 
-#### Properties
-
-- id: T1546.013
-- name: PowerShell Profile
-- created: 2020-01-24 15:11:02.758000+00:00
-- modified: 2025-10-24 17:48:24.124000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1546.014: Emond
+
 ^t1546014-emond
 
 **Parent Technique**
@@ -391,17 +275,8 @@ The rule files are in the plist format and define the name, event type, and acti
 
 Adversaries may abuse this service by writing a rule to execute commands when a defined event occurs, such as system start up or user authentication.(Citation: xorrior emond Jan 2018)(Citation: magnusviri emond Apr 2016)(Citation: sentinelone macos persist Jun 2019) Adversaries may also be able to escalate privileges from administrator to root as the emond service is executed with root privileges by the [Launch Daemon](https://attack.mitre.org/techniques/T1543/004) service.
 
-#### Properties
-
-- id: T1546.014
-- name: Emond
-- created: 2020-01-24 15:15:13.426000+00:00
-- modified: 2025-10-24 17:49:08.766000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1546.015: Component Object Model Hijacking
+
 ^t1546015-component-object-model-hijacking
 
 **Parent Technique**
@@ -416,17 +291,8 @@ Adversaries may use the COM system to insert malicious code that can be executed
 
 One variation of COM hijacking involves abusing Type Libraries (TypeLibs), which provide metadata about COM objects, such as their interfaces and methods. Adversaries may modify Registry keys associated with TypeLibs to redirect legitimate COM object functionality to malicious scripts or payloads. Unlike traditional COM hijacking, which commonly uses local DLLs, this variation may leverage the "script:" moniker to execute remote scripts hosted on external servers.(Citation: RELIAQUEST) This approach enables stealthy execution of code while maintaining persistence, as the remote payload would be automatically downloaded whenever the hijacked COM object is accessed.
 
-#### Properties
-
-- id: T1546.015
-- name: Component Object Model Hijacking
-- created: 2020-03-16 14:12:47.923000+00:00
-- modified: 2025-10-24 17:49:18.160000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1546.016: Installer Packages
+
 ^t1546016-installer-packages
 
 **Parent Technique**
@@ -443,17 +309,8 @@ Depending on the distribution, Linux versions of package installer scripts are s
 
 For Windows, the Microsoft Installer services uses `.msi` files to manage the installing, updating, and uninstalling of applications. These installation routines may also include instructions to perform additional actions that may be abused by adversaries.(Citation: Microsoft Installation Procedures)
 
-#### Properties
-
-- id: T1546.016
-- name: Installer Packages
-- created: 2022-09-27 18:02:16.026000+00:00
-- modified: 2025-04-15 19:59:13.167000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1546.017: Udev Rules
+
 ^t1546017-udev-rules
 
 **Parent Technique**
@@ -466,17 +323,8 @@ Adversaries may maintain persistence through executing malicious content trigger
 
 Adversaries may abuse the udev subsystem by adding or modifying rules in udev rule files to execute malicious content. For example, an adversary may configure a rule to execute their binary each time the pseudo-device file, such as `/dev/random`, is accessed by an application. Although udev is limited to running short tasks and is restricted by systemd-udevd's sandbox (blocking network and filesystem access), attackers may use scripting commands under the action key `RUN+=` to detach and run the malicious content’s process in the background to bypass these controls.(Citation: Reichert aon sedexp 2024)
 
-#### Properties
-
-- id: T1546.017
-- name: Udev Rules
-- created: 2024-09-26 17:02:09.888000+00:00
-- modified: 2025-10-24 17:49:37.034000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1546.018: Python Startup Hooks
+
 ^t1546018-python-startup-hooks
 
 **Parent Technique**
@@ -491,16 +339,6 @@ Path configuration files are designed to extend Python’s module search paths t
 
 Adversaries may abuse these mechanisms to establish persistence on systems where Python is widely used (e.g., for automation or scripting in production environments).  
 
-#### Properties
-
-- id: T1546.018
-- name: Python Startup Hooks
-- created: 2025-05-22 19:20:46.740000+00:00
-- modified: 2025-10-21 02:35:20.850000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1026-privileged_account_management|M1026: Privileged Account Management]]
@@ -514,8 +352,4 @@ Adversaries may abuse these mechanisms to establish persistence on systems where
 - SaaS
 - IaaS
 - Office Suite
-
-## Tools
-
-- [[pacu|Pacu]]
 

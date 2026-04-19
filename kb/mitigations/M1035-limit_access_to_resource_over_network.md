@@ -62,14 +62,6 @@ Network Segmentation:
 
 - pfSense for open-source network isolation
 
-## Properties
-
-- id: M1035
-- name: Limit Access to Resource Over Network
-- created: 2019-06-11 16:30:16.672000+00:00
-- modified: 2024-12-18 15:50:51.212000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

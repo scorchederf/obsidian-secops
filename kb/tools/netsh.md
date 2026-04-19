@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [netsh](https://attack.mitre.org/software/S0108) is a scripting utility used to interact with networking components on local or remote systems. (Citation: TechNet Netsh)
 
-## Properties
-
-- id: S0108
-- name: netsh
-- created: 2017-05-31 21:33:06.083000+00:00
-- modified: 2025-02-25 17:54:17.038000+00:00
-- type: tool
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1090-proxy|T1090: Proxy]]

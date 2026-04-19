@@ -10,14 +10,6 @@ type: course-of-action
 
 Use intrusion detection signatures to block traffic at network boundaries.
 
-## Properties
-
-- id: M1031
-- name: Network Intrusion Prevention
-- created: 2019-06-10 20:46:02.263000+00:00
-- modified: 2024-10-17 18:54:36.723000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1001-data_obfuscation|T1001: Data Obfuscation]]

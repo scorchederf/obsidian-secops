@@ -43,14 +43,6 @@ Training and Policy Enforcement:
 - Educate employees on the importance of MFA and secure authenticator usage.
 - Enforce policies that require MFA on all critical systems, especially for remote access, privileged accounts, and cloud applications.
 
-## Properties
-
-- id: M1032
-- name: Multi-factor Authentication
-- created: 2019-06-10 20:53:36.319000+00:00
-- modified: 2025-05-09 15:48:18.053000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

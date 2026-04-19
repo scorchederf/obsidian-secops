@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Impacket](https://attack.mitre.org/software/S0357) is an open source collection of modules written in Python for programmatically constructing and manipulating network protocols. [Impacket](https://attack.mitre.org/software/S0357) contains several tools for remote service execution, Kerberos manipulation, Windows credential dumping, packet sniffing, and relay attacks.(Citation: Impacket Tools)
 
-## Properties
-
-- id: S0357
-- name: Impacket
-- created: 2019-01-31 01:39:56.283000+00:00
-- modified: 2025-04-04 17:16:12.597000+00:00
-- type: tool
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

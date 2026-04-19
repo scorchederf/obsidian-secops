@@ -21,6 +21,7 @@ Gathering this information may reveal opportunities for other forms of reconnais
 ## Subtechniques
 
 ### T1589.001: Credentials
+
 ^t1589001-credentials
 
 **Parent Technique**
@@ -37,17 +38,8 @@ Credential information may also be exposed to adversaries via leaks to online or
 
 Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Phishing for Information](https://attack.mitre.org/techniques/T1598)), establishing operational resources (ex: [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Valid Accounts](https://attack.mitre.org/techniques/T1078)). 
 
-#### Properties
-
-- id: T1589.001
-- name: Credentials
-- created: 2020-10-02 14:55:43.815000+00:00
-- modified: 2025-10-24 17:49:18.246000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1589.002: Email Addresses
+
 ^t1589002-email-addresses
 
 **Parent Technique**
@@ -62,17 +54,8 @@ Adversaries may easily gather email addresses, since they may be readily availab
 
 Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Phishing for Information](https://attack.mitre.org/techniques/T1598)), establishing operational resources (ex: [Email Accounts](https://attack.mitre.org/techniques/T1586/002)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Brute Force](https://attack.mitre.org/techniques/T1110) via [External Remote Services](https://attack.mitre.org/techniques/T1133)).
 
-#### Properties
-
-- id: T1589.002
-- name: Email Addresses
-- created: 2020-10-02 14:56:24.866000+00:00
-- modified: 2025-10-24 17:48:54.336000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1589.003: Employee Names
+
 ^t1589003-employee-names
 
 **Parent Technique**
@@ -84,16 +67,6 @@ Gathering this information may reveal opportunities for other forms of reconnais
 Adversaries may gather employee names that can be used during targeting. Employee names be used to derive email addresses as well as to help guide other reconnaissance efforts and/or craft more-believable lures.
 
 Adversaries may easily gather employee names, since they may be readily available and exposed via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: OPM Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Phishing for Information](https://attack.mitre.org/techniques/T1598)), establishing operational resources (ex: [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Valid Accounts](https://attack.mitre.org/techniques/T1078)).
-
-#### Properties
-
-- id: T1589.003
-- name: Employee Names
-- created: 2020-10-02 14:57:15.906000+00:00
-- modified: 2025-10-24 17:48:57.975000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

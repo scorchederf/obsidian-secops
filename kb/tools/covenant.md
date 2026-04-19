@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Covenant](https://attack.mitre.org/software/S1155) is a multi-platform command and control framework written in .NET. While designed for penetration testing and security research, the tool has also been used by threat actors such as [HAFNIUM](https://attack.mitre.org/groups/G0125) during operations. [Covenant](https://attack.mitre.org/software/S1155) functions through a central listener managing multiple deployed "Grunts" that communicate back to the controller.(Citation: Github Covenant)(Citation: Microsoft HAFNIUM March 2020)
 
-## Properties
-
-- id: S1155
-- name: Covenant
-- created: 2024-09-04 17:08:08.985000+00:00
-- modified: 2024-09-06 18:11:55.619000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]

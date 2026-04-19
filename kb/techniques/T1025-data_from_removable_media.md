@@ -26,6 +26,3 @@ Some adversaries may also use [Automated Collection](https://attack.mitre.org/te
 - macOS
 - Windows
 
-## Tools
-
-

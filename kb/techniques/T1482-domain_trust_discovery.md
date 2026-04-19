@@ -23,15 +23,3 @@ Adversaries may attempt to gather information on domain trust relationships that
 
 - Windows
 
-## Tools
-
-- [[adfind|AdFind]]
-- [[bloodhound|BloodHound]]
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[dsquery|dsquery]]
-- [[empire|Empire]]
-- [[nltest|Nltest]]
-- [[poshc2|PoshC2]]
-- [[powersploit|PowerSploit]]
-- [[rubeus|Rubeus]]
-

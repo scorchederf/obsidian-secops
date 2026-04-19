@@ -27,9 +27,3 @@ Adversaries may use the information gained to shape follow-on behaviors, such as
 - Office Suite
 - SaaS
 
-## Tools
-
-- [[aadinternals|AADInternals]]
-- [[pacu|Pacu]]
-- [[roadtools|ROADTools]]
-

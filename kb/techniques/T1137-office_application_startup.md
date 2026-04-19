@@ -19,6 +19,7 @@ A variety of features have been discovered in Outlook that can be abused to obta
 ## Subtechniques
 
 ### T1137.001: Office Template Macros
+
 ^t1137001-office-template-macros
 
 **Parent Technique**
@@ -41,17 +42,8 @@ Adversaries may also change the location of the base template to point to their 
 
 An adversary may need to enable macros to execute unrestricted depending on the system or enterprise security policy on use of macros.
 
-#### Properties
-
-- id: T1137.001
-- name: Office Template Macros
-- created: 2019-11-07 20:29:17.788000+00:00
-- modified: 2025-10-24 17:48:59.432000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1137.002: Office Test
+
 ^t1137002-office-test
 
 **Parent Technique**
@@ -69,17 +61,8 @@ There exist user and global Registry keys for the Office Test feature, such as:
 
 Adversaries may add this Registry key and specify a malicious DLL that will be executed whenever an Office application, such as Word or Excel, is started.
 
-#### Properties
-
-- id: T1137.002
-- name: Office Test
-- created: 2019-11-07 19:44:04.475000+00:00
-- modified: 2025-10-24 17:49:34.588000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1137.003: Outlook Forms
+
 ^t1137003-outlook-forms
 
 **Parent Technique**
@@ -92,17 +75,8 @@ Adversaries may abuse Microsoft Outlook forms to obtain persistence on a comprom
 
 Once malicious forms have been added to the user’s mailbox, they will be loaded when Outlook is started. Malicious forms will execute when an adversary sends a specifically crafted email to the user.(Citation: SensePost Outlook Forms)
 
-#### Properties
-
-- id: T1137.003
-- name: Outlook Forms
-- created: 2019-11-07 20:06:02.624000+00:00
-- modified: 2025-10-24 17:49:12.562000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1137.004: Outlook Home Page
+
 ^t1137004-outlook-home-page
 
 **Parent Technique**
@@ -116,17 +90,8 @@ Adversaries may abuse Microsoft Outlook's Home Page feature to obtain persistenc
 Once malicious home pages have been added to the user’s mailbox, they will be loaded when Outlook is started. Malicious Home Pages will execute when the right Outlook folder is loaded/reloaded.(Citation: SensePost Outlook Home Page)
 
 
-#### Properties
-
-- id: T1137.004
-- name: Outlook Home Page
-- created: 2019-11-07 20:09:56.536000+00:00
-- modified: 2025-10-24 17:49:18.872000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1137.005: Outlook Rules
+
 ^t1137005-outlook-rules
 
 **Parent Technique**
@@ -139,17 +104,8 @@ Adversaries may abuse Microsoft Outlook rules to obtain persistence on a comprom
 
 Once malicious rules have been added to the user’s mailbox, they will be loaded when Outlook is started. Malicious rules will execute when an adversary sends a specifically crafted email to the user.(Citation: SilentBreak Outlook Rules)
 
-#### Properties
-
-- id: T1137.005
-- name: Outlook Rules
-- created: 2019-11-07 20:00:25.560000+00:00
-- modified: 2025-10-24 17:48:41.026000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1137.006: Add-ins
+
 ^t1137006-add-ins
 
 **Parent Technique**
@@ -161,16 +117,6 @@ Once malicious rules have been added to the user’s mailbox, they will be loade
 Adversaries may abuse Microsoft Office add-ins to obtain persistence on a compromised system. Office add-ins can be used to add functionality to Office programs. (Citation: Microsoft Office Add-ins) There are different types of add-ins that can be used by the various Office products; including Word/Excel add-in Libraries (WLL/XLL), VBA add-ins, Office Component Object Model (COM) add-ins, automation add-ins, VBA Editor (VBE), Visual Studio Tools for Office (VSTO) add-ins, and Outlook add-ins. (Citation: MRWLabs Office Persistence Add-ins)(Citation: FireEye Mail CDS 2018)
 
 Add-ins can be used to obtain persistence because they can be set to execute code when an Office application starts. 
-
-#### Properties
-
-- id: T1137.006
-- name: Add-ins
-- created: 2019-11-07 19:52:52.801000+00:00
-- modified: 2025-10-24 17:48:37.911000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

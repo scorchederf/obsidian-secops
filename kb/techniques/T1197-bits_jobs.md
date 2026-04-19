@@ -30,7 +30,3 @@ BITS upload functionalities can also be used to perform [Exfiltration Over Alter
 
 - Windows
 
-## Tools
-
-- [[bitsadmin|BITSAdmin]]
-

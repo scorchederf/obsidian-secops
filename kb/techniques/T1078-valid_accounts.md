@@ -21,6 +21,7 @@ The overlap of permissions for local, domain, and cloud accounts across a networ
 ## Subtechniques
 
 ### T1078.001: Default Accounts
+
 ^t1078001-default-accounts
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Default accounts are not limited to client machines; rather, they also include a
 
 Default accounts may be created on a system after initial setup by connecting or integrating it with another application. For example, when an ESXi server is connected to a vCenter server, a default privileged account called `vpxuser` is created on the ESXi server. If a threat actor is able to compromise this account’s credentials (for example, via [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212) on the vCenter host), they will then have access to the ESXi server.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023)(Citation: Pentera vCenter Information Disclosure)
 
-#### Properties
-
-- id: T1078.001
-- name: Default Accounts
-- created: 2020-03-13 20:15:31.974000+00:00
-- modified: 2025-10-24 17:48:51.181000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1078.002: Domain Accounts
+
 ^t1078002-domain-accounts
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Adversaries may obtain and abuse credentials of a domain account as a means of g
 
 Adversaries may compromise domain accounts, some with a high level of privileges, through various means such as [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or password reuse, allowing access to privileged resources of the domain.
 
-#### Properties
-
-- id: T1078.002
-- name: Domain Accounts
-- created: 2020-03-13 20:21:54.758000+00:00
-- modified: 2025-10-24 17:49:21.034000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1078.003: Local Accounts
+
 ^t1078003-local-accounts
 
 **Parent Technique**
@@ -81,17 +64,8 @@ Adversaries may obtain and abuse credentials of a local account as a means of ga
 
 Local Accounts may also be abused to elevate privileges and harvest credentials through [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). Password reuse may allow the abuse of local accounts across a set of machines on a network for the purposes of Privilege Escalation and Lateral Movement. 
 
-#### Properties
-
-- id: T1078.003
-- name: Local Accounts
-- created: 2020-03-13 20:26:46.695000+00:00
-- modified: 2025-10-24 17:49:39.874000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1078.004: Cloud Accounts
+
 ^t1078004-cloud-accounts
 
 **Parent Technique**
@@ -107,16 +81,6 @@ Service or user accounts may be targeted by adversaries through [Brute Force](ht
 An adversary may create long lasting [Additional Cloud Credentials](https://attack.mitre.org/techniques/T1098/001) on a compromised cloud account to maintain persistence in the environment. Such credentials may also be used to bypass security controls such as multi-factor authentication. 
 
 Cloud accounts may also be able to assume [Temporary Elevated Cloud Access](https://attack.mitre.org/techniques/T1548/005) or other privileges through various means within the environment. Misconfigurations in role assignments or role assumption policies may allow an adversary to use these mechanisms to leverage permissions outside the intended scope of the account. Such over privileged accounts may be used to harvest sensitive data from online storage accounts and databases through [Cloud API](https://attack.mitre.org/techniques/T1059/009) or other methods. For example, in Azure environments, adversaries may target Azure Managed Identities, which allow associated Azure resources to request access tokens. By compromising a resource with an attached Managed Identity, such as an Azure VM, adversaries may be able to [Steal Application Access Token](https://attack.mitre.org/techniques/T1528)s to move laterally across the cloud environment.(Citation: SpecterOps Managed Identity 2022)
-
-#### Properties
-
-- id: T1078.004
-- name: Cloud Accounts
-- created: 2020-03-13 20:36:57.378000+00:00
-- modified: 2025-10-24 17:49:35.682000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.9
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -141,7 +105,4 @@ Cloud accounts may also be able to assume [Temporary Elevated Cloud Access](http
 - Office Suite
 - SaaS
 - Windows
-
-## Tools
-
 

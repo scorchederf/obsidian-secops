@@ -28,7 +28,3 @@ Adversaries may use the information learned from these debugger checks during au
 - macOS
 - Windows
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-

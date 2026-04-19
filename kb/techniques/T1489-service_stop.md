@@ -34,6 +34,3 @@ Threat actors may also disable or stop service in cloud environments. For exampl
 - macOS
 - Windows
 
-## Tools
-
-

@@ -19,6 +19,7 @@ Adversaries may attempt to discover group permission settings in many different 
 ## Subtechniques
 
 ### T1069.001: Local Groups
+
 ^t1069001-local-groups
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may attempt to find local system groups and permission settings. The
 
 Commands such as <code>net localgroup</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscl . -list /Groups</code> on macOS, and <code>groups</code> on Linux can list local groups.
 
-#### Properties
-
-- id: T1069.001
-- name: Local Groups
-- created: 2020-03-12 19:29:21.013000+00:00
-- modified: 2025-10-24 17:49:10.014000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1069.002: Domain Groups
+
 ^t1069002-domain-groups
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may attempt to find domain-level groups and permission settings. The
 
 Commands such as <code>net group /domain</code> of the [Net](https://attack.mitre.org/software/S0039) utility,  <code>dscacheutil -q group</code> on macOS, and <code>ldapsearch</code> on Linux can list domain-level groups.
 
-#### Properties
-
-- id: T1069.002
-- name: Domain Groups
-- created: 2020-02-21 21:15:06.561000+00:00
-- modified: 2025-10-24 17:48:33.946000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1069.003: Cloud Groups
+
 ^t1069003-cloud-groups
 
 **Parent Technique**
@@ -81,16 +64,6 @@ Azure CLI (AZ CLI) and the Google Cloud Identity Provider API also provide inter
 
 Adversaries may attempt to list ACLs for objects to determine the owner and other accounts with access to the object, for example, via the AWS <code>GetBucketAcl</code> API (Citation: AWS Get Bucket ACL). Using this information an adversary can target accounts with permissions to a given object or leverage accounts they have already compromised to access the object.
 
-#### Properties
-
-- id: T1069.003
-- name: Cloud Groups
-- created: 2020-02-21 21:15:33.222000+00:00
-- modified: 2025-10-24 17:48:26.982000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Containers
@@ -101,8 +74,4 @@ Adversaries may attempt to list ACLs for objects to determine the owner and othe
 - Office Suite
 - SaaS
 - Windows
-
-## Tools
-
-- [[shimratreporter|ShimRatReporter]]
 

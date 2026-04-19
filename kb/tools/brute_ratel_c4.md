@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Brute Ratel C4](https://attack.mitre.org/software/S1063) is a commercial red-teaming and adversarial attack simulation tool that first appeared in December 2020. [Brute Ratel C4](https://attack.mitre.org/software/S1063) was specifically designed to avoid detection by endpoint detection and response (EDR) and antivirus (AV) capabilities, and deploys agents called badgers to enable arbitrary command execution for lateral movement, privilege escalation, and persistence. In September 2022, a cracked version of [Brute Ratel C4](https://attack.mitre.org/software/S1063) was leaked in the cybercriminal underground, leading to its use by threat actors.(Citation: Dark Vortex Brute Ratel C4)(Citation: Palo Alto Brute Ratel July 2022)(Citation: MDSec Brute Ratel August 2022)(Citation: SANS Brute Ratel October 2022)(Citation: Trend Micro Black Basta October 2022)
 
-## Properties
-
-- id: S1063
-- name: Brute Ratel C4
-- created: 2023-02-07 20:26:58.792000+00:00
-- modified: 2024-09-19 15:46:58.008000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

@@ -28,7 +28,3 @@ In Docker, adversaries may specify an entrypoint during container deployment tha
 
 - Containers
 
-## Tools
-
-- [[peirates|Peirates]]
-

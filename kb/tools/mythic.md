@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Mythic](https://attack.mitre.org/software/S0699) is an open source, cross-platform post-exploitation/command and control platform. [Mythic](https://attack.mitre.org/software/S0699) is designed to "plug-n-play" with various agents and communication channels.(Citation: Mythic Github)(Citation: Mythic SpecterOps)(Citation: Mythc Documentation) Deployed [Mythic](https://attack.mitre.org/software/S0699) C2 servers have been observed as part of potentially malicious infrastructure.(Citation: RecordedFuture 2021 Ad Infra)
 
-## Properties
-
-- id: S0699
-- name: Mythic
-- created: 2022-03-26 01:38:12.966000+00:00
-- modified: 2025-04-16 20:38:56.653000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1008-fallback_channels|T1008: Fallback Channels]]

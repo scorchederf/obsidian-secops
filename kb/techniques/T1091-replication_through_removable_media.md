@@ -26,6 +26,3 @@ Mobile devices may also be used to infect PCs with malware if connected via USB.
 
 - Windows
 
-## Tools
-
-

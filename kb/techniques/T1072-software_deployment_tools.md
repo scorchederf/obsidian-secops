@@ -43,6 +43,3 @@ The permissions required for this action vary by system configuration; local cre
 - SaaS
 - Windows
 
-## Tools
-
-

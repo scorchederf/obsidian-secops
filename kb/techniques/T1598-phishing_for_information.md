@@ -25,6 +25,7 @@ Phishing for information may also involve evasive techniques, such as removing o
 ## Subtechniques
 
 ### T1598.001: Spearphishing Service
+
 ^t1598001-spearphishing-service
 
 **Parent Technique**
@@ -37,17 +38,8 @@ Adversaries may send spearphishing messages via third-party services to elicit s
 
 All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries send messages through various social media services, personal webmail, and other non-enterprise controlled services.(Citation: ThreatPost Social Media Phishing) These services are more likely to have a less-strict security policy than an enterprise. As with most kinds of spearphishing, the goal is to generate rapport with the target or get the target's interest in some way. Adversaries may create fake social media accounts and message employees for potential job opportunities. Doing so allows a plausible reason for asking about services, policies, and information about their environment. Adversaries may also use information from previous reconnaissance efforts (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)) to craft persuasive and believable lures.
 
-#### Properties
-
-- id: T1598.001
-- name: Spearphishing Service
-- created: 2020-10-02 17:08:07.742000+00:00
-- modified: 2025-10-24 17:49:38.182000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1598.002: Spearphishing Attachment
+
 ^t1598002-spearphishing-attachment
 
 **Parent Technique**
@@ -62,17 +54,8 @@ All forms of spearphishing are electronically delivered social engineering targe
 
 Adversaries may also use information from previous reconnaissance efforts (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)) to craft persuasive and believable lures.
 
-#### Properties
-
-- id: T1598.002
-- name: Spearphishing Attachment
-- created: 2020-10-02 17:08:57.386000+00:00
-- modified: 2025-10-24 17:49:04.751000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1598.003: Spearphishing Link
+
 ^t1598003-spearphishing-link
 
 **Parent Technique**
@@ -95,17 +78,8 @@ Adversaries may also send a malicious link in the form of Quick Response (QR) Co
 
 From the fake website, information is gathered in web forms and sent to the adversary. Adversaries may also use information from previous reconnaissance efforts (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)) to craft persuasive and believable lures.
 
-#### Properties
-
-- id: T1598.003
-- name: Spearphishing Link
-- created: 2020-10-02 17:09:50.723000+00:00
-- modified: 2025-10-24 17:48:34.880000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ### T1598.004: Spearphishing Voice
+
 ^t1598004-spearphishing-voice
 
 **Parent Technique**
@@ -121,16 +95,6 @@ All forms of phishing are electronically delivered social engineering. In this s
 Victims may also receive phishing messages that direct them to call a phone number ("callback phishing") where the adversary attempts to collect confidential information.(Citation: Avertium callback phishing)
 
 Adversaries may also use information from previous reconnaissance efforts (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)) to tailor pretexts to be even more persuasive and believable for the victim.
-
-#### Properties
-
-- id: T1598.004
-- name: Spearphishing Voice
-- created: 2023-09-07 21:48:39.516000+00:00
-- modified: 2025-04-15 23:11:31.420000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

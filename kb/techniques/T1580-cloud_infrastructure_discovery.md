@@ -26,7 +26,3 @@ An adversary may enumerate resources using a compromised user's access keys to d
 
 - IaaS
 
-## Tools
-
-- [[pacu|Pacu]]
-

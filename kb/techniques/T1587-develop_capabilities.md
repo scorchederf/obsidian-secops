@@ -19,6 +19,7 @@ As with legitimate development efforts, different skill sets may be required for
 ## Subtechniques
 
 ### T1587.001: Malware
+
 ^t1587001-malware
 
 **Parent Technique**
@@ -35,17 +36,8 @@ As with legitimate development efforts, different skill sets may be required for
 
 Some aspects of malware development, such as C2 protocol development, may require adversaries to obtain additional infrastructure. For example, malware developed that will communicate with Twitter for C2, may require use of [Web Services](https://attack.mitre.org/techniques/T1583/006).(Citation: FireEye APT29)
 
-#### Properties
-
-- id: T1587.001
-- name: Malware
-- created: 2020-10-01 01:33:01.433000+00:00
-- modified: 2025-10-24 17:48:30.776000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1587.002: Code Signing Certificates
+
 ^t1587002-code-signing-certificates
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Adversaries may create self-signed code signing certificates that can be used du
 
 Prior to [Code Signing](https://attack.mitre.org/techniques/T1553/002), adversaries may develop self-signed code signing certificates for use in operations.
 
-#### Properties
-
-- id: T1587.002
-- name: Code Signing Certificates
-- created: 2020-10-01 01:41:08.652000+00:00
-- modified: 2025-10-24 17:48:37.738000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1587.003: Digital Certificates
+
 ^t1587003-digital-certificates
 
 **Parent Technique**
@@ -83,17 +66,8 @@ Adversaries may create self-signed SSL/TLS certificates that can be used to furt
 
 After creating a digital certificate, an adversary may then install that certificate (see [Install Digital Certificate](https://attack.mitre.org/techniques/T1608/003)) on infrastructure under their control.
 
-#### Properties
-
-- id: T1587.003
-- name: Digital Certificates
-- created: 2020-10-01 01:42:24.974000+00:00
-- modified: 2025-10-24 17:48:29.137000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1587.004: Exploits
+
 ^t1587004-exploits
 
 **Parent Technique**
@@ -107,16 +81,6 @@ Adversaries may develop exploits that can be used during targeting. An exploit t
 As with legitimate development efforts, different skill sets may be required for developing exploits. The skills needed may be located in-house, or may need to be contracted out. Use of a contractor may be considered an extension of that adversary's exploit development capabilities, provided the adversary plays a role in shaping requirements and maintains an initial degree of exclusivity to the exploit.
 
 Adversaries may use exploits during various phases of the adversary lifecycle (i.e. [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190), [Exploitation for Client Execution](https://attack.mitre.org/techniques/T1203), [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068), [Exploitation for Defense Evasion](https://attack.mitre.org/techniques/T1211), [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212), [Exploitation of Remote Services](https://attack.mitre.org/techniques/T1210), and [Application or System Exploitation](https://attack.mitre.org/techniques/T1499/004)).
-
-#### Properties
-
-- id: T1587.004
-- name: Exploits
-- created: 2020-10-01 01:48:15.511000+00:00
-- modified: 2025-10-24 17:49:17.967000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

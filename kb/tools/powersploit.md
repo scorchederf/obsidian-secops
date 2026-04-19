@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [PowerSploit](https://attack.mitre.org/software/S0194) is an open source, offensive security framework comprised of [PowerShell](https://attack.mitre.org/techniques/T1059/001) modules and scripts that perform a wide range of tasks related to penetration testing such as code execution, persistence, bypassing anti-virus, recon, and exfiltration. (Citation: GitHub PowerSploit May 2012) (Citation: PowerShellMagazine PowerSploit July 2014) (Citation: PowerSploit Documentation)
 
-## Properties
-
-- id: S0194
-- name: PowerSploit
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-04-16 20:38:50.246000+00:00
-- type: tool
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

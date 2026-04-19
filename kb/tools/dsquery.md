@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [dsquery](https://attack.mitre.org/software/S0105) is a command-line utility that can be used to query Active Directory for information from a system within a domain. (Citation: TechNet Dsquery) It is typically installed only on Windows Server versions but can be installed on non-server variants through the Microsoft-provided Remote Server Administration Tools bundle.
 
-## Properties
-
-- id: S0105
-- name: dsquery
-- created: 2017-05-31 21:33:04.937000+00:00
-- modified: 2025-04-16 20:38:51.407000+00:00
-- type: tool
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]

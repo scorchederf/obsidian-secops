@@ -22,10 +22,3 @@ Malware or scripts may be used to interact with the devices through an available
 - macOS
 - Windows
 
-## Tools
-
-- [[imminent_monitor|Imminent Monitor]]
-- [[powersploit|PowerSploit]]
-- [[pupy|Pupy]]
-- [[remcos|Remcos]]
-

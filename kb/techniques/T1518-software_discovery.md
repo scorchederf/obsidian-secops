@@ -21,6 +21,7 @@ Adversaries may attempt to enumerate software for a variety of reasons, such as 
 ## Subtechniques
 
 ### T1518.001: Security Software Discovery
+
 ^t1518001-security-software-discovery
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Example commands that can be used to obtain security software information are [n
 
 Adversaries may also utilize the [Cloud API](https://attack.mitre.org/techniques/T1059/009) to discover cloud-native security software installed on compute infrastructure, such as the AWS CloudWatch agent, Azure VM Agent, and Google Cloud Monitor agent. These agents  may collect  metrics and logs from the VM, which may be centrally aggregated in a cloud-based monitoring platform.
 
-#### Properties
-
-- id: T1518.001
-- name: Security Software Discovery
-- created: 2020-02-21 21:16:18.066000+00:00
-- modified: 2025-10-24 17:49:23.401000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1518.002: Backup Software Discovery
+
 ^t1518002-backup-software-discovery
 
 **Parent Technique**
@@ -58,16 +50,6 @@ Adversaries may attempt to get a listing of backup software or configurations th
 
 Commands that can be used to obtain security software information are [netsh](https://attack.mitre.org/software/S0108), `reg query` with [Reg](https://attack.mitre.org/software/S0075), `dir` with [cmd](https://attack.mitre.org/software/S0106), and [Tasklist](https://attack.mitre.org/software/S0057), but other indicators of discovery behavior may be more specific to the type of software or security system the adversary is looking for, such as Veeam, Acronis, Dropbox, or Paragon.(Citation: Symantec Play Ransomware 2023)
 
-#### Properties
-
-- id: T1518.002
-- name: Backup Software Discovery
-- created: 2025-05-22 18:57:47.616000+00:00
-- modified: 2025-10-22 03:53:48.786000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -75,8 +57,4 @@ Commands that can be used to obtain security software information are [netsh](ht
 - Linux
 - macOS
 - Windows
-
-## Tools
-
-- [[shimratreporter|ShimRatReporter]]
 

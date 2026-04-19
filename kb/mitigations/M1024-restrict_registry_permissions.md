@@ -53,14 +53,6 @@ Policy Management Tools:
 - Group Policy Management Console (GPMC): Enforce registry permissions via GPOs.
 - Microsoft Endpoint Manager: Deploy configuration baselines for registry permissions.
 
-## Properties
-
-- id: M1024
-- name: Restrict Registry Permissions
-- created: 2019-06-06 20:58:59.577000+00:00
-- modified: 2024-12-24 13:34:49.309000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]

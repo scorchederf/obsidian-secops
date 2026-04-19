@@ -24,7 +24,3 @@ Specific storage locations vary based on platform and/or application, but browse
 - macOS
 - Windows
 
-## Tools
-
-- [[empire|Empire]]
-

@@ -35,14 +35,6 @@ Database Encryption:
 - Use Case: Enable Transparent Data Encryption (TDE) or column-level encryption in database management systems.
 - Implementation: Use MySQL’s built-in encryption features to encrypt sensitive database fields such as social security numbers.
 
-## Properties
-
-- id: M1041
-- name: Encrypt Sensitive Information
-- created: 2019-06-11 16:43:44.834000+00:00
-- modified: 2025-04-02 17:28:57.029000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

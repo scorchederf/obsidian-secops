@@ -30,13 +30,3 @@ Files can also be transferred using native or otherwise present tools on the vic
 - macOS
 - Windows
 
-## Tools
-
-- [[bitsadmin|BITSAdmin]]
-- [[cmd|cmd]]
-- [[esentutl|esentutl]]
-- [[expand|Expand]]
-- [[ftp|ftp]]
-- [[impacket|Impacket]]
-- [[psexec|PsExec]]
-

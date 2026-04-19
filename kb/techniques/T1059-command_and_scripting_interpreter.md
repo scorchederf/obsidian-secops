@@ -21,6 +21,7 @@ Adversaries may abuse these technologies in various ways as a means of executing
 ## Subtechniques
 
 ### T1059.001: PowerShell
+
 ^t1059001-powershell
 
 **Parent Technique**
@@ -37,17 +38,8 @@ A number of PowerShell-based offensive testing tools are available, including [E
 
 PowerShell commands/scripts can also be executed without directly invoking the <code>powershell.exe</code> binary through interfaces to PowerShell's underlying <code>System.Management.Automation</code> assembly DLL exposed through the .NET framework and Windows Common Language Interface (CLI).(Citation: Sixdub PowerPick Jan 2016)(Citation: SilentBreak Offensive PS Dec 2015)(Citation: Microsoft PSfromCsharp APR 2014)
 
-#### Properties
-
-- id: T1059.001
-- name: PowerShell
-- created: 2020-03-09 13:48:55.078000+00:00
-- modified: 2025-10-24 17:49:07.660000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1059.002: AppleScript
+
 ^t1059002-applescript
 
 **Parent Technique**
@@ -64,17 +56,8 @@ AppleScripts do not need to call <code>osascript</code> to execute. However, the
 
 Adversaries may abuse AppleScript to execute various behaviors, such as interacting with an open SSH connection, moving to remote machines, and even presenting users with fake dialog boxes. These events cannot start applications remotely (they can start them locally), but they can interact with applications if they're already running remotely. On macOS 10.10 Yosemite and higher, AppleScript has the ability to execute [Native API](https://attack.mitre.org/techniques/T1106)s, which otherwise would require compilation and execution in a mach-O binary file format.(Citation: SentinelOne macOS Red Team) Since this is a scripting language, it can be used to launch more common techniques as well such as a reverse shell via [Python](https://attack.mitre.org/techniques/T1059/006).(Citation: Macro Malware Targets Macs)
 
-#### Properties
-
-- id: T1059.002
-- name: AppleScript
-- created: 2020-03-09 14:07:54.329000+00:00
-- modified: 2025-10-24 17:48:39.348000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1059.003: Windows Command Shell
+
 ^t1059003-windows-command-shell
 
 **Parent Technique**
@@ -89,17 +72,8 @@ Batch files (ex: .bat or .cmd) also provide the shell with a list of sequential 
 
 Adversaries may leverage [cmd](https://attack.mitre.org/software/S0106) to execute various commands and payloads. Common uses include [cmd](https://attack.mitre.org/software/S0106) to execute a single command, or abusing [cmd](https://attack.mitre.org/software/S0106) interactively with input and output forwarded over a command and control channel.
 
-#### Properties
-
-- id: T1059.003
-- name: Windows Command Shell
-- created: 2020-03-09 14:12:31.196000+00:00
-- modified: 2025-10-24 17:49:25.722000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1059.004: Unix Shell
+
 ^t1059004-unix-shell
 
 **Parent Technique**
@@ -116,17 +90,8 @@ Adversaries may abuse Unix shells to execute various commands or payloads. Inter
 
 Some systems, such as embedded devices, lightweight Linux distributions, and ESXi servers, may leverage stripped-down Unix shells via Busybox, a small executable that contains a variety of tools, including a simple shell.
 
-#### Properties
-
-- id: T1059.004
-- name: Unix Shell
-- created: 2020-03-09 14:15:05.330000+00:00
-- modified: 2025-10-24 17:49:12.476000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1059.005: Visual Basic
+
 ^t1059005-visual-basic
 
 **Parent Technique**
@@ -141,17 +106,8 @@ Derivative languages based on VB have also been created, such as Visual Basic fo
 
 Adversaries may use VB payloads to execute malicious commands. Common malicious usage includes automating execution of behaviors with VBScript or embedding VBA content into [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001) payloads (which may also involve [Mark-of-the-Web Bypass](https://attack.mitre.org/techniques/T1553/005) to enable execution).(Citation: Default VBS macros Blocking )
 
-#### Properties
-
-- id: T1059.005
-- name: Visual Basic
-- created: 2020-03-09 14:29:51.508000+00:00
-- modified: 2025-10-24 17:49:29.678000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1059.006: Python
+
 ^t1059006-python
 
 **Parent Technique**
@@ -164,17 +120,8 @@ Adversaries may abuse Python commands and scripts for execution. Python is a ver
 
 Python comes with many built-in packages to interact with the underlying system, such as file operations and device I/O. Adversaries can use these libraries to download and execute commands or other scripts as well as perform various malicious behaviors.
 
-#### Properties
-
-- id: T1059.006
-- name: Python
-- created: 2020-03-09 14:38:24.334000+00:00
-- modified: 2025-10-24 17:49:23.660000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1059.007: JavaScript
+
 ^t1059007-javascript
 
 **Parent Technique**
@@ -191,17 +138,8 @@ JavaScript for Automation (JXA) is a macOS scripting language based on JavaScrip
 
 Adversaries may abuse various implementations of JavaScript to execute various behaviors. Common uses include hosting malicious scripts on websites as part of a [Drive-by Compromise](https://attack.mitre.org/techniques/T1189) or downloading and executing these script files as secondary payloads. Since these payloads are text-based, it is also very common for adversaries to obfuscate their content as part of [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027).
 
-#### Properties
-
-- id: T1059.007
-- name: JavaScript
-- created: 2020-06-23 19:12:24.924000+00:00
-- modified: 2025-10-24 17:48:24.217000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1059.008: Network Device CLI
+
 ^t1059008-network-device-cli
 
 **Parent Technique**
@@ -216,17 +154,8 @@ Scripting interpreters automate tasks and extend functionality beyond the comman
 
 Adversaries can use the network CLI to change how network devices behave and operate. The CLI may be used to manipulate traffic flows to intercept or manipulate data, modify startup configuration parameters to load malicious system software, or to disable security features or logging to avoid detection.(Citation: Cisco Synful Knock Evolution)
 
-#### Properties
-
-- id: T1059.008
-- name: Network Device CLI
-- created: 2020-10-20 00:09:33.072000+00:00
-- modified: 2025-10-24 17:49:02.287000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1059.009: Cloud API
+
 ^t1059009-cloud-api
 
 **Parent Technique**
@@ -241,17 +170,8 @@ Cloud API functionality may allow for administrative access across all major ser
 
 With proper permissions (often via use of credentials such as [Application Access Token](https://attack.mitre.org/techniques/T1550/001) and [Web Session Cookie](https://attack.mitre.org/techniques/T1550/004)), adversaries may abuse cloud APIs to invoke various functions that execute malicious actions. For example, CLI and PowerShell functionality may be accessed through binaries installed on cloud-hosted or on-premises hosts or accessed through a browser-based cloud shell offered by many cloud platforms (such as AWS, Azure, and GCP). These cloud shells are often a packaged unified environment to use CLI and/or scripting modules hosted as a container in the cloud environment.  
 
-#### Properties
-
-- id: T1059.009
-- name: Cloud API
-- created: 2022-03-17 13:28:24.989000+00:00
-- modified: 2025-04-15 19:58:32.612000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1059.010: AutoHotKey & AutoIT
+
 ^t1059010-autohotkey-&-autoit
 
 **Parent Technique**
@@ -266,17 +186,8 @@ Adversaries may use AHK (`.ahk`) and AutoIT (`.au3`) scripts to execute maliciou
 
 These scripts may also be compiled into self-contained executable payloads (`.exe`).(Citation: AutoIT)(Citation: AutoHotKey)
 
-#### Properties
-
-- id: T1059.010
-- name: AutoHotKey & AutoIT
-- created: 2024-03-29 18:07:04.743000+00:00
-- modified: 2025-04-15 19:58:23.600000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1059.011: Lua
+
 ^t1059011-lua
 
 **Parent Technique**
@@ -289,17 +200,8 @@ Adversaries may abuse Lua commands and scripts for execution. Lua is a cross-pla
 
 Lua scripts may be executed by adversaries for malicious purposes. Adversaries may incorporate, abuse, or replace existing Lua interpreters to allow for malicious Lua command execution at runtime.(Citation: PoetRat Lua)(Citation: Lua Proofpoint Sunseed)(Citation: Cyphort EvilBunny)(Citation: Kaspersky Lua)
 
-#### Properties
-
-- id: T1059.011
-- name: Lua
-- created: 2024-08-05 18:19:42.201000+00:00
-- modified: 2025-04-15 19:58:57.854000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1059.012: Hypervisor CLI
+
 ^t1059012-hypervisor-cli
 
 **Parent Technique**
@@ -312,17 +214,8 @@ Adversaries may abuse hypervisor command line interpreters (CLIs) to execute mal
 
 For example, on ESXi systems, tools such as `esxcli` and `vim-cmd` allow administrators to configure firewall rules and log forwarding on the hypervisor, list virtual machines, start and stop virtual machines, and more.(Citation: Broadcom ESXCLI Reference)(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)(Citation: LOLESXi) Adversaries may be able to leverage these tools in order to support further actions, such as [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) or [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486).
 
-#### Properties
-
-- id: T1059.012
-- name: Hypervisor CLI
-- created: 2025-03-26 20:01:13.412000+00:00
-- modified: 2025-04-15 21:24:59.280000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1059.013: Container CLI/API
+
 ^t1059013-container-cli-api
 
 **Parent Technique**
@@ -338,16 +231,6 @@ The Docker CLI is used for managing containers via an exposed API point from the
 Adversaries may leverage the Docker CLI, API, or SDK to pull or build Docker images (i.e., [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105), [Build Image on Host](https://attack.mitre.org/techniques/T1612)), run containers (i.e., [Deploy Container](https://attack.mitre.org/techniques/T1610)), or execute commands inside running containers (i.e., [Container Administration Command](https://attack.mitre.org/techniques/T1609)). In some cases, threat actors may pull legitimate images that include scripts or tools that they can leverage - for example, using an image that includes the `curl` command to download payloads.(Citation: Intezer) Adversaries may also utilize `docker inspect` and `docker ps` to scan for cloud environment variables and other running containers (i.e., [Container and Resource Discovery](https://attack.mitre.org/techniques/T1613)).(Citation: Cisco Talos Blog)(Citation: aquasec)
 
 Kubernetes is responsible for the management and orchestration of containers across clusters. The Kubernetes control plane, which manages the state of the cluster and is responsible for scheduling, communication, and resource monitoring, can be invoked directly via the API or indirectly via CLI tools such as `kubectl`. It may also be accessed within client libraries such as Go or Python. By utilizing the API, administrators can interact with resources within the cluster such as listing or creating pods, which is a group of one or more containers. Adversaries call the API server via `curl` or other tools, allowing them to obtain further information about the environment such as pods, deployments, daemonsets, namespaces, or sysvars.(Citation: aquasec) They may also run various commands regarding resource management.
-
-#### Properties
-
-- id: T1059.013
-- name: Container CLI/API
-- created: 2025-06-15 21:41:27.262000+00:00
-- modified: 2025-10-21 23:52:40.200000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -371,10 +254,4 @@ Kubernetes is responsible for the management and orchestration of containers acr
 - Network Devices
 - Office Suite
 - Windows
-
-## Tools
-
-- [[donut|Donut]]
-- [[empire|Empire]]
-- [[imminent_monitor|Imminent Monitor]]
 

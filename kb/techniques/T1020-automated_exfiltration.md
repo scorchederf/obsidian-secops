@@ -19,6 +19,7 @@ When automated exfiltration is used, other exfiltration techniques likely apply 
 ## Subtechniques
 
 ### T1020.001: Traffic Duplication
+
 ^t1020001-traffic-duplication
 
 **Parent Technique**
@@ -35,25 +36,10 @@ Many cloud-based environments also support traffic mirroring. For example, AWS T
 
 Adversaries may use traffic duplication in conjunction with [Network Sniffing](https://attack.mitre.org/techniques/T1040), [Input Capture](https://attack.mitre.org/techniques/T1056), or [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557) depending on the goals and objectives of the adversary.
 
-#### Properties
-
-- id: T1020.001
-- name: Traffic Duplication
-- created: 2020-10-19 13:40:11.118000+00:00
-- modified: 2025-10-24 17:49:00.388000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
-- [[empire|Empire]]
-- [[shimratreporter|ShimRatReporter]]
 

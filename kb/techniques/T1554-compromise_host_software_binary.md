@@ -31,6 +31,3 @@ After modifying a binary, an adversary may attempt to [Impair Defenses](https://
 - Windows
 - ESXi
 
-## Tools
-
-

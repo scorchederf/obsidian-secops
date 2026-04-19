@@ -47,14 +47,6 @@ Vulnerability Scanning Tools:
 
 - OpenVAS: Open-source vulnerability scanning to identify missing patches.
 
-## Properties
-
-- id: M1051
-- name: Update Software
-- created: 2019-06-11 17:12:55.207000+00:00
-- modified: 2024-12-24 14:20:09.399000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]

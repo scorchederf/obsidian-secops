@@ -37,6 +37,7 @@ In some cases, information repositories have been improperly secured, typically 
 ## Subtechniques
 
 ### T1213.001: Confluence
+
 ^t1213001-confluence
 
 **Parent Technique**
@@ -58,17 +59,8 @@ Adversaries may leverage Confluence repositories to mine valuable information. O
 * Links to network shares and other internal resources
 
 
-#### Properties
-
-- id: T1213.001
-- name: Confluence
-- created: 2020-02-14 13:09:51.004000+00:00
-- modified: 2025-10-24 17:48:59.776000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1213.002: Sharepoint
+
 ^t1213002-sharepoint
 
 **Parent Technique**
@@ -89,17 +81,8 @@ Adversaries may leverage the SharePoint repository as a source to mine valuable 
 * Links to network shares and other internal resources
 
 
-#### Properties
-
-- id: T1213.002
-- name: Sharepoint
-- created: 2020-02-14 13:35:32.938000+00:00
-- modified: 2025-10-24 17:48:22.832000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1213.003: Code Repositories
+
 ^t1213003-code-repositories
 
 **Parent Technique**
@@ -114,17 +97,8 @@ Once adversaries gain access to a victim network or a private code repository, t
 
 **Note:** This is distinct from [Code Repositories](https://attack.mitre.org/techniques/T1593/003), which focuses on conducting [Reconnaissance](https://attack.mitre.org/tactics/TA0043) via public code repositories.
 
-#### Properties
-
-- id: T1213.003
-- name: Code Repositories
-- created: 2021-05-11 18:51:16.343000+00:00
-- modified: 2025-10-24 17:49:25.081000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1213.004: Customer Relationship Management Software
+
 ^t1213004-customer-relationship-management-software
 
 **Parent Technique**
@@ -139,17 +113,8 @@ Once adversaries gain access to a victim organization, they may mine CRM softwar
 
 CRM software may be hosted on-premises or in the cloud. Information stored in these solutions may vary based on the specific instance or environment. Examples of CRM software include Microsoft Dynamics 365, Salesforce, Zoho, Zendesk, and HubSpot.
 
-#### Properties
-
-- id: T1213.004
-- name: Customer Relationship Management Software
-- created: 2024-07-01 20:06:13.664000+00:00
-- modified: 2025-04-15 22:12:49.744000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1213.005: Messaging Applications
+
 ^t1213005-messaging-applications
 
 **Parent Technique**
@@ -170,17 +135,8 @@ The following is a brief list of example information that may hold potential val
 
 In addition to exfiltrating data from messaging applications, adversaries may leverage data from chat messages in order to improve their targeting - for example, by learning more about an environment or evading ongoing incident response efforts.(Citation: Sentinel Labs NullBulge 2024)(Citation: Permiso Scattered Spider 2023)
 
-#### Properties
-
-- id: T1213.005
-- name: Messaging Applications
-- created: 2024-08-30 13:50:42.023000+00:00
-- modified: 2025-04-15 22:48:58.763000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1213.006: Databases
+
 ^t1213006-databases
 
 **Parent Technique**
@@ -192,16 +148,6 @@ In addition to exfiltrating data from messaging applications, adversaries may le
 Adversaries may leverage databases to mine valuable information. These databases may be hosted on-premises or in the cloud (both in platform-as-a-service and software-as-a-service environments). 
 
 Examples of databases from which information may be collected include MySQL, PostgreSQL, MongoDB, Amazon Relational Database Service, Azure SQL Database, Google Firebase, and Snowflake. Databases may include a variety of information of interest to adversaries, such as usernames, hashed passwords, personally identifiable information, and financial data. Data collected from databases may be used for [Lateral Movement](https://attack.mitre.org/tactics/TA0008), [Command and Control](https://attack.mitre.org/tactics/TA0011), or [Exfiltration](https://attack.mitre.org/tactics/TA0010). Data exfiltrated from databases may also be used to extort victims or may be sold for profit.(Citation: Google Cloud Threat Intelligence UNC5537 Snowflake 2024)
-
-#### Properties
-
-- id: T1213.006
-- name: Databases
-- created: 2025-05-22 19:02:46.718000+00:00
-- modified: 2025-10-21 23:54:04.429000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -221,7 +167,4 @@ Examples of databases from which information may be collected include MySQL, Pos
 - SaaS
 - IaaS
 - Office Suite
-
-## Tools
-
 

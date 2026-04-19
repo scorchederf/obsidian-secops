@@ -32,6 +32,3 @@ Content injection is often the result of compromised upstream communication chan
 - macOS
 - Windows
 
-## Tools
-
-

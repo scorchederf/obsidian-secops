@@ -19,6 +19,7 @@ Renaming abusable system utilities to evade security monitoring is also a form o
 ## Subtechniques
 
 ### T1036.001: Invalid Code Signature
+
 ^t1036001-invalid-code-signature
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may attempt to mimic features of valid code signatures to increase t
 
 Unlike [Code Signing](https://attack.mitre.org/techniques/T1553/002), this activity will not result in a valid signature.
 
-#### Properties
-
-- id: T1036.001
-- name: Invalid Code Signature
-- created: 2020-02-10 19:49:46.752000+00:00
-- modified: 2025-10-24 17:49:15.520000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.002: Right-to-Left Override
+
 ^t1036002-right-to-left-override
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may abuse the right-to-left override (RTLO or RLO) character (U+202E
 
 Adversaries may abuse the RTLO character as a means of tricking a user into executing what they think is a benign file type. A common use of this technique is with [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001)/[Malicious File](https://attack.mitre.org/techniques/T1204/002) since it can trick both end users and defenders if they are not aware of how their tools display and render the RTLO character. Use of the RTLO character has been seen in many targeted intrusion attempts and criminal activity.(Citation: Trend Micro PLEAD RTLO)(Citation: Kaspersky RTLO Cyber Crime) RTLO can be used in the Windows Registry as well, where regedit.exe displays the reversed characters but the command line tool reg.exe does not by default.
 
-#### Properties
-
-- id: T1036.002
-- name: Right-to-Left Override
-- created: 2020-02-10 19:55:29.385000+00:00
-- modified: 2025-10-24 17:48:58.683000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1036.003: Rename Legitimate Utilities
+
 ^t1036003-rename-legitimate-utilities
 
 **Parent Technique**
@@ -75,17 +58,8 @@ Adversaries may abuse the RTLO character as a means of tricking a user into exec
 
 Adversaries may rename legitimate / system utilities to try to evade security mechanisms concerning the usage of those utilities. Security monitoring and control mechanisms may be in place for legitimate utilities adversaries are capable of abusing, including both built-in binaries and tools such as PSExec, AutoHotKey, and IronPython.(Citation: LOLBAS Main Site)(Citation: Huntress Python Malware 2025)(Citation: The DFIR Report AutoHotKey 2023)(Citation: Splunk Detect Renamed PSExec) It may be possible to bypass those security mechanisms by renaming the utility prior to utilization (ex: rename <code>rundll32.exe</code>).(Citation: Elastic Masquerade Ball) An alternative case occurs when a legitimate utility is copied or moved to a different directory and renamed to avoid detections based on these utilities executing from non-standard paths.(Citation: F-Secure CozyDuke)
 
-#### Properties
-
-- id: T1036.003
-- name: Rename Legitimate Utilities
-- created: 2020-02-10 20:03:11.691000+00:00
-- modified: 2025-10-24 17:49:18.517000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.004: Masquerade Task or Service
+
 ^t1036004-masquerade-task-or-service
 
 **Parent Technique**
@@ -98,17 +72,8 @@ Adversaries may attempt to manipulate the name of a task or service to make it a
 
 Tasks or services contain other fields, such as a description, that adversaries may attempt to make appear legitimate.(Citation: Palo Alto Shamoon Nov 2016)(Citation: Fysbis Dr Web Analysis)
 
-#### Properties
-
-- id: T1036.004
-- name: Masquerade Task or Service
-- created: 2020-02-10 20:30:07.426000+00:00
-- modified: 2025-10-24 17:49:00.215000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1036.005: Match Legitimate Resource Name or Location
+
 ^t1036005-match-legitimate-resource-name-or-location
 
 **Parent Technique**
@@ -121,17 +86,8 @@ Adversaries may match or approximate the name or location of legitimate files, R
 
 This may be done by placing an executable in a commonly trusted directory (ex: under System32) or giving it the name of a legitimate, trusted program (ex: `svchost.exe`). Alternatively, a Windows Registry key may be given a close approximation to a key used by a legitimate program. In containerized environments, a threat actor may create a resource in a trusted namespace or one that matches the naming convention of a container pod or cluster.(Citation: Aquasec Kubernetes Backdoor 2023)
 
-#### Properties
-
-- id: T1036.005
-- name: Match Legitimate Resource Name or Location
-- created: 2020-02-10 20:43:10.239000+00:00
-- modified: 2025-10-24 17:48:28.950000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.006: Space after Filename
+
 ^t1036006-space-after-filename
 
 **Parent Technique**
@@ -146,17 +102,8 @@ For example, if there is a Mach-O executable file called <code>evil.bin</code>, 
 
 Adversaries can use this feature to trick users into double clicking benign-looking files of any format and ultimately executing something malicious.
 
-#### Properties
-
-- id: T1036.006
-- name: Space after Filename
-- created: 2020-02-10 20:47:10.082000+00:00
-- modified: 2025-10-24 17:49:32.287000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1036.007: Double File Extension
+
 ^t1036007-double-file-extension
 
 **Parent Technique**
@@ -171,17 +118,8 @@ Adversaries may abuse double extensions to attempt to conceal dangerous file typ
 
 Common file types, such as text files (.txt, .doc, etc.) and image files (.jpg, .gif, etc.) are typically used as the first extension to appear benign. Executable extensions commonly regarded as dangerous, such as .exe, .lnk, .hta, and .scr, often appear as the second extension and true file type.
 
-#### Properties
-
-- id: T1036.007
-- name: Double File Extension
-- created: 2021-08-04 20:54:03.066000+00:00
-- modified: 2025-10-24 17:48:25.732000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.008: Masquerade File Type
+
 ^t1036008-masquerade-file-type
 
 **Parent Technique**
@@ -198,17 +136,8 @@ Common non-executable file types and extensions, such as text files (`.txt`) and
 
 Polyglot files, which are files that have multiple different file types and that function differently based on the application that will execute them, may also be used to disguise malicious malware and capabilities.(Citation: polygot_icedID)
 
-#### Properties
-
-- id: T1036.008
-- name: Masquerade File Type
-- created: 2023-03-08 22:40:06.918000+00:00
-- modified: 2025-10-08 17:44:11.183000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1036.009: Break Process Trees
+
 ^t1036009-break-process-trees
 
 **Parent Technique**
@@ -223,17 +152,8 @@ On Linux systems, adversaries may execute a series of [Native API](https://attac
 
 Another example is using the “daemon” syscall to detach from the current parent process and run in the background.(Citation: Sandfly BPFDoor 2022)(Citation: Microsoft XorDdos Linux Stealth 2022) 
 
-#### Properties
-
-- id: T1036.009
-- name: Break Process Trees
-- created: 2023-09-27 19:49:40.815000+00:00
-- modified: 2025-04-15 21:54:02.243000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.010: Masquerade Account Name
+
 ^t1036010-masquerade-account-name
 
 **Parent Technique**
@@ -248,17 +168,8 @@ Often, adversaries will attempt to masquerade as service accounts, such as those
 
 Note that this is distinct from [Impersonation](https://attack.mitre.org/techniques/T1656), which describes impersonating specific trusted individuals or organizations, rather than user or service account names.  
 
-#### Properties
-
-- id: T1036.010
-- name: Masquerade Account Name
-- created: 2024-08-05 21:39:16.274000+00:00
-- modified: 2025-04-15 22:48:14.966000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.011: Overwrite Process Arguments
+
 ^t1036011-overwrite-process-arguments
 
 **Parent Technique**
@@ -271,17 +182,8 @@ Adversaries may modify a process's in-memory arguments to change its name in ord
 
 During runtime, adversaries can erase the memory used by all command-line arguments for a process, overwriting each argument string with null bytes. This removes evidence of how the process was originally launched. They can then write a spoofed string into the memory region previously occupied by `argv[0]` to mimic a benign command, such as `cat resolv.conf`. The new command-line string is reflected in `/proc/<PID>/cmdline` and displayed by tools like `ps`.(Citation: Sandfly BPFDoor 2022)(Citation: Microsoft XorDdos Linux Stealth 2022) 
 
-#### Properties
-
-- id: T1036.011
-- name: Overwrite Process Arguments
-- created: 2025-03-27 20:37:52.269000+00:00
-- modified: 2025-04-15 19:58:30.391000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1036.012: Browser Fingerprint
+
 ^t1036012-browser-fingerprint
 
 **Parent Technique**
@@ -293,16 +195,6 @@ During runtime, adversaries can erase the memory used by all command-line argume
 Adversaries may attempt to blend in with legitimate traffic by spoofing browser and system attributes like operating system, system language, platform, user-agent string, resolution, time zone, etc.  The HTTP User-Agent request header is a string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent.(Citation: Mozilla User Agent)
 
 Adversaries may gather this information through [System Information Discovery](https://attack.mitre.org/techniques/T1082) or by users navigating to adversary-controlled websites, and then use that information to craft their web traffic to evade defenses.(Citation: Gummy Browsers: Targeted Browser Spoofing against State-of-the-Art Fingerprinting Techniques)
-
-#### Properties
-
-- id: T1036.012
-- name: Browser Fingerprint
-- created: 2025-09-22 20:13:45.616000+00:00
-- modified: 2025-10-19 19:41:22.343000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -322,7 +214,4 @@ Adversaries may gather this information through [System Information Discovery](h
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

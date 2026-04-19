@@ -39,9 +39,3 @@ Adversaries may also obtain then abuse leaked credentials from source repositori
 - Office Suite
 - SaaS
 
-## Tools
-
-- [[aadinternals|AADInternals]]
-- [[pacu|Pacu]]
-- [[peirates|Peirates]]
-

@@ -37,6 +37,3 @@ Command-line examples:(Citation: XSL Bypass Mar 2019)(Citation: LOLBAS Wmic)
 
 - Windows
 
-## Tools
-
-

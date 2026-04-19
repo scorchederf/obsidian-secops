@@ -33,6 +33,3 @@ This technique may also enable [Forced Authentication](https://attack.mitre.org/
 
 - Windows
 
-## Tools
-
-

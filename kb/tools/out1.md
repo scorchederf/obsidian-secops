@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Out1](https://attack.mitre.org/software/S0594) is a remote access tool written in python and used by [MuddyWater](https://attack.mitre.org/groups/G0069) since at least 2021.(Citation: Trend Micro Muddy Water March 2021)
 
-## Properties
-
-- id: S0594
-- name: Out1
-- created: 2021-03-19 13:11:50.666000+00:00
-- modified: 2025-04-25 14:45:22.072000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

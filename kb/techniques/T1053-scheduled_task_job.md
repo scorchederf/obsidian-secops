@@ -19,6 +19,7 @@ Adversaries may use task scheduling to execute programs at system startup or on 
 ## Subtechniques
 
 ### T1053.002: At
+
 ^t1053002-at
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Adversaries may use [at](https://attack.mitre.org/software/S0110) to execute pro
 
 In Linux environments, adversaries may also abuse [at](https://attack.mitre.org/software/S0110) to break out of restricted environments by using a task to spawn an interactive system shell or to run system commands. Similarly, [at](https://attack.mitre.org/software/S0110) may also be used for [Privilege Escalation](https://attack.mitre.org/tactics/TA0004) if the binary is allowed to run as superuser via <code>sudo</code>.(Citation: GTFObins at)
 
-#### Properties
-
-- id: T1053.002
-- name: At
-- created: 2019-11-27 13:52:45.853000+00:00
-- modified: 2025-10-24 17:49:36.495000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ### T1053.003: Cron
+
 ^t1053003-cron
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Adversaries may abuse the <code>cron</code> utility to perform task scheduling f
 
 An adversary may use <code>cron</code> in Linux or Unix environments to execute programs at system startup or on a scheduled basis for [Persistence](https://attack.mitre.org/tactics/TA0003). In ESXi environments, cron jobs must be created directly via the crontab file (e.g., `/var/spool/cron/crontabs/root`).(Citation: CloudSEK ESXiArgs 2023)
 
-#### Properties
-
-- id: T1053.003
-- name: Cron
-- created: 2019-12-03 14:25:00.538000+00:00
-- modified: 2025-10-24 17:48:33.856000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1053.005: Scheduled Task
+
 ^t1053005-scheduled-task
 
 **Parent Technique**
@@ -83,17 +66,8 @@ An adversary may use Windows Task Scheduler to execute programs at system startu
 
 Adversaries may also create "hidden" scheduled tasks (i.e. [Hide Artifacts](https://attack.mitre.org/techniques/T1564)) that may not be visible to defender tools and manual queries used to enumerate tasks. Specifically, an adversary may hide a task from `schtasks /query` and the Task Scheduler by deleting the associated Security Descriptor (SD) registry value (where deletion of this value must be completed using SYSTEM permissions).(Citation: SigmaHQ)(Citation: Tarrask scheduled task) Adversaries may also employ alternate methods to hide tasks, such as altering the metadata (e.g., `Index` value) within associated registry keys.(Citation: Defending Against Scheduled Task Attacks in Windows Environments) 
 
-#### Properties
-
-- id: T1053.005
-- name: Scheduled Task
-- created: 2019-11-27 14:58:00.429000+00:00
-- modified: 2025-10-24 17:48:19.176000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ### T1053.006: Systemd Timers
+
 ^t1053006-systemd-timers
 
 **Parent Technique**
@@ -108,17 +82,8 @@ Each <code>.timer</code> file must have a corresponding <code>.service</code> fi
 
 An adversary may use systemd timers to execute malicious code at system startup or on a scheduled basis for persistence.(Citation: Arch Linux Package Systemd Compromise BleepingComputer 10JUL2018)(Citation: gist Arch package compromise 10JUL2018)(Citation: acroread package compromised Arch Linux Mail 8JUL2018) Timers installed using privileged paths may be used to maintain root level persistence. Adversaries may also install user level timers to achieve user level persistence.(Citation: Falcon Sandbox smp: 28553b3a9d)
 
-#### Properties
-
-- id: T1053.006
-- name: Systemd Timers
-- created: 2020-10-12 17:50:31.584000+00:00
-- modified: 2025-10-24 17:49:11.261000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1053.007: Container Orchestration Job
+
 ^t1053007-container-orchestration-job
 
 **Parent Technique**
@@ -130,16 +95,6 @@ An adversary may use systemd timers to execute malicious code at system startup 
 Adversaries may abuse task scheduling functionality provided by container orchestration tools such as Kubernetes to schedule deployment of containers configured to execute malicious code. Container orchestration jobs run these automated tasks at a specific date and time, similar to cron jobs on a Linux system. Deployments of this type can also be configured to maintain a quantity of containers over time, automating the process of maintaining persistence within a cluster.
 
 In Kubernetes, a CronJob may be used to schedule a Job that runs one or more containers to perform specific tasks.(Citation: Kubernetes Jobs)(Citation: Kubernetes CronJob) An adversary therefore may utilize a CronJob to schedule deployment of a Job that executes malicious code in various nodes within a cluster.(Citation: Threat Matrix for Kubernetes)
-
-#### Properties
-
-- id: T1053.007
-- name: Container Orchestration Job
-- created: 2021-03-29 17:06:22.247000+00:00
-- modified: 2025-10-24 17:48:25.363000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -156,7 +111,4 @@ In Kubernetes, a CronJob may be used to schedule a Job that runs one or more con
 - macOS
 - Containers
 - ESXi
-
-## Tools
-
 

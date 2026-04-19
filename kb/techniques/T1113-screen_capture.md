@@ -21,18 +21,3 @@ Adversaries may attempt to take screen captures of the desktop to gather informa
 - Windows
 - macOS
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[connectwise|ConnectWise]]
-- [[empire|Empire]]
-- [[pcshare|PcShare]]
-- [[powersploit|PowerSploit]]
-- [[pupy|Pupy]]
-- [[quick_assist|Quick Assist]]
-- [[remcos|Remcos]]
-- [[remoteutilities|RemoteUtilities]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[sliver|Sliver]]
-

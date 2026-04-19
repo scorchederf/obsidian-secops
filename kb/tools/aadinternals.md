@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [AADInternals](https://attack.mitre.org/software/S0677) is a PowerShell-based framework for administering, enumerating, and exploiting Azure Active Directory. The tool is publicly available on GitHub.(Citation: AADInternals Github)(Citation: AADInternals Documentation)
 
-## Properties
-
-- id: S0677
-- name: AADInternals
-- created: 2022-02-01 15:08:45.007000+00:00
-- modified: 2025-04-16 20:38:50.579000+00:00
-- type: tool
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

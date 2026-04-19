@@ -21,6 +21,7 @@ Adversaries may use the information from [System Network Configuration Discovery
 ## Subtechniques
 
 ### T1016.001: Internet Connection Discovery
+
 ^t1016001-internet-connection-discovery
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Adversaries may check for Internet connectivity on compromised systems. This may
 
 Adversaries may use the results and responses from these requests to determine if the system is capable of communicating with their C2 servers before attempting to connect to them. The results may also be used to identify routes, redirectors, and proxy servers.
 
-#### Properties
-
-- id: T1016.001
-- name: Internet Connection Discovery
-- created: 2021-03-17 15:28:10.689000+00:00
-- modified: 2025-10-24 17:48:26.017000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1016.002: Wi-Fi Discovery
+
 ^t1016002-wi-fi-discovery
 
 **Parent Technique**
@@ -59,16 +51,6 @@ Adversaries may collect various types of information about Wi-Fi networks from h
 On Linux, names and passwords of all Wi-Fi-networks a device has previously connected to may be available in files under ` /etc/NetworkManager/system-connections/`.(Citation: Wi-Fi Password of All Connected Networks in Windows/Linux) On macOS, the password of a known Wi-Fi may be identified with ` security find-generic-password -wa wifiname` (requires admin username/password).(Citation: Find Wi-Fi Password on Mac)
 
 
-#### Properties
-
-- id: T1016.002
-- name: Wi-Fi Discovery
-- created: 2023-09-08 15:39:50.269000+00:00
-- modified: 2025-10-24 17:48:44.123000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -76,24 +58,4 @@ On Linux, names and passwords of all Wi-Fi-networks a device has previously conn
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
-- [[adfind|AdFind]]
-- [[arp|Arp]]
-- [[crackmapexec|CrackMapExec]]
-- [[empire|Empire]]
-- [[ifconfig|ifconfig]]
-- [[ipconfig|ipconfig]]
-- [[koadic|Koadic]]
-- [[nbtscan|NBTscan]]
-- [[nbtstat|nbtstat]]
-- [[nltest|Nltest]]
-- [[pcshare|PcShare]]
-- [[poshc2|PoshC2]]
-- [[pupy|Pupy]]
-- [[quasarrat|QuasarRAT]]
-- [[route|route]]
-- [[shimratreporter|ShimRatReporter]]
-- [[sliver|Sliver]]
 

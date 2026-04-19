@@ -21,6 +21,7 @@ Installation of many remote access tools may also include persistence (e.g., the
 ## Subtechniques
 
 ### T1219.001: IDE Tunneling
+
 ^t1219001-ide-tunneling
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Additionally, adversaries may use IDE tunneling for persistence. Some IDEs, such
 
 IDE tunneling tools may be built-in or installed as [IDE Extensions](https://attack.mitre.org/techniques/T1176/002).
 
-#### Properties
-
-- id: T1219.001
-- name: IDE Tunneling
-- created: 2025-03-20 18:46:24.598000+00:00
-- modified: 2025-04-22 16:34:13.454000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1219.002: Remote Desktop Software
+
 ^t1219002-remote-desktop-software
 
 **Parent Technique**
@@ -58,17 +50,8 @@ An adversary may use legitimate desktop support software to establish an interac
  
 Remote access modules/features may also exist as part of otherwise existing software such as Zoom or Google Chrome’s Remote Desktop.(Citation: Google Chrome Remote Desktop)(Citation: Chrome Remote Desktop) 
 
-#### Properties
-
-- id: T1219.002
-- name: Remote Desktop Software
-- created: 2025-03-24 22:24:47.684000+00:00
-- modified: 2025-04-16 16:42:15.226000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1219.003: Remote Access Hardware
+
 ^t1219003-remote-access-hardware
 
 **Parent Technique**
@@ -80,16 +63,6 @@ Remote access modules/features may also exist as part of otherwise existing soft
 An adversary may use legitimate remote access hardware to establish an interactive command and control channel to target systems within networks. These services, including IP-based keyboard, video, or mouse (KVM) devices such as TinyPilot and PiKVM, are commonly used as legitimate tools and may be allowed by peripheral device policies within a target environment.  
 
 Remote access hardware may be physically installed and used post-compromise as an alternate communications channel for redundant access or as a way to establish an interactive remote session with the target system. Using hardware-based remote access tools may allow threat actors to bypass software security solutions and gain more control over the compromised device(s).(Citation: Palo Alto Unit 42 North Korean IT Workers 2024)(Citation: Google Cloud Threat Intelligence DPRK IT Workers 2024)
-
-#### Properties
-
-- id: T1219.003
-- name: Remote Access Hardware
-- created: 2025-03-26 15:36:18.409000+00:00
-- modified: 2025-05-02 19:13:42.314000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -104,7 +77,4 @@ Remote access hardware may be physically installed and used post-compromise as a
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

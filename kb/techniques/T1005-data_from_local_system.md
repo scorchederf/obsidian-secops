@@ -29,17 +29,3 @@ Adversaries may do this using a [Command and Scripting Interpreter](https://atta
 - Network Devices
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[esentutl|esentutl]]
-- [[forfiles|Forfiles]]
-- [[koadic|Koadic]]
-- [[mcmd|MCMD]]
-- [[nppspy|NPPSPY]]
-- [[out1|Out1]]
-- [[pcshare|PcShare]]
-- [[powersploit|PowerSploit]]
-- [[quasarrat|QuasarRAT]]
-- [[wevtutil|Wevtutil]]
-

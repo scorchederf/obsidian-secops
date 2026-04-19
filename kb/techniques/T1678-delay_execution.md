@@ -22,6 +22,3 @@ Adversaries may utilize programmatic `sleep` commands or native system schedulin
 - macOS
 - Windows
 
-## Tools
-
-

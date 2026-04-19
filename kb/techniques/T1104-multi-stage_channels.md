@@ -29,6 +29,3 @@ The different stages will likely be hosted separately with no overlapping infras
 - Windows
 - ESXi
 
-## Tools
-
-

@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Donut](https://attack.mitre.org/software/S0695) is an open source framework used to generate position-independent shellcode.(Citation: Donut Github)(Citation: Introducing Donut) [Donut](https://attack.mitre.org/software/S0695) generated code has been used by multiple threat actors to inject and load malicious payloads into memory.(Citation: NCC Group WastedLocker June 2020)
 
-## Properties
-
-- id: S0695
-- name: Donut
-- created: 2022-03-25 13:35:46.781000+00:00
-- modified: 2025-04-16 20:38:54.932000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]

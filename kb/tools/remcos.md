@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Remcos](https://attack.mitre.org/software/S0332) is a closed-source tool that is marketed as a remote control and surveillance software by a company called Breaking Security. [Remcos](https://attack.mitre.org/software/S0332) has been observed being used in malware campaigns.(Citation: Riskiq Remcos Jan 2018)(Citation: Talos Remcos Aug 2018)
 
-## Properties
-
-- id: S0332
-- name: Remcos
-- created: 2019-01-29 18:55:20.245000+00:00
-- modified: 2025-04-16 20:38:53.082000+00:00
-- type: tool
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]

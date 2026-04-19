@@ -25,6 +25,7 @@ For DoS attacks targeting the hosting system directly, see [Endpoint Denial of S
 ## Subtechniques
 
 ### T1498.001: Direct Network Flood
+
 ^t1498001-direct-network-flood
 
 **Parent Technique**
@@ -37,17 +38,8 @@ Adversaries may attempt to cause a denial of service (DoS) by directly sending a
 
 Botnets are commonly used to conduct network flooding attacks against networks and services. Large botnets can generate a significant amount of traffic from systems spread across the global Internet. Adversaries may have the resources to build out and control their own botnet infrastructure or may rent time on an existing botnet to conduct an attack. In some of the worst cases for distributed DoS (DDoS), so many systems are used to generate the flood that each one only needs to send out a small amount of traffic to produce enough volume to saturate the target network. In such circumstances, distinguishing DDoS traffic from legitimate clients becomes exceedingly difficult. Botnets have been used in some of the most high-profile DDoS flooding attacks, such as the 2012 series of incidents that targeted major US banks.(Citation: USNYAG IranianBotnet March 2016)
 
-#### Properties
-
-- id: T1498.001
-- name: Direct Network Flood
-- created: 2020-03-02 20:07:18.651000+00:00
-- modified: 2025-10-24 17:48:22.567000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1498.002: Reflection Amplification
+
 ^t1498002-reflection-amplification
 
 **Parent Technique**
@@ -60,16 +52,6 @@ Adversaries may attempt to cause a denial of service (DoS) by reflecting a high-
 
 Reflection attacks often take advantage of protocols with larger responses than requests in order to amplify their traffic, commonly known as a Reflection Amplification attack. Adversaries may be able to generate an increase in volume of attack traffic that is several orders of magnitude greater than the requests sent to the amplifiers. The extent of this increase will depending upon many variables, such as the protocol in question, the technique used, and the amplifying servers that actually produce the amplification in attack volume. Two prominent protocols that have enabled Reflection Amplification Floods are DNS(Citation: Cloudflare DNSamplficationDoS) and NTP(Citation: Cloudflare NTPamplifciationDoS), though the use of several others in the wild have been documented.(Citation: Arbor AnnualDoSreport Jan 2018)  In particular, the memcache protocol showed itself to be a powerful protocol, with amplification sizes up to 51,200 times the requesting packet.(Citation: Cloudflare Memcrashed Feb 2018)
 
-#### Properties
-
-- id: T1498.002
-- name: Reflection Amplification
-- created: 2020-03-02 20:08:03.691000+00:00
-- modified: 2025-10-24 17:48:38.890000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1037-filter_network_traffic|M1037: Filter Network Traffic]]
@@ -81,7 +63,4 @@ Reflection attacks often take advantage of protocols with larger responses than 
 - Linux
 - macOS
 - Containers
-
-## Tools
-
 

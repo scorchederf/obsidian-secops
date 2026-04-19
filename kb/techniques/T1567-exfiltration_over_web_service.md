@@ -19,6 +19,7 @@ Web service providers also commonly use SSL/TLS encryption, giving adversaries a
 ## Subtechniques
 
 ### T1567.001: Exfiltration to Code Repository
+
 ^t1567001-exfiltration-to-code-repository
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may exfiltrate data to a code repository rather than over their prim
 
 Exfiltration to a code repository can also provide a significant amount of cover to the adversary if it is a popular service already used by hosts within the network. 
 
-#### Properties
-
-- id: T1567.001
-- name: Exfiltration to Code Repository
-- created: 2020-03-09 14:51:11.772000+00:00
-- modified: 2025-10-24 17:49:04.207000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1567.002: Exfiltration to Cloud Storage
+
 ^t1567002-exfiltration-to-cloud-storage
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may exfiltrate data to a cloud storage service rather than over thei
 
 Examples of cloud storage services include Dropbox and Google Docs. Exfiltration to these cloud storage services can provide a significant amount of cover to the adversary if hosts within the network are already communicating with the service. 
 
-#### Properties
-
-- id: T1567.002
-- name: Exfiltration to Cloud Storage
-- created: 2020-03-09 15:04:32.767000+00:00
-- modified: 2025-10-24 17:49:19.048000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1567.003: Exfiltration to Text Storage Sites
+
 ^t1567003-exfiltration-to-text-storage-sites
 
 **Parent Technique**
@@ -79,17 +62,8 @@ Text storage sites are often used to host malicious code for C2 communication (e
 
 **Note:** This is distinct from [Exfiltration to Code Repository](https://attack.mitre.org/techniques/T1567/001), which highlight access to code repositories via APIs.
 
-#### Properties
-
-- id: T1567.003
-- name: Exfiltration to Text Storage Sites
-- created: 2023-02-27 22:51:27.101000+00:00
-- modified: 2025-04-15 19:59:01.716000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1567.004: Exfiltration Over Webhook
+
 ^t1567004-exfiltration-over-webhook
 
 **Parent Technique**
@@ -104,16 +78,6 @@ Adversaries may link an adversary-owned environment to a victim-owned SaaS servi
 
 Access to webhook endpoints is often over HTTPS, which gives the adversary an additional level of protection. Exfiltration leveraging webhooks can also blend in with normal network traffic if the webhook endpoint points to a commonly used SaaS application or collaboration service.(Citation: CyberArk Labs Discord)(Citation: Talos Discord Webhook Abuse)(Citation: Checkmarx Webhooks)
 
-#### Properties
-
-- id: T1567.004
-- name: Exfiltration Over Webhook
-- created: 2023-07-20 15:30:55.763000+00:00
-- modified: 2025-04-15 19:58:26.901000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]
@@ -127,8 +91,4 @@ Access to webhook endpoints is often over HTTPS, which gives the adversary an ad
 - Office Suite
 - SaaS
 - Windows
-
-## Tools
-
-- [[ngrok|ngrok]]
 

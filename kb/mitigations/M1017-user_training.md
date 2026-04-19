@@ -39,14 +39,6 @@ Emphasize Real-World Scenarios:
 - Use case studies of recent attacks to demonstrate the consequences of successful phishing or social engineering.
 - Discuss how specific employee actions can prevent or mitigate such attacks.
 
-## Properties
-
-- id: M1017
-- name: User Training
-- created: 2019-06-06 16:50:04.963000+00:00
-- modified: 2024-12-24 14:36:46.335000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

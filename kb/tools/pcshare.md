@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [PcShare](https://attack.mitre.org/software/S1050) is an open source remote access tool that has been modified and used by Chinese threat actors, most notably during the FunnyDream campaign since late 2018.(Citation: Bitdefender FunnyDream Campaign November 2020)(Citation: GitHub PcShare 2014)
 
-## Properties
-
-- id: S1050
-- name: PcShare
-- created: 2022-10-13 14:07:52.541000+00:00
-- modified: 2024-04-11 00:28:17.175000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

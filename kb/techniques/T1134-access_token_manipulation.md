@@ -21,6 +21,7 @@ Any standard user can use the <code>runas</code> command, and the Windows API fu
 ## Subtechniques
 
 ### T1134.001: Token Impersonation/Theft
+
 ^t1134001-token-impersonation-theft
 
 **Parent Technique**
@@ -35,17 +36,8 @@ An adversary may perform [Token Impersonation/Theft](https://attack.mitre.org/te
 
 When an adversary would instead use a duplicated token to create a new process rather than attaching to an existing process, they can additionally [Create Process with Token](https://attack.mitre.org/techniques/T1134/002) using `CreateProcessWithTokenW` or `CreateProcessAsUserW`. [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) is also distinct from [Make and Impersonate Token](https://attack.mitre.org/techniques/T1134/003) in that it refers to duplicating an existing token, rather than creating a new one.
 
-#### Properties
-
-- id: T1134.001
-- name: Token Impersonation/Theft
-- created: 2020-02-18 16:39:06.289000+00:00
-- modified: 2025-10-24 17:49:04.117000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1134.002: Create Process with Token
+
 ^t1134002-create-process-with-token
 
 **Parent Technique**
@@ -60,17 +52,8 @@ Creating processes with a token not associated with the current user may require
 
 While this technique is distinct from [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001), the techniques can be used in conjunction where a token is duplicated and then used to create a new process.
 
-#### Properties
-
-- id: T1134.002
-- name: Create Process with Token
-- created: 2020-02-18 16:48:56.582000+00:00
-- modified: 2025-10-24 17:48:53.370000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1134.003: Make and Impersonate Token
+
 ^t1134003-make-and-impersonate-token
 
 **Parent Technique**
@@ -83,17 +66,8 @@ Adversaries may make new tokens and impersonate users to escalate privileges and
 
 This behavior is distinct from [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) in that this refers to creating a new user token instead of stealing or duplicating an existing one.
 
-#### Properties
-
-- id: T1134.003
-- name: Make and Impersonate Token
-- created: 2020-02-18 18:03:37.481000+00:00
-- modified: 2025-10-24 17:49:05.200000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1134.004: Parent PID Spoofing
+
 ^t1134004-parent-pid-spoofing
 
 **Parent Technique**
@@ -108,17 +82,8 @@ Adversaries may abuse these mechanisms to evade defenses, such as those blocking
 
 Explicitly assigning the PPID may also enable elevated privileges given appropriate access rights to the parent process. For example, an adversary in a privileged user context (i.e. administrator) may spawn a new process and assign the parent as a process running as SYSTEM (such as <code>lsass.exe</code>), causing the new process to be elevated via the inherited access token.(Citation: XPNSec PPID Nov 2017)
 
-#### Properties
-
-- id: T1134.004
-- name: Parent PID Spoofing
-- created: 2020-02-18 18:22:41.448000+00:00
-- modified: 2025-10-24 17:49:06.759000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1134.005: SID-History Injection
+
 ^t1134005-sid-history-injection
 
 **Parent Technique**
@@ -131,16 +96,6 @@ Adversaries may use SID-History Injection to escalate privileges and bypass acce
 
 With Domain Administrator (or equivalent) rights, harvested or well-known SID values (Citation: Microsoft Well Known SIDs Jun 2017) may be inserted into SID-History to enable impersonation of arbitrary users/groups such as Enterprise Administrators. This manipulation may result in elevated access to local resources and/or access to otherwise inaccessible domains via lateral movement techniques such as [Remote Services](https://attack.mitre.org/techniques/T1021), [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002), or [Windows Remote Management](https://attack.mitre.org/techniques/T1021/006).
 
-#### Properties
-
-- id: T1134.005
-- name: SID-History Injection
-- created: 2020-02-18 18:34:49.414000+00:00
-- modified: 2025-10-24 17:49:16.316000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -149,11 +104,4 @@ With Domain Administrator (or equivalent) rights, harvested or well-known SID va
 ## Platforms
 
 - Windows
-
-## Tools
-
-- [[empire|Empire]]
-- [[poshc2|PoshC2]]
-- [[powersploit|PowerSploit]]
-- [[sliver|Sliver]]
 

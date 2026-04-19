@@ -23,6 +23,7 @@ Adversaries may directly leverage compromised email accounts for [Phishing for I
 ## Subtechniques
 
 ### T1586.001: Social Media Accounts
+
 ^t1586001-social-media-accounts
 
 **Parent Technique**
@@ -39,17 +40,8 @@ Personas may exist on a single site or across multiple sites (ex: Facebook, Link
 
 Adversaries can use a compromised social media profile to create new, or hijack existing, connections to targets of interest. These connections may be direct or may include trying to connect through others.(Citation: NEWSCASTER2014)(Citation: BlackHatRobinSage) Compromised profiles may be leveraged during other phases of the adversary lifecycle, such as during Initial Access (ex: [Spearphishing via Service](https://attack.mitre.org/techniques/T1566/003)).
 
-#### Properties
-
-- id: T1586.001
-- name: Social Media Accounts
-- created: 2020-10-01 01:18:35.535000+00:00
-- modified: 2025-10-24 17:48:32.696000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1586.002: Email Accounts
+
 ^t1586002-email-accounts
 
 **Parent Technique**
@@ -64,17 +56,8 @@ A variety of methods exist for compromising email accounts, such as gathering cr
 
 Adversaries can use a compromised email account to hijack existing email threads with targets of interest.
 
-#### Properties
-
-- id: T1586.002
-- name: Email Accounts
-- created: 2020-10-01 01:20:53.104000+00:00
-- modified: 2025-10-24 17:48:41.309000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1586.003: Cloud Accounts
+
 ^t1586003-cloud-accounts
 
 **Parent Technique**
@@ -86,16 +69,6 @@ Adversaries can use a compromised email account to hijack existing email threads
 Adversaries may compromise cloud accounts that can be used during targeting. Adversaries can use compromised cloud accounts to further their operations, including leveraging cloud storage services such as Dropbox, Microsoft OneDrive, or AWS S3 buckets for [Exfiltration to Cloud Storage](https://attack.mitre.org/techniques/T1567/002) or to [Upload Tool](https://attack.mitre.org/techniques/T1608/002)s. Cloud accounts can also be used in the acquisition of infrastructure, such as [Virtual Private Server](https://attack.mitre.org/techniques/T1583/003)s or [Serverless](https://attack.mitre.org/techniques/T1583/007) infrastructure. Additionally, cloud-based messaging services such as Twilio, SendGrid, AWS End User Messaging, AWS SNS (Simple Notification Service), or AWS SES (Simple Email Service) may be leveraged for spam or [Phishing](https://attack.mitre.org/techniques/T1566).(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022)(Citation: Netcraft SendGrid 2024) Compromising cloud accounts may allow adversaries to develop sophisticated capabilities without managing their own servers.(Citation: Awake Security C2 Cloud)
 
 A variety of methods exist for compromising cloud accounts, such as gathering credentials via [Phishing for Information](https://attack.mitre.org/techniques/T1598), purchasing credentials from third-party sites, conducting [Password Spraying](https://attack.mitre.org/techniques/T1110/003) attacks, or attempting to [Steal Application Access Token](https://attack.mitre.org/techniques/T1528)s.(Citation: MSTIC Nobelium Oct 2021) Prior to compromising cloud accounts, adversaries may conduct Reconnaissance to inform decisions about which accounts to compromise to further their operation. In some cases, adversaries may target privileged service provider accounts with the intent of leveraging a [Trusted Relationship](https://attack.mitre.org/techniques/T1199) between service providers and their customers.(Citation: MSTIC Nobelium Oct 2021)
-
-#### Properties
-
-- id: T1586.003
-- name: Cloud Accounts
-- created: 2022-05-27 14:30:01.904000+00:00
-- modified: 2025-10-24 17:48:41.215000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

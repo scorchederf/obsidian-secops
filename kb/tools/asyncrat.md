@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [AsyncRAT](https://attack.mitre.org/software/S1087) is an open-source remote access tool originally available through the NYANxCAT Github repository that has been used in malicious campaigns.(Citation: Morphisec Snip3 May 2021)(Citation: Cisco Operation Layover September 2021)(Citation: Telefonica Snip3 December 2021)
 
-## Properties
-
-- id: S1087
-- name: AsyncRAT
-- created: 2023-09-20 17:32:59.932000+00:00
-- modified: 2023-10-10 17:19:12.868000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]

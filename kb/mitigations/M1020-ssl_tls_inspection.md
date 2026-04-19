@@ -38,14 +38,6 @@ Monitor and Tune:
 
 - Continuously monitor SSL/TLS inspection logs for anomalies and fine-tune policies to reduce false positives.
 
-## Properties
-
-- id: M1020
-- name: SSL/TLS Inspection
-- created: 2019-06-06 20:15:34.146000+00:00
-- modified: 2024-12-24 13:46:05.302000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1090-proxy|T1090: Proxy]]

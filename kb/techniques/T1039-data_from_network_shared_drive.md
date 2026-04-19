@@ -20,6 +20,3 @@ Adversaries may search network shares on computers they have compromised to find
 - macOS
 - Windows
 
-## Tools
-
-

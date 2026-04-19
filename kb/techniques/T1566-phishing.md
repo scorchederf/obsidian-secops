@@ -21,6 +21,7 @@ Victims may also receive phishing messages that instruct them to call a phone nu
 ## Subtechniques
 
 ### T1566.001: Spearphishing Attachment
+
 ^t1566001-spearphishing-attachment
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Adversaries may send spearphishing emails with a malicious attachment in an atte
 
 There are many options for the attachment such as Microsoft Office documents, executables, PDFs, or archived files. Upon opening the attachment (and potentially clicking past protections), the adversary's payload exploits a vulnerability or directly executes on the user's system. The text of the spearphishing email usually tries to give a plausible reason why the file should be opened, and may explain how to bypass system protections in order to do so. The email may also contain instructions on how to decrypt an attachment, such as a zip file password, in order to evade email boundary defenses. Adversaries frequently manipulate file extensions and icons in order to make attached executables appear to be document files, or files exploiting one application appear to be a file for a different one. 
 
-#### Properties
-
-- id: T1566.001
-- name: Spearphishing Attachment
-- created: 2020-03-02 19:05:18.137000+00:00
-- modified: 2025-10-24 17:48:35.522000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1566.002: Spearphishing Link
+
 ^t1566002-spearphishing-link
 
 **Parent Technique**
@@ -62,17 +54,8 @@ Adversaries may also utilize links to perform consent phishing/spearphishing cam
 
 Similarly, malicious links may also target device-based authorization, such as OAuth 2.0 device authorization grant flow which is typically used to authenticate devices without UIs/browsers. Known as “device code phishing,” an adversary may send a link that directs the victim to a malicious authorization page where the user is tricked into entering a code/credentials that produces a device token.(Citation: SecureWorks Device Code Phishing 2021)(Citation: Netskope Device Code Phishing 2021)(Citation: Optiv Device Code Phishing 2021)
 
-#### Properties
-
-- id: T1566.002
-- name: Spearphishing Link
-- created: 2020-03-02 19:15:44.182000+00:00
-- modified: 2025-10-24 17:48:34.123000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.8
-- x_mitre_domains: enterprise-attack
-
 ### T1566.003: Spearphishing via Service
+
 ^t1566003-spearphishing-via-service
 
 **Parent Technique**
@@ -87,17 +70,8 @@ All forms of spearphishing are electronically delivered social engineering targe
 
 A common example is to build rapport with a target via social media, then send content to a personal webmail service that the target uses on their work computer. This allows an adversary to bypass some email restrictions on the work account, and the target is more likely to open the file since it's something they were expecting. If the payload doesn't work as expected, the adversary can continue normal communications and troubleshoot with the target on how to get it working.
 
-#### Properties
-
-- id: T1566.003
-- name: Spearphishing via Service
-- created: 2020-03-02 19:24:00.951000+00:00
-- modified: 2025-10-24 17:49:37.487000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ### T1566.004: Spearphishing Voice
+
 ^t1566004-spearphishing-voice
 
 **Parent Technique**
@@ -111,16 +85,6 @@ Adversaries may use voice communications to ultimately gain access to victim sys
 All forms of phishing are electronically delivered social engineering. In this scenario, adversaries are not directly sending malware to a victim vice relying on [User Execution](https://attack.mitre.org/techniques/T1204) for delivery and execution. For example, victims may receive phishing messages that instruct them to call a phone number where they are directed to visit a malicious URL, download malware,(Citation: sygnia Luna Month)(Citation: CISA Remote Monitoring and Management Software) or install adversary-accessible remote management tools ([Remote Access Tools](https://attack.mitre.org/techniques/T1219)) onto their computer.(Citation: Unit42 Luna Moth)
 
 Adversaries may also combine voice phishing with [Multi-Factor Authentication Request Generation](https://attack.mitre.org/techniques/T1621) in order to trick users into divulging MFA credentials or accepting authentication prompts.(Citation: Proofpoint Vishing)
-
-#### Properties
-
-- id: T1566.004
-- name: Spearphishing Voice
-- created: 2023-09-07 21:50:08.827000+00:00
-- modified: 2025-07-02 18:06:37.932000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -139,7 +103,4 @@ Adversaries may also combine voice phishing with [Multi-Factor Authentication Re
 - Office Suite
 - SaaS
 - Windows
-
-## Tools
-
 

@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Empire](https://attack.mitre.org/software/S0363) is an open-source, cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python, the post-exploitation agents are written in pure [PowerShell](https://attack.mitre.org/techniques/T1059/001) for Windows and Python for Linux/macOS. [Empire](https://attack.mitre.org/software/S0363) was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries.(Citation: NCSC Joint Report Public Tools)(Citation: Github PowerShell Empire)(Citation: GitHub ATTACK Empire)
 
-## Properties
-
-- id: S0363
-- name: Empire
-- created: 2019-03-11 14:13:40.648000+00:00
-- modified: 2025-10-24 03:33:19.777000+00:00
-- type: tool
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

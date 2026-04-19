@@ -17,6 +17,7 @@ Adversaries may search for common password storage locations to obtain user cred
 ## Subtechniques
 
 ### T1555.001: Keychain
+
 ^t1555001-keychain
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Keychains can be viewed and edited through the Keychain Access application or us
 
 Adversaries may gather user credentials from Keychain storage/memory. For example, the command <code>security dump-keychain –d</code> will dump all Login Keychain credentials from <code>~/Library/Keychains/login.keychain-db</code>. Adversaries may also directly read Login Keychain credentials from the <code>~/Library/Keychains/login.keychain</code> file. Both methods require a password, where the default password for the Login Keychain is the current user’s password to login to the macOS host.(Citation: External to DA, the OS X Way)(Citation: Empire Keychain Decrypt)  
 
-#### Properties
-
-- id: T1555.001
-- name: Keychain
-- created: 2020-02-12 18:55:24.728000+00:00
-- modified: 2025-10-24 17:48:29.756000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1555.002: Securityd Memory
+
 ^t1555002-securityd-memory
 
 **Parent Technique**
@@ -54,17 +46,8 @@ An adversary with root access may gather credentials by reading `securityd`’s 
 
 In OS X prior to El Capitan, users with root access can read plaintext keychain passwords of logged-in users because Apple’s keychain implementation allows these credentials to be cached so that users are not repeatedly prompted for passwords.(Citation: OS X Keychain)(Citation: External to DA, the OS X Way) Apple’s `securityd` utility takes the user’s logon password, encrypts it with PBKDF2, and stores this master key in memory. Apple also uses a set of keys and algorithms to encrypt the user’s password, but once the master key is found, an adversary need only iterate over the other values to unlock the final password.(Citation: OS X Keychain)
 
-#### Properties
-
-- id: T1555.002
-- name: Securityd Memory
-- created: 2020-02-12 18:56:31.051000+00:00
-- modified: 2025-10-24 17:48:28.055000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1555.003: Credentials from Web Browsers
+
 ^t1555003-credentials-from-web-browsers
 
 **Parent Technique**
@@ -83,17 +66,8 @@ Adversaries may also acquire credentials by searching web browser process memory
 
 After acquiring credentials from web browsers, adversaries may attempt to recycle the credentials across different systems and/or accounts in order to expand access. This can result in significantly furthering an adversary's objective in cases where credentials gained from web browsers overlap with privileged accounts (e.g. domain administrator).
 
-#### Properties
-
-- id: T1555.003
-- name: Credentials from Web Browsers
-- created: 2020-02-12 18:57:36.041000+00:00
-- modified: 2025-10-24 17:48:49.577000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1555.004: Windows Credential Manager
+
 ^t1555004-windows-credential-manager
 
 **Parent Technique**
@@ -114,17 +88,8 @@ Adversaries may also obtain credentials from credential backups. Credential back
 
 Password recovery tools may also obtain plain text passwords from the Credential Manager.(Citation: Malwarebytes The Windows Vault)
 
-#### Properties
-
-- id: T1555.004
-- name: Windows Credential Manager
-- created: 2020-11-23 15:35:53.793000+00:00
-- modified: 2025-10-24 17:49:26.444000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1555.005: Password Managers
+
 ^t1555005-password-managers
 
 **Parent Technique**
@@ -138,17 +103,8 @@ Adversaries may acquire user credentials from third-party password managers.(Cit
 Adversaries may acquire user credentials from password managers by extracting the master password and/or plain-text credentials from memory.(Citation: FoxIT Wocao December 2019)(Citation: Github KeeThief) Adversaries may extract credentials from memory via [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212).(Citation: NVD CVE-2019-3610)
  Adversaries may also try brute forcing via [Password Guessing](https://attack.mitre.org/techniques/T1110/001) to obtain the master password of a password manager.(Citation: Cyberreason Anchor December 2019)
 
-#### Properties
-
-- id: T1555.005
-- name: Password Managers
-- created: 2021-01-22 16:08:40.629000+00:00
-- modified: 2025-10-24 17:48:36.347000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1555.006: Cloud Secrets Management Stores
+
 ^t1555006-cloud-secrets-management-stores
 
 **Parent Technique**
@@ -165,16 +121,6 @@ If an adversary is able to gain sufficient privileges in a cloud environment –
 
 **Note:** this technique is distinct from [Cloud Instance Metadata API](https://attack.mitre.org/techniques/T1552/005) in that the credentials are being directly requested from the cloud secrets manager, rather than through the medium of the instance metadata API.
 
-#### Properties
-
-- id: T1555.006
-- name: Cloud Secrets Management Stores
-- created: 2023-09-25 12:41:26.501000+00:00
-- modified: 2025-04-15 22:03:00.834000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1026-privileged_account_management|M1026: Privileged Account Management]]
@@ -187,12 +133,4 @@ If an adversary is able to gain sufficient privileges in a cloud environment –
 - Linux
 - macOS
 - Windows
-
-## Tools
-
-- [[lazagne|LaZagne]]
-- [[mimikatz|Mimikatz]]
-- [[poshc2|PoshC2]]
-- [[pupy|Pupy]]
-- [[quasarrat|QuasarRAT]]
 

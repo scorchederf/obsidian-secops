@@ -20,7 +20,3 @@ Adversaries may abuse these features for [Defense Evasion](https://attack.mitre.
 
 - Windows
 
-## Tools
-
-- [[forfiles|Forfiles]]
-

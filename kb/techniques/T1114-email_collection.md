@@ -17,6 +17,7 @@ Adversaries may target user email to collect sensitive information. Emails may c
 ## Subtechniques
 
 ### T1114.001: Local Email Collection
+
 ^t1114001-local-email-collection
 
 **Parent Technique**
@@ -29,17 +30,8 @@ Adversaries may target user email on local systems to collect sensitive informat
 
 Outlook stores data locally in offline data files with an extension of .ost. Outlook 2010 and later supports .ost file sizes up to 50GB, while earlier versions of Outlook support up to 20GB.(Citation: Outlook File Sizes) IMAP accounts in Outlook 2013 (and earlier) and POP accounts use Outlook Data Files (.pst) as opposed to .ost, whereas IMAP accounts in Outlook 2016 (and later) use .ost files. Both types of Outlook data files are typically stored in `C:\Users\<username>\Documents\Outlook Files` or `C:\Users\<username>\AppData\Local\Microsoft\Outlook`.(Citation: Microsoft Outlook Files)
 
-#### Properties
-
-- id: T1114.001
-- name: Local Email Collection
-- created: 2020-02-19 18:46:06.098000+00:00
-- modified: 2025-10-24 17:48:29.669000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1114.002: Remote Email Collection
+
 ^t1114002-remote-email-collection
 
 **Parent Technique**
@@ -50,17 +42,8 @@ Outlook stores data locally in offline data files with an extension of .ost. Out
 
 Adversaries may target an Exchange server, Office 365, or Google Workspace to collect sensitive information. Adversaries may leverage a user's credentials and interact directly with the Exchange server to acquire information from within a network. Adversaries may also access externally facing Exchange services, Office 365, or Google Workspace to access email using credentials or access tokens. Tools such as [MailSniper](https://attack.mitre.org/software/S0413) can be used to automate searches for specific keywords.
 
-#### Properties
-
-- id: T1114.002
-- name: Remote Email Collection
-- created: 2020-02-19 18:52:24.547000+00:00
-- modified: 2025-10-24 17:49:15.355000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1114.003: Email Forwarding Rule
+
 ^t1114003-email-forwarding-rule
 
 **Parent Technique**
@@ -75,16 +58,6 @@ Any user or administrator within the organization (or adversary with valid crede
 
 In some environments, administrators may be able to enable email forwarding rules that operate organization-wide rather than on individual inboxes. For example, Microsoft Exchange supports transport rules that evaluate all mail an organization receives against user-specified conditions, then performs a user-specified action on mail that adheres to those conditions.(Citation: Microsoft Mail Flow Rules 2023) Adversaries that abuse such features may be able to enable forwarding on all or specific mail an organization receives. 
 
-#### Properties
-
-- id: T1114.003
-- name: Email Forwarding Rule
-- created: 2020-02-19 18:54:47.103000+00:00
-- modified: 2025-10-24 17:49:00.920000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1032-multi-factor_authentication|M1032: Multi-factor Authentication]]
@@ -98,7 +71,4 @@ In some environments, administrators may be able to enable email forwarding rule
 - macOS
 - Linux
 - Office Suite
-
-## Tools
-
 

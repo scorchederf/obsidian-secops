@@ -26,7 +26,3 @@ Utilities, such as `NinjaCopy`, exist to perform these actions in PowerShell.(Ci
 - Network Devices
 - Windows
 
-## Tools
-
-- [[esentutl|esentutl]]
-

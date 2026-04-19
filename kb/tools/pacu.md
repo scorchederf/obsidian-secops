@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 Pacu is an open-source AWS exploitation framework. The tool is written in Python and publicly available on GitHub.(Citation: GitHub Pacu)
 
-## Properties
-
-- id: S1091
-- name: Pacu
-- created: 2023-09-28 13:21:49.652000+00:00
-- modified: 2023-10-19 12:18:43.123000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1049-system_network_connections_discovery|T1049: System Network Connections Discovery]]

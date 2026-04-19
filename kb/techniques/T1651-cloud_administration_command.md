@@ -24,8 +24,3 @@ If an adversary gains administrative access to a cloud environment, they may be 
 
 - IaaS
 
-## Tools
-
-- [[aadinternals|AADInternals]]
-- [[pacu|Pacu]]
-

@@ -17,6 +17,7 @@ Adversaries may abuse legitimate extensible development features of servers to e
 ## Subtechniques
 
 ### T1505.001: SQL Stored Procedures
+
 ^t1505001-sql-stored-procedures
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may craft malicious stored procedures that can provide a persistence
 
 Microsoft SQL Server can enable common language runtime (CLR) integration. With CLR integration enabled, application developers can write stored procedures using any .NET framework language (e.g. VB .NET, C#, etc.).(Citation: Microsoft CLR Integration 2017) Adversaries may craft or modify CLR assemblies that are linked to stored procedures since these CLR assemblies can be made to execute arbitrary commands.(Citation: NetSPI SQL Server CLR) 
 
-#### Properties
-
-- id: T1505.001
-- name: SQL Stored Procedures
-- created: 2019-12-12 14:59:58.168000+00:00
-- modified: 2025-10-24 17:49:38.624000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1505.002: Transport Agent
+
 ^t1505002-transport-agent
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may abuse Microsoft transport agents to establish persistent access 
 
 Adversaries may register a malicious transport agent to provide a persistence mechanism in Exchange Server that can be triggered by adversary-specified email events.(Citation: ESET LightNeuron May 2019) Though a malicious transport agent may be invoked for all emails passing through the Exchange transport pipeline, the agent can be configured to only carry out specific tasks in response to adversary defined criteria. For example, the transport agent may only carry out an action like copying in-transit attachments and saving them for later exfiltration if the recipient email address matches an entry on a list provided by the adversary. 
 
-#### Properties
-
-- id: T1505.002
-- name: Transport Agent
-- created: 2019-12-12 15:08:20.972000+00:00
-- modified: 2025-10-24 17:48:38.001000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1505.003: Web Shell
+
 ^t1505003-web-shell
 
 **Parent Technique**
@@ -77,17 +60,8 @@ Adversaries may backdoor web servers with web shells to establish persistent acc
 
 In addition to a server-side script, a Web shell may have a client interface program that is used to talk to the Web server (e.g. [China Chopper](https://attack.mitre.org/software/S0020) Web shell client).(Citation: Lee 2013)
 
-#### Properties
-
-- id: T1505.003
-- name: Web Shell
-- created: 2019-12-13 16:46:18.927000+00:00
-- modified: 2025-10-24 17:48:50.387000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1505.004: IIS Components
+
 ^t1505004-iis-components
 
 **Parent Technique**
@@ -102,17 +76,8 @@ Adversaries may install malicious ISAPI extensions and filters to observe and/or
 
 Adversaries may also install malicious IIS modules to observe and/or modify traffic. IIS 7.0 introduced modules that provide the same unrestricted access to HTTP requests and responses as ISAPI extensions and filters. IIS modules can be written as a DLL that exports <code>RegisterModule</code>, or as a .NET application that interfaces with ASP.NET APIs to access IIS HTTP requests.(Citation: Microsoft IIS Modules Overview 2007)(Citation: Trustwave IIS Module 2013)(Citation: ESET IIS Malware 2021)
 
-#### Properties
-
-- id: T1505.004
-- name: IIS Components
-- created: 2021-06-03 18:44:29.770000+00:00
-- modified: 2025-10-24 17:49:15.437000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1505.005: Terminal Services DLL
+
 ^t1505005-terminal-services-dll
 
 **Parent Technique**
@@ -127,17 +92,8 @@ Adversaries may abuse components of Terminal Services to enable persistent acces
 
 Adversaries may modify and/or replace the Terminal Services DLL to enable persistent access to victimized hosts.(Citation: James TermServ DLL) Modifications to this DLL could be done to execute arbitrary payloads (while also potentially preserving normal <code>termsrv.dll</code> functionality) as well as to simply enable abusable features of Terminal Services. For example, an adversary may enable features such as concurrent [Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001) sessions by either patching the <code>termsrv.dll</code> file or modifying the <code>ServiceDll</code> value to point to a DLL that provides increased RDP functionality.(Citation: Windows OS Hub RDP)(Citation: RDPWrap Github) On a non-server Windows OS this increased functionality may also enable an adversary to avoid Terminal Services prompts that warn/log out users of a system when a new RDP session is created.
 
-#### Properties
-
-- id: T1505.005
-- name: Terminal Services DLL
-- created: 2022-03-28 15:34:44.590000+00:00
-- modified: 2025-10-24 17:48:39.258000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1505.006: vSphere Installation Bundles
+
 ^t1505006-vsphere-installation-bundles
 
 **Parent Technique**
@@ -155,16 +111,6 @@ VIBs can be broken down into three components:(Citation: VMware VIBs)
 * XML descriptor file: a configuration file containing associated VIB metadata, such as the name of the VIB and its dependencies.  
 
 Adversaries may leverage malicious VIB packages to maintain persistent access to ESXi hypervisors, allowing system changes to be executed upon each bootup of ESXi – such as using  `esxcli` to enable firewall rules for backdoor traffic, creating listeners on hard coded ports, and executing backdoors.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022) Adversaries may also masquerade their malicious VIB files as PartnerSupported by modifying the XML descriptor file.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)
-
-#### Properties
-
-- id: T1505.006
-- name: vSphere Installation Bundles
-- created: 2025-03-27 18:41:08.494000+00:00
-- modified: 2025-04-15 21:24:04.676000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

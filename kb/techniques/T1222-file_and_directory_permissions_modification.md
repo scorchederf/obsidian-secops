@@ -21,6 +21,7 @@ Adversaries may also change permissions of symbolic links. For example, malware 
 ## Subtechniques
 
 ### T1222.001: Windows File and Directory Permissions Modification
+
 ^t1222001-windows-file-and-directory-permissions-modification
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Windows implements file and directory ACLs as Discretionary Access Control Lists
 
 Adversaries can interact with the DACLs using built-in Windows commands, such as `icacls`, `cacls`, `takeown`, and `attrib`, which can grant adversaries higher permissions on specific files and folders. Further, [PowerShell](https://attack.mitre.org/techniques/T1059/001) provides cmdlets that can be used to retrieve or modify file and directory DACLs. Specific file and directory modifications may be a required step for many techniques, such as establishing Persistence via [Accessibility Features](https://attack.mitre.org/techniques/T1546/008), [Boot or Logon Initialization Scripts](https://attack.mitre.org/techniques/T1037), or tainting/hijacking other instrumental binary/configuration files via [Hijack Execution Flow](https://attack.mitre.org/techniques/T1574).
 
-#### Properties
-
-- id: T1222.001
-- name: Windows File and Directory Permissions Modification
-- created: 2020-02-04 19:17:41.767000+00:00
-- modified: 2025-10-24 17:48:37.826000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1222.002: Linux and Mac File and Directory Permissions Modification
+
 ^t1222002-linux-and-mac-file-and-directory-permissions-modification
 
 **Parent Technique**
@@ -60,16 +52,6 @@ Most Linux and Linux-based platforms provide a standard set of permission groups
 
 Adversarial may use these commands to make themselves the owner of files and directories or change the mode if current permissions allow it. They could subsequently lock others out of the file. Specific file and directory modifications may be a required step for many techniques, such as establishing Persistence via [Unix Shell Configuration Modification](https://attack.mitre.org/techniques/T1546/004) or tainting/hijacking other instrumental binary/configuration files via [Hijack Execution Flow](https://attack.mitre.org/techniques/T1574).(Citation: 20 macOS Common Tools and Techniques) 
 
-#### Properties
-
-- id: T1222.002
-- name: Linux and Mac File and Directory Permissions Modification
-- created: 2020-02-04 19:24:27.774000+00:00
-- modified: 2025-10-24 17:48:21.839000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1022-restrict_file_and_directory_permissions|M1022: Restrict File and Directory Permissions]]
@@ -81,7 +63,4 @@ Adversarial may use these commands to make themselves the owner of files and dir
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

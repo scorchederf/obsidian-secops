@@ -26,6 +26,3 @@ For example, adversaries can add a malicious application path to the `~/Library/
 
 - macOS
 
-## Tools
-
-

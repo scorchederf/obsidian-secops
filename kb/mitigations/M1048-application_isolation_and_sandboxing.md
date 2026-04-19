@@ -30,14 +30,6 @@ Endpoint Sandboxing:
 - Use Case: Run all downloaded files and applications in a restricted environment to monitor their behavior for malicious activity.
 - Implementation: Use endpoint protection tools for sandboxing at the endpoint level.
 
-## Properties
-
-- id: M1048
-- name: Application Isolation and Sandboxing
-- created: 2019-06-11 17:06:56.230000+00:00
-- modified: 2025-05-09 16:23:40.086000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

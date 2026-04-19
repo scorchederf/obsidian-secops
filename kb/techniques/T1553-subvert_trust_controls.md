@@ -19,6 +19,7 @@ Adversaries may attempt to subvert these trust mechanisms. The method adversarie
 ## Subtechniques
 
 ### T1553.001: Gatekeeper Bypass
+
 ^t1553001-gatekeeper-bypass
 
 **Parent Technique**
@@ -43,17 +44,8 @@ Adversaries can subvert one or multiple security controls within Gatekeeper chec
 
 Applications and files loaded onto the system from a USB flash drive, optical disk, external hard drive, from a drive shared over the local network, or using the curl command may not set the quarantine flag. Additionally, it is possible to avoid setting the quarantine flag using [Drive-by Compromise](https://attack.mitre.org/techniques/T1189).
 
-#### Properties
-
-- id: T1553.001
-- name: Gatekeeper Bypass
-- created: 2020-02-05 16:16:08.471000+00:00
-- modified: 2025-10-24 17:48:36.535000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1553.002: Code Signing
+
 ^t1553002-code-signing
 
 **Parent Technique**
@@ -68,17 +60,8 @@ Code signing to verify software on first run can be used on modern Windows and m
 
 Code signing certificates may be used to bypass security policies that require signed code to execute on a system. 
 
-#### Properties
-
-- id: T1553.002
-- name: Code Signing
-- created: 2020-02-05 16:27:37.784000+00:00
-- modified: 2025-10-24 17:48:37.098000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1553.003: SIP and Trust Provider Hijacking
+
 ^t1553003-sip-and-trust-provider-hijacking
 
 **Parent Technique**
@@ -100,17 +83,8 @@ Similar to [Code Signing](https://attack.mitre.org/techniques/T1553/002), advers
 
 Hijacking SIP or trust provider components can also enable persistent code execution, since these malicious components may be invoked by any application that performs code signing or signature validation. (Citation: SpectorOps Subverting Trust Sept 2017)
 
-#### Properties
-
-- id: T1553.003
-- name: SIP and Trust Provider Hijacking
-- created: 2020-02-05 19:34:04.910000+00:00
-- modified: 2025-10-24 17:48:48.200000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1553.004: Install Root Certificate
+
 ^t1553004-install-root-certificate
 
 **Parent Technique**
@@ -129,17 +103,8 @@ Root certificates (and their associated chains) can also be cloned and reinstall
 
 In macOS, the Ay MaMi malware uses <code>/usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /path/to/malicious/cert</code> to install a malicious certificate as a trusted root certificate into the system keychain.(Citation: objective-see ay mami 2018)
 
-#### Properties
-
-- id: T1553.004
-- name: Install Root Certificate
-- created: 2020-02-21 21:05:32.844000+00:00
-- modified: 2025-10-24 17:49:21.832000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1553.005: Mark-of-the-Web Bypass
+
 ^t1553005-mark-of-the-web-bypass
 
 **Parent Technique**
@@ -152,17 +117,8 @@ Adversaries may abuse specific file formats to subvert Mark-of-the-Web (MOTW) co
 
 Adversaries may abuse container files such as compressed/archive (.arj, .gzip) and/or disk image (.iso, .vhd) file formats to deliver malicious payloads that may not be tagged with MOTW. Container files downloaded from the Internet will be marked with MOTW but the files within may not inherit the MOTW after the container files are extracted and/or mounted. MOTW is a NTFS feature and many container files do not support NTFS alternative data streams. After a container file is extracted and/or mounted, the files contained within them may be treated as local files on disk and run without protections.(Citation: Beek Use of VHD Dec 2020)(Citation: Outflank MotW 2020)
 
-#### Properties
-
-- id: T1553.005
-- name: Mark-of-the-Web Bypass
-- created: 2021-02-22 14:20:31.650000+00:00
-- modified: 2025-10-24 17:49:01.286000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1553.006: Code Signing Policy Modification
+
 ^t1553006-code-signing-policy-modification
 
 **Parent Technique**
@@ -178,16 +134,6 @@ Some of these security controls may be enabled by default, such as Driver Signat
 Adversaries may modify code signing policies in a number of ways, including through use of command-line or GUI utilities, [Modify Registry](https://attack.mitre.org/techniques/T1112), rebooting the computer in a debug/recovery mode, or by altering the value of variables in kernel memory.(Citation: Microsoft TESTSIGNING Feb 2021)(Citation: Apple Disable SIP)(Citation: FireEye HIKIT Rootkit Part 2)(Citation: GitHub Turla Driver Loader) Examples of commands that can modify the code signing policy of a system include <code>bcdedit.exe -set TESTSIGNING ON</code> on Windows and <code>csrutil disable</code> on macOS.(Citation: Microsoft TESTSIGNING Feb 2021)(Citation: Apple Disable SIP) Depending on the implementation, successful modification of a signing policy may require reboot of the compromised system. Additionally, some implementations can introduce visible artifacts for the user (ex: a watermark in the corner of the screen stating the system is in Test Mode). Adversaries may attempt to remove such artifacts.(Citation: F-Secure BlackEnergy 2014)
 
 To gain access to kernel memory to modify variables related to signature checks, such as modifying <code>g_CiOptions</code> to disable Driver Signature Enforcement, adversaries may conduct [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068) using a signed, but vulnerable driver.(Citation: Unit42 AcidBox June 2020)(Citation: GitHub Turla Driver Loader)
-
-#### Properties
-
-- id: T1553.006
-- name: Code Signing Policy Modification
-- created: 2021-04-23 01:04:57.161000+00:00
-- modified: 2025-10-24 17:48:48.927000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

@@ -30,9 +30,3 @@ Infrastructure as a Service (IaaS) cloud providers also have commands for storag
 - macOS
 - Windows
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-- [[crackmapexec|CrackMapExec]]
-- [[silenttrinity|SILENTTRINITY]]
-

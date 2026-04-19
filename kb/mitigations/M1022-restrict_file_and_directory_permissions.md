@@ -46,14 +46,6 @@ Example: Restrict write access to critical directories like `/etc/`, `/usr/local
 - On Windows, use icacls to modify permissions: `icacls "C:\Windows\System32" /inheritance:r /grant:r SYSTEM:(OI)(CI)F`
 - On Linux, monitor permissions using tools like `lsattr` or `auditd`.
 
-## Properties
-
-- id: M1022
-- name: Restrict File and Directory Permissions
-- created: 2019-06-06 20:54:49.964000+00:00
-- modified: 2024-12-18 19:18:58.856000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1036-masquerading|T1036: Masquerading]]

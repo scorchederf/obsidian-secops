@@ -27,17 +27,3 @@ Utilities and commands that acquire this information include [netstat](https://a
 - Network Devices
 - ESXi
 
-## Tools
-
-- [[crackmapexec|CrackMapExec]]
-- [[empire|Empire]]
-- [[frp|FRP]]
-- [[nbtstat|nbtstat]]
-- [[net|Net]]
-- [[netstat|netstat]]
-- [[pacu|Pacu]]
-- [[poshc2|PoshC2]]
-- [[pupy|Pupy]]
-- [[shimratreporter|ShimRatReporter]]
-- [[sliver|Sliver]]
-

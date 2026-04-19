@@ -17,6 +17,7 @@ Adversaries may attempt to exfiltrate data via a physical medium, such as a remo
 ## Subtechniques
 
 ### T1052.001: Exfiltration over USB
+
 ^t1052001-exfiltration-over-usb
 
 **Parent Technique**
@@ -26,16 +27,6 @@ Adversaries may attempt to exfiltrate data via a physical medium, such as a remo
 - [[exfiltration|Exfiltration]]
 
 Adversaries may attempt to exfiltrate data over a USB connected physical device. In certain circumstances, such as an air-gapped network compromise, exfiltration could occur via a USB device introduced by a user. The USB device could be used as the final exfiltration point or to hop between otherwise disconnected systems.
-
-#### Properties
-
-- id: T1052.001
-- name: Exfiltration over USB
-- created: 2020-03-11 13:50:11.467000+00:00
-- modified: 2025-10-24 17:49:10.994000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

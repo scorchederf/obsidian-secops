@@ -55,14 +55,6 @@ Identity and Access Management (IAM) Tools:
 Privileged Account Management (PAM):
 - CyberArk, BeyondTrust, Thycotic: Manage and monitor privileged account usage, enforce session recording, and JIT access.
 
-## Properties
-
-- id: M1018
-- name: User Account Management
-- created: 2019-06-06 16:50:58.767000+00:00
-- modified: 2024-12-24 14:33:36.029000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1006-direct_volume_access|T1006: Direct Volume Access]]

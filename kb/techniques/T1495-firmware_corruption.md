@@ -29,6 +29,3 @@ In general, adversaries may manipulate, overwrite, or corrupt firmware in order 
 - Network Devices
 - Windows
 
-## Tools
-
-

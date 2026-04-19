@@ -17,6 +17,7 @@ Adversaries may circumvent mechanisms designed to control elevate privileges to 
 ## Subtechniques
 
 ### T1548.001: Setuid and Setgid
+
 ^t1548001-setuid-and-setgid
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Adversaries can use this mechanism on their own malware to make sure they're abl
 
 Alternatively, adversaries may choose to find and target vulnerable binaries with the setuid or setgid bits already enabled (i.e. [File and Directory Discovery](https://attack.mitre.org/techniques/T1083)). The setuid and setguid bits are indicated with an "s" instead of an "x" when viewing a file's attributes via <code>ls -l</code>. The <code>find</code> command can also be used to search for such files. For example, <code>find / -perm +4000 2>/dev/null</code> can be used to find files with setuid set and <code>find / -perm +2000 2>/dev/null</code> may be used for setgid. Binaries that have these bits set may then be abused by adversaries.(Citation: GTFOBins Suid)
 
-#### Properties
-
-- id: T1548.001
-- name: Setuid and Setgid
-- created: 2020-01-30 14:11:41.212000+00:00
-- modified: 2025-10-24 17:48:53.456000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1548.002: Bypass User Account Control
+
 ^t1548002-bypass-user-account-control
 
 **Parent Technique**
@@ -62,17 +54,8 @@ Many methods have been discovered to bypass UAC. The Github readme page for UACM
 
 Another bypass is possible through some lateral movement techniques if credentials for an account with administrator privileges are known, since UAC is a single system security mechanism, and the privilege or integrity of a process running on one system will be unknown on remote systems and default to high integrity.(Citation: SANS UAC Bypass)
 
-#### Properties
-
-- id: T1548.002
-- name: Bypass User Account Control
-- created: 2020-01-30 14:24:34.977000+00:00
-- modified: 2025-10-24 17:48:25.823000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1548.003: Sudo and Sudo Caching
+
 ^t1548003-sudo-and-sudo-caching
 
 **Parent Technique**
@@ -91,17 +74,8 @@ Adversaries can also abuse poor configurations of these mechanisms to escalate p
 
 In the wild, malware has disabled <code>tty_tickets</code> to potentially make scripting easier by issuing <code>echo \'Defaults !tty_tickets\' >> /etc/sudoers</code>.(Citation: cybereason osx proton) In order for this change to be reflected, the malware also issued <code>killall Terminal</code>. As of macOS Sierra, the sudoers file has <code>tty_tickets</code> enabled by default.
 
-#### Properties
-
-- id: T1548.003
-- name: Sudo and Sudo Caching
-- created: 2020-01-30 14:34:44.992000+00:00
-- modified: 2025-10-24 17:48:26.105000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1548.004: Elevated Execution with Prompt
+
 ^t1548004-elevated-execution-with-prompt
 
 **Parent Technique**
@@ -116,17 +90,8 @@ Although this API is deprecated, it still fully functions in the latest releases
 
 Adversaries may abuse <code>AuthorizationExecuteWithPrivileges</code> to obtain root privileges in order to install malicious software on victims and install persistence mechanisms.(Citation: Death by 1000 installers; it's all broken!)(Citation: Carbon Black Shlayer Feb 2019)(Citation: OSX Coldroot RAT) This technique may be combined with [Masquerading](https://attack.mitre.org/techniques/T1036) to trick the user into granting escalated privileges to malicious code.(Citation: Death by 1000 installers; it's all broken!)(Citation: Carbon Black Shlayer Feb 2019) This technique has also been shown to work by modifying legitimate programs present on the machine that make use of this API.(Citation: Death by 1000 installers; it's all broken!)
 
-#### Properties
-
-- id: T1548.004
-- name: Elevated Execution with Prompt
-- created: 2020-01-30 14:40:20.187000+00:00
-- modified: 2025-10-24 17:49:16.860000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1548.005: Temporary Elevated Cloud Access
+
 ^t1548005-temporary-elevated-cloud-access
 
 **Parent Technique**
@@ -147,17 +112,8 @@ While users require specific role assignments in order to use any of these featu
 
 **Note:** this technique is distinct from [Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003), which involves assigning permanent roles to accounts rather than abusing existing permissions structures to gain temporarily elevated access to resources. However, adversaries that compromise a sufficiently privileged account may grant another account they control [Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003) that would allow them to also abuse these features. This may also allow for greater stealth than would be had by directly using the highly privileged account, especially when logs do not clarify when role impersonation is taking place.(Citation: CrowdStrike StellarParticle January 2022)
 
-#### Properties
-
-- id: T1548.005
-- name: Temporary Elevated Cloud Access
-- created: 2023-07-10 16:37:15.672000+00:00
-- modified: 2025-04-15 23:15:17.608000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1548.006: TCC Manipulation
+
 ^t1548006-tcc-manipulation
 
 **Parent Technique**
@@ -173,16 +129,6 @@ When an application requests to access data or a service protected by TCC, the T
 Adversaries may access restricted data or services protected by TCC through abusing applications previously granted permissions through [Process Injection](https://attack.mitre.org/techniques/T1055) or executing a malicious binary using another application. For example, adversaries can use Finder, a macOS native app with FDA permissions, to execute a malicious [AppleScript](https://attack.mitre.org/techniques/T1059/002). When executing under the Finder App, the malicious [AppleScript](https://attack.mitre.org/techniques/T1059/002) inherits access to all files on the system without requiring a user prompt. When System Integrity Protection (SIP) is disabled, TCC protections are also disabled. For a system without SIP enabled, adversaries can manipulate the TCC database to add permissions to their malicious executable through loading an adversary controlled TCC database using environment variables and [Launchctl](https://attack.mitre.org/techniques/T1569/001).(Citation: TCC macOS bypass)(Citation: TCC Database)
 
 
-
-#### Properties
-
-- id: T1548.006
-- name: TCC Manipulation
-- created: 2024-03-21 21:10:57.322000+00:00
-- modified: 2025-04-15 23:14:58.393000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -203,7 +149,4 @@ Adversaries may access restricted data or services protected by TCC through abus
 - IaaS
 - Office Suite
 - Identity Provider
-
-## Tools
-
 

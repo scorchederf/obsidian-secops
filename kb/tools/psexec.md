@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [PsExec](https://attack.mitre.org/software/S0029) is a free Microsoft tool that can be used to execute a program on another computer. It is used by IT administrators and attackers.(Citation: Russinovich Sysinternals)(Citation: SANS PsExec)
 
-## Properties
-
-- id: S0029
-- name: PsExec
-- created: 2017-05-31 21:32:21.771000+00:00
-- modified: 2024-09-25 20:31:21.768000+00:00
-- type: tool
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

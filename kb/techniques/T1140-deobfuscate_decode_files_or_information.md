@@ -25,12 +25,3 @@ Sometimes a user's action may be required to open it for deobfuscation or decryp
 - macOS
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[certutil|certutil]]
-- [[expand|Expand]]
-- [[imminent_monitor|Imminent Monitor]]
-- [[ironnetinjector|IronNetInjector]]
-- [[pcshare|PcShare]]
-

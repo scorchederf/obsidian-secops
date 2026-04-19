@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Rclone](https://attack.mitre.org/software/S1040) is a command line program for syncing files with cloud storage services such as Dropbox, Google Drive, Amazon S3, and MEGA. [Rclone](https://attack.mitre.org/software/S1040) has been used in a number of ransomware campaigns, including those associated with the [Conti](https://attack.mitre.org/software/S0575) and DarkSide Ransomware-as-a-Service operations.(Citation: Rclone)(Citation: Rclone Wars)(Citation: Detecting Rclone)(Citation: DarkSide Ransomware Gang)(Citation: DFIR Conti Bazar Nov 2021)
 
-## Properties
-
-- id: S1040
-- name: Rclone
-- created: 2022-08-30 13:02:36.422000+00:00
-- modified: 2025-10-14 18:39:05.993000+00:00
-- type: tool
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1030-data_transfer_size_limits|T1030: Data Transfer Size Limits]]

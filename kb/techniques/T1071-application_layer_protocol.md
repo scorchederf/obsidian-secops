@@ -19,6 +19,7 @@ Adversaries may utilize many different protocols, including those used for web b
 ## Subtechniques
 
 ### T1071.001: Web Protocols
+
 ^t1071001-web-protocols
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may communicate using application layer protocols associated with we
 
 Protocols such as HTTP/S(Citation: CrowdStrike Putter Panda) and WebSocket(Citation: Brazking-Websockets) that carry web traffic may be very common in environments. HTTP/S packets have many fields and headers in which data can be concealed. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic. 
 
-#### Properties
-
-- id: T1071.001
-- name: Web Protocols
-- created: 2020-03-15 16:13:46.151000+00:00
-- modified: 2025-10-24 17:49:29.591000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1071.002: File Transfer Protocols
+
 ^t1071002-file-transfer-protocols
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may communicate using application layer protocols associated with tr
 
 Protocols such as SMB(Citation: US-CERT TA18-074A), FTP(Citation: ESET Machete July 2019), FTPS, and TFTP that transfer files may be very common in environments.  Packets produced from these protocols may have many fields and headers in which data can be concealed. Data could also be concealed within the transferred files. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic. 
 
-#### Properties
-
-- id: T1071.002
-- name: File Transfer Protocols
-- created: 2020-03-15 16:16:25.763000+00:00
-- modified: 2025-10-24 17:49:08.302000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1071.003: Mail Protocols
+
 ^t1071003-mail-protocols
 
 **Parent Technique**
@@ -77,17 +60,8 @@ Adversaries may communicate using application layer protocols associated with el
 
 Protocols such as SMTP/S, POP3/S, and IMAP that carry electronic mail may be very common in environments.  Packets produced from these protocols may have many fields and headers in which data can be concealed. Data could also be concealed within the email messages themselves. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic.(Citation: FireEye APT28) 
 
-#### Properties
-
-- id: T1071.003
-- name: Mail Protocols
-- created: 2020-03-15 16:21:45.131000+00:00
-- modified: 2025-10-24 17:48:48.564000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1071.004: DNS
+
 ^t1071004-dns
 
 **Parent Technique**
@@ -102,17 +76,8 @@ The DNS protocol serves an administrative function in computer networking and th
 
 DNS beaconing may be used to send commands to remote systems via DNS queries. A DNS beacon is created by tunneling DNS traffic (i.e. [Protocol Tunneling](https://attack.mitre.org/techniques/T1572)). The commands may be embedded into different DNS records, for example, TXT or A records.(Citation: OilRig Uses Updated BONDUPDATER to Target Middle Eastern Government) DNS beacons may be difficult to detect because the beacons infrequently communicate with infected devices.(Citation: DNS Beacons) Infrequent communication conceals the malicious DNS traffic with normal DNS traffic. 
 
-#### Properties
-
-- id: T1071.004
-- name: DNS
-- created: 2020-03-15 16:27:31.768000+00:00
-- modified: 2025-10-24 17:48:27.877000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1071.005: Publish/Subscribe Protocols
+
 ^t1071005-publish-subscribe-protocols
 
 **Parent Technique**
@@ -124,16 +89,6 @@ DNS beaconing may be used to send commands to remote systems via DNS queries. A 
 Adversaries may communicate using publish/subscribe (pub/sub) application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
 Protocols such as <code>MQTT</code>, <code>XMPP</code>, <code>AMQP</code>, and <code>STOMP</code> use a publish/subscribe design, with message distribution managed by a centralized broker.(Citation: wailing crab sub/pub)(Citation: Mandiant APT1 Appendix) Publishers categorize their messages by topics, while subscribers receive messages according to their subscribed topics.(Citation: wailing crab sub/pub) An adversary may abuse publish/subscribe protocols to communicate with systems under their control from behind a message broker while also mimicking normal, expected traffic.
-
-#### Properties
-
-- id: T1071.005
-- name: Publish/Subscribe Protocols
-- created: 2024-08-28 14:14:18.512000+00:00
-- modified: 2025-04-15 19:58:14.152000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -147,8 +102,4 @@ Protocols such as <code>MQTT</code>, <code>XMPP</code>, <code>AMQP</code>, and <
 - Windows
 - Network Devices
 - ESXi
-
-## Tools
-
-- [[sliver|Sliver]]
 

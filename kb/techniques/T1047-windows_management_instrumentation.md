@@ -31,15 +31,3 @@ An adversary can use WMI to interact with local and remote systems and use it as
 
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[covenant|Covenant]]
-- [[crackmapexec|CrackMapExec]]
-- [[empire|Empire]]
-- [[impacket|Impacket]]
-- [[koadic|Koadic]]
-- [[poshc2|PoshC2]]
-- [[powersploit|PowerSploit]]
-- [[silenttrinity|SILENTTRINITY]]
-

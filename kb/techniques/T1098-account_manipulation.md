@@ -19,6 +19,7 @@ In order to create or manipulate accounts, the adversary must already have suffi
 ## Subtechniques
 
 ### T1098.001: Additional Cloud Credentials
+
 ^t1098001-additional-cloud-credentials
 
 **Parent Technique**
@@ -40,17 +41,8 @@ In AWS environments, adversaries with the appropriate permissions may also use t
 
 In Entra ID environments with the app password feature enabled, adversaries may be able to add an app password to a user account.(Citation: Mandiant APT42 Operations 2024) As app passwords are intended to be used with legacy devices that do not support multi-factor authentication (MFA), adding an app password can allow an adversary to bypass MFA requirements. Additionally, app passwords may remain valid even if the user’s primary password is reset.(Citation: Microsoft Entra ID App Passwords)
 
-#### Properties
-
-- id: T1098.001
-- name: Additional Cloud Credentials
-- created: 2020-01-19 16:10:15.008000+00:00
-- modified: 2025-10-24 17:49:04.839000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.8
-- x_mitre_domains: enterprise-attack
-
 ### T1098.002: Additional Email Delegate Permissions
+
 ^t1098002-additional-email-delegate-permissions
 
 **Parent Technique**
@@ -67,17 +59,8 @@ Adversaries may also assign mailbox folder permissions through individual folder
 
 This may be used in persistent threat incidents as well as BEC (Business Email Compromise) incidents where an adversary can add [Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003) to the accounts they wish to compromise. This may further enable use of additional techniques for gaining access to systems. For example, compromised business accounts are often used to send messages to other accounts in the network of the target business while creating inbox rules (ex: [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)), so the messages evade spam/phishing detection mechanisms.(Citation: Bienstock, D. - Defending O365 - 2019)
 
-#### Properties
-
-- id: T1098.002
-- name: Additional Email Delegate Permissions
-- created: 2020-01-19 16:54:28.516000+00:00
-- modified: 2025-10-24 17:49:32.801000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1098.003: Additional Cloud Roles
+
 ^t1098003-additional-cloud-roles
 
 **Parent Technique**
@@ -95,17 +78,8 @@ For example, in AWS environments, an adversary with appropriate permissions may 
 
 In some cases, adversaries may add roles to adversary-controlled accounts outside the victim cloud tenant. This allows these external accounts to perform actions inside the victim tenant without requiring the adversary to [Create Account](https://attack.mitre.org/techniques/T1136) or modify a victim-owned account.(Citation: Invictus IR DangerDev 2024)
 
-#### Properties
-
-- id: T1098.003
-- name: Additional Cloud Roles
-- created: 2020-01-19 16:59:45.362000+00:00
-- modified: 2025-10-24 17:48:35.082000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.5
-- x_mitre_domains: enterprise-attack
-
 ### T1098.004: SSH Authorized Keys
+
 ^t1098004-ssh-authorized-keys
 
 **Parent Technique**
@@ -122,17 +96,8 @@ Where authorized_keys files are modified via cloud APIs or command line interfac
 
 SSH keys can also be added to accounts on network devices, such as with the `ip ssh pubkey-chain` [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) command.(Citation: cisco_ip_ssh_pubkey_ch_cmd)
 
-#### Properties
-
-- id: T1098.004
-- name: SSH Authorized Keys
-- created: 2020-06-24 12:42:35.144000+00:00
-- modified: 2025-10-24 17:48:55.005000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1098.005: Device Registration
+
 ^t1098005-device-registration
 
 **Parent Technique**
@@ -149,17 +114,8 @@ Similarly, an adversary with existing access to a network may register a device 
 
 Devices registered in Entra ID may be able to conduct [Internal Spearphishing](https://attack.mitre.org/techniques/T1534) campaigns via intra-organizational emails, which are less likely to be treated as suspicious by the email client.(Citation: Microsoft - Device Registration) Additionally, an adversary may be able to perform a [Service Exhaustion Flood](https://attack.mitre.org/techniques/T1499/002) on an Entra ID tenant by registering a large number of devices.(Citation: AADInternals - BPRT)
 
-#### Properties
-
-- id: T1098.005
-- name: Device Registration
-- created: 2022-03-04 18:30:38.989000+00:00
-- modified: 2025-05-22 21:02:06.575000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1098.006: Additional Container Cluster Roles
+
 ^t1098006-additional-container-cluster-roles
 
 **Parent Technique**
@@ -174,17 +130,8 @@ This account modification may immediately follow [Create Account](https://attack
 
 Note that where container orchestration systems are deployed in cloud environments, as with Google Kubernetes Engine, Amazon Elastic Kubernetes Service, and Azure Kubernetes Service, cloud-based  role-based access control (RBAC) assignments or ABAC policies can often be used in place of or in addition to local permission assignments.(Citation: Google Cloud Kubernetes IAM)(Citation: AWS EKS IAM Roles for Service Accounts)(Citation: Microsoft Azure Kubernetes Service Service Accounts) In these cases, this technique may be used in conjunction with [Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003).
 
-#### Properties
-
-- id: T1098.006
-- name: Additional Container Cluster Roles
-- created: 2023-07-14 14:01:50.806000+00:00
-- modified: 2025-04-15 21:46:31.661000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1098.007: Additional Local or Domain Groups
+
 ^t1098007-additional-local-or-domain-groups
 
 **Parent Technique**
@@ -200,16 +147,6 @@ On Windows, accounts may use the `net localgroup` and `net group` commands to ad
 For example, accounts may be added to the local administrators group on Windows devices to maintain elevated privileges. They may also be added to the Remote Desktop Users group, which allows them to leverage [Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001) to log into the endpoints in the future.(Citation: Microsoft RDP Logons) Adversaries may also add accounts to VPN user groups to gain future persistence on the network.(Citation: Cyber Security News) On Linux, accounts may be added to the sudoers group, allowing them to persistently leverage [Sudo and Sudo Caching](https://attack.mitre.org/techniques/T1548/003) for elevated privileges. 
 
 In Windows environments, machine accounts may also be added to domain groups. This allows the local SYSTEM account to gain privileges on the domain.(Citation: RootDSE AD Detection 2022)
-
-#### Properties
-
-- id: T1098.007
-- name: Additional Local or Domain Groups
-- created: 2024-08-05 20:49:49.809000+00:00
-- modified: 2025-09-26 18:25:02.290000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -233,8 +170,4 @@ In Windows environments, machine accounts may also be added to domain groups. Th
 - Office Suite
 - SaaS
 - Windows
-
-## Tools
-
-- [[mimikatz|Mimikatz]]
 

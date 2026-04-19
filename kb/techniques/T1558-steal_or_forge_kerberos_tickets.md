@@ -20,6 +20,7 @@ On Windows, the built-in <code>klist</code> utility can be used to list and anal
 ## Subtechniques
 
 ### T1558.001: Golden Ticket
+
 ^t1558001-golden-ticket
 
 **Parent Technique**
@@ -34,17 +35,8 @@ Using a golden ticket, adversaries are then able to request ticket granting serv
 
 The KDC service runs all on domain controllers that are part of an Active Directory domain. KRBTGT is the Kerberos Key Distribution Center (KDC) service account and is responsible for encrypting and signing all Kerberos tickets.(Citation: ADSecurity Kerberos and KRBTGT) The KRBTGT password hash may be obtained using [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) and privileged access to a domain controller.
 
-#### Properties
-
-- id: T1558.001
-- name: Golden Ticket
-- created: 2020-02-11 19:13:33.643000+00:00
-- modified: 2025-10-24 17:48:58.155000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1558.002: Silver Ticket
+
 ^t1558002-silver-ticket
 
 **Parent Technique**
@@ -59,17 +51,8 @@ Silver tickets are more limited in scope in than golden tickets in that they onl
 
 Password hashes for target services may be obtained using [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or [Kerberoasting](https://attack.mitre.org/techniques/T1558/003).
 
-#### Properties
-
-- id: T1558.002
-- name: Silver Ticket
-- created: 2020-02-11 19:14:48.309000+00:00
-- modified: 2025-10-24 17:49:26.177000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1558.003: Kerberoasting
+
 ^t1558003-kerberoasting
 
 **Parent Technique**
@@ -88,17 +71,8 @@ This same behavior could be executed using service tickets captured from network
 
 Cracked hashes may enable [Persistence](https://attack.mitre.org/tactics/TA0003), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004), and [Lateral Movement](https://attack.mitre.org/tactics/TA0008) via access to [Valid Accounts](https://attack.mitre.org/techniques/T1078).(Citation: SANS Attacking Kerberos Nov 2014)
 
-#### Properties
-
-- id: T1558.003
-- name: Kerberoasting
-- created: 2020-02-11 18:43:38.588000+00:00
-- modified: 2025-10-24 17:49:36.038000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1558.004: AS-REP Roasting
+
 ^t1558004-as-rep-roasting
 
 **Parent Technique**
@@ -117,17 +91,8 @@ An account registered to a domain, with or without special privileges, can be ab
 
 Cracked hashes may enable [Persistence](https://attack.mitre.org/tactics/TA0003), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004), and [Lateral Movement](https://attack.mitre.org/tactics/TA0008) via access to [Valid Accounts](https://attack.mitre.org/techniques/T1078).(Citation: SANS Attacking Kerberos Nov 2014)
 
-#### Properties
-
-- id: T1558.004
-- name: AS-REP Roasting
-- created: 2020-08-24 13:43:00.028000+00:00
-- modified: 2025-10-24 17:48:39.884000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1558.005: Ccache Files
+
 ^t1558005-ccache-files
 
 **Parent Technique**
@@ -142,16 +107,6 @@ Adversaries may attempt to steal Kerberos tickets stored in credential cache fil
 The <code>/etc/krb5.conf</code> configuration file and the <code>KRB5CCNAME</code> environment variable are used to set the storage location for ccache entries. On Linux, credentials are typically stored in the `/tmp` directory with a naming format of `krb5cc_%UID%` or `krb5.ccache`. On macOS, ccache entries are stored by default in memory with an `API:{uuid}` naming scheme. Typically, users interact with ticket storage using <code>kinit</code>, which obtains a Ticket-Granting-Ticket (TGT) for the principal; <code>klist</code>, which lists obtained tickets currently held in the credentials cache; and other built-in binaries.(Citation: Kerberos GNU/Linux)(Citation: Binary Defense Kerberos Linux)
 
 Adversaries can collect tickets from ccache files stored on disk and authenticate as the current user without their password to perform [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003) attacks. Adversaries can also use these tickets to impersonate legitimate users with elevated privileges to perform [Privilege Escalation](https://attack.mitre.org/tactics/TA0004). Tools like Kekeo can also be used by adversaries to convert ccache files to Windows format for further [Lateral Movement](https://attack.mitre.org/tactics/TA0008). On macOS, adversaries may use open-source tools or the Kerberos framework to interact with ccache files and extract TGTs or Service Tickets via lower-level APIs.(Citation: SpectorOps Bifrost Kerberos macOS 2019)(Citation: Linux Kerberos Tickets)(Citation: Brining MimiKatz to Unix)(Citation: Kekeo) 
-
-#### Properties
-
-- id: T1558.005
-- name: Ccache Files
-- created: 2024-09-17 15:02:31.324000+00:00
-- modified: 2025-04-15 21:56:03.788000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

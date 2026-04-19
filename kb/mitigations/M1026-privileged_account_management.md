@@ -58,14 +58,6 @@ Just-In-Time Access:
 
 - Azure Privileged Identity Management (PIM), AWS IAM Roles with session constraints, GCP Identity-Aware Proxy.
 
-## Properties
-
-- id: M1026
-- name: Privileged Account Management
-- created: 2019-06-06 21:09:47.115000+00:00
-- modified: 2024-12-18 18:44:23.306000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

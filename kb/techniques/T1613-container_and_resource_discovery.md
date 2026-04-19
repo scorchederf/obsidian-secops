@@ -26,7 +26,3 @@ These resources can be viewed within web applications such as the Kubernetes das
 
 - Containers
 
-## Tools
-
-- [[peirates|Peirates]]
-

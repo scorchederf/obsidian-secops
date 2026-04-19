@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [SILENTTRINITY](https://attack.mitre.org/software/S0692) is an open source remote administration and post-exploitation framework primarily written in Python that includes stagers written in Powershell, C, and Boo. [SILENTTRINITY](https://attack.mitre.org/software/S0692) was used in a 2019 campaign against Croatian government agencies by unidentified cyber actors.(Citation: GitHub SILENTTRINITY March 2022)(Citation: Security Affairs SILENTTRINITY July 2019)
 
-## Properties
-
-- id: S0692
-- name: SILENTTRINITY
-- created: 2022-03-23 19:34:30.486000+00:00
-- modified: 2025-04-30 13:26:45.728000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

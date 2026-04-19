@@ -35,6 +35,3 @@ Adversaries may also establish persistence on network by configuring a Tor hidde
 - macOS
 - Windows
 
-## Tools
-
-

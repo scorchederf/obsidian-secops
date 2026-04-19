@@ -55,14 +55,6 @@ Cross-Platform:
 - Have I Been Pwned API: Prevent the use of breached passwords.
 - NIST SP 800-63B compliant tools: Enforce password guidelines and blacklisting.
 
-## Properties
-
-- id: M1027
-- name: Password Policies
-- created: 2019-06-06 21:10:35.792000+00:00
-- modified: 2024-12-18 18:08:17.479000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

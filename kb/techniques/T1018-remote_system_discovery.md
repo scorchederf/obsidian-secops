@@ -27,16 +27,3 @@ Adversaries may also target discovery of network infrastructure as well as lever
 - Network Devices
 - Windows
 
-## Tools
-
-- [[adfind|AdFind]]
-- [[arp|Arp]]
-- [[bloodhound|BloodHound]]
-- [[crackmapexec|CrackMapExec]]
-- [[nbtscan|NBTscan]]
-- [[net|Net]]
-- [[nltest|Nltest]]
-- [[ping|Ping]]
-- [[roadtools|ROADTools]]
-- [[silenttrinity|SILENTTRINITY]]
-

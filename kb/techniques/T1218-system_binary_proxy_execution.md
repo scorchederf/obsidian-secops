@@ -19,6 +19,7 @@ Similarly, on Linux systems adversaries may abuse trusted binaries such as <code
 ## Subtechniques
 
 ### T1218.001: Compiled HTML File
+
 ^t1218001-compiled-html-file
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may abuse Compiled HTML files (.chm) to conceal malicious code. CHM 
 
 A custom CHM file containing embedded payloads could be delivered to a victim then triggered by [User Execution](https://attack.mitre.org/techniques/T1204). CHM execution may also bypass application application control on older and/or unpatched systems that do not account for execution of binaries through hh.exe. (Citation: MsitPros CHM Aug 2017) (Citation: Microsoft CVE-2017-8625 Aug 2017)
 
-#### Properties
-
-- id: T1218.001
-- name: Compiled HTML File
-- created: 2020-01-23 18:53:54.377000+00:00
-- modified: 2025-10-24 17:49:11.609000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1218.002: Control Panel
+
 ^t1218002-control-panel
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Malicious Control Panel items can be delivered via [Phishing](https://attack.mit
 
 Adversaries may also rename malicious DLL files (.dll) with Control Panel file extensions (.cpl) and register them to <code>HKCU\Software\Microsoft\Windows\CurrentVersion\Control Panel\Cpls</code>. Even when these registered DLLs do not comply with the CPL file specification and do not export <code>CPlApplet</code> functions, they are loaded and executed through its <code>DllEntryPoint</code> when Control Panel is executed. CPL files not exporting <code>CPlApplet</code> are not directly executable.(Citation: ESET InvisiMole June 2020)
 
-#### Properties
-
-- id: T1218.002
-- name: Control Panel
-- created: 2020-01-23 19:59:52.630000+00:00
-- modified: 2025-10-24 17:48:45.979000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.003: CMSTP
+
 ^t1218003-cmstp
 
 **Parent Technique**
@@ -83,17 +66,8 @@ Adversaries may supply CMSTP.exe with INF files infected with malicious commands
 
 CMSTP.exe can also be abused to [Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002) and execute arbitrary commands from a malicious INF through an auto-elevated COM interface. (Citation: MSitPros CMSTP Aug 2017) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018)
 
-#### Properties
-
-- id: T1218.003
-- name: CMSTP
-- created: 2020-01-23 18:27:30.656000+00:00
-- modified: 2025-10-24 17:48:45.149000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1218.004: InstallUtil
+
 ^t1218004-installutil
 
 **Parent Technique**
@@ -106,17 +80,8 @@ Adversaries may use InstallUtil to proxy execution of code through a trusted Win
 
 InstallUtil may also be used to bypass application control through use of attributes within the binary that execute the class decorated with the attribute <code>[System.ComponentModel.RunInstaller(true)]</code>. (Citation: LOLBAS Installutil)
 
-#### Properties
-
-- id: T1218.004
-- name: InstallUtil
-- created: 2020-01-23 19:09:48.811000+00:00
-- modified: 2025-10-24 17:48:34.798000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.005: Mshta
+
 ^t1218005-mshta
 
 **Parent Technique**
@@ -135,17 +100,8 @@ They may also be executed directly from URLs: <code>mshta http[:]//webserver/pay
 
 Mshta.exe can be used to bypass application control solutions that do not account for its potential use. Since mshta.exe executes outside of the Internet Explorer's security context, it also bypasses browser security settings. (Citation: LOLBAS Mshta)
 
-#### Properties
-
-- id: T1218.005
-- name: Mshta
-- created: 2020-01-23 19:32:49.557000+00:00
-- modified: 2025-10-24 17:49:03.265000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.007: Msiexec
+
 ^t1218007-msiexec
 
 **Parent Technique**
@@ -158,17 +114,8 @@ Adversaries may abuse msiexec.exe to proxy execution of malicious payloads. Msie
 
 Adversaries may abuse msiexec.exe to launch local or network accessible MSI files. Msiexec.exe can also execute DLLs.(Citation: LOLBAS Msiexec)(Citation: TrendMicro Msiexec Feb 2018) Since it may be signed and native on Windows systems, msiexec.exe can be used to bypass application control solutions that do not account for its potential abuse. Msiexec.exe execution may also be elevated to SYSTEM privileges if the <code>AlwaysInstallElevated</code> policy is enabled.(Citation: Microsoft AlwaysInstallElevated 2018)
 
-#### Properties
-
-- id: T1218.007
-- name: Msiexec
-- created: 2020-01-24 14:38:49.266000+00:00
-- modified: 2025-10-24 17:48:38.626000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.008: Odbcconf
+
 ^t1218008-odbcconf
 
 **Parent Technique**
@@ -182,17 +129,8 @@ Adversaries may abuse odbcconf.exe to proxy execution of malicious payloads. Odb
 Adversaries may abuse odbcconf.exe to bypass application control solutions that do not account for its potential abuse. Similar to [Regsvr32](https://attack.mitre.org/techniques/T1218/010), odbcconf.exe has a <code>REGSVR</code> flag that can be misused to execute DLLs (ex: <code>odbcconf.exe /S /A &lbrace;REGSVR "C:\Users\Public\file.dll"&rbrace;</code>). (Citation: LOLBAS Odbcconf)(Citation: TrendMicro Squiblydoo Aug 2017)(Citation: TrendMicro Cobalt Group Nov 2017) 
 
 
-#### Properties
-
-- id: T1218.008
-- name: Odbcconf
-- created: 2020-01-24 15:01:32.917000+00:00
-- modified: 2025-10-24 17:48:55.622000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.009: Regsvcs/Regasm
+
 ^t1218009-regsvcs-regasm
 
 **Parent Technique**
@@ -205,17 +143,8 @@ Adversaries may abuse Regsvcs and Regasm to proxy execution of code through a tr
 
 Both utilities may be used to bypass application control through use of attributes within the binary to specify code that should be run before registration or unregistration: <code>[ComRegisterFunction]</code> or <code>[ComUnregisterFunction]</code> respectively. The code with the registration and unregistration attributes will be executed even if the process is run under insufficient privileges and fails to execute. (Citation: LOLBAS Regsvcs)(Citation: LOLBAS Regasm)
 
-#### Properties
-
-- id: T1218.009
-- name: Regsvcs/Regasm
-- created: 2020-01-23 19:42:16.439000+00:00
-- modified: 2025-10-24 17:49:21.181000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.010: Regsvr32
+
 ^t1218010-regsvr32
 
 **Parent Technique**
@@ -230,17 +159,8 @@ Malicious usage of Regsvr32.exe may avoid triggering security tools that may not
 
 Regsvr32.exe can also be leveraged to register a COM Object used to establish persistence via [Component Object Model Hijacking](https://attack.mitre.org/techniques/T1546/015). (Citation: Carbon Black Squiblydoo Apr 2016)
 
-#### Properties
-
-- id: T1218.010
-- name: Regsvr32
-- created: 2020-01-23 19:52:17.414000+00:00
-- modified: 2025-10-24 17:49:17.377000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1218.011: Rundll32
+
 ^t1218011-rundll32
 
 **Parent Technique**
@@ -261,17 +181,8 @@ Adversaries may also attempt to obscure malicious code from analysis by abusing 
 
 Additionally, adversaries may use [Masquerading](https://attack.mitre.org/techniques/T1036) techniques (such as changing DLL file names, file extensions, or function names) to further conceal execution of a malicious payload.(Citation: rundll32.exe defense evasion) 
 
-#### Properties
-
-- id: T1218.011
-- name: Rundll32
-- created: 2020-01-23 18:03:46.248000+00:00
-- modified: 2025-10-24 17:48:20.567000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.5
-- x_mitre_domains: enterprise-attack
-
 ### T1218.012: Verclsid
+
 ^t1218012-verclsid
 
 **Parent Technique**
@@ -284,17 +195,8 @@ Adversaries may abuse verclsid.exe to proxy execution of malicious code. Verclsi
 
 Adversaries may abuse verclsid.exe to execute malicious payloads. This may be achieved by running <code>verclsid.exe /S /C {CLSID}</code>, where the file is referenced by a Class ID (CLSID), a unique identification number used to identify COM objects. COM payloads executed by verclsid.exe may be able to perform various malicious actions, such as loading and executing COM scriptlets (SCT) from remote servers (similar to [Regsvr32](https://attack.mitre.org/techniques/T1218/010)). Since the binary may be signed and/or native on Windows systems, proxying execution via verclsid.exe may bypass application control solutions that do not account for its potential abuse.(Citation: LOLBAS Verclsid)(Citation: Red Canary Verclsid.exe)(Citation: BOHOPS Abusing the COM Registry)(Citation: Nick Tyrer GitHub) 
 
-#### Properties
-
-- id: T1218.012
-- name: Verclsid
-- created: 2020-08-10 13:59:38.443000+00:00
-- modified: 2025-10-24 17:49:01.930000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.013: Mavinject
+
 ^t1218013-mavinject
 
 **Parent Technique**
@@ -309,17 +211,8 @@ Adversaries may abuse mavinject.exe to inject malicious DLLs into running proces
 
 In addition to [Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001), Mavinject.exe can also be abused to perform import descriptor injection via its  <code>/HMODULE</code> command-line parameter (ex. <code>mavinject.exe PID /HMODULE=BASE_ADDRESS PATH_DLL ORDINAL_NUMBER</code>). This command would inject an import table entry consisting of the specified DLL into the module at the given base address.(Citation: Mavinject Functionality Deconstructed)
 
-#### Properties
-
-- id: T1218.013
-- name: Mavinject
-- created: 2021-09-22 17:45:10.241000+00:00
-- modified: 2025-10-24 17:48:28.606000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ### T1218.014: MMC
+
 ^t1218014-mmc
 
 **Parent Technique**
@@ -336,17 +229,8 @@ Adversaries may use MMC commands to perform malicious tasks. For example, <code>
 
 Adversaries may also abuse MMC to execute malicious .msc files. For example, adversaries may first create a malicious registry Class Identifier (CLSID) subkey, which uniquely identifies a [Component Object Model](https://attack.mitre.org/techniques/T1559/001) class object.(Citation: win_clsid_key) Then, adversaries may create custom consoles with the “Link to Web Address” snap-in that is linked to the malicious CLSID subkey.(Citation: mmc_vulns) Once the .msc file is saved, adversaries may invoke the malicious CLSID payload with the following command: <code>mmc.exe -Embedding C:\path\to\test.msc</code>.(Citation: abusing_com_reg)
 
-#### Properties
-
-- id: T1218.014
-- name: MMC
-- created: 2021-09-28 01:36:41.638000+00:00
-- modified: 2025-10-24 17:49:40.236000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1218.015: Electron Applications
+
 ^t1218015-electron-applications
 
 **Parent Technique**
@@ -360,16 +244,6 @@ Adversaries may abuse components of the Electron framework to execute malicious 
 Due to the functional mechanics of Electron (such as allowing apps to run arbitrary commands), adversaries may also be able to perform malicious functions in the background potentially disguised as legitimate tools within the framework.(Citation: Electron 1) For example, the abuse of `teams.exe` and `chrome.exe` may allow adversaries to execute malicious commands as child processes of the legitimate application (e.g., `chrome.exe --disable-gpu-sandbox --gpu-launcher="C:\Windows\system32\cmd.exe /c calc.exe`).(Citation: Electron 6-8)
 
 Adversaries may also execute malicious content by planting malicious [JavaScript](https://attack.mitre.org/techniques/T1059/007) within Electron applications.(Citation: Electron Security)
-
-#### Properties
-
-- id: T1218.015
-- name: Electron Applications
-- created: 2024-03-07 19:32:35.383000+00:00
-- modified: 2025-04-15 22:24:54.174000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

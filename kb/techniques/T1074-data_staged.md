@@ -21,6 +21,7 @@ Adversaries may choose to stage data from a victim network in a centralized loca
 ## Subtechniques
 
 ### T1074.001: Local Data Staging
+
 ^t1074001-local-data-staging
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Adversaries may stage collected data in a central location or directory on the l
 
 Adversaries may also stage collected data in various available formats/locations of a system, including local storage databases/repositories or the Windows Registry.(Citation: Prevailion DarkWatchman 2021)
 
-#### Properties
-
-- id: T1074.001
-- name: Local Data Staging
-- created: 2020-03-13 21:13:10.467000+00:00
-- modified: 2025-10-24 17:48:28.868000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1074.002: Remote Data Staging
+
 ^t1074002-remote-data-staging
 
 **Parent Technique**
@@ -58,16 +50,6 @@ In cloud environments, adversaries may stage data within a particular instance o
 
 By staging data on one system prior to Exfiltration, adversaries can minimize the number of connections made to their C2 server and better evade detection.
 
-#### Properties
-
-- id: T1074.002
-- name: Remote Data Staging
-- created: 2020-03-13 21:14:58.206000+00:00
-- modified: 2025-10-24 17:48:38.453000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows
@@ -75,7 +57,4 @@ By staging data on one system prior to Exfiltration, adversaries can minimize th
 - Linux
 - macOS
 - ESXi
-
-## Tools
-
 

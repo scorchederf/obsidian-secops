@@ -24,7 +24,3 @@ Rootkits that reside or modify boot sectors are known as [Bootkit](https://attac
 - macOS
 - Windows
 
-## Tools
-
-- [[htran|HTRAN]]
-

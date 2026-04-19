@@ -17,6 +17,7 @@ Adversaries may search compromised systems to find and obtain insecurely stored 
 ## Subtechniques
 
 ### T1552.001: Credentials In Files
+
 ^t1552001-credentials-in-files
 
 **Parent Technique**
@@ -31,17 +32,8 @@ It is possible to extract passwords from backups or saved virtual machines throu
 
 In cloud and/or containerized environments, authenticated user and service account credentials are often stored in local configuration and credential files.(Citation: Unit 42 Hildegard Malware) They may also be found as parameters to deployment commands in container logs.(Citation: Unit 42 Unsecured Docker Daemons) In some cases, these files can be copied and reused on another machine or the contents can be read and then used to authenticate without needing to copy any files.(Citation: Specter Ops - Cloud Credential Storage)
 
-#### Properties
-
-- id: T1552.001
-- name: Credentials In Files
-- created: 2020-02-04 12:52:13.006000+00:00
-- modified: 2025-10-24 17:49:03+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1552.002: Credentials in Registry
+
 ^t1552002-credentials-in-registry
 
 **Parent Technique**
@@ -57,17 +49,8 @@ Example commands to find Registry keys related to password information: (Citatio
 * Local Machine Hive: <code>reg query HKLM /f password /t REG_SZ /s</code>
 * Current User Hive: <code>reg query HKCU /f password /t REG_SZ /s</code>
 
-#### Properties
-
-- id: T1552.002
-- name: Credentials in Registry
-- created: 2020-02-04 12:58:40.678000+00:00
-- modified: 2025-10-24 17:48:37.378000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1552.003: Shell History
+
 ^t1552003-shell-history
 
 **Parent Technique**
@@ -84,17 +67,8 @@ On Windows, PowerShell has both a command history that is wiped after the sessio
 
 Users often type usernames and passwords on the command-line as parameters to programs, which then get saved to this file when they log out. Adversaries can abuse this by looking through the file for potential credentials.(Citation: External to DA, the OS X Way)
 
-#### Properties
-
-- id: T1552.003
-- name: Shell History
-- created: 2020-02-04 13:02:11.685000+00:00
-- modified: 2025-10-24 17:49:02.375000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ### T1552.004: Private Keys
+
 ^t1552004-private-keys
 
 **Parent Technique**
@@ -113,17 +87,8 @@ On network devices, private keys may be exported via [Network Device CLI](https:
 
 Some private keys require a password or passphrase for operation, so an adversary may also use [Input Capture](https://attack.mitre.org/techniques/T1056) for keylogging or attempt to [Brute Force](https://attack.mitre.org/techniques/T1110) the passphrase off-line. These private keys can be used to authenticate to [Remote Services](https://attack.mitre.org/techniques/T1021) like SSH or for use in decrypting other collected files such as email.
 
-#### Properties
-
-- id: T1552.004
-- name: Private Keys
-- created: 2020-02-04 13:06:49.258000+00:00
-- modified: 2025-10-24 17:48:50.819000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1552.005: Cloud Instance Metadata API
+
 ^t1552005-cloud-instance-metadata-api
 
 **Parent Technique**
@@ -141,17 +106,8 @@ If adversaries have a presence on the running virtual instance, they may query t
 The de facto standard across cloud service providers is to host the Instance Metadata API at <code>http[:]//169.254.169.254</code>.
 
 
-#### Properties
-
-- id: T1552.005
-- name: Cloud Instance Metadata API
-- created: 2020-02-11 18:47:46.619000+00:00
-- modified: 2025-10-24 17:48:27.965000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1552.006: Group Policy Preferences
+
 ^t1552006-group-policy-preferences
 
 **Parent Technique**
@@ -173,17 +129,8 @@ The following tools and scripts can be used to gather and decrypt the password f
 On the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: <code>dir /s * .xml</code>
 
 
-#### Properties
-
-- id: T1552.006
-- name: Group Policy Preferences
-- created: 2020-02-11 18:43:06.253000+00:00
-- modified: 2025-10-24 17:49:05.282000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1552.007: Container API
+
 ^t1552007-container-api
 
 **Parent Technique**
@@ -196,17 +143,8 @@ Adversaries may gather credentials via APIs within a containers environment. API
 
 An adversary may access the Docker API to collect logs that contain credentials to cloud, container, and various other resources in the environment.(Citation: Unit 42 Unsecured Docker Daemons) An adversary with sufficient permissions, such as via a pod's service account, may also use the Kubernetes API to retrieve credentials from the Kubernetes API server. These credentials may include those needed for Docker API authentication or secrets from Kubernetes cluster components. 
 
-#### Properties
-
-- id: T1552.007
-- name: Container API
-- created: 2021-03-31 14:01:52.321000+00:00
-- modified: 2025-10-24 17:49:38.351000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1552.008: Chat Messages
+
 ^t1552008-chat-messages
 
 **Parent Technique**
@@ -218,16 +156,6 @@ An adversary may access the Docker API to collect logs that contain credentials 
 Adversaries may directly collect unsecured credentials stored or passed through user communication services. Credentials may be sent and stored in user chat communication applications such as email, chat services like Slack or Teams, collaboration tools like Jira or Trello, and any other services that support user communication. Users may share various forms of credentials (such as usernames and passwords, API keys, or authentication tokens) on private or public corporate internal communications channels.
 
 Rather than accessing the stored chat logs (i.e., [Credentials In Files](https://attack.mitre.org/techniques/T1552/001)), adversaries may directly access credentials within these services on the user endpoint, through servers hosting the services, or through administrator portals for cloud hosted services. Adversaries may also compromise integration tools like Slack Workflows to automatically search through messages to extract user credentials. These credentials may then be abused to perform follow-on activities such as lateral movement or privilege escalation (Citation: Slack Security Risks).
-
-#### Properties
-
-- id: T1552.008
-- name: Chat Messages
-- created: 2023-03-14 14:38:03.673000+00:00
-- modified: 2025-04-15 21:56:22.979000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -254,9 +182,4 @@ Rather than accessing the stored chat logs (i.e., [Credentials In Files](https:/
 - Network Devices
 - Office Suite
 - Identity Provider
-
-## Tools
-
-- [[nppspy|NPPSPY]]
-- [[pacu|Pacu]]
 

@@ -60,14 +60,6 @@ Logging and Monitoring Tools:
 
 - Splunk: Aggregates and analyzes application logs to detect suspicious activity.
 
-## Properties
-
-- id: M1054
-- name: Software Configuration
-- created: 2019-07-19 14:40:23.529000+00:00
-- modified: 2024-12-24 14:02:11.579000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1137-office_application_startup|T1137: Office Application Startup]]

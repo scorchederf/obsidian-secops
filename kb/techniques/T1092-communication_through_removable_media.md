@@ -25,6 +25,3 @@ Adversaries can perform command and control between compromised hosts on potenti
 - macOS
 - Windows
 
-## Tools
-
-

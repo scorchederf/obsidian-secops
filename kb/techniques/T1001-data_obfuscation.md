@@ -17,6 +17,7 @@ Adversaries may obfuscate command and control traffic to make it more difficult 
 ## Subtechniques
 
 ### T1001.001: Junk Data
+
 ^t1001001-junk-data
 
 **Parent Technique**
@@ -27,17 +28,8 @@ Adversaries may obfuscate command and control traffic to make it more difficult 
 
 Adversaries may add junk data to protocols used for command and control to make detection more difficult.(Citation: FireEye SUNBURST Backdoor December 2020) By adding random or meaningless data to the protocols used for command and control, adversaries can prevent trivial methods for decoding, deciphering, or otherwise analyzing the traffic. Examples may include appending/prepending data with junk characters or writing junk characters between significant characters. 
 
-#### Properties
-
-- id: T1001.001
-- name: Junk Data
-- created: 2020-03-15 00:30:25.444000+00:00
-- modified: 2025-10-24 17:49:38.011000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1001.002: Steganography
+
 ^t1001002-steganography
 
 **Parent Technique**
@@ -48,17 +40,8 @@ Adversaries may add junk data to protocols used for command and control to make 
 
 Adversaries may use steganographic techniques to hide command and control traffic to make detection efforts more difficult. Steganographic techniques can be used to hide data in digital messages that are transferred between systems. This hidden information can be used for command and control of compromised systems. In some cases, the passing of files embedded using steganography, such as image or document files, can be used for command and control. 
 
-#### Properties
-
-- id: T1001.002
-- name: Steganography
-- created: 2020-03-15 00:37:58.963000+00:00
-- modified: 2025-10-24 17:49:35.060000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1001.003: Protocol or Service Impersonation
+
 ^t1001003-protocol-or-service-impersonation
 
 **Parent Technique**
@@ -73,16 +56,6 @@ Adversaries may impersonate a fake SSL/TLS handshake to make it look like subseq
 
 Adversaries may also leverage legitimate protocols to impersonate expected web traffic or trusted services. For example, adversaries may manipulate HTTP headers, URI endpoints, SSL certificates, and transmitted data to disguise C2 communications or mimic legitimate services such as Gmail, Google Drive, and Yahoo Messenger.(Citation: ESET Okrum July 2019)(Citation: Malleable-C2-U42)
 
-#### Properties
-
-- id: T1001.003
-- name: Protocol or Service Impersonation
-- created: 2020-03-15 00:40:27.503000+00:00
-- modified: 2025-10-24 17:49:20.574000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1031-network_intrusion_prevention|M1031: Network Intrusion Prevention]]
@@ -93,7 +66,4 @@ Adversaries may also leverage legitimate protocols to impersonate expected web t
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

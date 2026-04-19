@@ -17,6 +17,7 @@ Adversaries may use methods of capturing user input to obtain credentials or col
 ## Subtechniques
 
 ### T1056.001: Keylogging
+
 ^t1056001-keylogging
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Keylogging is the most prevalent type of input capture, with many different ways
 * Custom drivers.
 * [Modify System Image](https://attack.mitre.org/techniques/T1601) may provide adversaries with hooks into the operating system of network devices to read raw keystrokes for login sessions.(Citation: Cisco Blog Legacy Device Attacks) 
 
-#### Properties
-
-- id: T1056.001
-- name: Keylogging
-- created: 2020-02-11 18:58:11.791000+00:00
-- modified: 2025-10-24 17:48:21.756000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1056.002: GUI Input Capture
+
 ^t1056002-gui-input-capture
 
 **Parent Technique**
@@ -60,17 +52,8 @@ Adversaries may mimic this functionality to prompt users for credentials with a 
 
 Adversaries may also mimic common software authentication requests, such as those from browsers or email clients. This may also be paired with user activity monitoring (i.e., [Browser Information Discovery](https://attack.mitre.org/techniques/T1217) and/or [Application Window Discovery](https://attack.mitre.org/techniques/T1010)) to spoof prompts when users are naturally accessing sensitive sites/data.
 
-#### Properties
-
-- id: T1056.002
-- name: GUI Input Capture
-- created: 2020-02-11 18:58:45.908000+00:00
-- modified: 2025-10-24 17:49:10.643000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1056.003: Web Portal Capture
+
 ^t1056003-web-portal-capture
 
 **Parent Technique**
@@ -83,17 +66,8 @@ Adversaries may install code on externally facing portals, such as a VPN login p
 
 This variation on input capture may be conducted post-compromise using legitimate administrative access as a backup measure to maintain network access through [External Remote Services](https://attack.mitre.org/techniques/T1133) and [Valid Accounts](https://attack.mitre.org/techniques/T1078) or as part of the initial compromise by exploitation of the externally facing web service.(Citation: Volexity Virtual Private Keylogging)
 
-#### Properties
-
-- id: T1056.003
-- name: Web Portal Capture
-- created: 2020-02-11 18:59:50.058000+00:00
-- modified: 2025-10-24 17:48:54.254000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1056.004: Credential API Hooking
+
 ^t1056004-credential-api-hooking
 
 **Parent Technique**
@@ -112,24 +86,10 @@ In Windows, hooking involves redirecting calls to these functions and can be imp
 
 In Linux and macOS, adversaries may hook into system functions via the `LD_PRELOAD` (Linux) or `DYLD_INSERT_LIBRARIES` (macOS) environment variables, which enables loading shared libraries into a program’s address space. For example, an adversary may capture credentials by hooking into the `libc read` function leveraged by SSH or SCP.(Citation: Intezer Symbiote 2022)
 
-#### Properties
-
-- id: T1056.004
-- name: Credential API Hooking
-- created: 2020-02-11 19:01:15.930000+00:00
-- modified: 2025-10-24 17:49:37.119000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
-- [[nppspy|NPPSPY]]
 

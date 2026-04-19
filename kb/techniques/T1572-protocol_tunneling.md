@@ -32,10 +32,3 @@ Adversaries may also leverage [Protocol Tunneling](https://attack.mitre.org/tech
 - macOS
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[frp|FRP]]
-- [[mythic|Mythic]]
-- [[ngrok|ngrok]]
-

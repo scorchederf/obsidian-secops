@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [certutil](https://attack.mitre.org/software/S0160) is a command-line utility that can be used to obtain certificate authority information and configure Certificate Services. (Citation: TechNet Certutil)
 
-## Properties
-
-- id: S0160
-- name: certutil
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2024-11-27 21:56:15.800000+00:00
-- type: tool
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]

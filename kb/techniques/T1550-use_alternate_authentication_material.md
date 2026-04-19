@@ -22,6 +22,7 @@ Caching alternate authentication material allows the system to verify an identit
 ## Subtechniques
 
 ### T1550.001: Application Access Token
+
 ^t1550001-application-access-token
 
 **Parent Technique**
@@ -42,17 +43,8 @@ Compromised access tokens may be used as an initial step in compromising other s
 
 Direct API access through a token negates the effectiveness of a second authentication factor and may be immune to intuitive countermeasures like changing passwords.  For example, in AWS environments, an adversary who compromises a user’s AWS API credentials may be able to use the `sts:GetFederationToken` API call to create a federated user session, which will have the same permissions as the original user but may persist even if the original user credentials are deactivated.(Citation: Crowdstrike AWS User Federation Persistence) Additionally, access abuse over an API channel can be difficult to detect even from the service provider end, as the access can still align well with a legitimate workflow.
 
-#### Properties
-
-- id: T1550.001
-- name: Application Access Token
-- created: 2020-01-30 17:37:22.261000+00:00
-- modified: 2025-10-24 17:49:35.227000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ### T1550.002: Pass the Hash
+
 ^t1550002-pass-the-hash
 
 **Parent Technique**
@@ -67,17 +59,8 @@ When performing PtH, valid password hashes for the account being used are captur
 
 Adversaries may also use stolen password hashes to "overpass the hash." Similar to PtH, this involves using a password hash to authenticate as a user but also uses the password hash to create a valid Kerberos ticket. This ticket can then be used to perform [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003) attacks.(Citation: Stealthbits Overpass-the-Hash)
 
-#### Properties
-
-- id: T1550.002
-- name: Pass the Hash
-- created: 2020-01-30 16:36:51.184000+00:00
-- modified: 2025-10-24 17:49:32.459000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1550.003: Pass the Ticket
+
 ^t1550003-pass-the-ticket
 
 **Parent Technique**
@@ -96,17 +79,8 @@ A [Golden Ticket](https://attack.mitre.org/techniques/T1558/001) can be obtained
 
 Adversaries may also create a valid Kerberos ticket using other user information, such as stolen password hashes or AES keys. For example, "overpassing the hash" involves using a NTLM password hash to authenticate as a user (i.e. [Pass the Hash](https://attack.mitre.org/techniques/T1550/002)) while also using the password hash to create a valid Kerberos ticket.(Citation: Stealthbits Overpass-the-Hash)
 
-#### Properties
-
-- id: T1550.003
-- name: Pass the Ticket
-- created: 2020-01-30 17:03:43.072000+00:00
-- modified: 2025-10-24 17:48:59.861000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1550.004: Web Session Cookie
+
 ^t1550004-web-session-cookie
 
 **Parent Technique**
@@ -120,16 +94,6 @@ Adversaries can use stolen session cookies to authenticate to web applications a
 Authentication cookies are commonly used in web applications, including cloud-based services, after a user has authenticated to the service so credentials are not passed and re-authentication does not need to occur as frequently. Cookies are often valid for an extended period of time, even if the web application is not actively used. After the cookie is obtained through [Steal Web Session Cookie](https://attack.mitre.org/techniques/T1539) or [Web Cookies](https://attack.mitre.org/techniques/T1606/001), the adversary may then import the cookie into a browser they control and is then able to use the site or application as the user for as long as the session cookie is active. Once logged into the site, an adversary can access sensitive information, read email, or perform actions that the victim account has permissions to perform.
 
 There have been examples of malware targeting session cookies to bypass multi-factor authentication systems.(Citation: Unit 42 Mac Crypto Cookies January 2019)
-
-#### Properties
-
-- id: T1550.004
-- name: Web Session Cookie
-- created: 2020-01-30 17:48:49.395000+00:00
-- modified: 2025-10-24 17:49:20.943000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -150,7 +114,4 @@ There have been examples of malware targeting session cookies to bypass multi-fa
 - Identity Provider
 - Office Suite
 - Linux
-
-## Tools
-
 

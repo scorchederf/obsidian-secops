@@ -33,6 +33,7 @@ In some cases, adversaries may conduct “second-order” supply chain compromis
 ## Subtechniques
 
 ### T1195.001: Compromise Software Dependencies and Development Tools
+
 ^t1195001-compromise-software-dependencies-and-development-tools
 
 **Parent Technique**
@@ -47,17 +48,8 @@ Additionally, CI/CD pipeline components, such as GitHub Actions, may be targeted
 
 Targeting may be specific to a desired victim set or may be distributed to a broad set of consumers but only move on to additional tactics on specific victims. 
 
-#### Properties
-
-- id: T1195.001
-- name: Compromise Software Dependencies and Development Tools
-- created: 2020-03-11 14:13:42.916000+00:00
-- modified: 2025-10-24 17:48:27.436000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1195.002: Compromise Software Supply Chain
+
 ^t1195002-compromise-software-supply-chain
 
 **Parent Technique**
@@ -70,17 +62,8 @@ Adversaries may manipulate application software prior to receipt by a final cons
 
 Targeting may be specific to a desired victim set or may be distributed to a broad set of consumers but only move on to additional tactics on specific victims.(Citation: Avast CCleaner3 2018)(Citation: Command Five SK 2011)  
 
-#### Properties
-
-- id: T1195.002
-- name: Compromise Software Supply Chain
-- created: 2020-03-11 14:17:21.153000+00:00
-- modified: 2025-10-24 17:49:18.341000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1195.003: Compromise Hardware Supply Chain
+
 ^t1195003-compromise-hardware-supply-chain
 
 **Parent Technique**
@@ -90,16 +73,6 @@ Targeting may be specific to a desired victim set or may be distributed to a bro
 - [[initial_access|Initial Access]]
 
 Adversaries may manipulate hardware components in products prior to receipt by a final consumer for the purpose of data or system compromise. By modifying hardware or firmware in the supply chain, adversaries can insert a backdoor into consumer networks that may be difficult to detect and give the adversary a high degree of control over the system. Hardware backdoors may be inserted into various devices, such as servers, workstations, network infrastructure, or peripherals.
-
-#### Properties
-
-- id: T1195.003
-- name: Compromise Hardware Supply Chain
-- created: 2020-03-11 14:28:40.064000+00:00
-- modified: 2025-10-24 17:48:39.693000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -116,7 +89,4 @@ Adversaries may manipulate hardware components in products prior to receipt by a
 - Windows
 - macOS
 - SaaS
-
-## Tools
-
 

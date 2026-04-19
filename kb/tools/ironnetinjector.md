@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [IronNetInjector](https://attack.mitre.org/software/S0581) is a [Turla](https://attack.mitre.org/groups/G0010) toolchain that utilizes scripts from the open-source IronPython implementation of Python with a .NET injector to drop one or more payloads including [ComRAT](https://attack.mitre.org/software/S0126).(Citation: Unit 42 IronNetInjector February 2021 )
 
-## Properties
-
-- id: S0581
-- name: IronNetInjector
-- created: 2021-02-24 21:28:44.175000+00:00
-- modified: 2024-04-11 02:14:36.791000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]

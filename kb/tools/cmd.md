@@ -14,16 +14,6 @@ x_mitre_domains: enterprise-attack
 
 Cmd.exe contains native functionality to perform many operations to interact with the system, including listing files in a directory (e.g., <code>dir</code> (Citation: TechNet Dir)), deleting files (e.g., <code>del</code> (Citation: TechNet Del)), and copying files (e.g., <code>copy</code> (Citation: TechNet Copy)).
 
-## Properties
-
-- id: S0106
-- name: cmd
-- created: 2017-05-31 21:33:05.319000+00:00
-- modified: 2025-04-16 20:38:55.702000+00:00
-- type: tool
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]

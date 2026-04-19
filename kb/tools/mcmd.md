@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [MCMD](https://attack.mitre.org/software/S0500) is a remote access tool that provides remote command shell capability used by [Dragonfly 2.0](https://attack.mitre.org/groups/G0074).(Citation: Secureworks MCMD July 2019)
 
-## Properties
-
-- id: S0500
-- name: MCMD
-- created: 2020-08-13 17:15:25.702000+00:00
-- modified: 2025-04-16 20:38:54.178000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

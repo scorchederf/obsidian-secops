@@ -28,6 +28,3 @@ Adversaries who use ransomware or similar attacks may first perform this and oth
 - Office Suite
 - ESXi
 
-## Tools
-
-

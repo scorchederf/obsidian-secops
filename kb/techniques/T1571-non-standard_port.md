@@ -28,8 +28,3 @@ Adversaries may also make changes to victim systems to abuse non-standard ports.
 - macOS
 - Windows
 
-## Tools
-
-- [[covenant|Covenant]]
-- [[quasarrat|QuasarRAT]]
-

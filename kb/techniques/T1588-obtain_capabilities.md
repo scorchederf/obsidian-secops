@@ -21,6 +21,7 @@ In addition to purchasing capabilities, adversaries may steal capabilities from 
 ## Subtechniques
 
 ### T1588.001: Malware
+
 ^t1588001-malware
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Adversaries may buy, steal, or download malware that can be used during targetin
 
 In addition to downloading free malware from the internet, adversaries may purchase these capabilities from third-party entities. Third-party entities can include technology companies that specialize in malware development, criminal marketplaces (including Malware-as-a-Service, or MaaS), or from individuals. In addition to purchasing malware, adversaries may steal and repurpose malware from third-party entities (including other adversaries).
 
-#### Properties
-
-- id: T1588.001
-- name: Malware
-- created: 2020-10-01 02:06:11.499000+00:00
-- modified: 2025-10-24 17:48:58.766000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1588.002: Tool
+
 ^t1588002-tool
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Adversaries may obtain tools to support their operations, including to support e
 
 Tool acquisition may involve the procurement of commercial software licenses, including for red teaming tools such as Cobalt Strike. In addition to freely downloading or purchasing software, adversaries may steal software and/or software licenses from third-party entities (including other adversaries). Threat actors may also crack trial versions of software.(Citation: Recorded Future Beacon 2019)
 
-#### Properties
-
-- id: T1588.002
-- name: Tool
-- created: 2020-10-01 02:08:33.977000+00:00
-- modified: 2025-10-24 17:49:10.900000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1588.003: Code Signing Certificates
+
 ^t1588003-code-signing-certificates
 
 **Parent Technique**
@@ -81,17 +64,8 @@ Adversaries may buy and/or steal code signing certificates that can be used duri
 
 Prior to [Code Signing](https://attack.mitre.org/techniques/T1553/002), adversaries may purchase or steal code signing certificates for use in operations. The purchase of code signing certificates may be done using a front organization or using information stolen from a previously compromised entity that allows the adversary to validate to a certificate provider as that entity. Adversaries may also steal code signing materials directly from a compromised third-party.
 
-#### Properties
-
-- id: T1588.003
-- name: Code Signing Certificates
-- created: 2020-10-01 02:11:47.237000+00:00
-- modified: 2025-10-24 17:49:32.891000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1588.004: Digital Certificates
+
 ^t1588004-digital-certificates
 
 **Parent Technique**
@@ -108,17 +82,8 @@ Certificate authorities exist that allow adversaries to acquire SSL/TLS certific
 
 After obtaining a digital certificate, an adversary may then install that certificate (see [Install Digital Certificate](https://attack.mitre.org/techniques/T1608/003)) on infrastructure under their control.
 
-#### Properties
-
-- id: T1588.004
-- name: Digital Certificates
-- created: 2020-10-01 02:14:18.044000+00:00
-- modified: 2025-10-24 17:48:27.525000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1588.005: Exploits
+
 ^t1588005-exploits
 
 **Parent Technique**
@@ -135,17 +100,8 @@ An adversary may monitor exploit provider forums to understand the state of exis
 
 Adversaries may use exploits during various phases of the adversary lifecycle (i.e. [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190), [Exploitation for Client Execution](https://attack.mitre.org/techniques/T1203), [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068), [Exploitation for Defense Evasion](https://attack.mitre.org/techniques/T1211), [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212), [Exploitation of Remote Services](https://attack.mitre.org/techniques/T1210), and [Application or System Exploitation](https://attack.mitre.org/techniques/T1499/004)).
 
-#### Properties
-
-- id: T1588.005
-- name: Exploits
-- created: 2020-10-01 02:17:46.086000+00:00
-- modified: 2025-10-24 17:49:36.851000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1588.006: Vulnerabilities
+
 ^t1588006-vulnerabilities
 
 **Parent Technique**
@@ -158,17 +114,8 @@ Adversaries may acquire information about vulnerabilities that can be used durin
 
 An adversary may monitor vulnerability disclosures/databases to understand the state of existing, as well as newly discovered, vulnerabilities. There is usually a delay between when a vulnerability is discovered and when it is made public. An adversary may target the systems of those known to conduct vulnerability research (including commercial vendors). Knowledge of a vulnerability may cause an adversary to search for an existing exploit (i.e. [Exploits](https://attack.mitre.org/techniques/T1588/005)) or to attempt to develop one themselves (i.e. [Exploits](https://attack.mitre.org/techniques/T1587/004)).
 
-#### Properties
-
-- id: T1588.006
-- name: Vulnerabilities
-- created: 2020-10-15 02:59:38.628000+00:00
-- modified: 2025-10-24 17:48:34.033000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1588.007: Artificial Intelligence
+
 ^t1588007-artificial-intelligence
 
 **Parent Technique**
@@ -181,16 +128,6 @@ Adversaries may obtain access to generative artificial intelligence tools, such 
 
 For example, by utilizing a publicly available LLM an adversary is essentially outsourcing or automating certain tasks to the tool. Using AI, the adversary may draft and generate content in a variety of written languages to be used in [Phishing](https://attack.mitre.org/techniques/T1566)/[Phishing for Information](https://attack.mitre.org/techniques/T1598) campaigns. The same publicly available tool may further enable vulnerability or other offensive research supporting [Develop Capabilities](https://attack.mitre.org/techniques/T1587). AI tools may also automate technical tasks by generating, refining, or otherwise enhancing (e.g., [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027)) malicious scripts and payloads.(Citation: OpenAI-CTI) Finally, AI-generated text, images, audio, and video may be used for fraud, [Impersonation](https://attack.mitre.org/techniques/T1656), and other malicious activities.(Citation: Google-Vishing24)(Citation: IC3-AI24)(Citation: WSJ-Vishing-AI24)
 
-
-#### Properties
-
-- id: T1588.007
-- name: Artificial Intelligence
-- created: 2024-03-11 13:37:31.836000+00:00
-- modified: 2025-10-24 17:48:23.190000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

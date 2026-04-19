@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Imminent Monitor](https://attack.mitre.org/software/S0434) was a commodity remote access tool (RAT) offered for sale from 2012 until 2019, when an operation was conducted to take down the Imminent Monitor infrastructure. Various cracked versions and variations of this RAT are still in circulation.(Citation: Imminent Unit42 Dec2019)
 
-## Properties
-
-- id: S0434
-- name: Imminent Monitor
-- created: 2020-05-05 18:45:36.358000+00:00
-- modified: 2023-10-03 19:35:03.646000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

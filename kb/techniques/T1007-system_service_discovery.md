@@ -22,10 +22,3 @@ Adversaries may use the information from [System Service Discovery](https://atta
 - macOS
 - Windows
 
-## Tools
-
-- [[net|Net]]
-- [[poshc2|PoshC2]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[tasklist|Tasklist]]
-

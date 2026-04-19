@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [CSPY Downloader](https://attack.mitre.org/software/S0527) is a tool designed to evade analysis and download additional payloads used by [Kimsuky](https://attack.mitre.org/groups/G0094).(Citation: Cybereason Kimsuky November 2020)
 
-## Properties
-
-- id: S0527
-- name: CSPY Downloader
-- created: 2020-11-09 14:30:35.202000+00:00
-- modified: 2025-04-16 20:38:52.033000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]

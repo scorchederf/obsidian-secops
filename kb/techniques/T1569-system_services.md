@@ -17,6 +17,7 @@ Adversaries may abuse system services or daemons to execute commands or programs
 ## Subtechniques
 
 ### T1569.001: Launchctl
+
 ^t1569001-launchctl
 
 **Parent Technique**
@@ -30,17 +31,8 @@ Adversaries may abuse launchctl to execute commands or programs. Launchctl inter
 Adversaries use launchctl to execute commands and programs as [Launch Agent](https://attack.mitre.org/techniques/T1543/001)s or [Launch Daemon](https://attack.mitre.org/techniques/T1543/004)s. Common subcommands include: <code>launchctl load</code>,<code>launchctl unload</code>, and <code>launchctl start</code>. Adversaries can use scripts or manually run the commands <code>launchctl load -w "%s/Library/LaunchAgents/%s"</code> or <code>/bin/launchctl load</code> to execute [Launch Agent](https://attack.mitre.org/techniques/T1543/001)s or [Launch Daemon](https://attack.mitre.org/techniques/T1543/004)s.(Citation: Sofacy Komplex Trojan)(Citation: 20 macOS Common Tools and Techniques)
 
 
-#### Properties
-
-- id: T1569.001
-- name: Launchctl
-- created: 2020-03-10 18:26:56.187000+00:00
-- modified: 2025-10-24 17:49:02.098000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1569.002: Service Execution
+
 ^t1569002-service-execution
 
 **Parent Technique**
@@ -55,17 +47,8 @@ Adversaries may abuse the Windows service control manager to execute malicious c
 
 Adversaries may leverage these mechanisms to execute malicious content. This can be done by either executing a new or modified service. This technique is the execution used in conjunction with [Windows Service](https://attack.mitre.org/techniques/T1543/003) during service persistence or privilege escalation.
 
-#### Properties
-
-- id: T1569.002
-- name: Service Execution
-- created: 2020-03-10 18:33:36.159000+00:00
-- modified: 2025-10-24 17:49:35.506000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1569.003: Systemctl
+
 ^t1569003-systemctl
 
 **Parent Technique**
@@ -77,16 +60,6 @@ Adversaries may leverage these mechanisms to execute malicious content. This can
 Adversaries may abuse systemctl to execute commands or programs. Systemctl is the primary interface for systemd, the Linux init system and service manager. Typically invoked from a shell, Systemctl can also be integrated into scripts or applications.   
 
 Adversaries may use systemctl to execute commands or programs as [Systemd Service](https://attack.mitre.org/techniques/T1543/002)s. Common subcommands include: `systemctl start`, `systemctl stop`, `systemctl enable`, `systemctl disable`, and `systemctl status`.(Citation: Red Hat Systemctl 2022)
-
-#### Properties
-
-- id: T1569.003
-- name: Systemctl
-- created: 2025-03-18 13:44:12.618000+00:00
-- modified: 2025-04-15 19:58:28.694000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

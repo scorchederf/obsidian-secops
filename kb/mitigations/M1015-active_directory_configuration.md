@@ -41,14 +41,6 @@ Authentication Silos:
 - PowerShell: Automate account configuration, logon restrictions, and policy application using PowerShell scripts.
 - AD Administrative Center: Manage Authentication Silos and configure high-level policies for critical user groups within AD.
 
-## Properties
-
-- id: M1015
-- name: Active Directory Configuration
-- created: 2019-06-06 16:39:58.291000+00:00
-- modified: 2024-12-10 15:57:59.336000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

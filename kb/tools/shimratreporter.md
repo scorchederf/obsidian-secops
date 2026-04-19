@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [ShimRatReporter](https://attack.mitre.org/software/S0445) is a tool used by suspected Chinese adversary [Mofang](https://attack.mitre.org/groups/G0103) to automatically conduct initial discovery. The details from this discovery are used to customize follow-on payloads (such as [ShimRat](https://attack.mitre.org/software/S0444)) as well as set up faux infrastructure which mimics the adversary's targets. [ShimRatReporter](https://attack.mitre.org/software/S0445) has been used in campaigns targeting multiple countries and sectors including government, military, critical infrastructure, automobile, and weapons development.(Citation: FOX-IT May 2016 Mofang)
 
-## Properties
-
-- id: S0445
-- name: ShimRatReporter
-- created: 2020-05-12 21:29:48.294000+00:00
-- modified: 2025-04-25 14:45:13.595000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]

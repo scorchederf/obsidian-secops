@@ -24,8 +24,3 @@ Cloud service providers offer APIs allowing users to enumerate objects stored wi
 
 - IaaS
 
-## Tools
-
-- [[pacu|Pacu]]
-- [[peirates|Peirates]]
-

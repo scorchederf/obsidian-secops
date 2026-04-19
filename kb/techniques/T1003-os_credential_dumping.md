@@ -20,6 +20,7 @@ Several of the tools mentioned in associated sub-techniques may be used by both 
 ## Subtechniques
 
 ### T1003.001: LSASS Memory
+
 ^t1003001-lsass-memory
 
 **Parent Technique**
@@ -57,17 +58,8 @@ The following SSPs can be used to access credentials:
 * CredSSP:  Provides SSO and Network Level Authentication for Remote Desktop Services.(Citation: TechNet Blogs Credential Protection)
 
 
-#### Properties
-
-- id: T1003.001
-- name: LSASS Memory
-- created: 2020-02-11 18:41:44.783000+00:00
-- modified: 2025-10-24 17:48:52.657000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1003.002: Security Account Manager
+
 ^t1003002-security-account-manager
 
 **Parent Technique**
@@ -99,17 +91,8 @@ Notes:
 * User accounts start with a RID of 1,000+.
 
 
-#### Properties
-
-- id: T1003.002
-- name: Security Account Manager
-- created: 2020-02-11 18:42:07.281000+00:00
-- modified: 2025-10-24 17:48:26.545000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1003.003: NTDS
+
 ^t1003003-ntds
 
 **Parent Technique**
@@ -130,17 +113,8 @@ The following tools and techniques can be used to enumerate the NTDS file and th
 * Invoke-NinjaCopy
 
 
-#### Properties
-
-- id: T1003.003
-- name: NTDS
-- created: 2020-02-11 18:42:35.572000+00:00
-- modified: 2025-10-24 17:49:34.852000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1003.004: LSA Secrets
+
 ^t1003004-lsa-secrets
 
 **Parent Technique**
@@ -153,17 +127,8 @@ Adversaries with SYSTEM access to a host may attempt to access Local Security Au
 
 [Reg](https://attack.mitre.org/software/S0075) can be used to extract from the Registry. [Mimikatz](https://attack.mitre.org/software/S0002) can be used to extract secrets from memory.(Citation: ired Dumping LSA Secrets)
 
-#### Properties
-
-- id: T1003.004
-- name: LSA Secrets
-- created: 2020-02-21 16:22:09.493000+00:00
-- modified: 2025-10-24 17:48:29.945000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1003.005: Cached Domain Credentials
+
 ^t1003005-cached-domain-credentials
 
 **Parent Technique**
@@ -182,17 +147,8 @@ With SYSTEM or sudo access, the tools/utilities such as [Mimikatz](https://attac
 
 Note: Cached credentials for Windows Vista are derived using PBKDF2.(Citation: PassLib mscache)
 
-#### Properties
-
-- id: T1003.005
-- name: Cached Domain Credentials
-- created: 2020-02-21 15:42:25.991000+00:00
-- modified: 2025-10-24 17:48:54.919000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1003.006: DCSync
+
 ^t1003006-dcsync
 
 **Parent Technique**
@@ -207,17 +163,8 @@ Members of the Administrators, Domain Admins, and Enterprise Admin groups or com
 
 DCSync functionality has been included in the "lsadump" module in [Mimikatz](https://attack.mitre.org/software/S0002).(Citation: GitHub Mimikatz lsadump Module) Lsadump also includes NetSync, which performs DCSync over a legacy replication protocol.(Citation: Microsoft NRPC Dec 2017)
 
-#### Properties
-
-- id: T1003.006
-- name: DCSync
-- created: 2020-02-11 18:45:34.293000+00:00
-- modified: 2025-10-24 17:49:36.308000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1003.007: Proc Filesystem
+
 ^t1003007-proc-filesystem
 
 **Parent Technique**
@@ -232,17 +179,8 @@ When executing with root privileges, adversaries can search these memory locatio
 
 If running as or with the permissions of a web browser, a process can search the `/maps` & `/mem` locations for common website credential patterns (that can also be used to find adjacent memory within the same structure) in which hashes or cleartext credentials may be located.
 
-#### Properties
-
-- id: T1003.007
-- name: Proc Filesystem
-- created: 2020-02-11 18:46:24.434000+00:00
-- modified: 2025-10-24 17:48:36.165000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1003.008: /etc/passwd and /etc/shadow
+
 ^t1003008--etc-passwd-and--etc-shadow
 
 **Parent Technique**
@@ -256,16 +194,6 @@ Adversaries may attempt to dump the contents of <code>/etc/passwd</code> and <co
 Linux stores user information such as user ID, group ID, home directory path, and login shell in <code>/etc/passwd</code>. A "user" on the system may belong to a person or a service. All password hashes are stored in <code>/etc/shadow</code> - including entries for users with no passwords and users with locked or disabled accounts.(Citation: Linux Password and Shadow File Formats)
 
 Adversaries may attempt to read or dump the <code>/etc/passwd</code> and <code>/etc/shadow</code> files on Linux systems via command line utilities such as the <code>cat</code> command.(Citation: Arctic Wolf) Additionally, the Linux utility <code>unshadow</code> can be used to combine the two files in a format suited for password cracking utilities such as John the Ripper - for example, via the command <code>/usr/bin/unshadow /etc/passwd /etc/shadow > /tmp/crack.password.db</code>(Citation: nixCraft - John the Ripper). Since the user information stored in <code>/etc/passwd</code> are linked to the password hashes in <code>/etc/shadow</code>, an adversary would need to have access to both.
-
-#### Properties
-
-- id: T1003.008
-- name: /etc/passwd and /etc/shadow
-- created: 2020-02-11 18:46:56.263000+00:00
-- modified: 2025-10-24 17:49:25.253000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -284,7 +212,4 @@ Adversaries may attempt to read or dump the <code>/etc/passwd</code> and <code>/
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

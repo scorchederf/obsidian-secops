@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [CrackMapExec](https://attack.mitre.org/software/S0488), or CME, is a post-exploitation tool developed in Python and designed for penetration testing against networks. [CrackMapExec](https://attack.mitre.org/software/S0488) collects Active Directory information to conduct lateral movement through targeted networks.(Citation: CME Github September 2018)
 
-## Properties
-
-- id: S0488
-- name: CrackMapExec
-- created: 2020-07-17 14:23:05.958000+00:00
-- modified: 2024-03-14 17:29:49.200000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

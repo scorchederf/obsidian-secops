@@ -29,17 +29,3 @@ Infrastructure as a Service (IaaS) cloud providers such as AWS, GCP, and Azure a
 - Network Devices
 - Windows
 
-## Tools
-
-- [[cmd|cmd]]
-- [[covenant|Covenant]]
-- [[dsquery|dsquery]]
-- [[empire|Empire]]
-- [[koadic|Koadic]]
-- [[poshc2|PoshC2]]
-- [[pupy|Pupy]]
-- [[quasarrat|QuasarRAT]]
-- [[shimratreporter|ShimRatReporter]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[systeminfo|Systeminfo]]
-

@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Mimikatz](https://attack.mitre.org/software/S0002) is a credential dumper capable of obtaining plaintext Windows account logins and passwords, along with many other features that make it useful for testing the security of networks. (Citation: Deply Mimikatz) (Citation: Adsecurity Mimikatz Guide)
 
-## Properties
-
-- id: S0002
-- name: Mimikatz
-- created: 2017-05-31 21:32:11.544000+00:00
-- modified: 2024-11-27 21:53:57.705000+00:00
-- type: tool
-- x_mitre_version: 1.10
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

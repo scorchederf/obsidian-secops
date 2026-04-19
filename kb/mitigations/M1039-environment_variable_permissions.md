@@ -30,14 +30,6 @@ Audit Environment Variable Changes:
 - Use Case: Enable logging for changes to critical environment variables.
 - Implementation: Use `auditd` on Linux to monitor changes to files like `/etc/environment` or application-specific environment files.
 
-## Properties
-
-- id: M1039
-- name: Environment Variable Permissions
-- created: 2019-06-11 16:40:14.543000+00:00
-- modified: 2024-12-11 17:54:05.697000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1070-indicator_removal|T1070: Indicator Removal]]

@@ -37,11 +37,3 @@ On network devices, adversaries may perform network captures using [Network Devi
 - Network Devices
 - IaaS
 
-## Tools
-
-- [[empire|Empire]]
-- [[impacket|Impacket]]
-- [[nbtscan|NBTscan]]
-- [[poshc2|PoshC2]]
-- [[responder|Responder]]
-

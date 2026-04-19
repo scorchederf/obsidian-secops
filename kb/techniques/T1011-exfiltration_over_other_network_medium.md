@@ -19,6 +19,7 @@ Adversaries may choose to do this if they have sufficient access or proximity, a
 ## Subtechniques
 
 ### T1011.001: Exfiltration Over Bluetooth
+
 ^t1011001-exfiltration-over-bluetooth
 
 **Parent Technique**
@@ -30,16 +31,6 @@ Adversaries may choose to do this if they have sufficient access or proximity, a
 Adversaries may attempt to exfiltrate data over Bluetooth rather than the command and control channel. If the command and control network is a wired Internet connection, an adversary may opt to exfiltrate data using a Bluetooth communication channel.
 
 Adversaries may choose to do this if they have sufficient access and proximity. Bluetooth connections might not be secured or defended as well as the primary Internet-connected channel because it is not routed through the same enterprise network.
-
-#### Properties
-
-- id: T1011.001
-- name: Exfiltration Over Bluetooth
-- created: 2020-03-09 17:07:57.392000+00:00
-- modified: 2025-10-24 17:48:51.095000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

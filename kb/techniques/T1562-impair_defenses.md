@@ -21,6 +21,7 @@ Adversaries may also impair routine operations that contribute to defensive hygi
 ## Subtechniques
 
 ### T1562.001: Disable or Modify Tools
+
 ^t1562001-disable-or-modify-tools
 
 **Parent Technique**
@@ -45,17 +46,8 @@ Furthermore, although defensive tools may have anti-tampering mechanisms, advers
 
 Additionally, adversaries may exploit legitimate drivers from anti-virus software to gain access to kernel space (i.e. [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068)), which may lead to bypassing anti-tampering features.(Citation: avoslocker_ransomware)
 
-#### Properties
-
-- id: T1562.001
-- name: Disable or Modify Tools
-- created: 2020-02-21 20:32:20.810000+00:00
-- modified: 2025-10-24 17:49:13.019000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ### T1562.002: Disable Windows Event Logging
+
 ^t1562002-disable-windows-event-logging
 
 **Parent Technique**
@@ -76,17 +68,8 @@ Additionally, adversaries may use <code>auditpol</code> and its sub-commands in 
 
 By disabling Windows event logging, adversaries can operate while leaving less evidence of a compromise behind.
 
-#### Properties
-
-- id: T1562.002
-- name: Disable Windows Event Logging
-- created: 2020-02-21 20:46:36.688000+00:00
-- modified: 2025-10-24 17:48:45.425000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1562.003: Impair Command History Logging
+
 ^t1562003-impair-command-history-logging
 
 **Parent Technique**
@@ -105,17 +88,8 @@ On Windows systems, the <code>PSReadLine</code> module tracks commands used in a
 
 Adversaries may also leverage a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) on network devices to disable historical command logging (e.g. <code>no logging</code>).
 
-#### Properties
-
-- id: T1562.003
-- name: Impair Command History Logging
-- created: 2020-02-21 20:56:06.498000+00:00
-- modified: 2025-10-24 17:49:05.941000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.3
-- x_mitre_domains: enterprise-attack
-
 ### T1562.004: Disable or Modify System Firewall
+
 ^t1562004-disable-or-modify-system-firewall
 
 **Parent Technique**
@@ -132,17 +106,8 @@ Adversaries may also modify host networking settings that indirectly manipulate 
 
 In ESXi, firewall rules may be modified directly via the esxcli command line interface (e.g., via `esxcli network firewall set`) or via the vCenter user interface.(Citation: Trellix Rnasomhouse 2024)(Citation: Broadcom ESXi Firewall)
 
-#### Properties
-
-- id: T1562.004
-- name: Disable or Modify System Firewall
-- created: 2020-02-21 21:00:48.814000+00:00
-- modified: 2025-10-24 17:48:47.755000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1562.006: Indicator Blocking
+
 ^t1562006-indicator-blocking
 
 **Parent Technique**
@@ -161,17 +126,8 @@ In the case of network-based reporting of indicators, an adversary may block tra
 
 In Linux environments, adversaries may disable or reconfigure log processing tools such as syslog or nxlog to inhibit detection and monitoring capabilities to facilitate follow on behaviors. (Citation: LemonDuck) ESXi also leverages syslog, which can be reconfigured via commands such as `esxcli system syslog config set` and `esxcli system syslog config reload`.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)(Citation: Broadcom Configuring syslog on ESXi)
 
-#### Properties
-
-- id: T1562.006
-- name: Indicator Blocking
-- created: 2020-03-19 19:09:30.329000+00:00
-- modified: 2025-10-24 17:48:57.704000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1562.007: Disable or Modify Cloud Firewall
+
 ^t1562007-disable-or-modify-cloud-firewall
 
 **Parent Technique**
@@ -186,17 +142,8 @@ Cloud environments typically utilize restrictive security groups and firewall ru
 
 Modifying or disabling a cloud firewall may enable adversary C2 communications, lateral movement, and/or data exfiltration that would otherwise not be allowed. It may also be used to open up resources for [Brute Force](https://attack.mitre.org/techniques/T1110) or [Endpoint Denial of Service](https://attack.mitre.org/techniques/T1499). 
 
-#### Properties
-
-- id: T1562.007
-- name: Disable or Modify Cloud Firewall
-- created: 2020-06-24 16:55:46.243000+00:00
-- modified: 2025-10-24 17:48:58.515000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1562.008: Disable or Modify Cloud Logs
+
 ^t1562008-disable-or-modify-cloud-logs
 
 **Parent Technique**
@@ -209,17 +156,8 @@ An adversary may disable or modify cloud logging capabilities and integrations t
 
 For example, in AWS an adversary may disable CloudWatch/CloudTrail integrations prior to conducting further malicious activity.(Citation: Following the CloudTrail: Generating strong AWS security signals with Sumo Logic) They may alternatively tamper with logging functionality – for example, by removing any associated SNS topics, disabling multi-region logging, or disabling settings that validate and/or encrypt log files.(Citation: AWS Update Trail)(Citation: Pacu Detection Disruption Module) In Office 365, an adversary may disable logging on mail collection activities for specific users by using the `Set-MailboxAuditBypassAssociation` cmdlet, by disabling M365 Advanced Auditing for the user, or by downgrading the user’s license from an Enterprise E5 to an Enterprise E3 license.(Citation: Dark Reading Microsoft 365 Attacks 2021)
 
-#### Properties
-
-- id: T1562.008
-- name: Disable or Modify Cloud Logs
-- created: 2020-10-12 13:52:32.846000+00:00
-- modified: 2025-10-24 17:49:23.308000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1562.009: Safe Mode Boot
+
 ^t1562009-safe-mode-boot
 
 **Parent Technique**
@@ -234,17 +172,8 @@ Adversaries may abuse safe mode to disable endpoint defenses that may not start 
 
 Adversaries may also add their malicious applications to the list of minimal services that start in safe mode by modifying relevant Registry values (i.e. [Modify Registry](https://attack.mitre.org/techniques/T1112)). Malicious [Component Object Model](https://attack.mitre.org/techniques/T1559/001) (COM) objects may also be registered and loaded in safe mode.(Citation: Sophos Snatch Ransomware 2019)(Citation: CyberArk Labs Safe Mode 2016)(Citation: Cybereason Nocturnus MedusaLocker 2020)(Citation: BleepingComputer REvil 2021)
 
-#### Properties
-
-- id: T1562.009
-- name: Safe Mode Boot
-- created: 2021-06-23 20:00:27.600000+00:00
-- modified: 2025-10-24 17:48:33.044000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1562.010: Downgrade Attack
+
 ^t1562010-downgrade-attack
 
 **Parent Technique**
@@ -259,17 +188,8 @@ Adversaries may downgrade and use various less-secure versions of features of a 
 
 Adversaries may similarly target network traffic to downgrade from an encrypted HTTPS connection to an unsecured HTTP connection that exposes network data in clear text.(Citation: Targeted SSL Stripping Attacks Are Real)(Citation: Crowdstrike Downgrade) On Windows systems, adversaries may downgrade the boot manager to a vulnerable version that bypasses Secure Boot, granting the ability to disable various operating system security mechanisms.(Citation: SafeBreach)
 
-#### Properties
-
-- id: T1562.010
-- name: Downgrade Attack
-- created: 2021-10-08 14:06:28.212000+00:00
-- modified: 2025-10-24 17:49:02.550000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1562.011: Spoof Security Alerting
+
 ^t1562011-spoof-security-alerting
 
 **Parent Technique**
@@ -284,17 +204,8 @@ Rather than or in addition to [Indicator Blocking](https://attack.mitre.org/tech
 
 For example, adversaries may show a fake Windows Security GUI and tray icon with a “healthy” system status after Windows Defender and other system tools have been disabled.(Citation: BlackBasta)
 
-#### Properties
-
-- id: T1562.011
-- name: Spoof Security Alerting
-- created: 2023-03-14 16:04:24.865000+00:00
-- modified: 2025-04-15 23:12:05.813000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1562.012: Disable or Modify Linux Audit System
+
 ^t1562012-disable-or-modify-linux-audit-system
 
 **Parent Technique**
@@ -309,17 +220,8 @@ Often referred to as `auditd`, this is the name of the daemon used to write even
 
 With root privileges, adversaries may be able to ensure their activity is not logged through disabling the Audit system service, editing the configuration/rule files, or by hooking the Audit system library functions. Using the command line, adversaries can disable the Audit system service through killing processes associated with `auditd` daemon or use `systemctl` to stop the Audit service. Adversaries can also hook Audit system functions to disable logging or modify the rules contained in the `/etc/audit/audit.rules` or `audit.conf` files to ignore malicious activity.(Citation: Trustwave Honeypot SkidMap 2023)(Citation: ESET Ebury Feb 2014)
 
-#### Properties
-
-- id: T1562.012
-- name: Disable or Modify Linux Audit System
-- created: 2023-05-24 19:03:03.855000+00:00
-- modified: 2025-04-15 22:20:10.121000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1562.013: Disable or Modify Network Device Firewall
+
 ^t1562013-disable-or-modify-network-device-firewall
 
 **Parent Technique**
@@ -333,16 +235,6 @@ Adversaries may disable network device-based firewall mechanisms entirely or add
 Modifying or disabling a network firewall may enable adversary C2 communications, lateral movement, and/or data exfiltration that would otherwise not be allowed. For example, adversaries may add new network firewall rules to allow access to all internal network subnets without restrictions.(Citation: Exposed Fortinet Fortigate firewall interface leads to LockBit Ransomware)
 
 Adversaries may gain access to the firewall management console via [Valid Accounts](https://attack.mitre.org/techniques/T1078) or by exploiting a vulnerability. In some cases, threat actors may target firewalls that have been exposed to the internet [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190).(Citation: CVE-2024-55591 Detail)
-
-#### Properties
-
-- id: T1562.013
-- name: Disable or Modify Network Device Firewall
-- created: 2025-09-22 18:31:06.483000+00:00
-- modified: 2025-10-22 00:01:58.079000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -365,7 +257,4 @@ Adversaries may gain access to the firewall management console via [Valid Accoun
 - Identity Provider
 - Office Suite
 - ESXi
-
-## Tools
-
 

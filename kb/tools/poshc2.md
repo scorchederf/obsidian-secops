@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [PoshC2](https://attack.mitre.org/software/S0378) is an open source remote administration and post-exploitation framework that is publicly available on GitHub. The server-side components of the tool are primarily written in Python, while the implants are written in [PowerShell](https://attack.mitre.org/techniques/T1059/001). Although [PoshC2](https://attack.mitre.org/software/S0378) is primarily focused on Windows implantation, it does contain a basic Python dropper for Linux/macOS.(Citation: GitHub PoshC2)
 
-## Properties
-
-- id: S0378
-- name: PoshC2
-- created: 2019-04-23 12:31:58.125000+00:00
-- modified: 2025-04-16 20:38:51.558000+00:00
-- type: tool
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

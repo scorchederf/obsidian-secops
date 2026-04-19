@@ -33,15 +33,3 @@ Adversaries may use assembly to directly or in-directly invoke syscalls in an at
 - macOS
 - Windows
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-- [[bloodhound|BloodHound]]
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[donut|Donut]]
-- [[empire|Empire]]
-- [[imminent_monitor|Imminent Monitor]]
-- [[pcshare|PcShare]]
-- [[shimratreporter|ShimRatReporter]]
-- [[silenttrinity|SILENTTRINITY]]
-

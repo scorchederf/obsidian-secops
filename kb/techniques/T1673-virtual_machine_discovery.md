@@ -23,6 +23,3 @@ Adversaries may use the information from [Virtual Machine Discovery](https://att
 - macOS
 - Windows
 
-## Tools
-
-

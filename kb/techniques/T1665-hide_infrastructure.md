@@ -28,6 +28,3 @@ Hiding C2 infrastructure may also be supported by [Resource Development](https:/
 - Windows
 - macOS
 
-## Tools
-
-

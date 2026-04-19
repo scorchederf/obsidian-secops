@@ -24,10 +24,3 @@ Reflective code injection is very similar to [Process Injection](https://attack.
 - macOS
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[donut|Donut]]
-- [[powersploit|PowerSploit]]
-- [[silenttrinity|SILENTTRINITY]]
-

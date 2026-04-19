@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [BloodHound](https://attack.mitre.org/software/S0521) is an Active Directory (AD) reconnaissance tool that can reveal hidden relationships and identify attack paths within an AD environment.(Citation: GitHub Bloodhound)(Citation: CrowdStrike BloodHound April 2018)(Citation: FoxIT Wocao December 2019)
 
-## Properties
-
-- id: S0521
-- name: BloodHound
-- created: 2020-10-28 12:51:29.358000+00:00
-- modified: 2025-03-12 20:27:03.654000+00:00
-- type: tool
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1018-remote_system_discovery|T1018: Remote System Discovery]]

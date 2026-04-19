@@ -29,6 +29,3 @@ Adversaries may attempt to shutdown/reboot a system after impacting it in other 
 - Network Devices
 - Windows
 
-## Tools
-
-

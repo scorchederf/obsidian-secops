@@ -19,6 +19,7 @@ Adversaries may also attempt to hide artifacts associated with malicious behavio
 ## Subtechniques
 
 ### T1564.001: Hidden Files and Directories
+
 ^t1564001-hidden-files-and-directories
 
 **Parent Technique**
@@ -37,17 +38,8 @@ Additionally, adversaries may name files in a manner that would allow the file t
 
 Adversaries can use this to their advantage to hide files and folders anywhere on the system and evading a typical user or system analysis that does not incorporate investigation of hidden files.
 
-#### Properties
-
-- id: T1564.001
-- name: Hidden Files and Directories
-- created: 2020-02-26 17:46:13.128000+00:00
-- modified: 2025-10-24 17:49:34.244000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1564.002: Hidden Users
+
 ^t1564002-hidden-users
 
 **Parent Technique**
@@ -64,17 +56,8 @@ Adversaries may similarly hide user accounts in Windows. Adversaries can set the
 
 On Linux systems, adversaries may hide user accounts from the login screen, also referred to as the greeter. The method an adversary may use depends on which Display Manager the distribution is currently using. For example, on an Ubuntu system using the GNOME Display Manger (GDM), accounts may be hidden from the greeter using the <code>gsettings</code> command (ex: <code>sudo -u gdm gsettings set org.gnome.login-screen disable-user-list true</code>).(Citation: Hide GDM User Accounts) Display Managers are not anchored to specific distributions and may be changed by a user or adversary.
 
-#### Properties
-
-- id: T1564.002
-- name: Hidden Users
-- created: 2020-03-13 20:12:40.876000+00:00
-- modified: 2025-10-24 17:49:05.113000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1564.003: Hidden Window
+
 ^t1564003-hidden-window
 
 **Parent Technique**
@@ -97,17 +80,8 @@ In addition, Windows supports the `CreateDesktop()` API that can create a hidden
 
 Adversaries may also leverage cmd.exe(Citation: Cybereason - Hidden Malicious Remote Access) as a parent process, and then utilize a LOLBin, such as DeviceCredentialDeployment.exe,(Citation: LOLBAS Project GitHub Device Cred Dep)(Citation: SecureList BlueNoroff Device Cred Dev) to hide windows.
 
-#### Properties
-
-- id: T1564.003
-- name: Hidden Window
-- created: 2020-03-13 20:26:49.433000+00:00
-- modified: 2025-10-24 17:49:23.485000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1564.004: NTFS File Attributes
+
 ^t1564004-ntfs-file-attributes
 
 **Parent Technique**
@@ -120,17 +94,8 @@ Adversaries may use NTFS file attributes to hide their malicious data in order t
 
 Adversaries may store malicious data or binaries in file attribute metadata instead of directly in files. This may be done to evade some defenses, such as static indicator scanning tools and anti-virus. (Citation: Journey into IR ZeroAccess NTFS EA) (Citation: MalwareBytes ADS July 2015)
 
-#### Properties
-
-- id: T1564.004
-- name: NTFS File Attributes
-- created: 2020-03-13 20:33:00.009000+00:00
-- modified: 2025-10-24 17:49:35.944000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1564.005: Hidden File System
+
 ^t1564005-hidden-file-system
 
 **Parent Technique**
@@ -143,17 +108,8 @@ Adversaries may use a hidden file system to conceal malicious activity from user
 
 Adversaries may use their own abstracted file system, separate from the standard file system present on the infected system. In doing so, adversaries can hide the presence of malicious components and file input/output from security tools. Hidden file systems, sometimes referred to as virtual file systems, can be implemented in numerous ways. One implementation would be to store a file system in reserved disk space unused by disk structures or standard file system partitions.(Citation: MalwareTech VFS Nov 2014)(Citation: FireEye Bootkits) Another implementation could be for an adversary to drop their own portable partition image as a file on top of the standard file system.(Citation: ESET ComRAT May 2020) Adversaries may also fragment files across the existing file system structure in non-standard ways.(Citation: Kaspersky Equation QA)
 
-#### Properties
-
-- id: T1564.005
-- name: Hidden File System
-- created: 2020-06-28 22:55:55.719000+00:00
-- modified: 2025-10-24 17:49:29.855000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1564.006: Run Virtual Instance
+
 ^t1564006-run-virtual-instance
 
 **Parent Technique**
@@ -170,17 +126,8 @@ Threat actors may also leverage temporary virtualized environments such as the W
 
 In VMWare environments, adversaries may leverage the vCenter console to create new virtual machines. However, they may also create virtual machines directly on ESXi servers by running a valid `.vmx` file with the `/bin/vmx` utility. Adding this command to `/etc/rc.local.d/local.sh` (i.e., [RC Scripts](https://attack.mitre.org/techniques/T1037/004)) will cause the VM to persistently restart.(Citation: vNinja Rogue VMs 2024) Creating a VM this way prevents it from appearing in the vCenter console or in the output to the `vim-cmd vmsvc/getallvms` command on the ESXi server, thereby hiding it from typical administrative activities.(Citation: MITRE VMware Abuse 2024)
 
-#### Properties
-
-- id: T1564.006
-- name: Run Virtual Instance
-- created: 2020-06-29 15:36:41.535000+00:00
-- modified: 2025-11-05 15:22:05.269000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1564.007: VBA Stomping
+
 ^t1564007-vba-stomping
 
 **Parent Technique**
@@ -195,17 +142,8 @@ MS Office documents with embedded VBA content store source code inside of module
 
 An adversary may hide malicious VBA code by overwriting the VBA source code location with zero’s, benign code, or random bytes while leaving the previously compiled malicious p-code. Tools that scan for malicious VBA source code may be bypassed as the unwanted code is hidden in the compiled p-code. If the VBA source code is removed, some tools might even think that there are no macros present. If there is a version match between the <code>_VBA_PROJECT</code> stream and host MS Office application, the p-code will be executed, otherwise the benign VBA source code will be decompressed and recompiled to p-code, thus removing malicious p-code and potentially bypassing dynamic analysis.(Citation: Walmart Roberts Oct 2018)(Citation: FireEye VBA stomp Feb 2020)(Citation: pcodedmp Bontchev)
 
-#### Properties
-
-- id: T1564.007
-- name: VBA Stomping
-- created: 2020-09-17 12:51:40.845000+00:00
-- modified: 2025-10-24 17:49:22.623000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1564.008: Email Hiding Rules
+
 ^t1564008-email-hiding-rules
 
 **Parent Technique**
@@ -222,17 +160,8 @@ Any user or administrator within the organization (or adversary with valid crede
 
 In some environments, administrators may be able to enable email rules that operate organization-wide rather than on individual inboxes. For example, Microsoft Exchange supports transport rules that evaluate all mail an organization receives against user-specified conditions, then performs a user-specified action on mail that adheres to those conditions.(Citation: Microsoft Mail Flow Rules 2023) Adversaries that abuse such features may be able to automatically modify or delete all emails related to specific topics (such as internal security incident notifications).
 
-#### Properties
-
-- id: T1564.008
-- name: Email Hiding Rules
-- created: 2021-06-07 13:20:23.767000+00:00
-- modified: 2025-10-24 17:48:23.364000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1564.009: Resource Forking
+
 ^t1564009-resource-forking
 
 **Parent Technique**
@@ -245,17 +174,8 @@ Adversaries may abuse resource forks to hide malicious code or executables to ev
 
 Adversaries can use resource forks to hide malicious data that may otherwise be stored directly in files. Adversaries can execute content with an attached resource fork, at a specified offset, that is moved to an executable location then invoked. Resource fork content may also be obfuscated/encrypted until execution.(Citation: sentinellabs resource named fork 2020)(Citation: tau bundlore erika noerenberg 2020)
 
-#### Properties
-
-- id: T1564.009
-- name: Resource Forking
-- created: 2021-10-12 20:02:31.866000+00:00
-- modified: 2025-10-24 17:49:14.736000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1564.010: Process Argument Spoofing
+
 ^t1564010-process-argument-spoofing
 
 **Parent Technique**
@@ -272,17 +192,8 @@ Adversaries may also execute a process with malicious command-line arguments the
 
 This behavior may also be combined with other tricks (such as [Parent PID Spoofing](https://attack.mitre.org/techniques/T1134/004)) to manipulate or further evade process-based detections.
 
-#### Properties
-
-- id: T1564.010
-- name: Process Argument Spoofing
-- created: 2021-11-19 14:13:11.335000+00:00
-- modified: 2025-10-24 17:49:40.325000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1564.011: Ignore Process Interrupts
+
 ^t1564011-ignore-process-interrupts
 
 **Parent Technique**
@@ -297,17 +208,8 @@ Adversaries may invoke processes using `nohup`, [PowerShell](https://attack.mitr
 
 Hiding from process interrupt signals may allow malware to continue execution, but unlike [Trap](https://attack.mitre.org/techniques/T1546/005) this does not establish [Persistence](https://attack.mitre.org/tactics/TA0003) since the process will not be re-invoked once actually terminated.
 
-#### Properties
-
-- id: T1564.011
-- name: Ignore Process Interrupts
-- created: 2023-08-24 17:23:34.470000+00:00
-- modified: 2025-04-15 22:41:11.807000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1564.012: File/Path Exclusions
+
 ^t1564012-file-path-exclusions
 
 **Parent Technique**
@@ -320,17 +222,8 @@ Adversaries may attempt to hide their file-based artifacts by writing them to sp
 
 Adversaries may abuse these exclusions to hide their file-based artifacts. For example, rather than  tampering with tool settings to add a new exclusion (i.e., [Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001)), adversaries may drop their file-based payloads in default or otherwise well-known exclusions. Adversaries may also use [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001) and other [Discovery](https://attack.mitre.org/tactics/TA0007)/[Reconnaissance](https://attack.mitre.org/tactics/TA0043) activities to both discover and verify existing exclusions in a victim environment.
 
-#### Properties
-
-- id: T1564.012
-- name: File/Path Exclusions
-- created: 2024-03-29 16:59:10.374000+00:00
-- modified: 2025-04-15 22:35:31.731000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1564.013: Bind Mounts
+
 ^t1564013-bind-mounts
 
 **Parent Technique**
@@ -343,17 +236,8 @@ Adversaries may abuse bind mounts on file structures to hide their activity and 
 
 Adversaries may use bind mounts to map either an empty directory or a benign `/proc` directory to a malicious process’s `/proc` directory. Using the commands `mount –o bind /proc/benign-process /proc/malicious-process` (or `mount –B`), the malicious process's `/proc` directory is overlayed with the contents of a benign process's `/proc` directory. When system utilities query process activity, such as `ps` and `top`, the kernel follows the bind mount and presents the benign directory’s contents instead of the malicious process's actual `/proc` directory. As a result, these utilities display information that appears to come from the benign process, effectively hiding the malicious process's metadata, executable, or other artifacts from detection.(Citation: Cado Security Commando Cat 2024)(Citation: Ahn Lab CoinMiner 2023)
 
-#### Properties
-
-- id: T1564.013
-- name: Bind Mounts
-- created: 2025-01-30 21:01:16.340000+00:00
-- modified: 2025-04-15 19:58:34.469000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1564.014: Extended Attributes
+
 ^t1564014-extended-attributes
 
 **Parent Technique**
@@ -365,16 +249,6 @@ Adversaries may use bind mounts to map either an empty directory or a benign `/p
 Adversaries may abuse extended attributes (xattrs) on macOS and Linux to hide their malicious data in order to evade detection. Extended attributes are key-value pairs of file and directory metadata used by both macOS and Linux. They are not visible through standard tools like `Finder`,  `ls`, or `cat` and require utilities such as `xattr` (macOS) or `getfattr` (Linux) for inspection. Operating systems and applications use xattrs for tagging, integrity checks, and access control. On Linux, xattrs are organized into namespaces such as `user.` (user permissions), `trusted.` (root permissions), `security.`, and `system.`, each with specific permissions. On macOS, xattrs are flat strings without namespace prefixes, commonly prefixed with `com.apple.*` (e.g., `com.apple.quarantine`, `com.apple.metadata:_kMDItemUserTags`) and used by system features like Gatekeeper and Spotlight.(Citation: Establishing persistence using extended attributes on Linux)
 
 An adversary may leverage xattrs by embedding a second-stage payload into the extended attribute of a legitimate file. On macOS, a payload can be embedded into a custom attribute using the `xattr` command. A separate loader can retrieve the attribute with `xattr -p`, decode the content, and execute it using a scripting interpreter. On Linux, an adversary may use `setfattr` to write a payload into the `user.` namespace of a legitimate file. A loader script can later extract the payload with `getfattr --only-values`, decode it, and execute it using bash or another interpreter. In both cases, because the primary file content remains unchanged, security tools and integrity checks that do not inspect extended attributes will observe the original file hash, allowing the malicious payload to evade detection.(Citation: Low GroupIB xattrs nov 2024)
-
-#### Properties
-
-- id: T1564.014
-- name: Extended Attributes
-- created: 2025-03-27 19:40:00.716000+00:00
-- modified: 2025-09-17 17:58:26.729000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -390,7 +264,4 @@ An adversary may leverage xattrs by embedding a second-stage payload into the ex
 - Windows
 - macOS
 - ESXi
-
-## Tools
-
 

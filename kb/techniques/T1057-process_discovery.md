@@ -26,18 +26,3 @@ On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T10
 - Network Devices
 - Windows
 
-## Tools
-
-- [[asyncrat|AsyncRAT]]
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[donut|Donut]]
-- [[empire|Empire]]
-- [[imminent_monitor|Imminent Monitor]]
-- [[ironnetinjector|IronNetInjector]]
-- [[pcshare|PcShare]]
-- [[powersploit|PowerSploit]]
-- [[pupy|Pupy]]
-- [[shimratreporter|ShimRatReporter]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[tasklist|Tasklist]]
-

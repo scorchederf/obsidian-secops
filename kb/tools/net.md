@@ -14,16 +14,6 @@ The [Net](https://attack.mitre.org/software/S0039) utility is a component of the
 
 [Net](https://attack.mitre.org/software/S0039) has a great deal of functionality, (Citation: Savill 1999) much of which is useful for an adversary, such as gathering system and network information for Discovery, moving laterally through [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002) using <code>net use</code> commands, and interacting with services. The net1.exe utility is executed for certain functionality when net.exe is run and can be used directly in commands such as <code>net1 user</code>.
 
-## Properties
-
-- id: S0039
-- name: Net
-- created: 2017-05-31 21:32:31.601000+00:00
-- modified: 2024-11-27 21:55:29.681000+00:00
-- type: tool
-- x_mitre_version: 2.7
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1007-system_service_discovery|T1007: System Service Discovery]]

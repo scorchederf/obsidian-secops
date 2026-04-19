@@ -22,6 +22,7 @@ The modular nature of extensions and their integration with host applications ma
 ## Subtechniques
 
 ### T1176.001: Browser Extensions
+
 ^t1176001-browser-extensions
 
 **Parent Technique**
@@ -42,17 +43,8 @@ Once the extension is installed, it can browse to websites in the background, st
 
 There have also been instances of botnets using a persistent backdoor through malicious Chrome extensions for [Command and Control](https://attack.mitre.org/tactics/TA0011).(Citation: Stantinko Botnet)(Citation: Chrome Extension C2 Malware) Adversaries may also use browser extensions to modify browser permissions and components, privacy settings, and other security controls for [Defense Evasion](https://attack.mitre.org/tactics/TA0005).(Citation: Browers FriarFox)(Citation: Browser Adrozek) 
 
-#### Properties
-
-- id: T1176.001
-- name: Browser Extensions
-- created: 2025-03-30 22:12:27.799000+00:00
-- modified: 2025-09-22 17:00:42.545000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1176.002: IDE Extensions
+
 ^t1176002-ide-extensions
 
 **Parent Technique**
@@ -66,16 +58,6 @@ Adversaries may abuse an integrated development environment (IDE) extension to e
 In addition to installing malicious extensions, adversaries may also leverage benign ones. For example, adversaries may establish persistent SSH tunnels via the use of the VSCode Remote SSH extension (i.e., [IDE Tunneling](https://attack.mitre.org/techniques/T1219/001)).  
 
 Trust is typically established through the installation process; once installed, the malicious extension is run every time that the IDE is launched. The extension can then be used to execute arbitrary code, establish a backdoor, mine cryptocurrency, or exfiltrate data.(Citation: ExtensionTotal VSCode Extensions  2025)
-
-#### Properties
-
-- id: T1176.002
-- name: IDE Extensions
-- created: 2025-03-30 22:16:24.078000+00:00
-- modified: 2025-04-23 12:40:46.664000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

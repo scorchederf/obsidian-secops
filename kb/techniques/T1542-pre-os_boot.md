@@ -19,6 +19,7 @@ Adversaries may overwrite data in boot drivers or firmware such as BIOS (Basic I
 ## Subtechniques
 
 ### T1542.001: System Firmware
+
 ^t1542001-system-firmware
 
 **Parent Technique**
@@ -31,17 +32,8 @@ Adversaries may modify system firmware to persist on systems.The BIOS (Basic Inp
 
 System firmware like BIOS and (U)EFI underly the functionality of a computer and may be modified by an adversary to perform or assist in malicious activity. Capabilities exist to overwrite the system firmware, which may give sophisticated adversaries a means to install malicious firmware updates as a means of persistence on a system that may be difficult to detect.
 
-#### Properties
-
-- id: T1542.001
-- name: System Firmware
-- created: 2019-12-19 19:43:34.507000+00:00
-- modified: 2025-10-24 17:48:26.714000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1542.002: Component Firmware
+
 ^t1542002-component-firmware
 
 **Parent Technique**
@@ -54,17 +46,8 @@ Adversaries may modify component firmware to persist on systems. Some adversarie
 
 Malicious component firmware could provide both a persistent level of access to systems despite potential typical failures to maintain access and hard disk re-images, as well as a way to evade host software-based defenses and integrity checks.
 
-#### Properties
-
-- id: T1542.002
-- name: Component Firmware
-- created: 2019-12-19 20:21:21.669000+00:00
-- modified: 2025-10-24 17:48:59.147000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1542.003: Bootkit
+
 ^t1542003-bootkit
 
 **Parent Technique**
@@ -81,17 +64,8 @@ The MBR passes control of the boot process to the VBR. Similar to the case of MB
 
 In UEFI (Unified Extensible Firmware Interface) systems, a bootkit may instead create or modify files in the EFI system partition (ESP). The ESP is a partition on data storage used by devices containing UEFI that allows the system to boot the OS and other utilities used by the system. An adversary can use the newly created or patched files in the ESP to run malicious kernel code.(Citation: Microsoft Security)(Citation: welivesecurity)
 
-#### Properties
-
-- id: T1542.003
-- name: Bootkit
-- created: 2019-12-19 21:05:38.123000+00:00
-- modified: 2025-10-24 17:48:28.341000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1542.004: ROMMONkit
+
 ^t1542004-rommonkit
 
 **Parent Technique**
@@ -105,17 +79,8 @@ Adversaries may abuse the ROM Monitor (ROMMON) by loading an unauthorized firmwa
 
 ROMMON is a Cisco network device firmware that functions as a boot loader, boot image, or boot helper to initialize hardware and software when the platform is powered on or reset. Similar to [TFTP Boot](https://attack.mitre.org/techniques/T1542/005), an adversary may upgrade the ROMMON image locally or remotely (for example, through TFTP) with adversary code and restart the device in order to overwrite the existing ROMMON image. This provides adversaries with the means to update the ROMMON to gain persistence on a system in a way that may be difficult to detect.
 
-#### Properties
-
-- id: T1542.004
-- name: ROMMONkit
-- created: 2020-10-20 00:05:48.790000+00:00
-- modified: 2025-10-24 17:49:11.524000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1542.005: TFTP Boot
+
 ^t1542005-tftp-boot
 
 **Parent Technique**
@@ -127,16 +92,6 @@ ROMMON is a Cisco network device firmware that functions as a boot loader, boot 
 Adversaries may abuse netbooting to load an unauthorized network device operating system from a Trivial File Transfer Protocol (TFTP) server. TFTP boot (netbooting) is commonly used by network administrators to load configuration-controlled network device images from a centralized management server. Netbooting is one option in the boot sequence and can be used to centralize, manage, and control device images.
 
 Adversaries may manipulate the configuration on the network device specifying use of a malicious TFTP server, which may be used in conjunction with [Modify System Image](https://attack.mitre.org/techniques/T1601) to load a modified image on device startup or reset. The unauthorized image allows adversaries to modify device configuration, add malicious capabilities to the device, and introduce backdoors to maintain control of the network device while minimizing detection through use of a standard functionality. This technique is similar to [ROMMONkit](https://attack.mitre.org/techniques/T1542/004) and may result in the network device running a modified image. (Citation: Cisco Blog Legacy Device Attacks)
-
-#### Properties
-
-- id: T1542.005
-- name: TFTP Boot
-- created: 2020-10-20 00:06:56.180000+00:00
-- modified: 2025-10-24 17:48:33.317000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

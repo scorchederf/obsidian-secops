@@ -30,14 +30,6 @@ Backup Testing:
 - Use Case: Validate backup integrity and ensure recoverability.
 - Implementation: Regularly test data restoration processes to ensure that backups are not corrupted and can be recovered quickly.
 
-## Properties
-
-- id: M1053
-- name: Data Backup
-- created: 2019-07-19 14:33:33.543000+00:00
-- modified: 2024-12-10 15:32:14.846000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1485-data_destruction|T1485: Data Destruction]]

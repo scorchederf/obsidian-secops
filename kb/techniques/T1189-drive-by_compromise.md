@@ -47,6 +47,3 @@ Unlike [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T
 - macOS
 - Windows
 
-## Tools
-
-

@@ -27,6 +27,3 @@ Another example involves pivoting browser traffic from the adversary's browser t
 
 - Windows
 
-## Tools
-
-

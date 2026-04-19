@@ -30,15 +30,3 @@ Finally, Registry modifications may also include actions to hide keys, such as p
 
 - Windows
 
-## Tools
-
-- [[aadinternals|AADInternals]]
-- [[crackmapexec|CrackMapExec]]
-- [[cspy_downloader|CSPY Downloader]]
-- [[nppspy|NPPSPY]]
-- [[pcshare|PcShare]]
-- [[quasarrat|QuasarRAT]]
-- [[reg|Reg]]
-- [[remcos|Remcos]]
-- [[silenttrinity|SILENTTRINITY]]
-

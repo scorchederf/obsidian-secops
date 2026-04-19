@@ -20,6 +20,3 @@ Adversaries may attempt to gather information about attached peripheral devices 
 - Windows
 - macOS
 
-## Tools
-
-

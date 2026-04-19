@@ -30,14 +30,6 @@ Exploit Prevention:
 - Implementation: Use behavioral exploit prevention tools to detect and block exploits attempting to gain unauthorized access.
 - Use Case: A buffer overflow exploit is launched against a vulnerable application. The endpoint detects the anomalous memory write operation and halts the process.
 
-## Properties
-
-- id: M1040
-- name: Behavior Prevention on Endpoint
-- created: 2019-06-11 16:43:05.712000+00:00
-- modified: 2024-12-10 16:29:44.429000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

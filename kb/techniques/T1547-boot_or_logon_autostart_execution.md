@@ -19,6 +19,7 @@ Since some boot or logon autostart programs run with higher privileges, an adver
 ## Subtechniques
 
 ### T1547.001: Registry Run Keys / Startup Folder
+
 ^t1547001-registry-run-keys---startup-folder
 
 **Parent Technique**
@@ -65,17 +66,8 @@ By default, the multistring <code>BootExecute</code> value of the registry key <
 
 Adversaries can use these configuration locations to execute malware, such as remote access tools, to maintain persistence through system reboots. Adversaries may also use [Masquerading](https://attack.mitre.org/techniques/T1036) to make the Registry entries look as if they are associated with legitimate programs.
 
-#### Properties
-
-- id: T1547.001
-- name: Registry Run Keys / Startup Folder
-- created: 2020-01-23 22:02:48.566000+00:00
-- modified: 2025-10-24 17:49:09.744000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ### T1547.002: Authentication Package
+
 ^t1547002-authentication-package
 
 **Parent Technique**
@@ -88,17 +80,8 @@ Adversaries may abuse authentication packages to execute DLLs when the system bo
 
 Adversaries can use the autostart mechanism provided by LSA authentication packages for persistence by placing a reference to a binary in the Windows Registry location <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\</code> with the key value of <code>"Authentication Packages"=&lt;target binary&gt;</code>. The binary will then be executed by the system when the authentication packages are loaded.
 
-#### Properties
-
-- id: T1547.002
-- name: Authentication Package
-- created: 2020-01-24 14:54:42.757000+00:00
-- modified: 2025-10-24 17:49:17.208000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1547.003: Time Providers
+
 ^t1547003-time-providers
 
 **Parent Technique**
@@ -113,17 +96,8 @@ Time providers are implemented as dynamic-link libraries (DLLs) that are registe
 
 Adversaries may abuse this architecture to establish persistence, specifically by creating a new arbitrarily named subkey  pointing to a malicious DLL in the `DllName` value. Administrator privileges are required for time provider registration, though execution will run in context of the Local Service account.(Citation: Github W32Time Oct 2017)
 
-#### Properties
-
-- id: T1547.003
-- name: Time Providers
-- created: 2020-01-24 15:51:52.317000+00:00
-- modified: 2025-10-24 17:48:51.278000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1547.004: Winlogon Helper DLL
+
 ^t1547004-winlogon-helper-dll
 
 **Parent Technique**
@@ -142,17 +116,8 @@ Malicious modifications to these Registry keys may cause Winlogon to load and ex
 
 Adversaries may take advantage of these features to repeatedly execute malicious code and establish persistence.
 
-#### Properties
-
-- id: T1547.004
-- name: Winlogon Helper DLL
-- created: 2020-01-24 16:59:59.688000+00:00
-- modified: 2025-10-24 17:48:53.539000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1547.005: Security Support Provider
+
 ^t1547005-security-support-provider
 
 **Parent Technique**
@@ -165,17 +130,8 @@ Adversaries may abuse security support providers (SSPs) to execute DLLs when the
 
 The SSP configuration is stored in two Registry keys: <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Security Packages</code> and <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig\Security Packages</code>. An adversary may modify these Registry keys to add new SSPs, which will be loaded the next time the system boots, or when the AddSecurityPackage Windows API function is called.(Citation: Graeber 2014)
 
-#### Properties
-
-- id: T1547.005
-- name: Security Support Provider
-- created: 2020-01-24 17:16:11.806000+00:00
-- modified: 2025-10-24 17:48:46.245000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1547.006: Kernel Modules and Extensions
+
 ^t1547006-kernel-modules-and-extensions
 
 **Parent Technique**
@@ -194,17 +150,8 @@ Since macOS Catalina 10.15, kernel extensions have been deprecated in favor of S
 
 Adversaries can use LKMs and kexts to conduct [Persistence](https://attack.mitre.org/tactics/TA0003) and/or [Privilege Escalation](https://attack.mitre.org/tactics/TA0004) on a system. Examples have been found in the wild, and there are some relevant open source projects as well.(Citation: Volatility Phalanx2)(Citation: CrowdStrike Linux Rootkit)(Citation: GitHub Reptile)(Citation: GitHub Diamorphine)(Citation: RSAC 2015 San Francisco Patrick Wardle)(Citation: Synack Secure Kernel Extension Broken)(Citation: Securelist Ventir)(Citation: Trend Micro Skidmap)
 
-#### Properties
-
-- id: T1547.006
-- name: Kernel Modules and Extensions
-- created: 2020-01-24 17:42:23.339000+00:00
-- modified: 2025-10-24 17:49:10.550000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1547.007: Re-opened Applications
+
 ^t1547007-re-opened-applications
 
 **Parent Technique**
@@ -217,17 +164,8 @@ Adversaries may modify plist files to automatically run an application when a us
 
 Adversaries can establish [Persistence](https://attack.mitre.org/tactics/TA0003) by adding a malicious application path to the <code>com.apple.loginwindow.[UUID].plist</code> file to execute payloads when a user logs in.
 
-#### Properties
-
-- id: T1547.007
-- name: Re-opened Applications
-- created: 2020-01-24 18:15:06.641000+00:00
-- modified: 2025-10-24 17:49:32.375000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1547.008: LSASS Driver
+
 ^t1547008-lsass-driver
 
 **Parent Technique**
@@ -240,17 +178,8 @@ Adversaries may modify or add LSASS drivers to obtain persistence on compromised
 
 Adversaries may target LSASS drivers to obtain persistence. By either replacing or adding illegitimate drivers (e.g., [Hijack Execution Flow](https://attack.mitre.org/techniques/T1574)), an adversary can use LSA operations to continuously execute malicious payloads.
 
-#### Properties
-
-- id: T1547.008
-- name: LSASS Driver
-- created: 2020-01-24 18:38:55.801000+00:00
-- modified: 2025-10-24 17:49:35.318000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1547.009: Shortcut Modification
+
 ^t1547009-shortcut-modification
 
 **Parent Technique**
@@ -265,17 +194,8 @@ Adversaries may abuse shortcuts in the startup folder to execute their tools and
 
 Shortcuts can also be abused to establish persistence by implementing other methods. For example, LNK browser extensions may be modified (e.g. [Browser Extensions](https://attack.mitre.org/techniques/T1176/001)) to persistently launch malware.
 
-#### Properties
-
-- id: T1547.009
-- name: Shortcut Modification
-- created: 2020-01-24 19:00:32.917000+00:00
-- modified: 2025-10-24 17:48:44.403000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1547.010: Port Monitors
+
 ^t1547010-port-monitors
 
 **Parent Technique**
@@ -294,17 +214,8 @@ Alternatively, an arbitrary DLL can be loaded if permissions allow writing a ful
 * WSD Port
 
 
-#### Properties
-
-- id: T1547.010
-- name: Port Monitors
-- created: 2020-01-24 19:46:27.750000+00:00
-- modified: 2025-10-24 17:48:42.872000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1547.012: Print Processors
+
 ^t1547012-print-processors
 
 **Parent Technique**
@@ -321,17 +232,8 @@ For the malicious print processor to be correctly installed, the payload must be
 
 The print spooler service runs under SYSTEM level permissions, therefore print processors installed by an adversary may run under elevated privileges.
 
-#### Properties
-
-- id: T1547.012
-- name: Print Processors
-- created: 2020-10-05 13:24:49.780000+00:00
-- modified: 2025-10-24 17:48:35.261000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1547.013: XDG Autostart Entries
+
 ^t1547013-xdg-autostart-entries
 
 **Parent Technique**
@@ -346,17 +248,8 @@ Adversaries may abuse this feature to establish persistence by adding a path to 
 
 Adversaries may combine this technique with [Masquerading](https://attack.mitre.org/techniques/T1036) to blend malicious Autostart entries with legitimate programs.(Citation: Red Canary Netwire Linux 2022)
 
-#### Properties
-
-- id: T1547.013
-- name: XDG Autostart Entries
-- created: 2019-09-10 18:13:12.195000+00:00
-- modified: 2025-10-24 17:49:30.252000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1547.014: Active Setup
+
 ^t1547014-active-setup
 
 **Parent Technique**
@@ -371,17 +264,8 @@ Adversaries may abuse Active Setup by creating a key under <code> HKLM\SOFTWARE\
 
 Adversaries can abuse these components to execute malware, such as remote access tools, to maintain persistence through system reboots. Adversaries may also use [Masquerading](https://attack.mitre.org/techniques/T1036) to make the Registry entries look as if they are associated with legitimate programs.
 
-#### Properties
-
-- id: T1547.014
-- name: Active Setup
-- created: 2020-12-18 16:33:13.098000+00:00
-- modified: 2025-10-24 17:48:31.226000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1547.015: Login Items
+
 ^t1547015-login-items
 
 **Parent Technique**
@@ -396,23 +280,10 @@ Login items installed using the Service Management Framework leverage <code>laun
 
 Adversaries can utilize [AppleScript](https://attack.mitre.org/techniques/T1059/002) and [Native API](https://attack.mitre.org/techniques/T1106) calls to create a login item to spawn malicious executables.(Citation: ELC Running at startup) Prior to version 10.5 on macOS, adversaries can add login items by using [AppleScript](https://attack.mitre.org/techniques/T1059/002) to send an Apple events to the “System Events” process, which has an AppleScript dictionary for manipulating login items.(Citation: Login Items AE) Adversaries can use a command such as <code>tell application “System Events” to make login item at end with properties /path/to/executable</code>.(Citation: Startup Items Eclectic)(Citation: hexed osx.dok analysis 2019)(Citation: Add List Remove Login Items Apple Script) This command adds the path of the malicious executable to the login item file list located in <code>~/Library/Application Support/com.apple.backgroundtaskmanagementagent/backgrounditems.btm</code>.(Citation: Startup Items Eclectic) Adversaries can also use login items to launch executables that can be used to control the victim system remotely or as a means to gain privilege escalation by prompting for user credentials.(Citation: objsee mac malware 2017)(Citation: CheckPoint Dok)(Citation: objsee netwire backdoor 2019)
 
-#### Properties
-
-- id: T1547.015
-- name: Login Items
-- created: 2021-10-05 21:26:15.081000+00:00
-- modified: 2025-10-24 17:49:03.355000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
 - macOS
 - Windows
 - Network Devices
-
-## Tools
-
 

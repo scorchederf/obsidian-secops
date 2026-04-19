@@ -19,6 +19,7 @@ Removal of these indicators may interfere with event collection, reporting, or o
 ## Subtechniques
 
 ### T1070.001: Clear Windows Event Logs
+
 ^t1070001-clear-windows-event-logs
 
 **Parent Technique**
@@ -40,17 +41,8 @@ These logs may also be cleared through other mechanisms, such as the event viewe
 
 Adversaries may also attempt to clear logs by directly deleting the stored log files within `C:\Windows\System32\winevt\logs\`.
 
-#### Properties
-
-- id: T1070.001
-- name: Clear Windows Event Logs
-- created: 2020-01-28 17:05:14.707000+00:00
-- modified: 2025-10-24 17:48:52.287000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1070.002: Clear Linux or Mac System Logs
+
 ^t1070002-clear-linux-or-mac-system-logs
 
 **Parent Technique**
@@ -70,17 +62,8 @@ Adversaries may clear system logs to hide evidence of an intrusion. macOS and Li
 * <code>/var/log/httpd/</code>: Web server access and error logs
 
 
-#### Properties
-
-- id: T1070.002
-- name: Clear Linux or Mac System Logs
-- created: 2020-01-28 17:11:54.034000+00:00
-- modified: 2025-10-24 17:48:34.441000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1070.003: Clear Command History
+
 ^t1070003-clear-command-history
 
 **Parent Technique**
@@ -101,17 +84,8 @@ The <code>PSReadLine</code> command history tracks the commands used in all Powe
 
 Adversaries may run the PowerShell command <code>Clear-History</code> to flush the entire command history from a current PowerShell session. This, however, will not delete/flush the <code>ConsoleHost_history.txt</code> file. Adversaries may also delete the <code>ConsoleHost_history.txt</code> file or edit its contents to hide PowerShell commands they have run.(Citation: Sophos PowerShell command audit)(Citation: Sophos PowerShell Command History Forensics)
 
-#### Properties
-
-- id: T1070.003
-- name: Clear Command History
-- created: 2020-01-31 12:32:08.228000+00:00
-- modified: 2025-10-24 17:48:40.313000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ### T1070.004: File Deletion
+
 ^t1070004-file-deletion
 
 **Parent Technique**
@@ -124,17 +98,8 @@ Adversaries may delete files left behind by the actions of their intrusion activ
 
 There are tools available from the host operating system to perform cleanup, but adversaries may use other tools as well.(Citation: Microsoft SDelete July 2016) Examples of built-in [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) functions include <code>del</code> on Windows, <code>rm</code> or <code>unlink</code> on Linux and macOS, and `rm` on ESXi.
 
-#### Properties
-
-- id: T1070.004
-- name: File Deletion
-- created: 2020-01-31 12:35:36.479000+00:00
-- modified: 2025-10-24 17:49:27.978000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1070.005: Network Share Connection Removal
+
 ^t1070005-network-share-connection-removal
 
 **Parent Technique**
@@ -145,17 +110,8 @@ There are tools available from the host operating system to perform cleanup, but
 
 Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation. Windows shared drive and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002) connections can be removed when no longer needed. [Net](https://attack.mitre.org/software/S0039) is an example utility that can be used to remove network share connections with the <code>net use \\system\share /delete</code> command. (Citation: Technet Net Use)
 
-#### Properties
-
-- id: T1070.005
-- name: Network Share Connection Removal
-- created: 2020-01-31 12:39:18.816000+00:00
-- modified: 2025-10-24 17:49:11.691000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1070.006: Timestomp
+
 ^t1070006-timestomp
 
 **Parent Technique**
@@ -176,17 +132,8 @@ In Linux systems and on ESXi servers, threat actors may attempt to perform times
 
 Timestomping may be used along with file name [Masquerading](https://attack.mitre.org/techniques/T1036) to hide malware and tools.(Citation: WindowsIR Anti-Forensic Techniques)
 
-#### Properties
-
-- id: T1070.006
-- name: Timestomp
-- created: 2020-01-31 12:42:44.103000+00:00
-- modified: 2025-10-24 17:48:43.937000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1070.007: Clear Network Connection History and Configurations
+
 ^t1070007-clear-network-connection-history-and-configurations
 
 **Parent Technique**
@@ -207,17 +154,8 @@ Server Client\Cache\`.(Citation: Moran RDPieces) Similarly, macOS and Linux host
 
 Malicious network connections may also require changes to third-party applications or network configuration settings, such as [Disable or Modify System Firewall](https://attack.mitre.org/techniques/T1562/004) or tampering to enable [Proxy](https://attack.mitre.org/techniques/T1090). Adversaries may delete or modify this data to conceal indicators and/or impede defensive analysis.
 
-#### Properties
-
-- id: T1070.007
-- name: Clear Network Connection History and Configurations
-- created: 2022-06-15 18:00:04.219000+00:00
-- modified: 2025-04-16 20:37:16.734000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1070.008: Clear Mailbox Data
+
 ^t1070008-clear-mailbox-data
 
 **Parent Technique**
@@ -232,17 +170,8 @@ Adversaries may manipulate emails and mailbox data to remove logs, artifacts, an
 
 Adversaries may also remove emails and metadata/headers indicative of spam or suspicious activity (for example, through the use of organization-wide transport rules) to reduce the likelihood of malicious emails being detected by security products.(Citation: Microsoft OAuth Spam 2022)
 
-#### Properties
-
-- id: T1070.008
-- name: Clear Mailbox Data
-- created: 2022-07-08 21:04:03.739000+00:00
-- modified: 2025-04-15 21:56:59.810000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1070.009: Clear Persistence
+
 ^t1070009-clear-persistence
 
 **Parent Technique**
@@ -255,17 +184,8 @@ Adversaries may clear artifacts associated with previously established persisten
 
 In some instances, artifacts of persistence may also be removed once an adversary’s persistence is executed in order to prevent errors with the new instance of the malware.(Citation: NCC Group Team9 June 2020)
 
-#### Properties
-
-- id: T1070.009
-- name: Clear Persistence
-- created: 2022-07-29 19:32:11.552000+00:00
-- modified: 2025-04-16 20:37:21.515000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1070.010: Relocate Malware
+
 ^t1070010-relocate-malware
 
 **Parent Technique**
@@ -279,16 +199,6 @@ Once a payload is delivered, adversaries may reproduce copies of the same malwar
 Relocating malware may be a part of many actions intended to evade defenses. For example, adversaries may copy and rename payloads to better blend into the local environment (i.e., [Match Legitimate Resource Name or Location](https://attack.mitre.org/techniques/T1036/005)).(Citation: DFIR Report Trickbot June 2023) Payloads may also be repositioned to target [File/Path Exclusions](https://attack.mitre.org/techniques/T1564/012) as well as specific locations associated with establishing [Persistence](https://attack.mitre.org/tactics/TA0003).(Citation: Latrodectus APR 2024)
 
 Relocating malicious payloads may also hinder defensive analysis, especially to separate these payloads from earlier events (such as [User Execution](https://attack.mitre.org/techniques/T1204) and [Phishing](https://attack.mitre.org/techniques/T1566)) that may have generated alerts or otherwise drawn attention from defenders. Moving payloads into target directories does not alter the Creation timestamp, thereby evading detection logic reliant on modifications to this artifact (i.e., [Timestomp](https://attack.mitre.org/techniques/T1070/006)).
-
-#### Properties
-
-- id: T1070.010
-- name: Relocate Malware
-- created: 2024-05-31 11:07:57.406000+00:00
-- modified: 2025-10-05 16:08:40.119000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -305,10 +215,4 @@ Relocating malicious payloads may also hinder defensive analysis, especially to 
 - Network Devices
 - Office Suite
 - Windows
-
-## Tools
-
-- [[cspy_downloader|CSPY Downloader]]
-- [[donut|Donut]]
-- [[silenttrinity|SILENTTRINITY]]
 

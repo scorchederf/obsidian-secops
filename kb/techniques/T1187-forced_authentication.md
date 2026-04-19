@@ -38,6 +38,3 @@ Alternatively, by leveraging the <code>EfsRpcOpenFileRaw</code> function, an adv
 
 - Windows
 
-## Tools
-
-

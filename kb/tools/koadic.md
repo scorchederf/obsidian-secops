@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Koadic](https://attack.mitre.org/software/S0250) is a Windows post-exploitation framework and penetration testing tool that is publicly available on GitHub. [Koadic](https://attack.mitre.org/software/S0250) has several options for staging payloads and creating implants, and performs most of its operations using Windows Script Host.(Citation: Github Koadic)(Citation: Palo Alto Sofacy 06-2018)(Citation: MalwareBytes LazyScripter Feb 2021)
 
-## Properties
-
-- id: S0250
-- name: Koadic
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2024-11-17 14:12:07.296000+00:00
-- type: tool
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

@@ -22,6 +22,3 @@ Exclusions may target files and components whose corruption would cause instabil
 
 - Windows
 
-## Tools
-
-

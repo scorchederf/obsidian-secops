@@ -19,6 +19,7 @@ Both compression and encryption are done prior to exfiltration, and can be perfo
 ## Subtechniques
 
 ### T1560.001: Archive via Utility
+
 ^t1560001-archive-via-utility
 
 **Parent Technique**
@@ -35,17 +36,8 @@ On Windows, <code>diantz</code> or <code> makecab</code> may be used to package 
 
 Adversaries may use also third party utilities, such as 7-Zip, WinRAR, and WinZip, to perform similar activities.(Citation: 7zip Homepage)(Citation: WinRAR Homepage)(Citation: WinZip Homepage)
 
-#### Properties
-
-- id: T1560.001
-- name: Archive via Utility
-- created: 2020-02-20 21:01:25.428000+00:00
-- modified: 2025-10-24 17:48:19.477000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1560.002: Archive via Library
+
 ^t1560002-archive-via-library
 
 **Parent Technique**
@@ -58,17 +50,8 @@ An adversary may compress or encrypt data that is collected prior to exfiltratio
 
 Some archival libraries are preinstalled on systems, such as bzip2 on macOS and Linux, and zip on Windows. Note that the libraries are different from the utilities. The libraries can be linked against when compiling, while the utilities require spawning a subshell, or a similar execution mechanism.
 
-#### Properties
-
-- id: T1560.002
-- name: Archive via Library
-- created: 2020-02-20 21:08:52.529000+00:00
-- modified: 2025-10-24 17:48:42.345000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1560.003: Archive via Custom Method
+
 ^t1560003-archive-via-custom-method
 
 **Parent Technique**
@@ -79,16 +62,6 @@ Some archival libraries are preinstalled on systems, such as bzip2 on macOS and 
 
 An adversary may compress or encrypt data that is collected prior to exfiltration using a custom method. Adversaries may choose to use custom archival methods, such as encryption with XOR or stream ciphers implemented with no external library or utility references. Custom implementations of well-known compression algorithms have also been used.(Citation: ESET Sednit Part 2)
 
-#### Properties
-
-- id: T1560.003
-- name: Archive via Custom Method
-- created: 2020-02-20 21:09:55.995000+00:00
-- modified: 2025-10-24 17:48:26.190000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1047-audit|M1047: Audit]]
@@ -98,10 +71,4 @@ An adversary may compress or encrypt data that is collected prior to exfiltratio
 - Linux
 - macOS
 - Windows
-
-## Tools
-
-- [[bloodhound|BloodHound]]
-- [[empire|Empire]]
-- [[shimratreporter|ShimRatReporter]]
 

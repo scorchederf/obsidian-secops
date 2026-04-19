@@ -34,14 +34,6 @@ Monitor and Alert on Web-Based Threats:
 - Use SIEM tools to collect and analyze web proxy logs for signs of anomalous or malicious activity.
 - Configure alerts for access attempts to blocked domains or repeated file download failures.
 
-## Properties
-
-- id: M1021
-- name: Restrict Web-Based Content
-- created: 2019-06-06 20:52:59.206000+00:00
-- modified: 2024-12-24 13:40:41.043000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]

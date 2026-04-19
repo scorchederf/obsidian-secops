@@ -22,6 +22,7 @@ Establishing accounts can also include the creation of accounts with email provi
 ## Subtechniques
 
 ### T1585.001: Social Media Accounts
+
 ^t1585001-social-media-accounts
 
 **Parent Technique**
@@ -36,17 +37,8 @@ For operations incorporating social engineering, the utilization of a persona on
 
 Once a persona has been developed an adversary can use it to create connections to targets of interest. These connections may be direct or may include trying to connect through others.(Citation: NEWSCASTER2014)(Citation: BlackHatRobinSage) These accounts may be leveraged during other phases of the adversary lifecycle, such as during Initial Access (ex: [Spearphishing via Service](https://attack.mitre.org/techniques/T1566/003)).
 
-#### Properties
-
-- id: T1585.001
-- name: Social Media Accounts
-- created: 2020-10-01 01:08:41.124000+00:00
-- modified: 2025-10-24 17:49:14.364000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1585.002: Email Accounts
+
 ^t1585002-email-accounts
 
 **Parent Technique**
@@ -61,17 +53,8 @@ Adversaries may also take steps to cultivate a persona around the email account,
 
 To decrease the chance of physically tying back operations to themselves, adversaries may make use of disposable email services.(Citation: Trend Micro R980 2016) 
 
-#### Properties
-
-- id: T1585.002
-- name: Email Accounts
-- created: 2020-10-01 01:09:53.217000+00:00
-- modified: 2025-10-24 17:48:52.378000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1585.003: Cloud Accounts
+
 ^t1585003-cloud-accounts
 
 **Parent Technique**
@@ -83,16 +66,6 @@ To decrease the chance of physically tying back operations to themselves, advers
 Adversaries may create accounts with cloud providers that can be used during targeting. Adversaries can use cloud accounts to further their operations, including leveraging cloud storage services such as Dropbox, MEGA, Microsoft OneDrive, or AWS S3 buckets for [Exfiltration to Cloud Storage](https://attack.mitre.org/techniques/T1567/002) or to [Upload Tool](https://attack.mitre.org/techniques/T1608/002)s. Cloud accounts can also be used in the acquisition of infrastructure, such as [Virtual Private Server](https://attack.mitre.org/techniques/T1583/003)s or [Serverless](https://attack.mitre.org/techniques/T1583/007) infrastructure. Establishing cloud accounts may allow adversaries to develop sophisticated capabilities without managing their own servers.(Citation: Awake Security C2 Cloud)
 
 Creating [Cloud Accounts](https://attack.mitre.org/techniques/T1585/003) may also require adversaries to establish [Email Accounts](https://attack.mitre.org/techniques/T1585/002) to register with the cloud provider. 
-
-#### Properties
-
-- id: T1585.003
-- name: Cloud Accounts
-- created: 2022-05-27 14:06:05.130000+00:00
-- modified: 2025-10-24 17:49:06.502000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Pupy](https://attack.mitre.org/software/S0192) is an open source, cross-platform (Windows, Linux, OSX, Android) remote administration and post-exploitation tool. (Citation: GitHub Pupy) It is written in Python and can be generated as a payload in several different ways (Windows exe, Python file, PowerShell oneliner/file, Linux elf, APK, Rubber Ducky, etc.). (Citation: GitHub Pupy) [Pupy](https://attack.mitre.org/software/S0192) is publicly available on GitHub. (Citation: GitHub Pupy)
 
-## Properties
-
-- id: S0192
-- name: Pupy
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2023-09-28 21:08:47.128000+00:00
-- type: tool
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

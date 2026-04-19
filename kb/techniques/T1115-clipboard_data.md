@@ -24,10 +24,3 @@ macOS and Linux also have commands, such as <code>pbpaste</code>, to grab clipbo
 - macOS
 - Windows
 
-## Tools
-
-- [[empire|Empire]]
-- [[koadic|Koadic]]
-- [[remcos|Remcos]]
-- [[silenttrinity|SILENTTRINITY]]
-

@@ -22,7 +22,3 @@ Adversaries typically abuse system features for this type of enumeration. For ex
 - Windows
 - macOS
 
-## Tools
-
-- [[silenttrinity|SILENTTRINITY]]
-

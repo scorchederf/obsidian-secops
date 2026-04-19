@@ -35,14 +35,6 @@ Enable Secure Boot and Memory Protections:
 - Use Case: Prevent memory-based attacks used to extract credentials.
 - Implementation: Configure Secure Boot and enforce hardware-based security features like DEP (Data Execution Prevention) and ASLR (Address Space Layout Randomization).
 
-## Properties
-
-- id: M1043
-- name: Credential Access Protection
-- created: 2019-06-11 16:47:12.859000+00:00
-- modified: 2024-12-10 18:55:27.646000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

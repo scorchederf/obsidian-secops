@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Peirates](https://attack.mitre.org/software/S0683) is a post-exploitation Kubernetes exploitation framework with a focus on gathering service account tokens for lateral movement and privilege escalation. The tool is written in GoLang and publicly available on GitHub.(Citation: Peirates GitHub)
 
-## Properties
-
-- id: S0683
-- name: Peirates
-- created: 2022-02-08 16:11:38.528000+00:00
-- modified: 2025-04-16 20:38:52.924000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1046-network_service_discovery|T1046: Network Service Discovery]]

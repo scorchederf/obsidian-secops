@@ -17,6 +17,7 @@ Adversaries may employ an encryption algorithm to conceal command and control tr
 ## Subtechniques
 
 ### T1573.001: Symmetric Cryptography
+
 ^t1573001-symmetric-cryptography
 
 **Parent Technique**
@@ -27,17 +28,8 @@ Adversaries may employ an encryption algorithm to conceal command and control tr
 
 Adversaries may employ a known symmetric encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Symmetric encryption algorithms use the same key for plaintext encryption and ciphertext decryption. Common symmetric encryption algorithms include AES, DES, 3DES, Blowfish, and RC4.
 
-#### Properties
-
-- id: T1573.001
-- name: Symmetric Cryptography
-- created: 2020-03-16 15:45:17.032000+00:00
-- modified: 2025-10-24 17:48:32.429000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1573.002: Asymmetric Cryptography
+
 ^t1573002-asymmetric-cryptography
 
 **Parent Technique**
@@ -49,16 +41,6 @@ Adversaries may employ a known symmetric encryption algorithm to conceal command
 Adversaries may employ a known asymmetric encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Asymmetric cryptography, also known as public key cryptography, uses a keypair per party: one public that can be freely distributed, and one private. Due to how the keys are generated, the sender encrypts data with the receiver’s public key and the receiver decrypts the data with their private key. This ensures that only the intended recipient can read the encrypted data. Common public key encryption algorithms include RSA and ElGamal.
 
 For efficiency, many protocols (including SSL/TLS) use symmetric cryptography once a connection is established, but use asymmetric cryptography to establish or transmit a key. As such, these protocols are classified as [Asymmetric Cryptography](https://attack.mitre.org/techniques/T1573/002).
-
-#### Properties
-
-- id: T1573.002
-- name: Asymmetric Cryptography
-- created: 2020-03-16 15:48:33.882000+00:00
-- modified: 2025-10-24 17:49:18.961000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -72,7 +54,4 @@ For efficiency, many protocols (including SSL/TLS) use symmetric cryptography on
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
 

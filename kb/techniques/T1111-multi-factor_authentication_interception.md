@@ -30,6 +30,3 @@ Other methods of MFA may be intercepted and used by an adversary to authenticate
 - Windows
 - macOS
 
-## Tools
-
-

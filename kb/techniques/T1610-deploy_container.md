@@ -27,7 +27,3 @@ Containers can be deployed by various means, such as via Docker's <code>create</
 
 - Containers
 
-## Tools
-
-- [[peirates|Peirates]]
-

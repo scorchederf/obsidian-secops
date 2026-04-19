@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [QuasarRAT](https://attack.mitre.org/software/S0262) is an open-source, remote access tool that has been publicly available on GitHub since at least 2014. [QuasarRAT](https://attack.mitre.org/software/S0262) is developed in the C# language.(Citation: GitHub QuasarRAT)(Citation: Volexity Patchwork June 2018)
 
-## Properties
-
-- id: S0262
-- name: QuasarRAT
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2024-05-07 19:10:03.843000+00:00
-- type: tool
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

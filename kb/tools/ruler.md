@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Ruler](https://attack.mitre.org/software/S0358) is a tool to abuse Microsoft Exchange services. It is publicly available on GitHub and the tool is executed via the command line. The creators of [Ruler](https://attack.mitre.org/software/S0358) have also released a defensive tool, NotRuler, to detect its usage.(Citation: SensePost Ruler GitHub)(Citation: SensePost NotRuler)
 
-## Properties
-
-- id: S0358
-- name: Ruler
-- created: 2019-02-04 18:27:00.501000+00:00
-- modified: 2025-04-25 14:45:22.953000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1087-account_discovery|T1087: Account Discovery]]

@@ -22,6 +22,7 @@ Adversaries may also attempt to infer the location of a victim host using IP add
 ## Subtechniques
 
 ### T1614.001: System Language Discovery
+
 ^t1614001-system-language-discovery
 
 **Parent Technique**
@@ -38,24 +39,10 @@ For example, on a Windows system adversaries may attempt to infer the language o
 
 On a macOS or Linux system, adversaries may query <code>locale</code> to retrieve the value of the <code>$LANG</code> environment variable.
 
-#### Properties
-
-- id: T1614.001
-- name: System Language Discovery
-- created: 2021-08-18 14:06:45.244000+00:00
-- modified: 2025-10-24 17:49:20.039000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - IaaS
 - Linux
 - macOS
 - Windows
-
-## Tools
-
-- [[quasarrat|QuasarRAT]]
 

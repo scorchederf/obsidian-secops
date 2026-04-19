@@ -35,14 +35,6 @@ Application Layer Filtering:
 - Use Case: Use proxy servers or Web Application Firewalls (WAFs) to inspect and block malicious HTTP/S traffic.
 - Implementation: Configure a WAF to block SQL injection attempts or other web application exploitation techniques.
 
-## Properties
-
-- id: M1037
-- name: Filter Network Traffic
-- created: 2019-06-11 16:33:55.337000+00:00
-- modified: 2024-12-11 19:43:03.354000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

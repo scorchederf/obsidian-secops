@@ -21,6 +21,7 @@ Legitimate applications (such as [Software Deployment Tools](https://attack.mitr
 ## Subtechniques
 
 ### T1021.001: Remote Desktop Protocol
+
 ^t1021001-remote-desktop-protocol
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Remote desktop is a common feature in operating systems. It allows a user to log
 
 Adversaries may connect to a remote system over RDP/RDS to expand access if the service is enabled and allows access to accounts with known credentials. Adversaries will likely use Credential Access techniques to acquire credentials to use with RDP. Adversaries may also use RDP in conjunction with the [Accessibility Features](https://attack.mitre.org/techniques/T1546/008) or [Terminal Services DLL](https://attack.mitre.org/techniques/T1505/005) for Persistence.(Citation: Alperovitch Malware)
 
-#### Properties
-
-- id: T1021.001
-- name: Remote Desktop Protocol
-- created: 2020-02-11 18:23:26.059000+00:00
-- modified: 2025-10-24 17:49:33.524000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1021.002: SMB/Windows Admin Shares
+
 ^t1021002-smb-windows-admin-shares
 
 **Parent Technique**
@@ -60,17 +52,8 @@ SMB is a file, printer, and serial port sharing protocol for Windows machines on
 
 Windows systems have hidden network shares that are accessible only to administrators and provide the ability for remote file copy and other administrative functions. Example network shares include `C$`, `ADMIN$`, and `IPC$`. Adversaries may use this technique in conjunction with administrator-level [Valid Accounts](https://attack.mitre.org/techniques/T1078) to remotely access a networked system over SMB,(Citation: Wikipedia Server Message Block) to interact with systems using remote procedure calls (RPCs),(Citation: TechNet RPC) transfer files, and run transferred binaries through remote Execution. Example execution techniques that rely on authenticated sessions over SMB/RPC are [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053), [Service Execution](https://attack.mitre.org/techniques/T1569/002), and [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047). Adversaries can also use NTLM hashes to access administrator shares on systems with [Pass the Hash](https://attack.mitre.org/techniques/T1550/002) and certain configuration and patch levels.(Citation: Microsoft Admin Shares)
 
-#### Properties
-
-- id: T1021.002
-- name: SMB/Windows Admin Shares
-- created: 2020-02-11 18:25:28.212000+00:00
-- modified: 2025-10-24 17:48:45.700000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1021.003: Distributed Component Object Model
+
 ^t1021003-distributed-component-object-model
 
 **Parent Technique**
@@ -87,17 +70,8 @@ Permissions to interact with local and remote server COM objects are specified b
 
 Through DCOM, adversaries operating in the context of an appropriately privileged user can remotely obtain arbitrary and even direct shellcode execution through Office applications(Citation: Enigma Outlook DCOM Lateral Movement Nov 2017) as well as other Windows objects that contain insecure methods.(Citation: Enigma MMC20 COM Jan 2017)(Citation: Enigma DCOM Lateral Movement Jan 2017) DCOM can also execute macros in existing documents(Citation: Enigma Excel DCOM Sept 2017) and may also invoke [Dynamic Data Exchange](https://attack.mitre.org/techniques/T1559/002) (DDE) execution directly through a COM created instance of a Microsoft Office application(Citation: Cyberreason DCOM DDE Lateral Movement Nov 2017), bypassing the need for a malicious document. DCOM can be used as a method of remotely interacting with [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047). (Citation: MSDN WMI)
 
-#### Properties
-
-- id: T1021.003
-- name: Distributed Component Object Model
-- created: 2020-02-11 18:26:36.444000+00:00
-- modified: 2025-10-24 17:48:53.724000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1021.004: SSH
+
 ^t1021004-ssh
 
 **Parent Technique**
@@ -110,17 +84,8 @@ Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) 
 
 SSH is a protocol that allows authorized users to open remote shells on other computers. Many Linux and macOS versions come with SSH installed by default, although typically disabled until the user enables it. On ESXi, SSH can be enabled either directly on the host (e.g., via `vim-cmd hostsvc/enable_ssh`) or via vCenter.(Citation: Sygnia ESXi Ransomware 2025)(Citation: TrendMicro ESXI Ransomware)(Citation: Sygnia Abyss Locker 2025) The SSH server can be configured to use standard password authentication or public-private keypairs in lieu of or in addition to a password. In this authentication scenario, the user’s public key must be in a special file on the computer running the server that lists which keypairs are allowed to login as that user (i.e., [SSH Authorized Keys](https://attack.mitre.org/techniques/T1098/004)).
 
-#### Properties
-
-- id: T1021.004
-- name: SSH
-- created: 2020-02-11 18:27:15.774000+00:00
-- modified: 2025-10-24 17:48:34.985000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1021.005: VNC
+
 ^t1021005-vnc
 
 **Parent Technique**
@@ -135,17 +100,8 @@ VNC differs from [Remote Desktop Protocol](https://attack.mitre.org/techniques/T
 
 Adversaries may abuse VNC to perform malicious actions as the logged-on user such as opening documents, downloading files, and running arbitrary commands. An adversary could use VNC to remotely control and monitor a system to collect data and information to pivot to other systems within the network. Specific VNC libraries/implementations have also been susceptible to brute force attacks and memory usage exploitation.(Citation: Hijacking VNC)(Citation: macOS root VNC login without authentication)(Citation: VNC Vulnerabilities)(Citation: Offensive Security VNC Authentication Check)(Citation: Attacking VNC Servers PentestLab)(Citation: Havana authentication bug)
 
-#### Properties
-
-- id: T1021.005
-- name: VNC
-- created: 2020-02-11 18:28:44.950000+00:00
-- modified: 2025-10-24 17:48:19.567000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1021.006: Windows Remote Management
+
 ^t1021006-windows-remote-management
 
 **Parent Technique**
@@ -158,17 +114,8 @@ Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) 
 
 WinRM is the name of both a Windows service and a protocol that allows a user to interact with a remote system (e.g., run an executable, modify the Registry, modify services).(Citation: Microsoft WinRM) It may be called with the `winrm` command or by any number of programs such as PowerShell.(Citation: Jacobsen 2014) WinRM  can be used as a method of remotely interacting with [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047).(Citation: MSDN WMI)
 
-#### Properties
-
-- id: T1021.006
-- name: Windows Remote Management
-- created: 2020-02-11 18:29:47.757000+00:00
-- modified: 2025-10-24 17:48:51+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1021.007: Cloud Services
+
 ^t1021007-cloud-services
 
 **Parent Technique**
@@ -183,17 +130,8 @@ Many enterprises federate centrally managed user identities to cloud services, a
 
 In some cases, adversaries may be able to authenticate to these services via [Application Access Token](https://attack.mitre.org/techniques/T1550/001) instead of a username and password. 
 
-#### Properties
-
-- id: T1021.007
-- name: Cloud Services
-- created: 2023-02-21 19:38:13.371000+00:00
-- modified: 2025-04-15 22:03:56.494000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1021.008: Direct Cloud VM Connections
+
 ^t1021008-direct-cloud-vm-connections
 
 **Parent Technique**
@@ -207,16 +145,6 @@ Adversaries may leverage [Valid Accounts](https://attack.mitre.org/techniques/T1
 Methods of authentication for these connections can include passwords, application access tokens, or SSH keys. These cloud native methods may, by default, allow for privileged access on the host with SYSTEM or root level access. 
 
 Adversaries may utilize these cloud native methods to directly access virtual infrastructure and pivot through an environment.(Citation: SIM Swapping and Abuse of the Microsoft Azure Serial Console) These connections typically provide direct console access to the VM rather than the execution of scripts (i.e., [Cloud Administration Command](https://attack.mitre.org/techniques/T1651)).
-
-#### Properties
-
-- id: T1021.008
-- name: Direct Cloud VM Connections
-- created: 2023-06-02 15:27:55.412000+00:00
-- modified: 2025-04-15 22:18:53.305000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -234,8 +162,4 @@ Adversaries may utilize these cloud native methods to directly access virtual in
 - Windows
 - IaaS
 - ESXi
-
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
 

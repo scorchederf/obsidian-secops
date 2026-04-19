@@ -37,14 +37,6 @@ Restrict Add-ons and Plugins:
 
 
 
-## Properties
-
-- id: M1042
-- name: Disable or Remove Feature or Program
-- created: 2019-06-11 16:45:19.740000+00:00
-- modified: 2024-12-10 19:21:06.027000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1011-exfiltration_over_other_network_medium|T1011: Exfiltration Over Other Network Medium]]

@@ -30,14 +30,6 @@ Dynamic Analysis Prevention:
 - Use Case: Use behavior-based execution prevention tools to identify and block malicious activity in real time.
 - Implemenation: Employ EDR solutions that analyze runtime behavior and block suspicious code execution.
 
-## Properties
-
-- id: M1038
-- name: Execution Prevention
-- created: 2019-06-11 16:35:25.488000+00:00
-- modified: 2024-12-11 18:10:27.976000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1036-masquerading|T1036: Masquerading]]

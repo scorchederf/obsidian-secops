@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Sliver](https://attack.mitre.org/software/S0633) is an open source, cross-platform, red team command and control (C2) framework written in Golang. [Sliver](https://attack.mitre.org/software/S0633) includes its own package manager, "armory," for staging and downloading additional tools and payloads to the primary C2 framework.(Citation: Bishop Fox Sliver Framework August 2019)(Citation: Cybereason Sliver Undated)
 
-## Properties
-
-- id: S0633
-- name: Sliver
-- created: 2021-07-30 15:43:17.770000+00:00
-- modified: 2025-03-24 16:00:41.005000+00:00
-- type: tool
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1001-data_obfuscation|T1001: Data Obfuscation]]

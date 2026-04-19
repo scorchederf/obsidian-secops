@@ -21,6 +21,7 @@ More sophisticated samples may perform multiple process injections to segment mo
 ## Subtechniques
 
 ### T1055.001: Dynamic-link Library Injection
+
 ^t1055001-dynamic-link-library-injection
 
 **Parent Technique**
@@ -39,17 +40,8 @@ Another variation of this method, often referred to as Module Stomping/Overloadi
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via DLL injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.001
-- name: Dynamic-link Library Injection
-- created: 2020-01-14 01:26:08.145000+00:00
-- modified: 2025-10-24 17:49:36.680000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1055.002: Portable Executable Injection
+
 ^t1055002-portable-executable-injection
 
 **Parent Technique**
@@ -64,17 +56,8 @@ PE injection is commonly performed by copying code (perhaps without a file on di
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via PE injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.002
-- name: Portable Executable Injection
-- created: 2020-01-14 01:27:31.344000+00:00
-- modified: 2025-10-24 17:49:01.839000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1055.003: Thread Execution Hijacking
+
 ^t1055003-thread-execution-hijacking
 
 **Parent Technique**
@@ -91,17 +74,8 @@ This is very similar to [Process Hollowing](https://attack.mitre.org/techniques/
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via Thread Execution Hijacking may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.003
-- name: Thread Execution Hijacking
-- created: 2020-01-14 01:28:32.166000+00:00
-- modified: 2025-10-24 17:48:42.433000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1055.004: Asynchronous Procedure Call
+
 ^t1055004-asynchronous-procedure-call
 
 **Parent Technique**
@@ -118,17 +92,8 @@ A variation of APC injection, dubbed "Early Bird injection", involves creating a
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via APC injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.004
-- name: Asynchronous Procedure Call
-- created: 2020-01-14 01:29:43.786000+00:00
-- modified: 2025-10-24 17:49:00.298000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1055.005: Thread Local Storage
+
 ^t1055005-thread-local-storage
 
 **Parent Technique**
@@ -143,17 +108,8 @@ TLS callback injection involves manipulating pointers inside a portable executab
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via TLS callback injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.005
-- name: Thread Local Storage
-- created: 2020-01-14 01:30:41.092000+00:00
-- modified: 2025-10-24 17:49:32.111000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1055.008: Ptrace System Calls
+
 ^t1055008-ptrace-system-calls
 
 **Parent Technique**
@@ -170,17 +126,8 @@ Ptrace system call injection may not be possible targeting processes that are no
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via ptrace system call injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.008
-- name: Ptrace System Calls
-- created: 2020-01-14 01:33:19.065000+00:00
-- modified: 2025-10-24 17:49:33.344000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1055.009: Proc Memory
+
 ^t1055009-proc-memory
 
 **Parent Technique**
@@ -197,17 +144,8 @@ Other techniques such as [Dynamic Linker Hijacking](https://attack.mitre.org/tec
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via proc memory injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.009
-- name: Proc Memory
-- created: 2020-01-14 01:34:10.588000+00:00
-- modified: 2025-10-24 17:49:25.806000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1055.011: Extra Window Memory Injection
+
 ^t1055011-extra-window-memory-injection
 
 **Parent Technique**
@@ -226,17 +164,8 @@ Execution granted through EWM injection may allow access to both the target proc
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via EWM injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.011
-- name: Extra Window Memory Injection
-- created: 2020-01-14 17:18:32.126000+00:00
-- modified: 2025-10-24 17:48:19.059000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1055.012: Process Hollowing
+
 ^t1055012-process-hollowing
 
 **Parent Technique**
@@ -251,17 +180,8 @@ Process hollowing is commonly performed by creating a process in a suspended sta
 
 This is very similar to [Thread Local Storage](https://attack.mitre.org/techniques/T1055/005) but creates a new process rather than targeting an existing process. This behavior will likely not result in elevated privileges since the injected process was spawned from (and thus inherits the security context) of the injecting process. However, execution via process hollowing may also evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.012
-- name: Process Hollowing
-- created: 2020-01-14 17:21:54.470000+00:00
-- modified: 2025-10-24 17:49:14.559000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1055.013: Process Doppelgänging
+
 ^t1055013-process-doppelgänging
 
 **Parent Technique**
@@ -287,17 +207,8 @@ Process Doppelgänging is implemented in 4 steps (Citation: BlackHat Process Dop
 
 This behavior will likely not result in elevated privileges since the injected process was spawned from (and thus inherits the security context) of the injecting process. However, execution via process doppelgänging may evade detection from security products since the execution is masked under a legitimate process. 
 
-#### Properties
-
-- id: T1055.013
-- name: Process Doppelgänging
-- created: 2020-01-14 17:19:50.978000+00:00
-- modified: 2025-10-24 17:48:56.422000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1055.014: VDSO Hijacking
+
 ^t1055014-vdso-hijacking
 
 **Parent Technique**
@@ -312,17 +223,8 @@ VDSO hijacking involves redirecting calls to dynamically linked shared libraries
 
 Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via VDSO hijacking may also evade detection from security products since the execution is masked under a legitimate process.  
 
-#### Properties
-
-- id: T1055.014
-- name: VDSO Hijacking
-- created: 2020-01-14 01:35:00.781000+00:00
-- modified: 2025-10-24 17:49:08.040000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1055.015: ListPlanting
+
 ^t1055015-listplanting
 
 **Parent Technique**
@@ -341,16 +243,6 @@ Some variations of ListPlanting may allocate memory in the target process but th
 
 Finally, the payload is triggered by sending the <code>LVM_SORTITEMS</code> message to the <code>SysListView32</code> child of the process window, with the payload within the newly allocated buffer passed and executed as the <code>ListView_SortItems</code> callback.
 
-#### Properties
-
-- id: T1055.015
-- name: ListPlanting
-- created: 2021-11-22 15:02:15.190000+00:00
-- modified: 2025-10-24 17:49:33.701000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1026-privileged_account_management|M1026: Privileged Account Management]]
@@ -361,16 +253,4 @@ Finally, the payload is triggered by sending the <code>LVM_SORTITEMS</code> mess
 - Linux
 - macOS
 - Windows
-
-## Tools
-
-- [[donut|Donut]]
-- [[empire|Empire]]
-- [[htran|HTRAN]]
-- [[ironnetinjector|IronNetInjector]]
-- [[pcshare|PcShare]]
-- [[poshc2|PoshC2]]
-- [[remcos|Remcos]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[sliver|Sliver]]
 

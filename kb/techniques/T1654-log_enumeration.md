@@ -32,7 +32,3 @@ In addition to gaining a better understanding of the environment, adversaries ma
 - macOS
 - Windows
 
-## Tools
-
-- [[pacu|Pacu]]
-

@@ -21,6 +21,7 @@ An adversary may also be able to escalate their privileges since some boot or lo
 ## Subtechniques
 
 ### T1037.001: Logon Script (Windows)
+
 ^t1037001-logon-script-(windows)
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Adversaries may use Windows logon scripts automatically executed at logon initia
 
 Adversaries may use these scripts to maintain persistence on a single system. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary. 
 
-#### Properties
-
-- id: T1037.001
-- name: Logon Script (Windows)
-- created: 2020-01-10 03:43:37.211000+00:00
-- modified: 2025-10-24 17:49:33.610000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1037.002: Login Hook
+
 ^t1037002-login-hook
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Adversaries can add or insert a path to a malicious script in the <code>com.appl
 
 **Note:** Login hooks were deprecated in 10.11 version of macOS in favor of [Launch Daemon](https://attack.mitre.org/techniques/T1543/004) and [Launch Agent](https://attack.mitre.org/techniques/T1543/001) 
 
-#### Properties
-
-- id: T1037.002
-- name: Login Hook
-- created: 2020-01-10 16:01:15.995000+00:00
-- modified: 2025-10-24 17:48:42.963000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ### T1037.003: Network Logon Script
+
 ^t1037003-network-logon-script
 
 **Parent Technique**
@@ -81,17 +64,8 @@ Adversaries may use network logon scripts automatically executed at logon initia
  
 Adversaries may use these scripts to maintain persistence on a network. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary.
 
-#### Properties
-
-- id: T1037.003
-- name: Network Logon Script
-- created: 2020-01-10 18:01:03.666000+00:00
-- modified: 2025-10-24 17:49:21.921000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1037.004: RC Scripts
+
 ^t1037004-rc-scripts
 
 **Parent Technique**
@@ -108,17 +82,8 @@ Adversary abuse of RC scripts is especially effective for lightweight Unix-like 
 
 Several Unix-like systems have moved to Systemd and deprecated the use of RC scripts. This is now a deprecated mechanism in macOS in favor of Launchd.(Citation: Apple Developer Doco Archive Launchd)(Citation: Startup Items) This technique can be used on Mac OS X Panther v10.3 and earlier versions which still execute the RC scripts.(Citation: Methods of Mac Malware Persistence) To maintain backwards compatibility some systems, such as Ubuntu, will execute the RC scripts if they exist with the correct file permissions.(Citation: Ubuntu Manpage systemd rc)
 
-#### Properties
-
-- id: T1037.004
-- name: RC Scripts
-- created: 2020-01-15 16:25:22.260000+00:00
-- modified: 2025-10-24 17:49:28.955000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ### T1037.005: Startup Items
+
 ^t1037005-startup-items
 
 **Parent Technique**
@@ -133,16 +98,6 @@ This is technically a deprecated technology (superseded by [Launch Daemon](https
 
 An adversary can create the appropriate folders/files in the StartupItems directory to register their own persistence mechanism.(Citation: Methods of Mac Malware Persistence) Additionally, since StartupItems run during the bootup phase of macOS, they will run as the elevated root user.
 
-#### Properties
-
-- id: T1037.005
-- name: Startup Items
-- created: 2020-01-15 18:00:33.603000+00:00
-- modified: 2025-10-24 17:49:19.678000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1022-restrict_file_and_directory_permissions|M1022: Restrict File and Directory Permissions]]
@@ -155,7 +110,4 @@ An adversary can create the appropriate folders/files in the StartupItems direct
 - Linux
 - Network Devices
 - ESXi
-
-## Tools
-
 

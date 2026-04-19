@@ -39,6 +39,3 @@ After an adversary acquires a valid cookie, they can then perform a [Web Session
 - Windows
 - macOS
 
-## Tools
-
-

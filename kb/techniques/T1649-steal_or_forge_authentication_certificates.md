@@ -34,8 +34,3 @@ Adversaries who have access to root (or subordinate) CA certificate private keys
 - macOS
 - Identity Provider
 
-## Tools
-
-- [[aadinternals|AADInternals]]
-- [[mimikatz|Mimikatz]]
-

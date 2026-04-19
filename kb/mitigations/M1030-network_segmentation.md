@@ -45,14 +45,6 @@ Test Segmentation Effectiveness:
 
 - Perform periodic penetration tests to verify that unauthorized access is blocked between network segments.
 
-## Properties
-
-- id: M1030
-- name: Network Segmentation
-- created: 2019-06-10 20:41:03.271000+00:00
-- modified: 2025-04-02 17:29:32.003000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

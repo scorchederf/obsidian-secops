@@ -19,6 +19,7 @@ Accounts may be created on the local system or within a domain or cloud tenant. 
 ## Subtechniques
 
 ### T1136.001: Local Account
+
 ^t1136001-local-account
 
 **Parent Technique**
@@ -35,17 +36,8 @@ Adversaries may also create new local accounts on network firewall management co
 
 Such accounts may be used to establish secondary credentialed access that do not require persistent remote access tools to be deployed on the system.
 
-#### Properties
-
-- id: T1136.001
-- name: Local Account
-- created: 2020-01-28 13:50:22.506000+00:00
-- modified: 2025-10-24 17:48:51.903000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ### T1136.002: Domain Account
+
 ^t1136002-domain-account
 
 **Parent Technique**
@@ -58,17 +50,8 @@ Adversaries may create a domain account to maintain access to victim systems. Do
 
 Such accounts may be used to establish secondary credentialed access that do not require persistent remote access tools to be deployed on the system.
 
-#### Properties
-
-- id: T1136.002
-- name: Domain Account
-- created: 2020-01-28 14:05:17.825000+00:00
-- modified: 2025-10-24 17:48:57.883000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1136.003: Cloud Account
+
 ^t1136003-cloud-account
 
 **Parent Technique**
@@ -84,16 +67,6 @@ In addition to user accounts, cloud accounts may be associated with services. Cl
 Adversaries may create accounts that only have access to specific cloud services, which can reduce the chance of detection.
 
 Once an adversary has created a cloud account, they can then manipulate that account to ensure persistence and allow access to additional resources - for example, by adding [Additional Cloud Credentials](https://attack.mitre.org/techniques/T1098/001) or assigning [Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003).
-
-#### Properties
-
-- id: T1136.003
-- name: Cloud Account
-- created: 2020-01-29 17:32:30.711000+00:00
-- modified: 2025-10-24 17:49:09.917000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -114,7 +87,4 @@ Once an adversary has created a cloud account, they can then manipulate that acc
 - Office Suite
 - Identity Provider
 - ESXi
-
-## Tools
-
 

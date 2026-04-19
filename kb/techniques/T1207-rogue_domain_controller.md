@@ -22,7 +22,3 @@ This technique may bypass system logging and security monitors such as security 
 
 - Windows
 
-## Tools
-
-- [[mimikatz|Mimikatz]]
-

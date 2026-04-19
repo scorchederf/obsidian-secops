@@ -33,15 +33,3 @@ Within macOS environments, adversaries may use the native Bonjour application to
 - Network Devices
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[empire|Empire]]
-- [[frp|FRP]]
-- [[koadic|Koadic]]
-- [[nbtscan|NBTscan]]
-- [[peirates|Peirates]]
-- [[poshc2|PoshC2]]
-- [[pupy|Pupy]]
-- [[silenttrinity|SILENTTRINITY]]
-

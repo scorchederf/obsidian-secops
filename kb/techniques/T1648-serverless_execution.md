@@ -29,7 +29,3 @@ Serverless functions can also be invoked in response to cloud events (i.e. [Even
 - IaaS
 - Office Suite
 
-## Tools
-
-- [[pacu|Pacu]]
-

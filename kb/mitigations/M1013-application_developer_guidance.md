@@ -41,14 +41,6 @@ Threat Modeling in the Design Phase:
 - Dynamic Application Security Testing (DAST): Use tools like Burp Suite or OWASP ZAP to simulate runtime attacks and identify vulnerabilities.
 - Secure Frameworks: Recommend secure-by-default frameworks (e.g., Django for Python, Spring Security for Java) that enforce security best practices.
 
-## Properties
-
-- id: M1013
-- name: Application Developer Guidance
-- created: 2017-10-25 14:48:53.732000+00:00
-- modified: 2024-12-10 16:07:50.023000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1078-valid_accounts|T1078: Valid Accounts]]

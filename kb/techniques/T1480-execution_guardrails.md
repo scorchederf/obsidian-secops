@@ -21,6 +21,7 @@ Adversaries may identify and block certain user-agents to evade defenses and nar
 ## Subtechniques
 
 ### T1480.001: Environmental Keying
+
 ^t1480001-environmental-keying
 
 **Parent Technique**
@@ -37,17 +38,8 @@ Similar to [Obfuscated Files or Information](https://attack.mitre.org/techniques
 
 Like other [Execution Guardrails](https://attack.mitre.org/techniques/T1480), environmental keying can be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. This activity is distinct from typical [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497). While use of [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) may involve checking for known sandbox values and continuing with execution only if there is no match, the use of environmental keying will involve checking for an expected target-specific value that must match for decryption and subsequent execution to be successful.
 
-#### Properties
-
-- id: T1480.001
-- name: Environmental Keying
-- created: 2020-06-23 22:28:28.041000+00:00
-- modified: 2025-10-24 17:49:35.768000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1480.002: Mutual Exclusion
+
 ^t1480002-mutual-exclusion
 
 **Parent Technique**
@@ -64,16 +56,6 @@ In Linux environments, malware may instead attempt to acquire a lock on a mutex 
 
 Mutex names may be hard-coded or dynamically generated using a predictable algorithm.(Citation: ICS Mutexes 2015)
 
-#### Properties
-
-- id: T1480.002
-- name: Mutual Exclusion
-- created: 2024-09-19 14:00:03.401000+00:00
-- modified: 2025-04-15 22:50:39.088000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1055-do_not_mitigate|M1055: Do Not Mitigate]]
@@ -84,7 +66,4 @@ Mutex names may be hard-coded or dynamically generated using a predictable algor
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

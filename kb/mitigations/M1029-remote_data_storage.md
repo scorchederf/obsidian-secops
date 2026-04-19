@@ -40,14 +40,6 @@ Data Encryption:
 - Ensure encryption for sensitive data using AES-256 at rest and TLS 1.2+ for data in transit.
 Tools: OpenSSL, BitLocker, LUKS for Linux.
 
-## Properties
-
-- id: M1029
-- name: Remote Data Storage
-- created: 2019-06-06 21:21:13.027000+00:00
-- modified: 2024-12-18 19:03:10.800000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1070-indicator_removal|T1070: Indicator Removal]]

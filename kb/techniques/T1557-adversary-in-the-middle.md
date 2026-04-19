@@ -21,6 +21,7 @@ Adversaries may also leverage the AiTM position to attempt to monitor and/or mod
 ## Subtechniques
 
 ### T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay
+
 ^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay
 
 **Parent Technique**
@@ -39,17 +40,8 @@ In some cases where an adversary has access to a system that is in the authentic
 
 Several tools may be used to poison name services within local networks such as NBNSpoof, Metasploit, and [Responder](https://attack.mitre.org/software/S0174).(Citation: GitHub NBNSpoof)(Citation: Rapid7 LLMNR Spoofer)(Citation: GitHub Responder)
 
-#### Properties
-
-- id: T1557.001
-- name: LLMNR/NBT-NS Poisoning and SMB Relay
-- created: 2020-02-11 19:08:51.677000+00:00
-- modified: 2025-10-24 17:48:52.462000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1557.002: ARP Cache Poisoning
+
 ^t1557002-arp-cache-poisoning
 
 **Parent Technique**
@@ -69,17 +61,8 @@ The ARP protocol is stateless and does not require authentication. Therefore, de
 Adversaries may use ARP cache poisoning as a means to intercept network traffic. This activity may be used to collect and/or relay data such as credentials, especially those sent over an insecure, unencrypted protocol.(Citation: Sans ARP Spoofing Aug 2003)
 
 
-#### Properties
-
-- id: T1557.002
-- name: ARP Cache Poisoning
-- created: 2020-10-15 12:05:58.755000+00:00
-- modified: 2025-10-24 17:49:23.221000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1557.003: DHCP Spoofing
+
 ^t1557003-dhcp-spoofing
 
 **Parent Technique**
@@ -106,17 +89,8 @@ DHCPv6 clients can receive network configuration information without being assig
 
 Rather than establishing an AiTM position, adversaries may also abuse DHCP spoofing to perform a DHCP exhaustion attack (i.e, [Service Exhaustion Flood](https://attack.mitre.org/techniques/T1499/002)) by generating many broadcast DISCOVER messages to exhaust a network’s DHCP allocation pool. 
 
-#### Properties
-
-- id: T1557.003
-- name: DHCP Spoofing
-- created: 2022-03-24 19:30:56.727000+00:00
-- modified: 2025-10-24 17:48:49.941000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1557.004: Evil Twin
+
 ^t1557004-evil-twin
 
 **Parent Technique**
@@ -132,16 +106,6 @@ By using a Service Set Identifier (SSID) of a legitimate Wi-Fi network, fraudule
 Similarly, adversaries may also listen for client devices sending probe requests for known or previously connected networks (Preferred Network Lists or PNLs). When a malicious access point receives a probe request, adversaries can respond with the same SSID to imitate the trusted, known network.(Citation: specter ops evil twin)  Victim devices are led to believe the responding access point is from their PNL and initiate a connection to the fraudulent network.
 
 Upon logging into the malicious Wi-Fi access point, a user may be directed to a fake login page or captive portal webpage to capture the victim’s credentials. Once a user is logged into the fraudulent Wi-Fi network, the adversary may able to monitor network activity, manipulate data, or steal additional credentials. Locations with high concentrations of public Wi-Fi access, such as airports, coffee shops, or libraries, may be targets for adversaries to set up illegitimate Wi-Fi access points. 
-
-#### Properties
-
-- id: T1557.004
-- name: Evil Twin
-- created: 2024-09-17 14:27:40.947000+00:00
-- modified: 2025-04-15 19:58:27.842000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 
@@ -159,8 +123,4 @@ Upon logging into the malicious Wi-Fi access point, a user may be directed to a 
 - macOS
 - Network Devices
 - Windows
-
-## Tools
-
-- [[nppspy|NPPSPY]]
 

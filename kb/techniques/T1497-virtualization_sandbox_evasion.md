@@ -21,6 +21,7 @@ Adversaries may use several methods to accomplish [Virtualization/Sandbox Evasio
 ## Subtechniques
 
 ### T1497.001: System Checks
+
 ^t1497001-system-checks
 
 **Parent Technique**
@@ -39,17 +40,8 @@ Other common checks may enumerate services running that are unique to these appl
  
 Hardware checks, such as the presence of the fan, temperature, and audio devices, could also be used to gather evidence that can be indicative a virtual environment. Adversaries may also query for specific readings from these devices.(Citation: Unit 42 OilRig Sept 2018)
 
-#### Properties
-
-- id: T1497.001
-- name: System Checks
-- created: 2020-03-06 20:57:37.959000+00:00
-- modified: 2025-10-24 17:48:33.591000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.3
-- x_mitre_domains: enterprise-attack
-
 ### T1497.002: User Activity Based Checks
+
 ^t1497002-user-activity-based-checks
 
 **Parent Technique**
@@ -62,17 +54,8 @@ Adversaries may employ various user activity checks to detect and avoid virtuali
 
 Adversaries may search for user activity on the host based on variables such as the speed/frequency of mouse movements and clicks (Citation: Sans Virtual Jan 2016) , browser history, cache, bookmarks, or number of files in common directories such as home or the desktop. Other methods may rely on specific user interaction with the system before the malicious code is activated, such as waiting for a document to close before activating a macro (Citation: Unit 42 Sofacy Nov 2018) or waiting for a user to double click on an embedded image to activate.(Citation: FireEye FIN7 April 2017) 
 
-#### Properties
-
-- id: T1497.002
-- name: User Activity Based Checks
-- created: 2020-03-06 21:04:12.454000+00:00
-- modified: 2025-10-24 17:49:06.305000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1497.003: Time Based Checks
+
 ^t1497003-time-based-checks
 
 **Parent Technique**
@@ -85,22 +68,9 @@ Adversaries may employ various time-based methods to detect virtualization and a
 
 Adversaries may use calls like `GetTickCount` and `GetSystemTimeAsFileTime` to discover if they are operating within a virtual machine or sandbox, or may be able to identify a sandbox accelerating time by sampling and calculating the expected value for an environment's timestamp before and after execution of a sleep function.(Citation: ISACA Malware Tricks)
 
-#### Properties
-
-- id: T1497.003
-- name: Time Based Checks
-- created: 2020-03-06 21:11:11.225000+00:00
-- modified: 2025-10-24 17:48:44.870000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
 - macOS
 - Windows
-
-## Tools
-
 

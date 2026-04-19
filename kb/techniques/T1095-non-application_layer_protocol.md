@@ -33,10 +33,3 @@ In ESXi environments, adversaries may leverage the Virtual Machine Communication
 - Network Devices
 - Windows
 
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[frp|FRP]]
-- [[mythic|Mythic]]
-- [[quasarrat|QuasarRAT]]
-

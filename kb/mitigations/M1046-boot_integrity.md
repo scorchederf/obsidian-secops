@@ -30,14 +30,6 @@ Runtime Integrity Monitoring:
 - Implementation: Deploy solutions to verify the integrity of critical files and processes after boot.
 - Use Case: A malware infection modifies kernel modules post-boot. Runtime integrity monitoring detects the modification and prevents the malicious module from loading.
 
-## Properties
-
-- id: M1046
-- name: Boot Integrity
-- created: 2019-06-11 17:02:36.984000+00:00
-- modified: 2024-12-10 18:48:36.517000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]

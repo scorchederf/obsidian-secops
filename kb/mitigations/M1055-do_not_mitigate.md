@@ -30,14 +30,6 @@ Negative Impact on Performance and Availability:
 - Interpretation: Mitigations that involve removing or restricting system functionalities can have unintended consequences for system performance and availability. Some mitigations, while effective at blocking certain attacks, may introduce performance bottlenecks or compromise essential operations.
 - Use Case: Implementing high levels of encryption to mitigate data theft might result in significant performance degradation in systems handling large volumes of real-time transactions.
 
-## Properties
-
-- id: M1055
-- name: Do Not Mitigate
-- created: 2019-07-19 14:58:42.715000+00:00
-- modified: 2024-12-10 19:25:57.870000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1480-execution_guardrails|T1480: Execution Guardrails]]

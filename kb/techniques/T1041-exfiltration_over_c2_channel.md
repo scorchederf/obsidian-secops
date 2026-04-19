@@ -26,13 +26,3 @@ Adversaries may steal data by exfiltrating it over an existing command and contr
 - macOS
 - Windows
 
-## Tools
-
-- [[empire|Empire]]
-- [[imminent_monitor|Imminent Monitor]]
-- [[pcshare|PcShare]]
-- [[pupy|Pupy]]
-- [[shimratreporter|ShimRatReporter]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[sliver|Sliver]]
-

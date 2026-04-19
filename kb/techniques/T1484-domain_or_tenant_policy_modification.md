@@ -28,6 +28,7 @@ Adversaries may temporarily modify domain or tenant policy, carry out a maliciou
 ## Subtechniques
 
 ### T1484.001: Group Policy Modification
+
 ^t1484001-group-policy-modification
 
 **Parent Technique**
@@ -44,17 +45,8 @@ Malicious GPO modifications can be used to implement many other malicious behavi
 
 For example, publicly available scripts such as <code>New-GPOImmediateTask</code> can be leveraged to automate the creation of a malicious [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053) by modifying GPO settings, in this case modifying <code>&lt;GPO_PATH&gt;\Machine\Preferences\ScheduledTasks\ScheduledTasks.xml</code>.(Citation: Wald0 Guide to GPOs)(Citation: Harmj0y Abusing GPO Permissions) In some cases an adversary might modify specific user rights like SeEnableDelegationPrivilege, set in <code>&lt;GPO_PATH&gt;\MACHINE\Microsoft\Windows NT\SecEdit\GptTmpl.inf</code>, to achieve a subtle AD backdoor with complete control of the domain because the user account under the adversary's control would then be able to modify GPOs.(Citation: Harmj0y SeEnableDelegationPrivilege Right)
 
-#### Properties
-
-- id: T1484.001
-- name: Group Policy Modification
-- created: 2020-12-28 21:50:59.844000+00:00
-- modified: 2025-10-24 17:48:50.475000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1484.002: Trust Modification
+
 ^t1484002-trust-modification
 
 **Parent Technique**
@@ -68,16 +60,6 @@ Adversaries may add new domain trusts, modify the properties of existing domain 
 Manipulating these trusts may allow an adversary to escalate privileges and/or evade defenses by modifying settings to add objects which they control. For example, in Microsoft Active Directory (AD) environments, this may be used to forge [SAML Tokens](https://attack.mitre.org/techniques/T1606/002) without the need to compromise the signing certificate to forge new credentials. Instead, an adversary can manipulate domain trusts to add their own signing certificate. An adversary may also convert an AD domain to a federated domain using Active Directory Federation Services (AD FS), which may enable malicious trust modifications such as altering the claim issuance rules to log in any valid set of credentials as a specified user.(Citation: AADInternals zure AD Federated Domain) 
 
 An adversary may also add a new federated identity provider to an identity tenant such as Okta or AWS IAM Identity Center, which may enable the adversary to authenticate as any user of the tenant.(Citation: Okta Cross-Tenant Impersonation 2023) This may enable the threat actor to gain broad access into a variety of cloud-based services that leverage the identity tenant. For example, in AWS environments, an adversary that creates a new identity provider for an AWS Organization will be able to federate into all of the AWS Organization member accounts without creating identities for each of the member accounts.(Citation: AWS RE:Inforce Threat Detection 2024)
-
-#### Properties
-
-- id: T1484.002
-- name: Trust Modification
-- created: 2020-12-28 21:59:02.181000+00:00
-- modified: 2025-10-24 17:48:32.244000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

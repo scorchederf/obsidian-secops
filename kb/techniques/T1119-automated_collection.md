@@ -34,13 +34,3 @@ This technique may incorporate use of other techniques such as [File and Directo
 - SaaS
 - Windows
 
-## Tools
-
-- [[empire|Empire]]
-- [[mythic|Mythic]]
-- [[nppspy|NPPSPY]]
-- [[pacu|Pacu]]
-- [[poshc2|PoshC2]]
-- [[roadtools|ROADTools]]
-- [[shimratreporter|ShimRatReporter]]
-

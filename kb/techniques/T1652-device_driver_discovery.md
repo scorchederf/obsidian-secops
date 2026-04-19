@@ -24,6 +24,3 @@ On Linux/macOS, device drivers (in the form of kernel modules) may be visible wi
 - macOS
 - Windows
 
-## Tools
-
-

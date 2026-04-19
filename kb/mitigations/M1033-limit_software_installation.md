@@ -71,14 +71,6 @@ Inventory Management and Auditing:
 - OSQuery
 - Wazuh
 
-## Properties
-
-- id: M1033
-- name: Limit Software Installation
-- created: 2019-06-11 16:26:52.202000+00:00
-- modified: 2024-12-18 16:17:46.153000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]

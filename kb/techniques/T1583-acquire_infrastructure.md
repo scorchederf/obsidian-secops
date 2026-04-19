@@ -19,6 +19,7 @@ Use of these infrastructure solutions allows adversaries to stage, launch, and e
 ## Subtechniques
 
 ### T1583.001: Domains
+
 ^t1583001-domains
 
 **Parent Technique**
@@ -39,17 +40,8 @@ Domain registrars each maintain a publicly viewable database that displays conta
 
 In addition to legitimately purchasing a domain, an adversary may register a new domain in a compromised environment. For example, in AWS environments, adversaries may leverage the Route53 domain service to register a domain and create hosted zones pointing to resources of the threat actor’s choosing.(Citation: Invictus IR DangerDev 2024)
 
-#### Properties
-
-- id: T1583.001
-- name: Domains
-- created: 2020-09-30 17:09:31.878000+00:00
-- modified: 2025-10-24 17:48:42.246000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1583.002: DNS Server
+
 ^t1583002-dns-server
 
 **Parent Technique**
@@ -62,17 +54,8 @@ Adversaries may set up their own Domain Name System (DNS) servers that can be us
 
 By running their own DNS servers, adversaries can have more control over how they administer server-side DNS C2 traffic ([DNS](https://attack.mitre.org/techniques/T1071/004)). With control over a DNS server, adversaries can configure DNS applications to provide conditional responses to malware and, generally, have more flexibility in the structure of the DNS-based C2 channel.(Citation: Unit42 DNS Mar 2019)
 
-#### Properties
-
-- id: T1583.002
-- name: DNS Server
-- created: 2020-10-01 00:40:45.279000+00:00
-- modified: 2025-10-24 17:48:27.611000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ### T1583.003: Virtual Private Server
+
 ^t1583003-virtual-private-server
 
 **Parent Technique**
@@ -85,17 +68,8 @@ Adversaries may rent Virtual Private Servers (VPSs) that can be used during tar
 
 Acquiring a VPS for use in later stages of the adversary lifecycle, such as Command and Control, can allow adversaries to benefit from the ubiquity and trust associated with higher reputation cloud service providers. Adversaries may also acquire infrastructure from VPS service providers that are known for renting VPSs with minimal registration information, allowing for more anonymous acquisitions of infrastructure.(Citation: TrendmicroHideoutsLease)
 
-#### Properties
-
-- id: T1583.003
-- name: Virtual Private Server
-- created: 2020-10-01 00:44:23.935000+00:00
-- modified: 2025-10-24 17:48:59.607000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1583.004: Server
+
 ^t1583004-server
 
 **Parent Technique**
@@ -108,17 +82,8 @@ Adversaries may buy, lease, rent, or obtain physical servers that can be used d
 
 Adversaries may only need a lightweight setup if most of their activities will take place using online infrastructure. Or, they may need to build extensive infrastructure if they want to test, communicate, and control other aspects of their activities on their own systems.(Citation: NYTStuxnet)
 
-#### Properties
-
-- id: T1583.004
-- name: Server
-- created: 2020-10-01 00:48:09.578000+00:00
-- modified: 2025-10-24 17:48:50.911000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1583.005: Botnet
+
 ^t1583005-botnet
 
 **Parent Technique**
@@ -135,17 +100,8 @@ With a botnet at their disposal, adversaries may perform follow-on activity such
 
 
 
-#### Properties
-
-- id: T1583.005
-- name: Botnet
-- created: 2020-10-01 00:49:05.467000+00:00
-- modified: 2025-10-24 17:48:36.255000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ### T1583.006: Web Services
+
 ^t1583006-web-services
 
 **Parent Technique**
@@ -156,17 +112,8 @@ With a botnet at their disposal, adversaries may perform follow-on activity such
 
 Adversaries may register for web services that can be used during targeting. A variety of popular websites exist for adversaries to register for a web-based service that can be abused during later stages of the adversary lifecycle, such as during Command and Control ([Web Service](https://attack.mitre.org/techniques/T1102)), [Exfiltration Over Web Service](https://attack.mitre.org/techniques/T1567), or [Phishing](https://attack.mitre.org/techniques/T1566). Using common services, such as those offered by Google, GitHub, or Twitter, makes it easier for adversaries to hide in expected noise.(Citation: FireEye APT29)(Citation: Hacker News GitHub Abuse 2024) By utilizing a web service, adversaries can make it difficult to physically tie back operations to them.
 
-#### Properties
-
-- id: T1583.006
-- name: Web Services
-- created: 2020-10-01 00:50:29.936000+00:00
-- modified: 2025-10-24 17:49:04.554000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ### T1583.007: Serverless
+
 ^t1583007-serverless
 
 **Parent Technique**
@@ -179,17 +126,8 @@ Adversaries may purchase and configure serverless cloud infrastructure, such as 
 
 Once acquired, the serverless runtime environment can be leveraged to either respond directly to infected machines or to [Proxy](https://attack.mitre.org/techniques/T1090) traffic to an adversary-owned command and control server.(Citation: BlackWater Malware Cloudflare Workers)(Citation: AWS Lambda Redirector)(Citation: GWS Apps Script Abuse 2021) As traffic generated by these functions will appear to come from subdomains of common cloud providers, it may be difficult to distinguish from ordinary traffic to these providers - making it easier to [Hide Infrastructure](https://attack.mitre.org/techniques/T1665).(Citation: Detecting Command & Control in the Cloud)(Citation: BlackWater Malware Cloudflare Workers)
 
-#### Properties
-
-- id: T1583.007
-- name: Serverless
-- created: 2022-07-08 12:39:29.684000+00:00
-- modified: 2025-04-15 23:06:30.913000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1583.008: Malvertising
+
 ^t1583008-malvertising
 
 **Parent Technique**
@@ -205,16 +143,6 @@ Adversaries may purchase ads and other resources to help distribute artifacts co
 Malvertising may be used to support [Drive-by Target](https://attack.mitre.org/techniques/T1608/004) and [Drive-by Compromise](https://attack.mitre.org/techniques/T1189), potentially requiring limited interaction from the user if the ad contains code/exploits that infect the target system's web browser.(Citation: BBC-malvertising)
 
 Adversaries may also employ several techniques to evade detection by the advertising network. For example, adversaries may dynamically route ad clicks to send automated crawler/policy enforcer traffic to benign sites while validating potential targets then sending victims referred from real ad clicks to malicious pages. This infection vector may therefore remain hidden from the ad network as well as any visitor not reaching the malicious sites with a valid identifier from clicking on the advertisement.(Citation: Masquerads-Guardio) Other tricks, such as intentional typos to avoid brand reputation monitoring, may also be used to evade automated detection.(Citation: spamhaus-malvertising) 
-
-#### Properties
-
-- id: T1583.008
-- name: Malvertising
-- created: 2023-02-21 20:46:57.170000+00:00
-- modified: 2025-04-15 22:47:29.928000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
 
 ## Mitigations
 

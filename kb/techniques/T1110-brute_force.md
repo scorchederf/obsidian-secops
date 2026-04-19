@@ -21,6 +21,7 @@ If an adversary guesses the correct password but fails to login to a compromised
 ## Subtechniques
 
 ### T1110.001: Password Guessing
+
 ^t1110001-password-guessing
 
 **Parent Technique**
@@ -53,17 +54,8 @@ In addition to management services, adversaries may "target single sign-on (SSO)
 
 In default environments, LDAP and Kerberos connection attempts are less likely to trigger events over SMB, which creates Windows "logon failure" event ID 4625.
 
-#### Properties
-
-- id: T1110.001
-- name: Password Guessing
-- created: 2020-02-11 18:38:22.617000+00:00
-- modified: 2025-10-24 17:48:21.929000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ### T1110.002: Password Cracking
+
 ^t1110002-password-cracking
 
 **Parent Technique**
@@ -76,17 +68,8 @@ Adversaries may use password cracking to attempt to recover usable credentials, 
 
 Techniques to systematically guess the passwords used to compute hashes are available, or the adversary may use a pre-computed rainbow table to crack hashes. Cracking hashes is usually done on adversary-controlled systems outside of the target network.(Citation: Wikipedia Password cracking) The resulting plaintext password resulting from a successfully cracked hash may be used to log into systems, resources, and services in which the account has access.
 
-#### Properties
-
-- id: T1110.002
-- name: Password Cracking
-- created: 2020-02-11 18:38:56.197000+00:00
-- modified: 2025-10-24 17:48:29.397000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ### T1110.003: Password Spraying
+
 ^t1110003-password-spraying
 
 **Parent Technique**
@@ -116,17 +99,8 @@ In addition to management services, adversaries may "target single sign-on (SSO)
 
 In order to avoid detection thresholds, adversaries may deliberately throttle password spraying attempts to avoid triggering security alerting. Additionally, adversaries may leverage LDAP and Kerberos authentication attempts, which are less likely to trigger high-visibility events such as Windows "logon failure" event ID 4625 that is commonly triggered by failed SMB connection attempts.(Citation: Microsoft Storm-0940)  
 
-#### Properties
-
-- id: T1110.003
-- name: Password Spraying
-- created: 2020-02-11 18:39:25.122000+00:00
-- modified: 2025-10-24 17:48:53.996000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ### T1110.004: Credential Stuffing
+
 ^t1110004-credential-stuffing
 
 **Parent Technique**
@@ -156,16 +130,6 @@ Typically, management services over commonly used ports are used when stuffing c
 
 In addition to management services, adversaries may "target single sign-on (SSO) and cloud-based applications utilizing federated authentication protocols," as well as externally facing email applications, such as Office 365.(Citation: US-CERT TA18-068A 2018)
 
-#### Properties
-
-- id: T1110.004
-- name: Credential Stuffing
-- created: 2020-02-11 18:39:59.959000+00:00
-- modified: 2025-10-24 17:49:14.923000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -185,9 +149,4 @@ In addition to management services, adversaries may "target single sign-on (SSO)
 - Office Suite
 - SaaS
 - Windows
-
-## Tools
-
-- [[crackmapexec|CrackMapExec]]
-- [[poshc2|PoshC2]]
 

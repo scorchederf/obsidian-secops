@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 NPPSPY is an implementation of a theoretical mechanism first presented in 2004 for capturing credentials submitted to a Windows system via a rogue Network Provider API item. NPPSPY captures credentials following submission and writes them to a file on the victim system for follow-on exfiltration.(Citation: Huntress NPPSPY 2022)(Citation: Polak NPPSPY 2004)
 
-## Properties
-
-- id: S1131
-- name: NPPSPY
-- created: 2024-05-17 18:49:15.318000+00:00
-- modified: 2024-10-28 19:00:14.732000+00:00
-- type: tool
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

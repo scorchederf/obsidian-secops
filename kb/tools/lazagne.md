@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [LaZagne](https://attack.mitre.org/software/S0349) is a post-exploitation, open-source tool used to recover stored passwords on a system. It has modules for Windows, Linux, and OSX, but is mainly focused on Windows systems. [LaZagne](https://attack.mitre.org/software/S0349) is publicly available on GitHub.(Citation: GitHub LaZagne Dec 2018)
 
-## Properties
-
-- id: S0349
-- name: LaZagne
-- created: 2019-01-30 16:44:59.887000+00:00
-- modified: 2024-04-04 03:49:27.035000+00:00
-- type: tool
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

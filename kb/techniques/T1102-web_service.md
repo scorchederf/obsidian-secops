@@ -19,6 +19,7 @@ Use of Web services may also protect back-end C2 infrastructure from discovery t
 ## Subtechniques
 
 ### T1102.001: Dead Drop Resolver
+
 ^t1102001-dead-drop-resolver
 
 **Parent Technique**
@@ -33,17 +34,8 @@ Popular websites and social media acting as a mechanism for C2 may give a signif
 
 Use of a dead drop resolver may also protect back-end C2 infrastructure from discovery through malware binary analysis while also enabling operational resiliency (since this infrastructure may be dynamically changed).
 
-#### Properties
-
-- id: T1102.001
-- name: Dead Drop Resolver
-- created: 2020-03-14 22:24:21.841000+00:00
-- modified: 2025-10-24 17:49:37.828000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1102.002: Bidirectional Communication
+
 ^t1102002-bidirectional-communication
 
 **Parent Technique**
@@ -56,17 +48,8 @@ Adversaries may use an existing, legitimate external Web service as a means for 
 
 Popular websites and social media acting as a mechanism for C2 may give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection. 
 
-#### Properties
-
-- id: T1102.002
-- name: Bidirectional Communication
-- created: 2020-03-14 22:34:03.024000+00:00
-- modified: 2025-10-24 17:49:18.602000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ### T1102.003: One-Way Communication
+
 ^t1102003-one-way-communication
 
 **Parent Technique**
@@ -79,16 +62,6 @@ Adversaries may use an existing, legitimate external Web service as a means for 
 
 Popular websites and social media acting as a mechanism for C2 may give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection.
 
-#### Properties
-
-- id: T1102.003
-- name: One-Way Communication
-- created: 2020-03-14 22:45:52.963000+00:00
-- modified: 2025-10-24 17:49:08.849000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]
@@ -100,9 +73,4 @@ Popular websites and social media acting as a mechanism for C2 may give a signif
 - Linux
 - Windows
 - macOS
-
-## Tools
-
-- [[brute_ratel_c4|Brute Ratel C4]]
-- [[ngrok|ngrok]]
 

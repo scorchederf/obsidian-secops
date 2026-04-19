@@ -26,19 +26,3 @@ Some files and directories may require elevated or specific user permissions to 
 - Network Devices
 - Windows
 
-## Tools
-
-- [[cmd|cmd]]
-- [[crackmapexec|CrackMapExec]]
-- [[empire|Empire]]
-- [[forfiles|Forfiles]]
-- [[imminent_monitor|Imminent Monitor]]
-- [[koadic|Koadic]]
-- [[poshc2|PoshC2]]
-- [[pupy|Pupy]]
-- [[rclone|Rclone]]
-- [[remcos|Remcos]]
-- [[remoteutilities|RemoteUtilities]]
-- [[silenttrinity|SILENTTRINITY]]
-- [[sliver|Sliver]]
-

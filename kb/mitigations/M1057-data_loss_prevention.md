@@ -35,14 +35,6 @@ Cloud Data Security:
 - Use Case: Protect data stored in cloud platforms.
 - Implementation: Integrate DLP with cloud storage platforms like Google Drive, OneDrive, or AWS to monitor and restrict sensitive data sharing or downloads.
 
-## Properties
-
-- id: M1057
-- name: Data Loss Prevention
-- created: 2021-08-04 21:22:11.612000+00:00
-- modified: 2024-12-10 19:10:54.180000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

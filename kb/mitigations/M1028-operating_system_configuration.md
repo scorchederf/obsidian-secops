@@ -63,14 +63,6 @@ Cross-Platform:
 - Ansible or Chef/Puppet: Automate configuration hardening at scale.
 - OpenSCAP: Perform compliance and configuration checks.
 
-## Properties
-
-- id: M1028
-- name: Operating System Configuration
-- created: 2019-06-06 21:16:18.709000+00:00
-- modified: 2024-12-18 18:04:26.025000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

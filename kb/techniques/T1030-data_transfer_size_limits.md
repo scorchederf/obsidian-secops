@@ -25,8 +25,3 @@ An adversary may exfiltrate data in fixed size chunks instead of whole files or 
 - Windows
 - ESXi
 
-## Tools
-
-- [[mythic|Mythic]]
-- [[rclone|Rclone]]
-

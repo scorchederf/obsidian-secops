@@ -43,8 +43,3 @@ Application access tokens may function within a limited lifetime, limiting how l
 - Office Suite
 - Identity Provider
 
-## Tools
-
-- [[aadinternals|AADInternals]]
-- [[peirates|Peirates]]
-

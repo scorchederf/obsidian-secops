@@ -30,6 +30,3 @@ The Windows module loader can be instructed to load DLLs from arbitrary local pa
 - macOS
 - Windows
 
-## Tools
-
-

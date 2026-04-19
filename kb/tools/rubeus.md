@@ -12,16 +12,6 @@ x_mitre_domains: enterprise-attack
 
 [Rubeus](https://attack.mitre.org/software/S1071) is a C# toolset designed for raw Kerberos interaction that has been used since at least 2020, including in ransomware operations.(Citation: GitHub Rubeus March 2023)(Citation: FireEye KEGTAP SINGLEMALT October 2020)(Citation: DFIR Ryuk's Return October 2020)(Citation: DFIR Ryuk 2 Hour Speed Run November 2020)
 
-## Properties
-
-- id: S1071
-- name: Rubeus
-- created: 2023-03-29 20:19:26.940000+00:00
-- modified: 2025-04-16 20:38:56.949000+00:00
-- type: tool
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Uses Techniques
 
 - [[T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]

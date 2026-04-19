@@ -38,14 +38,6 @@ Training and Awareness:
 
 - Educate employees on identifying phishing attempts, securing their social media, and avoiding information leaks.
 
-## Properties
-
-- id: M1056
-- name: Pre-compromise
-- created: 2020-10-19 14:57:58.771000+00:00
-- modified: 2024-12-18 18:24:37.835000+00:00
-- type: course-of-action
-
 ## Mitigates Techniques
 
 - [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
