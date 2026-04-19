@@ -1,0 +1,280 @@
+---
+id: T1552
+name: Unsecured Credentials
+created: 2020-02-04 12:47:23.631000+00:00
+modified: 2025-10-24 17:48:42.785000+00:00
+type: attack-pattern
+x_mitre_version: 1.5
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[credential_access|Credential Access]]
+
+Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [Shell History](https://attack.mitre.org/techniques/T1552/003)), operating system or application-specific repositories (e.g. [Credentials in Registry](https://attack.mitre.org/techniques/T1552/002)),  or other specialized files/artifacts (e.g. [Private Keys](https://attack.mitre.org/techniques/T1552/004)).(Citation: Brining MimiKatz to Unix)
+
+## Properties
+
+- id: T1552
+- name: Unsecured Credentials
+- created: 2020-02-04 12:47:23.631000+00:00
+- modified: 2025-10-24 17:48:42.785000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.5
+- x_mitre_domains: enterprise-attack
+
+## Subtechniques
+
+### T1552.001: Credentials In Files
+
+^t1552001-credentials-in-files
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may search local file systems and remote file shares for files containing insecurely stored credentials. These can be files created by users to store their own credentials, shared credential stores for a group of individuals, configuration files containing passwords for a system or service, or source code/binary files containing embedded passwords.
+
+It is possible to extract passwords from backups or saved virtual machines through [OS Credential Dumping](https://attack.mitre.org/techniques/T1003).(Citation: CG 2014) Passwords may also be obtained from Group Policy Preferences stored on the Windows Domain Controller.(Citation: SRD GPP)
+
+In cloud and/or containerized environments, authenticated user and service account credentials are often stored in local configuration and credential files.(Citation: Unit 42 Hildegard Malware) They may also be found as parameters to deployment commands in container logs.(Citation: Unit 42 Unsecured Docker Daemons) In some cases, these files can be copied and reused on another machine or the contents can be read and then used to authenticate without needing to copy any files.(Citation: Specter Ops - Cloud Credential Storage)
+
+#### Properties
+
+- id: T1552.001
+- name: Credentials In Files
+- created: 2020-02-04 12:52:13.006000+00:00
+- modified: 2025-10-24 17:49:03+00:00
+- type: attack-pattern
+- x_mitre_version: 1.3
+- x_mitre_domains: enterprise-attack
+
+### T1552.002: Credentials in Registry
+
+^t1552002-credentials-in-registry
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may search the Registry on compromised systems for insecurely stored credentials. The Windows Registry stores configuration information that can be used by the system or other programs. Adversaries may query the Registry looking for credentials and passwords that have been stored for use by other programs or services. Sometimes these credentials are used for automatic logons.
+
+Example commands to find Registry keys related to password information: (Citation: Pentestlab Stored Credentials)
+
+* Local Machine Hive: <code>reg query HKLM /f password /t REG_SZ /s</code>
+* Current User Hive: <code>reg query HKCU /f password /t REG_SZ /s</code>
+
+#### Properties
+
+- id: T1552.002
+- name: Credentials in Registry
+- created: 2020-02-04 12:58:40.678000+00:00
+- modified: 2025-10-24 17:48:37.378000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.2
+- x_mitre_domains: enterprise-attack
+
+### T1552.003: Shell History
+
+^t1552003-shell-history
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may search the command history on compromised systems for insecurely stored credentials.
+
+On Linux and macOS systems, shells such as Bash and Zsh keep track of the commands users type on the command-line with the "history" utility. Once a user logs out, the history is flushed to the user's history file. For each user, this file resides at the same location: for example, `~/.bash_history` or `~/.zsh_history`. Typically, these files keeps track of the user's last 1000 commands.
+
+On Windows, PowerShell has both a command history that is wiped after the session ends, and one that contains commands used in all sessions and is persistent. The default location for persistent history can be found in `%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`, but command history can also be accessed with `Get-History`. Command Prompt (CMD) on Windows does not have persistent history.(Citation: Microsoft about_History)(Citation: Medium)
+
+Users often type usernames and passwords on the command-line as parameters to programs, which then get saved to this file when they log out. Adversaries can abuse this by looking through the file for potential credentials.(Citation: External to DA, the OS X Way)
+
+#### Properties
+
+- id: T1552.003
+- name: Shell History
+- created: 2020-02-04 13:02:11.685000+00:00
+- modified: 2025-10-24 17:49:02.375000+00:00
+- type: attack-pattern
+- x_mitre_version: 2.0
+- x_mitre_domains: enterprise-attack
+
+### T1552.004: Private Keys
+
+^t1552004-private-keys
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may search for private key certificate files on compromised systems for insecurely stored credentials. Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures.(Citation: Wikipedia Public Key Crypto) Common key and certificate file extensions include: .key, .pgp, .gpg, .ppk., .p12, .pem, .pfx, .cer, .p7b, .asc. 
+
+Adversaries may also look in common key directories, such as <code>~/.ssh</code> for SSH keys on * nix-based systems or <code>C:&#92;Users&#92;(username)&#92;.ssh&#92;</code> on Windows. Adversary tools may also search compromised systems for file extensions relating to cryptographic keys and certificates.(Citation: Kaspersky Careto)(Citation: Palo Alto Prince of Persia)
+
+When a device is registered to Entra ID, a device key and a transport key are generated and used to verify the device’s identity.(Citation: Microsoft Primary Refresh Token) An adversary with access to the device may be able to export the keys in order to impersonate the device.(Citation: AADInternals Azure AD Device Identities)
+
+On network devices, private keys may be exported via [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `crypto pki export`.(Citation: cisco_deploy_rsa_keys) 
+
+Some private keys require a password or passphrase for operation, so an adversary may also use [Input Capture](https://attack.mitre.org/techniques/T1056) for keylogging or attempt to [Brute Force](https://attack.mitre.org/techniques/T1110) the passphrase off-line. These private keys can be used to authenticate to [Remote Services](https://attack.mitre.org/techniques/T1021) like SSH or for use in decrypting other collected files such as email.
+
+#### Properties
+
+- id: T1552.004
+- name: Private Keys
+- created: 2020-02-04 13:06:49.258000+00:00
+- modified: 2025-10-24 17:48:50.819000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.3
+- x_mitre_domains: enterprise-attack
+
+### T1552.005: Cloud Instance Metadata API
+
+^t1552005-cloud-instance-metadata-api
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may attempt to access the Cloud Instance Metadata API to collect credentials and other sensitive data.
+
+Most cloud service providers support a Cloud Instance Metadata API which is a service provided to running virtual instances that allows applications to access information about the running virtual instance. Available information generally includes name, security group, and additional metadata including sensitive data such as credentials and UserData scripts that may contain additional secrets. The Instance Metadata API is provided as a convenience to assist in managing applications and is accessible by anyone who can access the instance.(Citation: AWS Instance Metadata API) A cloud metadata API has been used in at least one high profile compromise.(Citation: Krebs Capital One August 2019)
+
+If adversaries have a presence on the running virtual instance, they may query the Instance Metadata API directly to identify credentials that grant access to additional resources. Additionally, adversaries may exploit a Server-Side Request Forgery (SSRF) vulnerability in a public facing web proxy that allows them to gain access to the sensitive information via a request to the Instance Metadata API.(Citation: RedLock Instance Metadata API 2018)
+
+The de facto standard across cloud service providers is to host the Instance Metadata API at <code>http[:]//169.254.169.254</code>.
+
+
+#### Properties
+
+- id: T1552.005
+- name: Cloud Instance Metadata API
+- created: 2020-02-11 18:47:46.619000+00:00
+- modified: 2025-10-24 17:48:27.965000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.4
+- x_mitre_domains: enterprise-attack
+
+### T1552.006: Group Policy Preferences
+
+^t1552006-group-policy-preferences
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may attempt to find unsecured credentials in Group Policy Preferences (GPP). GPP are tools that allow administrators to create domain policies with embedded credentials. These policies allow administrators to set local accounts.(Citation: Microsoft GPP 2016)
+
+These group policies are stored in SYSVOL on a domain controller. This means that any domain user can view the SYSVOL share and decrypt the password (using the AES key that has been made public).(Citation: Microsoft GPP Key)
+
+The following tools and scripts can be used to gather and decrypt the password file from Group Policy Preference XML files:
+
+* Metasploit’s post exploitation module: <code>post/windows/gather/credentials/gpp</code>
+* Get-GPPPassword(Citation: Obscuresecurity Get-GPPPassword)
+* gpprefdecrypt.py
+
+On the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: <code>dir /s * .xml</code>
+
+
+#### Properties
+
+- id: T1552.006
+- name: Group Policy Preferences
+- created: 2020-02-11 18:43:06.253000+00:00
+- modified: 2025-10-24 17:49:05.282000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.1
+- x_mitre_domains: enterprise-attack
+
+### T1552.007: Container API
+
+^t1552007-container-api
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may gather credentials via APIs within a containers environment. APIs in these environments, such as the Docker API and Kubernetes APIs, allow a user to remotely manage their container resources and cluster components.(Citation: Docker API)(Citation: Kubernetes API)
+
+An adversary may access the Docker API to collect logs that contain credentials to cloud, container, and various other resources in the environment.(Citation: Unit 42 Unsecured Docker Daemons) An adversary with sufficient permissions, such as via a pod's service account, may also use the Kubernetes API to retrieve credentials from the Kubernetes API server. These credentials may include those needed for Docker API authentication or secrets from Kubernetes cluster components. 
+
+#### Properties
+
+- id: T1552.007
+- name: Container API
+- created: 2021-03-31 14:01:52.321000+00:00
+- modified: 2025-10-24 17:49:38.351000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.2
+- x_mitre_domains: enterprise-attack
+
+### T1552.008: Chat Messages
+
+^t1552008-chat-messages
+
+**Parent Technique**
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may directly collect unsecured credentials stored or passed through user communication services. Credentials may be sent and stored in user chat communication applications such as email, chat services like Slack or Teams, collaboration tools like Jira or Trello, and any other services that support user communication. Users may share various forms of credentials (such as usernames and passwords, API keys, or authentication tokens) on private or public corporate internal communications channels.
+
+Rather than accessing the stored chat logs (i.e., [Credentials In Files](https://attack.mitre.org/techniques/T1552/001)), adversaries may directly access credentials within these services on the user endpoint, through servers hosting the services, or through administrator portals for cloud hosted services. Adversaries may also compromise integration tools like Slack Workflows to automatically search through messages to extract user credentials. These credentials may then be abused to perform follow-on activities such as lateral movement or privilege escalation (Citation: Slack Security Risks).
+
+#### Properties
+
+- id: T1552.008
+- name: Chat Messages
+- created: 2023-03-14 14:38:03.673000+00:00
+- modified: 2025-04-15 21:56:22.979000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.1
+- x_mitre_domains: enterprise-attack
+
+## Mitigations
+
+- [[M1015-active_directory_configuration|M1015: Active Directory Configuration]]
+- [[M1017-user_training|M1017: User Training]]
+- [[M1022-restrict_file_and_directory_permissions|M1022: Restrict File and Directory Permissions]]
+- [[M1026-privileged_account_management|M1026: Privileged Account Management]]
+- [[M1027-password_policies|M1027: Password Policies]]
+- [[M1028-operating_system_configuration|M1028: Operating System Configuration]]
+- [[M1035-limit_access_to_resource_over_network|M1035: Limit Access to Resource Over Network]]
+- [[M1037-filter_network_traffic|M1037: Filter Network Traffic]]
+- [[M1041-encrypt_sensitive_information|M1041: Encrypt Sensitive Information]]
+- [[M1047-audit|M1047: Audit]]
+- [[M1051-update_software|M1051: Update Software]]
+
+## Platforms
+
+- Windows
+- SaaS
+- IaaS
+- Linux
+- macOS
+- Containers
+- Network Devices
+- Office Suite
+- Identity Provider
+
+## Tools
+
+- [[S1091-pacu|S1091: Pacu]]
+- [[S1131-nppspy|S1131: NPPSPY]]
+

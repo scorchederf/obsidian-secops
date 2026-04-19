@@ -1,0 +1,185 @@
+---
+id: T1558
+name: Steal or Forge Kerberos Tickets
+created: 2020-02-11 19:12:46.830000+00:00
+modified: 2025-10-24 17:48:41.885000+00:00
+type: attack-pattern
+x_mitre_version: 1.7
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[credential_access|Credential Access]]
+
+Adversaries may attempt to subvert Kerberos authentication by stealing or forging Kerberos tickets to enable [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003). Kerberos is an authentication protocol widely used in modern Windows domain environments. In Kerberos environments, referred to as “realms”, there are three basic participants: client, service, and Key Distribution Center (KDC).(Citation: ADSecurity Kerberos Ring Decoder) Clients request access to a service and through the exchange of Kerberos tickets, originating from KDC, they are granted access after having successfully authenticated. The KDC is responsible for both authentication and ticket granting.  Adversaries may attempt to abuse Kerberos by stealing tickets or forging tickets to enable unauthorized access.
+
+On Windows, the built-in <code>klist</code> utility can be used to list and analyze cached Kerberos tickets.(Citation: Microsoft Klist)
+
+
+## Properties
+
+- id: T1558
+- name: Steal or Forge Kerberos Tickets
+- created: 2020-02-11 19:12:46.830000+00:00
+- modified: 2025-10-24 17:48:41.885000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.7
+- x_mitre_domains: enterprise-attack
+
+## Subtechniques
+
+### T1558.001: Golden Ticket
+
+^t1558001-golden-ticket
+
+**Parent Technique**
+- [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries who have the KRBTGT account password hash may forge Kerberos ticket-granting tickets (TGT), also known as a golden ticket.(Citation: AdSecurity Kerberos GT Aug 2015) Golden tickets enable adversaries to generate authentication material for any account in Active Directory.(Citation: CERT-EU Golden Ticket Protection) 
+
+Using a golden ticket, adversaries are then able to request ticket granting service (TGS) tickets, which enable access to specific resources. Golden tickets require adversaries to interact with the Key Distribution Center (KDC) in order to obtain TGS.(Citation: ADSecurity Detecting Forged Tickets)
+
+The KDC service runs all on domain controllers that are part of an Active Directory domain. KRBTGT is the Kerberos Key Distribution Center (KDC) service account and is responsible for encrypting and signing all Kerberos tickets.(Citation: ADSecurity Kerberos and KRBTGT) The KRBTGT password hash may be obtained using [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) and privileged access to a domain controller.
+
+#### Properties
+
+- id: T1558.001
+- name: Golden Ticket
+- created: 2020-02-11 19:13:33.643000+00:00
+- modified: 2025-10-24 17:48:58.155000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.2
+- x_mitre_domains: enterprise-attack
+
+### T1558.002: Silver Ticket
+
+^t1558002-silver-ticket
+
+**Parent Technique**
+- [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries who have the password hash of a target service account (e.g. SharePoint, MSSQL) may forge Kerberos ticket granting service (TGS) tickets, also known as silver tickets. Kerberos TGS tickets are also known as service tickets.(Citation: ADSecurity Silver Tickets)
+
+Silver tickets are more limited in scope in than golden tickets in that they only enable adversaries to access a particular resource (e.g. MSSQL) and the system that hosts the resource; however, unlike golden tickets, adversaries with the ability to forge silver tickets are able to create TGS tickets without interacting with the Key Distribution Center (KDC), potentially making detection more difficult.(Citation: ADSecurity Detecting Forged Tickets)
+
+Password hashes for target services may be obtained using [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or [Kerberoasting](https://attack.mitre.org/techniques/T1558/003).
+
+#### Properties
+
+- id: T1558.002
+- name: Silver Ticket
+- created: 2020-02-11 19:14:48.309000+00:00
+- modified: 2025-10-24 17:49:26.177000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.1
+- x_mitre_domains: enterprise-attack
+
+### T1558.003: Kerberoasting
+
+^t1558003-kerberoasting
+
+**Parent Technique**
+- [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may abuse a valid Kerberos ticket-granting ticket (TGT) or sniff network traffic to obtain a ticket-granting service (TGS) ticket that may be vulnerable to [Brute Force](https://attack.mitre.org/techniques/T1110).(Citation: Empire InvokeKerberoast Oct 2016)(Citation: AdSecurity Cracking Kerberos Dec 2015) 
+
+Service principal names (SPNs) are used to uniquely identify each instance of a Windows service. To enable authentication, Kerberos requires that SPNs be associated with at least one service logon account (an account specifically tasked with running a service(Citation: Microsoft Detecting Kerberoasting Feb 2018)).(Citation: Microsoft SPN)(Citation: Microsoft SetSPN)(Citation: SANS Attacking Kerberos Nov 2014)(Citation: Harmj0y Kerberoast Nov 2016)
+
+Adversaries possessing a valid Kerberos ticket-granting ticket (TGT) may request one or more Kerberos ticket-granting service (TGS) service tickets for any SPN from a domain controller (DC).(Citation: Empire InvokeKerberoast Oct 2016)(Citation: AdSecurity Cracking Kerberos Dec 2015) Portions of these tickets may be encrypted with the RC4 algorithm, meaning the Kerberos 5 TGS-REP etype 23 hash of the service account associated with the SPN is used as the private key and is thus vulnerable to offline [Brute Force](https://attack.mitre.org/techniques/T1110) attacks that may expose plaintext credentials.(Citation: AdSecurity Cracking Kerberos Dec 2015)(Citation: Empire InvokeKerberoast Oct 2016) (Citation: Harmj0y Kerberoast Nov 2016)
+
+This same behavior could be executed using service tickets captured from network traffic.(Citation: AdSecurity Cracking Kerberos Dec 2015)
+
+Cracked hashes may enable [Persistence](https://attack.mitre.org/tactics/TA0003), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004), and [Lateral Movement](https://attack.mitre.org/tactics/TA0008) via access to [Valid Accounts](https://attack.mitre.org/techniques/T1078).(Citation: SANS Attacking Kerberos Nov 2014)
+
+#### Properties
+
+- id: T1558.003
+- name: Kerberoasting
+- created: 2020-02-11 18:43:38.588000+00:00
+- modified: 2025-10-24 17:49:36.038000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.3
+- x_mitre_domains: enterprise-attack
+
+### T1558.004: AS-REP Roasting
+
+^t1558004-as-rep-roasting
+
+**Parent Technique**
+- [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+Adversaries may reveal credentials of accounts that have disabled Kerberos preauthentication by [Password Cracking](https://attack.mitre.org/techniques/T1110/002) Kerberos messages.(Citation: Harmj0y Roasting AS-REPs Jan 2017) 
+
+Preauthentication offers protection against offline [Password Cracking](https://attack.mitre.org/techniques/T1110/002). When enabled, a user requesting access to a resource initiates communication with the Domain Controller (DC) by sending an Authentication Server Request (AS-REQ) message with a timestamp that is encrypted with the hash of their password. If and only if the DC is able to successfully decrypt the timestamp with the hash of the user’s password, it will then send an Authentication Server Response (AS-REP) message that contains the Ticket Granting Ticket (TGT) to the user. Part of the AS-REP message is signed with the user’s password.(Citation: Microsoft Kerberos Preauth 2014)
+
+For each account found without preauthentication, an adversary may send an AS-REQ message without the encrypted timestamp and receive an AS-REP message with TGT data which may be encrypted with an insecure algorithm such as RC4. The recovered encrypted data may be vulnerable to offline [Password Cracking](https://attack.mitre.org/techniques/T1110/002) attacks similarly to [Kerberoasting](https://attack.mitre.org/techniques/T1558/003) and expose plaintext credentials. (Citation: Harmj0y Roasting AS-REPs Jan 2017)(Citation: Stealthbits Cracking AS-REP Roasting Jun 2019) 
+
+An account registered to a domain, with or without special privileges, can be abused to list all domain accounts that have preauthentication disabled by utilizing Windows tools like [PowerShell](https://attack.mitre.org/techniques/T1059/001) with an LDAP filter. Alternatively, the adversary may send an AS-REQ message for each user. If the DC responds without errors, the account does not require preauthentication and the AS-REP message will already contain the encrypted data. (Citation: Harmj0y Roasting AS-REPs Jan 2017)(Citation: Stealthbits Cracking AS-REP Roasting Jun 2019)
+
+Cracked hashes may enable [Persistence](https://attack.mitre.org/tactics/TA0003), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004), and [Lateral Movement](https://attack.mitre.org/tactics/TA0008) via access to [Valid Accounts](https://attack.mitre.org/techniques/T1078).(Citation: SANS Attacking Kerberos Nov 2014)
+
+#### Properties
+
+- id: T1558.004
+- name: AS-REP Roasting
+- created: 2020-08-24 13:43:00.028000+00:00
+- modified: 2025-10-24 17:48:39.884000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.2
+- x_mitre_domains: enterprise-attack
+
+### T1558.005: Ccache Files
+
+^t1558005-ccache-files
+
+**Parent Technique**
+- [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+
+**Tactic**
+- [[credential_access|Credential Access]]
+
+
+Adversaries may attempt to steal Kerberos tickets stored in credential cache files (or ccache). These files are used for short term storage of a user's active session credentials. The ccache file is created upon user authentication and allows for access to multiple services without the user having to re-enter credentials. 
+
+The <code>/etc/krb5.conf</code> configuration file and the <code>KRB5CCNAME</code> environment variable are used to set the storage location for ccache entries. On Linux, credentials are typically stored in the `/tmp` directory with a naming format of `krb5cc_%UID%` or `krb5.ccache`. On macOS, ccache entries are stored by default in memory with an `API:{uuid}` naming scheme. Typically, users interact with ticket storage using <code>kinit</code>, which obtains a Ticket-Granting-Ticket (TGT) for the principal; <code>klist</code>, which lists obtained tickets currently held in the credentials cache; and other built-in binaries.(Citation: Kerberos GNU/Linux)(Citation: Binary Defense Kerberos Linux)
+
+Adversaries can collect tickets from ccache files stored on disk and authenticate as the current user without their password to perform [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003) attacks. Adversaries can also use these tickets to impersonate legitimate users with elevated privileges to perform [Privilege Escalation](https://attack.mitre.org/tactics/TA0004). Tools like Kekeo can also be used by adversaries to convert ccache files to Windows format for further [Lateral Movement](https://attack.mitre.org/tactics/TA0008). On macOS, adversaries may use open-source tools or the Kerberos framework to interact with ccache files and extract TGTs or Service Tickets via lower-level APIs.(Citation: SpectorOps Bifrost Kerberos macOS 2019)(Citation: Linux Kerberos Tickets)(Citation: Brining MimiKatz to Unix)(Citation: Kekeo) 
+
+#### Properties
+
+- id: T1558.005
+- name: Ccache Files
+- created: 2024-09-17 15:02:31.324000+00:00
+- modified: 2025-04-15 21:56:03.788000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.0
+- x_mitre_domains: enterprise-attack
+
+## Mitigations
+
+- [[M1015-active_directory_configuration|M1015: Active Directory Configuration]]
+- [[M1026-privileged_account_management|M1026: Privileged Account Management]]
+- [[M1027-password_policies|M1027: Password Policies]]
+- [[M1041-encrypt_sensitive_information|M1041: Encrypt Sensitive Information]]
+- [[M1043-credential_access_protection|M1043: Credential Access Protection]]
+- [[M1047-audit|M1047: Audit]]
+
+## Platforms
+
+- Windows
+- Linux
+- macOS
+

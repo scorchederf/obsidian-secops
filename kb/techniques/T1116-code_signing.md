@@ -1,0 +1,35 @@
+---
+id: T1116
+name: Code Signing
+created: 2017-05-31 21:31:26.474000+00:00
+modified: 2025-10-24 17:48:28.518000+00:00
+type: attack-pattern
+x_mitre_version: 1.1
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[defense_evasion|Defense Evasion]]
+
+Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with. (Citation: Wikipedia Code Signing) However, adversaries are known to use code signing certificates to masquerade malware and tools as legitimate binaries (Citation: Janicab). The certificates used during an operation may be created, forged, or stolen by the adversary. (Citation: Securelist Digital Certificates) (Citation: Symantec Digital Certificates)
+
+Code signing to verify software on first run can be used on modern Windows and macOS/OS X systems. It is not used on Linux due to the decentralized nature of the platform. (Citation: Wikipedia Code Signing)
+
+Code signing certificates may be used to bypass security policies that require signed code to execute on a system.
+
+## Properties
+
+- id: T1116
+- name: Code Signing
+- created: 2017-05-31 21:31:26.474000+00:00
+- modified: 2025-10-24 17:48:28.518000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.1
+- x_mitre_domains: enterprise-attack
+
+## Platforms
+
+- macOS
+- Windows
+

@@ -1,0 +1,53 @@
+---
+id: T1057
+name: Process Discovery
+created: 2017-05-31 21:30:48.728000+00:00
+modified: 2025-10-24 17:49:05.839000+00:00
+type: attack-pattern
+x_mitre_version: 1.6
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[discovery|Discovery]]
+
+Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Administrator or otherwise elevated access may provide better process details. Adversaries may use the information from [Process Discovery](https://attack.mitre.org/techniques/T1057) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.
+
+In Windows environments, adversaries could obtain details on running processes using the [Tasklist](https://attack.mitre.org/software/S0057) utility via [cmd](https://attack.mitre.org/software/S0106) or <code>Get-Process</code> via [PowerShell](https://attack.mitre.org/techniques/T1059/001). Information about processes can also be extracted from the output of [Native API](https://attack.mitre.org/techniques/T1106) calls such as <code>CreateToolhelp32Snapshot</code>. In Mac and Linux, this is accomplished with the <code>ps</code> command. Adversaries may also opt to enumerate processes via `/proc`. ESXi also supports use of the `ps` command, as well as `esxcli system process list`.(Citation: Sygnia ESXi Ransomware 2025)(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)
+
+On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `show processes` can be used to display current running processes.(Citation: US-CERT-TA18-106A)(Citation: show_processes_cisco_cmd)
+
+## Properties
+
+- id: T1057
+- name: Process Discovery
+- created: 2017-05-31 21:30:48.728000+00:00
+- modified: 2025-10-24 17:49:05.839000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.6
+- x_mitre_domains: enterprise-attack
+
+## Platforms
+
+- ESXi
+- Linux
+- macOS
+- Network Devices
+- Windows
+
+## Tools
+
+- [[S0057-tasklist|S0057: Tasklist]]
+- [[S0192-pupy|S0192: Pupy]]
+- [[S0194-powersploit|S0194: PowerSploit]]
+- [[S0363-empire|S0363: Empire]]
+- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
+- [[S0445-shimratreporter|S0445: ShimRatReporter]]
+- [[S0581-ironnetinjector|S0581: IronNetInjector]]
+- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
+- [[S0695-donut|S0695: Donut]]
+- [[S1050-pcshare|S1050: PcShare]]
+- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
+- [[S1087-asyncrat|S1087: AsyncRAT]]
+

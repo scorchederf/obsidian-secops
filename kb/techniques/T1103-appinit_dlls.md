@@ -1,0 +1,32 @@
+---
+id: T1103
+name: AppInit DLLs
+created: 2017-05-31 21:31:15.409000+00:00
+modified: 2025-10-24 17:48:36.436000+00:00
+type: attack-pattern
+x_mitre_version: 1.1
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[privilege_escalation|Privilege Escalation]]
+
+Dynamic-link libraries (DLLs) that are specified in the AppInit_DLLs value in the Registry keys <code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows</code> or <code>HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows</code> are loaded by user32.dll into every process that loads user32.dll. In practice this is nearly every program, since user32.dll is a very common library. (Citation: Elastic Process Injection July 2017) Similar to [Process Injection](https://attack.mitre.org/techniques/T1055), these values can be abused to obtain persistence and privilege escalation by causing a malicious DLL to be loaded and run in the context of separate processes on the computer. (Citation: AppInit Registry)
+
+The AppInit DLL functionality is disabled in Windows 8 and later versions when secure boot is enabled. (Citation: AppInit Secure Boot)
+
+## Properties
+
+- id: T1103
+- name: AppInit DLLs
+- created: 2017-05-31 21:31:15.409000+00:00
+- modified: 2025-10-24 17:48:36.436000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.1
+- x_mitre_domains: enterprise-attack
+
+## Platforms
+
+- Windows
+

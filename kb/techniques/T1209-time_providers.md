@@ -1,0 +1,34 @@
+---
+id: T1209
+name: Time Providers
+created: 2018-04-18 17:59:24.739000+00:00
+modified: 2025-10-24 17:49:29.141000+00:00
+type: attack-pattern
+x_mitre_version: 1.1
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[persistence|Persistence]]
+
+The Windows Time service (W32Time) enables time synchronization across and within domains. (Citation: Microsoft W32Time Feb 2018) W32Time time providers are responsible for retrieving time stamps from hardware/network resources and outputting these values to other network clients. (Citation: Microsoft TimeProvider)
+
+Time providers are implemented as dynamic-link libraries (DLLs) that are registered in the subkeys of  <code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W32Time\TimeProviders\</code>. (Citation: Microsoft TimeProvider) The time provider manager, directed by the service control manager, loads and starts time providers listed and enabled under this key at system startup and/or whenever parameters are changed. (Citation: Microsoft TimeProvider)
+
+Adversaries may abuse this architecture to establish Persistence, specifically by registering and enabling a malicious DLL as a time provider. Administrator privileges are required for time provider registration, though execution will run in context of the Local Service account. (Citation: Github W32Time Oct 2017)
+
+## Properties
+
+- id: T1209
+- name: Time Providers
+- created: 2018-04-18 17:59:24.739000+00:00
+- modified: 2025-10-24 17:49:29.141000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.1
+- x_mitre_domains: enterprise-attack
+
+## Platforms
+
+- Windows
+

@@ -1,0 +1,54 @@
+---
+id: T1539
+name: Steal Web Session Cookie
+created: 2019-10-08 20:04:35.508000+00:00
+modified: 2025-10-24 17:48:25.272000+00:00
+type: attack-pattern
+x_mitre_version: 1.5
+x_mitre_domains: enterprise-attack
+---
+
+## Tactic
+
+- [[credential_access|Credential Access]]
+
+An adversary may steal web application or service session cookies and use them to gain access to web applications or Internet services as an authenticated user without needing credentials. Web applications and services often use session cookies as an authentication token after a user has authenticated to a website.
+
+Cookies are often valid for an extended period of time, even if the web application is not actively used. Cookies can be found on disk, in the process memory of the browser, and in network traffic to remote systems. Additionally, other applications on the targets machine might store sensitive authentication cookies in memory (e.g. apps which authenticate to cloud services). Session cookies can be used to bypasses some multi-factor authentication protocols.(Citation: Pass The Cookie)
+
+There are several examples of malware targeting cookies from web browsers on the local system.(Citation: Kaspersky TajMahal April 2019)(Citation: Unit 42 Mac Crypto Cookies January 2019) Adversaries may also steal cookies by injecting malicious JavaScript content into websites or relying on [User Execution](https://attack.mitre.org/techniques/T1204) by tricking victims into running malicious JavaScript in their browser.(Citation: Talos Roblox Scam 2023)(Citation: Krebs Discord Bookmarks 2023)
+
+There are also open source frameworks such as `Evilginx2` and `Muraena` that can gather session cookies through a malicious proxy (e.g., [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557)) that can be set up by an adversary and used in phishing campaigns.(Citation: Github evilginx2)(Citation: GitHub Mauraena)
+
+After an adversary acquires a valid cookie, they can then perform a [Web Session Cookie](https://attack.mitre.org/techniques/T1550/004) technique to login to the corresponding web application.
+
+## Properties
+
+- id: T1539
+- name: Steal Web Session Cookie
+- created: 2019-10-08 20:04:35.508000+00:00
+- modified: 2025-10-24 17:48:25.272000+00:00
+- type: attack-pattern
+- x_mitre_version: 1.5
+- x_mitre_domains: enterprise-attack
+
+## Mitigations
+
+- [[M1017-user_training|M1017: User Training]]
+- [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]
+- [[M1032-multi-factor_authentication|M1032: Multi-factor Authentication]]
+- [[M1047-audit|M1047: Audit]]
+- [[M1051-update_software|M1051: Update Software]]
+- [[M1054-software_configuration|M1054: Software Configuration]]
+
+## Platforms
+
+- Linux
+- Office Suite
+- SaaS
+- Windows
+- macOS
+
+## Tools
+
+
