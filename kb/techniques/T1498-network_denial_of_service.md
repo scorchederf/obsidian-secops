@@ -22,20 +22,9 @@ Adversaries may use the original IP address of an attacking system, or spoof the
 
 For DoS attacks targeting the hosting system directly, see [Endpoint Denial of Service](https://attack.mitre.org/techniques/T1499).
 
-## Properties
-
-- id: T1498
-- name: Network Denial of Service
-- created: 2019-04-17 20:23:15.105000+00:00
-- modified: 2025-10-24 17:49:28.162000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1498.001: Direct Network Flood
-
 ^t1498001-direct-network-flood
 
 **Parent Technique**
@@ -59,7 +48,6 @@ Botnets are commonly used to conduct network flooding attacks against networks a
 - x_mitre_domains: enterprise-attack
 
 ### T1498.002: Reflection Amplification
-
 ^t1498002-reflection-amplification
 
 **Parent Technique**

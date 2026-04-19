@@ -18,20 +18,9 @@ There are also cross-platform interpreters such as [Python](https://attack.mitre
 
 Adversaries may abuse these technologies in various ways as a means of executing arbitrary commands. Commands and scripts can be embedded in [Initial Access](https://attack.mitre.org/tactics/TA0001) payloads delivered to victims as lure documents or as secondary payloads downloaded from an existing C2. Adversaries may also execute commands through interactive terminals/shells, as well as utilize various [Remote Services](https://attack.mitre.org/techniques/T1021) in order to achieve remote Execution.(Citation: Powershell Remote Commands)(Citation: Cisco IOS Software Integrity Assurance - Command History)(Citation: Remote Shell Execution in Python)
 
-## Properties
-
-- id: T1059
-- name: Command and Scripting Interpreter
-- created: 2017-05-31 21:30:49.546000+00:00
-- modified: 2025-10-24 17:48:57.520000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1059.001: PowerShell
-
 ^t1059001-powershell
 
 **Parent Technique**
@@ -59,7 +48,6 @@ PowerShell commands/scripts can also be executed without directly invoking the <
 - x_mitre_domains: enterprise-attack
 
 ### T1059.002: AppleScript
-
 ^t1059002-applescript
 
 **Parent Technique**
@@ -87,7 +75,6 @@ Adversaries may abuse AppleScript to execute various behaviors, such as interact
 - x_mitre_domains: enterprise-attack
 
 ### T1059.003: Windows Command Shell
-
 ^t1059003-windows-command-shell
 
 **Parent Technique**
@@ -113,7 +100,6 @@ Adversaries may leverage [cmd](https://attack.mitre.org/software/S0106) to execu
 - x_mitre_domains: enterprise-attack
 
 ### T1059.004: Unix Shell
-
 ^t1059004-unix-shell
 
 **Parent Technique**
@@ -141,7 +127,6 @@ Some systems, such as embedded devices, lightweight Linux distributions, and ESX
 - x_mitre_domains: enterprise-attack
 
 ### T1059.005: Visual Basic
-
 ^t1059005-visual-basic
 
 **Parent Technique**
@@ -167,7 +152,6 @@ Adversaries may use VB payloads to execute malicious commands. Common malicious 
 - x_mitre_domains: enterprise-attack
 
 ### T1059.006: Python
-
 ^t1059006-python
 
 **Parent Technique**
@@ -191,7 +175,6 @@ Python comes with many built-in packages to interact with the underlying system,
 - x_mitre_domains: enterprise-attack
 
 ### T1059.007: JavaScript
-
 ^t1059007-javascript
 
 **Parent Technique**
@@ -219,7 +202,6 @@ Adversaries may abuse various implementations of JavaScript to execute various b
 - x_mitre_domains: enterprise-attack
 
 ### T1059.008: Network Device CLI
-
 ^t1059008-network-device-cli
 
 **Parent Technique**
@@ -245,7 +227,6 @@ Adversaries can use the network CLI to change how network devices behave and ope
 - x_mitre_domains: enterprise-attack
 
 ### T1059.009: Cloud API
-
 ^t1059009-cloud-api
 
 **Parent Technique**
@@ -271,7 +252,6 @@ With proper permissions (often via use of credentials such as [Application Acces
 - x_mitre_domains: enterprise-attack
 
 ### T1059.010: AutoHotKey & AutoIT
-
 ^t1059010-autohotkey-&-autoit
 
 **Parent Technique**
@@ -297,7 +277,6 @@ These scripts may also be compiled into self-contained executable payloads (`.ex
 - x_mitre_domains: enterprise-attack
 
 ### T1059.011: Lua
-
 ^t1059011-lua
 
 **Parent Technique**
@@ -321,7 +300,6 @@ Lua scripts may be executed by adversaries for malicious purposes. Adversaries m
 - x_mitre_domains: enterprise-attack
 
 ### T1059.012: Hypervisor CLI
-
 ^t1059012-hypervisor-cli
 
 **Parent Technique**
@@ -345,7 +323,6 @@ For example, on ESXi systems, tools such as `esxcli` and `vim-cmd` allow adminis
 - x_mitre_domains: enterprise-attack
 
 ### T1059.013: Container CLI/API
-
 ^t1059013-container-cli-api
 
 **Parent Technique**
@@ -397,7 +374,7 @@ Kubernetes is responsible for the management and orchestration of containers acr
 
 ## Tools
 
-- [[S0363-empire|S0363: Empire]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0695-donut|S0695: Donut]]
+- [[donut|Donut]]
+- [[empire|Empire]]
+- [[imminent_monitor|Imminent Monitor]]
 

@@ -14,16 +14,6 @@ The adversary is trying to gather data of interest to their goal.
 
 Collection consists of techniques adversaries may use to gather information and the sources information is collected from that are relevant to following through on the adversary's objectives. Frequently, the next goal after collecting data is to either steal (exfiltrate) the data or to use the data to gain more information about the target environment. Common target sources include various drive types, browsers, audio, video, and email. Common collection methods include capturing screenshots and keyboard input.
 
-## Properties
-
-- id: x-mitre-tactic--d108ce10-2419-4cf9-a774-46161d6c6cfe
-- name: Collection
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2024-09-05 18:27:09.070000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]

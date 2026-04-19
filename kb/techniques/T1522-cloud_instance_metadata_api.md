@@ -21,16 +21,6 @@ If adversaries have a presence on the running virtual instance, they may query t
 The de facto standard across cloud service providers is to host the Instance Metadata API at <code>http[:]//169.254.169.254</code>.
 
 
-## Properties
-
-- id: T1522
-- name: Cloud Instance Metadata API
-- created: 2019-09-04 14:41:32.317000+00:00
-- modified: 2025-10-24 17:48:28.695000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - IaaS

@@ -14,16 +14,6 @@ The adversary is trying to figure out your environment.
 
 Discovery consists of techniques an adversary may use to gain knowledge about the system and internal network. These techniques help adversaries observe the environment and orient themselves before deciding how to act. They also allow adversaries to explore what they can control and what’s around their entry point in order to discover how it could benefit their current objective. Native operating system tools are often used toward this post-compromise information-gathering objective. 
 
-## Properties
-
-- id: x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9
-- name: Discovery
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:35.302000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1007-system_service_discovery|T1007: System Service Discovery]]

@@ -16,16 +16,6 @@ Adversaries may abuse a container administration service to execute commands wit
 
 In Docker, adversaries may specify an entrypoint during container deployment that executes a script or command, or they may use a command such as <code>docker exec</code> to execute a command within a running container.(Citation: Docker Entrypoint)(Citation: Docker Exec) In Kubernetes, if an adversary has sufficient permissions, they may gain remote execution in a container in the cluster via interaction with the Kubernetes API server, the kubelet, or by running a command such as <code>kubectl exec</code>.(Citation: Kubectl Exec Get Shell)
 
-## Properties
-
-- id: T1609
-- name: Container Administration Command
-- created: 2021-03-29 16:39:26.183000+00:00
-- modified: 2025-10-24 17:48:59.945000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -40,5 +30,5 @@ In Docker, adversaries may specify an entrypoint during container deployment tha
 
 ## Tools
 
-- [[S0683-peirates|S0683: Peirates]]
+- [[peirates|Peirates]]
 

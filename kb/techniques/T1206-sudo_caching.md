@@ -18,16 +18,6 @@ Adversaries can abuse poor configurations of this to escalate privileges without
 
 The OSX Proton Malware has disabled <code>tty_tickets</code> to potentially make scripting easier by issuing <code>echo \'Defaults !tty_tickets\' >> /etc/sudoers</code>  (Citation: cybereason osx proton). In order for this change to be reflected, the Proton malware also must issue <code>killall Terminal</code>. As of macOS Sierra, the sudoers file has <code>tty_tickets</code> enabled by default.
 
-## Properties
-
-- id: T1206
-- name: Sudo Caching
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:30.957000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

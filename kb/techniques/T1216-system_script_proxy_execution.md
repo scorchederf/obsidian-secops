@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may use trusted scripts, often signed with certificates, to proxy the execution of malicious files. Several Microsoft signed scripts that have been downloaded from Microsoft or are default on Windows installations can be used to proxy execution of other files.(Citation: LOLBAS Project) This behavior may be abused by adversaries to execute malicious files that could bypass application control and signature validation on systems.(Citation: GitHub Ultimate AppLocker Bypass List)
 
-## Properties
-
-- id: T1216
-- name: System Script Proxy Execution
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:37.665000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1216.001: PubPrn
-
 ^t1216001-pubprn
 
 **Parent Technique**
@@ -53,7 +42,6 @@ In later versions of Windows (10+), <code>PubPrn.vbs</code> has been updated to 
 - x_mitre_domains: enterprise-attack
 
 ### T1216.002: SyncAppvPublishingServer
-
 ^t1216002-syncappvpublishingserver
 
 **Parent Technique**

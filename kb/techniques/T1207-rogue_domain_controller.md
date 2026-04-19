@@ -18,21 +18,11 @@ Registering a rogue DC involves creating a new server and nTDSDSA objects in the
 
 This technique may bypass system logging and security monitors such as security information and event management (SIEM) products (since actions taken on a rogue DC may not be reported to these sensors). (Citation: DCShadow Blog) The technique may also be used to alter and delete replication and other associated metadata to obstruct forensic analysis. Adversaries may also utilize this technique to perform [SID-History Injection](https://attack.mitre.org/techniques/T1134/005) and/or manipulate AD objects (such as accounts, access control lists, schemas) to establish backdoors for Persistence. (Citation: DCShadow Blog)
 
-## Properties
-
-- id: T1207
-- name: Rogue Domain Controller
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:48.823000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows
 
 ## Tools
 
-- [[S0002-mimikatz|S0002: Mimikatz]]
+- [[mimikatz|Mimikatz]]
 

@@ -20,16 +20,6 @@ This functionality could also be built into remote access tools.
 
 This technique may incorporate use of other techniques such as [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) and [Lateral Tool Transfer](https://attack.mitre.org/techniques/T1570) to identify and move files, as well as [Cloud Service Dashboard](https://attack.mitre.org/techniques/T1538) and [Cloud Storage Object Discovery](https://attack.mitre.org/techniques/T1619) to identify resources in cloud environments.
 
-## Properties
-
-- id: T1119
-- name: Automated Collection
-- created: 2017-05-31 21:31:27.985000+00:00
-- modified: 2025-10-24 17:48:35.995000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1029-remote_data_storage|M1029: Remote Data Storage]]
@@ -46,11 +36,11 @@ This technique may incorporate use of other techniques such as [File and Directo
 
 ## Tools
 
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0684-roadtools|S0684: ROADTools]]
-- [[S0699-mythic|S0699: Mythic]]
-- [[S1091-pacu|S1091: Pacu]]
-- [[S1131-nppspy|S1131: NPPSPY]]
+- [[empire|Empire]]
+- [[mythic|Mythic]]
+- [[nppspy|NPPSPY]]
+- [[pacu|Pacu]]
+- [[poshc2|PoshC2]]
+- [[roadtools|ROADTools]]
+- [[shimratreporter|ShimRatReporter]]
 

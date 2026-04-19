@@ -20,16 +20,6 @@ Leveraging application integrations may allow adversaries to persist in an envir
 
 Creating or adding a new application may require the adversary to create a dedicated [Cloud Account](https://attack.mitre.org/techniques/T1136/003) for the application and assign it [Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003) – for example, in Microsoft 365 environments, an application can only access resources via an associated service principal.(Citation: Microsoft Entra ID Service Principals)  
 
-## Properties
-
-- id: T1671
-- name: Cloud Application Integration
-- created: 2025-03-20 22:21:59.326000+00:00
-- modified: 2025-04-15 19:59:05.283000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1042-disable_or_remove_feature_or_program|M1042: Disable or Remove Feature or Program]]

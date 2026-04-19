@@ -16,20 +16,9 @@ Adversaries may exfiltrate data, such as sensitive documents, through the use of
 
 When automated exfiltration is used, other exfiltration techniques likely apply as well to transfer the information out of the network, such as [Exfiltration Over C2 Channel](https://attack.mitre.org/techniques/T1041) and [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048).
 
-## Properties
-
-- id: T1020
-- name: Automated Exfiltration
-- created: 2017-05-31 21:30:29.458000+00:00
-- modified: 2025-10-24 17:48:58.340000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1020.001: Traffic Duplication
-
 ^t1020001-traffic-duplication
 
 **Parent Technique**
@@ -65,6 +54,6 @@ Adversaries may use traffic duplication in conjunction with [Network Sniffing](h
 
 ## Tools
 
-- [[S0363-empire|S0363: Empire]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
+- [[empire|Empire]]
+- [[shimratreporter|ShimRatReporter]]
 

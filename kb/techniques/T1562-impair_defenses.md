@@ -18,20 +18,9 @@ Adversaries may also impair routine operations that contribute to defensive hygi
 
 
 
-## Properties
-
-- id: T1562
-- name: Impair Defenses
-- created: 2020-02-21 20:22:13.470000+00:00
-- modified: 2025-10-24 17:48:41.123000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1562.001: Disable or Modify Tools
-
 ^t1562001-disable-or-modify-tools
 
 **Parent Technique**
@@ -67,7 +56,6 @@ Additionally, adversaries may exploit legitimate drivers from anti-virus softwar
 - x_mitre_domains: enterprise-attack
 
 ### T1562.002: Disable Windows Event Logging
-
 ^t1562002-disable-windows-event-logging
 
 **Parent Technique**
@@ -99,7 +87,6 @@ By disabling Windows event logging, adversaries can operate while leaving less e
 - x_mitre_domains: enterprise-attack
 
 ### T1562.003: Impair Command History Logging
-
 ^t1562003-impair-command-history-logging
 
 **Parent Technique**
@@ -129,7 +116,6 @@ Adversaries may also leverage a [Network Device CLI](https://attack.mitre.org/te
 - x_mitre_domains: enterprise-attack
 
 ### T1562.004: Disable or Modify System Firewall
-
 ^t1562004-disable-or-modify-system-firewall
 
 **Parent Technique**
@@ -157,7 +143,6 @@ In ESXi, firewall rules may be modified directly via the esxcli command line int
 - x_mitre_domains: enterprise-attack
 
 ### T1562.006: Indicator Blocking
-
 ^t1562006-indicator-blocking
 
 **Parent Technique**
@@ -187,7 +172,6 @@ In Linux environments, adversaries may disable or reconfigure log processing too
 - x_mitre_domains: enterprise-attack
 
 ### T1562.007: Disable or Modify Cloud Firewall
-
 ^t1562007-disable-or-modify-cloud-firewall
 
 **Parent Technique**
@@ -213,7 +197,6 @@ Modifying or disabling a cloud firewall may enable adversary C2 communications, 
 - x_mitre_domains: enterprise-attack
 
 ### T1562.008: Disable or Modify Cloud Logs
-
 ^t1562008-disable-or-modify-cloud-logs
 
 **Parent Technique**
@@ -237,7 +220,6 @@ For example, in AWS an adversary may disable CloudWatch/CloudTrail integrations 
 - x_mitre_domains: enterprise-attack
 
 ### T1562.009: Safe Mode Boot
-
 ^t1562009-safe-mode-boot
 
 **Parent Technique**
@@ -263,7 +245,6 @@ Adversaries may also add their malicious applications to the list of minimal ser
 - x_mitre_domains: enterprise-attack
 
 ### T1562.010: Downgrade Attack
-
 ^t1562010-downgrade-attack
 
 **Parent Technique**
@@ -289,7 +270,6 @@ Adversaries may similarly target network traffic to downgrade from an encrypted 
 - x_mitre_domains: enterprise-attack
 
 ### T1562.011: Spoof Security Alerting
-
 ^t1562011-spoof-security-alerting
 
 **Parent Technique**
@@ -315,7 +295,6 @@ For example, adversaries may show a fake Windows Security GUI and tray icon with
 - x_mitre_domains: enterprise-attack
 
 ### T1562.012: Disable or Modify Linux Audit System
-
 ^t1562012-disable-or-modify-linux-audit-system
 
 **Parent Technique**
@@ -341,7 +320,6 @@ With root privileges, adversaries may be able to ensure their activity is not lo
 - x_mitre_domains: enterprise-attack
 
 ### T1562.013: Disable or Modify Network Device Firewall
-
 ^t1562013-disable-or-modify-network-device-firewall
 
 **Parent Technique**

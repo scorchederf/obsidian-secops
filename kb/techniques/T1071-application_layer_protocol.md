@@ -16,20 +16,9 @@ Adversaries may communicate using OSI application layer protocols to avoid detec
 
 Adversaries may utilize many different protocols, including those used for web browsing, transferring files, electronic mail, DNS, or publishing/subscribing. For connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), commonly used protocols are SMB, SSH, or RDP.(Citation: Mandiant APT29 Eye Spy Email Nov 22) 
 
-## Properties
-
-- id: T1071
-- name: Application Layer Protocol
-- created: 2017-05-31 21:30:56.776000+00:00
-- modified: 2025-10-24 17:48:38.368000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1071.001: Web Protocols
-
 ^t1071001-web-protocols
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Protocols such as HTTP/S(Citation: CrowdStrike Putter Panda) and WebSocket(Citat
 - x_mitre_domains: enterprise-attack
 
 ### T1071.002: File Transfer Protocols
-
 ^t1071002-file-transfer-protocols
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Protocols such as SMB(Citation: US-CERT TA18-074A), FTP(Citation: ESET Machete J
 - x_mitre_domains: enterprise-attack
 
 ### T1071.003: Mail Protocols
-
 ^t1071003-mail-protocols
 
 **Parent Technique**
@@ -101,7 +88,6 @@ Protocols such as SMTP/S, POP3/S, and IMAP that carry electronic mail may be ver
 - x_mitre_domains: enterprise-attack
 
 ### T1071.004: DNS
-
 ^t1071004-dns
 
 **Parent Technique**
@@ -127,7 +113,6 @@ DNS beaconing may be used to send commands to remote systems via DNS queries. A 
 - x_mitre_domains: enterprise-attack
 
 ### T1071.005: Publish/Subscribe Protocols
-
 ^t1071005-publish-subscribe-protocols
 
 **Parent Technique**
@@ -165,5 +150,5 @@ Protocols such as <code>MQTT</code>, <code>XMPP</code>, <code>AMQP</code>, and <
 
 ## Tools
 
-- [[S0633-sliver|S0633: Sliver]]
+- [[sliver|Sliver]]
 

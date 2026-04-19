@@ -19,20 +19,9 @@ Malicious extensions can be introduced through various methods, including social
 
 The modular nature of extensions and their integration with host applications make them an attractive target for adversaries seeking to exploit trusted software ecosystems. Detection can be challenging due to the inherent trust placed in extensions during installation and their ability to blend into normal application workflows. 
 
-## Properties
-
-- id: T1176
-- name: Software Extensions
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:48:39.525000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1176.001: Browser Extensions
-
 ^t1176001-browser-extensions
 
 **Parent Technique**
@@ -64,7 +53,6 @@ There have also been instances of botnets using a persistent backdoor through ma
 - x_mitre_domains: enterprise-attack
 
 ### T1176.002: IDE Extensions
-
 ^t1176002-ide-extensions
 
 **Parent Technique**

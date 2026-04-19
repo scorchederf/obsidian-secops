@@ -18,16 +18,6 @@ All forms of spearphishing are electronically delivered social engineering targe
 
 A common example is to build rapport with a target via social media, then send content to a personal webmail service that the target uses on their work computer. This allows an adversary to bypass some email restrictions on the work account, and the target is more likely to open the file since it's something they were expecting. If the payload doesn't work as expected, the adversary can continue normal communications and troubleshoot with the target on how to get it working.
 
-## Properties
-
-- id: T1194
-- name: Spearphishing via Service
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:26.715000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

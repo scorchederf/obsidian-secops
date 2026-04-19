@@ -22,16 +22,6 @@ The MBR is the section of disk that is first loaded after completing hardware in
 ### Volume Boot Record
 The MBR passes control of the boot process to the VBR. Similar to the case of MBR, an adversary who has raw access to the boot drive may overwrite the VBR to divert execution during startup to adversary code.
 
-## Properties
-
-- id: T1067
-- name: Bootkit
-- created: 2017-05-31 21:30:54.661000+00:00
-- modified: 2025-10-24 17:48:19.981000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

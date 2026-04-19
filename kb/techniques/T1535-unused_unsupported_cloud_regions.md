@@ -20,16 +20,6 @@ A variation on this behavior takes advantage of differences in functionality acr
 
 An example of adversary use of unused AWS regions is to mine cryptocurrency through [Resource Hijacking](https://attack.mitre.org/techniques/T1496), which can cost organizations substantial amounts of money over time depending on the processing power used.(Citation: CloudSploit - Unused AWS Regions)
 
-## Properties
-
-- id: T1535
-- name: Unused/Unsupported Cloud Regions
-- created: 2019-09-04 14:35:04.617000+00:00
-- modified: 2025-10-24 17:48:49.853000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1054-software_configuration|M1054: Software Configuration]]

@@ -16,20 +16,9 @@ Adversaries may attempt to exfiltrate data over a different network medium than 
 
 Adversaries may choose to do this if they have sufficient access or proximity, and the connection might not be secured or defended as well as the primary Internet-connected channel because it is not routed through the same enterprise network.
 
-## Properties
-
-- id: T1011
-- name: Exfiltration Over Other Network Medium
-- created: 2017-05-31 21:30:25.159000+00:00
-- modified: 2025-10-24 17:48:47.042000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1011.001: Exfiltration Over Bluetooth
-
 ^t1011001-exfiltration-over-bluetooth
 
 **Parent Technique**

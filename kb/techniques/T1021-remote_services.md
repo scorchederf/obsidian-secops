@@ -18,20 +18,9 @@ In an enterprise environment, servers and workstations can be organized into dom
 
 Legitimate applications (such as [Software Deployment Tools](https://attack.mitre.org/techniques/T1072) and other administrative programs) may utilize [Remote Services](https://attack.mitre.org/techniques/T1021) to access remote hosts. For example, Apple Remote Desktop (ARD) on macOS is native software used for remote management. ARD leverages a blend of protocols, including [VNC](https://attack.mitre.org/techniques/T1021/005) to send the screen and control buffers and [SSH](https://attack.mitre.org/techniques/T1021/004) for secure file transfer.(Citation: Remote Management MDM macOS)(Citation: Kickstart Apple Remote Desktop commands)(Citation: Apple Remote Desktop Admin Guide 3.3) Adversaries can abuse applications such as ARD to gain remote code execution and perform lateral movement. In versions of macOS prior to 10.14, an adversary can escalate an SSH session to an ARD session which enables an adversary to accept TCC (Transparency, Consent, and Control) prompts without user interaction and gain access to data.(Citation: FireEye 2019 Apple Remote Desktop)(Citation: Lockboxx ARD 2019)(Citation: Kickstart Apple Remote Desktop commands)
 
-## Properties
-
-- id: T1021
-- name: Remote Services
-- created: 2017-05-31 21:30:29.858000+00:00
-- modified: 2025-10-24 17:48:48.472000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1021.001: Remote Desktop Protocol
-
 ^t1021001-remote-desktop-protocol
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Adversaries may connect to a remote system over RDP/RDS to expand access if the 
 - x_mitre_domains: enterprise-attack
 
 ### T1021.002: SMB/Windows Admin Shares
-
 ^t1021002-smb-windows-admin-shares
 
 **Parent Technique**
@@ -83,7 +71,6 @@ Windows systems have hidden network shares that are accessible only to administr
 - x_mitre_domains: enterprise-attack
 
 ### T1021.003: Distributed Component Object Model
-
 ^t1021003-distributed-component-object-model
 
 **Parent Technique**
@@ -111,7 +98,6 @@ Through DCOM, adversaries operating in the context of an appropriately privilege
 - x_mitre_domains: enterprise-attack
 
 ### T1021.004: SSH
-
 ^t1021004-ssh
 
 **Parent Technique**
@@ -135,7 +121,6 @@ SSH is a protocol that allows authorized users to open remote shells on other co
 - x_mitre_domains: enterprise-attack
 
 ### T1021.005: VNC
-
 ^t1021005-vnc
 
 **Parent Technique**
@@ -161,7 +146,6 @@ Adversaries may abuse VNC to perform malicious actions as the logged-on user suc
 - x_mitre_domains: enterprise-attack
 
 ### T1021.006: Windows Remote Management
-
 ^t1021006-windows-remote-management
 
 **Parent Technique**
@@ -185,7 +169,6 @@ WinRM is the name of both a Windows service and a protocol that allows a user to
 - x_mitre_domains: enterprise-attack
 
 ### T1021.007: Cloud Services
-
 ^t1021007-cloud-services
 
 **Parent Technique**
@@ -211,7 +194,6 @@ In some cases, adversaries may be able to authenticate to these services via [Ap
 - x_mitre_domains: enterprise-attack
 
 ### T1021.008: Direct Cloud VM Connections
-
 ^t1021008-direct-cloud-vm-connections
 
 **Parent Technique**
@@ -255,5 +237,5 @@ Adversaries may utilize these cloud native methods to directly access virtual in
 
 ## Tools
 
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
+- [[brute_ratel_c4|Brute Ratel C4]]
 

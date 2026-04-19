@@ -22,16 +22,6 @@ Linux has commands such as `parted`, `lsblk`, `fdisk`, `lshw`, and `df` that can
 
 Infrastructure as a Service (IaaS) cloud providers also have commands for storage discovery such as `describe volume` in AWS, `gcloud compute disks list` in GCP, and `az disk list` in Azure.(Citation: AWS docs describe volumes)(Citation: GCP gcloud compute disks list)(Citation: azure az disk)
 
-## Properties
-
-- id: T1680
-- name: Local Storage Discovery
-- created: 2025-09-25 21:09:38.677000+00:00
-- modified: 2025-10-22 02:09:54.940000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -42,7 +32,7 @@ Infrastructure as a Service (IaaS) cloud providers also have commands for storag
 
 ## Tools
 
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S1087-asyncrat|S1087: AsyncRAT]]
+- [[asyncrat|AsyncRAT]]
+- [[crackmapexec|CrackMapExec]]
+- [[silenttrinity|SILENTTRINITY]]
 

@@ -18,20 +18,9 @@ Adversaries may use several methods to accomplish [Virtualization/Sandbox Evasio
 
 
 
-## Properties
-
-- id: T1497
-- name: Virtualization/Sandbox Evasion
-- created: 2019-04-17 22:22:24.505000+00:00
-- modified: 2025-10-24 17:49:02.638000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1497.001: System Checks
-
 ^t1497001-system-checks
 
 **Parent Technique**
@@ -61,7 +50,6 @@ Hardware checks, such as the presence of the fan, temperature, and audio devices
 - x_mitre_domains: enterprise-attack
 
 ### T1497.002: User Activity Based Checks
-
 ^t1497002-user-activity-based-checks
 
 **Parent Technique**
@@ -85,7 +73,6 @@ Adversaries may search for user activity on the host based on variables such as 
 - x_mitre_domains: enterprise-attack
 
 ### T1497.003: Time Based Checks
-
 ^t1497003-time-based-checks
 
 **Parent Technique**

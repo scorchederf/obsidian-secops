@@ -18,20 +18,9 @@ To maximize impact on the target organization in operations where network-wide a
 
 On network devices, adversaries may wipe configuration files and other data from the device using [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `erase`.(Citation: erase_cmd_cisco)
 
-## Properties
-
-- id: T1561
-- name: Disk Wipe
-- created: 2020-02-20 22:02:20.372000+00:00
-- modified: 2025-10-24 17:48:27.697000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1561.001: Disk Content Wipe
-
 ^t1561001-disk-content-wipe
 
 **Parent Technique**
@@ -57,7 +46,6 @@ To maximize impact on the target organization in operations where network-wide a
 - x_mitre_domains: enterprise-attack
 
 ### T1561.002: Disk Structure Wipe
-
 ^t1561002-disk-structure-wipe
 
 **Parent Technique**

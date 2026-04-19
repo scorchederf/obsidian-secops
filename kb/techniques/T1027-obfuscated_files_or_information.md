@@ -20,20 +20,9 @@ Portions of files can also be encoded to hide the plain-text strings that would 
 
 Adversaries may also abuse [Command Obfuscation](https://attack.mitre.org/techniques/T1027/010) to obscure commands executed from payloads or directly via [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059). Environment variables, aliases, characters, and other platform/language specific semantics can be used to evade signature based detections and application control mechanisms. (Citation: FireEye Obfuscation June 2017) (Citation: FireEye Revoke-Obfuscation July 2017)(Citation: PaloAlto EncodedCommand March 2017) 
 
-## Properties
-
-- id: T1027
-- name: Obfuscated Files or Information
-- created: 2017-05-31 21:30:32.662000+00:00
-- modified: 2025-10-24 17:49:15.265000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1027.001: Binary Padding
-
 ^t1027001-binary-padding
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Binary padding effectively changes the checksum of the file and can also be used
 - x_mitre_domains: enterprise-attack
 
 ### T1027.002: Software Packing
-
 ^t1027002-software-packing
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Utilities used to perform software packing are called packers. Example packers a
 - x_mitre_domains: enterprise-attack
 
 ### T1027.003: Steganography
-
 ^t1027003-steganography
 
 **Parent Technique**
@@ -107,7 +94,6 @@ By the end of 2017, a threat group used <code>Invoke-PSImage</code> to hide 
 - x_mitre_domains: enterprise-attack
 
 ### T1027.004: Compile After Delivery
-
 ^t1027004-compile-after-delivery
 
 **Parent Technique**
@@ -131,7 +117,6 @@ Source code payloads may also be encrypted, encoded, and/or embedded within othe
 - x_mitre_domains: enterprise-attack
 
 ### T1027.005: Indicator Removal from Tools
-
 ^t1027005-indicator-removal-from-tools
 
 **Parent Technique**
@@ -155,7 +140,6 @@ A good example of this is when malware is detected with a file signature and qua
 - x_mitre_domains: enterprise-attack
 
 ### T1027.006: HTML Smuggling
-
 ^t1027006-html-smuggling
 
 **Parent Technique**
@@ -181,7 +165,6 @@ For example, JavaScript Blobs can be abused to dynamically generate malicious fi
 - x_mitre_domains: enterprise-attack
 
 ### T1027.007: Dynamic API Resolution
-
 ^t1027007-dynamic-api-resolution
 
 **Parent Technique**
@@ -209,7 +192,6 @@ Various methods may be used to obfuscate malware calls to API functions. For exa
 - x_mitre_domains: enterprise-attack
 
 ### T1027.008: Stripped Payloads
-
 ^t1027008-stripped-payloads
 
 **Parent Technique**
@@ -233,7 +215,6 @@ Adversaries may use stripped payloads in order to make malware analysis more dif
 - x_mitre_domains: enterprise-attack
 
 ### T1027.009: Embedded Payloads
-
 ^t1027009-embedded-payloads
 
 **Parent Technique**
@@ -261,7 +242,6 @@ Embedded content may also be used as [Process Injection](https://attack.mitre.or
 - x_mitre_domains: enterprise-attack
 
 ### T1027.010: Command Obfuscation
-
 ^t1027010-command-obfuscation
 
 **Parent Technique**
@@ -289,7 +269,6 @@ Tools such as <code>Invoke-Obfuscation</code> and <code>Invoke-DOSfucation</code
 - x_mitre_domains: enterprise-attack
 
 ### T1027.011: Fileless Storage
-
 ^t1027011-fileless-storage
 
 **Parent Technique**
@@ -317,7 +296,6 @@ Some forms of fileless storage activity may indirectly create artifacts in the f
 - x_mitre_domains: enterprise-attack
 
 ### T1027.012: LNK Icon Smuggling
-
 ^t1027012-lnk-icon-smuggling
 
 **Parent Technique**
@@ -344,7 +322,6 @@ LNK Icon Smuggling may also be utilized post compromise, such as malicious scrip
 - x_mitre_domains: enterprise-attack
 
 ### T1027.013: Encrypted/Encoded File
-
 ^t1027013-encrypted-encoded-file
 
 **Parent Technique**
@@ -374,7 +351,6 @@ Adversaries may also abuse file-specific as well as custom encoding schemes. For
 - x_mitre_domains: enterprise-attack
 
 ### T1027.014: Polymorphic Code
-
 ^t1027014-polymorphic-code
 
 **Parent Technique**
@@ -398,7 +374,6 @@ Other obfuscation techniques can be used in conjunction with polymorphic code to
 - x_mitre_domains: enterprise-attack
 
 ### T1027.015: Compression
-
 ^t1027015-compression
 
 **Parent Technique**
@@ -426,7 +401,6 @@ File archives may be sent as one [Spearphishing Attachment](https://attack.mitre
 - x_mitre_domains: enterprise-attack
 
 ### T1027.016: Junk Code Insertion
-
 ^t1027016-junk-code-insertion
 
 **Parent Technique**
@@ -452,7 +426,6 @@ The use of junk / dead code insertion is distinct from [Binary Padding](https://
 - x_mitre_domains: enterprise-attack
 
 ### T1027.017: SVG Smuggling
-
 ^t1027017-svg-smuggling
 
 **Parent Technique**
@@ -499,12 +472,12 @@ SVG Smuggling may be used in conjunction with [HTML Smuggling](https://attack.mi
 
 ## Tools
 
-- [[S0332-remcos|S0332: Remcos]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0465-carrotball|S0465: CARROTBALL]]
-- [[S0500-mcmd|S0500: MCMD]]
-- [[S0594-out1|S0594: Out1]]
-- [[S0633-sliver|S0633: Sliver]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[carrotball|CARROTBALL]]
+- [[imminent_monitor|Imminent Monitor]]
+- [[mcmd|MCMD]]
+- [[out1|Out1]]
+- [[remcos|Remcos]]
+- [[shimratreporter|ShimRatReporter]]
+- [[sliver|Sliver]]
 

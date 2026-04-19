@@ -18,16 +18,6 @@ Rootkits or rootkit enabling functionality may reside at the user or kernel leve
 
 Rootkits that reside or modify boot sectors are known as [Bootkit](https://attack.mitre.org/techniques/T1542/003)s and specifically target the boot process of the operating system.
 
-## Properties
-
-- id: T1014
-- name: Rootkit
-- created: 2017-05-31 21:30:26.496000+00:00
-- modified: 2025-10-24 17:48:24.032000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
@@ -36,5 +26,5 @@ Rootkits that reside or modify boot sectors are known as [Bootkit](https://attac
 
 ## Tools
 
-- [[S0040-htran|S0040: HTRAN]]
+- [[htran|HTRAN]]
 

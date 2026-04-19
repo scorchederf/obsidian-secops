@@ -16,20 +16,9 @@ Adversaries may abuse task scheduling functionality to facilitate initial or rec
 
 Adversaries may use task scheduling to execute programs at system startup or on a scheduled basis for persistence. These mechanisms can also be abused to run a process under the context of a specified account (such as one with elevated permissions/privileges). Similar to [System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218), adversaries have also abused task scheduling to potentially mask one-time execution under a trusted system process.(Citation: ProofPoint Serpent)
 
-## Properties
-
-- id: T1053
-- name: Scheduled Task/Job
-- created: 2017-05-31 21:30:46.977000+00:00
-- modified: 2025-10-24 17:48:38.539000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1053.002: At
-
 ^t1053002-at
 
 **Parent Technique**
@@ -57,7 +46,6 @@ In Linux environments, adversaries may also abuse [at](https://attack.mitre.org/
 - x_mitre_domains: enterprise-attack
 
 ### T1053.003: Cron
-
 ^t1053003-cron
 
 **Parent Technique**
@@ -81,7 +69,6 @@ An adversary may use <code>cron</code> in Linux or Unix environments to execute 
 - x_mitre_domains: enterprise-attack
 
 ### T1053.005: Scheduled Task
-
 ^t1053005-scheduled-task
 
 **Parent Technique**
@@ -107,7 +94,6 @@ Adversaries may also create "hidden" scheduled tasks (i.e. [Hide Artifacts](http
 - x_mitre_domains: enterprise-attack
 
 ### T1053.006: Systemd Timers
-
 ^t1053006-systemd-timers
 
 **Parent Technique**
@@ -133,7 +119,6 @@ An adversary may use systemd timers to execute malicious code at system startup 
 - x_mitre_domains: enterprise-attack
 
 ### T1053.007: Container Orchestration Job
-
 ^t1053007-container-orchestration-job
 
 **Parent Technique**

@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [Shell History](https://attack.mitre.org/techniques/T1552/003)), operating system or application-specific repositories (e.g. [Credentials in Registry](https://attack.mitre.org/techniques/T1552/002)),  or other specialized files/artifacts (e.g. [Private Keys](https://attack.mitre.org/techniques/T1552/004)).(Citation: Brining MimiKatz to Unix)
 
-## Properties
-
-- id: T1552
-- name: Unsecured Credentials
-- created: 2020-02-04 12:47:23.631000+00:00
-- modified: 2025-10-24 17:48:42.785000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1552.001: Credentials In Files
-
 ^t1552001-credentials-in-files
 
 **Parent Technique**
@@ -53,7 +42,6 @@ In cloud and/or containerized environments, authenticated user and service accou
 - x_mitre_domains: enterprise-attack
 
 ### T1552.002: Credentials in Registry
-
 ^t1552002-credentials-in-registry
 
 **Parent Technique**
@@ -80,7 +68,6 @@ Example commands to find Registry keys related to password information: (Citatio
 - x_mitre_domains: enterprise-attack
 
 ### T1552.003: Shell History
-
 ^t1552003-shell-history
 
 **Parent Technique**
@@ -108,7 +95,6 @@ Users often type usernames and passwords on the command-line as parameters to pr
 - x_mitre_domains: enterprise-attack
 
 ### T1552.004: Private Keys
-
 ^t1552004-private-keys
 
 **Parent Technique**
@@ -138,7 +124,6 @@ Some private keys require a password or passphrase for operation, so an adversar
 - x_mitre_domains: enterprise-attack
 
 ### T1552.005: Cloud Instance Metadata API
-
 ^t1552005-cloud-instance-metadata-api
 
 **Parent Technique**
@@ -167,7 +152,6 @@ The de facto standard across cloud service providers is to host the Instance Met
 - x_mitre_domains: enterprise-attack
 
 ### T1552.006: Group Policy Preferences
-
 ^t1552006-group-policy-preferences
 
 **Parent Technique**
@@ -200,7 +184,6 @@ On the SYSVOL share, adversaries may use the following command to enumerate pote
 - x_mitre_domains: enterprise-attack
 
 ### T1552.007: Container API
-
 ^t1552007-container-api
 
 **Parent Technique**
@@ -224,7 +207,6 @@ An adversary may access the Docker API to collect logs that contain credentials 
 - x_mitre_domains: enterprise-attack
 
 ### T1552.008: Chat Messages
-
 ^t1552008-chat-messages
 
 **Parent Technique**
@@ -275,6 +257,6 @@ Rather than accessing the stored chat logs (i.e., [Credentials In Files](https:/
 
 ## Tools
 
-- [[S1091-pacu|S1091: Pacu]]
-- [[S1131-nppspy|S1131: NPPSPY]]
+- [[nppspy|NPPSPY]]
+- [[pacu|Pacu]]
 

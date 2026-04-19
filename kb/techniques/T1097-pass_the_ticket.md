@@ -20,16 +20,6 @@ Silver Tickets can be obtained for services that use Kerberos as an authenticati
 
 Golden Tickets can be obtained for the domain using the Key Distribution Service account KRBTGT account NTLM hash, which enables generation of TGTs for any account in Active Directory. (Citation: Campbell 2014)
 
-## Properties
-
-- id: T1097
-- name: Pass the Ticket
-- created: 2017-05-31 21:31:11.623000+00:00
-- modified: 2025-10-24 17:49:10.811000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

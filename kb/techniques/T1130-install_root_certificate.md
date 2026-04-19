@@ -22,16 +22,6 @@ Root certificates (and their associated chains) can also be cloned and reinstall
 
 In macOS, the Ay MaMi malware uses <code>/usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /path/to/malicious/cert</code> to install a malicious certificate as a trusted root certificate into the system keychain. (Citation: objective-see ay mami 2018)
 
-## Properties
-
-- id: T1130
-- name: Install Root Certificate
-- created: 2017-05-31 21:31:42.750000+00:00
-- modified: 2025-10-24 17:49:27.671000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

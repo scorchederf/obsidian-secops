@@ -16,20 +16,9 @@ Adversaries may execute their own malicious payloads by hijacking the way operat
 
 There are many ways an adversary may hijack the flow of execution, including by manipulating how the operating system locates programs to be executed. How the operating system locates libraries to be used by a program can also be intercepted. Locations where the operating system looks for programs/resources, such as file directories and in the case of Windows the Registry, could also be poisoned to include malicious payloads.
 
-## Properties
-
-- id: T1574
-- name: Hijack Execution Flow
-- created: 2020-03-12 20:38:12.465000+00:00
-- modified: 2025-10-24 17:49:13.820000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1574.001: DLL
-
 ^t1574001-dll
 
 **Parent Technique**
@@ -80,7 +69,6 @@ If a valid DLL is configured to run at a higher privilege level, then the advers
 - x_mitre_domains: enterprise-attack
 
 ### T1574.004: Dylib Hijacking
-
 ^t1574004-dylib-hijacking
 
 **Parent Technique**
@@ -104,7 +92,6 @@ Adversaries may gain execution by inserting malicious dylibs with the name of th
 - x_mitre_domains: enterprise-attack
 
 ### T1574.005: Executable Installer File Permissions Weakness
-
 ^t1574005-executable-installer-file-permissions-weakness
 
 **Parent Technique**
@@ -130,7 +117,6 @@ Adversaries may use this technique to replace legitimate binaries with malicious
 - x_mitre_domains: enterprise-attack
 
 ### T1574.006: Dynamic Linker Hijacking
-
 ^t1574006-dynamic-linker-hijacking
 
 **Parent Technique**
@@ -156,7 +142,6 @@ Hijacking dynamic linker variables may grant access to the victim process's memo
 - x_mitre_domains: enterprise-attack
 
 ### T1574.007: Path Interception by PATH Environment Variable
-
 ^t1574007-path-interception-by-path-environment-variable
 
 **Parent Technique**
@@ -184,7 +169,6 @@ Adversaries may also directly modify the $PATH variable specifying the directori
 - x_mitre_domains: enterprise-attack
 
 ### T1574.008: Path Interception by Search Order Hijacking
-
 ^t1574008-path-interception-by-search-order-hijacking
 
 **Parent Technique**
@@ -212,7 +196,6 @@ Search order hijacking is also a common practice for hijacking DLL loads and is 
 - x_mitre_domains: enterprise-attack
 
 ### T1574.009: Path Interception by Unquoted Path
-
 ^t1574009-path-interception-by-unquoted-path
 
 **Parent Technique**
@@ -238,7 +221,6 @@ This technique can be used for persistence if executables are called on a regula
 - x_mitre_domains: enterprise-attack
 
 ### T1574.010: Services File Permissions Weakness
-
 ^t1574010-services-file-permissions-weakness
 
 **Parent Technique**
@@ -262,7 +244,6 @@ Adversaries may use this technique to replace legitimate binaries with malicious
 - x_mitre_domains: enterprise-attack
 
 ### T1574.011: Services Registry Permissions Weakness
-
 ^t1574011-services-registry-permissions-weakness
 
 **Parent Technique**
@@ -298,7 +279,6 @@ This ensures persistence, as it causes the DLL (in this case, foo.dll) to be loa
 - x_mitre_domains: enterprise-attack
 
 ### T1574.012: COR_PROFILER
-
 ^t1574012-cor-profiler
 
 **Parent Technique**
@@ -324,7 +304,6 @@ Adversaries may abuse COR_PROFILER to establish persistence that executes a mali
 - x_mitre_domains: enterprise-attack
 
 ### T1574.013: KernelCallbackTable
-
 ^t1574013-kernelcallbacktable
 
 **Parent Technique**
@@ -352,7 +331,6 @@ The tampered function is typically invoked using a Windows message. After the pr
 - x_mitre_domains: enterprise-attack
 
 ### T1574.014: AppDomainManager
-
 ^t1574014-appdomainmanager
 
 **Parent Technique**

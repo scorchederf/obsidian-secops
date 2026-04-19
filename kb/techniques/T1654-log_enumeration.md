@@ -20,16 +20,6 @@ Adversaries may also target centralized logging infrastructure such as SIEMs. Lo
 
 In addition to gaining a better understanding of the environment, adversaries may also monitor logs in real time to track incident response procedures. This may allow them to adjust their techniques in order to maintain persistence or evade defenses.(Citation: Permiso GUI-Vil 2023)
 
-## Properties
-
-- id: T1654
-- name: Log Enumeration
-- created: 2023-07-10 16:50:57.587000+00:00
-- modified: 2025-04-15 19:58:48.705000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -44,5 +34,5 @@ In addition to gaining a better understanding of the environment, adversaries ma
 
 ## Tools
 
-- [[S1091-pacu|S1091: Pacu]]
+- [[pacu|Pacu]]
 

@@ -23,16 +23,6 @@ The following screensaver settings are stored in the Registry (<code>HKCU\Contro
 
 Adversaries can use screensaver settings to maintain persistence by setting the screensaver to run malware after a certain timeframe of user inactivity. (Citation: ESET Gazer Aug 2017)
 
-## Properties
-
-- id: T1180
-- name: Screensaver
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:48:33.235000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

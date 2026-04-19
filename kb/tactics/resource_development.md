@@ -14,16 +14,6 @@ The adversary is trying to establish resources they can use to support operation
 
 Resource Development consists of techniques that involve adversaries creating, purchasing, or compromising/stealing resources that can be used to support targeting. Such resources include infrastructure, accounts, or capabilities. These resources can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as using purchased domains to support Command and Control, email accounts for phishing as a part of Initial Access, or stealing code signing certificates to help with Defense Evasion.
 
-## Properties
-
-- id: x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400
-- name: Resource Development
-- created: 2020-09-30 16:11:59.650000+00:00
-- modified: 2025-04-25 14:45:35.841000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]

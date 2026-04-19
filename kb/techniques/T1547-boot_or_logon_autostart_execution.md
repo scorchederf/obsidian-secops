@@ -16,20 +16,9 @@ Adversaries may configure system settings to automatically execute a program dur
 
 Since some boot or logon autostart programs run with higher privileges, an adversary may leverage these to elevate privileges.
 
-## Properties
-
-- id: T1547
-- name: Boot or Logon Autostart Execution
-- created: 2020-01-23 17:46:59.535000+00:00
-- modified: 2025-10-24 17:48:29.846000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1547.001: Registry Run Keys / Startup Folder
-
 ^t1547001-registry-run-keys---startup-folder
 
 **Parent Technique**
@@ -87,7 +76,6 @@ Adversaries can use these configuration locations to execute malware, such as re
 - x_mitre_domains: enterprise-attack
 
 ### T1547.002: Authentication Package
-
 ^t1547002-authentication-package
 
 **Parent Technique**
@@ -111,7 +99,6 @@ Adversaries can use the autostart mechanism provided by LSA authentication packa
 - x_mitre_domains: enterprise-attack
 
 ### T1547.003: Time Providers
-
 ^t1547003-time-providers
 
 **Parent Technique**
@@ -137,7 +124,6 @@ Adversaries may abuse this architecture to establish persistence, specifically b
 - x_mitre_domains: enterprise-attack
 
 ### T1547.004: Winlogon Helper DLL
-
 ^t1547004-winlogon-helper-dll
 
 **Parent Technique**
@@ -167,7 +153,6 @@ Adversaries may take advantage of these features to repeatedly execute malicious
 - x_mitre_domains: enterprise-attack
 
 ### T1547.005: Security Support Provider
-
 ^t1547005-security-support-provider
 
 **Parent Technique**
@@ -191,7 +176,6 @@ The SSP configuration is stored in two Registry keys: <code>HKLM\SYSTEM\CurrentC
 - x_mitre_domains: enterprise-attack
 
 ### T1547.006: Kernel Modules and Extensions
-
 ^t1547006-kernel-modules-and-extensions
 
 **Parent Technique**
@@ -221,7 +205,6 @@ Adversaries can use LKMs and kexts to conduct [Persistence](https://attack.mitre
 - x_mitre_domains: enterprise-attack
 
 ### T1547.007: Re-opened Applications
-
 ^t1547007-re-opened-applications
 
 **Parent Technique**
@@ -245,7 +228,6 @@ Adversaries can establish [Persistence](https://attack.mitre.org/tactics/TA0003)
 - x_mitre_domains: enterprise-attack
 
 ### T1547.008: LSASS Driver
-
 ^t1547008-lsass-driver
 
 **Parent Technique**
@@ -269,7 +251,6 @@ Adversaries may target LSASS drivers to obtain persistence. By either replacing 
 - x_mitre_domains: enterprise-attack
 
 ### T1547.009: Shortcut Modification
-
 ^t1547009-shortcut-modification
 
 **Parent Technique**
@@ -295,7 +276,6 @@ Shortcuts can also be abused to establish persistence by implementing other meth
 - x_mitre_domains: enterprise-attack
 
 ### T1547.010: Port Monitors
-
 ^t1547010-port-monitors
 
 **Parent Technique**
@@ -325,7 +305,6 @@ Alternatively, an arbitrary DLL can be loaded if permissions allow writing a ful
 - x_mitre_domains: enterprise-attack
 
 ### T1547.012: Print Processors
-
 ^t1547012-print-processors
 
 **Parent Technique**
@@ -353,7 +332,6 @@ The print spooler service runs under SYSTEM level permissions, therefore print p
 - x_mitre_domains: enterprise-attack
 
 ### T1547.013: XDG Autostart Entries
-
 ^t1547013-xdg-autostart-entries
 
 **Parent Technique**
@@ -379,7 +357,6 @@ Adversaries may combine this technique with [Masquerading](https://attack.mitre.
 - x_mitre_domains: enterprise-attack
 
 ### T1547.014: Active Setup
-
 ^t1547014-active-setup
 
 **Parent Technique**
@@ -405,7 +382,6 @@ Adversaries can abuse these components to execute malware, such as remote access
 - x_mitre_domains: enterprise-attack
 
 ### T1547.015: Login Items
-
 ^t1547015-login-items
 
 **Parent Technique**

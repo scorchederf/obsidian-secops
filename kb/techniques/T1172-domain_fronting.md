@@ -16,16 +16,6 @@ Domain fronting takes advantage of routing schemes in Content Delivery Networks 
 
 For example, if domain-x and domain-y are customers of the same CDN, it is possible to place domain-x in the TLS header and domain-y in the HTTP header. Traffic will appear to be going to domain-x, however the CDN may route it to domain-y.
 
-## Properties
-
-- id: T1172
-- name: Domain Fronting
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:48:29.048000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

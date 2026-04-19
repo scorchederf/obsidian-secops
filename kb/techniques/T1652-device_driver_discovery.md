@@ -18,16 +18,6 @@ Many OS utilities may provide information about local device drivers, such as `d
 
 On Linux/macOS, device drivers (in the form of kernel modules) may be visible within `/dev` or using utilities such as `lsmod` and `modinfo`.(Citation: Linux Kernel Programming)(Citation: lsmod man)(Citation: modinfo man)
 
-## Properties
-
-- id: T1652
-- name: Device Driver Discovery
-- created: 2023-03-28 20:14:49.087000+00:00
-- modified: 2025-04-15 22:17:22.391000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

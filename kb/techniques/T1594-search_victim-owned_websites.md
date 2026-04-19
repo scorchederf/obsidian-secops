@@ -18,16 +18,6 @@ Adversaries may search victim-owned websites to gather actionable information. I
 
 In addition to manually browsing the website, adversaries may attempt to identify hidden directories or files that could contain additional sensitive information or vulnerable functionality. They may do this through automated activities such as [Wordlist Scanning](https://attack.mitre.org/techniques/T1595/003), as well as by leveraging files such as sitemap.xml and robots.txt.(Citation: Perez Sitemap XML 2023)(Citation: Register Robots TXT 2015) 
 
-## Properties
-
-- id: T1594
-- name: Search Victim-Owned Websites
-- created: 2020-10-02 16:51:50.306000+00:00
-- modified: 2025-10-24 17:48:26.799000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1056-pre-compromise|M1056: Pre-compromise]]

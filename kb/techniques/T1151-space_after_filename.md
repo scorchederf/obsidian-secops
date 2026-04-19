@@ -16,16 +16,6 @@ Adversaries can hide a program's true filetype by changing the extension of a fi
 
 Adversaries can use this feature to trick users into double clicking benign-looking files of any format and ultimately executing something malicious.
 
-## Properties
-
-- id: T1151
-- name: Space after Filename
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:30.882000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

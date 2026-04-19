@@ -18,16 +18,6 @@ ETW interruption can be achieved multiple ways, however most directly by definin
 
 In the case of network-based reporting of indicators, an adversary may block traffic associated with reporting to prevent central analysis. This may be accomplished by many means, such as stopping a local process responsible for forwarding telemetry and/or creating a host-based firewall rule to block traffic to specific hosts responsible for aggregating events, such as security information and event management (SIEM) products. 
 
-## Properties
-
-- id: T1054
-- name: Indicator Blocking
-- created: 2017-05-31 21:30:47.384000+00:00
-- modified: 2025-10-24 17:48:54.658000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

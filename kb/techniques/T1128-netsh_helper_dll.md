@@ -18,16 +18,6 @@ Adversaries can use netsh.exe with helper DLLs to proxy execution of arbitrary c
 
 Proof of concept code exists to load Cobalt Strike's payload using netsh.exe helper DLLs. (Citation: Github Netsh Helper CS Beacon)
 
-## Properties
-
-- id: T1128
-- name: Netsh Helper DLL
-- created: 2017-05-31 21:31:40.168000+00:00
-- modified: 2025-10-24 17:49:17.716000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

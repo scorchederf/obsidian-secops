@@ -18,20 +18,9 @@ In addition to downloading free malware, software, and exploits from the interne
 
 In addition to purchasing capabilities, adversaries may steal capabilities from third-party entities (including other adversaries). This can include stealing software licenses, malware, SSL/TLS and code-signing certificates, or raiding closed databases of vulnerabilities or exploits.(Citation: DiginotarCompromise)
 
-## Properties
-
-- id: T1588
-- name: Obtain Capabilities
-- created: 2020-10-01 01:56:24.776000+00:00
-- modified: 2025-10-24 17:49:24.545000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1588.001: Malware
-
 ^t1588001-malware
 
 **Parent Technique**
@@ -55,7 +44,6 @@ In addition to downloading free malware from the internet, adversaries may purch
 - x_mitre_domains: enterprise-attack
 
 ### T1588.002: Tool
-
 ^t1588002-tool
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Tool acquisition may involve the procurement of commercial software licenses, in
 - x_mitre_domains: enterprise-attack
 
 ### T1588.003: Code Signing Certificates
-
 ^t1588003-code-signing-certificates
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Prior to [Code Signing](https://attack.mitre.org/techniques/T1553/002), adversar
 - x_mitre_domains: enterprise-attack
 
 ### T1588.004: Digital Certificates
-
 ^t1588004-digital-certificates
 
 **Parent Technique**
@@ -133,7 +119,6 @@ After obtaining a digital certificate, an adversary may then install that certif
 - x_mitre_domains: enterprise-attack
 
 ### T1588.005: Exploits
-
 ^t1588005-exploits
 
 **Parent Technique**
@@ -161,7 +146,6 @@ Adversaries may use exploits during various phases of the adversary lifecycle (i
 - x_mitre_domains: enterprise-attack
 
 ### T1588.006: Vulnerabilities
-
 ^t1588006-vulnerabilities
 
 **Parent Technique**
@@ -185,7 +169,6 @@ An adversary may monitor vulnerability disclosures/databases to understand the s
 - x_mitre_domains: enterprise-attack
 
 ### T1588.007: Artificial Intelligence
-
 ^t1588007-artificial-intelligence
 
 **Parent Technique**

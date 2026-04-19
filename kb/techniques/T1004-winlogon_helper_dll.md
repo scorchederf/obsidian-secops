@@ -22,16 +22,6 @@ Malicious modifications to these Registry keys may cause Winlogon to load and ex
 
 Adversaries may take advantage of these features to repeatedly execute malicious code and establish Persistence.
 
-## Properties
-
-- id: T1004
-- name: Winlogon Helper DLL
-- created: 2017-05-31 21:30:20.148000+00:00
-- modified: 2025-10-24 17:48:46.417000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

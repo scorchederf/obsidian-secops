@@ -18,16 +18,6 @@ Adversaries may perform this behavior to avoid alerting users, to evade detectio
 
 Exclusions may target files and components whose corruption would cause instability, break core services, or immediately expose the attack. By carefully avoiding these areas, adversaries maintain system responsiveness while minimizing indicators that could trigger alarms or otherwise inhibit achieving their goals. 
 
-## Properties
-
-- id: T1679
-- name: Selective Exclusion
-- created: 2025-09-25 14:45:54.760000+00:00
-- modified: 2025-10-22 03:50:30.406000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

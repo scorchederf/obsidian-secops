@@ -18,20 +18,9 @@ Adversaries may use these scripts to maintain persistence on a single system. De
 
 An adversary may also be able to escalate their privileges since some boot or logon initialization scripts run with higher privileges.
 
-## Properties
-
-- id: T1037
-- name: Boot or Logon Initialization Scripts
-- created: 2017-05-31 21:30:38.910000+00:00
-- modified: 2025-10-24 17:48:20.077000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1037.001: Logon Script (Windows)
-
 ^t1037001-logon-script-(windows)
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Adversaries may use these scripts to maintain persistence on a single system. De
 - x_mitre_domains: enterprise-attack
 
 ### T1037.002: Login Hook
-
 ^t1037002-login-hook
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Adversaries can add or insert a path to a malicious script in the <code>com.appl
 - x_mitre_domains: enterprise-attack
 
 ### T1037.003: Network Logon Script
-
 ^t1037003-network-logon-script
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Adversaries may use these scripts to maintain persistence on a network. Dependin
 - x_mitre_domains: enterprise-attack
 
 ### T1037.004: RC Scripts
-
 ^t1037004-rc-scripts
 
 **Parent Technique**
@@ -133,7 +119,6 @@ Several Unix-like systems have moved to Systemd and deprecated the use of RC scr
 - x_mitre_domains: enterprise-attack
 
 ### T1037.005: Startup Items
-
 ^t1037005-startup-items
 
 **Parent Technique**

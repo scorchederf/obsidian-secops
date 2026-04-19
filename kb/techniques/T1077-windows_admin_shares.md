@@ -18,16 +18,6 @@ Adversaries may use this technique in conjunction with administrator-level [Vali
 
 The [Net](https://attack.mitre.org/software/S0039) utility can be used to connect to Windows admin shares on remote systems using <code>net use</code> commands with valid credentials. (Citation: Technet Net Use)
 
-## Properties
-
-- id: T1077
-- name: Windows Admin Shares
-- created: 2017-05-31 21:31:00.200000+00:00
-- modified: 2025-10-24 17:49:40.422000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

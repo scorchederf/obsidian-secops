@@ -20,16 +20,6 @@ An adversary may also modify an existing binary by patching in malicious functio
 
 After modifying a binary, an adversary may attempt to [Impair Defenses](https://attack.mitre.org/techniques/T1562) by preventing it from updating (e.g., via the `yum-versionlock` command or `versionlock.list` file in Linux systems that use the yum package manager).(Citation: Google Cloud Mandiant UNC3886 2024)
 
-## Properties
-
-- id: T1554
-- name: Compromise Host Software Binary
-- created: 2020-02-11 18:18:34.279000+00:00
-- modified: 2025-10-24 17:49:07.572000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1045-code_signing|M1045: Code Signing]]

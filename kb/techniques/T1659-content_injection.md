@@ -21,16 +21,6 @@ Adversaries may inject content to victim systems in various ways, including:
 
 Content injection is often the result of compromised upstream communication channels, for example at the level of an internet service provider (ISP) as is the case with "lawful interception."(Citation: Kaspersky ManOnTheSide)(Citation: ESET MoustachedBouncer)(Citation: EFF China GitHub Attack)
 
-## Properties
-
-- id: T1659
-- name: Content Injection
-- created: 2023-09-01 21:03:13.406000+00:00
-- modified: 2025-04-15 22:10:29.343000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]

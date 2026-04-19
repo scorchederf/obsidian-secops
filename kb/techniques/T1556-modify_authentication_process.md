@@ -16,20 +16,9 @@ Adversaries may modify authentication mechanisms and processes to access user cr
 
 Adversaries may maliciously modify a part of this process to either reveal credentials or bypass authentication mechanisms. Compromised credentials or access may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop.
 
-## Properties
-
-- id: T1556
-- name: Modify Authentication Process
-- created: 2020-02-11 19:01:56.887000+00:00
-- modified: 2025-10-24 17:49:36.944000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1556.001: Domain Controller Authentication
-
 ^t1556001-domain-controller-authentication
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Malware may be used to inject false credentials into the authentication process 
 - x_mitre_domains: enterprise-attack
 
 ### T1556.002: Password Filter DLL
-
 ^t1556002-password-filter-dll
 
 **Parent Technique**
@@ -79,7 +67,6 @@ Adversaries can register malicious password filters to harvest credentials from 
 - x_mitre_domains: enterprise-attack
 
 ### T1556.003: Pluggable Authentication Modules
-
 ^t1556003-pluggable-authentication-modules
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Malicious modifications to the PAM system may also be abused to steal credential
 - x_mitre_domains: enterprise-attack
 
 ### T1556.004: Network Device Authentication
-
 ^t1556004-network-device-authentication
 
 **Parent Technique**
@@ -129,7 +115,6 @@ Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T16
 - x_mitre_domains: enterprise-attack
 
 ### T1556.005: Reversible Encryption
-
 ^t1556005-reversible-encryption
 
 **Parent Technique**
@@ -162,7 +147,6 @@ An adversary may set this property at various scopes through Local Group Policy 
 - x_mitre_domains: enterprise-attack
 
 ### T1556.006: Multi-Factor Authentication
-
 ^t1556006-multi-factor-authentication
 
 **Parent Technique**
@@ -190,7 +174,6 @@ Depending on the scope, goals, and privileges of the adversary, MFA defenses may
 - x_mitre_domains: enterprise-attack
 
 ### T1556.007: Hybrid Identity
-
 ^t1556007-hybrid-identity
 
 **Parent Technique**
@@ -224,7 +207,6 @@ In some cases, adversaries may be able to modify the hybrid identity authenticat
 - x_mitre_domains: enterprise-attack
 
 ### T1556.008: Network Provider DLL
-
 ^t1556008-network-provider-dll
 
 **Parent Technique**
@@ -250,7 +232,6 @@ Adversaries may target planting malicious network provider DLLs on systems known
 - x_mitre_domains: enterprise-attack
 
 ### T1556.009: Conditional Access Policies
-
 ^t1556009-conditional-access-policies
 
 **Parent Technique**
@@ -300,5 +281,5 @@ By modifying conditional access policies, such as adding additional trusted IP r
 
 ## Tools
 
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
+- [[silenttrinity|SILENTTRINITY]]
 

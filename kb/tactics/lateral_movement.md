@@ -14,16 +14,6 @@ The adversary is trying to move through your environment.
 
 Lateral Movement consists of techniques that adversaries use to enter and control remote systems on a network. Following through on their primary objective often requires exploring the network to find their target, then pivoting through multiple systems and accounts to gain access to it. Adversaries might install their own remote access tools to accomplish Lateral Movement or use legitimate credentials with native network and operating system tools, which may be stealthier. 
 
-## Properties
-
-- id: x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e
-- name: Lateral Movement
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-08-11 19:25:08.016000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1017-application_deployment_software|T1017: Application Deployment Software]]

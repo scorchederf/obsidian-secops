@@ -20,16 +20,6 @@ Adversaries may also employ a keylogger to similarly target other hardware token
 
 Other methods of MFA may be intercepted and used by an adversary to authenticate. It is common for one-time codes to be sent via out-of-band communications (email, SMS). If the device and/or service is not secured, then it may be vulnerable to interception. Service providers can also be targeted: for example, an adversary may compromise an SMS messaging service in order to steal MFA codes sent to users’ phones.(Citation: Okta Scatter Swine 2022)
 
-## Properties
-
-- id: T1111
-- name: Multi-Factor Authentication Interception
-- created: 2017-05-31 21:31:23.195000+00:00
-- modified: 2025-10-24 17:49:29.231000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]

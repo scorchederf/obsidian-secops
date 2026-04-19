@@ -16,20 +16,9 @@ Adversaries may take control of preexisting sessions with remote services to mov
 
 Adversaries may commandeer these sessions to carry out actions on remote systems. [Remote Service Session Hijacking](https://attack.mitre.org/techniques/T1563) differs from use of [Remote Services](https://attack.mitre.org/techniques/T1021) because it hijacks an existing session rather than creating a new session using [Valid Accounts](https://attack.mitre.org/techniques/T1078).(Citation: RDP Hijacking Medium)(Citation: Breach Post-mortem SSH Hijack)
 
-## Properties
-
-- id: T1563
-- name: Remote Service Session Hijacking
-- created: 2020-02-25 18:26:16.994000+00:00
-- modified: 2025-10-24 17:48:50.118000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1563.001: SSH Hijacking
-
 ^t1563001-ssh-hijacking
 
 **Parent Technique**
@@ -55,7 +44,6 @@ In order to move laterally from a compromised host, adversaries may take advanta
 - x_mitre_domains: enterprise-attack
 
 ### T1563.002: RDP Hijacking
-
 ^t1563002-rdp-hijacking
 
 **Parent Technique**

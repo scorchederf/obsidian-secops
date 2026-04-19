@@ -29,16 +29,6 @@ Alternatively, by leveraging the <code>EfsRpcOpenFileRaw</code> function, an adv
 
 
 
-## Properties
-
-- id: T1187
-- name: Forced Authentication
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:49:16.134000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1027-password_policies|M1027: Password Policies]]

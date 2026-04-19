@@ -28,16 +28,6 @@ Similar to [Process Injection](https://attack.mitre.org/techniques/T1055), these
 
 Malware may also use IFEO for Defense Evasion by registering invalid debuggers that redirect and effectively disable various system and security applications. (Citation: FSecure Hupigon) (Citation: Symantec Ushedix June 2008)
 
-## Properties
-
-- id: T1183
-- name: Image File Execution Options Injection
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:48:51.371000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

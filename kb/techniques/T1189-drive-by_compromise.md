@@ -32,16 +32,6 @@ Typical drive-by compromise process:
 
 Unlike [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190), the focus of this technique is to exploit software on a client endpoint upon visiting a website. This will commonly give an adversary access to systems on the internal network instead of external systems that may be in a DMZ.
 
-## Properties
-
-- id: T1189
-- name: Drive-by Compromise
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:28.067000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]

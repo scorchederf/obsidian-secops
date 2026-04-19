@@ -14,16 +14,6 @@ The adversary is trying to steal data.
 
 Exfiltration consists of techniques that adversaries may use to steal data from your network. Once they’ve collected data, adversaries often package it to avoid detection while removing it. This can include compression and encryption. Techniques for getting data out of a target network typically include transferring it over their command and control channel or an alternate channel and may also include putting size limits on the transmission.
 
-## Properties
-
-- id: x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462
-- name: Exfiltration
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:34.933000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1002-data_compressed|T1002: Data Compressed]]

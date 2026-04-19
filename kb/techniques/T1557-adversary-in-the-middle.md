@@ -18,20 +18,9 @@ For example, adversaries may manipulate victim DNS settings to enable other mali
 
 Adversaries may also leverage the AiTM position to attempt to monitor and/or modify traffic, such as in [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002). Adversaries can setup a position similar to AiTM to prevent traffic from flowing to the appropriate destination, potentially to [Impair Defenses](https://attack.mitre.org/techniques/T1562) and/or in support of a [Network Denial of Service](https://attack.mitre.org/techniques/T1498).
 
-## Properties
-
-- id: T1557
-- name: Adversary-in-the-Middle
-- created: 2020-02-11 19:07:12.114000+00:00
-- modified: 2025-10-24 17:48:20.163000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay
-
 ^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay
 
 **Parent Technique**
@@ -61,7 +50,6 @@ Several tools may be used to poison name services within local networks such as 
 - x_mitre_domains: enterprise-attack
 
 ### T1557.002: ARP Cache Poisoning
-
 ^t1557002-arp-cache-poisoning
 
 **Parent Technique**
@@ -92,7 +80,6 @@ Adversaries may use ARP cache poisoning as a means to intercept network traffic.
 - x_mitre_domains: enterprise-attack
 
 ### T1557.003: DHCP Spoofing
-
 ^t1557003-dhcp-spoofing
 
 **Parent Technique**
@@ -130,7 +117,6 @@ Rather than establishing an AiTM position, adversaries may also abuse DHCP spoof
 - x_mitre_domains: enterprise-attack
 
 ### T1557.004: Evil Twin
-
 ^t1557004-evil-twin
 
 **Parent Technique**
@@ -176,5 +162,5 @@ Upon logging into the malicious Wi-Fi access point, a user may be directed to a 
 
 ## Tools
 
-- [[S1131-nppspy|S1131: NPPSPY]]
+- [[nppspy|NPPSPY]]
 

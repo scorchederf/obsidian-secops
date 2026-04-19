@@ -20,16 +20,6 @@ There are various means to encapsulate a protocol within another protocol. For e
 
 Adversaries may also leverage [Protocol Tunneling](https://attack.mitre.org/techniques/T1572) in conjunction with [Proxy](https://attack.mitre.org/techniques/T1090) and/or [Protocol or Service Impersonation](https://attack.mitre.org/techniques/T1001/003) to further conceal C2 communications and infrastructure. 
 
-## Properties
-
-- id: T1572
-- name: Protocol Tunneling
-- created: 2020-03-15 16:03:39.082000+00:00
-- modified: 2025-10-24 17:48:45.888000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1031-network_intrusion_prevention|M1031: Network Intrusion Prevention]]
@@ -44,8 +34,8 @@ Adversaries may also leverage [Protocol Tunneling](https://attack.mitre.org/tech
 
 ## Tools
 
-- [[S0508-ngrok|S0508: ngrok]]
-- [[S0699-mythic|S0699: Mythic]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
-- [[S1144-frp|S1144: FRP]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[frp|FRP]]
+- [[mythic|Mythic]]
+- [[ngrok|ngrok]]
 

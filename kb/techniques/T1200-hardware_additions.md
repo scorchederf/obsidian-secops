@@ -16,16 +16,6 @@ Adversaries may physically introduce computer accessories, networking hardware, 
 
 While public references of usage by threat actors are scarce, many red teams/penetration testers leverage hardware additions for initial access. Commercial and open source products can be leveraged with capabilities such as passive network tapping, network traffic modification (i.e. [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557)), keystroke injection, kernel memory reading via DMA, addition of new wireless access points to an existing network, and others.(Citation: Ossmann Star Feb 2011)(Citation: Aleks Weapons Nov 2015)(Citation: Frisk DMA August 2016)(Citation: McMillan Pwn March 2012)
 
-## Properties
-
-- id: T1200
-- name: Hardware Additions
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:26.803000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1034-limit_hardware_installation|M1034: Limit Hardware Installation]]

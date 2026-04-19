@@ -18,16 +18,6 @@ Common features of LKM based rootkits include: hiding itself, selective hiding o
 
 Kernel extensions, also called kext, are used for macOS to load functionality onto a system similar to LKMs for Linux. They are loaded and unloaded through <code>kextload</code> and <code>kextunload</code> commands. Several examples have been found where this can be used. (Citation: RSAC 2015 San Francisco Patrick Wardle) (Citation: Synack Secure Kernel Extension Broken) Examples have been found in the wild. (Citation: Securelist Ventir)
 
-## Properties
-
-- id: T1215
-- name: Kernel Modules and Extensions
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:55.181000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

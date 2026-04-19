@@ -53,16 +53,6 @@ By default, the multistring BootExecute value of the registry key <code>HKEY_LOC
 
 Adversaries can use these configuration locations to execute malware, such as remote access tools, to maintain persistence through system reboots. Adversaries may also use [Masquerading](https://attack.mitre.org/techniques/T1036) to make the Registry entries look as if they are associated with legitimate programs.
 
-## Properties
-
-- id: T1060
-- name: Registry Run Keys / Startup Folder
-- created: 2017-05-31 21:30:49.988000+00:00
-- modified: 2025-10-24 17:49:07.015000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

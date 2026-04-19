@@ -18,16 +18,6 @@ Adversaries may establish a wireless connection through various methods, such as
 
 Once an initial wireless connection is achieved, adversaries may leverage this access for follow-on activities in the victim network or further targeting of specific devices on the network. Adversaries may perform [Network Sniffing](https://attack.mitre.org/techniques/T1040) or [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557) activities for [Credential Access](https://attack.mitre.org/tactics/TA0006) or [Discovery](https://attack.mitre.org/tactics/TA0007).
 
-## Properties
-
-- id: T1669
-- name: Wi-Fi Networks
-- created: 2025-02-25 15:49:33.963000+00:00
-- modified: 2025-04-15 19:59:24.690000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1030-network_segmentation|M1030: Network Segmentation]]

@@ -18,20 +18,9 @@ Remote access tools may be installed and used post-compromise as an alternate co
 
 Installation of many remote access tools may also include persistence (e.g., the software's installation routine creates a [Windows Service](https://attack.mitre.org/techniques/T1543/003)). Remote access modules/features may also exist as part of otherwise existing software (e.g., Google Chrome’s Remote Desktop).(Citation: Google Chrome Remote Desktop)(Citation: Chrome Remote Desktop)
 
-## Properties
-
-- id: T1219
-- name: Remote Access Tools
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:42.154000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1219.001: IDE Tunneling
-
 ^t1219001-ide-tunneling
 
 **Parent Technique**
@@ -57,7 +46,6 @@ IDE tunneling tools may be built-in or installed as [IDE Extensions](https://att
 - x_mitre_domains: enterprise-attack
 
 ### T1219.002: Remote Desktop Software
-
 ^t1219002-remote-desktop-software
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Remote access modules/features may also exist as part of otherwise existing soft
 - x_mitre_domains: enterprise-attack
 
 ### T1219.003: Remote Access Hardware
-
 ^t1219003-remote-access-hardware
 
 **Parent Technique**

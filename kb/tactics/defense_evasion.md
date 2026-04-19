@@ -14,16 +14,6 @@ The adversary is trying to avoid being detected.
 
 Defense Evasion consists of techniques that adversaries use to avoid detection throughout their compromise. Techniques used for defense evasion include uninstalling/disabling security software or obfuscating/encrypting data and scripts. Adversaries also leverage and abuse trusted processes to hide and masquerade their malware. Other tactics’ techniques are cross-listed here when those techniques include the added benefit of subverting defenses. 
 
-## Properties
-
-- id: x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a
-- name: Defense Evasion
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:34.581000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1006-direct_volume_access|T1006: Direct Volume Access]]

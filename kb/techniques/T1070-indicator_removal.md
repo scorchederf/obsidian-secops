@@ -16,20 +16,9 @@ Adversaries may delete or modify artifacts generated within systems to remove ev
 
 Removal of these indicators may interfere with event collection, reporting, or other processes used to detect intrusion activity. This may compromise the integrity of security solutions by causing notable events to go unreported. This activity may also impede forensic analysis and incident response, due to lack of sufficient data to determine what occurred.
 
-## Properties
-
-- id: T1070
-- name: Indicator Removal
-- created: 2017-05-31 21:30:55.892000+00:00
-- modified: 2025-10-24 17:48:59.237000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1070.001: Clear Windows Event Logs
-
 ^t1070001-clear-windows-event-logs
 
 **Parent Technique**
@@ -62,7 +51,6 @@ Adversaries may also attempt to clear logs by directly deleting the stored log f
 - x_mitre_domains: enterprise-attack
 
 ### T1070.002: Clear Linux or Mac System Logs
-
 ^t1070002-clear-linux-or-mac-system-logs
 
 **Parent Technique**
@@ -93,7 +81,6 @@ Adversaries may clear system logs to hide evidence of an intrusion. macOS and Li
 - x_mitre_domains: enterprise-attack
 
 ### T1070.003: Clear Command History
-
 ^t1070003-clear-command-history
 
 **Parent Technique**
@@ -125,7 +112,6 @@ Adversaries may run the PowerShell command <code>Clear-History</code> to flush t
 - x_mitre_domains: enterprise-attack
 
 ### T1070.004: File Deletion
-
 ^t1070004-file-deletion
 
 **Parent Technique**
@@ -149,7 +135,6 @@ There are tools available from the host operating system to perform cleanup, but
 - x_mitre_domains: enterprise-attack
 
 ### T1070.005: Network Share Connection Removal
-
 ^t1070005-network-share-connection-removal
 
 **Parent Technique**
@@ -171,7 +156,6 @@ Adversaries may remove share connections that are no longer useful in order to c
 - x_mitre_domains: enterprise-attack
 
 ### T1070.006: Timestomp
-
 ^t1070006-timestomp
 
 **Parent Technique**
@@ -203,7 +187,6 @@ Timestomping may be used along with file name [Masquerading](https://attack.mitr
 - x_mitre_domains: enterprise-attack
 
 ### T1070.007: Clear Network Connection History and Configurations
-
 ^t1070007-clear-network-connection-history-and-configurations
 
 **Parent Technique**
@@ -235,7 +218,6 @@ Malicious network connections may also require changes to third-party applicatio
 - x_mitre_domains: enterprise-attack
 
 ### T1070.008: Clear Mailbox Data
-
 ^t1070008-clear-mailbox-data
 
 **Parent Technique**
@@ -261,7 +243,6 @@ Adversaries may also remove emails and metadata/headers indicative of spam or su
 - x_mitre_domains: enterprise-attack
 
 ### T1070.009: Clear Persistence
-
 ^t1070009-clear-persistence
 
 **Parent Technique**
@@ -285,7 +266,6 @@ In some instances, artifacts of persistence may also be removed once an adversar
 - x_mitre_domains: enterprise-attack
 
 ### T1070.010: Relocate Malware
-
 ^t1070010-relocate-malware
 
 **Parent Technique**
@@ -328,7 +308,7 @@ Relocating malicious payloads may also hinder defensive analysis, especially to 
 
 ## Tools
 
-- [[S0527-cspy_downloader|S0527: CSPY Downloader]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S0695-donut|S0695: Donut]]
+- [[cspy_downloader|CSPY Downloader]]
+- [[donut|Donut]]
+- [[silenttrinity|SILENTTRINITY]]
 

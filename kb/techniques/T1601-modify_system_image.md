@@ -16,20 +16,9 @@ Adversaries may make changes to the operating system of embedded network devices
 
 To change the operating system, the adversary typically only needs to affect this one file, replacing or modifying it.  This can either be done live in memory during system runtime for immediate effect, or in storage to implement the change on the next boot of the network device.
 
-## Properties
-
-- id: T1601
-- name: Modify System Image
-- created: 2020-10-19 19:42:19.740000+00:00
-- modified: 2025-10-24 17:49:13.730000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1601.001: Patch System Image
-
 ^t1601001-patch-system-image
 
 **Parent Technique**
@@ -65,7 +54,6 @@ When the technique is performed on the running operating system in memory and no
 - x_mitre_domains: enterprise-attack
 
 ### T1601.002: Downgrade System Image
-
 ^t1601002-downgrade-system-image
 
 **Parent Technique**

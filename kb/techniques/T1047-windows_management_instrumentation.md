@@ -20,16 +20,6 @@ An adversary can use WMI to interact with local and remote systems and use it as
 
 **Note:** `wmic.exe` is deprecated as of January of 2024, with the WMIC feature being “disabled by default” on Windows 11+. WMIC will be removed from subsequent Windows releases and replaced by [PowerShell](https://attack.mitre.org/techniques/T1059/001) as the primary WMI interface.(Citation: WMI 7,8) In addition to PowerShell and tools like `wbemtool.exe`, COM APIs can also be used to programmatically interact with WMI via C++, .NET, VBScript, etc.(Citation: WMI 7,8)
 
-## Properties
-
-- id: T1047
-- name: Windows Management Instrumentation
-- created: 2017-05-31 21:30:44.329000+00:00
-- modified: 2025-10-24 17:48:19.670000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -43,13 +33,13 @@ An adversary can use WMI to interact with local and remote systems and use it as
 
 ## Tools
 
-- [[S0194-powersploit|S0194: PowerSploit]]
-- [[S0250-koadic|S0250: Koadic]]
-- [[S0357-impacket|S0357: Impacket]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
-- [[S1155-covenant|S1155: Covenant]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[covenant|Covenant]]
+- [[crackmapexec|CrackMapExec]]
+- [[empire|Empire]]
+- [[impacket|Impacket]]
+- [[koadic|Koadic]]
+- [[poshc2|PoshC2]]
+- [[powersploit|PowerSploit]]
+- [[silenttrinity|SILENTTRINITY]]
 

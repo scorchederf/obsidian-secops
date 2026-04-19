@@ -26,16 +26,6 @@ Malicious hooking mechanisms may also capture API calls that include parameters 
 
 Hooking is commonly utilized by [Rootkit](https://attack.mitre.org/techniques/T1014)s to conceal files, processes, Registry keys, and other objects in order to hide malware and associated behaviors. (Citation: Symantec Windows Rootkits)
 
-## Properties
-
-- id: T1179
-- name: Hooking
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:48:52.925000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

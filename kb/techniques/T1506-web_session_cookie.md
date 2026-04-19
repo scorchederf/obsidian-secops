@@ -18,16 +18,6 @@ Authentication cookies are commonly used in web applications, including cloud-ba
 
 There have been examples of malware targeting session cookies to bypass multi-factor authentication systems.(Citation: Unit 42 Mac Crypto Cookies January 2019) 
 
-## Properties
-
-- id: T1506
-- name: Web Session Cookie
-- created: 2019-10-08 20:08:56.205000+00:00
-- modified: 2025-10-24 17:49:21.653000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Office 365

@@ -18,16 +18,6 @@ For example, adversaries may leverage [Spearphishing Attachment](https://attack.
 
 Adversaries may also leverage internal chat apps, such as Microsoft Teams, to spread malicious content or engage users in attempts to capture sensitive information and/or credentials.(Citation: Int SP - chat apps)
 
-## Properties
-
-- id: T1534
-- name: Internal Spearphishing
-- created: 2019-09-04 19:26:12.441000+00:00
-- modified: 2025-10-24 17:49:09.394000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

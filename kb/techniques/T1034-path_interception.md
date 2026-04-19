@@ -33,16 +33,6 @@ For example, "example.exe" runs "cmd.exe" with the command-line argument <code>n
 
 Search order hijacking is also a common practice for hijacking DLL loads and is covered in [DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1038).
 
-## Properties
-
-- id: T1034
-- name: Path Interception
-- created: 2017-05-31 21:30:36.140000+00:00
-- modified: 2025-10-24 17:49:21.270000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

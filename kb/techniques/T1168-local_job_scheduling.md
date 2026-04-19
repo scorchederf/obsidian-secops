@@ -28,16 +28,6 @@ The at program is another means on POSIX-based systems, including macOS and Linu
 
 Each launchd job is described by a different configuration property list (plist) file similar to [Launch Daemon](https://attack.mitre.org/techniques/T1160) or [Launch Agent](https://attack.mitre.org/techniques/T1159), except there is an additional key called <code>StartCalendarInterval</code> with a dictionary of time values. (Citation: AppleDocs Scheduling Timed Jobs) This only works on macOS and OS X.
 
-## Properties
-
-- id: T1168
-- name: Local Job Scheduling
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:19.508000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

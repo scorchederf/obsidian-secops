@@ -16,16 +16,6 @@ Adversaries may directly access a volume to bypass file access controls and file
 
 Utilities, such as `NinjaCopy`, exist to perform these actions in PowerShell.(Citation: Github PowerSploit Ninjacopy) Adversaries may also use built-in or third-party utilities (such as `vssadmin`, `wbadmin`, and [esentutl](https://attack.mitre.org/software/S0404)) to create shadow copies or backups of data from system volumes.(Citation: LOLBAS Esentutl)
 
-## Properties
-
-- id: T1006
-- name: Direct Volume Access
-- created: 2017-05-31 21:30:20.934000+00:00
-- modified: 2025-10-24 17:48:23.015000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -38,5 +28,5 @@ Utilities, such as `NinjaCopy`, exist to perform these actions in PowerShell.(Ci
 
 ## Tools
 
-- [[S0404-esentutl|S0404: esentutl]]
+- [[esentutl|esentutl]]
 

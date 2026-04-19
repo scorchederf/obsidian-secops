@@ -16,20 +16,9 @@ Adversaries may execute active reconnaissance scans to gather information that c
 
 Adversaries may perform different forms of active scanning depending on what information they seek to gather. These scans can also be performed in various ways, including using native features of network protocols such as ICMP.(Citation: Botnet Scan)(Citation: OWASP Fingerprinting) Information from these scans may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190)).
 
-## Properties
-
-- id: T1595
-- name: Active Scanning
-- created: 2020-10-02 16:53:16.526000+00:00
-- modified: 2025-10-24 17:48:53.018000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1595.001: Scanning IP Blocks
-
 ^t1595001-scanning-ip-blocks
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may scan IP blocks in order to [Gather Victim Network Information](h
 - x_mitre_domains: enterprise-attack
 
 ### T1595.002: Vulnerability Scanning
-
 ^t1595002-vulnerability-scanning
 
 **Parent Technique**
@@ -77,7 +65,6 @@ These scans may also include more broad attempts to [Gather Victim Host Informat
 - x_mitre_domains: enterprise-attack
 
 ### T1595.003: Wordlist Scanning
-
 ^t1595003-wordlist-scanning
 
 **Parent Technique**

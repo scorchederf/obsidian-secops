@@ -14,16 +14,6 @@ The adversary is trying to run malicious code.
 
 Execution consists of techniques that result in adversary-controlled code running on a local or remote system. Techniques that run malicious code are often paired with techniques from all other tactics to achieve broader goals, like exploring a network or stealing data. For example, an adversary might use a remote access tool to run a PowerShell script that does Remote System Discovery. 
 
-## Properties
-
-- id: x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5
-- name: Execution
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:32.769000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1028-windows_remote_management|T1028: Windows Remote Management]]

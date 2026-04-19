@@ -20,16 +20,6 @@ Adversaries may manipulate continuous integration / continuous development (CI/C
 
 By poisoning CI/CD pipelines, threat actors may be able to gain access to credentials, laterally move to additional hosts, or input malicious components to be shipped further down the pipeline (i.e., [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195)). 
 
-## Properties
-
-- id: T1677
-- name: Poisoned Pipeline Execution
-- created: 2025-05-22 20:01:16.611000+00:00
-- modified: 2025-10-21 02:38:29.636000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]

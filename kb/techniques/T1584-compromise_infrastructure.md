@@ -18,20 +18,9 @@ Use of compromised infrastructure allows adversaries to stage, launch, and execu
 
 By using compromised infrastructure, adversaries may enable follow-on malicious operations. Prior to targeting, adversaries may also compromise the infrastructure of other adversaries.(Citation: NSA NCSC Turla OilRig)
 
-## Properties
-
-- id: T1584
-- name: Compromise Infrastructure
-- created: 2020-10-01 00:36:30.759000+00:00
-- modified: 2025-10-24 17:49:01.181000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1584.001: Domains
-
 ^t1584001-domains
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Adversaries who compromise a domain may also engage in domain shadowing by creat
 - x_mitre_domains: enterprise-attack
 
 ### T1584.002: DNS Server
-
 ^t1584002-dns-server
 
 **Parent Technique**
@@ -81,7 +69,6 @@ By compromising DNS servers, adversaries can alter DNS records. Such control can
 - x_mitre_domains: enterprise-attack
 
 ### T1584.003: Virtual Private Server
-
 ^t1584003-virtual-private-server
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Compromising a VPS for use in later stages of the adversary lifecycle, such as C
 - x_mitre_domains: enterprise-attack
 
 ### T1584.004: Server
-
 ^t1584004-server
 
 **Parent Technique**
@@ -129,7 +115,6 @@ Adversaries may also compromise web servers to support watering hole operations,
 - x_mitre_domains: enterprise-attack
 
 ### T1584.005: Botnet
-
 ^t1584005-botnet
 
 **Parent Technique**
@@ -151,7 +136,6 @@ Adversaries may compromise numerous third-party systems to form a botnet that c
 - x_mitre_domains: enterprise-attack
 
 ### T1584.006: Web Services
-
 ^t1584006-web-services
 
 **Parent Technique**
@@ -173,7 +157,6 @@ Adversaries may compromise access to third-party web services that can be used 
 - x_mitre_domains: enterprise-attack
 
 ### T1584.007: Serverless
-
 ^t1584007-serverless
 
 **Parent Technique**
@@ -197,7 +180,6 @@ Once compromised, the serverless runtime environment can be leveraged to either 
 - x_mitre_domains: enterprise-attack
 
 ### T1584.008: Network Devices
-
 ^t1584008-network-devices
 
 **Parent Technique**

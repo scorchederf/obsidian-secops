@@ -20,16 +20,6 @@ Abusing certificates for authentication credentials may enable other behaviors s
 
 Adversaries who have access to root (or subordinate) CA certificate private keys (or mechanisms protecting/managing these keys) may also establish [Persistence](https://attack.mitre.org/tactics/TA0003) by forging arbitrary authentication certificates for the victim domain (known as “golden” certificates).(Citation: Medium Certified Pre Owned) Adversaries may also target certificates and related services in order to access other forms of credentials, such as [Golden Ticket](https://attack.mitre.org/techniques/T1558/001) ticket-granting tickets (TGT) or NTLM plaintext.(Citation: Medium Certified Pre Owned)
 
-## Properties
-
-- id: T1649
-- name: Steal or Forge Authentication Certificates
-- created: 2022-08-03 03:20:58.955000+00:00
-- modified: 2025-04-15 23:12:50.646000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1015-active_directory_configuration|M1015: Active Directory Configuration]]
@@ -46,6 +36,6 @@ Adversaries who have access to root (or subordinate) CA certificate private keys
 
 ## Tools
 
-- [[S0002-mimikatz|S0002: Mimikatz]]
-- [[S0677-aadinternals|S0677: AADInternals]]
+- [[aadinternals|AADInternals]]
+- [[mimikatz|Mimikatz]]
 

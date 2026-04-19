@@ -20,16 +20,6 @@ Adversaries may add, delete, or otherwise modify resource groups within an IaaS 
 
 In AWS environments, adversaries with appropriate permissions in a given account may call the `LeaveOrganization` API, causing the account to be severed from the AWS Organization to which it was tied and removing any Service Control Policies, guardrails, or restrictions imposed upon it by its former Organization. Alternatively, adversaries may call the `CreateAccount` API in order to create a new account within an AWS Organization. This account will use the same payment methods registered to the payment account but may not be subject to existing detections or Service Control Policies.(Citation: AWS RE:Inforce Threat Detection 2024)
 
-## Properties
-
-- id: T1666
-- name: Modify Cloud Resource Hierarchy
-- created: 2024-09-25 14:16:19.234000+00:00
-- modified: 2025-04-15 22:49:45.874000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]

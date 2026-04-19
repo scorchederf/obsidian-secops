@@ -14,16 +14,6 @@ The adversary is trying to maintain their foothold.
 
 Persistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions that could cut off their access. Techniques used for persistence include any access, action, or configuration changes that let them maintain their foothold on systems, such as replacing or hijacking legitimate code or adding startup code. 
 
-## Properties
-
-- id: x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92
-- name: Persistence
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:33.492000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1004-winlogon_helper_dll|T1004: Winlogon Helper DLL]]

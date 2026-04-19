@@ -18,20 +18,9 @@ Adversaries may use several methods to enumerate accounts, including abuse of ex
 
 For examples, cloud environments typically provide easily accessible interfaces to obtain user lists.(Citation: AWS List Users)(Citation: Google Cloud - IAM Servie Accounts List API) On hosts, adversaries can use default [PowerShell](https://attack.mitre.org/techniques/T1059/001) and other command line functionality to identify accounts. Information about email addresses and accounts may also be extracted by searching an infected system’s files.
 
-## Properties
-
-- id: T1087
-- name: Account Discovery
-- created: 2017-05-31 21:31:06.988000+00:00
-- modified: 2025-10-24 17:48:57.239000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1087.001: Local Account
-
 ^t1087001-local-account
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Commands such as <code>net user</code> and <code>net localgroup</code> of the [N
 - x_mitre_domains: enterprise-attack
 
 ### T1087.002: Domain Account
-
 ^t1087002-domain-account
 
 **Parent Technique**
@@ -79,7 +67,6 @@ Commands such as <code>net user /domain</code> and <code>net group /domain</code
 - x_mitre_domains: enterprise-attack
 
 ### T1087.003: Email Account
-
 ^t1087003-email-account
 
 **Parent Technique**
@@ -105,7 +92,6 @@ In Google Workspace, the GAL is shared with Microsoft Outlook users through the 
 - x_mitre_domains: enterprise-attack
 
 ### T1087.004: Cloud Account
-
 ^t1087004-cloud-account
 
 **Parent Technique**
@@ -148,5 +134,5 @@ The AWS command <code>aws iam list-users</code> may be used to obtain a list of 
 
 ## Tools
 
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
+- [[shimratreporter|ShimRatReporter]]
 

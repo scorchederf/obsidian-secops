@@ -22,16 +22,6 @@ Higher level software frameworks, such as Microsoft .NET and macOS Cocoa, are al
 
 Adversaries may use assembly to directly or in-directly invoke syscalls in an attempt to subvert defensive sensors and detection signatures such as user mode API-hooks.(Citation: Redops Syscalls) Adversaries may also attempt to tamper with sensors and defensive tools associated with API monitoring, such as unhooking monitored functions via [Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001).
 
-## Properties
-
-- id: T1106
-- name: Native API
-- created: 2017-05-31 21:31:17.472000+00:00
-- modified: 2025-10-24 17:48:39.785000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1038-execution_prevention|M1038: Execution Prevention]]
@@ -45,13 +35,13 @@ Adversaries may use assembly to directly or in-directly invoke syscalls in an at
 
 ## Tools
 
-- [[S0363-empire|S0363: Empire]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0521-bloodhound|S0521: BloodHound]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S0695-donut|S0695: Donut]]
-- [[S1050-pcshare|S1050: PcShare]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
-- [[S1087-asyncrat|S1087: AsyncRAT]]
+- [[asyncrat|AsyncRAT]]
+- [[bloodhound|BloodHound]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[donut|Donut]]
+- [[empire|Empire]]
+- [[imminent_monitor|Imminent Monitor]]
+- [[pcshare|PcShare]]
+- [[shimratreporter|ShimRatReporter]]
+- [[silenttrinity|SILENTTRINITY]]
 

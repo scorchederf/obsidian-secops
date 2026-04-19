@@ -18,20 +18,9 @@ Such software may be deployed widely across the environment for configuration ma
 
 Adversaries may attempt to enumerate software for a variety of reasons, such as figuring out what security measures are present or if the compromised system has a version of software that is vulnerable to [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068).
 
-## Properties
-
-- id: T1518
-- name: Software Discovery
-- created: 2019-09-16 17:52:44.147000+00:00
-- modified: 2025-10-24 17:49:31.671000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1518.001: Security Software Discovery
-
 ^t1518001-security-software-discovery
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Adversaries may also utilize the [Cloud API](https://attack.mitre.org/techniques
 - x_mitre_domains: enterprise-attack
 
 ### T1518.002: Backup Software Discovery
-
 ^t1518002-backup-software-discovery
 
 **Parent Technique**
@@ -90,5 +78,5 @@ Commands that can be used to obtain security software information are [netsh](ht
 
 ## Tools
 
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
+- [[shimratreporter|ShimRatReporter]]
 

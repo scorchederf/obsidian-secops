@@ -16,16 +16,6 @@ Adversaries may use Event Monitor Daemon (emond) to establish persistence by sch
 
 Adversaries may abuse this service by writing a rule to execute commands when a defined event occurs, such as system start up or user authentication.(Citation: xorrior emond Jan 2018)(Citation: magnusviri emond Apr 2016)(Citation: sentinelone macos persist Jun 2019) Adversaries may also be able to escalate privileges from administrator to root as the emond service is executed with root privileges by the [Launch Daemon](https://attack.mitre.org/techniques/T1160) service.
 
-## Properties
-
-- id: T1519
-- name: Emond
-- created: 2019-09-19 14:07:11.734000+00:00
-- modified: 2025-10-24 17:49:26.544000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

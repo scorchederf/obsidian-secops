@@ -16,21 +16,11 @@ Adversaries may abuse utilities that allow for command execution to bypass secur
 
 Adversaries may abuse these features for [Defense Evasion](https://attack.mitre.org/tactics/TA0005), specifically to perform arbitrary execution while subverting detections and/or mitigation controls (such as Group Policy) that limit/prevent the usage of [cmd](https://attack.mitre.org/software/S0106) or file extensions more commonly associated with malicious payloads.
 
-## Properties
-
-- id: T1202
-- name: Indirect Command Execution
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:40.495000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows
 
 ## Tools
 
-- [[S0193-forfiles|S0193: Forfiles]]
+- [[forfiles|Forfiles]]
 

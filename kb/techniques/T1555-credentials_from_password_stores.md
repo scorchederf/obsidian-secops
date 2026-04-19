@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may search for common password storage locations to obtain user credentials.(Citation: F-Secure The Dukes) Passwords are stored in several places on a system, depending on the operating system or application holding the credentials. There are also specific applications and services that store passwords to make them easier for users to manage and maintain, such as password managers and cloud secrets vaults. Once credentials are obtained, they can be used to perform lateral movement and access restricted information.
 
-## Properties
-
-- id: T1555
-- name: Credentials from Password Stores
-- created: 2020-02-11 18:48:28.456000+00:00
-- modified: 2025-10-24 17:48:41.974000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1555.001: Keychain
-
 ^t1555001-keychain
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may gather user credentials from Keychain storage/memory. For exampl
 - x_mitre_domains: enterprise-attack
 
 ### T1555.002: Securityd Memory
-
 ^t1555002-securityd-memory
 
 **Parent Technique**
@@ -77,7 +65,6 @@ In OS X prior to El Capitan, users with root access can read plaintext keychain 
 - x_mitre_domains: enterprise-attack
 
 ### T1555.003: Credentials from Web Browsers
-
 ^t1555003-credentials-from-web-browsers
 
 **Parent Technique**
@@ -107,7 +94,6 @@ After acquiring credentials from web browsers, adversaries may attempt to recycl
 - x_mitre_domains: enterprise-attack
 
 ### T1555.004: Windows Credential Manager
-
 ^t1555004-windows-credential-manager
 
 **Parent Technique**
@@ -139,7 +125,6 @@ Password recovery tools may also obtain plain text passwords from the Credential
 - x_mitre_domains: enterprise-attack
 
 ### T1555.005: Password Managers
-
 ^t1555005-password-managers
 
 **Parent Technique**
@@ -164,7 +149,6 @@ Adversaries may acquire user credentials from password managers by extracting th
 - x_mitre_domains: enterprise-attack
 
 ### T1555.006: Cloud Secrets Management Stores
-
 ^t1555006-cloud-secrets-management-stores
 
 **Parent Technique**
@@ -206,9 +190,9 @@ If an adversary is able to gain sufficient privileges in a cloud environment –
 
 ## Tools
 
-- [[S0002-mimikatz|S0002: Mimikatz]]
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0349-lazagne|S0349: LaZagne]]
-- [[S0378-poshc2|S0378: PoshC2]]
+- [[lazagne|LaZagne]]
+- [[mimikatz|Mimikatz]]
+- [[poshc2|PoshC2]]
+- [[pupy|Pupy]]
+- [[quasarrat|QuasarRAT]]
 

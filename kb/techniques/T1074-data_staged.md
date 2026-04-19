@@ -18,20 +18,9 @@ In cloud environments, adversaries may stage data within a particular instance o
 
 Adversaries may choose to stage data from a victim network in a centralized location prior to Exfiltration to minimize the number of connections made to their C2 server and better evade detection.
 
-## Properties
-
-- id: T1074
-- name: Data Staged
-- created: 2017-05-31 21:30:58.938000+00:00
-- modified: 2025-10-24 17:49:01.010000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1074.001: Local Data Staging
-
 ^t1074001-local-data-staging
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Adversaries may also stage collected data in various available formats/locations
 - x_mitre_domains: enterprise-attack
 
 ### T1074.002: Remote Data Staging
-
 ^t1074002-remote-data-staging
 
 **Parent Technique**

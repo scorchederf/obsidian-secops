@@ -20,16 +20,6 @@ To maximize impact on the target organization, malware designed for encrypting d
 
 In cloud environments, storage objects within compromised accounts may also be encrypted.(Citation: Rhino S3 Ransomware Part 1) For example, in AWS environments, adversaries may leverage services such as AWS’s Server-Side Encryption with Customer Provided Keys (SSE-C) to encrypt data.(Citation: Halcyon AWS Ransomware 2025)
 
-## Properties
-
-- id: T1486
-- name: Data Encrypted for Impact
-- created: 2019-03-15 13:59:30.390000+00:00
-- modified: 2025-10-24 17:49:16.589000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1040-behavior_prevention_on_endpoint|M1040: Behavior Prevention on Endpoint]]

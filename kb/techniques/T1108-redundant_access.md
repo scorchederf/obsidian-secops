@@ -20,16 +20,6 @@ If one type of tool is detected and blocked or removed as a response but the org
 
 Use of a [Web Shell](https://attack.mitre.org/techniques/T1100) is one such way to maintain access to a network through an externally accessible Web server.
 
-## Properties
-
-- id: T1108
-- name: Redundant Access
-- created: 2017-05-31 21:31:18.867000+00:00
-- modified: 2025-10-24 17:48:54.749000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

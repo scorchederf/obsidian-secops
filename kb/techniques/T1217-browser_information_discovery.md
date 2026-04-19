@@ -18,16 +18,6 @@ Browser information may also highlight additional targets after an adversary has
 
 Specific storage locations vary based on platform and/or application, but browser information is typically stored in local files and databases (e.g., `%APPDATA%/Google/Chrome`).(Citation: Chrome Roaming Profiles)
 
-## Properties
-
-- id: T1217
-- name: Browser Information Discovery
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:50.561000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
@@ -36,5 +26,5 @@ Specific storage locations vary based on platform and/or application, but browse
 
 ## Tools
 
-- [[S0363-empire|S0363: Empire]]
+- [[empire|Empire]]
 

@@ -14,16 +14,6 @@ The adversary is trying to steal account names and passwords.
 
 Credential Access consists of techniques for stealing credentials like account names and passwords. Techniques used to get credentials include keylogging or credential dumping. Using legitimate credentials can give adversaries access to systems, make them harder to detect, and provide the opportunity to create more accounts to help achieve their goals.
 
-## Properties
-
-- id: x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263
-- name: Credential Access
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:32.408000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]

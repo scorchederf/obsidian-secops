@@ -18,16 +18,6 @@ Adversaries can modify key-value pairs in plist files to influence system behavi
 
 For example, adversaries can add a malicious application path to the `~/Library/Preferences/com.apple.dock.plist` file, which controls apps that appear in the Dock. Adversaries can also modify the <code>LSUIElement</code> key in an application’s <code>info.plist</code> file  to run the app in the background. Adversaries can also insert key-value pairs to insert environment variables, such as <code>LSEnvironment</code>, to enable persistence via [Dynamic Linker Hijacking](https://attack.mitre.org/techniques/T1574/006).(Citation: wardle chp2 persistence)(Citation: eset_osx_flashback)
 
-## Properties
-
-- id: T1647
-- name: Plist File Modification
-- created: 2022-04-09 15:06:32.458000+00:00
-- modified: 2025-10-24 17:49:00.573000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1013-application_developer_guidance|M1013: Application Developer Guidance]]

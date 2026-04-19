@@ -20,16 +20,6 @@ Regsvr32.exe can also be used to specifically bypass process whitelisting using 
 
 Regsvr32.exe can also be leveraged to register a COM Object used to establish Persistence via [Component Object Model Hijacking](https://attack.mitre.org/techniques/T1122). (Citation: Carbon Black Squiblydoo Apr 2016)
 
-## Properties
-
-- id: T1117
-- name: Regsvr32
-- created: 2017-05-31 21:31:26.966000+00:00
-- modified: 2025-10-24 17:48:53.906000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

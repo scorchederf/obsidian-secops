@@ -19,20 +19,9 @@ Authentication processes generally require a valid identity (e.g., username) alo
 Caching alternate authentication material allows the system to verify an identity has successfully authenticated without asking the user to reenter authentication factor(s). Because the alternate authentication must be maintained by the system—either in memory or on disk—it may be at risk of being stolen through [Credential Access](https://attack.mitre.org/tactics/TA0006) techniques. By stealing alternate authentication material, adversaries are able to bypass system access controls and authenticate to systems without knowing the plaintext password or any additional authentication factors.
 
 
-## Properties
-
-- id: T1550
-- name: Use Alternate Authentication Material
-- created: 2020-01-30 16:18:36.873000+00:00
-- modified: 2025-10-24 17:48:46.684000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1550.001: Application Access Token
-
 ^t1550001-application-access-token
 
 **Parent Technique**
@@ -64,7 +53,6 @@ Direct API access through a token negates the effectiveness of a second authenti
 - x_mitre_domains: enterprise-attack
 
 ### T1550.002: Pass the Hash
-
 ^t1550002-pass-the-hash
 
 **Parent Technique**
@@ -90,7 +78,6 @@ Adversaries may also use stolen password hashes to "overpass the hash." Similar 
 - x_mitre_domains: enterprise-attack
 
 ### T1550.003: Pass the Ticket
-
 ^t1550003-pass-the-ticket
 
 **Parent Technique**
@@ -120,7 +107,6 @@ Adversaries may also create a valid Kerberos ticket using other user information
 - x_mitre_domains: enterprise-attack
 
 ### T1550.004: Web Session Cookie
-
 ^t1550004-web-session-cookie
 
 **Parent Technique**

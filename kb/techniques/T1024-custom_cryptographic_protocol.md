@@ -18,16 +18,6 @@ Custom encryption schemes may vary in sophistication. Analysis and reverse engin
 
 Some adversaries may also attempt to implement their own version of a well-known cryptographic algorithm instead of using a known implementation library, which may lead to unintentional errors. (Citation: F-Secure Cosmicduke)
 
-## Properties
-
-- id: T1024
-- name: Custom Cryptographic Protocol
-- created: 2017-05-31 21:30:31.197000+00:00
-- modified: 2025-10-24 17:48:40.583000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

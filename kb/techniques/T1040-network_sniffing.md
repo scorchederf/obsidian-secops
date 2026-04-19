@@ -22,16 +22,6 @@ In cloud-based environments, adversaries may still be able to use traffic mirror
 
 On network devices, adversaries may perform network captures using [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `monitor capture`.(Citation: US-CERT-TA18-106A)(Citation: capture_embedded_packet_on_software)
 
-## Properties
-
-- id: T1040
-- name: Network Sniffing
-- created: 2017-05-31 21:30:41.399000+00:00
-- modified: 2025-10-24 17:48:36.910000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -49,9 +39,9 @@ On network devices, adversaries may perform network captures using [Network Devi
 
 ## Tools
 
-- [[S0174-responder|S0174: Responder]]
-- [[S0357-impacket|S0357: Impacket]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0590-nbtscan|S0590: NBTscan]]
+- [[empire|Empire]]
+- [[impacket|Impacket]]
+- [[nbtscan|NBTscan]]
+- [[poshc2|PoshC2]]
+- [[responder|Responder]]
 

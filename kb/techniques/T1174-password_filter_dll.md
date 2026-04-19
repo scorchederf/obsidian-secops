@@ -18,16 +18,6 @@ Before registering new passwords in the Security Accounts Manager (SAM), the Loc
 
 Adversaries can register malicious password filters to harvest credentials from local computers and/or entire domains. To perform proper validation, filters must receive plain-text credentials from the LSA. A malicious password filter would receive these plain-text credentials every time a password request is made. (Citation: Carnal Ownage Password Filters Sept 2013)
 
-## Properties
-
-- id: T1174
-- name: Password Filter DLL
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:49:17.124000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

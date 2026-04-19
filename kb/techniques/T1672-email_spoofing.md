@@ -18,16 +18,6 @@ This behavior may succeed when the spoofed entity either does not enable or enfo
 
 Adversaries may abuse Microsoft 365’s Direct Send functionality to spoof internal users by using internal devices like printers to send emails without authentication.(Citation: Barnea DirectSend) Adversaries may also abuse absent or weakly configured SPF, SKIM, and/or DMARC policies to conceal social engineering attempts(Citation: ic3-dprk) such as [Phishing](https://attack.mitre.org/techniques/T1566). They may also leverage email spoofing for [Impersonation](https://attack.mitre.org/techniques/T1656) of legitimate external individuals and organizations, such as journalists and academics.(Citation: ic3-dprk)
 
-## Properties
-
-- id: T1672
-- name: Email Spoofing
-- created: 2025-03-24 16:52:14.061000+00:00
-- modified: 2025-09-24 21:03:46.869000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1054-software_configuration|M1054: Software Configuration]]

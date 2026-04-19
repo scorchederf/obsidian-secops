@@ -5,7 +5,7 @@ import requests
 # Docs: https://mitreattack-python.readthedocs.io/en/latest/index.html
 from mitreattack.stix20 import MitreAttackData
 
-LOG_LEVEL = "DEBUG"  # DEBUG, INFO, ERROR
+LOG_LEVEL = "INFO"  # DEBUG, INFO, ERROR
 
 #region "functions"
 
@@ -17,6 +17,15 @@ def log(message, level="INFO"):
 
     if levels.index(level) >= levels.index(LOG_LEVEL):
         print(f"[{level}] {message}")
+
+
+def make_safe_name(name):
+    """
+    Convert a name into a safe filename / Obsidian reference.
+    """
+    safe = name.replace(" ", "_")
+    safe = safe.replace("/", "_")
+    return safe.lower()
 
 
 def clear_markdown_files(folder_path):
@@ -33,13 +42,22 @@ def clear_markdown_files(folder_path):
             os.remove(path)
 
 
-def make_safe_name(name):
+def get_attack_field(obj, field_name, default=None):
     """
-    Convert a name into a safe filename / Obsidian reference.
+    Safely read ATT&CK custom fields from STIX objects.
+
+    Some objects expose custom properties as attributes.
+    Others behave more like dict-backed objects.
     """
-    safe = name.replace(" ", "_")
-    safe = safe.replace("/", "_")
-    return safe.lower()
+    value = getattr(obj, field_name, None)
+
+    if value is not None:
+        return value
+
+    if hasattr(obj, "get"):
+        return obj.get(field_name, default)
+
+    return default
 
 
 def make_subtechnique_heading(sub_id, sub_name):
@@ -74,16 +92,66 @@ def make_technique_filename(attack_id, technique_name):
     return f"{attack_id}-{safe_name}"
 
 
-def make_tool_filename(tool_id, tool_name):
+def make_tool_filename(tool_name, tool_id=None, used_tool_filenames=None):
     """
-    Build the markdown filename (without .md) for a tool.
+    Build a collision-safe tool filename.
+
+    Default:
+    - use the tool name only
+
+    If another tool already uses the same safe name:
+    - append the ATT&CK ID
     """
     safe_name = make_safe_name(tool_name)
 
-    if tool_id:
-        return f"{tool_id}-{safe_name}"
+    if used_tool_filenames is None:
+        return safe_name
 
-    return safe_name
+    if safe_name not in used_tool_filenames:
+        used_tool_filenames.add(safe_name)
+        return safe_name
+
+    if tool_id:
+        collision_name = f"{safe_name}-{tool_id.lower()}"
+        used_tool_filenames.add(collision_name)
+        return collision_name
+
+    counter = 2
+    collision_name = f"{safe_name}-{counter}"
+
+    while collision_name in used_tool_filenames:
+        counter += 1
+        collision_name = f"{safe_name}-{counter}"
+
+    used_tool_filenames.add(collision_name)
+    return collision_name
+
+
+def build_tool_filename_map(mitre):
+    """
+    Build a stable filename map for tools.
+
+    Returns:
+    - tool_filename_map: tool STIX ID -> filename without .md
+    """
+    tool_filename_map = {}
+    used_tool_filenames = set()
+
+    for software in mitre.get_software():
+        if getattr(software, "type", "") != "tool":
+            continue
+
+        tool_id = mitre.get_attack_id(software.id)
+
+        filename = make_tool_filename(
+            software.name,
+            tool_id,
+            used_tool_filenames
+        )
+
+        tool_filename_map[software.id] = filename
+
+    return tool_filename_map
 
 
 def build_subtechnique_parent_map(mitre):
@@ -124,6 +192,9 @@ def write_tactic_yaml(f, tactic):
 def write_tactic_properties(f, tactic):
     """
     Write readable properties section.
+
+    This function is intentionally kept in the script, even if the call
+    is commented out, so it can be re-enabled later.
     """
     f.write("## Properties\n\n")
     f.write(f"- id: {tactic.id}\n")
@@ -176,6 +247,9 @@ def write_technique_description(tf, technique):
 def write_technique_properties(tf, technique, attack_id):
     """
     Write readable properties section for the technique page.
+
+    This function is intentionally kept in the script, even if the call
+    is commented out, so it can be re-enabled later.
     """
     tf.write("## Properties\n\n")
     tf.write(f"- id: {attack_id}\n")
@@ -196,6 +270,9 @@ def write_technique_properties(tf, technique, attack_id):
 def write_subtechniques_section(tf, mitre, technique, tactic, attack_id):
     """
     Write the detailed subtechniques section inside a technique file.
+
+    Subtechniques are not separate files.
+    They are stored as sections inside the parent technique file.
     """
     entries = mitre.get_subtechniques_of_technique(technique.id)
 
@@ -215,10 +292,9 @@ def write_subtechniques_section(tf, mitre, technique, tactic, attack_id):
             heading_text = make_subtechnique_heading(sub_id, sub.name)
             block_id = make_subtechnique_block_id(sub_id, sub.name)
 
-            tf.write(f"### {heading_text}\n\n")
+            tf.write(f"### {heading_text}\n")
             tf.write(f"^{block_id}\n\n")
 
-            # Backlinks
             parent_safe = make_safe_name(technique.name)
             parent_file = f"{attack_id}-{parent_safe}"
             tactic_safe = make_safe_name(tactic.name)
@@ -257,12 +333,6 @@ def write_subtechniques_section(tf, mitre, technique, tactic, attack_id):
 def write_mitigations_section(tf, mitre, technique, mitigation_map):
     """
     Write the mitigations section for a technique page.
-
-    The mitigation_map is built once from:
-    mitre.get_all_mitigations_mitigating_all_techniques()
-
-    It maps:
-    technique STIX ID -> list of RelationshipEntry dicts
     """
     mitigation_entries = mitigation_map.get(technique.id, [])
 
@@ -275,71 +345,72 @@ def write_mitigations_section(tf, mitre, technique, mitigation_map):
             mitigation = entry["object"]
             mitigation_attack_id = mitre.get_attack_id(mitigation.id)
 
-            if mitigation_attack_id:
-                mitigation_rows.append((mitigation_attack_id, mitigation.name))
-            else:
-                mitigation_rows.append(("", mitigation.name))
+            if not mitigation_attack_id or not mitigation_attack_id.startswith("M"):
+                continue
+
+            mitigation_rows.append((mitigation_attack_id, mitigation.name))
 
         mitigation_rows.sort()
 
+        seen = set()
+
         for mitigation_attack_id, mitigation_name in mitigation_rows:
+            key = (mitigation_attack_id, mitigation_name)
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+
             mitigation_safe = make_safe_name(mitigation_name)
+            mitigation_file = f"{mitigation_attack_id}-{mitigation_safe}"
 
-            if mitigation_attack_id:
-                mitigation_file = f"{mitigation_attack_id}-{mitigation_safe}"
-                tf.write(
-                    f"- [[{mitigation_file}|{mitigation_attack_id}: {mitigation_name}]]\n"
-                )
-            else:
-                mitigation_file = mitigation_safe
-                tf.write(f"- [[{mitigation_file}|{mitigation_name}]]\n")
+            tf.write(
+                f"- [[{mitigation_file}|{mitigation_attack_id}: {mitigation_name}]]\n"
+            )
 
-        tf.write("\n")
+        if len(seen) > 0:
+            tf.write("\n")
 
 
 def write_operational_sections(tf, technique):
     """
-    Write Phase 1 content:
-    - Detection
-    - Data Sources
-    - Platforms
-    - Required Permissions
+    Write operational content to the technique page.
     """
+    detection = get_attack_field(technique, "x_mitre_detection", "")
+    if detection:
+        tf.write("## Detection\n\n")
+        tf.write(f"{detection}\n\n")
 
-    if hasattr(technique, "x_mitre_detection"):
-        if technique.x_mitre_detection:
-            tf.write("## Detection\n\n")
-            tf.write(f"{technique.x_mitre_detection}\n\n")
+    data_sources = get_attack_field(technique, "x_mitre_data_sources", [])
+    if data_sources:
+        tf.write("## Data Sources\n\n")
 
-    if hasattr(technique, "x_mitre_data_sources"):
-        if technique.x_mitre_data_sources:
-            tf.write("## Data Sources\n\n")
+        for data_source in data_sources:
+            tf.write(f"- {data_source}\n")
 
-            for data_source in technique.x_mitre_data_sources:
-                tf.write(f"- {data_source}\n")
+        tf.write("\n")
 
-            tf.write("\n")
+    platforms = get_attack_field(technique, "x_mitre_platforms", [])
+    if platforms:
+        tf.write("## Platforms\n\n")
 
-    if hasattr(technique, "x_mitre_platforms"):
-        if technique.x_mitre_platforms:
-            tf.write("## Platforms\n\n")
+        for platform in platforms:
+            tf.write(f"- {platform}\n")
 
-            for platform in technique.x_mitre_platforms:
-                tf.write(f"- {platform}\n")
+        tf.write("\n")
 
-            tf.write("\n")
+    permissions = get_attack_field(technique, "x_mitre_permissions_required", [])
+    if permissions:
+        tf.write("## Required Permissions\n\n")
 
-    if hasattr(technique, "x_mitre_permissions_required"):
-        if technique.x_mitre_permissions_required:
-            tf.write("## Required Permissions\n\n")
+        for permission in permissions:
+            tf.write(f"- {permission}\n")
 
-            for permission in technique.x_mitre_permissions_required:
-                tf.write(f"- {permission}\n")
-
-            tf.write("\n")
+        tf.write("\n")
 
 
-def write_tools_section(tf, mitre, technique, tool_map):
+def write_tools_section(tf, mitre, technique, tool_map, tool_filename_map):
     """
     Write tool links for a technique page.
     This includes only ATT&CK objects of type 'tool'.
@@ -357,27 +428,22 @@ def write_tools_section(tf, mitre, technique, tool_map):
             if getattr(tool, "type", "") != "tool":
                 continue
 
-            tool_id = mitre.get_attack_id(tool.id)
-            tool_rows.append((tool_id, tool.name))
+            tool_rows.append((tool.id, tool.name))
 
-        tool_rows.sort()
+        tool_rows.sort(key=lambda item: item[1].lower())
 
         seen = set()
 
-        for tool_id, tool_name in tool_rows:
-            key = (tool_id, tool_name)
+        for tool_stix_id, tool_name in tool_rows:
+            key = (tool_stix_id, tool_name)
 
             if key in seen:
                 continue
 
             seen.add(key)
 
-            tool_file = make_tool_filename(tool_id, tool_name)
-
-            if tool_id:
-                tf.write(f"- [[{tool_file}|{tool_id}: {tool_name}]]\n")
-            else:
-                tf.write(f"- [[{tool_file}|{tool_name}]]\n")
+            tool_file = tool_filename_map.get(tool_stix_id, make_safe_name(tool_name))
+            tf.write(f"- [[{tool_file}|{tool_name}]]\n")
 
         tf.write("\n")
 
@@ -389,7 +455,8 @@ def write_technique_file(
     attack_id,
     techniques_dir,
     mitigation_map,
-    tool_map
+    tool_map,
+    tool_filename_map
 ):
     """
     Write one technique markdown file.
@@ -404,11 +471,14 @@ def write_technique_file(
         write_technique_yaml(tf, technique, attack_id)
         write_technique_tactic_link(tf, tactic)
         write_technique_description(tf, technique)
-        write_technique_properties(tf, technique, attack_id)
+
+        # Properties intentionally disabled for now.
+        # write_technique_properties(tf, technique, attack_id)
+
         write_subtechniques_section(tf, mitre, technique, tactic, attack_id)
         write_mitigations_section(tf, mitre, technique, mitigation_map)
         write_operational_sections(tf, technique)
-        write_tools_section(tf, mitre, technique, tool_map)
+        write_tools_section(tf, mitre, technique, tool_map, tool_filename_map)
 
 
 def write_mitigation_file(
@@ -421,26 +491,12 @@ def write_mitigation_file(
 ):
     """
     Creates a markdown file for a mitigation.
-
-    Includes:
-    - YAML frontmatter
-    - Description
-    - Properties
-    - Techniques it mitigates
-
-    Parent techniques are linked as normal files.
-    Subtechniques are linked as indented block links inside the parent technique file.
     """
-
-
-    # Only allow real mitigation objects
     if getattr(mitigation, "type", "") != "course-of-action":
-        log(f"Skipping non-mitigation object: {getattr(mitigation, 'name', 'unknown')}", "DEBUG")
         return
 
     mitigation_id = mitre.get_attack_id(mitigation.id)
 
-    # Real mitigations should use Mxxxx IDs
     if not mitigation_id or not mitigation_id.startswith("M"):
         return
 
@@ -451,7 +507,6 @@ def write_mitigation_file(
     parent_rows = {}
     standalone_parent_ids = []
 
-    # Walk the mitigation map and find all techniques affected by this mitigation
     for technique_id, entries in mitigation_map.items():
         for entry in entries:
             mitigation_obj = entry["object"]
@@ -501,18 +556,12 @@ def write_mitigation_file(
                         (sub_attack_id, technique.name, parent_file, block_id)
                     )
 
-    # Do not create empty mitigation files
     if len(parent_rows) == 0:
-        log(f"Skipping empty mitigation file: {mitigation_id} {mitigation.name}", "DEBUG")
         return
 
     log(f"Writing mitigation file: {filename}", "DEBUG")
 
     with open(filepath, "w", encoding="utf-8") as mf:
-
-        # ---------------------------
-        # YAML
-        # ---------------------------
         mf.write("---\n")
         mf.write(f"id: {mitigation_id}\n")
         mf.write(f"name: {mitigation.name}\n")
@@ -528,17 +577,11 @@ def write_mitigation_file(
 
         mf.write("---\n\n")
 
-        # ---------------------------
-        # Title + Description
-        # ---------------------------
         mf.write(f"# {mitigation.name}\n\n")
 
         if hasattr(mitigation, "description"):
             mf.write(f"{mitigation.description}\n\n")
 
-        # ---------------------------
-        # Properties
-        # ---------------------------
         mf.write("## Properties\n\n")
         mf.write(f"- id: {mitigation_id}\n")
         mf.write(f"- name: {mitigation.name}\n")
@@ -553,10 +596,6 @@ def write_mitigation_file(
             mf.write(f"- type: {mitigation.type}\n")
 
         mf.write("\n")
-
-        # ---------------------------
-        # Techniques mitigated
-        # ---------------------------
         mf.write("## Mitigates Techniques\n\n")
 
         sortable_parents = []
@@ -570,10 +609,7 @@ def write_mitigation_file(
         for _, parent_id in sortable_parents:
             row = parent_rows[parent_id]
 
-            # Parent technique link
             mf.write(f"- [[{row['file']}|{row['attack_id']}: {row['name']}]]\n")
-
-            # Sort subtechniques by ATT&CK ID
             row["subs"].sort()
 
             for sub_attack_id, sub_name, parent_file, block_id in row["subs"]:
@@ -590,25 +626,20 @@ def write_tool_file(
     tool_map,
     techniques_lookup,
     subtechnique_parent_map,
-    tools_dir
+    tools_dir,
+    tool_filename_map
 ):
     """
     Create a markdown file for a tool.
-
-    Parent techniques are linked as normal files.
-    Subtechniques are linked as indented block links inside the parent technique file.
     """
+    filename = tool_filename_map[tool.id] + ".md"
+    filepath = os.path.join(tools_dir, filename)
 
     tool_id = mitre.get_attack_id(tool.id)
-    filename = make_tool_filename(tool_id, tool.name) + ".md"
-    filepath = os.path.join(tools_dir, filename)
 
     log(f"Writing tool file: {filename}", "DEBUG")
 
     with open(filepath, "w", encoding="utf-8") as tf:
-        # ---------------------------
-        # YAML
-        # ---------------------------
         tf.write("---\n")
 
         if tool_id:
@@ -633,17 +664,11 @@ def write_tool_file(
 
         tf.write("---\n\n")
 
-        # ---------------------------
-        # Title + Description
-        # ---------------------------
         tf.write(f"# {tool.name}\n\n")
 
         if hasattr(tool, "description"):
             tf.write(f"{tool.description}\n\n")
 
-        # ---------------------------
-        # Properties
-        # ---------------------------
         tf.write("## Properties\n\n")
 
         if tool_id:
@@ -667,10 +692,6 @@ def write_tool_file(
             tf.write(f"- x_mitre_domains: {', '.join(tool.x_mitre_domains)}\n")
 
         tf.write("\n")
-
-        # ---------------------------
-        # Techniques used
-        # ---------------------------
         tf.write("## Uses Techniques\n\n")
 
         parent_rows = {}
@@ -737,7 +758,6 @@ def write_tool_file(
             row = parent_rows[parent_id]
 
             tf.write(f"- [[{row['file']}|{row['attack_id']}: {row['name']}]]\n")
-
             row["subs"].sort()
 
             for sub_attack_id, sub_name, parent_file, block_id in row["subs"]:
@@ -747,12 +767,7 @@ def write_tool_file(
 
         tf.write("\n")
 
-
 #endregion
-
-# ============================================================
-# CONFIG
-# ============================================================
 
 VAULT = "kb"
 TACTICS_DIR = os.path.join(VAULT, "tactics")
@@ -761,62 +776,36 @@ MITIGATIONS_DIR = os.path.join(VAULT, "mitigations")
 TOOLS_DIR = os.path.join(VAULT, "tools")
 
 local_json = "enterprise-attack.json"
-
 url = "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json"
 
-
-# ============================================================
-# SETUP
-# ============================================================
-
-# Create directories
 os.makedirs(TACTICS_DIR, exist_ok=True)
 os.makedirs(TECHNIQUES_DIR, exist_ok=True)
 os.makedirs(MITIGATIONS_DIR, exist_ok=True)
 os.makedirs(TOOLS_DIR, exist_ok=True)
 
-# remove old files if they exist
 clear_markdown_files(TACTICS_DIR)
 clear_markdown_files(TECHNIQUES_DIR)
 clear_markdown_files(MITIGATIONS_DIR)
 clear_markdown_files(TOOLS_DIR)
 
-
-
-# Download dataset if missing
 if not os.path.exists(local_json):
     log("Downloading MITRE ATT&CK dataset...", "INFO")
-
     r = requests.get(url)
     r.raise_for_status()
 
     with open(local_json, "w", encoding="utf-8") as f:
         f.write(r.text)
 
-# Load MITRE dataset
 mitre = MitreAttackData(local_json)
-
-# Build mitigation lookup once.
-# Maps technique STIX ID -> list of mitigation relationship entries.
 mitigation_map = mitre.get_all_mitigations_mitigating_all_techniques()
-
-# Build tool lookup once.
-# This includes software relationships, so we filter to type == "tool" later.
 tool_map = mitre.get_all_software_using_all_techniques()
+tool_filename_map = build_tool_filename_map(mitre)
 
-# Build technique lookup by STIX ID
 techniques_lookup = {}
-
 for t in mitre.get_techniques():
     techniques_lookup[t.id] = t
 
-# Build subtechnique -> parent technique lookup
 subtechnique_parent_map = build_subtechnique_parent_map(mitre)
-
-
-# ============================================================
-# MAIN LOOP
-# ============================================================
 
 for tactic in mitre.get_tactics():
     filename = make_safe_name(tactic.name) + ".md"
@@ -830,7 +819,8 @@ for tactic in mitre.get_tactics():
         f.write(f"# {tactic.name}\n\n")
         f.write(f"{tactic.description}\n\n")
 
-        write_tactic_properties(f, tactic)
+        # Properties intentionally disabled for now.
+        # write_tactic_properties(f, tactic)
 
         f.write("## Related Techniques\n\n")
 
@@ -838,7 +828,6 @@ for tactic in mitre.get_tactics():
         domain = tactic.x_mitre_domains[0]
 
         techniques = mitre.get_techniques_by_tactic(shortname, domain)
-
         parents = []
 
         for t in techniques:
@@ -852,10 +841,8 @@ for tactic in mitre.get_tactics():
             safe_name = make_safe_name(technique.name)
             link_name = f"{attack_id}-{safe_name}"
 
-            # Parent technique link
             f.write(f"- [[{link_name}|{attack_id}: {technique.name}]]\n")
 
-            # Generate technique file
             write_technique_file(
                 mitre,
                 technique,
@@ -863,10 +850,10 @@ for tactic in mitre.get_tactics():
                 attack_id,
                 TECHNIQUES_DIR,
                 mitigation_map,
-                tool_map
+                tool_map,
+                tool_filename_map
             )
 
-            # Subtechnique links under the technique on the tactic page
             entries = mitre.get_subtechniques_of_technique(technique.id)
 
             if len(entries) > 0:
@@ -882,33 +869,21 @@ for tactic in mitre.get_tactics():
                 for sub_id, sub in subs:
                     parent_safe = make_safe_name(technique.name)
                     parent_file = f"{attack_id}-{parent_safe}"
-
                     block_id = make_subtechnique_block_id(sub_id, sub.name)
 
                     f.write(
                         f"    - [[{parent_file}#^{block_id}|{sub_id}: {sub.name}]]\n"
                     )
 
-
-# ============================================================
-# MITIGATION FILE GENERATION
-# ============================================================
-
-for mitigation in mitre.get_mitigations(remove_revoked_deprecated=True):
-    if getattr(mitigation, "type", "") == "course-of-action":
-        write_mitigation_file(
-            mitre,
-            mitigation,
-            mitigation_map,
-            techniques_lookup,
-            subtechnique_parent_map,
-            MITIGATIONS_DIR
-        )
-
-
-# ============================================================
-# TOOL FILE GENERATION
-# ============================================================
+for mitigation in mitre.get_mitigations():
+    write_mitigation_file(
+        mitre,
+        mitigation,
+        mitigation_map,
+        techniques_lookup,
+        subtechnique_parent_map,
+        MITIGATIONS_DIR
+    )
 
 for software in mitre.get_software():
     if getattr(software, "type", "") == "tool":
@@ -918,5 +893,6 @@ for software in mitre.get_software():
             tool_map,
             techniques_lookup,
             subtechnique_parent_map,
-            TOOLS_DIR
+            TOOLS_DIR,
+            tool_filename_map
         )

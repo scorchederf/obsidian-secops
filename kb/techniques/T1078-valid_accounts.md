@@ -18,20 +18,9 @@ In some cases, adversaries may abuse inactive accounts: for example, those belon
 
 The overlap of permissions for local, domain, and cloud accounts across a network of systems is of concern because the adversary may be able to pivot across accounts and systems to reach a high level of access (i.e., domain or enterprise administrator) to bypass access controls set within the enterprise.(Citation: TechNet Credential Theft)
 
-## Properties
-
-- id: T1078
-- name: Valid Accounts
-- created: 2017-05-31 21:31:00.645000+00:00
-- modified: 2025-10-24 17:49:14.095000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.8
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1078.001: Default Accounts
-
 ^t1078001-default-accounts
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Default accounts may be created on a system after initial setup by connecting or
 - x_mitre_domains: enterprise-attack
 
 ### T1078.002: Domain Accounts
-
 ^t1078002-domain-accounts
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Adversaries may compromise domain accounts, some with a high level of privileges
 - x_mitre_domains: enterprise-attack
 
 ### T1078.003: Local Accounts
-
 ^t1078003-local-accounts
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Local Accounts may also be abused to elevate privileges and harvest credentials 
 - x_mitre_domains: enterprise-attack
 
 ### T1078.004: Cloud Accounts
-
 ^t1078004-cloud-accounts
 
 **Parent Technique**

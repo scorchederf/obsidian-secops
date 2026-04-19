@@ -20,20 +20,9 @@ The generation of web credentials often requires secret values, such as password
 
 Once forged, adversaries may use these web credentials to access resources (ex: [Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550)), which may bypass multi-factor and other authentication protection mechanisms.(Citation: Pass The Cookie)(Citation: Unit 42 Mac Crypto Cookies January 2019)(Citation: Microsoft SolarWinds Customer Guidance)  
 
-## Properties
-
-- id: T1606
-- name: Forge Web Credentials
-- created: 2020-12-17 02:13:46.247000+00:00
-- modified: 2025-10-24 17:49:07.201000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1606.001: Web Cookies
-
 ^t1606001-web-cookies
 
 **Parent Technique**
@@ -59,7 +48,6 @@ Once forged, adversaries may use these web cookies to access resources ([Web Ses
 - x_mitre_domains: enterprise-attack
 
 ### T1606.002: SAML Tokens
-
 ^t1606002-saml-tokens
 
 **Parent Technique**

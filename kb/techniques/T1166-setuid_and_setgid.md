@@ -16,16 +16,6 @@ When the setuid or setgid bits are set on Linux or macOS for an application, thi
 
 An adversary can take advantage of this to either do a shell escape or exploit a vulnerability in an application with the setsuid or setgid bits to get code running in a different user’s context. Additionally, adversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in the future  (Citation: OSX Keydnap malware).
 
-## Properties
-
-- id: T1166
-- name: Setuid and Setgid
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:19.596000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

@@ -22,16 +22,6 @@ In addition, system calls – such as <code>time()</code> – have been used to 
 
 This information could be useful for performing other techniques, such as executing a file with a [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053)(Citation: RSA EU12 They're Inside), or to discover locality information based on time zone to assist in victim targeting (i.e. [System Location Discovery](https://attack.mitre.org/techniques/T1614)). Adversaries may also use knowledge of system time as part of a time bomb, or delaying execution until a specified date/time.(Citation: AnyRun TimeBomb)
 
-## Properties
-
-- id: T1124
-- name: System Time Discovery
-- created: 2017-05-31 21:31:37.450000+00:00
-- modified: 2025-10-24 17:49:36.399000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -42,6 +32,6 @@ This information could be useful for performing other techniques, such as execut
 
 ## Tools
 
-- [[S0039-net|S0039: Net]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
+- [[net|Net]]
+- [[silenttrinity|SILENTTRINITY]]
 

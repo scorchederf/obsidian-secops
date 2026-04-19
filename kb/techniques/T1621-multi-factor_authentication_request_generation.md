@@ -18,16 +18,6 @@ Adversaries in possession of credentials to [Valid Accounts](https://attack.mitr
 
 In some cases, adversaries may continuously repeat login attempts in order to bombard users with MFA push notifications, SMS messages, and phone calls, potentially resulting in the user finally accepting the authentication request in response to “MFA fatigue.”(Citation: Russian 2FA Push Annoyance - Cimpanu)(Citation: MFA Fatigue Attacks - PortSwigger)(Citation: Suspected Russian Activity Targeting Government and Business Entities Around the Globe)
 
-## Properties
-
-- id: T1621
-- name: Multi-Factor Authentication Request Generation
-- created: 2022-04-01 02:15:49.754000+00:00
-- modified: 2025-10-24 17:49:07.399000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]

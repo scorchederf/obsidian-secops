@@ -22,16 +22,6 @@ There are also open source frameworks such as `Evilginx2` and `Muraena` that can
 
 After an adversary acquires a valid cookie, they can then perform a [Web Session Cookie](https://attack.mitre.org/techniques/T1550/004) technique to login to the corresponding web application.
 
-## Properties
-
-- id: T1539
-- name: Steal Web Session Cookie
-- created: 2019-10-08 20:04:35.508000+00:00
-- modified: 2025-10-24 17:48:25.272000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]

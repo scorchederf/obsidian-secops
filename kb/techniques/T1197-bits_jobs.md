@@ -20,16 +20,6 @@ Adversaries may abuse BITS to download (e.g. [Ingress Tool Transfer](https://att
 
 BITS upload functionalities can also be used to perform [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048).(Citation: CTU BITS Malware June 2016)
 
-## Properties
-
-- id: T1197
-- name: BITS Jobs
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:22.711000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -42,5 +32,5 @@ BITS upload functionalities can also be used to perform [Exfiltration Over Alter
 
 ## Tools
 
-- [[S0190-bitsadmin|S0190: BITSAdmin]]
+- [[bitsadmin|BITSAdmin]]
 

@@ -16,20 +16,9 @@ Adversaries may search freely available technical databases for information abou
 
 Adversaries may search in different open databases depending on what information they seek to gather. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).
 
-## Properties
-
-- id: T1596
-- name: Search Open Technical Databases
-- created: 2020-10-02 16:56:05.810000+00:00
-- modified: 2025-10-24 17:48:48.734000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1596.001: DNS/Passive DNS
-
 ^t1596001-dns-passive-dns
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may search DNS data to gather actionable information. Threat actors 
 - x_mitre_domains: enterprise-attack
 
 ### T1596.002: WHOIS
-
 ^t1596002-whois
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Adversaries may search WHOIS data to gather actionable information. Threat actor
 - x_mitre_domains: enterprise-attack
 
 ### T1596.003: Digital Certificates
-
 ^t1596003-digital-certificates
 
 **Parent Technique**
@@ -101,7 +88,6 @@ Adversaries may search digital certificate data to gather actionable information
 - x_mitre_domains: enterprise-attack
 
 ### T1596.004: CDNs
-
 ^t1596004-cdns
 
 **Parent Technique**
@@ -125,7 +111,6 @@ Adversaries may search CDN data to gather actionable information. Threat actors 
 - x_mitre_domains: enterprise-attack
 
 ### T1596.005: Scan Databases
-
 ^t1596005-scan-databases
 
 **Parent Technique**

@@ -22,16 +22,6 @@ Impersonation is typically preceded by reconnaissance techniques such as [Gather
  
 There is the potential for multiple victims in campaigns involving impersonation. For example, an adversary may [Compromise Accounts](https://attack.mitre.org/techniques/T1586) targeting one organization which can then be used to support impersonation against other entities.(Citation: VEC)
 
-## Properties
-
-- id: T1656
-- name: Impersonation
-- created: 2023-08-08 15:42:18.906000+00:00
-- modified: 2025-04-15 22:41:31.140000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]
@@ -47,5 +37,5 @@ There is the potential for multiple victims in campaigns involving impersonation
 
 ## Tools
 
-- [[S1131-nppspy|S1131: NPPSPY]]
+- [[nppspy|NPPSPY]]
 

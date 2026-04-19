@@ -31,16 +31,6 @@ On ESXi servers, adversaries may delete or encrypt snapshots of virtual machines
 
 Adversaries may also delete “online” backups that are connected to their network – whether via network storage media or through folders that sync to cloud services.(Citation: ZDNet Ransomware Backups 2020) In cloud environments, adversaries may disable versioning and backup policies and delete snapshots, database backups, machine images, and prior versions of objects designed to be used in disaster recovery scenarios.(Citation: Dark Reading Code Spaces Cyber Attack)(Citation: Rhino Security Labs AWS S3 Ransomware)
 
-## Properties
-
-- id: T1490
-- name: Inhibit System Recovery
-- created: 2019-04-02 13:54:43.136000+00:00
-- modified: 2025-10-24 17:49:37.297000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]

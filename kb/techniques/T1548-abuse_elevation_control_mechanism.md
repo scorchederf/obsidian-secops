@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. Most modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can perform on a machine. Authorization has to be granted to specific users in order to perform tasks that can be considered of higher risk.(Citation: TechNet How UAC Works)(Citation: sudo man page 2018) An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system.(Citation: OSX Keydnap malware)(Citation: Fortinet Fareit)
 
-## Properties
-
-- id: T1548
-- name: Abuse Elevation Control Mechanism
-- created: 2020-01-30 13:58:14.373000+00:00
-- modified: 2025-10-24 17:48:53.277000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1548.001: Setuid and Setgid
-
 ^t1548001-setuid-and-setgid
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Alternatively, adversaries may choose to find and target vulnerable binaries wit
 - x_mitre_domains: enterprise-attack
 
 ### T1548.002: Bypass User Account Control
-
 ^t1548002-bypass-user-account-control
 
 **Parent Technique**
@@ -85,7 +73,6 @@ Another bypass is possible through some lateral movement techniques if credentia
 - x_mitre_domains: enterprise-attack
 
 ### T1548.003: Sudo and Sudo Caching
-
 ^t1548003-sudo-and-sudo-caching
 
 **Parent Technique**
@@ -115,7 +102,6 @@ In the wild, malware has disabled <code>tty_tickets</code> to potentially make s
 - x_mitre_domains: enterprise-attack
 
 ### T1548.004: Elevated Execution with Prompt
-
 ^t1548004-elevated-execution-with-prompt
 
 **Parent Technique**
@@ -141,7 +127,6 @@ Adversaries may abuse <code>AuthorizationExecuteWithPrivileges</code> to obtain 
 - x_mitre_domains: enterprise-attack
 
 ### T1548.005: Temporary Elevated Cloud Access
-
 ^t1548005-temporary-elevated-cloud-access
 
 **Parent Technique**
@@ -173,7 +158,6 @@ While users require specific role assignments in order to use any of these featu
 - x_mitre_domains: enterprise-attack
 
 ### T1548.006: TCC Manipulation
-
 ^t1548006-tcc-manipulation
 
 **Parent Technique**

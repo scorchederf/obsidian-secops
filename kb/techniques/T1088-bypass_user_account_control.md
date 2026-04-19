@@ -22,16 +22,6 @@ Many methods have been discovered to bypass UAC. The Github readme page for UACM
 
 Another bypass is possible through some Lateral Movement techniques if credentials for an account with administrator privileges are known, since UAC is a single system security mechanism, and the privilege or integrity of a process running on one system will be unknown on lateral systems and default to high integrity. (Citation: SANS UAC Bypass)
 
-## Properties
-
-- id: T1088
-- name: Bypass User Account Control
-- created: 2017-05-31 21:31:07.462000+00:00
-- modified: 2025-10-24 17:49:22.963000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

@@ -16,20 +16,9 @@ Adversaries may use a connection proxy to direct network traffic between systems
 
 Adversaries can also take advantage of routing schemes in Content Delivery Networks (CDNs) to proxy command and control traffic.
 
-## Properties
-
-- id: T1090
-- name: Proxy
-- created: 2017-05-31 21:31:08.479000+00:00
-- modified: 2025-10-24 17:48:57.330000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1090.001: Internal Proxy
-
 ^t1090001-internal-proxy
 
 **Parent Technique**
@@ -53,7 +42,6 @@ By using a compromised internal system as a proxy, adversaries may conceal the t
 - x_mitre_domains: enterprise-attack
 
 ### T1090.002: External Proxy
-
 ^t1090002-external-proxy
 
 **Parent Technique**
@@ -77,7 +65,6 @@ External connection proxies are used to mask the destination of C2 traffic and a
 - x_mitre_domains: enterprise-attack
 
 ### T1090.003: Multi-hop Proxy
-
 ^t1090003-multi-hop-proxy
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Similarly, adversaries may abuse peer-to-peer (P2P) and blockchain-oriented infr
 - x_mitre_domains: enterprise-attack
 
 ### T1090.004: Domain Fronting
-
 ^t1090004-domain-fronting
 
 **Parent Technique**
@@ -144,11 +130,11 @@ For example, if domain-x and domain-y are customers of the same CDN, it is possi
 
 ## Tools
 
-- [[S0040-htran|S0040: HTRAN]]
-- [[S0108-netsh|S0108: netsh]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0332-remcos|S0332: Remcos]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0508-ngrok|S0508: ngrok]]
-- [[S1144-frp|S1144: FRP]]
+- [[frp|FRP]]
+- [[htran|HTRAN]]
+- [[netsh|netsh]]
+- [[ngrok|ngrok]]
+- [[poshc2|PoshC2]]
+- [[quasarrat|QuasarRAT]]
+- [[remcos|Remcos]]
 

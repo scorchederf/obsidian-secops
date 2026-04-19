@@ -28,16 +28,6 @@ Adversaries can leverage OAuth authorization by constructing a malicious applica
 
 Application access tokens may function within a limited lifetime, limiting how long an adversary can utilize the stolen token. However, in some cases, adversaries can also steal application refresh tokens(Citation: Auth0 Understanding Refresh Tokens), allowing them to obtain new access tokens without prompting the user.  
 
-## Properties
-
-- id: T1528
-- name: Steal Application Access Token
-- created: 2019-09-04 15:54:25.684000+00:00
-- modified: 2025-10-24 17:49:04.660000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]
@@ -55,6 +45,6 @@ Application access tokens may function within a limited lifetime, limiting how l
 
 ## Tools
 
-- [[S0677-aadinternals|S0677: AADInternals]]
-- [[S0683-peirates|S0683: Peirates]]
+- [[aadinternals|AADInternals]]
+- [[peirates|Peirates]]
 

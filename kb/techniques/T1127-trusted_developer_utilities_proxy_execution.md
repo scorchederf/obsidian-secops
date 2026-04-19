@@ -16,20 +16,9 @@ Adversaries may take advantage of trusted developer utilities to proxy execution
 
 Smart App Control is a feature of Windows that blocks applications it considers potentially malicious from running by verifying unsigned applications against a known safe list from a Microsoft cloud service before executing them.(Citation: Microsoft Smart App Control) However, adversaries may leverage "reputation hijacking" to abuse an operating system’s trust of safe, signed applications that support the execution of arbitrary code. By leveraging [Trusted Developer Utilities Proxy Execution](https://attack.mitre.org/techniques/T1127) to run their malicious code, adversaries may bypass Smart App Control protections.(Citation: Elastic Security Labs)
 
-## Properties
-
-- id: T1127
-- name: Trusted Developer Utilities Proxy Execution
-- created: 2017-05-31 21:31:39.262000+00:00
-- modified: 2025-10-24 17:49:40.055000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1127.001: MSBuild
-
 ^t1127001-msbuild
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries can abuse MSBuild to proxy execution of malicious code. The inline t
 - x_mitre_domains: enterprise-attack
 
 ### T1127.002: ClickOnce
-
 ^t1127002-clickonce
 
 **Parent Technique**
@@ -83,7 +71,6 @@ Additionally, an adversary can move the ClickOnce application file to a remote u
 - x_mitre_domains: enterprise-attack
 
 ### T1127.003: JamPlus
-
 ^t1127003-jamplus
 
 **Parent Technique**

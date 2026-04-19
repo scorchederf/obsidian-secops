@@ -18,16 +18,6 @@ Many command shell utilities can be used to obtain this information. Examples in
 
 Some files and directories may require elevated or specific user permissions to access.
 
-## Properties
-
-- id: T1083
-- name: File and Directory Discovery
-- created: 2017-05-31 21:31:04.710000+00:00
-- modified: 2025-10-24 17:49:00.036000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -38,17 +28,17 @@ Some files and directories may require elevated or specific user permissions to 
 
 ## Tools
 
-- [[S0106-cmd|S0106: cmd]]
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0193-forfiles|S0193: Forfiles]]
-- [[S0250-koadic|S0250: Koadic]]
-- [[S0332-remcos|S0332: Remcos]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
-- [[S0592-remoteutilities|S0592: RemoteUtilities]]
-- [[S0633-sliver|S0633: Sliver]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S1040-rclone|S1040: Rclone]]
+- [[cmd|cmd]]
+- [[crackmapexec|CrackMapExec]]
+- [[empire|Empire]]
+- [[forfiles|Forfiles]]
+- [[imminent_monitor|Imminent Monitor]]
+- [[koadic|Koadic]]
+- [[poshc2|PoshC2]]
+- [[pupy|Pupy]]
+- [[rclone|Rclone]]
+- [[remcos|Remcos]]
+- [[remoteutilities|RemoteUtilities]]
+- [[silenttrinity|SILENTTRINITY]]
+- [[sliver|Sliver]]
 

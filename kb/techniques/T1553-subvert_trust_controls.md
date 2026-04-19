@@ -16,20 +16,9 @@ Adversaries may undermine security controls that will either warn users of untru
 
 Adversaries may attempt to subvert these trust mechanisms. The method adversaries use will depend on the specific mechanism they seek to subvert. Adversaries may conduct [File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222) or [Modify Registry](https://attack.mitre.org/techniques/T1112) in support of subverting these controls.(Citation: SpectorOps Subverting Trust Sept 2017) Adversaries may also create or steal code signing certificates to acquire trust on target systems.(Citation: Securelist Digital Certificates)(Citation: Symantec Digital Certificates) 
 
-## Properties
-
-- id: T1553
-- name: Subvert Trust Controls
-- created: 2020-02-05 14:54:07.588000+00:00
-- modified: 2025-10-24 17:49:16.766000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1553.001: Gatekeeper Bypass
-
 ^t1553001-gatekeeper-bypass
 
 **Parent Technique**
@@ -65,7 +54,6 @@ Applications and files loaded onto the system from a USB flash drive, optical di
 - x_mitre_domains: enterprise-attack
 
 ### T1553.002: Code Signing
-
 ^t1553002-code-signing
 
 **Parent Technique**
@@ -91,7 +79,6 @@ Code signing certificates may be used to bypass security policies that require s
 - x_mitre_domains: enterprise-attack
 
 ### T1553.003: SIP and Trust Provider Hijacking
-
 ^t1553003-sip-and-trust-provider-hijacking
 
 **Parent Technique**
@@ -124,7 +111,6 @@ Hijacking SIP or trust provider components can also enable persistent code execu
 - x_mitre_domains: enterprise-attack
 
 ### T1553.004: Install Root Certificate
-
 ^t1553004-install-root-certificate
 
 **Parent Technique**
@@ -154,7 +140,6 @@ In macOS, the Ay MaMi malware uses <code>/usr/bin/security add-trusted-cert -d -
 - x_mitre_domains: enterprise-attack
 
 ### T1553.005: Mark-of-the-Web Bypass
-
 ^t1553005-mark-of-the-web-bypass
 
 **Parent Technique**
@@ -178,7 +163,6 @@ Adversaries may abuse container files such as compressed/archive (.arj, .gzip) a
 - x_mitre_domains: enterprise-attack
 
 ### T1553.006: Code Signing Policy Modification
-
 ^t1553006-code-signing-policy-modification
 
 **Parent Technique**

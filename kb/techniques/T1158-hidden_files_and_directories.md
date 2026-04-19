@@ -29,16 +29,6 @@ Users can mark specific files as hidden simply by putting a “.” as the first
 Files on macOS can be marked with the UF_HIDDEN flag which prevents them from being seen in Finder.app, but still allows them to be seen in Terminal.app (Citation: WireLurker).
 Many applications create these hidden files and folders to store information so that it doesn’t clutter up the user’s workspace. For example, SSH utilities create a .ssh folder that’s hidden and contains the user’s known hosts and keys.
 
-## Properties
-
-- id: T1158
-- name: Hidden Files and Directories
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:28.772000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

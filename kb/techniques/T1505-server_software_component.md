@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may abuse legitimate extensible development features of servers to establish persistent access to systems. Enterprise server applications may include features that allow developers to write and install software or scripts to extend the functionality of the main application. Adversaries may install malicious components to extend and abuse server applications.(Citation: volexity_0day_sophos_FW)
 
-## Properties
-
-- id: T1505
-- name: Server Software Component
-- created: 2019-06-28 17:52:07.296000+00:00
-- modified: 2025-10-24 17:49:27.065000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1505.001: SQL Stored Procedures
-
 ^t1505001-sql-stored-procedures
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Microsoft SQL Server can enable common language runtime (CLR) integration. With 
 - x_mitre_domains: enterprise-attack
 
 ### T1505.002: Transport Agent
-
 ^t1505002-transport-agent
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Adversaries may register a malicious transport agent to provide a persistence me
 - x_mitre_domains: enterprise-attack
 
 ### T1505.003: Web Shell
-
 ^t1505003-web-shell
 
 **Parent Technique**
@@ -101,7 +88,6 @@ In addition to a server-side script, a Web shell may have a client interface pro
 - x_mitre_domains: enterprise-attack
 
 ### T1505.004: IIS Components
-
 ^t1505004-iis-components
 
 **Parent Technique**
@@ -127,7 +113,6 @@ Adversaries may also install malicious IIS modules to observe and/or modify traf
 - x_mitre_domains: enterprise-attack
 
 ### T1505.005: Terminal Services DLL
-
 ^t1505005-terminal-services-dll
 
 **Parent Technique**
@@ -153,7 +138,6 @@ Adversaries may modify and/or replace the Terminal Services DLL to enable persis
 - x_mitre_domains: enterprise-attack
 
 ### T1505.006: vSphere Installation Bundles
-
 ^t1505006-vsphere-installation-bundles
 
 **Parent Technique**

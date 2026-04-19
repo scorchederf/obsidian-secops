@@ -22,16 +22,6 @@ Adversaries may also modify the <code>*\template</code> control word within an .
 
 This technique may also enable [Forced Authentication](https://attack.mitre.org/techniques/T1187) by injecting a SMB/HTTPS (or other credential prompting) URL and triggering an authentication attempt.(Citation: Anomali Template Injection MAR 2018)(Citation: Talos Template Injection July 2017)(Citation: ryhanson phishery SEPT 2016)
 
-## Properties
-
-- id: T1221
-- name: Template Injection
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-10-24 17:49:28.862000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]

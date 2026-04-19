@@ -18,20 +18,9 @@ Modifications may include changing specific access rights, which may require tak
 
 Adversaries may also change permissions of symbolic links. For example, malware (particularly ransomware) may modify symbolic links and associated settings to enable access to files from local shortcuts with remote paths.(Citation: new_rust_based_ransomware)(Citation: bad_luck_blackcat)(Citation: falconoverwatch_blackcat_attack)(Citation: blackmatter_blackcat)(Citation: fsutil_behavior) 
 
-## Properties
-
-- id: T1222
-- name: File and Directory Permissions Modification
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-10-24 17:48:52.570000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1222.001: Windows File and Directory Permissions Modification
-
 ^t1222001-windows-file-and-directory-permissions-modification
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Adversaries can interact with the DACLs using built-in Windows commands, such as
 - x_mitre_domains: enterprise-attack
 
 ### T1222.002: Linux and Mac File and Directory Permissions Modification
-
 ^t1222002-linux-and-mac-file-and-directory-permissions-modification
 
 **Parent Technique**

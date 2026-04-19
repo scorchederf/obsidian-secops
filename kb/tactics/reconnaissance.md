@@ -14,16 +14,6 @@ The adversary is trying to gather information they can use to plan future operat
 
 Reconnaissance consists of techniques that involve adversaries actively or passively gathering information that can be used to support targeting. Such information may include details of the victim organization, infrastructure, or staff/personnel. This information can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as using gathered information to plan and execute Initial Access, to scope and prioritize post-compromise objectives, or to drive and lead further Reconnaissance efforts.
 
-## Properties
-
-- id: x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592
-- name: Reconnaissance
-- created: 2020-10-02 14:48:41.809000+00:00
-- modified: 2025-04-25 14:45:36.201000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1589-gather_victim_identity_information|T1589: Gather Victim Identity Information]]

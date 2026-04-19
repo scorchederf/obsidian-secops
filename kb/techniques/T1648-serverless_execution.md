@@ -18,16 +18,6 @@ Adversaries may abuse these resources in various ways as a means of executing ar
 
 Serverless functions can also be invoked in response to cloud events (i.e. [Event Triggered Execution](https://attack.mitre.org/techniques/T1546)), potentially enabling persistent execution over time. For example, in AWS environments, an adversary may create a Lambda function that automatically adds [Additional Cloud Credentials](https://attack.mitre.org/techniques/T1098/001) to a user and a corresponding CloudWatch events rule that invokes that function whenever a new user is created.(Citation: Backdooring an AWS account) This is also possible in many cloud-based office application suites. For example, in Microsoft 365 environments, an adversary may create a Power Automate workflow that forwards all emails a user receives or creates anonymous sharing links whenever a user is granted access to a document in SharePoint.(Citation: Varonis Power Automate Data Exfiltration)(Citation: Microsoft DART Case Report 001) In Google Workspace environments, they may instead create an Apps Script that exfiltrates a user's data when they open a file.(Citation: Cloud Hack Tricks GWS Apps Script)(Citation: OWN-CERT Google App Script 2024)
 
-## Properties
-
-- id: T1648
-- name: Serverless Execution
-- created: 2022-05-27 13:19:51.112000+00:00
-- modified: 2025-04-15 19:59:17.861000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -41,5 +31,5 @@ Serverless functions can also be invoked in response to cloud events (i.e. [Even
 
 ## Tools
 
-- [[S1091-pacu|S1091: Pacu]]
+- [[pacu|Pacu]]
 

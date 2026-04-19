@@ -20,16 +20,6 @@ In cloud environments, authenticated user credentials are often stored in local 
 
 
 
-## Properties
-
-- id: T1081
-- name: Credentials in Files
-- created: 2017-05-31 21:31:02.188000+00:00
-- modified: 2025-10-24 17:49:17.543000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

@@ -20,16 +20,6 @@ Private keys should require a password or passphrase for operation, so an advers
 
 Adversary tools have been discovered that search compromised systems for file extensions relating to cryptographic keys and certificates. (Citation: Kaspersky Careto) (Citation: Palo Alto Prince of Persia)
 
-## Properties
-
-- id: T1145
-- name: Private Keys
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:49.203000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

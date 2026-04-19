@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may obfuscate command and control traffic to make it more difficult to detect.(Citation: Bitdefender FunnyDream Campaign November 2020) Command and control (C2) communications are hidden (but not necessarily encrypted) in an attempt to make the content more difficult to discover or decipher and to make the communication less conspicuous and hide commands from being seen. This encompasses many methods, such as adding junk data to protocol traffic, using steganography, or impersonating legitimate protocols. 
 
-## Properties
-
-- id: T1001
-- name: Data Obfuscation
-- created: 2017-05-31 21:30:18.931000+00:00
-- modified: 2025-10-24 17:49:13.380000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1001.001: Junk Data
-
 ^t1001001-junk-data
 
 **Parent Technique**
@@ -49,7 +38,6 @@ Adversaries may add junk data to protocols used for command and control to make 
 - x_mitre_domains: enterprise-attack
 
 ### T1001.002: Steganography
-
 ^t1001002-steganography
 
 **Parent Technique**
@@ -71,7 +59,6 @@ Adversaries may use steganographic techniques to hide command and control traffi
 - x_mitre_domains: enterprise-attack
 
 ### T1001.003: Protocol or Service Impersonation
-
 ^t1001003-protocol-or-service-impersonation
 
 **Parent Technique**

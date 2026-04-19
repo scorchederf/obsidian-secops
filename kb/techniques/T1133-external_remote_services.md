@@ -20,16 +20,6 @@ Access may also be gained through an exposed service that doesn’t require auth
 
 Adversaries may also establish persistence on network by configuring a Tor hidden service on a compromised system. Adversaries may utilize the tool `ShadowLink` to facilitate the installation and configuration of the Tor hidden service. Tor hidden service is then accessible via the Tor network because `ShadowLink` sets up a .onion address on the compromised system. `ShadowLink` may be used to forward any inbound connections to RDP, allowing the adversaries to have remote access.(Citation: The BadPilot campaign) Adversaries may get `ShadowLink` to persist on a system by masquerading it as an MS Defender application.(Citation: Russian threat actors dig in, prepare to seize on war fatigue)
 
-## Properties
-
-- id: T1133
-- name: External Remote Services
-- created: 2017-05-31 21:31:44.421000+00:00
-- modified: 2025-10-24 17:48:24.982000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.5
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]

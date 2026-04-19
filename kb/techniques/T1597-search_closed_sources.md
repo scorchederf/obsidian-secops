@@ -16,20 +16,9 @@ Adversaries may search and gather information about victims from closed (e.g., p
 
 Adversaries may search in different closed databases depending on what information they seek to gather. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Valid Accounts](https://attack.mitre.org/techniques/T1078)).
 
-## Properties
-
-- id: T1597
-- name: Search Closed Sources
-- created: 2020-10-02 17:01:42.558000+00:00
-- modified: 2025-10-24 17:49:11.164000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1597.001: Threat Intel Vendors
-
 ^t1597001-threat-intel-vendors
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may search in private threat intelligence vendor data to gather acti
 - x_mitre_domains: enterprise-attack
 
 ### T1597.002: Purchase Technical Data
-
 ^t1597002-purchase-technical-data
 
 **Parent Technique**

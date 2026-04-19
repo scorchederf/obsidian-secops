@@ -18,16 +18,6 @@ For example, adversaries may patch a vulnerable, compromised system(Citation: Ma
 
 Hindering other threat actors may allow an adversary to maintain sole access to a compromised system or network. This prevents the threat actor from needing to compete with or even being removed themselves by other threat actors. It also reduces the “noise” in the environment, lowering the possibility of being caught and evicted by defenders. Finally, in the case of [Resource Hijacking](https://attack.mitre.org/techniques/T1496), leveraging a compromised device’s full power allows the threat actor to maximize profit.(Citation: sophos-multiple-attackers)
 
-## Properties
-
-- id: T1668
-- name: Exclusive Control
-- created: 2025-01-31 15:22:39.317000+00:00
-- modified: 2025-04-15 19:59:14.622000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

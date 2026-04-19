@@ -16,16 +16,6 @@ Adversaries may move onto systems, possibly those on disconnected or air-gapped 
 
 Mobile devices may also be used to infect PCs with malware if connected via USB.(Citation: Exploiting Smartphone USB ) This infection may be achieved using devices (Android, iOS, etc.) and, in some instances, USB charging cables.(Citation: Windows Malware Infecting Android)(Citation: iPhone Charging Cable Hack) For example, when a smartphone is connected to a system, it may appear to be mounted similar to a USB-connected disk drive. If malware that is compatible with the connected system is on the mobile device, the malware could infect the machine (especially if Autorun features are enabled).
 
-## Properties
-
-- id: T1091
-- name: Replication Through Removable Media
-- created: 2017-05-31 21:31:08.977000+00:00
-- modified: 2025-10-24 17:48:40.752000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1034-limit_hardware_installation|M1034: Limit Hardware Installation]]

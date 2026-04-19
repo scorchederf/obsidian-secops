@@ -16,16 +16,6 @@ Launchctl controls the macOS launchd process which handles things like launch ag
 
 Adversaries can abuse this functionality to execute code or even bypass whitelisting if launchctl is an allowed process.
 
-## Properties
-
-- id: T1152
-- name: Launchctl
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:48.110000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

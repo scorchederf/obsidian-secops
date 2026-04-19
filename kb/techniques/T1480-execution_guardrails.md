@@ -18,20 +18,9 @@ Guardrails can be used to prevent exposure of capabilities in environments that 
 
 Adversaries may identify and block certain user-agents to evade defenses and narrow the scope of their attack to victims and platforms on which it will be most effective. A user-agent self-identifies data such as a user's software application, operating system, vendor, and version. Adversaries may check user-agents for operating system identification and then only serve malware for the exploitable software while ignoring all other operating systems.(Citation: Trellix-Qakbot)
 
-## Properties
-
-- id: T1480
-- name: Execution Guardrails
-- created: 2019-01-31 02:10:08.261000+00:00
-- modified: 2025-10-24 17:49:03.764000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1480.001: Environmental Keying
-
 ^t1480001-environmental-keying
 
 **Parent Technique**
@@ -59,7 +48,6 @@ Like other [Execution Guardrails](https://attack.mitre.org/techniques/T1480), en
 - x_mitre_domains: enterprise-attack
 
 ### T1480.002: Mutual Exclusion
-
 ^t1480002-mutual-exclusion
 
 **Parent Technique**

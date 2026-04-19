@@ -20,16 +20,6 @@ This same attack could be executed using service tickets captured from network t
 
 Cracked hashes may enable Persistence, Privilege Escalation, and  Lateral Movement via access to [Valid Accounts](https://attack.mitre.org/techniques/T1078). (Citation: SANS Attacking Kerberos Nov 2014)
 
-## Properties
-
-- id: T1208
-- name: Kerberoasting
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:15.097000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

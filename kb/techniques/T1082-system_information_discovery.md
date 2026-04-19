@@ -20,16 +20,6 @@ Infrastructure as a Service (IaaS) cloud providers such as AWS, GCP, and Azure a
 
 [System Information Discovery](https://attack.mitre.org/techniques/T1082) combined with information gathered from other forms of discovery and reconnaissance can drive payload development and concealment.(Citation: OSX.FairyTale)(Citation: 20 macOS Common Tools and Techniques) 
 
-## Properties
-
-- id: T1082
-- name: System Information Discovery
-- created: 2017-05-31 21:31:04.307000+00:00
-- modified: 2025-10-24 17:48:38.277000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.0
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -41,15 +31,15 @@ Infrastructure as a Service (IaaS) cloud providers such as AWS, GCP, and Azure a
 
 ## Tools
 
-- [[S0096-systeminfo|S0096: Systeminfo]]
-- [[S0105-dsquery|S0105: dsquery]]
-- [[S0106-cmd|S0106: cmd]]
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0250-koadic|S0250: Koadic]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S1155-covenant|S1155: Covenant]]
+- [[cmd|cmd]]
+- [[covenant|Covenant]]
+- [[dsquery|dsquery]]
+- [[empire|Empire]]
+- [[koadic|Koadic]]
+- [[poshc2|PoshC2]]
+- [[pupy|Pupy]]
+- [[quasarrat|QuasarRAT]]
+- [[shimratreporter|ShimRatReporter]]
+- [[silenttrinity|SILENTTRINITY]]
+- [[systeminfo|Systeminfo]]
 

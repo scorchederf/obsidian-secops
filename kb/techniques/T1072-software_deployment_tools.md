@@ -22,16 +22,6 @@ Network infrastructure devices may also have configuration management tools that
 
 The permissions required for this action vary by system configuration; local credentials may be sufficient with direct access to the third-party system, or specific domain credentials may be required. However, the system may require an administrative account to log in or to access specific functionality.
 
-## Properties
-
-- id: T1072
-- name: Software Deployment Tools
-- created: 2017-05-31 21:30:57.201000+00:00
-- modified: 2025-10-24 17:49:06.595000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1015-active_directory_configuration|M1015: Active Directory Configuration]]

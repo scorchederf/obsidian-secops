@@ -18,16 +18,6 @@ ICMP communication between hosts is one example.(Citation: Cisco Synful Knock Ev
 
 In ESXi environments, adversaries may leverage the Virtual Machine Communication Interface (VMCI) for communication between guest virtual machines and the ESXi host. This traffic is similar to client-server communications on traditional network sockets but is localized to the physical machine running the ESXi host, meaning it does not traverse external networks (routers, switches). This results in communications that are invisible to external monitoring and standard networking tools like tcpdump, netstat, nmap, and Wireshark. By adding a VMCI backdoor to a compromised ESXi host, adversaries may persistently regain access from any guest VM to the compromised ESXi host’s backdoor, regardless of network segmentation or firewall rules in place.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023)
 
-## Properties
-
-- id: T1095
-- name: Non-Application Layer Protocol
-- created: 2017-05-31 21:31:10.728000+00:00
-- modified: 2025-10-24 17:49:20.136000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1030-network_segmentation|M1030: Network Segmentation]]
@@ -45,8 +35,8 @@ In ESXi environments, adversaries may leverage the Virtual Machine Communication
 
 ## Tools
 
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0699-mythic|S0699: Mythic]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
-- [[S1144-frp|S1144: FRP]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[frp|FRP]]
+- [[mythic|Mythic]]
+- [[quasarrat|QuasarRAT]]
 

@@ -16,20 +16,9 @@ Adversaries may dynamically establish connections to command and control infrast
 
 Adversaries may use dynamic resolution for the purpose of [Fallback Channels](https://attack.mitre.org/techniques/T1008). When contact is lost with the primary command and control server malware may employ dynamic resolution as a means to reestablishing command and control.(Citation: Talos CCleanup 2017)(Citation: FireEye POSHSPY April 2017)(Citation: ESET Sednit 2017 Activity)
 
-## Properties
-
-- id: T1568
-- name: Dynamic Resolution
-- created: 2020-03-10 17:28:11.747000+00:00
-- modified: 2025-10-24 17:49:00.128000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1568.001: Fast Flux DNS
-
 ^t1568001-fast-flux-dns
 
 **Parent Technique**
@@ -55,7 +44,6 @@ In contrast, the "double-flux" method registers and de-registers an address as p
 - x_mitre_domains: enterprise-attack
 
 ### T1568.002: Domain Generation Algorithms
-
 ^t1568002-domain-generation-algorithms
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Adversaries may use DGAs for the purpose of [Fallback Channels](https://attack.m
 - x_mitre_domains: enterprise-attack
 
 ### T1568.003: DNS Calculation
-
 ^t1568003-dns-calculation
 
 **Parent Technique**
@@ -118,5 +105,5 @@ One implementation of [DNS Calculation](https://attack.mitre.org/techniques/T156
 
 ## Tools
 
-- [[S1087-asyncrat|S1087: AsyncRAT]]
+- [[asyncrat|AsyncRAT]]
 

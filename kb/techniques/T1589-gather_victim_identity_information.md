@@ -18,20 +18,9 @@ Adversaries may gather this information in various ways, such as direct elicitat
 
 Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Phishing for Information](https://attack.mitre.org/techniques/T1598)), establishing operational resources (ex: [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Valid Accounts](https://attack.mitre.org/techniques/T1078)).
 
-## Properties
-
-- id: T1589
-- name: Gather Victim Identity Information
-- created: 2020-10-02 14:54:59.263000+00:00
-- modified: 2025-10-24 17:48:47.303000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1589.001: Credentials
-
 ^t1589001-credentials
 
 **Parent Technique**
@@ -59,7 +48,6 @@ Gathering this information may reveal opportunities for other forms of reconnais
 - x_mitre_domains: enterprise-attack
 
 ### T1589.002: Email Addresses
-
 ^t1589002-email-addresses
 
 **Parent Technique**
@@ -85,7 +73,6 @@ Gathering this information may reveal opportunities for other forms of reconnais
 - x_mitre_domains: enterprise-attack
 
 ### T1589.003: Employee Names
-
 ^t1589003-employee-names
 
 **Parent Technique**

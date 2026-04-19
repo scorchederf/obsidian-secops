@@ -16,16 +16,6 @@ Programs may specify DLLs that are loaded at runtime. Programs that improperly o
 
 Adversaries likely use this technique as a means of masking actions they perform under a legitimate, trusted system or software process.
 
-## Properties
-
-- id: T1073
-- name: DLL Side-Loading
-- created: 2017-05-31 21:30:58.007000+00:00
-- modified: 2025-10-24 17:49:14.455000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

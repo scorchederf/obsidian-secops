@@ -22,16 +22,6 @@ A number of PowerShell-based offensive testing tools are available, including [E
 
 PowerShell commands/scripts can also be executed without directly invoking the powershell.exe binary through interfaces to PowerShell's underlying System.Management.Automation assembly exposed through the .NET framework and Windows Common Language Interface (CLI). (Citation: Sixdub PowerPick Jan 2016)(Citation: SilentBreak Offensive PS Dec 2015) (Citation: Microsoft PSfromCsharp APR 2014)
 
-## Properties
-
-- id: T1086
-- name: PowerShell
-- created: 2017-05-31 21:31:06.512000+00:00
-- modified: 2025-10-24 17:49:36.765000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

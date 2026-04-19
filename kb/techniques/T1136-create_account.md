@@ -16,20 +16,9 @@ Adversaries may create an account to maintain access to victim systems.(Citation
 
 Accounts may be created on the local system or within a domain or cloud tenant. In cloud environments, adversaries may create accounts that only have access to specific services, which can reduce the chance of detection.
 
-## Properties
-
-- id: T1136
-- name: Create Account
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:30.136000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1136.001: Local Account
-
 ^t1136001-local-account
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Such accounts may be used to establish secondary credentialed access that do not
 - x_mitre_domains: enterprise-attack
 
 ### T1136.002: Domain Account
-
 ^t1136002-domain-account
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Such accounts may be used to establish secondary credentialed access that do not
 - x_mitre_domains: enterprise-attack
 
 ### T1136.003: Cloud Account
-
 ^t1136003-cloud-account
 
 **Parent Technique**

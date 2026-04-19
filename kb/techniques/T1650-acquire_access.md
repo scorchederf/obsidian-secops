@@ -22,16 +22,6 @@ In some cases, purchasing access to an organization in sectors such as IT contra
 
 **Note:** while this technique is distinct from other behaviors such as [Purchase Technical Data](https://attack.mitre.org/techniques/T1597/002) and [Credentials](https://attack.mitre.org/techniques/T1589/001), they may often be used in conjunction (especially where the acquired foothold requires [Valid Accounts](https://attack.mitre.org/techniques/T1078)).
 
-## Properties
-
-- id: T1650
-- name: Acquire Access
-- created: 2023-03-10 15:37:21.782000+00:00
-- modified: 2025-10-24 17:49:25.997000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1056-pre-compromise|M1056: Pre-compromise]]

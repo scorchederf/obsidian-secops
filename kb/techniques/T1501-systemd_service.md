@@ -24,16 +24,6 @@ Adversaries have used systemd functionality to establish persistent access to vi
 
 While adversaries typically require root privileges to create/modify service unit files in the <code>/etc/systemd/system</code> and <code>/usr/lib/systemd/system</code> directories, low privilege users can create/modify service unit files in directories such as <code>~/.config/systemd/user/</code> to achieve user-level persistence.(Citation: Rapid7 Service Persistence 22JUNE2016)
 
-## Properties
-
-- id: T1501
-- name: Systemd Service
-- created: 2019-04-23 15:34:30.008000+00:00
-- modified: 2025-10-24 17:48:24.512000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

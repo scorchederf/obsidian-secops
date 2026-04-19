@@ -21,16 +21,6 @@ Adversaries may also use Windows API functions, such as `InitializeSystemShutdow
 
 Adversaries may attempt to shutdown/reboot a system after impacting it in other ways, such as [Disk Structure Wipe](https://attack.mitre.org/techniques/T1561/002) or [Inhibit System Recovery](https://attack.mitre.org/techniques/T1490), to hasten the intended effects on system availability.(Citation: Talos Nyetya June 2017)(Citation: Talos Olympic Destroyer 2018)
 
-## Properties
-
-- id: T1529
-- name: System Shutdown/Reboot
-- created: 2019-10-04 20:42:28.541000+00:00
-- modified: 2025-10-24 17:49:40.145000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi

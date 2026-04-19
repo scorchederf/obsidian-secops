@@ -20,16 +20,6 @@ Adversaries may also attempt to filter network traffic in order to evade defensi
 
 Hiding C2 infrastructure may also be supported by [Resource Development](https://attack.mitre.org/tactics/TA0042) activities such as [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) and [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584). For example, using widely trusted hosting services or domains such as prominent URL shortening providers or marketing services for C2 networks may enable adversaries to present benign content that later redirects victims to malicious web pages or infrastructure once specific conditions are met.(Citation: StarBlizzard)(Citation: QR-cofense)
 
-## Properties
-
-- id: T1665
-- name: Hide Infrastructure
-- created: 2024-02-13 17:00:00.175000+00:00
-- modified: 2025-10-22 03:57:22.646000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi

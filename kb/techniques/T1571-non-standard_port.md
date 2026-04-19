@@ -16,16 +16,6 @@ Adversaries may communicate using a protocol and port pairing that are typically
 
 Adversaries may also make changes to victim systems to abuse non-standard ports. For example, Registry keys and other configuration settings can be used to modify protocol and port pairings.(Citation: change_rdp_port_conti)
 
-## Properties
-
-- id: T1571
-- name: Non-Standard Port
-- created: 2020-03-14 18:18:32.443000+00:00
-- modified: 2025-10-24 17:49:14.187000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1030-network_segmentation|M1030: Network Segmentation]]
@@ -40,6 +30,6 @@ Adversaries may also make changes to victim systems to abuse non-standard ports.
 
 ## Tools
 
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S1155-covenant|S1155: Covenant]]
+- [[covenant|Covenant]]
+- [[quasarrat|QuasarRAT]]
 

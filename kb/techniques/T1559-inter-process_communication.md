@@ -16,20 +16,9 @@ Adversaries may abuse inter-process communication (IPC) mechanisms for local cod
 
 Adversaries may abuse IPC to execute arbitrary code or commands. IPC mechanisms may differ depending on OS, but typically exists in a form accessible through programming languages/libraries or native interfaces such as Windows [Dynamic Data Exchange](https://attack.mitre.org/techniques/T1559/002) or [Component Object Model](https://attack.mitre.org/techniques/T1559/001). Linux environments support several different IPC mechanisms, two of which being sockets and pipes.(Citation: Linux IPC) Higher level execution mediums, such as those of [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059)s, may also leverage underlying IPC mechanisms. Adversaries may also use [Remote Services](https://attack.mitre.org/techniques/T1021) such as [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003) to facilitate remote IPC execution.(Citation: Fireeye Hunting COM June 2019)
 
-## Properties
-
-- id: T1559
-- name: Inter-Process Communication
-- created: 2020-02-12 14:08:48.689000+00:00
-- modified: 2025-10-24 17:49:13.194000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1559.001: Component Object Model
-
 ^t1559001-component-object-model
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Various COM interfaces are exposed that can be abused to invoke arbitrary execut
 - x_mitre_domains: enterprise-attack
 
 ### T1559.002: Dynamic Data Exchange
-
 ^t1559002-dynamic-data-exchange
 
 **Parent Technique**
@@ -81,7 +69,6 @@ DDE could also be leveraged by an adversary operating on a compromised machine w
 - x_mitre_domains: enterprise-attack
 
 ### T1559.003: XPC Services
-
 ^t1559003-xpc-services
 
 **Parent Technique**

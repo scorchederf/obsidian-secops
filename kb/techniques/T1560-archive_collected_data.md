@@ -16,20 +16,9 @@ An adversary may compress and/or encrypt data that is collected prior to exfiltr
 
 Both compression and encryption are done prior to exfiltration, and can be performed using a utility, 3rd party library, or custom method.
 
-## Properties
-
-- id: T1560
-- name: Archive Collected Data
-- created: 2020-02-20 20:53:45.725000+00:00
-- modified: 2025-10-24 17:48:48.023000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1560.001: Archive via Utility
-
 ^t1560001-archive-via-utility
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Adversaries may use also third party utilities, such as 7-Zip, WinRAR, and WinZi
 - x_mitre_domains: enterprise-attack
 
 ### T1560.002: Archive via Library
-
 ^t1560002-archive-via-library
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Some archival libraries are preinstalled on systems, such as bzip2 on macOS and 
 - x_mitre_domains: enterprise-attack
 
 ### T1560.003: Archive via Custom Method
-
 ^t1560003-archive-via-custom-method
 
 **Parent Technique**
@@ -114,7 +101,7 @@ An adversary may compress or encrypt data that is collected prior to exfiltratio
 
 ## Tools
 
-- [[S0363-empire|S0363: Empire]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0521-bloodhound|S0521: BloodHound]]
+- [[bloodhound|BloodHound]]
+- [[empire|Empire]]
+- [[shimratreporter|ShimRatReporter]]
 

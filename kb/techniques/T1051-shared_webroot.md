@@ -18,16 +18,6 @@ Adversaries may add malicious content to an internally accessible website throug
 
 This mechanism of shared access and remote execution could be used for lateral movement to the system running the Web server. For example, a Web server running PHP with an open network share could allow an adversary to upload a remote access tool and PHP script to execute the RAT on the system running the Web server when a specific page is visited. (Citation: Webroot PHP 2011)
 
-## Properties
-
-- id: T1051
-- name: Shared Webroot
-- created: 2017-05-31 21:30:46.047000+00:00
-- modified: 2025-10-24 17:49:01.739000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

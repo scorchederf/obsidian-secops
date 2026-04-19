@@ -16,20 +16,9 @@ Adversaries may search freely available websites and/or domains for information 
 
 Adversaries may search in different online sites depending on what information they seek to gather. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Phishing](https://attack.mitre.org/techniques/T1566)).
 
-## Properties
-
-- id: T1593
-- name: Search Open Websites/Domains
-- created: 2020-10-02 16:48:04.509000+00:00
-- modified: 2025-10-24 17:49:10.188000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1593.001: Social Media
-
 ^t1593001-social-media
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may search in different social media sites depending on what informa
 - x_mitre_domains: enterprise-attack
 
 ### T1593.002: Search Engines
-
 ^t1593002-search-engines
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Adversaries may craft various search engine queries depending on what informatio
 - x_mitre_domains: enterprise-attack
 
 ### T1593.003: Code Repositories
-
 ^t1593003-code-repositories
 
 **Parent Technique**

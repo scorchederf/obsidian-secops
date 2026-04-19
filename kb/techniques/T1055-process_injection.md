@@ -18,20 +18,9 @@ There are many different ways to inject code into a process, many of which abuse
 
 More sophisticated samples may perform multiple process injections to segment modules and further evade detection, utilizing named pipes or other inter-process communication (IPC) mechanisms as a communication channel. 
 
-## Properties
-
-- id: T1055
-- name: Process Injection
-- created: 2017-05-31 21:30:47.843000+00:00
-- modified: 2025-10-24 17:48:43.053000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1055.001: Dynamic-link Library Injection
-
 ^t1055001-dynamic-link-library-injection
 
 **Parent Technique**
@@ -61,7 +50,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.002: Portable Executable Injection
-
 ^t1055002-portable-executable-injection
 
 **Parent Technique**
@@ -87,7 +75,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.003: Thread Execution Hijacking
-
 ^t1055003-thread-execution-hijacking
 
 **Parent Technique**
@@ -115,7 +102,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.004: Asynchronous Procedure Call
-
 ^t1055004-asynchronous-procedure-call
 
 **Parent Technique**
@@ -143,7 +129,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.005: Thread Local Storage
-
 ^t1055005-thread-local-storage
 
 **Parent Technique**
@@ -169,7 +154,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.008: Ptrace System Calls
-
 ^t1055008-ptrace-system-calls
 
 **Parent Technique**
@@ -197,7 +181,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.009: Proc Memory
-
 ^t1055009-proc-memory
 
 **Parent Technique**
@@ -225,7 +208,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.011: Extra Window Memory Injection
-
 ^t1055011-extra-window-memory-injection
 
 **Parent Technique**
@@ -255,7 +237,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.012: Process Hollowing
-
 ^t1055012-process-hollowing
 
 **Parent Technique**
@@ -281,7 +262,6 @@ This is very similar to [Thread Local Storage](https://attack.mitre.org/techniqu
 - x_mitre_domains: enterprise-attack
 
 ### T1055.013: Process Doppelgänging
-
 ^t1055013-process-doppelgänging
 
 **Parent Technique**
@@ -318,7 +298,6 @@ This behavior will likely not result in elevated privileges since the injected p
 - x_mitre_domains: enterprise-attack
 
 ### T1055.014: VDSO Hijacking
-
 ^t1055014-vdso-hijacking
 
 **Parent Technique**
@@ -344,7 +323,6 @@ Running code in the context of another process may allow access to the process's
 - x_mitre_domains: enterprise-attack
 
 ### T1055.015: ListPlanting
-
 ^t1055015-listplanting
 
 **Parent Technique**
@@ -386,13 +364,13 @@ Finally, the payload is triggered by sending the <code>LVM_SORTITEMS</code> mess
 
 ## Tools
 
-- [[S0040-htran|S0040: HTRAN]]
-- [[S0332-remcos|S0332: Remcos]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0581-ironnetinjector|S0581: IronNetInjector]]
-- [[S0633-sliver|S0633: Sliver]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S0695-donut|S0695: Donut]]
-- [[S1050-pcshare|S1050: PcShare]]
+- [[donut|Donut]]
+- [[empire|Empire]]
+- [[htran|HTRAN]]
+- [[ironnetinjector|IronNetInjector]]
+- [[pcshare|PcShare]]
+- [[poshc2|PoshC2]]
+- [[remcos|Remcos]]
+- [[silenttrinity|SILENTTRINITY]]
+- [[sliver|Sliver]]
 

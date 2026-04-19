@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may abuse system services or daemons to execute commands or programs. Adversaries can execute malicious content by interacting with or creating services either locally or remotely. Many services are set to run at boot, which can aid in achieving persistence ([Create or Modify System Process](https://attack.mitre.org/techniques/T1543)), but adversaries can also abuse services for one-time or temporary execution.
 
-## Properties
-
-- id: T1569
-- name: System Services
-- created: 2020-03-10 18:23:06.482000+00:00
-- modified: 2025-10-24 17:49:25.548000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1569.001: Launchctl
-
 ^t1569001-launchctl
 
 **Parent Technique**
@@ -52,7 +41,6 @@ Adversaries use launchctl to execute commands and programs as [Launch Agent](htt
 - x_mitre_domains: enterprise-attack
 
 ### T1569.002: Service Execution
-
 ^t1569002-service-execution
 
 **Parent Technique**
@@ -78,7 +66,6 @@ Adversaries may leverage these mechanisms to execute malicious content. This can
 - x_mitre_domains: enterprise-attack
 
 ### T1569.003: Systemctl
-
 ^t1569003-systemctl
 
 **Parent Technique**

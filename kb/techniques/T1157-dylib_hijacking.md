@@ -18,16 +18,6 @@ A common method is to see what dylibs an application uses, then plant a maliciou
 
 If the program is configured to run at a higher privilege level than the current user, then when the dylib is loaded into the application, the dylib will also run at that elevated level. This can be used by adversaries as a privilege escalation technique.
 
-## Properties
-
-- id: T1157
-- name: Dylib Hijacking
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:12.763000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

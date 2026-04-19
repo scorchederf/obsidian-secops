@@ -16,16 +16,6 @@ In OS X prior to El Capitan, users with root access can read plaintext keychain 
 
 If an adversary can obtain root access (allowing them to read securityd’s memory), then they can scan through memory to find the correct sequence of keys in relatively few tries to decrypt the user’s logon keychain. This provides the adversary with all the plaintext passwords for users, WiFi, mail, browsers, certificates, secure notes, etc. (Citation: OS X Keychain) (Citation: OSX Keydnap malware)
 
-## Properties
-
-- id: T1167
-- name: Securityd Memory
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:32.601000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

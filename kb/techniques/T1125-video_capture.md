@@ -18,16 +18,6 @@ Malware or scripts may be used to interact with the devices through an available
 
 In macOS, there are a few different malware samples that record the user's webcam such as FruitFly and Proton. (Citation: objective-see 2017 review)
 
-## Properties
-
-- id: T1125
-- name: Video Capture
-- created: 2017-05-31 21:31:37.917000+00:00
-- modified: 2025-10-24 17:48:56.077000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows
@@ -36,13 +26,13 @@ In macOS, there are a few different malware samples that record the user's webca
 
 ## Tools
 
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0332-remcos|S0332: Remcos]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0591-connectwise|S0591: ConnectWise]]
-- [[S1050-pcshare|S1050: PcShare]]
-- [[S1087-asyncrat|S1087: AsyncRAT]]
-- [[S1209-quick_assist|S1209: Quick Assist]]
+- [[asyncrat|AsyncRAT]]
+- [[connectwise|ConnectWise]]
+- [[empire|Empire]]
+- [[imminent_monitor|Imminent Monitor]]
+- [[pcshare|PcShare]]
+- [[pupy|Pupy]]
+- [[quasarrat|QuasarRAT]]
+- [[quick_assist|Quick Assist]]
+- [[remcos|Remcos]]
 

@@ -18,16 +18,6 @@ Password policies can be set and discovered on Windows, Linux, and macOS systems
 
 Password policies can be discovered in cloud environments using available APIs such as <code>GetAccountPasswordPolicy</code> in AWS (Citation: AWS GetPasswordPolicy).
 
-## Properties
-
-- id: T1201
-- name: Password Policy Discovery
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:15.781000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1027-password_policies|M1027: Password Policies]]
@@ -45,7 +35,7 @@ Password policies can be discovered in cloud environments using available APIs s
 
 ## Tools
 
-- [[S0039-net|S0039: Net]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
+- [[crackmapexec|CrackMapExec]]
+- [[net|Net]]
+- [[poshc2|PoshC2]]
 

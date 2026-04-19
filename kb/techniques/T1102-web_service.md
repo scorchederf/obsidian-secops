@@ -16,20 +16,9 @@ Adversaries may use an existing, legitimate external Web service as a means for 
 
 Use of Web services may also protect back-end C2 infrastructure from discovery through malware binary analysis while also enabling operational resiliency (since this infrastructure may be dynamically changed).
 
-## Properties
-
-- id: T1102
-- name: Web Service
-- created: 2017-05-31 21:31:13.915000+00:00
-- modified: 2025-10-24 17:49:02.831000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1102.001: Dead Drop Resolver
-
 ^t1102001-dead-drop-resolver
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Use of a dead drop resolver may also protect back-end C2 infrastructure from dis
 - x_mitre_domains: enterprise-attack
 
 ### T1102.002: Bidirectional Communication
-
 ^t1102002-bidirectional-communication
 
 **Parent Technique**
@@ -79,7 +67,6 @@ Popular websites and social media acting as a mechanism for C2 may give a signif
 - x_mitre_domains: enterprise-attack
 
 ### T1102.003: One-Way Communication
-
 ^t1102003-one-way-communication
 
 **Parent Technique**
@@ -116,6 +103,6 @@ Popular websites and social media acting as a mechanism for C2 may give a signif
 
 ## Tools
 
-- [[S0508-ngrok|S0508: ngrok]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[ngrok|ngrok]]
 

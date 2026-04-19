@@ -18,16 +18,6 @@ For example, adversaries have used tooling that monitors the Windows message loo
 
 Adversaries have also used malicious USB devices to emulate keystrokes that launch PowerShell, leading to the download and execution of malware from adversary-controlled servers.(Citation: BleepingComputer USB)
 
-## Properties
-
-- id: T1674
-- name: Input Injection
-- created: 2025-03-27 18:14:06.330000+00:00
-- modified: 2025-04-15 19:58:36.409000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1034-limit_hardware_installation|M1034: Limit Hardware Installation]]

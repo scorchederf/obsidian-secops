@@ -21,16 +21,6 @@ For example, with a cloud-based email service once an OAuth access token is gran
 Compromised access tokens may be used as an initial step in compromising other services. For example, if a token grants access to a victim’s primary email, the adversary may be able to extend access to all other services which the target subscribes by triggering forgotten password routines. Direct API access through a token negates the effectiveness of a second authentication factor and may be immune to intuitive countermeasures like changing passwords. Access abuse over an API channel can be difficult to detect even from the service provider end, as the access can still align well with a legitimate workflow.
 
 
-## Properties
-
-- id: T1527
-- name: Application Access Token
-- created: 2019-08-30 12:55:58.607000+00:00
-- modified: 2025-10-24 17:48:32.784000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - SaaS

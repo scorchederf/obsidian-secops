@@ -16,16 +16,6 @@ Adversaries may search connected removable media on computers they have compromi
 
 Some adversaries may also use [Automated Collection](https://attack.mitre.org/techniques/T1119) on removable media.
 
-## Properties
-
-- id: T1025
-- name: Data from Removable Media
-- created: 2017-05-31 21:30:31.584000+00:00
-- modified: 2025-10-24 17:48:28.431000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1057-data_loss_prevention|M1057: Data Loss Prevention]]

@@ -16,16 +16,6 @@ Starting in Mac OS X 10.7 (Lion), users can specify certain applications to be r
 
 An adversary can modify one of these files directly to include a link to their malicious executable to provide a persistence mechanism each time the user reboots their machine (Citation: Methods of Mac Malware Persistence).
 
-## Properties
-
-- id: T1164
-- name: Re-opened Applications
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:54.452000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

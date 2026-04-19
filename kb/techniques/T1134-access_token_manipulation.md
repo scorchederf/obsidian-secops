@@ -18,20 +18,9 @@ An adversary can use built-in Windows API functions to copy access tokens from e
 
 Any standard user can use the <code>runas</code> command, and the Windows API functions, to create impersonation tokens; it does not require access to an administrator account. There are also other mechanisms, such as Active Directory fields, that can be used to modify access tokens.
 
-## Properties
-
-- id: T1134
-- name: Access Token Manipulation
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:29.051000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1134.001: Token Impersonation/Theft
-
 ^t1134001-token-impersonation-theft
 
 **Parent Technique**
@@ -57,7 +46,6 @@ When an adversary would instead use a duplicated token to create a new process r
 - x_mitre_domains: enterprise-attack
 
 ### T1134.002: Create Process with Token
-
 ^t1134002-create-process-with-token
 
 **Parent Technique**
@@ -83,7 +71,6 @@ While this technique is distinct from [Token Impersonation/Theft](https://attack
 - x_mitre_domains: enterprise-attack
 
 ### T1134.003: Make and Impersonate Token
-
 ^t1134003-make-and-impersonate-token
 
 **Parent Technique**
@@ -107,7 +94,6 @@ This behavior is distinct from [Token Impersonation/Theft](https://attack.mitre.
 - x_mitre_domains: enterprise-attack
 
 ### T1134.004: Parent PID Spoofing
-
 ^t1134004-parent-pid-spoofing
 
 **Parent Technique**
@@ -133,7 +119,6 @@ Explicitly assigning the PPID may also enable elevated privileges given appropri
 - x_mitre_domains: enterprise-attack
 
 ### T1134.005: SID-History Injection
-
 ^t1134005-sid-history-injection
 
 **Parent Technique**
@@ -167,8 +152,8 @@ With Domain Administrator (or equivalent) rights, harvested or well-known SID va
 
 ## Tools
 
-- [[S0194-powersploit|S0194: PowerSploit]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0633-sliver|S0633: Sliver]]
+- [[empire|Empire]]
+- [[poshc2|PoshC2]]
+- [[powersploit|PowerSploit]]
+- [[sliver|Sliver]]
 

@@ -22,16 +22,6 @@ If a search order-vulnerable program is configured to run at a higher privilege 
 
 Programs that fall victim to path hijacking may appear to behave normally because malicious DLLs may be configured to also load the legitimate DLLs they were meant to replace.
 
-## Properties
-
-- id: T1038
-- name: DLL Search Order Hijacking
-- created: 2017-05-31 21:30:40.604000+00:00
-- modified: 2025-10-24 17:48:43.675000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

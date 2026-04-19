@@ -22,20 +22,9 @@ On network devices, adversaries may use crafted packets to enable [Network Devic
 
 Adversaries may also use the Wake-on-LAN feature to turn on powered off systems. Wake-on-LAN is a hardware feature that allows a powered down system to be powered on, or woken up, by sending a magic packet to it. Once the system is powered on, it may become a target for lateral movement.(Citation: Bleeping Computer - Ryuk WoL)(Citation: AMD Magic Packet)
 
-## Properties
-
-- id: T1205
-- name: Traffic Signaling
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:43.225000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1205.001: Port Knocking
-
 ^t1205001-port-knocking
 
 **Parent Technique**
@@ -61,7 +50,6 @@ The observation of the signal packets to trigger the communication can be conduc
 - x_mitre_domains: enterprise-attack
 
 ### T1205.002: Socket Filters
-
 ^t1205002-socket-filters
 
 **Parent Technique**

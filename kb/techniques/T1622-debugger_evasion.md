@@ -22,16 +22,6 @@ Malware may also leverage Structured Exception Handling (SEH) to detect debugger
 
 Adversaries may use the information learned from these debugger checks during automated discovery to shape follow-on behaviors. Debuggers can also be evaded by detaching the process or flooding debug logs with meaningless data via messages produced by looping [Native API](https://attack.mitre.org/techniques/T1106) function calls such as <code>OutputDebugStringW()</code>.(Citation: wardle evilquest partii)(Citation: Checkpoint Dridex Jan 2021)
 
-## Properties
-
-- id: T1622
-- name: Debugger Evasion
-- created: 2022-04-01 17:59:46.156000+00:00
-- modified: 2025-10-24 17:49:32.196000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
@@ -40,5 +30,5 @@ Adversaries may use the information learned from these debugger checks during au
 
 ## Tools
 
-- [[S1087-asyncrat|S1087: AsyncRAT]]
+- [[asyncrat|AsyncRAT]]
 

@@ -16,20 +16,9 @@ Adversaries may collect data related to managed devices from configuration repos
 
 Adversaries may target these repositories in order to collect large quantities of sensitive system administration data. Data from configuration repositories may be exposed by various protocols and software and can store a wide variety of data, much of which may align with adversary Discovery objectives.(Citation: US-CERT-TA18-106A)(Citation: US-CERT TA17-156A SNMP Abuse 2017)
 
-## Properties
-
-- id: T1602
-- name: Data from Configuration Repository
-- created: 2020-10-19 23:46:13.931000+00:00
-- modified: 2025-10-24 17:48:22.396000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1602.001: SNMP (MIB Dump)
-
 ^t1602001-snmp-(mib-dump)
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Adversaries may use SNMP queries to collect MIB content directly from SNMP-manag
 - x_mitre_domains: enterprise-attack
 
 ### T1602.002: Network Device Configuration Dump
-
 ^t1602002-network-device-configuration-dump
 
 **Parent Technique**

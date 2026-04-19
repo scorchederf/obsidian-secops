@@ -18,16 +18,6 @@ Code signing to verify software on first run can be used on modern Windows and m
 
 Code signing certificates may be used to bypass security policies that require signed code to execute on a system.
 
-## Properties
-
-- id: T1116
-- name: Code Signing
-- created: 2017-05-31 21:31:26.474000+00:00
-- modified: 2025-10-24 17:48:28.518000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

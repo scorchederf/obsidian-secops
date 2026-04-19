@@ -18,16 +18,6 @@ The <code>source</code> command loads functions into the current shell or execut
 
 Adversaries can abuse this functionality to execute programs. The file executed with this technique does not need to be marked executable beforehand.
 
-## Properties
-
-- id: T1153
-- name: Source
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:43.489000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

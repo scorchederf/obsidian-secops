@@ -30,20 +30,9 @@ While supply chain compromise can impact any component of hardware or software, 
 
 In some cases, adversaries may conduct “second-order” supply chain compromises by leveraging the access gained from an initial supply chain compromise to further compromise a software component.(Citation: Krebs 3cx overview 2023) This may allow the threat actor to spread to even more victims.  
 
-## Properties
-
-- id: T1195
-- name: Supply Chain Compromise
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:41.675000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1195.001: Compromise Software Dependencies and Development Tools
-
 ^t1195001-compromise-software-dependencies-and-development-tools
 
 **Parent Technique**
@@ -69,7 +58,6 @@ Targeting may be specific to a desired victim set or may be distributed to a bro
 - x_mitre_domains: enterprise-attack
 
 ### T1195.002: Compromise Software Supply Chain
-
 ^t1195002-compromise-software-supply-chain
 
 **Parent Technique**
@@ -93,7 +81,6 @@ Targeting may be specific to a desired victim set or may be distributed to a bro
 - x_mitre_domains: enterprise-attack
 
 ### T1195.003: Compromise Hardware Supply Chain
-
 ^t1195003-compromise-hardware-supply-chain
 
 **Parent Technique**

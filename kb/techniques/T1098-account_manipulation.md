@@ -16,20 +16,9 @@ Adversaries may manipulate accounts to maintain and/or elevate access to victim 
 
 In order to create or manipulate accounts, the adversary must already have sufficient permissions on systems or the domain. However, account manipulation may also lead to privilege escalation where modifications grant access to additional roles, permissions, or higher-privileged [Valid Accounts](https://attack.mitre.org/techniques/T1078).
 
-## Properties
-
-- id: T1098
-- name: Account Manipulation
-- created: 2017-05-31 21:31:12.196000+00:00
-- modified: 2025-10-24 17:49:10.273000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.8
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1098.001: Additional Cloud Credentials
-
 ^t1098001-additional-cloud-credentials
 
 **Parent Technique**
@@ -62,7 +51,6 @@ In Entra ID environments with the app password feature enabled, adversaries may 
 - x_mitre_domains: enterprise-attack
 
 ### T1098.002: Additional Email Delegate Permissions
-
 ^t1098002-additional-email-delegate-permissions
 
 **Parent Technique**
@@ -90,7 +78,6 @@ This may be used in persistent threat incidents as well as BEC (Business Email C
 - x_mitre_domains: enterprise-attack
 
 ### T1098.003: Additional Cloud Roles
-
 ^t1098003-additional-cloud-roles
 
 **Parent Technique**
@@ -119,7 +106,6 @@ In some cases, adversaries may add roles to adversary-controlled accounts outsid
 - x_mitre_domains: enterprise-attack
 
 ### T1098.004: SSH Authorized Keys
-
 ^t1098004-ssh-authorized-keys
 
 **Parent Technique**
@@ -147,7 +133,6 @@ SSH keys can also be added to accounts on network devices, such as with the `ip 
 - x_mitre_domains: enterprise-attack
 
 ### T1098.005: Device Registration
-
 ^t1098005-device-registration
 
 **Parent Technique**
@@ -175,7 +160,6 @@ Devices registered in Entra ID may be able to conduct [Internal Spearphishing](h
 - x_mitre_domains: enterprise-attack
 
 ### T1098.006: Additional Container Cluster Roles
-
 ^t1098006-additional-container-cluster-roles
 
 **Parent Technique**
@@ -201,7 +185,6 @@ Note that where container orchestration systems are deployed in cloud environmen
 - x_mitre_domains: enterprise-attack
 
 ### T1098.007: Additional Local or Domain Groups
-
 ^t1098007-additional-local-or-domain-groups
 
 **Parent Technique**
@@ -253,5 +236,5 @@ In Windows environments, machine accounts may also be added to domain groups. Th
 
 ## Tools
 
-- [[S0002-mimikatz|S0002: Mimikatz]]
+- [[mimikatz|Mimikatz]]
 

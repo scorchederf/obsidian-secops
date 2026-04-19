@@ -18,16 +18,6 @@ Adversaries may partially or completely overwrite the contents of a storage devi
 
 To maximize impact on the target organization in operations where network-wide availability interruption is the goal, malware used for wiping disk content may have worm-like features to propagate across a network by leveraging additional techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [Windows Admin Shares](https://attack.mitre.org/techniques/T1077).(Citation: Novetta Blockbuster Destructive Malware)
 
-## Properties
-
-- id: T1488
-- name: Disk Content Wipe
-- created: 2019-03-29 14:59:50.763000+00:00
-- modified: 2025-10-24 17:49:16.677000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

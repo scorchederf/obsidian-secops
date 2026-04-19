@@ -27,20 +27,9 @@ In cases where traffic manipulation is used, there may be points in the global n
 For attacks attempting to saturate the providing network, see [Network Denial of Service](https://attack.mitre.org/techniques/T1498).
 
 
-## Properties
-
-- id: T1499
-- name: Endpoint Denial of Service
-- created: 2019-04-18 11:00:55.862000+00:00
-- modified: 2025-10-24 17:49:22.088000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1499.001: OS Exhaustion Flood
-
 ^t1499001-os-exhaustion-flood
 
 **Parent Technique**
@@ -66,7 +55,6 @@ ACK floods leverage the stateful nature of the TCP protocol. A flood of ACK pack
 - x_mitre_domains: enterprise-attack
 
 ### T1499.002: Service Exhaustion Flood
-
 ^t1499002-service-exhaustion-flood
 
 **Parent Technique**
@@ -92,7 +80,6 @@ Another variation, known as a SSL renegotiation attack, takes advantage of a pro
 - x_mitre_domains: enterprise-attack
 
 ### T1499.003: Application Exhaustion Flood
-
 ^t1499003-application-exhaustion-flood
 
 **Parent Technique**
@@ -114,7 +101,6 @@ Adversaries may target resource intensive features of applications to cause a de
 - x_mitre_domains: enterprise-attack
 
 ### T1499.004: Application or System Exploitation
-
 ^t1499004-application-or-system-exploitation
 
 **Parent Technique**

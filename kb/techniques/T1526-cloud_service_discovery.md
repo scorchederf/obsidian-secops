@@ -20,16 +20,6 @@ For example, Stormspotter is an open source tool for enumerating and constructin
 
 Adversaries may use the information gained to shape follow-on behaviors, such as targeting data or credentials from enumerated services or evading identified defenses through [Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001) or [Disable or Modify Cloud Logs](https://attack.mitre.org/techniques/T1562/008).
 
-## Properties
-
-- id: T1526
-- name: Cloud Service Discovery
-- created: 2019-08-30 13:01:10.120000+00:00
-- modified: 2025-10-24 17:49:30.791000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - IaaS
@@ -39,7 +29,7 @@ Adversaries may use the information gained to shape follow-on behaviors, such as
 
 ## Tools
 
-- [[S0677-aadinternals|S0677: AADInternals]]
-- [[S0684-roadtools|S0684: ROADTools]]
-- [[S1091-pacu|S1091: Pacu]]
+- [[aadinternals|AADInternals]]
+- [[pacu|Pacu]]
+- [[roadtools|ROADTools]]
 

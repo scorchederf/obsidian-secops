@@ -16,16 +16,6 @@ Adversaries may enumerate objects in cloud storage infrastructure. Adversaries m
 
 Cloud service providers offer APIs allowing users to enumerate objects stored within cloud storage. Examples include ListObjectsV2 in AWS (Citation: ListObjectsV2) and List Blobs in Azure(Citation: List Blobs) .
 
-## Properties
-
-- id: T1619
-- name: Cloud Storage Object Discovery
-- created: 2021-10-01 17:58:26.445000+00:00
-- modified: 2025-10-24 17:49:03.853000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -36,6 +26,6 @@ Cloud service providers offer APIs allowing users to enumerate objects stored wi
 
 ## Tools
 
-- [[S0683-peirates|S0683: Peirates]]
-- [[S1091-pacu|S1091: Pacu]]
+- [[pacu|Pacu]]
+- [[peirates|Peirates]]
 

@@ -18,16 +18,6 @@ Reflectively loaded payloads may be compiled binaries, anonymous files (only pre
 
 Reflective code injection is very similar to [Process Injection](https://attack.mitre.org/techniques/T1055) except that the “injection” loads code into the processes’ own memory instead of that of a separate process. Reflective loading may evade process-based detections since the execution of the arbitrary code may be masked within a legitimate or otherwise benign process. Reflectively loading payloads directly into memory may also avoid creating files or other artifacts on disk, while also enabling malware to keep these payloads encrypted (or otherwise obfuscated) until execution.(Citation: Stuart ELF Memory)(Citation: 00sec Droppers)(Citation: Intezer ACBackdoor)(Citation: S1 Old Rat New Tricks)
 
-## Properties
-
-- id: T1620
-- name: Reflective Code Loading
-- created: 2021-10-05 01:15:06.293000+00:00
-- modified: 2025-10-24 17:48:44.030000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
@@ -36,8 +26,8 @@ Reflective code injection is very similar to [Process Injection](https://attack.
 
 ## Tools
 
-- [[S0194-powersploit|S0194: PowerSploit]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S0695-donut|S0695: Donut]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[donut|Donut]]
+- [[powersploit|PowerSploit]]
+- [[silenttrinity|SILENTTRINITY]]
 

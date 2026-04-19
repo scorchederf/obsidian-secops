@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may target user email to collect sensitive information. Emails may contain sensitive data, including trade secrets or personal information, that can prove valuable to adversaries. Emails may also contain details of ongoing incident response operations, which may allow adversaries to adjust their techniques in order to maintain persistence or evade defenses.(Citation: TrustedSec OOB Communications)(Citation: CISA AA20-352A 2021) Adversaries can collect or forward email from mail servers or clients. 
 
-## Properties
-
-- id: T1114
-- name: Email Collection
-- created: 2017-05-31 21:31:25.454000+00:00
-- modified: 2025-10-24 17:48:26.463000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1114.001: Local Email Collection
-
 ^t1114001-local-email-collection
 
 **Parent Technique**
@@ -51,7 +40,6 @@ Outlook stores data locally in offline data files with an extension of .ost. Out
 - x_mitre_domains: enterprise-attack
 
 ### T1114.002: Remote Email Collection
-
 ^t1114002-remote-email-collection
 
 **Parent Technique**
@@ -73,7 +61,6 @@ Adversaries may target an Exchange server, Office 365, or Google Workspace to co
 - x_mitre_domains: enterprise-attack
 
 ### T1114.003: Email Forwarding Rule
-
 ^t1114003-email-forwarding-rule
 
 **Parent Technique**

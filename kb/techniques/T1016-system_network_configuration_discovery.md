@@ -18,20 +18,9 @@ Adversaries may also leverage a [Network Device CLI](https://attack.mitre.org/te
 
 Adversaries may use the information from [System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016) during automated discovery to shape follow-on behaviors, including determining certain access within the target network and what actions to do next. 
 
-## Properties
-
-- id: T1016
-- name: System Network Configuration Discovery
-- created: 2017-05-31 21:30:27.342000+00:00
-- modified: 2025-10-24 17:48:56.618000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1016.001: Internet Connection Discovery
-
 ^t1016001-internet-connection-discovery
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Adversaries may use the results and responses from these requests to determine i
 - x_mitre_domains: enterprise-attack
 
 ### T1016.002: Wi-Fi Discovery
-
 ^t1016002-wi-fi-discovery
 
 **Parent Technique**
@@ -91,21 +79,21 @@ On Linux, names and passwords of all Wi-Fi-networks a device has previously conn
 
 ## Tools
 
-- [[S0099-arp|S0099: Arp]]
-- [[S0100-ipconfig|S0100: ipconfig]]
-- [[S0101-ifconfig|S0101: ifconfig]]
-- [[S0102-nbtstat|S0102: nbtstat]]
-- [[S0103-route|S0103: route]]
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0250-koadic|S0250: Koadic]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0359-nltest|S0359: Nltest]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
-- [[S0552-adfind|S0552: AdFind]]
-- [[S0590-nbtscan|S0590: NBTscan]]
-- [[S0633-sliver|S0633: Sliver]]
-- [[S1050-pcshare|S1050: PcShare]]
+- [[adfind|AdFind]]
+- [[arp|Arp]]
+- [[crackmapexec|CrackMapExec]]
+- [[empire|Empire]]
+- [[ifconfig|ifconfig]]
+- [[ipconfig|ipconfig]]
+- [[koadic|Koadic]]
+- [[nbtscan|NBTscan]]
+- [[nbtstat|nbtstat]]
+- [[nltest|Nltest]]
+- [[pcshare|PcShare]]
+- [[poshc2|PoshC2]]
+- [[pupy|Pupy]]
+- [[quasarrat|QuasarRAT]]
+- [[route|route]]
+- [[shimratreporter|ShimRatReporter]]
+- [[sliver|Sliver]]
 

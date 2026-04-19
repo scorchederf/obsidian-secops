@@ -16,20 +16,9 @@ Adversaries may gather information about the victim's organization that can be u
 
 Adversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about an organization may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak)(Citation: SEC EDGAR Search) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).
 
-## Properties
-
-- id: T1591
-- name: Gather Victim Org Information
-- created: 2020-10-02 16:27:02.339000+00:00
-- modified: 2025-10-24 17:49:06.846000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1591.001: Determine Physical Locations
-
 ^t1591001-determine-physical-locations
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may gather this information in various ways, such as direct elicitat
 - x_mitre_domains: enterprise-attack
 
 ### T1591.002: Business Relationships
-
 ^t1591002-business-relationships
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Adversaries may gather this information in various ways, such as direct elicitat
 - x_mitre_domains: enterprise-attack
 
 ### T1591.003: Identify Business Tempo
-
 ^t1591003-identify-business-tempo
 
 **Parent Technique**
@@ -101,7 +88,6 @@ Adversaries may gather this information in various ways, such as direct elicitat
 - x_mitre_domains: enterprise-attack
 
 ### T1591.004: Identify Roles
-
 ^t1591004-identify-roles
 
 **Parent Technique**

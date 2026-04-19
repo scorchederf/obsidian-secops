@@ -16,16 +16,6 @@ Keychains are the built-in way for macOS to keep track of users' passwords and c
 
 To manage their credentials, users have to use additional credentials to access their keychain. If an adversary knows the credentials for the login keychain, then they can get access to all the other credentials stored in this vault. (Citation: External to DA, the OS X Way) By default, the passphrase for the keychain is the user’s logon credentials.
 
-## Properties
-
-- id: T1142
-- name: Keychain
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:09.306000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

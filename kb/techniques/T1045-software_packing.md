@@ -18,16 +18,6 @@ Utilities used to perform software packing are called packers. Example packers a
 
 Adversaries may use virtual machine software protection as a form of software packing to protect their code. Virtual machine software protection translates an executable's original code into a special format that only a special virtual machine can run. A virtual machine is then called to run this code.(Citation: ESET FinFisher Jan 2018)
 
-## Properties
-
-- id: T1045
-- name: Software Packing
-- created: 2017-05-31 21:30:43.472000+00:00
-- modified: 2025-10-24 17:48:56.248000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

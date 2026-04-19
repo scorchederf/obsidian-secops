@@ -21,20 +21,9 @@ Staging of capabilities can aid the adversary in a number of initial access and 
 * Uploading malware or tools to a location accessible to a victim network to enable [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105).(Citation: Volexity Ocean Lotus November 2020)
 * Installing a previously acquired SSL/TLS certificate to use to encrypt command and control traffic (ex: [Asymmetric Cryptography](https://attack.mitre.org/techniques/T1573/002) with [Web Protocols](https://attack.mitre.org/techniques/T1071/001)).(Citation: DigiCert Install SSL Cert)
 
-## Properties
-
-- id: T1608
-- name: Stage Capabilities
-- created: 2021-03-17 20:04:09.331000+00:00
-- modified: 2025-10-24 17:49:03.444000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1608.001: Upload Malware
-
 ^t1608001-upload-malware
 
 **Parent Technique**
@@ -60,7 +49,6 @@ Adversaries may upload backdoored files, such as software packages, application 
 - x_mitre_domains: enterprise-attack
 
 ### T1608.002: Upload Tool
-
 ^t1608002-upload-tool
 
 **Parent Technique**
@@ -86,7 +74,6 @@ Adversaries can avoid the need to upload a tool by having compromised victim mac
 - x_mitre_domains: enterprise-attack
 
 ### T1608.003: Install Digital Certificate
-
 ^t1608003-install-digital-certificate
 
 **Parent Technique**
@@ -112,7 +99,6 @@ Adversaries can obtain digital certificates (see [Digital Certificates](https://
 - x_mitre_domains: enterprise-attack
 
 ### T1608.004: Drive-by Target
-
 ^t1608004-drive-by-target
 
 **Parent Technique**
@@ -146,7 +132,6 @@ Adversaries may purchase domains similar to legitimate domains (ex: homoglyphs, 
 - x_mitre_domains: enterprise-attack
 
 ### T1608.005: Link Target
-
 ^t1608005-link-target
 
 **Parent Technique**
@@ -176,7 +161,6 @@ Adversaries may also use free or paid accounts on link shortening services and P
 - x_mitre_domains: enterprise-attack
 
 ### T1608.006: SEO Poisoning
-
 ^t1608006-seo-poisoning
 
 **Parent Technique**

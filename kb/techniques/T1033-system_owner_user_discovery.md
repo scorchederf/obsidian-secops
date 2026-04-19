@@ -18,16 +18,6 @@ Various utilities and commands may acquire this information, including <code>who
 
 On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `show users` and `show ssh` can be used to display users currently logged into the device.(Citation: show_ssh_users_cmd_cisco)(Citation: US-CERT TA18-106A Network Infrastructure Devices 2018)
 
-## Properties
-
-- id: T1033
-- name: System Owner/User Discovery
-- created: 2017-05-31 21:30:35.733000+00:00
-- modified: 2025-10-24 17:48:20.366000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
@@ -37,12 +27,12 @@ On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T10
 
 ## Tools
 
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0250-koadic|S0250: Koadic]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0521-bloodhound|S0521: BloodHound]]
-- [[S0590-nbtscan|S0590: NBTscan]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S1087-asyncrat|S1087: AsyncRAT]]
+- [[asyncrat|AsyncRAT]]
+- [[bloodhound|BloodHound]]
+- [[empire|Empire]]
+- [[koadic|Koadic]]
+- [[nbtscan|NBTscan]]
+- [[pupy|Pupy]]
+- [[quasarrat|QuasarRAT]]
+- [[silenttrinity|SILENTTRINITY]]
 

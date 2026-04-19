@@ -16,20 +16,9 @@ Adversaries may attempt to manipulate features of their artifacts to make them a
 
 Renaming abusable system utilities to evade security monitoring is also a form of [Masquerading](https://attack.mitre.org/techniques/T1036).(Citation: LOLBAS Main Site)
 
-## Properties
-
-- id: T1036
-- name: Masquerading
-- created: 2017-05-31 21:30:38.511000+00:00
-- modified: 2025-10-24 17:48:42.609000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1036.001: Invalid Code Signature
-
 ^t1036001-invalid-code-signature
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Unlike [Code Signing](https://attack.mitre.org/techniques/T1553/002), this activ
 - x_mitre_domains: enterprise-attack
 
 ### T1036.002: Right-to-Left Override
-
 ^t1036002-right-to-left-override
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Adversaries may abuse the RTLO character as a means of tricking a user into exec
 - x_mitre_domains: enterprise-attack
 
 ### T1036.003: Rename Legitimate Utilities
-
 ^t1036003-rename-legitimate-utilities
 
 **Parent Technique**
@@ -99,7 +86,6 @@ Adversaries may rename legitimate / system utilities to try to evade security me
 - x_mitre_domains: enterprise-attack
 
 ### T1036.004: Masquerade Task or Service
-
 ^t1036004-masquerade-task-or-service
 
 **Parent Technique**
@@ -123,7 +109,6 @@ Tasks or services contain other fields, such as a description, that adversaries 
 - x_mitre_domains: enterprise-attack
 
 ### T1036.005: Match Legitimate Resource Name or Location
-
 ^t1036005-match-legitimate-resource-name-or-location
 
 **Parent Technique**
@@ -147,7 +132,6 @@ This may be done by placing an executable in a commonly trusted directory (ex: u
 - x_mitre_domains: enterprise-attack
 
 ### T1036.006: Space after Filename
-
 ^t1036006-space-after-filename
 
 **Parent Technique**
@@ -173,7 +157,6 @@ Adversaries can use this feature to trick users into double clicking benign-look
 - x_mitre_domains: enterprise-attack
 
 ### T1036.007: Double File Extension
-
 ^t1036007-double-file-extension
 
 **Parent Technique**
@@ -199,7 +182,6 @@ Common file types, such as text files (.txt, .doc, etc.) and image files (.jpg, 
 - x_mitre_domains: enterprise-attack
 
 ### T1036.008: Masquerade File Type
-
 ^t1036008-masquerade-file-type
 
 **Parent Technique**
@@ -227,7 +209,6 @@ Polyglot files, which are files that have multiple different file types and that
 - x_mitre_domains: enterprise-attack
 
 ### T1036.009: Break Process Trees
-
 ^t1036009-break-process-trees
 
 **Parent Technique**
@@ -253,7 +234,6 @@ Another example is using the “daemon” syscall to detach from the current par
 - x_mitre_domains: enterprise-attack
 
 ### T1036.010: Masquerade Account Name
-
 ^t1036010-masquerade-account-name
 
 **Parent Technique**
@@ -279,7 +259,6 @@ Note that this is distinct from [Impersonation](https://attack.mitre.org/techniq
 - x_mitre_domains: enterprise-attack
 
 ### T1036.011: Overwrite Process Arguments
-
 ^t1036011-overwrite-process-arguments
 
 **Parent Technique**
@@ -303,7 +282,6 @@ During runtime, adversaries can erase the memory used by all command-line argume
 - x_mitre_domains: enterprise-attack
 
 ### T1036.012: Browser Fingerprint
-
 ^t1036012-browser-fingerprint
 
 **Parent Technique**

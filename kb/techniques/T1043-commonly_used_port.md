@@ -29,16 +29,6 @@ For connections that occur internally within an enclave (such as those between a
 * TCP/UDP:22 (SSH)
 * TCP/UDP:3389 (RDP)
 
-## Properties
-
-- id: T1043
-- name: Commonly Used Port
-- created: 2017-05-31 21:30:42.657000+00:00
-- modified: 2025-10-24 17:49:38.270000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

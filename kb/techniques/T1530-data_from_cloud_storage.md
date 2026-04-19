@@ -24,16 +24,6 @@ This open access may expose various types of sensitive data, such as credit card
 
 Adversaries may also obtain then abuse leaked credentials from source repositories, logs, or other means as a way to gain access to cloud storage objects.
 
-## Properties
-
-- id: T1530
-- name: Data from Cloud Storage
-- created: 2019-08-30 18:07:27.741000+00:00
-- modified: 2025-10-24 17:48:37.187000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]
@@ -51,7 +41,7 @@ Adversaries may also obtain then abuse leaked credentials from source repositori
 
 ## Tools
 
-- [[S0677-aadinternals|S0677: AADInternals]]
-- [[S0683-peirates|S0683: Peirates]]
-- [[S1091-pacu|S1091: Pacu]]
+- [[aadinternals|AADInternals]]
+- [[pacu|Pacu]]
+- [[peirates|Peirates]]
 

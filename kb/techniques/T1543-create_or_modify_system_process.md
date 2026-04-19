@@ -18,20 +18,9 @@ Adversaries may install new services, daemons, or agents that can be configured 
 
 Services, daemons, or agents may be created with administrator privileges but executed under root/SYSTEM privileges. Adversaries may leverage this functionality to create or modify system processes in order to escalate privileges.(Citation: OSX Malware Detection)  
 
-## Properties
-
-- id: T1543
-- name: Create or Modify System Process
-- created: 2020-01-10 16:03:18.865000+00:00
-- modified: 2025-10-24 17:48:24.896000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1543.001: Launch Agent
-
 ^t1543001-launch-agent
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Adversaries may install a new Launch Agent that executes at login by placing a .
 - x_mitre_domains: enterprise-attack
 
 ### T1543.002: Systemd Service
-
 ^t1543002-systemd-service
 
 **Parent Technique**
@@ -93,7 +81,6 @@ Systemd services can be created via systemd generators, which support the dynami
 - x_mitre_domains: enterprise-attack
 
 ### T1543.003: Windows Service
-
 ^t1543003-windows-service
 
 **Parent Technique**
@@ -123,7 +110,6 @@ To make detection analysis more challenging, malicious services may also incorpo
 - x_mitre_domains: enterprise-attack
 
 ### T1543.004: Launch Daemon
-
 ^t1543004-launch-daemon
 
 **Parent Technique**
@@ -149,7 +135,6 @@ Additionally, system configuration changes (such as the installation of third pa
 - x_mitre_domains: enterprise-attack
 
 ### T1543.005: Container Service
-
 ^t1543005-container-service
 
 **Parent Technique**

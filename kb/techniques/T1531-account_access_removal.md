@@ -18,16 +18,6 @@ In Windows, [Net](https://attack.mitre.org/software/S0039) utility, <code>Set-Lo
 
 Adversaries who use ransomware or similar attacks may first perform this and other Impact behaviors, such as [Data Destruction](https://attack.mitre.org/techniques/T1485) and [Defacement](https://attack.mitre.org/techniques/T1491), in order to impede incident response/recovery before completing the [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486) objective. 
 
-## Properties
-
-- id: T1531
-- name: Account Access Removal
-- created: 2019-10-09 18:48:31.906000+00:00
-- modified: 2025-10-24 17:49:14.836000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

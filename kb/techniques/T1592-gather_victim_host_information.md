@@ -18,20 +18,9 @@ Adversaries may gather this information in various ways, such as direct collecti
 
 Adversaries may also gather victim host information via User-Agent HTTP headers, which are sent to a server to identify the application, operating system, vendor, and/or version of the requesting user agent. This can be used to inform the adversary’s follow-on action. For example, adversaries may check user agents for the requesting operating system, then only serve malware for target operating systems while ignoring others.(Citation: TrellixQakbot)
 
-## Properties
-
-- id: T1592
-- name: Gather Victim Host Information
-- created: 2020-10-02 16:39:33.966000+00:00
-- modified: 2025-10-24 17:48:21.583000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1592.001: Hardware
-
 ^t1592001-hardware
 
 **Parent Technique**
@@ -55,7 +44,6 @@ Adversaries may gather this information in various ways, such as direct collecti
 - x_mitre_domains: enterprise-attack
 
 ### T1592.002: Software
-
 ^t1592002-software
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Gathering this information may reveal opportunities for other forms of reconnais
 - x_mitre_domains: enterprise-attack
 
 ### T1592.003: Firmware
-
 ^t1592003-firmware
 
 **Parent Technique**
@@ -105,7 +92,6 @@ Adversaries may gather this information in various ways, such as direct elicitat
 - x_mitre_domains: enterprise-attack
 
 ### T1592.004: Client Configurations
-
 ^t1592004-client-configurations
 
 **Parent Technique**

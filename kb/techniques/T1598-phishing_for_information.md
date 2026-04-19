@@ -22,20 +22,9 @@ Phishing for information frequently involves social engineering techniques, such
 
 Phishing for information may also involve evasive techniques, such as removing or manipulating emails or metadata/headers from compromised accounts being abused to send messages (e.g., [Email Hiding Rules](https://attack.mitre.org/techniques/T1564/008)).(Citation: Microsoft OAuth Spam 2022)(Citation: Palo Alto Unit 42 VBA Infostealer 2014)
 
-## Properties
-
-- id: T1598
-- name: Phishing for Information
-- created: 2020-10-02 17:07:01.502000+00:00
-- modified: 2025-10-24 17:49:24.096000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1598.001: Spearphishing Service
-
 ^t1598001-spearphishing-service
 
 **Parent Technique**
@@ -59,7 +48,6 @@ All forms of spearphishing are electronically delivered social engineering targe
 - x_mitre_domains: enterprise-attack
 
 ### T1598.002: Spearphishing Attachment
-
 ^t1598002-spearphishing-attachment
 
 **Parent Technique**
@@ -85,7 +73,6 @@ Adversaries may also use information from previous reconnaissance efforts (ex: [
 - x_mitre_domains: enterprise-attack
 
 ### T1598.003: Spearphishing Link
-
 ^t1598003-spearphishing-link
 
 **Parent Technique**
@@ -119,7 +106,6 @@ From the fake website, information is gathered in web forms and sent to the adve
 - x_mitre_domains: enterprise-attack
 
 ### T1598.004: Spearphishing Voice
-
 ^t1598004-spearphishing-voice
 
 **Parent Technique**

@@ -17,16 +17,6 @@ Adversaries may attempt to make payloads difficult to discover and analyze by de
 Source code payloads may also be encrypted, encoded, and/or embedded within other files, such as those delivered as a [Spearphishing Attachment](https://attack.mitre.org/techniques/T1193). Payloads may also be delivered in formats unrecognizable and inherently benign to the native OS (ex: EXEs on macOS/Linux) before later being (re)compiled into a proper executable binary with a bundled compiler and execution framework.(Citation: TrendMicro WindowsAppMac)
 
 
-## Properties
-
-- id: T1500
-- name: Compile After Delivery
-- created: 2019-04-25 20:53:07.719000+00:00
-- modified: 2025-10-24 17:49:24.988000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

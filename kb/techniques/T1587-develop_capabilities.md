@@ -16,20 +16,9 @@ Adversaries may build capabilities that can be used during targeting. Rather tha
 
 As with legitimate development efforts, different skill sets may be required for developing capabilities. The skills needed may be located in-house, or may need to be contracted out. Use of a contractor may be considered an extension of that adversary's development capabilities, provided the adversary plays a role in shaping requirements and maintains a degree of exclusivity to the capability.
 
-## Properties
-
-- id: T1587
-- name: Develop Capabilities
-- created: 2020-10-01 01:30:00.877000+00:00
-- modified: 2025-10-24 17:49:34.675000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1587.001: Malware
-
 ^t1587001-malware
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Some aspects of malware development, such as C2 protocol development, may requir
 - x_mitre_domains: enterprise-attack
 
 ### T1587.002: Code Signing Certificates
-
 ^t1587002-code-signing-certificates
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Prior to [Code Signing](https://attack.mitre.org/techniques/T1553/002), adversar
 - x_mitre_domains: enterprise-attack
 
 ### T1587.003: Digital Certificates
-
 ^t1587003-digital-certificates
 
 **Parent Technique**
@@ -107,7 +94,6 @@ After creating a digital certificate, an adversary may then install that certifi
 - x_mitre_domains: enterprise-attack
 
 ### T1587.004: Exploits
-
 ^t1587004-exploits
 
 **Parent Technique**

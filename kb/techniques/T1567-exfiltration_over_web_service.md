@@ -16,20 +16,9 @@ Adversaries may use an existing, legitimate external Web service to exfiltrate d
 
 Web service providers also commonly use SSL/TLS encryption, giving adversaries an added level of protection.
 
-## Properties
-
-- id: T1567
-- name: Exfiltration Over Web Service
-- created: 2020-03-09 12:51:45.570000+00:00
-- modified: 2025-10-24 17:48:42.061000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1567.001: Exfiltration to Code Repository
-
 ^t1567001-exfiltration-to-code-repository
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Exfiltration to a code repository can also provide a significant amount of cover
 - x_mitre_domains: enterprise-attack
 
 ### T1567.002: Exfiltration to Cloud Storage
-
 ^t1567002-exfiltration-to-cloud-storage
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Examples of cloud storage services include Dropbox and Google Docs. Exfiltration
 - x_mitre_domains: enterprise-attack
 
 ### T1567.003: Exfiltration to Text Storage Sites
-
 ^t1567003-exfiltration-to-text-storage-sites
 
 **Parent Technique**
@@ -103,7 +90,6 @@ Text storage sites are often used to host malicious code for C2 communication (e
 - x_mitre_domains: enterprise-attack
 
 ### T1567.004: Exfiltration Over Webhook
-
 ^t1567004-exfiltration-over-webhook
 
 **Parent Technique**
@@ -144,5 +130,5 @@ Access to webhook endpoints is often over HTTPS, which gives the adversary an ad
 
 ## Tools
 
-- [[S0508-ngrok|S0508: ngrok]]
+- [[ngrok|ngrok]]
 

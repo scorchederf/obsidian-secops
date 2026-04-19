@@ -23,16 +23,6 @@ Example commands that can be used to obtain security software information are [n
 
 It's becoming more common to see macOS malware perform checks for LittleSnitch and KnockKnock software.
 
-## Properties
-
-- id: T1063
-- name: Security Software Discovery
-- created: 2017-05-31 21:30:51.330000+00:00
-- modified: 2025-10-24 17:48:31.974000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

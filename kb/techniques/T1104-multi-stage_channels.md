@@ -18,16 +18,6 @@ Remote access tools will call back to the first-stage command and control server
 
 The different stages will likely be hosted separately with no overlapping infrastructure. The loader may also have backup first-stage callbacks or [Fallback Channels](https://attack.mitre.org/techniques/T1008) in case the original first-stage communication path is discovered and blocked.
 
-## Properties
-
-- id: T1104
-- name: Multi-Stage Channels
-- created: 2017-05-31 21:31:15.935000+00:00
-- modified: 2025-10-24 17:49:03.646000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1031-network_intrusion_prevention|M1031: Network Intrusion Prevention]]

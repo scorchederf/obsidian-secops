@@ -18,16 +18,6 @@ If the permissions for users and groups are not properly set and allow access to
 
 Adversaries may also alter Registry keys associated with service failure parameters (such as <code>FailureCommand</code>) that may be executed in an elevated context anytime the service fails or is intentionally corrupted.(Citation: TrustedSignal Service Failure)(Citation: Twitter Service Recovery Nov 2017)
 
-## Properties
-
-- id: T1058
-- name: Service Registry Permissions Weakness
-- created: 2017-05-31 21:30:49.119000+00:00
-- modified: 2025-10-24 17:48:39.967000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

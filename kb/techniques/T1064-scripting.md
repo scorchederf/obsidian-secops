@@ -20,16 +20,6 @@ Scripts can be embedded inside Office documents as macros that can be set to exe
 
 Many popular offensive frameworks exist which use forms of scripting for security testers and adversaries alike. Metasploit (Citation: Metasploit_Ref), Veil (Citation: Veil_Ref), and PowerSploit (Citation: Powersploit) are three examples that are popular among penetration testers for exploit and post-compromise operations and include many features for evading defenses. Some adversaries are known to use PowerShell. (Citation: Alperovitch 2014)
 
-## Properties
-
-- id: T1064
-- name: Scripting
-- created: 2017-05-31 21:30:51.733000+00:00
-- modified: 2025-10-24 17:49:01.561000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

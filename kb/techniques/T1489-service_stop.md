@@ -18,16 +18,6 @@ Adversaries may accomplish this by disabling individual services of high importa
 
 Threat actors may also disable or stop service in cloud environments. For example, by leveraging the `DisableAPIServiceAccess` API in AWS, a threat actor may prevent the service from creating service-linked roles on new accounts in the AWS Organization.(Citation: Datadog Security Labs Cloud Persistence 2025)(Citation: AWS DisableAWSServiceAccess)
 
-## Properties
-
-- id: T1489
-- name: Service Stop
-- created: 2019-03-29 19:00:55.901000+00:00
-- modified: 2025-10-24 17:48:30.688000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]

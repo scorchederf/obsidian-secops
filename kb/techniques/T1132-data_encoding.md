@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may encode data to make the content of command and control traffic more difficult to detect. Command and control (C2) information can be encoded using a standard data encoding system. Use of data encoding may adhere to existing protocol specifications and includes use of ASCII, Unicode, Base64, MIME, or other binary-to-text and character encoding systems.(Citation: Wikipedia Binary-to-text Encoding) (Citation: Wikipedia Character Encoding) Some data encoding systems may also result in data compression, such as gzip.
 
-## Properties
-
-- id: T1132
-- name: Data Encoding
-- created: 2017-05-31 21:31:43.540000+00:00
-- modified: 2025-10-24 17:49:23.915000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1132.001: Standard Encoding
-
 ^t1132001-standard-encoding
 
 **Parent Technique**
@@ -49,7 +38,6 @@ Adversaries may encode data with a standard data encoding system to make the con
 - x_mitre_domains: enterprise-attack
 
 ### T1132.002: Non-Standard Encoding
-
 ^t1132002-non-standard-encoding
 
 **Parent Technique**
@@ -83,5 +71,5 @@ Adversaries may encode data with a non-standard data encoding system to make the
 
 ## Tools
 
-- [[S0699-mythic|S0699: Mythic]]
+- [[mythic|Mythic]]
 

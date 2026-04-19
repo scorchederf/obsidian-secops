@@ -16,20 +16,9 @@ Adversaries may leverage Microsoft Office-based applications for persistence bet
 
 A variety of features have been discovered in Outlook that can be abused to obtain persistence, such as Outlook rules, forms, and Home Page.(Citation: SensePost Ruler GitHub) These persistence mechanisms can work within Outlook or be used through Office 365.(Citation: TechNet O365 Outlook Rules)
 
-## Properties
-
-- id: T1137
-- name: Office Application Startup
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:34.614000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1137.001: Office Template Macros
-
 ^t1137001-office-template-macros
 
 **Parent Technique**
@@ -63,7 +52,6 @@ An adversary may need to enable macros to execute unrestricted depending on the 
 - x_mitre_domains: enterprise-attack
 
 ### T1137.002: Office Test
-
 ^t1137002-office-test
 
 **Parent Technique**
@@ -92,7 +80,6 @@ Adversaries may add this Registry key and specify a malicious DLL that will be e
 - x_mitre_domains: enterprise-attack
 
 ### T1137.003: Outlook Forms
-
 ^t1137003-outlook-forms
 
 **Parent Technique**
@@ -116,7 +103,6 @@ Once malicious forms have been added to the user’s mailbox, they will be loade
 - x_mitre_domains: enterprise-attack
 
 ### T1137.004: Outlook Home Page
-
 ^t1137004-outlook-home-page
 
 **Parent Technique**
@@ -141,7 +127,6 @@ Once malicious home pages have been added to the user’s mailbox, they will be 
 - x_mitre_domains: enterprise-attack
 
 ### T1137.005: Outlook Rules
-
 ^t1137005-outlook-rules
 
 **Parent Technique**
@@ -165,7 +150,6 @@ Once malicious rules have been added to the user’s mailbox, they will be loade
 - x_mitre_domains: enterprise-attack
 
 ### T1137.006: Add-ins
-
 ^t1137006-add-ins
 
 **Parent Technique**

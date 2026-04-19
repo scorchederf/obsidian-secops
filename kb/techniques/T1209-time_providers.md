@@ -18,16 +18,6 @@ Time providers are implemented as dynamic-link libraries (DLLs) that are registe
 
 Adversaries may abuse this architecture to establish Persistence, specifically by registering and enabling a malicious DLL as a time provider. Administrator privileges are required for time provider registration, though execution will run in context of the Local Service account. (Citation: Github W32Time Oct 2017)
 
-## Properties
-
-- id: T1209
-- name: Time Providers
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:29.141000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

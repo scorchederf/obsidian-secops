@@ -21,16 +21,6 @@ There are a variety of features in scripting languages in Windows, such as [Powe
 The configurations for how applications run on macOS are listed in property list (plist) files. One of the tags in these files can be <code>apple.awt.UIElement</code>, which allows for Java applications to prevent the application's icon from appearing in the Dock. A common use for this is when applications run in the system tray, but don't also want to show up in the Dock. However, adversaries can abuse this feature and hide their running window.(Citation: Antiquated Mac Malware)
 
 
-## Properties
-
-- id: T1143
-- name: Hidden Window
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:20.749000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

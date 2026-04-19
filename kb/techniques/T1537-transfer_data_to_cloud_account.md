@@ -20,16 +20,6 @@ Adversaries may also use cloud-native mechanisms to share victim data with adver
 
 Incidents have been observed where adversaries have created backups of cloud instances and transferred them to separate accounts.(Citation: DOJ GRU Indictment Jul 2018) 
 
-## Properties
-
-- id: T1537
-- name: Transfer Data to Cloud Account
-- created: 2019-08-30 13:03:04.038000+00:00
-- modified: 2025-10-24 17:49:27.409000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]

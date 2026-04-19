@@ -25,16 +25,6 @@ Process Doppelgänging is implemented in 4 steps (Citation: BlackHat Process Dop
 * Rollback – Undo changes to original executable, effectively removing malicious code from the file system.
 * Animate – Create a process from the tainted section of memory and initiate execution.
 
-## Properties
-
-- id: T1186
-- name: Process Doppelgänging
-- created: 2018-01-16 16:13:52.465000+00:00
-- modified: 2025-10-24 17:49:19.859000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

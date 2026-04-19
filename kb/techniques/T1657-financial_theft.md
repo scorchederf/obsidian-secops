@@ -20,16 +20,6 @@ Extortion by ransomware may occur, for example, when an adversary demands paymen
 
 Due to the potentially immense business impact of financial theft, an adversary may abuse the possibility of financial theft and seeking monetary gain to divert attention from their true goals such as [Data Destruction](https://attack.mitre.org/techniques/T1485) and business disruption.(Citation: AP-NotPetya)
 
-## Properties
-
-- id: T1657
-- name: Financial Theft
-- created: 2023-08-18 20:50:04.222000+00:00
-- modified: 2025-04-15 22:36:03.465000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1017-user_training|M1017: User Training]]

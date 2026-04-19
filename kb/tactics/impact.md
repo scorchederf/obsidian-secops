@@ -14,16 +14,6 @@ The adversary is trying to manipulate, interrupt, or destroy your systems and da
  
 Impact consists of techniques that adversaries use to disrupt availability or compromise integrity by manipulating business and operational processes. Techniques used for impact can include destroying or tampering with data. In some cases, business processes can look fine, but may have been altered to benefit the adversaries’ goals. These techniques might be used by adversaries to follow through on their end goal or to provide cover for a confidentiality breach.
 
-## Properties
-
-- id: x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8
-- name: Impact
-- created: 2019-03-14 18:44:44.639000+00:00
-- modified: 2025-04-25 14:45:33.130000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1485-data_destruction|T1485: Data Destruction]]

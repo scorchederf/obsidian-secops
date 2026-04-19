@@ -25,20 +25,9 @@ With sufficient permissions, adversaries can modify domain or tenant policy sett
 
 Adversaries may temporarily modify domain or tenant policy, carry out a malicious action(s), and then revert the change to remove suspicious indicators.
 
-## Properties
-
-- id: T1484
-- name: Domain or Tenant Policy Modification
-- created: 2019-03-07 14:10:32.650000+00:00
-- modified: 2025-10-24 17:49:33.897000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1484.001: Group Policy Modification
-
 ^t1484001-group-policy-modification
 
 **Parent Technique**
@@ -66,7 +55,6 @@ For example, publicly available scripts such as <code>New-GPOImmediateTask</code
 - x_mitre_domains: enterprise-attack
 
 ### T1484.002: Trust Modification
-
 ^t1484002-trust-modification
 
 **Parent Technique**

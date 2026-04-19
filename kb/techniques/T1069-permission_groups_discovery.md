@@ -16,20 +16,9 @@ Adversaries may attempt to discover group and permission settings. This informat
 
 Adversaries may attempt to discover group permission settings in many different ways. This data may provide the adversary with information about the compromised environment that can be used in follow-on activity and targeting.(Citation: CrowdStrike BloodHound April 2018)
 
-## Properties
-
-- id: T1069
-- name: Permission Groups Discovery
-- created: 2017-05-31 21:30:55.471000+00:00
-- modified: 2025-10-24 17:48:26.378000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1069.001: Local Groups
-
 ^t1069001-local-groups
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Commands such as <code>net localgroup</code> of the [Net](https://attack.mitre.o
 - x_mitre_domains: enterprise-attack
 
 ### T1069.002: Domain Groups
-
 ^t1069002-domain-groups
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Commands such as <code>net group /domain</code> of the [Net](https://attack.mitr
 - x_mitre_domains: enterprise-attack
 
 ### T1069.003: Cloud Groups
-
 ^t1069003-cloud-groups
 
 **Parent Technique**
@@ -117,5 +104,5 @@ Adversaries may attempt to list ACLs for objects to determine the owner and othe
 
 ## Tools
 
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
+- [[shimratreporter|ShimRatReporter]]
 

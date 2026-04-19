@@ -18,16 +18,6 @@ One such example is the use of [certutil](https://attack.mitre.org/software/S016
 
 Sometimes a user's action may be required to open it for deobfuscation or decryption as part of [User Execution](https://attack.mitre.org/techniques/T1204). The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary.(Citation: Volexity PowerDuke November 2016)
 
-## Properties
-
-- id: T1140
-- name: Deobfuscate/Decode Files or Information
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:40.925000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -37,10 +27,10 @@ Sometimes a user's action may be required to open it for deobfuscation or decryp
 
 ## Tools
 
-- [[S0160-certutil|S0160: certutil]]
-- [[S0361-expand|S0361: Expand]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0581-ironnetinjector|S0581: IronNetInjector]]
-- [[S1050-pcshare|S1050: PcShare]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[certutil|certutil]]
+- [[expand|Expand]]
+- [[imminent_monitor|Imminent Monitor]]
+- [[ironnetinjector|IronNetInjector]]
+- [[pcshare|PcShare]]
 

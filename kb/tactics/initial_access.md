@@ -14,16 +14,6 @@ The adversary is trying to get into your network.
 
 Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
 
-## Properties
-
-- id: x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca
-- name: Initial Access
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:36.917000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1078-valid_accounts|T1078: Valid Accounts]]

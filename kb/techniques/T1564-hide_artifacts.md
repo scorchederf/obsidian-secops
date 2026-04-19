@@ -16,20 +16,9 @@ Adversaries may attempt to hide artifacts associated with their behaviors to eva
 
 Adversaries may also attempt to hide artifacts associated with malicious behavior by creating computing regions that are isolated from common security instrumentation, such as through the use of virtualization technology.(Citation: Sophos Ragnar May 2020)
 
-## Properties
-
-- id: T1564
-- name: Hide Artifacts
-- created: 2020-02-26 17:41:25.933000+00:00
-- modified: 2025-10-24 17:48:31.407000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1564.001: Hidden Files and Directories
-
 ^t1564001-hidden-files-and-directories
 
 **Parent Technique**
@@ -59,7 +48,6 @@ Adversaries can use this to their advantage to hide files and folders anywhere o
 - x_mitre_domains: enterprise-attack
 
 ### T1564.002: Hidden Users
-
 ^t1564002-hidden-users
 
 **Parent Technique**
@@ -87,7 +75,6 @@ On Linux systems, adversaries may hide user accounts from the login screen, also
 - x_mitre_domains: enterprise-attack
 
 ### T1564.003: Hidden Window
-
 ^t1564003-hidden-window
 
 **Parent Technique**
@@ -121,7 +108,6 @@ Adversaries may also leverage cmd.exe(Citation: Cybereason - Hidden Malicious Re
 - x_mitre_domains: enterprise-attack
 
 ### T1564.004: NTFS File Attributes
-
 ^t1564004-ntfs-file-attributes
 
 **Parent Technique**
@@ -145,7 +131,6 @@ Adversaries may store malicious data or binaries in file attribute metadata inst
 - x_mitre_domains: enterprise-attack
 
 ### T1564.005: Hidden File System
-
 ^t1564005-hidden-file-system
 
 **Parent Technique**
@@ -169,7 +154,6 @@ Adversaries may use their own abstracted file system, separate from the standard
 - x_mitre_domains: enterprise-attack
 
 ### T1564.006: Run Virtual Instance
-
 ^t1564006-run-virtual-instance
 
 **Parent Technique**
@@ -197,7 +181,6 @@ In VMWare environments, adversaries may leverage the vCenter console to create n
 - x_mitre_domains: enterprise-attack
 
 ### T1564.007: VBA Stomping
-
 ^t1564007-vba-stomping
 
 **Parent Technique**
@@ -223,7 +206,6 @@ An adversary may hide malicious VBA code by overwriting the VBA source code loca
 - x_mitre_domains: enterprise-attack
 
 ### T1564.008: Email Hiding Rules
-
 ^t1564008-email-hiding-rules
 
 **Parent Technique**
@@ -251,7 +233,6 @@ In some environments, administrators may be able to enable email rules that oper
 - x_mitre_domains: enterprise-attack
 
 ### T1564.009: Resource Forking
-
 ^t1564009-resource-forking
 
 **Parent Technique**
@@ -275,7 +256,6 @@ Adversaries can use resource forks to hide malicious data that may otherwise be 
 - x_mitre_domains: enterprise-attack
 
 ### T1564.010: Process Argument Spoofing
-
 ^t1564010-process-argument-spoofing
 
 **Parent Technique**
@@ -303,7 +283,6 @@ This behavior may also be combined with other tricks (such as [Parent PID Spoofi
 - x_mitre_domains: enterprise-attack
 
 ### T1564.011: Ignore Process Interrupts
-
 ^t1564011-ignore-process-interrupts
 
 **Parent Technique**
@@ -329,7 +308,6 @@ Hiding from process interrupt signals may allow malware to continue execution, b
 - x_mitre_domains: enterprise-attack
 
 ### T1564.012: File/Path Exclusions
-
 ^t1564012-file-path-exclusions
 
 **Parent Technique**
@@ -353,7 +331,6 @@ Adversaries may abuse these exclusions to hide their file-based artifacts. For e
 - x_mitre_domains: enterprise-attack
 
 ### T1564.013: Bind Mounts
-
 ^t1564013-bind-mounts
 
 **Parent Technique**
@@ -377,7 +354,6 @@ Adversaries may use bind mounts to map either an empty directory or a benign `/p
 - x_mitre_domains: enterprise-attack
 
 ### T1564.014: Extended Attributes
-
 ^t1564014-extended-attributes
 
 **Parent Technique**

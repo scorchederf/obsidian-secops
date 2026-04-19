@@ -17,20 +17,9 @@ Adversaries may attempt to dump credentials to obtain account login and credenti
 Several of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well.
 
 
-## Properties
-
-- id: T1003
-- name: OS Credential Dumping
-- created: 2017-05-31 21:30:19.735000+00:00
-- modified: 2025-10-24 17:48:22.201000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1003.001: LSASS Memory
-
 ^t1003001-lsass-memory
 
 **Parent Technique**
@@ -79,7 +68,6 @@ The following SSPs can be used to access credentials:
 - x_mitre_domains: enterprise-attack
 
 ### T1003.002: Security Account Manager
-
 ^t1003002-security-account-manager
 
 **Parent Technique**
@@ -122,7 +110,6 @@ Notes:
 - x_mitre_domains: enterprise-attack
 
 ### T1003.003: NTDS
-
 ^t1003003-ntds
 
 **Parent Technique**
@@ -154,7 +141,6 @@ The following tools and techniques can be used to enumerate the NTDS file and th
 - x_mitre_domains: enterprise-attack
 
 ### T1003.004: LSA Secrets
-
 ^t1003004-lsa-secrets
 
 **Parent Technique**
@@ -178,7 +164,6 @@ Adversaries with SYSTEM access to a host may attempt to access Local Security Au
 - x_mitre_domains: enterprise-attack
 
 ### T1003.005: Cached Domain Credentials
-
 ^t1003005-cached-domain-credentials
 
 **Parent Technique**
@@ -208,7 +193,6 @@ Note: Cached credentials for Windows Vista are derived using PBKDF2.(Citation: P
 - x_mitre_domains: enterprise-attack
 
 ### T1003.006: DCSync
-
 ^t1003006-dcsync
 
 **Parent Technique**
@@ -234,7 +218,6 @@ DCSync functionality has been included in the "lsadump" module in [Mimikatz](htt
 - x_mitre_domains: enterprise-attack
 
 ### T1003.007: Proc Filesystem
-
 ^t1003007-proc-filesystem
 
 **Parent Technique**
@@ -260,7 +243,6 @@ If running as or with the permissions of a web browser, a process can search the
 - x_mitre_domains: enterprise-attack
 
 ### T1003.008: /etc/passwd and /etc/shadow
-
 ^t1003008--etc-passwd-and--etc-shadow
 
 **Parent Technique**

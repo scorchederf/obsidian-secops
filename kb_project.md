@@ -1,20 +1,16 @@
+# MITRE ATT&CK Obsidian Vault – Project Context
 
-# 📘 MITRE ATT&CK Obsidian Vault – Design Context
-
-## 🎯 Purpose
-
+## Purpose
 Build an Obsidian knowledge base from MITRE ATT&CK that is:
 
-* Human-readable
-* Operationally useful (SOC / pentesting)
-* Fully cross-linked
-* Rebuilt from scratch each run
+- Human-readable
+- Operationally useful
+- Fully cross-linked
+- Rebuilt from scratch on every run
 
----
+## Directory Structure
 
-# 🧱 Core Structure
-
-```
+```text
 kb/
 ├── tactics/
 ├── techniques/
@@ -22,274 +18,207 @@ kb/
 ├── tools/
 ```
 
----
+## Core Data Model
 
-# 🔗 Data Model (Critical)
+### Tactics
+- One file per tactic
+- Tactic files link to parent techniques
+- Tactic files link to subtechniques as block links into the parent technique file
 
-## Tactics
+### Techniques
+- One file per parent technique
+- Technique filename format:
+  - `Txxxx-technique_name.md`
 
-* Top-level ATT&CK categories
-* Link to techniques
+### Subtechniques
+- Subtechniques are not standalone files
+- Subtechniques are sections inside the parent technique file
+- Each subtechnique uses:
+  - a human-readable heading
+  - a stable Obsidian block ID
 
-## Techniques (PRIMARY OBJECT)
-
-* One file per **parent technique**
-* Subtechniques are **NOT files**
-* Subtechniques are **sections inside parent files**
-
----
-
-## Subtechniques
-
-### Design Decision
-
-* Stored as **headings**, not files
-* Linked via **block IDs**
-
-### Format
+Example:
 
 ```markdown
-### T1059.001: PowerShell
-^t1059001-powershell
+### T1003.002: Security Account Manager
+^t1003002-security-account-manager
 ```
 
-### Linking Format
+Link format:
 
 ```markdown
-[[T1059-command_and_scripting_interpreter#^t1059001-powershell]]
+[[T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 ```
 
----
+### Mitigations
+- One file per valid mitigation
+- Mitigation filename format:
+  - `Mxxxx-mitigation_name.md`
+- Keep only:
+  - `type == "course-of-action"`
+  - ATT&CK ID starts with `M`
+  - mitigation must actually link to at least one technique/subtechnique
 
-## Mitigations
+### Tools
+- Tools are included
+- Malware is excluded
+- Tools come from `get_software()` and are filtered by:
+  - `type == "tool"`
+- Tool filenames use name only by default
+- If two tools normalize to the same filename, append the ATT&CK ID
 
-### Design Decision
+Examples:
 
-* Only valid mitigation objects (`type == course-of-action`)
-* Must have ATT&CK ID starting with `M`
-* Skip if no linked techniques
+```text
+mimikatz.md
+procdump.md
+some_tool-s1234.md
+```
 
-### Structure
+## Rebuild Strategy
+The vault rebuilds from scratch each run.
 
-* Parent techniques = top-level bullet
-* Subtechniques = indented block links
+Delete all `.md` files in:
+- tactics
+- techniques
+- mitigations
+- tools
+
+This avoids:
+- orphan files
+- stale filenames
+- broken links from earlier refactors
+
+## Key Decisions
+
+### 1. No standalone subtechnique files
+Subtechniques live inside parent technique files.
+
+### 2. Human-readable subtechnique headings
+Use:
 
 ```markdown
-- [[T1003-os_credential_dumping]]
-    - [[T1003-os_credential_dumping#^t1003001-lsass-memory]]
+### T1001.003: Protocol or Service Impersonation
+^t1001003-protocol-or-service-impersonation
 ```
 
----
+Do not use machine-only headings.
 
-## Tools (Phase 2)
+### 3. Block links for subtechniques
+Subtechniques are linked with stable block IDs, not fake filenames.
 
-### Design Decision
+### 4. Properties function calls are commented out
+The functions remain in the script, but the calls are disabled for now.
 
-* Use `get_software()`
-* Filter: `type == "tool"`
-* DO NOT include malware
+### 5. Data sources are only added to technique pages
+No separate `data_sources` folder is used.
 
-### Structure
+### 6. Required Permissions may be empty
+That field is inconsistently populated in ATT&CK data.
 
-#### Technique → Tools
+### 7. Tools use name-first filenames
+Names are more natural in Obsidian. Collision handling is built in.
 
-```markdown
-## Tools
-- [[Mimikatz]]
-```
+## Library Constraints
 
-#### Tool → Techniques
+### Working methods
+- `get_tactics()`
+- `get_techniques()`
+- `get_subtechniques_of_technique(...)`
+- `get_mitigations()`
+- `get_all_mitigations_mitigating_all_techniques()`
+- `get_software()`
+- `get_all_software_using_all_techniques()`
 
-Same structure as mitigations:
+### Not available in this environment
+- `get_tools()`
+- generic relation helpers like `get_objects_by_relation(...)`
 
-* Parent techniques
-* Subtechniques nested under parent
+## Technique Pages Currently Include
+- YAML frontmatter
+- Tactic link
+- Description
+- Subtechniques
+- Mitigations
+- Detection
+- Data Sources
+- Platforms
+- Required Permissions
+- Tools
 
----
+Properties section is present in code but disabled in output.
 
-# ⚠️ Key Library Constraints
+## Mitigation Pages Include
+- YAML frontmatter
+- Description
+- Properties
+- Techniques mitigated
 
-## mitreattack-python quirks
+Parent techniques are top-level bullets.
+Subtechniques are nested under parents.
 
-* `get_tools()` ❌ does NOT exist
+## Tool Pages Include
+- YAML frontmatter
+- Description
+- Properties
+- Techniques used
 
-* Use:
+Parent techniques are top-level bullets.
+Subtechniques are nested under parents.
 
-  * `get_software()`
-  * `get_all_software_using_all_techniques()`
+## Historical Bugs Already Solved
 
-* `get_mitigations()` returns:
-
-  * valid mitigations
-  * deprecated objects
-  * historical objects (sometimes with `Txxxx` IDs)
-
----
-
-# 🧼 Rebuild Strategy (IMPORTANT)
-
-### Design Decision
-
-Vault must rebuild cleanly every run
-
-### Implementation
-
-```python
-def clear_markdown_files(folder_path):
-    for file in folder_path:
-        delete .md files
-```
-
-Apply to:
-
-* tactics
-* techniques
-* mitigations
-* tools
-
----
-
-# 🚨 Common Bugs (Already Solved)
-
-## 1. Subtechniques linking incorrectly
-
+### Broken subtechnique links
 Cause:
-
-* Treated as standalone files
+- subtechniques were treated as standalone files
 
 Fix:
+- block links into parent technique files
 
-* Always link via block IDs inside parent technique
-
----
-
-## 2. Orphan mitigation files (e.g. T1499-...)
-
+### Orphan mitigation files like `Txxxx...`
 Cause:
-
-* Old ATT&CK format OR invalid object type
+- historical or invalid mitigation objects were being written
 
 Fix:
+- require `type == "course-of-action"`
+- require ID starts with `M`
+- skip empty mitigation files
 
-* Enforce:
-
-  * `type == course-of-action`
-  * ID starts with `M`
-  * has linked techniques
-
----
-
-## 3. Tool pages missing subtechniques
-
+### Tool pages broke on subtechniques
 Cause:
-
-* Same mistake as mitigations (flat linking)
+- flat technique linking
 
 Fix:
+- same parent/sub structure as mitigation pages
 
-* Reuse mitigation-style parent/sub grouping
-
----
-
-## 4. Orphan files persisting
-
+### Orphan files persisted
 Cause:
-
-* No cleanup before rebuild
+- no cleanup before regeneration
 
 Fix:
+- delete markdown files before every run
 
-* Delete all `.md` files before generation
+### Tool filename refactor caused broken calls
+Cause:
+- helper signature changed but call sites still passed `tool_id`
 
----
+Fix:
+- centralize with `tool_filename_map`
 
-# 🧠 Phase 1 (Operational Value)
+## Philosophy
+- Keep code explicit and junior-friendly
+- Prefer simple helpers
+- Avoid clever abstractions
+- Keep relationships accurate to vault structure
 
-Added to **technique pages**:
+## Good Future Additions
+- Groups
+- Malware
+- Reverse data-source mapping
+- SIEM mapping notes
+- Validation script for broken links and orphan files
 
-## Detection
+## Reuse Instructions
+Paste this file into a future chat and say:
 
-`x_mitre_detection`
-
-## Data Sources
-
-`x_mitre_data_sources`
-
-## Platforms
-
-`x_mitre_platforms`
-
-## Required Permissions
-
-`x_mitre_permissions_required`
-
----
-
-# 🧠 Phase 2 (Partial)
-
-Included:
-
-* Tools
-
-Excluded:
-
-* Groups
-* Malware
-
----
-
-# 🧭 Design Philosophy
-
-## 1. No abstraction for juniors
-
-* Explicit functions
-* No complex loops
-* Clear sections
-
-## 2. Vault reflects reality
-
-* Parent techniques = files
-* Subtechniques = sections
-
-## 3. Relationships > raw data
-
-* Only include objects that connect to something useful
-
----
-
-# 🧩 Future Improvements
-
-## High value next steps
-
-### 1. Data Source → Technique mapping
-
-> “What can I detect with X logs?”
-
-### 2. Detection engineering notes
-
-Custom section per technique
-
-### 3. SIEM mappings
-
-Link techniques to detection rules
-
----
-
-# 🧾 How to reuse this
-
-In a future chat, just paste:
-
-```
-Here is my MITRE Obsidian vault design:
-[paste this file]
-```
-
-Then ask:
-
-* “extend it”
-* “fix a bug”
-* “add feature”
-
-And I won’t need to re-derive anything.
-
-
+> Use this as the project context for my MITRE Obsidian vault script.

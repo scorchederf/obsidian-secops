@@ -20,20 +20,9 @@ Personas may exist on a single site or across multiple sites (ex: Facebook, Link
 
 Adversaries may directly leverage compromised email accounts for [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Phishing](https://attack.mitre.org/techniques/T1566).
 
-## Properties
-
-- id: T1586
-- name: Compromise Accounts
-- created: 2020-10-01 01:17:15.965000+00:00
-- modified: 2025-10-24 17:49:02.015000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1586.001: Social Media Accounts
-
 ^t1586001-social-media-accounts
 
 **Parent Technique**
@@ -61,7 +50,6 @@ Adversaries can use a compromised social media profile to create new, or hijack 
 - x_mitre_domains: enterprise-attack
 
 ### T1586.002: Email Accounts
-
 ^t1586002-email-accounts
 
 **Parent Technique**
@@ -87,7 +75,6 @@ Adversaries can use a compromised email account to hijack existing email threads
 - x_mitre_domains: enterprise-attack
 
 ### T1586.003: Cloud Accounts
-
 ^t1586003-cloud-accounts
 
 **Parent Technique**

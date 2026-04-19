@@ -17,20 +17,9 @@ Adversaries may attempt to subvert Kerberos authentication by stealing or forgin
 On Windows, the built-in <code>klist</code> utility can be used to list and analyze cached Kerberos tickets.(Citation: Microsoft Klist)
 
 
-## Properties
-
-- id: T1558
-- name: Steal or Forge Kerberos Tickets
-- created: 2020-02-11 19:12:46.830000+00:00
-- modified: 2025-10-24 17:48:41.885000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.7
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1558.001: Golden Ticket
-
 ^t1558001-golden-ticket
 
 **Parent Technique**
@@ -56,7 +45,6 @@ The KDC service runs all on domain controllers that are part of an Active Direct
 - x_mitre_domains: enterprise-attack
 
 ### T1558.002: Silver Ticket
-
 ^t1558002-silver-ticket
 
 **Parent Technique**
@@ -82,7 +70,6 @@ Password hashes for target services may be obtained using [OS Credential Dumping
 - x_mitre_domains: enterprise-attack
 
 ### T1558.003: Kerberoasting
-
 ^t1558003-kerberoasting
 
 **Parent Technique**
@@ -112,7 +99,6 @@ Cracked hashes may enable [Persistence](https://attack.mitre.org/tactics/TA0003)
 - x_mitre_domains: enterprise-attack
 
 ### T1558.004: AS-REP Roasting
-
 ^t1558004-as-rep-roasting
 
 **Parent Technique**
@@ -142,7 +128,6 @@ Cracked hashes may enable [Persistence](https://attack.mitre.org/tactics/TA0003)
 - x_mitre_domains: enterprise-attack
 
 ### T1558.005: Ccache Files
-
 ^t1558005-ccache-files
 
 **Parent Technique**

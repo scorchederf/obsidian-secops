@@ -18,20 +18,9 @@ Adversaries may send victims emails containing malicious attachments or links, t
 
 Victims may also receive phishing messages that instruct them to call a phone number where they are directed to visit a malicious URL, download malware,(Citation: sygnia Luna Month)(Citation: CISA Remote Monitoring and Management Software) or install adversary-accessible remote management tools onto their computer (i.e., [User Execution](https://attack.mitre.org/techniques/T1204)).(Citation: Unit42 Luna Moth)
 
-## Properties
-
-- id: T1566
-- name: Phishing
-- created: 2020-03-02 18:45:07.892000+00:00
-- modified: 2025-10-24 17:49:11.351000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.7
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1566.001: Spearphishing Attachment
-
 ^t1566001-spearphishing-attachment
 
 **Parent Technique**
@@ -55,7 +44,6 @@ There are many options for the attachment such as Microsoft Office documents, ex
 - x_mitre_domains: enterprise-attack
 
 ### T1566.002: Spearphishing Link
-
 ^t1566002-spearphishing-link
 
 **Parent Technique**
@@ -85,7 +73,6 @@ Similarly, malicious links may also target device-based authorization, such as O
 - x_mitre_domains: enterprise-attack
 
 ### T1566.003: Spearphishing via Service
-
 ^t1566003-spearphishing-via-service
 
 **Parent Technique**
@@ -111,7 +98,6 @@ A common example is to build rapport with a target via social media, then send c
 - x_mitre_domains: enterprise-attack
 
 ### T1566.004: Spearphishing Voice
-
 ^t1566004-spearphishing-voice
 
 **Parent Technique**

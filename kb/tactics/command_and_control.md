@@ -14,16 +14,6 @@ The adversary is trying to communicate with compromised systems to control them.
 
 Command and Control consists of techniques that adversaries may use to communicate with systems under their control within a victim network. Adversaries commonly attempt to mimic normal, expected traffic to avoid detection. There are many ways an adversary can establish command and control with various levels of stealth depending on the victim’s network structure and defenses.
 
-## Properties
-
-- id: x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813
-- name: Command and Control
-- created: 2018-10-17 00:14:20.652000+00:00
-- modified: 2025-04-25 14:45:36.561000+00:00
-- type: x-mitre-tactic
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Related Techniques
 
 - [[T1001-data_obfuscation|T1001: Data Obfuscation]]

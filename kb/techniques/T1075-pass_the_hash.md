@@ -16,16 +16,6 @@ Pass the hash (PtH) is a method of authenticating as a user without having acces
 
 Windows 7 and higher with KB2871997 require valid domain user credentials or RID 500 administrator hashes. (Citation: NSA Spotting)
 
-## Properties
-
-- id: T1075
-- name: Pass the Hash
-- created: 2017-05-31 21:30:59.339000+00:00
-- modified: 2025-10-24 17:49:20.221000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

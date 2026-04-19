@@ -18,16 +18,6 @@ Adversaries can modify an existing service to persist malware on a system by usi
 
 Adversaries may also intentionally corrupt or kill services to execute malicious recovery programs/commands. (Citation: Twitter Service Recovery Nov 2017) (Citation: Microsoft Service Recovery Feb 2013)
 
-## Properties
-
-- id: T1031
-- name: Modify Existing Service
-- created: 2017-05-31 21:30:34.928000+00:00
-- modified: 2025-10-24 17:48:51.635000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

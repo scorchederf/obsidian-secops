@@ -20,20 +20,9 @@ Alternate protocols include FTP, SMTP, HTTP/S, DNS, SMB, or any other network pr
 
 Many IaaS and SaaS platforms (such as Microsoft Exchange, Microsoft SharePoint, GitHub, and AWS S3) support the direct download of files, emails, source code, and other sensitive information via the web console or [Cloud API](https://attack.mitre.org/techniques/T1059/009).
 
-## Properties
-
-- id: T1048
-- name: Exfiltration Over Alternative Protocol
-- created: 2017-05-31 21:30:44.720000+00:00
-- modified: 2025-10-24 17:49:10.460000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1048.001: Exfiltration Over Symmetric Encrypted Non-C2 Protocol
-
 ^t1048001-exfiltration-over-symmetric-encrypted-non-c2-protocol
 
 **Parent Technique**
@@ -59,7 +48,6 @@ Network protocols that use asymmetric encryption often utilize symmetric encrypt
 - x_mitre_domains: enterprise-attack
 
 ### T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol
-
 ^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol
 
 **Parent Technique**
@@ -85,7 +73,6 @@ Network protocols that use asymmetric encryption (such as HTTPS/TLS/SSL) often u
 - x_mitre_domains: enterprise-attack
 
 ### T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol
-
 ^t1048003-exfiltration-over-unencrypted-non-c2-protocol
 
 **Parent Technique**
@@ -130,5 +117,5 @@ Adversaries may opt to obfuscate this data, without the use of encryption, withi
 
 ## Tools
 
-- [[S0677-aadinternals|S0677: AADInternals]]
+- [[aadinternals|AADInternals]]
 

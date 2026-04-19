@@ -16,16 +16,6 @@ The sudoers file, <code>/etc/sudoers</code>, describes which users can run which
 
 Adversaries can take advantage of these configurations to execute commands as other users or spawn processes with higher privileges. You must have elevated privileges to edit this file though.
 
-## Properties
-
-- id: T1169
-- name: Sudo
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:09.488000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

@@ -20,16 +20,6 @@ The Linux & macOS module loader can load and execute shared objects from arbitra
 
 The Windows module loader can be instructed to load DLLs from arbitrary local paths and arbitrary Universal Naming Convention (UNC) network paths. This functionality resides in `NTDLL.dll` and is part of the Windows [Native API](https://attack.mitre.org/techniques/T1106) which is called from functions like `LoadLibrary` at run time.(Citation: Microsoft DLL)
 
-## Properties
-
-- id: T1129
-- name: Shared Modules
-- created: 2017-05-31 21:31:40.542000+00:00
-- modified: 2025-10-24 17:48:22.302000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.3
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1038-execution_prevention|M1038: Execution Prevention]]

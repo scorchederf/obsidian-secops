@@ -16,20 +16,9 @@ Adversaries may gather information about the victim's networks that can be used 
 
 Adversaries may gather this information in various ways, such as direct collection actions via [Active Scanning](https://attack.mitre.org/techniques/T1595) or [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about networks may also be exposed to adversaries via online or other accessible data sets (ex: [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)).(Citation: WHOIS)(Citation: DNS Dumpster)(Citation: Circl Passive DNS) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Active Scanning](https://attack.mitre.org/techniques/T1595) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).
 
-## Properties
-
-- id: T1590
-- name: Gather Victim Network Information
-- created: 2020-10-02 15:45:17.628000+00:00
-- modified: 2025-10-24 17:49:08.938000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1590.001: Domain Properties
-
 ^t1590001-domain-properties
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Adversaries may gather this information in various ways, such as direct collecti
 - x_mitre_domains: enterprise-attack
 
 ### T1590.002: DNS
-
 ^t1590002-dns
 
 **Parent Technique**
@@ -79,7 +67,6 @@ Adversaries may also use DNS zone transfer (DNS query type AXFR) to collect all 
 - x_mitre_domains: enterprise-attack
 
 ### T1590.003: Network Trust Dependencies
-
 ^t1590003-network-trust-dependencies
 
 **Parent Technique**
@@ -103,7 +90,6 @@ Adversaries may gather this information in various ways, such as direct elicitat
 - x_mitre_domains: enterprise-attack
 
 ### T1590.004: Network Topology
-
 ^t1590004-network-topology
 
 **Parent Technique**
@@ -127,7 +113,6 @@ Adversaries may gather this information in various ways, such as direct collecti
 - x_mitre_domains: enterprise-attack
 
 ### T1590.005: IP Addresses
-
 ^t1590005-ip-addresses
 
 **Parent Technique**
@@ -151,7 +136,6 @@ Adversaries may gather this information in various ways, such as direct collecti
 - x_mitre_domains: enterprise-attack
 
 ### T1590.006: Network Security Appliances
-
 ^t1590006-network-security-appliances
 
 **Parent Technique**

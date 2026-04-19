@@ -16,20 +16,9 @@ Adversaries may buy, lease, rent, or obtain infrastructure that can be used duri
 
 Use of these infrastructure solutions allows adversaries to stage, launch, and execute operations. Solutions may help adversary operations blend in with traffic that is seen as normal, such as contacting third-party web services or acquiring infrastructure to support [Proxy](https://attack.mitre.org/techniques/T1090), including from residential proxy services.(Citation: amnesty_nso_pegasus)(Citation: FBI Proxies Credential Stuffing)(Citation: Mandiant APT29 Microsoft 365 2022) Depending on the implementation, adversaries may use infrastructure that makes it difficult to physically tie back to them as well as utilize infrastructure that can be rapidly provisioned, modified, and shut down.
 
-## Properties
-
-- id: T1583
-- name: Acquire Infrastructure
-- created: 2020-09-30 16:37:40.271000+00:00
-- modified: 2025-10-24 17:48:20.468000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.5
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1583.001: Domains
-
 ^t1583001-domains
 
 **Parent Technique**
@@ -61,7 +50,6 @@ In addition to legitimately purchasing a domain, an adversary may register a new
 - x_mitre_domains: enterprise-attack
 
 ### T1583.002: DNS Server
-
 ^t1583002-dns-server
 
 **Parent Technique**
@@ -85,7 +73,6 @@ By running their own DNS servers, adversaries can have more control over how the
 - x_mitre_domains: enterprise-attack
 
 ### T1583.003: Virtual Private Server
-
 ^t1583003-virtual-private-server
 
 **Parent Technique**
@@ -109,7 +96,6 @@ Acquiring a VPS for use in later stages of the adversary lifecycle, such as Comm
 - x_mitre_domains: enterprise-attack
 
 ### T1583.004: Server
-
 ^t1583004-server
 
 **Parent Technique**
@@ -133,7 +119,6 @@ Adversaries may only need a lightweight setup if most of their activities will t
 - x_mitre_domains: enterprise-attack
 
 ### T1583.005: Botnet
-
 ^t1583005-botnet
 
 **Parent Technique**
@@ -161,7 +146,6 @@ With a botnet at their disposal, adversaries may perform follow-on activity such
 - x_mitre_domains: enterprise-attack
 
 ### T1583.006: Web Services
-
 ^t1583006-web-services
 
 **Parent Technique**
@@ -183,7 +167,6 @@ Adversaries may register for web services that can be used during targeting. A 
 - x_mitre_domains: enterprise-attack
 
 ### T1583.007: Serverless
-
 ^t1583007-serverless
 
 **Parent Technique**
@@ -207,7 +190,6 @@ Once acquired, the serverless runtime environment can be leveraged to either res
 - x_mitre_domains: enterprise-attack
 
 ### T1583.008: Malvertising
-
 ^t1583008-malvertising
 
 **Parent Technique**

@@ -14,20 +14,9 @@ x_mitre_domains: enterprise-attack
 
 Adversaries may use methods of capturing user input to obtain credentials or collect information. During normal system usage, users often provide credentials to various different locations, such as login pages/portals or system dialog boxes. Input capture mechanisms may be transparent to the user (e.g. [Credential API Hooking](https://attack.mitre.org/techniques/T1056/004)) or rely on deceiving the user into providing input into what they believe to be a genuine service (e.g. [Web Portal Capture](https://attack.mitre.org/techniques/T1056/003)).
 
-## Properties
-
-- id: T1056
-- name: Input Capture
-- created: 2017-05-31 21:30:48.323000+00:00
-- modified: 2025-10-24 17:49:17.884000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1056.001: Keylogging
-
 ^t1056001-keylogging
 
 **Parent Technique**
@@ -57,7 +46,6 @@ Keylogging is the most prevalent type of input capture, with many different ways
 - x_mitre_domains: enterprise-attack
 
 ### T1056.002: GUI Input Capture
-
 ^t1056002-gui-input-capture
 
 **Parent Technique**
@@ -83,7 +71,6 @@ Adversaries may also mimic common software authentication requests, such as thos
 - x_mitre_domains: enterprise-attack
 
 ### T1056.003: Web Portal Capture
-
 ^t1056003-web-portal-capture
 
 **Parent Technique**
@@ -107,7 +94,6 @@ This variation on input capture may be conducted post-compromise using legitimat
 - x_mitre_domains: enterprise-attack
 
 ### T1056.004: Credential API Hooking
-
 ^t1056004-credential-api-hooking
 
 **Parent Technique**
@@ -145,5 +131,5 @@ In Linux and macOS, adversaries may hook into system functions via the `LD_PRELO
 
 ## Tools
 
-- [[S1131-nppspy|S1131: NPPSPY]]
+- [[nppspy|NPPSPY]]
 

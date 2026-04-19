@@ -16,16 +16,6 @@ Adversaries may attempt to get a listing of open application windows. Window lis
 
 Adversaries typically abuse system features for this type of enumeration. For example, they may gather information through native system features such as [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) commands and [Native API](https://attack.mitre.org/techniques/T1106) functions.
 
-## Properties
-
-- id: T1010
-- name: Application Window Discovery
-- created: 2017-05-31 21:30:24.512000+00:00
-- modified: 2025-10-24 17:48:44.488000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux
@@ -34,5 +24,5 @@ Adversaries typically abuse system features for this type of enumeration. For ex
 
 ## Tools
 
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
+- [[silenttrinity|SILENTTRINITY]]
 

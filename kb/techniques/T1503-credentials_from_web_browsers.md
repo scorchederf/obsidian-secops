@@ -24,16 +24,6 @@ Adversaries may also acquire credentials by searching web browser process memory
 
 After acquiring credentials from web browsers, adversaries may attempt to recycle the credentials across different systems and/or accounts in order to expand access. This can result in significantly furthering an adversary's objective in cases where credentials gained from web browsers overlap with privileged accounts (e.g. domain administrator).
 
-## Properties
-
-- id: T1503
-- name: Credentials from Web Browsers
-- created: 2019-06-17 19:34:51.855000+00:00
-- modified: 2025-10-24 17:48:43.314000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

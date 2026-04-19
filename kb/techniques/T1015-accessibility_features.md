@@ -30,16 +30,6 @@ Other accessibility features exist that may also be leveraged in a similar fashi
 * Display Switcher: <code>C:\Windows\System32\DisplaySwitch.exe</code>
 * App Switcher: <code>C:\Windows\System32\AtBroker.exe</code>
 
-## Properties
-
-- id: T1015
-- name: Accessibility Features
-- created: 2017-05-31 21:30:26.946000+00:00
-- modified: 2025-10-24 17:49:08.494000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

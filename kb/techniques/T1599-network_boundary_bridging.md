@@ -18,20 +18,9 @@ Devices such as routers and firewalls can be used to create boundaries between t
 
 When an adversary takes control of such a boundary device, they can bypass its policy enforcement to pass normally prohibited traffic across the trust boundary between the two separated networks without hinderance.  By achieving sufficient rights on the device, an adversary can reconfigure the device to allow the traffic they want, allowing them to then further achieve goals such as command and control via [Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003) or exfiltration of data via [Traffic Duplication](https://attack.mitre.org/techniques/T1020/001). Adversaries may also target internal devices responsible for network segmentation and abuse these in conjunction with [Internal Proxy](https://attack.mitre.org/techniques/T1090/001) to achieve the same goals.(Citation: Kaspersky ThreatNeedle Feb 2021)  In the cases where a border device separates two separate organizations, the adversary can also facilitate lateral movement into new victim environments.
 
-## Properties
-
-- id: T1599
-- name: Network Boundary Bridging
-- created: 2020-10-19 16:08:29.817000+00:00
-- modified: 2025-10-24 17:49:16.493000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1599.001: Network Address Translation Traversal
-
 ^t1599001-network-address-translation-traversal
 
 **Parent Technique**

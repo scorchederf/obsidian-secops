@@ -18,20 +18,9 @@ Adversaries may abuse these mechanisms as a means of maintaining persistent acce
 
 Since the execution can be proxied by an account with higher permissions, such as SYSTEM or service accounts, an adversary may be able to abuse these triggered execution mechanisms to escalate their privileges. 
 
-## Properties
-
-- id: T1546
-- name: Event Triggered Execution
-- created: 2020-01-22 21:04:23.285000+00:00
-- modified: 2025-10-24 17:49:15.866000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1546.001: Change Default File Association
-
 ^t1546001-change-default-file-association
 
 **Parent Technique**
@@ -61,7 +50,6 @@ The values of the keys listed are commands that are executed when the handler op
 - x_mitre_domains: enterprise-attack
 
 ### T1546.002: Screensaver
-
 ^t1546002-screensaver
 
 **Parent Technique**
@@ -92,7 +80,6 @@ Adversaries can use screensaver settings to maintain persistence by setting the 
 - x_mitre_domains: enterprise-attack
 
 ### T1546.003: Windows Management Instrumentation Event Subscription
-
 ^t1546003-windows-management-instrumentation-event-subscription
 
 **Parent Technique**
@@ -118,7 +105,6 @@ WMI subscription execution is proxied by the WMI Provider Host process (WmiPrvSe
 - x_mitre_domains: enterprise-attack
 
 ### T1546.004: Unix Shell Configuration Modification
-
 ^t1546004-unix-shell-configuration-modification
 
 **Parent Technique**
@@ -144,7 +130,6 @@ For macOS, the functionality of this technique is similar but may leverage zsh, 
 - x_mitre_domains: enterprise-attack
 
 ### T1546.005: Trap
-
 ^t1546005-trap
 
 **Parent Technique**
@@ -168,7 +153,6 @@ Adversaries can use this to register code to be executed when the shell encounte
 - x_mitre_domains: enterprise-attack
 
 ### T1546.006: LC_LOAD_DYLIB Addition
-
 ^t1546006-lc-load-dylib-addition
 
 **Parent Technique**
@@ -192,7 +176,6 @@ Adversaries may modify Mach-O binary headers to load and execute malicious dylib
 - x_mitre_domains: enterprise-attack
 
 ### T1546.007: Netsh Helper DLL
-
 ^t1546007-netsh-helper-dll
 
 **Parent Technique**
@@ -216,7 +199,6 @@ Adversaries can use netsh.exe helper DLLs to trigger execution of arbitrary code
 - x_mitre_domains: enterprise-attack
 
 ### T1546.008: Accessibility Features
-
 ^t1546008-accessibility-features
 
 **Parent Technique**
@@ -252,7 +234,6 @@ Other accessibility features exist that may also be leveraged in a similar fashi
 - x_mitre_domains: enterprise-attack
 
 ### T1546.009: AppCert DLLs
-
 ^t1546009-appcert-dlls
 
 **Parent Technique**
@@ -276,7 +257,6 @@ Similar to [Process Injection](https://attack.mitre.org/techniques/T1055), this 
 - x_mitre_domains: enterprise-attack
 
 ### T1546.010: AppInit DLLs
-
 ^t1546010-appinit-dlls
 
 **Parent Technique**
@@ -302,7 +282,6 @@ The AppInit DLL functionality is disabled in Windows 8 and later versions when s
 - x_mitre_domains: enterprise-attack
 
 ### T1546.011: Application Shimming
-
 ^t1546011-application-shimming
 
 **Parent Technique**
@@ -340,7 +319,6 @@ Utilizing these shims may allow an adversary to perform several malicious acts s
 - x_mitre_domains: enterprise-attack
 
 ### T1546.012: Image File Execution Options Injection
-
 ^t1546012-image-file-execution-options-injection
 
 **Parent Technique**
@@ -372,7 +350,6 @@ Malware may also use IFEO to [Impair Defenses](https://attack.mitre.org/techniqu
 - x_mitre_domains: enterprise-attack
 
 ### T1546.013: PowerShell Profile
-
 ^t1546013-powershell-profile
 
 **Parent Technique**
@@ -400,7 +377,6 @@ An adversary may also be able to escalate privileges if a script in a PowerShell
 - x_mitre_domains: enterprise-attack
 
 ### T1546.014: Emond
-
 ^t1546014-emond
 
 **Parent Technique**
@@ -426,7 +402,6 @@ Adversaries may abuse this service by writing a rule to execute commands when a 
 - x_mitre_domains: enterprise-attack
 
 ### T1546.015: Component Object Model Hijacking
-
 ^t1546015-component-object-model-hijacking
 
 **Parent Technique**
@@ -452,7 +427,6 @@ One variation of COM hijacking involves abusing Type Libraries (TypeLibs), which
 - x_mitre_domains: enterprise-attack
 
 ### T1546.016: Installer Packages
-
 ^t1546016-installer-packages
 
 **Parent Technique**
@@ -480,7 +454,6 @@ For Windows, the Microsoft Installer services uses `.msi` files to manage the in
 - x_mitre_domains: enterprise-attack
 
 ### T1546.017: Udev Rules
-
 ^t1546017-udev-rules
 
 **Parent Technique**
@@ -504,7 +477,6 @@ Adversaries may abuse the udev subsystem by adding or modifying rules in udev ru
 - x_mitre_domains: enterprise-attack
 
 ### T1546.018: Python Startup Hooks
-
 ^t1546018-python-startup-hooks
 
 **Parent Technique**
@@ -545,5 +517,5 @@ Adversaries may abuse these mechanisms to establish persistence on systems where
 
 ## Tools
 
-- [[S1091-pacu|S1091: Pacu]]
+- [[pacu|Pacu]]
 

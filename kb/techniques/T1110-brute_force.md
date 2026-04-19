@@ -18,20 +18,9 @@ Brute forcing credentials may take place at various points during a breach. For 
 
 If an adversary guesses the correct password but fails to login to a compromised account due to location-based conditional access policies, they may change their infrastructure until they match the victim’s location and therefore bypass those policies.(Citation: ReliaQuest Health Care Social Engineering Campaign 2024)
 
-## Properties
-
-- id: T1110
-- name: Brute Force
-- created: 2017-05-31 21:31:22.767000+00:00
-- modified: 2025-10-24 17:49:12.218000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.8
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1110.001: Password Guessing
-
 ^t1110001-password-guessing
 
 **Parent Technique**
@@ -75,7 +64,6 @@ In default environments, LDAP and Kerberos connection attempts are less likely t
 - x_mitre_domains: enterprise-attack
 
 ### T1110.002: Password Cracking
-
 ^t1110002-password-cracking
 
 **Parent Technique**
@@ -99,7 +87,6 @@ Techniques to systematically guess the passwords used to compute hashes are avai
 - x_mitre_domains: enterprise-attack
 
 ### T1110.003: Password Spraying
-
 ^t1110003-password-spraying
 
 **Parent Technique**
@@ -140,7 +127,6 @@ In order to avoid detection thresholds, adversaries may deliberately throttle pa
 - x_mitre_domains: enterprise-attack
 
 ### T1110.004: Credential Stuffing
-
 ^t1110004-credential-stuffing
 
 **Parent Technique**
@@ -202,6 +188,6 @@ In addition to management services, adversaries may "target single sign-on (SSO)
 
 ## Tools
 
-- [[S0378-poshc2|S0378: PoshC2]]
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
+- [[crackmapexec|CrackMapExec]]
+- [[poshc2|PoshC2]]
 

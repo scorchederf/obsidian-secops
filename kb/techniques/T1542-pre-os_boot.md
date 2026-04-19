@@ -16,20 +16,9 @@ Adversaries may abuse Pre-OS Boot mechanisms as a way to establish persistence o
 
 Adversaries may overwrite data in boot drivers or firmware such as BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) to persist on systems at a layer below the operating system. This can be particularly difficult to detect as malware at this level will not be detected by host software-based defenses.
 
-## Properties
-
-- id: T1542
-- name: Pre-OS Boot
-- created: 2019-11-13 14:44:49.439000+00:00
-- modified: 2025-10-24 17:49:01.466000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1542.001: System Firmware
-
 ^t1542001-system-firmware
 
 **Parent Technique**
@@ -53,7 +42,6 @@ System firmware like BIOS and (U)EFI underly the functionality of a computer and
 - x_mitre_domains: enterprise-attack
 
 ### T1542.002: Component Firmware
-
 ^t1542002-component-firmware
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Malicious component firmware could provide both a persistent level of access to 
 - x_mitre_domains: enterprise-attack
 
 ### T1542.003: Bootkit
-
 ^t1542003-bootkit
 
 **Parent Technique**
@@ -105,7 +92,6 @@ In UEFI (Unified Extensible Firmware Interface) systems, a bootkit may instead c
 - x_mitre_domains: enterprise-attack
 
 ### T1542.004: ROMMONkit
-
 ^t1542004-rommonkit
 
 **Parent Technique**
@@ -130,7 +116,6 @@ ROMMON is a Cisco network device firmware that functions as a boot loader, boot 
 - x_mitre_domains: enterprise-attack
 
 ### T1542.005: TFTP Boot
-
 ^t1542005-tftp-boot
 
 **Parent Technique**

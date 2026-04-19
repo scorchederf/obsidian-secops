@@ -16,20 +16,9 @@ An adversary may attempt to modify a cloud account's compute service infrastruct
 
 Permissions gained from the modification of infrastructure components may bypass restrictions that prevent access to existing infrastructure. Modifying infrastructure components may also allow an adversary to evade detection and remove evidence of their presence.(Citation: Mandiant M-Trends 2020)
 
-## Properties
-
-- id: T1578
-- name: Modify Cloud Compute Infrastructure
-- created: 2019-08-30 18:03:05.864000+00:00
-- modified: 2025-10-24 17:48:26.284000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1578.001: Create Snapshot
-
 ^t1578001-create-snapshot
 
 **Parent Technique**
@@ -53,7 +42,6 @@ An adversary may [Create Cloud Instance](https://attack.mitre.org/techniques/T15
 - x_mitre_domains: enterprise-attack
 
 ### T1578.002: Create Cloud Instance
-
 ^t1578002-create-cloud-instance
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Creating a new instance may also allow an adversary to carry out malicious activ
 - x_mitre_domains: enterprise-attack
 
 ### T1578.003: Delete Cloud Instance
-
 ^t1578003-delete-cloud-instance
 
 **Parent Technique**
@@ -101,7 +88,6 @@ An adversary may also [Create Cloud Instance](https://attack.mitre.org/technique
 - x_mitre_domains: enterprise-attack
 
 ### T1578.004: Revert Cloud Instance
-
 ^t1578004-revert-cloud-instance
 
 **Parent Technique**
@@ -125,7 +111,6 @@ Another variation of this technique is to utilize temporary storage attached to 
 - x_mitre_domains: enterprise-attack
 
 ### T1578.005: Modify Cloud Compute Configurations
-
 ^t1578005-modify-cloud-compute-configurations
 
 **Parent Technique**

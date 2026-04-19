@@ -34,20 +34,9 @@ Information stored in a repository may vary based on the specific instance or en
 
 In some cases, information repositories have been improperly secured, typically by unintentionally allowing for overly-broad access by all users or even public access to unauthenticated users. This is particularly common with cloud-native or cloud-hosted services, such as AWS Relational Database Service (RDS), Redis, or ElasticSearch.(Citation: Mitiga)(Citation: TrendMicro Exposed Redis 2020)(Citation: Cybernews Reuters Leak 2022)
 
-## Properties
-
-- id: T1213
-- name: Data from Information Repositories
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:26.262000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1213.001: Confluence
-
 ^t1213001-confluence
 
 **Parent Technique**
@@ -80,7 +69,6 @@ Adversaries may leverage Confluence repositories to mine valuable information. O
 - x_mitre_domains: enterprise-attack
 
 ### T1213.002: Sharepoint
-
 ^t1213002-sharepoint
 
 **Parent Technique**
@@ -112,7 +100,6 @@ Adversaries may leverage the SharePoint repository as a source to mine valuable 
 - x_mitre_domains: enterprise-attack
 
 ### T1213.003: Code Repositories
-
 ^t1213003-code-repositories
 
 **Parent Technique**
@@ -138,7 +125,6 @@ Once adversaries gain access to a victim network or a private code repository, t
 - x_mitre_domains: enterprise-attack
 
 ### T1213.004: Customer Relationship Management Software
-
 ^t1213004-customer-relationship-management-software
 
 **Parent Technique**
@@ -164,7 +150,6 @@ CRM software may be hosted on-premises or in the cloud. Information stored in th
 - x_mitre_domains: enterprise-attack
 
 ### T1213.005: Messaging Applications
-
 ^t1213005-messaging-applications
 
 **Parent Technique**
@@ -196,7 +181,6 @@ In addition to exfiltrating data from messaging applications, adversaries may le
 - x_mitre_domains: enterprise-attack
 
 ### T1213.006: Databases
-
 ^t1213006-databases
 
 **Parent Technique**

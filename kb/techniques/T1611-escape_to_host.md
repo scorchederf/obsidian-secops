@@ -22,16 +22,6 @@ In ESXi environments, an adversary may exploit a vulnerability in order to escap
 
 Gaining access to the host may provide the adversary with the opportunity to achieve follow-on objectives, such as establishing persistence, moving laterally within the environment, accessing other containers or virtual machines running on the host, or setting up a command and control channel on the host.
 
-## Properties
-
-- id: T1611
-- name: Escape to Host
-- created: 2021-03-30 17:38:34.277000+00:00
-- modified: 2025-10-24 17:48:44.317000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1026-privileged_account_management|M1026: Privileged Account Management]]
@@ -49,5 +39,5 @@ Gaining access to the host may provide the adversary with the opportunity to ach
 
 ## Tools
 
-- [[S0683-peirates|S0683: Peirates]]
+- [[peirates|Peirates]]
 

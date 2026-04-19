@@ -21,16 +21,6 @@ System file associations are listed under <code>HKEY_CLASSES_ROOT\.[extension]</
 
 The values of the keys listed are commands that are executed when the handler opens the file extension. Adversaries can modify these values to continually execute arbitrary commands. (Citation: TrendMicro TROJ-FAKEAV OCT 2012)
 
-## Properties
-
-- id: T1042
-- name: Change Default File Association
-- created: 2017-05-31 21:30:42.222000+00:00
-- modified: 2025-10-24 17:48:53.818000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

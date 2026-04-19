@@ -23,20 +23,9 @@ Resource hijacking may take a number of different forms. For example, adversarie
 
 In some cases, adversaries may leverage multiple types of Resource Hijacking at once.(Citation: Sysdig Cryptojacking Proxyjacking 2023)
 
-## Properties
-
-- id: T1496
-- name: Resource Hijacking
-- created: 2019-04-17 14:50:05.682000+00:00
-- modified: 2025-10-24 17:49:24.276000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1496.001: Compute Hijacking
-
 ^t1496001-compute-hijacking
 
 **Parent Technique**
@@ -62,7 +51,6 @@ Additionally, some cryptocurrency mining malware identify then kill off processe
 - x_mitre_domains: enterprise-attack
 
 ### T1496.002: Bandwidth Hijacking
-
 ^t1496002-bandwidth-hijacking
 
 **Parent Technique**
@@ -88,7 +76,6 @@ In addition to incurring potential financial costs or availability disruptions, 
 - x_mitre_domains: enterprise-attack
 
 ### T1496.003: SMS Pumping
-
 ^t1496003-sms-pumping
 
 **Parent Technique**
@@ -112,7 +99,6 @@ Threat actors often use publicly available web forms, such as one-time password 
 - x_mitre_domains: enterprise-attack
 
 ### T1496.004: Cloud Service Hijacking
-
 ^t1496004-cloud-service-hijacking
 
 **Parent Technique**

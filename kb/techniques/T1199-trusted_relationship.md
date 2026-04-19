@@ -18,16 +18,6 @@ Organizations often grant elevated access to second or third-party external prov
 
 In Office 365 environments, organizations may grant Microsoft partners or resellers delegated administrator permissions. By compromising a partner or reseller account, an adversary may be able to leverage existing delegated administrator relationships or send new delegated administrator offers to clients in order to gain administrative control over the victim tenant.(Citation: Office 365 Delegated Administration)
 
-## Properties
-
-- id: T1199
-- name: Trusted Relationship
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-11-12 15:42:52.705000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.4
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1018-user_account_management|M1018: User Account Management]]

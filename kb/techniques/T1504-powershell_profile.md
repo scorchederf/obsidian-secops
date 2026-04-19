@@ -18,16 +18,6 @@ Adversaries may modify these profiles to include arbitrary commands, functions, 
 
 An adversary may also be able to escalate privileges if a script in a PowerShell profile is loaded and executed by an account with higher privileges, such as a domain administrator. (Citation: Wits End and Shady PowerShell Profiles)
 
-## Properties
-
-- id: T1504
-- name: PowerShell Profile
-- created: 2019-06-14 18:53:49.472000+00:00
-- modified: 2025-10-24 17:48:57.057000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

@@ -15,20 +15,9 @@ x_mitre_domains: enterprise-attack
 Adversaries may modify visual content available internally or externally to an enterprise network, thus affecting the integrity of the original content. Reasons for [Defacement](https://attack.mitre.org/techniques/T1491) include delivering messaging, intimidation, or claiming (possibly false) credit for an intrusion. Disturbing or offensive images may be used as a part of [Defacement](https://attack.mitre.org/techniques/T1491) in order to cause user discomfort, or to pressure compliance with accompanying messages. 
 
 
-## Properties
-
-- id: T1491
-- name: Defacement
-- created: 2019-04-08 17:51:41.390000+00:00
-- modified: 2025-10-24 17:48:49.761000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1491.001: Internal Defacement
-
 ^t1491001-internal-defacement
 
 **Parent Technique**
@@ -50,7 +39,6 @@ An adversary may deface systems internal to an organization in an attempt to int
 - x_mitre_domains: enterprise-attack
 
 ### T1491.002: External Defacement
-
 ^t1491002-external-defacement
 
 **Parent Technique**

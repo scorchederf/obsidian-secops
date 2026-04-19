@@ -16,20 +16,9 @@ Adversaries may bypass process and/or signature-based defenses by proxying execu
 
 Similarly, on Linux systems adversaries may abuse trusted binaries such as <code>split</code> to proxy execution of malicious commands.(Citation: split man page)(Citation: GTFO split)
 
-## Properties
-
-- id: T1218
-- name: System Binary Proxy Execution
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:43.406000+00:00
-- type: attack-pattern
-- x_mitre_version: 3.2
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1218.001: Compiled HTML File
-
 ^t1218001-compiled-html-file
 
 **Parent Technique**
@@ -53,7 +42,6 @@ A custom CHM file containing embedded payloads could be delivered to a victim th
 - x_mitre_domains: enterprise-attack
 
 ### T1218.002: Control Panel
-
 ^t1218002-control-panel
 
 **Parent Technique**
@@ -81,7 +69,6 @@ Adversaries may also rename malicious DLL files (.dll) with Control Panel file e
 - x_mitre_domains: enterprise-attack
 
 ### T1218.003: CMSTP
-
 ^t1218003-cmstp
 
 **Parent Technique**
@@ -107,7 +94,6 @@ CMSTP.exe can also be abused to [Bypass User Account Control](https://attack.mit
 - x_mitre_domains: enterprise-attack
 
 ### T1218.004: InstallUtil
-
 ^t1218004-installutil
 
 **Parent Technique**
@@ -131,7 +117,6 @@ InstallUtil may also be used to bypass application control through use of attrib
 - x_mitre_domains: enterprise-attack
 
 ### T1218.005: Mshta
-
 ^t1218005-mshta
 
 **Parent Technique**
@@ -161,7 +146,6 @@ Mshta.exe can be used to bypass application control solutions that do not accoun
 - x_mitre_domains: enterprise-attack
 
 ### T1218.007: Msiexec
-
 ^t1218007-msiexec
 
 **Parent Technique**
@@ -185,7 +169,6 @@ Adversaries may abuse msiexec.exe to launch local or network accessible MSI file
 - x_mitre_domains: enterprise-attack
 
 ### T1218.008: Odbcconf
-
 ^t1218008-odbcconf
 
 **Parent Technique**
@@ -210,7 +193,6 @@ Adversaries may abuse odbcconf.exe to bypass application control solutions that 
 - x_mitre_domains: enterprise-attack
 
 ### T1218.009: Regsvcs/Regasm
-
 ^t1218009-regsvcs-regasm
 
 **Parent Technique**
@@ -234,7 +216,6 @@ Both utilities may be used to bypass application control through use of attribut
 - x_mitre_domains: enterprise-attack
 
 ### T1218.010: Regsvr32
-
 ^t1218010-regsvr32
 
 **Parent Technique**
@@ -260,7 +241,6 @@ Regsvr32.exe can also be leveraged to register a COM Object used to establish pe
 - x_mitre_domains: enterprise-attack
 
 ### T1218.011: Rundll32
-
 ^t1218011-rundll32
 
 **Parent Technique**
@@ -292,7 +272,6 @@ Additionally, adversaries may use [Masquerading](https://attack.mitre.org/techni
 - x_mitre_domains: enterprise-attack
 
 ### T1218.012: Verclsid
-
 ^t1218012-verclsid
 
 **Parent Technique**
@@ -316,7 +295,6 @@ Adversaries may abuse verclsid.exe to execute malicious payloads. This may be ac
 - x_mitre_domains: enterprise-attack
 
 ### T1218.013: Mavinject
-
 ^t1218013-mavinject
 
 **Parent Technique**
@@ -342,7 +320,6 @@ In addition to [Dynamic-link Library Injection](https://attack.mitre.org/techniq
 - x_mitre_domains: enterprise-attack
 
 ### T1218.014: MMC
-
 ^t1218014-mmc
 
 **Parent Technique**
@@ -370,7 +347,6 @@ Adversaries may also abuse MMC to execute malicious .msc files. For example, adv
 - x_mitre_domains: enterprise-attack
 
 ### T1218.015: Electron Applications
-
 ^t1218015-electron-applications
 
 **Parent Technique**

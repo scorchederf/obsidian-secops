@@ -18,16 +18,6 @@ Apps loaded onto the system from USB flash drive, optical disk, external hard dr
  
 In typical operation, a file will be downloaded from the internet and given a quarantine flag before being saved to disk. When the user tries to open the file or application, macOS’s gatekeeper will step in and check for the presence of this flag. If it exists, then macOS will then prompt the user to confirmation that they want to run the program and will even provide the URL where the application came from. However, this is all based on the file being downloaded from a quarantine-savvy application. (Citation: Bypassing Gatekeeper)
 
-## Properties
-
-- id: T1144
-- name: Gatekeeper Bypass
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:48:56.162000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.2
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

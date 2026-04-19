@@ -16,20 +16,9 @@ Adversaries may insert, delete, or manipulate data in order to influence externa
 
 The type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
 
-## Properties
-
-- id: T1565
-- name: Data Manipulation
-- created: 2020-03-02 14:19:22.609000+00:00
-- modified: 2025-10-24 17:49:13.111000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1565.001: Stored Data Manipulation
-
 ^t1565001-stored-data-manipulation
 
 **Parent Technique**
@@ -53,7 +42,6 @@ Stored data could include a variety of file formats, such as Office files, datab
 - x_mitre_domains: enterprise-attack
 
 ### T1565.002: Transmitted Data Manipulation
-
 ^t1565002-transmitted-data-manipulation
 
 **Parent Technique**
@@ -77,7 +65,6 @@ Manipulation may be possible over a network connection or between system process
 - x_mitre_domains: enterprise-attack
 
 ### T1565.003: Runtime Data Manipulation
-
 ^t1565003-runtime-data-manipulation
 
 **Parent Technique**

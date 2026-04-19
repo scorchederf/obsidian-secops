@@ -19,16 +19,6 @@ A directory share pivot is a variation on this technique that uses several other
 
 Adversaries may also compromise shared network directories through binary infections by appending or prepending its code to the healthy binary on the shared network directory. The malware may modify the original entry point (OEP) of the healthy binary to ensure that it is executed before the legitimate code. The infection could continue to spread via the newly infected file when it is executed by a remote system. These infections may target both binary and non-binary formats that end with extensions including, but not limited to, .EXE, .DLL, .SCR, .BAT, and/or .VBS.
 
-## Properties
-
-- id: T1080
-- name: Taint Shared Content
-- created: 2017-05-31 21:31:01.759000+00:00
-- modified: 2025-10-24 17:48:32.156000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1022-restrict_file_and_directory_permissions|M1022: Restrict File and Directory Permissions]]

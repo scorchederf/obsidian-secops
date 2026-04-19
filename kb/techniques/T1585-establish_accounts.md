@@ -19,20 +19,9 @@ For operations incorporating social engineering, the utilization of an online pe
 Establishing accounts can also include the creation of accounts with email providers, which may be directly leveraged for [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Phishing](https://attack.mitre.org/techniques/T1566).(Citation: Mandiant APT1) In addition, establishing accounts may allow adversaries to abuse free services, such as registering for trial periods to [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) for malicious purposes.(Citation: Free Trial PurpleUrchin)
 
 
-## Properties
-
-- id: T1585
-- name: Establish Accounts
-- created: 2020-10-01 01:05:42.216000+00:00
-- modified: 2025-10-24 17:49:24.456000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.3
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1585.001: Social Media Accounts
-
 ^t1585001-social-media-accounts
 
 **Parent Technique**
@@ -58,7 +47,6 @@ Once a persona has been developed an adversary can use it to create connections 
 - x_mitre_domains: enterprise-attack
 
 ### T1585.002: Email Accounts
-
 ^t1585002-email-accounts
 
 **Parent Technique**
@@ -84,7 +72,6 @@ To decrease the chance of physically tying back operations to themselves, advers
 - x_mitre_domains: enterprise-attack
 
 ### T1585.003: Cloud Accounts
-
 ^t1585003-cloud-accounts
 
 **Parent Technique**

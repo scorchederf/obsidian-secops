@@ -18,16 +18,6 @@ Adversaries may install a new launch daemon that can be configured to execute at
  
 The plist file permissions must be root:wheel, but the script or program that it points to has no such requirement. So, it is possible for poor configurations to allow an adversary to modify a current Launch Daemon’s executable and gain persistence or Privilege Escalation.
 
-## Properties
-
-- id: T1160
-- name: Launch Daemon
-- created: 2017-12-14 16:46:06.044000+00:00
-- modified: 2025-10-24 17:49:33.254000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - macOS

@@ -20,20 +20,9 @@ To maximize impact on the target organization in operations where network-wide a
 
 In cloud environments, adversaries may leverage access to delete cloud storage objects, machine images, database instances, and other infrastructure crucial to operations to damage an organization or their customers.(Citation: Data Destruction - Threat Post)(Citation: DOJ  - Cisco Insider) Similarly, they may delete virtual machines from on-prem virtualized environments.
 
-## Properties
-
-- id: T1485
-- name: Data Destruction
-- created: 2019-03-14 18:47:17.701000+00:00
-- modified: 2025-10-24 17:49:27.149000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.4
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1485.001: Lifecycle-Triggered Deletion
-
 ^t1485001-lifecycle-triggered-deletion
 
 **Parent Technique**
@@ -75,6 +64,6 @@ For example, in AWS environments, an adversary with the `PutLifecycleConfigurati
 
 ## Tools
 
-- [[S0195-sdelete|S0195: SDelete]]
-- [[S0364-rawdisk|S0364: RawDisk]]
+- [[rawdisk|RawDisk]]
+- [[sdelete|SDelete]]
 

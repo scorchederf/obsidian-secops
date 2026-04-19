@@ -18,16 +18,6 @@ DGAs can take the form of apparently random or “gibberish” strings (ex: istg
 
 Adversaries may use DGAs for the purpose of [Fallback Channels](https://attack.mitre.org/techniques/T1008). When contact is lost with the primary command and control server malware may employ a DGA as a means to reestablishing command and control.(Citation: Talos CCleanup 2017)(Citation: FireEye POSHSPY April 2017)(Citation: ESET Sednit 2017 Activity)
 
-## Properties
-
-- id: T1483
-- name: Domain Generation Algorithms
-- created: 2019-02-18 17:22:57.831000+00:00
-- modified: 2025-10-24 17:48:48.299000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Linux

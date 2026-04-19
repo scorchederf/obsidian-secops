@@ -16,16 +16,6 @@ Dynamic-link libraries (DLLs) that are specified in the AppInit_DLLs value in th
 
 The AppInit DLL functionality is disabled in Windows 8 and later versions when secure boot is enabled. (Citation: AppInit Secure Boot)
 
-## Properties
-
-- id: T1103
-- name: AppInit DLLs
-- created: 2017-05-31 21:31:15.409000+00:00
-- modified: 2025-10-24 17:48:36.436000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows

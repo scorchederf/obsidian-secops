@@ -19,20 +19,9 @@ Adversaries may attempt to infer the location of a system using various system c
 
 Adversaries may also attempt to infer the location of a victim host using IP addressing, such as via online geolocation IP-lookup services.(Citation: Securelist Trasparent Tribe 2020)(Citation: Sophos Geolocation 2016)
 
-## Properties
-
-- id: T1614
-- name: System Location Discovery
-- created: 2021-04-01 16:42:08.735000+00:00
-- modified: 2025-10-24 17:49:22.536000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1614.001: System Language Discovery
-
 ^t1614001-system-language-discovery
 
 **Parent Technique**
@@ -68,5 +57,5 @@ On a macOS or Linux system, adversaries may query <code>locale</code> to retriev
 
 ## Tools
 
-- [[S0262-quasarrat|S0262: QuasarRAT]]
+- [[quasarrat|QuasarRAT]]
 

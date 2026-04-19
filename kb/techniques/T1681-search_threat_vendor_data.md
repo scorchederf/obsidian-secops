@@ -18,16 +18,6 @@ Adversaries have been observed replacing atomic indicators mentioned in blog pos
 
 This technique is distinct from [Threat Intel Vendors](https://attack.mitre.org/techniques/T1597/001) in that it describes threat actors performing reconnaissance on their own activity, not in search of victim information. 
 
-## Properties
-
-- id: T1681
-- name: Search Threat Vendor Data
-- created: 2025-09-26 15:42:30.468000+00:00
-- modified: 2025-10-24 17:48:51.996000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1056-pre-compromise|M1056: Pre-compromise]]

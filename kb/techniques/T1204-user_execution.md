@@ -25,20 +25,9 @@ Adversaries may also deceive users into performing actions such as:
 
 For example, tech support scams can be facilitated through [Phishing](https://attack.mitre.org/techniques/T1566), vishing, or various forms of user interaction. Adversaries can use a combination of these methods, such as spoofing and promoting toll-free numbers or call centers that are used to direct victims to malicious websites, to deliver and execute payloads containing malware or [Remote Access Tools](https://attack.mitre.org/techniques/T1219).(Citation: Telephone Attack Delivery)
 
-## Properties
-
-- id: T1204
-- name: User Execution
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:49:04.940000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.8
-- x_mitre_domains: enterprise-attack
-
 ## Subtechniques
 
 ### T1204.001: Malicious Link
-
 ^t1204001-malicious-link
 
 **Parent Technique**
@@ -60,7 +49,6 @@ An adversary may rely upon a user clicking a malicious link in order to gain exe
 - x_mitre_domains: enterprise-attack
 
 ### T1204.002: Malicious File
-
 ^t1204002-malicious-file
 
 **Parent Technique**
@@ -86,7 +74,6 @@ While [Malicious File](https://attack.mitre.org/techniques/T1204/002) frequently
 - x_mitre_domains: enterprise-attack
 
 ### T1204.003: Malicious Image
-
 ^t1204003-malicious-image
 
 **Parent Technique**
@@ -110,7 +97,6 @@ Adversaries may also name images a certain way to increase the chance of users m
 - x_mitre_domains: enterprise-attack
 
 ### T1204.004: Malicious Copy and Paste
-
 ^t1204004-malicious-copy-and-paste
 
 **Parent Technique**
@@ -138,7 +124,6 @@ Tricking a user into executing a command themselves may help to bypass email fil
 - x_mitre_domains: enterprise-attack
 
 ### T1204.005: Malicious Library
-
 ^t1204005-malicious-library
 
 **Parent Technique**

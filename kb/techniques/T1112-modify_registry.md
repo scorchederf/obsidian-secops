@@ -22,16 +22,6 @@ The Registry of a remote system may be modified to aid in execution of files as 
 
 Finally, Registry modifications may also include actions to hide keys, such as prepending key names with a null character, which will cause an error and/or be ignored when read via [Reg](https://attack.mitre.org/software/S0075) or other utilities using the Win32 API.(Citation: Microsoft Reghide NOV 2006) Adversaries may abuse these pseudo-hidden keys to conceal payloads/commands used to maintain persistence.(Citation: TrendMicro POWELIKS AUG 2014)(Citation: SpectorOps Hiding Reg Jul 2017)
 
-## Properties
-
-- id: T1112
-- name: Modify Registry
-- created: 2017-05-31 21:31:23.587000+00:00
-- modified: 2025-10-24 17:48:49.294000+00:00
-- type: attack-pattern
-- x_mitre_version: 2.0
-- x_mitre_domains: enterprise-attack
-
 ## Mitigations
 
 - [[M1024-restrict_registry_permissions|M1024: Restrict Registry Permissions]]
@@ -42,13 +32,13 @@ Finally, Registry modifications may also include actions to hide keys, such as p
 
 ## Tools
 
-- [[S0075-reg|S0075: Reg]]
-- [[S0262-quasarrat|S0262: QuasarRAT]]
-- [[S0332-remcos|S0332: Remcos]]
-- [[S0488-crackmapexec|S0488: CrackMapExec]]
-- [[S0527-cspy_downloader|S0527: CSPY Downloader]]
-- [[S0677-aadinternals|S0677: AADInternals]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S1050-pcshare|S1050: PcShare]]
-- [[S1131-nppspy|S1131: NPPSPY]]
+- [[aadinternals|AADInternals]]
+- [[crackmapexec|CrackMapExec]]
+- [[cspy_downloader|CSPY Downloader]]
+- [[nppspy|NPPSPY]]
+- [[pcshare|PcShare]]
+- [[quasarrat|QuasarRAT]]
+- [[reg|Reg]]
+- [[remcos|Remcos]]
+- [[silenttrinity|SILENTTRINITY]]
 

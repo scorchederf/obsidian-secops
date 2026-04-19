@@ -18,16 +18,6 @@ In Windows environments, adversaries could obtain details on running processes u
 
 On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `show processes` can be used to display current running processes.(Citation: US-CERT-TA18-106A)(Citation: show_processes_cisco_cmd)
 
-## Properties
-
-- id: T1057
-- name: Process Discovery
-- created: 2017-05-31 21:30:48.728000+00:00
-- modified: 2025-10-24 17:49:05.839000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.6
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - ESXi
@@ -38,16 +28,16 @@ On network devices, [Network Device CLI](https://attack.mitre.org/techniques/T10
 
 ## Tools
 
-- [[S0057-tasklist|S0057: Tasklist]]
-- [[S0192-pupy|S0192: Pupy]]
-- [[S0194-powersploit|S0194: PowerSploit]]
-- [[S0363-empire|S0363: Empire]]
-- [[S0434-imminent_monitor|S0434: Imminent Monitor]]
-- [[S0445-shimratreporter|S0445: ShimRatReporter]]
-- [[S0581-ironnetinjector|S0581: IronNetInjector]]
-- [[S0692-silenttrinity|S0692: SILENTTRINITY]]
-- [[S0695-donut|S0695: Donut]]
-- [[S1050-pcshare|S1050: PcShare]]
-- [[S1063-brute_ratel_c4|S1063: Brute Ratel C4]]
-- [[S1087-asyncrat|S1087: AsyncRAT]]
+- [[asyncrat|AsyncRAT]]
+- [[brute_ratel_c4|Brute Ratel C4]]
+- [[donut|Donut]]
+- [[empire|Empire]]
+- [[imminent_monitor|Imminent Monitor]]
+- [[ironnetinjector|IronNetInjector]]
+- [[pcshare|PcShare]]
+- [[powersploit|PowerSploit]]
+- [[pupy|Pupy]]
+- [[shimratreporter|ShimRatReporter]]
+- [[silenttrinity|SILENTTRINITY]]
+- [[tasklist|Tasklist]]
 

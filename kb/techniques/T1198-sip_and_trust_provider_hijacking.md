@@ -25,16 +25,6 @@ Similar to [Code Signing](https://attack.mitre.org/techniques/T1116), adversarie
 
 Hijacking SIP or trust provider components can also enable persistent code execution, since these malicious components may be invoked by any application that performs code signing or signature validation. (Citation: SpectorOps Subverting Trust Sept 2017)
 
-## Properties
-
-- id: T1198
-- name: SIP and Trust Provider Hijacking
-- created: 2018-04-18 17:59:24.739000+00:00
-- modified: 2025-10-24 17:48:57.144000+00:00
-- type: attack-pattern
-- x_mitre_version: 1.1
-- x_mitre_domains: enterprise-attack
-
 ## Platforms
 
 - Windows
