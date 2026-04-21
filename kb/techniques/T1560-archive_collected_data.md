@@ -8,10 +8,6 @@ x_mitre_version: 1.0
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[collection|Collection]]
-
 An adversary may compress and/or encrypt data that is collected prior to exfiltration. Compressing the data can help to obfuscate the collected data and minimize the amount of data sent over the network.(Citation: DOJ GRU Indictment Jul 2018) Encryption can be used to hide information that is being exfiltrated from detection or make exfiltration less conspicuous upon inspection by a defender.
 
 Both compression and encryption are done prior to exfiltration, and can be performed using a utility, 3rd party library, or custom method.
@@ -21,12 +17,6 @@ Both compression and encryption are done prior to exfiltration, and can be perfo
 ### T1560.001: Archive via Utility
 
 ^t1560001-archive-via-utility
-
-**Parent Technique**
-- [[T1560-archive_collected_data|T1560: Archive Collected Data]]
-
-**Tactic**
-- [[collection|Collection]]
 
 Adversaries may use utilities to compress and/or encrypt collected data prior to exfiltration. Many utilities include functionalities to compress, encrypt, or otherwise package data into a format that is easier/more secure to transport.
 
@@ -40,12 +30,6 @@ Adversaries may use also third party utilities, such as 7-Zip, WinRAR, and WinZi
 
 ^t1560002-archive-via-library
 
-**Parent Technique**
-- [[T1560-archive_collected_data|T1560: Archive Collected Data]]
-
-**Tactic**
-- [[collection|Collection]]
-
 An adversary may compress or encrypt data that is collected prior to exfiltration using 3rd party libraries. Many libraries exist that can archive data, including [Python](https://attack.mitre.org/techniques/T1059/006) rarfile (Citation: PyPI RAR), libzip (Citation: libzip), and zlib (Citation: Zlib Github). Most libraries include functionality to encrypt and/or compress data.
 
 Some archival libraries are preinstalled on systems, such as bzip2 on macOS and Linux, and zip on Windows. Note that the libraries are different from the utilities. The libraries can be linked against when compiling, while the utilities require spawning a subshell, or a similar execution mechanism.
@@ -53,12 +37,6 @@ Some archival libraries are preinstalled on systems, such as bzip2 on macOS and 
 ### T1560.003: Archive via Custom Method
 
 ^t1560003-archive-via-custom-method
-
-**Parent Technique**
-- [[T1560-archive_collected_data|T1560: Archive Collected Data]]
-
-**Tactic**
-- [[collection|Collection]]
 
 An adversary may compress or encrypt data that is collected prior to exfiltration using a custom method. Adversaries may choose to use custom archival methods, such as encryption with XOR or stream ciphers implemented with no external library or utility references. Custom implementations of well-known compression algorithms have also been used.(Citation: ESET Sednit Part 2)
 

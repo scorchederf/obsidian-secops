@@ -8,10 +8,6 @@ x_mitre_version: 1.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[command_and_control|Command and Control]]
-
 Adversaries may use a custom cryptographic protocol or algorithm to hide command and control traffic. A simple scheme, such as XOR-ing the plaintext with a fixed key, will produce a very weak ciphertext.
 
 Custom encryption schemes may vary in sophistication. Analysis and reverse engineering of malware samples may be enough to discover the algorithm and encryption key used.

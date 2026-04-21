@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[credential_access|Credential Access]]
-
 Adversaries may forge credential materials that can be used to gain access to web applications or Internet services. Web applications and services (hosted in cloud SaaS environments or on-premise servers) often use session cookies, tokens, or other materials to authenticate and authorize user access.
 
 Adversaries may generate these credential materials in order to gain access to web resources. This differs from [Steal Web Session Cookie](https://attack.mitre.org/techniques/T1539), [Steal Application Access Token](https://attack.mitre.org/techniques/T1528), and other similar behaviors in that the credentials are new and forged by the adversary, rather than stolen or intercepted from legitimate users.
@@ -26,12 +22,6 @@ Once forged, adversaries may use these web credentials to access resources (ex: 
 
 ^t1606001-web-cookies
 
-**Parent Technique**
-- [[T1606-forge_web_credentials|T1606: Forge Web Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may forge web cookies that can be used to gain access to web applications or Internet services. Web applications and services (hosted in cloud SaaS environments or on-premise servers) often use session cookies to authenticate and authorize user access.
 
 Adversaries may generate these cookies in order to gain access to web resources. This differs from [Steal Web Session Cookie](https://attack.mitre.org/techniques/T1539) and other similar behaviors in that the cookies are new and forged by the adversary, rather than stolen or intercepted from legitimate users. Most common web applications have standardized and documented cookie values that can be generated using provided tools or interfaces.(Citation: Pass The Cookie) The generation of web cookies often requires secret values, such as passwords, [Private Keys](https://attack.mitre.org/techniques/T1552/004), or other cryptographic seed values.
@@ -41,12 +31,6 @@ Once forged, adversaries may use these web cookies to access resources ([Web Ses
 ### T1606.002: SAML Tokens
 
 ^t1606002-saml-tokens
-
-**Parent Technique**
-- [[T1606-forge_web_credentials|T1606: Forge Web Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 An adversary may forge SAML tokens with any permissions claims and lifetimes if they possess a valid SAML token-signing certificate.(Citation: Microsoft SolarWinds Steps) The default lifetime of a SAML token is one hour, but the validity period can be specified in the <code>NotOnOrAfter</code> value of the <code>conditions ...</code> element in a token. This value can be changed using the <code>AccessTokenLifetime</code> in a <code>LifetimeTokenPolicy</code>.(Citation: Microsoft SAML Token Lifetimes) Forged SAML tokens enable adversaries to authenticate across services that use SAML 2.0 as an SSO (single sign-on) mechanism.(Citation: Cyberark Golden SAML)
 

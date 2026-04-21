@@ -8,10 +8,6 @@ x_mitre_version: 1.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[command_and_control|Command and Control]]
-
 Adversaries may explicitly employ a known encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Despite the use of a secure algorithm, these implementations may be vulnerable to reverse engineering if necessary secret keys are encoded and/or generated within malware samples/configuration files.
 
 ## Platforms

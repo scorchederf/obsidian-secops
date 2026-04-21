@@ -8,10 +8,6 @@ x_mitre_version: 1.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may compromise a network device’s encryption capability in order to bypass encryption that would otherwise protect data communications. (Citation: Cisco Synful Knock Evolution)
 
 Encryption can be used to protect transmitted network traffic to maintain its confidentiality (protect against unauthorized disclosure) and integrity (protect against unauthorized changes). Encryption ciphers are used to convert a plaintext message to ciphertext and can be computationally intensive to decipher without the associated decryption key. Typically, longer keys increase the cost of cryptanalysis, or decryption without the key.
@@ -24,12 +20,6 @@ Adversaries can compromise and manipulate devices that perform encryption of net
 
 ^t1600001-reduce-key-space
 
-**Parent Technique**
-- [[T1600-weaken_encryption|T1600: Weaken Encryption]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may reduce the level of effort required to decrypt data transmitted over the network by reducing the cipher strength of encrypted communications.(Citation: Cisco Synful Knock Evolution)
 
 Adversaries can weaken the encryption software on a compromised network device by reducing the key size used by the software to convert plaintext to ciphertext (e.g., from hundreds or thousands of bytes to just a couple of bytes). As a result, adversaries dramatically reduce the amount of effort needed to decrypt the protected information without the key.
@@ -39,12 +29,6 @@ Adversaries may modify the key size used and other encryption parameters using s
 ### T1600.002: Disable Crypto Hardware
 
 ^t1600002-disable-crypto-hardware
-
-**Parent Technique**
-- [[T1600-weaken_encryption|T1600: Weaken Encryption]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries disable a network device’s dedicated hardware encryption, which may enable them to leverage weaknesses in software encryption in order to reduce the effort involved in collecting, manipulating, and exfiltrating transmitted data.
 

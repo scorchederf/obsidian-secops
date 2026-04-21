@@ -8,10 +8,6 @@ x_mitre_version: 1.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[discovery|Discovery]]
-
 
 Adversaries may gather information in an attempt to calculate the geographical location of a victim host. Adversaries may use the information from [System Location Discovery](https://attack.mitre.org/techniques/T1614) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.
 
@@ -24,12 +20,6 @@ Adversaries may also attempt to infer the location of a victim host using IP add
 ### T1614.001: System Language Discovery
 
 ^t1614001-system-language-discovery
-
-**Parent Technique**
-- [[T1614-system_location_discovery|T1614: System Location Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
 
 Adversaries may attempt to gather information about the system language of a victim in order to infer the geographical location of that host. This information may be used to shape follow-on behaviors, including whether the adversary infects the target and/or attempts specific actions. This decision may be employed by malware developers and operators to reduce their risk of attracting the attention of specific law enforcement agencies or prosecution/scrutiny from other entities.(Citation: Malware System Language Check)
 

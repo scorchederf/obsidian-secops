@@ -8,10 +8,6 @@ x_mitre_version: 1.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may bridge network boundaries by compromising perimeter network devices or internal devices responsible for network segmentation. Breaching these devices may enable an adversary to bypass restrictions on traffic routing that otherwise separate trusted and untrusted networks.
 
 Devices such as routers and firewalls can be used to create boundaries between trusted and untrusted networks.  They achieve this by restricting traffic types to enforce organizational policy in an attempt to reduce the risk inherent in such connections.  Restriction of traffic can be achieved by prohibiting IP addresses, layer 4 protocol ports, or through deep packet inspection to identify applications.  To participate with the rest of the network, these devices can be directly addressable or transparent, but their mode of operation has no bearing on how the adversary can bypass them when compromised.
@@ -23,12 +19,6 @@ When an adversary takes control of such a boundary device, they can bypass its p
 ### T1599.001: Network Address Translation Traversal
 
 ^t1599001-network-address-translation-traversal
-
-**Parent Technique**
-- [[T1599-network_boundary_bridging|T1599: Network Boundary Bridging]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may bridge network boundaries by modifying a network device’s Network Address Translation (NAT) configuration. Malicious modifications to NAT may enable an adversary to bypass restrictions on traffic routing that otherwise separate trusted and untrusted networks.
 

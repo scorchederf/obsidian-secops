@@ -8,10 +8,6 @@ x_mitre_version: 1.7
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[initial_access|Initial Access]]
-
 Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.
 
 Supply chain compromise can take place at any stage of the supply chain including:
@@ -36,12 +32,6 @@ In some cases, adversaries may conduct “second-order” supply chain compromis
 
 ^t1195001-compromise-software-dependencies-and-development-tools
 
-**Parent Technique**
-- [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
-
 Adversaries may manipulate software dependencies and development tools prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source projects that are used as dependencies in many applications, such as pip and NPM packages, may be targeted as a means to add malicious code to users of the dependency.(Citation: Trendmicro NPM Compromise)(Citation: Bitdefender NPM Repositories Compromised 2021)(Citation: MANDVI Malicious npm and PyPI Packages Disguised) This may also include abandoned packages, which in some cases could be re-registered by threat actors after being removed by adversaries.(Citation: The Hacker News PyPi Revival Hijack 2024) Adversaries may also employ "typosquatting" or name-confusion by choosing names similar to existing popular libraries or packages in order to deceive a user.(Citation: Ahmed Backdoors in Python and NPM Packages)(Citation: Meyer PyPI Supply Chain Attack Uncovered)(Citation: Checkmarx-oss-seo)
 
 Additionally, CI/CD pipeline components, such as GitHub Actions, may be targeted in order to gain access to the building, testing, and deployment cycles of an application.(Citation: Unit 42 Palo Alto GitHub Actions Supply Chain Attack 2025) By adding malicious code into a GitHub action, a threat actor may be able to collect runtime credentials (e.g., via [Proc Filesystem](https://attack.mitre.org/techniques/T1003/007)) or insert further malicious components into the build pipelines for a second-order supply chain compromise.(Citation: OWASP CICD-SEC-4) As GitHub Actions are often dependent on other GitHub Actions, threat actors may be able to infect a large number of repositories via the compromise of a single Action.(Citation: Palo Alto Networks GitHub Actions Worm 2023)
@@ -52,12 +42,6 @@ Targeting may be specific to a desired victim set or may be distributed to a bro
 
 ^t1195002-compromise-software-supply-chain
 
-**Parent Technique**
-- [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
-
 Adversaries may manipulate application software prior to receipt by a final consumer for the purpose of data or system compromise. Supply chain compromise of software can take place in a number of ways, including manipulation of the application source code, manipulation of the update/distribution mechanism for that software, or replacing compiled releases with a modified version.
 
 Targeting may be specific to a desired victim set or may be distributed to a broad set of consumers but only move on to additional tactics on specific victims.(Citation: Avast CCleaner3 2018)(Citation: Command Five SK 2011)  
@@ -65,12 +49,6 @@ Targeting may be specific to a desired victim set or may be distributed to a bro
 ### T1195.003: Compromise Hardware Supply Chain
 
 ^t1195003-compromise-hardware-supply-chain
-
-**Parent Technique**
-- [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
 
 Adversaries may manipulate hardware components in products prior to receipt by a final consumer for the purpose of data or system compromise. By modifying hardware or firmware in the supply chain, adversaries can insert a backdoor into consumer networks that may be difficult to detect and give the adversary a high degree of control over the system. Hardware backdoors may be inserted into various devices, such as servers, workstations, network infrastructure, or peripherals.
 

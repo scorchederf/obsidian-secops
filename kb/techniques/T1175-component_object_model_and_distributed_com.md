@@ -8,10 +8,6 @@ x_mitre_version: 2.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[lateral_movement|Lateral Movement]]
-
 **This technique has been deprecated. Please use [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003) and [Component Object Model](https://attack.mitre.org/techniques/T1559/001).**
 
 Adversaries may use the Windows Component Object Model (COM) and Distributed Component Object Model (DCOM) for local code execution or to execute on remote systems as part of lateral movement. 

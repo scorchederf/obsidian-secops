@@ -8,10 +8,6 @@ x_mitre_version: 1.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[exfiltration|Exfiltration]]
-
 Adversaries may attempt to exfiltrate data over a different network medium than the command and control channel. If the command and control network is a wired Internet connection, the exfiltration may occur, for example, over a WiFi connection, modem, cellular data connection, Bluetooth, or another radio frequency (RF) channel.
 
 Adversaries may choose to do this if they have sufficient access or proximity, and the connection might not be secured or defended as well as the primary Internet-connected channel because it is not routed through the same enterprise network.
@@ -21,12 +17,6 @@ Adversaries may choose to do this if they have sufficient access or proximity, a
 ### T1011.001: Exfiltration Over Bluetooth
 
 ^t1011001-exfiltration-over-bluetooth
-
-**Parent Technique**
-- [[T1011-exfiltration_over_other_network_medium|T1011: Exfiltration Over Other Network Medium]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
 
 Adversaries may attempt to exfiltrate data over Bluetooth rather than the command and control channel. If the command and control network is a wired Internet connection, an adversary may opt to exfiltrate data using a Bluetooth communication channel.
 

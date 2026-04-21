@@ -8,10 +8,6 @@ x_mitre_version: 1.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[execution|Execution]]
-
 PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system. (Citation: TechNet PowerShell) Adversaries can use PowerShell to perform a number of actions, including discovery of information and execution of code. Examples include the Start-Process cmdlet which can be used to run an executable and the Invoke-Command cmdlet which runs a command locally or on a remote computer. 
 
 PowerShell may also be used to download and run executables from the Internet, which can be executed from disk or in memory without touching disk.

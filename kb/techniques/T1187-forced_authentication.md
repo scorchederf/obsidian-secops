@@ -8,10 +8,6 @@ x_mitre_version: 1.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[credential_access|Credential Access]]
-
 Adversaries may gather credential material by invoking or forcing a user to automatically provide authentication information through a mechanism in which they can intercept.
 
 The Server Message Block (SMB) protocol is commonly used in Windows networks for authentication and communication between systems for access to resources and file sharing. When a Windows system attempts to connect to an SMB resource it will automatically attempt to authenticate and send credential information for the current user to the remote system.(Citation: Wikipedia Server Message Block) This behavior is typical in enterprise environments so that users do not need to enter credentials to access network resources.

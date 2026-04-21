@@ -8,10 +8,6 @@ x_mitre_version: 1.7
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[discovery|Discovery]]
-
 Adversaries may look for details about the network configuration and settings, such as IP and/or MAC addresses, of systems they access or through information discovery of remote systems. Several operating system administration utilities exist that can be used to gather this information. Examples include [Arp](https://attack.mitre.org/software/S0099), [ipconfig](https://attack.mitre.org/software/S0100)/[ifconfig](https://attack.mitre.org/software/S0101), [nbtstat](https://attack.mitre.org/software/S0102), and [route](https://attack.mitre.org/software/S0103).
 
 Adversaries may also leverage a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) on network devices to gather information about configurations and settings, such as IP addresses of configured interfaces and static/dynamic routes (e.g. <code>show ip route</code>, <code>show ip interface</code>).(Citation: US-CERT-TA18-106A)(Citation: Mandiant APT41 Global Intrusion ) On ESXi, adversaries may leverage esxcli to gather network configuration information. For example, the command `esxcli network nic list` will retrieve the MAC address, while `esxcli network ip interface ipv4 get` will retrieve the local IPv4 address.(Citation: Trellix Rnasomhouse 2024)
@@ -24,12 +20,6 @@ Adversaries may use the information from [System Network Configuration Discovery
 
 ^t1016001-internet-connection-discovery
 
-**Parent Technique**
-- [[T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
-
 Adversaries may check for Internet connectivity on compromised systems. This may be performed during automated discovery and can be accomplished in numerous ways such as using [Ping](https://attack.mitre.org/software/S0097), <code>tracert</code>, and GET requests to websites, or performing initial speed testing to confirm bandwidth.
 
 Adversaries may use the results and responses from these requests to determine if the system is capable of communicating with their C2 servers before attempting to connect to them. The results may also be used to identify routes, redirectors, and proxy servers.
@@ -37,12 +27,6 @@ Adversaries may use the results and responses from these requests to determine i
 ### T1016.002: Wi-Fi Discovery
 
 ^t1016002-wi-fi-discovery
-
-**Parent Technique**
-- [[T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
 
 Adversaries may search for information about Wi-Fi networks, such as network names and passwords, on compromised systems. Adversaries may use Wi-Fi information as part of [Account Discovery](https://attack.mitre.org/techniques/T1087), [Remote System Discovery](https://attack.mitre.org/techniques/T1018), and other discovery or [Credential Access](https://attack.mitre.org/tactics/TA0006) activity to support both ongoing and future campaigns.
 

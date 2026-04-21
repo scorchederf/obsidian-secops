@@ -8,10 +8,6 @@ x_mitre_version: 2.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[persistence|Persistence]]
-
 Adversaries may create an account to maintain access to victim systems.(Citation: Symantec WastedLocker June 2020) With a sufficient level of access, creating such accounts may be used to establish secondary credentialed access that do not require persistent remote access tools to be deployed on the system.
 
 Accounts may be created on the local system or within a domain or cloud tenant. In cloud environments, adversaries may create accounts that only have access to specific services, which can reduce the chance of detection.
@@ -21,12 +17,6 @@ Accounts may be created on the local system or within a domain or cloud tenant. 
 ### T1136.001: Local Account
 
 ^t1136001-local-account
-
-**Parent Technique**
-- [[T1136-create_account|T1136: Create Account]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may create a local account to maintain access to victim systems. Local accounts are those configured by an organization for use by users, remote support, services, or for administration on a single system or service. 
 
@@ -40,12 +30,6 @@ Such accounts may be used to establish secondary credentialed access that do not
 
 ^t1136002-domain-account
 
-**Parent Technique**
-- [[T1136-create_account|T1136: Create Account]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may create a domain account to maintain access to victim systems. Domain accounts are those managed by Active Directory Domain Services where access and permissions are configured across systems and services that are part of that domain. Domain accounts can cover user, administrator, and service accounts. With a sufficient level of access, the <code>net user /add /domain</code> command can be used to create a domain account.(Citation: Savill 1999)
 
 Such accounts may be used to establish secondary credentialed access that do not require persistent remote access tools to be deployed on the system.
@@ -53,12 +37,6 @@ Such accounts may be used to establish secondary credentialed access that do not
 ### T1136.003: Cloud Account
 
 ^t1136003-cloud-account
-
-**Parent Technique**
-- [[T1136-create_account|T1136: Create Account]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may create a cloud account to maintain access to victim systems. With a sufficient level of access, such accounts may be used to establish secondary credentialed access that does not require persistent remote access tools to be deployed on the system.(Citation: Microsoft O365 Admin Roles)(Citation: Microsoft Support O365 Add Another Admin, October 2019)(Citation: AWS Create IAM User)(Citation: GCP Create Cloud Identity Users)(Citation: Microsoft Azure AD Users)
 

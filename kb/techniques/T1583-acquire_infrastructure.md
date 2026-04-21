@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[resource_development|Resource Development]]
-
 Adversaries may buy, lease, rent, or obtain infrastructure that can be used during targeting. A wide variety of infrastructure exists for hosting and orchestrating adversary operations. Infrastructure solutions include physical or cloud servers, domains, and third-party web services.(Citation: TrendmicroHideoutsLease) Some infrastructure providers offer free trial periods, enabling infrastructure acquisition at limited to no cost.(Citation: Free Trial PurpleUrchin) Additionally, botnets are available for rent or purchase.
 
 Use of these infrastructure solutions allows adversaries to stage, launch, and execute operations. Solutions may help adversary operations blend in with traffic that is seen as normal, such as contacting third-party web services or acquiring infrastructure to support [Proxy](https://attack.mitre.org/techniques/T1090), including from residential proxy services.(Citation: amnesty_nso_pegasus)(Citation: FBI Proxies Credential Stuffing)(Citation: Mandiant APT29 Microsoft 365 2022) Depending on the implementation, adversaries may use infrastructure that makes it difficult to physically tie back to them as well as utilize infrastructure that can be rapidly provisioned, modified, and shut down.
@@ -21,12 +17,6 @@ Use of these infrastructure solutions allows adversaries to stage, launch, and e
 ### T1583.001: Domains
 
 ^t1583001-domains
-
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
 
 Adversaries may acquire domains that can be used during targeting. Domain names are the human readable names used to represent one or more IP addresses. They can be purchased or, in some cases, acquired for free.
 
@@ -44,12 +34,6 @@ In addition to legitimately purchasing a domain, an adversary may register a new
 
 ^t1583002-dns-server
 
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
-
 Adversaries may set up their own Domain Name System (DNS) servers that can be used during targeting. During post-compromise activity, adversaries may utilize DNS traffic for various tasks, including for Command and Control (ex: [Application Layer Protocol](https://attack.mitre.org/techniques/T1071)). Instead of hijacking existing DNS servers, adversaries may opt to configure and run their own DNS servers in support of operations.
 
 By running their own DNS servers, adversaries can have more control over how they administer server-side DNS C2 traffic ([DNS](https://attack.mitre.org/techniques/T1071/004)). With control over a DNS server, adversaries can configure DNS applications to provide conditional responses to malware and, generally, have more flexibility in the structure of the DNS-based C2 channel.(Citation: Unit42 DNS Mar 2019)
@@ -57,12 +41,6 @@ By running their own DNS servers, adversaries can have more control over how the
 ### T1583.003: Virtual Private Server
 
 ^t1583003-virtual-private-server
-
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
 
 Adversaries may rent Virtual Private Servers (VPSs) that can be used during targeting. There exist a variety of cloud service providers that will sell virtual machines/containers as a service. By utilizing a VPS, adversaries can make it difficult to physically tie back operations to them. The use of cloud infrastructure can also make it easier for adversaries to rapidly provision, modify, and shut down their infrastructure.
 
@@ -72,12 +50,6 @@ Acquiring a VPS for use in later stages of the adversary lifecycle, such as Comm
 
 ^t1583004-server
 
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
-
 Adversaries may buy, lease, rent, or obtain physical servers that can be used during targeting. Use of servers allows an adversary to stage, launch, and execute an operation. During post-compromise activity, adversaries may utilize servers for various tasks, such as watering hole operations in [Drive-by Compromise](https://attack.mitre.org/techniques/T1189), enabling [Phishing](https://attack.mitre.org/techniques/T1566) operations, or facilitating [Command and Control](https://attack.mitre.org/tactics/TA0011). Instead of compromising a third-party [Server](https://attack.mitre.org/techniques/T1584/004) or renting a [Virtual Private Server](https://attack.mitre.org/techniques/T1583/003), adversaries may opt to configure and run their own servers in support of operations. Free trial periods of cloud servers may also be abused.(Citation: Free Trial PurpleUrchin)(Citation: Freejacked) 
 
 Adversaries may only need a lightweight setup if most of their activities will take place using online infrastructure. Or, they may need to build extensive infrastructure if they want to test, communicate, and control other aspects of their activities on their own systems.(Citation: NYTStuxnet)
@@ -85,12 +57,6 @@ Adversaries may only need a lightweight setup if most of their activities will t
 ### T1583.005: Botnet
 
 ^t1583005-botnet
-
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
 
 Adversaries may buy, lease, or rent a network of compromised systems that can be used during targeting. A botnet is a network of compromised systems that can be instructed to perform coordinated tasks.(Citation: Norton Botnet) Adversaries may purchase a subscription to use an existing botnet from a booter/stresser service. 
 
@@ -104,23 +70,11 @@ With a botnet at their disposal, adversaries may perform follow-on activity such
 
 ^t1583006-web-services
 
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
-
 Adversaries may register for web services that can be used during targeting. A variety of popular websites exist for adversaries to register for a web-based service that can be abused during later stages of the adversary lifecycle, such as during Command and Control ([Web Service](https://attack.mitre.org/techniques/T1102)), [Exfiltration Over Web Service](https://attack.mitre.org/techniques/T1567), or [Phishing](https://attack.mitre.org/techniques/T1566). Using common services, such as those offered by Google, GitHub, or Twitter, makes it easier for adversaries to hide in expected noise.(Citation: FireEye APT29)(Citation: Hacker News GitHub Abuse 2024) By utilizing a web service, adversaries can make it difficult to physically tie back operations to them.
 
 ### T1583.007: Serverless
 
 ^t1583007-serverless
-
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
 
 Adversaries may purchase and configure serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda functions, or Google Apps Scripts, that can be used during targeting. By utilizing serverless infrastructure, adversaries can make it more difficult to attribute infrastructure used during operations back to them.
 
@@ -129,12 +83,6 @@ Once acquired, the serverless runtime environment can be leveraged to either res
 ### T1583.008: Malvertising
 
 ^t1583008-malvertising
-
-**Parent Technique**
-- [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]]
-
-**Tactic**
-- [[resource_development|Resource Development]]
 
 Adversaries may purchase online advertisements that can be abused to distribute malware to victims. Ads can be purchased to plant as well as favorably position artifacts in specific locations  online, such as prominently placed within search engine results. These ads may make it more difficult for users to distinguish between actual search results and advertisements.(Citation: spamhaus-malvertising) Purchased ads may also target specific audiences using the advertising network’s capabilities, potentially further taking advantage of the trust inherently given to search engines and popular websites. 
 

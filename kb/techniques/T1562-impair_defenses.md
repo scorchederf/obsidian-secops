@@ -8,10 +8,6 @@ x_mitre_version: 1.7
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms. This not only involves impairing preventative defenses, such as firewalls and anti-virus, but also detection capabilities that defenders can use to audit activity and identify malicious behavior. This may also span both native defenses as well as supplemental capabilities installed by users and administrators.
 
 Adversaries may also impair routine operations that contribute to defensive hygiene, such as blocking users from logging out, preventing a system from shutting down, or disabling or modifying the update process. Adversaries could also target event aggregation and analysis mechanisms, or otherwise disrupt these procedures by altering other system components. These restrictions can further enable malicious operations as well as the continued propagation of incidents.(Citation: Google Cloud Mandiant UNC3886 2024)(Citation: Emotet shutdown)
@@ -23,12 +19,6 @@ Adversaries may also impair routine operations that contribute to defensive hygi
 ### T1562.001: Disable or Modify Tools
 
 ^t1562001-disable-or-modify-tools
-
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may modify and/or disable security tools to avoid possible detection of their malware/tools and activities. This may take many forms, such as killing security software processes or services, modifying / deleting Registry keys or configuration files so that tools do not operate properly, or other methods to interfere with security tools scanning or reporting information. Adversaries may also disable updates to prevent the latest security patches from reaching tools on victim systems.(Citation: SCADAfence_ransomware)
 
@@ -50,12 +40,6 @@ Additionally, adversaries may exploit legitimate drivers from anti-virus softwar
 
 ^t1562002-disable-windows-event-logging
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may disable Windows event logging to limit data that can be leveraged for detections and audits. Windows event logs record user and system activity such as login attempts, process creation, and much more.(Citation: Windows Log Events) This data is used by security tools and analysts to generate detections.
 
 The EventLog service maintains event logs from various system components and applications.(Citation: EventLog_Core_Technologies) By default, the service automatically starts when a system powers on. An audit policy, maintained by the Local Security Policy (secpol.msc), defines which system events the EventLog service logs. Security audit policy settings can be changed by running secpol.msc, then navigating to <code>Security Settings\Local Policies\Audit Policy</code> for basic audit policy settings or <code>Security Settings\Advanced Audit Policy Configuration</code> for advanced audit policy settings.(Citation: Audit_Policy_Microsoft)(Citation: Advanced_sec_audit_policy_settings) <code>auditpol.exe</code> may also be used to set audit policies.(Citation: auditpol)
@@ -72,12 +56,6 @@ By disabling Windows event logging, adversaries can operate while leaving less e
 
 ^t1562003-impair-command-history-logging
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may impair command history logging to hide commands they run on a compromised system. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what they've done. 
 
 On Linux and macOS, command history is tracked in a file pointed to by the environment variable <code>HISTFILE</code>. When a user logs off a system, this information is flushed to a file in the user's home directory called <code>~/.bash_history</code>. The <code>HISTCONTROL</code> environment variable keeps track of what should be saved by the <code>history</code> command and eventually into the <code>~/.bash_history</code> file when a user logs out. <code>HISTCONTROL</code> does not exist by default on macOS, but can be set by the user and will be respected. The `HISTFILE` environment variable is also used in some ESXi systems.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)
@@ -92,12 +70,6 @@ Adversaries may also leverage a [Network Device CLI](https://attack.mitre.org/te
 
 ^t1562004-disable-or-modify-system-firewall
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may disable or modify system firewalls in order to bypass controls limiting network usage. Changes could be disabling the entire mechanism as well as adding, deleting, or modifying particular rules. This can be done numerous ways depending on the operating system, including via command-line, editing Windows Registry keys, and Windows Control Panel.
 
 Modifying or disabling a system firewall may enable adversary C2 communications, lateral movement, and/or data exfiltration that would otherwise not be allowed. For example, adversaries may add a new firewall rule for a well-known protocol (such as RDP) using a non-traditional and potentially less securitized port (i.e. [Non-Standard Port](https://attack.mitre.org/techniques/T1571)).(Citation: change_rdp_port_conti)
@@ -109,12 +81,6 @@ In ESXi, firewall rules may be modified directly via the esxcli command line int
 ### T1562.006: Indicator Blocking
 
 ^t1562006-indicator-blocking
-
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 An adversary may attempt to block indicators or events typically captured by sensors from being gathered and analyzed. This could include maliciously redirecting(Citation: Microsoft Lamin Sept 2017) or even disabling host-based sensors, such as Event Tracing for Windows (ETW)(Citation: Microsoft About Event Tracing 2018), by tampering settings that control the collection and flow of event telemetry.(Citation: Medium Event Tracing Tampering 2018) These settings may be stored on the system in configuration files and/or in the Registry as well as being accessible via administrative utilities such as [PowerShell](https://attack.mitre.org/techniques/T1059/001) or [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047).
 
@@ -130,12 +96,6 @@ In Linux environments, adversaries may disable or reconfigure log processing too
 
 ^t1562007-disable-or-modify-cloud-firewall
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may disable or modify a firewall within a cloud environment to bypass controls that limit access to cloud resources. Cloud firewalls are separate from system firewalls that are described in [Disable or Modify System Firewall](https://attack.mitre.org/techniques/T1562/004). 
 
 Cloud environments typically utilize restrictive security groups and firewall rules that only allow network activity from trusted IP addresses via expected ports and protocols. An adversary with appropriate permissions may introduce new firewall rules or policies to allow access into a victim cloud environment and/or move laterally from the cloud control plane to the data plane. For example, an adversary may use a script or utility that creates new ingress rules in existing security groups (or creates new security groups entirely) to allow any TCP/IP connectivity to a cloud-hosted instance.(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022) They may also remove networking limitations to support traffic associated with malicious activity (such as cryptomining).(Citation: Expel IO Evil in AWS)(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022)
@@ -146,12 +106,6 @@ Modifying or disabling a cloud firewall may enable adversary C2 communications, 
 
 ^t1562008-disable-or-modify-cloud-logs
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 An adversary may disable or modify cloud logging capabilities and integrations to limit what data is collected on their activities and avoid detection. Cloud environments allow for collection and analysis of audit and application logs that provide insight into what activities a user does within the environment. If an adversary has sufficient permissions, they can disable or modify logging to avoid detection of their activities.
 
 For example, in AWS an adversary may disable CloudWatch/CloudTrail integrations prior to conducting further malicious activity.(Citation: Following the CloudTrail: Generating strong AWS security signals with Sumo Logic) They may alternatively tamper with logging functionality – for example, by removing any associated SNS topics, disabling multi-region logging, or disabling settings that validate and/or encrypt log files.(Citation: AWS Update Trail)(Citation: Pacu Detection Disruption Module) In Office 365, an adversary may disable logging on mail collection activities for specific users by using the `Set-MailboxAuditBypassAssociation` cmdlet, by disabling M365 Advanced Auditing for the user, or by downgrading the user’s license from an Enterprise E5 to an Enterprise E3 license.(Citation: Dark Reading Microsoft 365 Attacks 2021)
@@ -159,12 +113,6 @@ For example, in AWS an adversary may disable CloudWatch/CloudTrail integrations 
 ### T1562.009: Safe Mode Boot
 
 ^t1562009-safe-mode-boot
-
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse Windows safe mode to disable endpoint defenses. Safe mode starts up the Windows operating system with a limited set of drivers and services. Third-party security software such as endpoint detection and response (EDR) tools may not start after booting Windows in safe mode. There are two versions of safe mode: Safe Mode and Safe Mode with Networking. It is possible to start additional services after a safe mode boot.(Citation: Microsoft Safe Mode)(Citation: Sophos Snatch Ransomware 2019)
 
@@ -176,12 +124,6 @@ Adversaries may also add their malicious applications to the list of minimal ser
 
 ^t1562010-downgrade-attack
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may downgrade or use a version of system features that may be outdated, vulnerable, and/or does not support updated security controls. Downgrade attacks typically take advantage of a system’s backward compatibility to force it into less secure modes of operation. 
 
 Adversaries may downgrade and use various less-secure versions of features of a system, such as [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059)s or even network protocols that can be abused to enable [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557) or [Network Sniffing](https://attack.mitre.org/techniques/T1040).(Citation: Praetorian TLS Downgrade Attack 2014) For example, [PowerShell](https://attack.mitre.org/techniques/T1059/001) versions 5+ includes Script Block Logging (SBL), which can record executed script content. However, adversaries may attempt to execute a previous version of PowerShell that does not support SBL with the intent to [Impair Defenses](https://attack.mitre.org/techniques/T1562) while running malicious scripts that may have otherwise been detected.(Citation: CrowdStrike BGH Ransomware 2021)(Citation: Mandiant BYOL 2018)(Citation: att_def_ps_logging)
@@ -191,12 +133,6 @@ Adversaries may similarly target network traffic to downgrade from an encrypted 
 ### T1562.011: Spoof Security Alerting
 
 ^t1562011-spoof-security-alerting
-
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may spoof security alerting from tools, presenting false evidence to impair defenders’ awareness of malicious activity.(Citation: BlackBasta) Messages produced by defensive tools contain information about potential security events as well as the functioning status of security software and the system. Security reporting messages are important for monitoring the normal operation of a system and identifying important events that can signal a security incident.
 
@@ -208,12 +144,6 @@ For example, adversaries may show a fake Windows Security GUI and tray icon with
 
 ^t1562012-disable-or-modify-linux-audit-system
 
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may disable or modify the Linux audit system to hide malicious activity and avoid detection. Linux admins use the Linux Audit system to track security-relevant information on a system. The Linux Audit system operates at the kernel-level and maintains event logs on application and system activity such as process, network, file, and login events based on pre-configured rules.
 
 Often referred to as `auditd`, this is the name of the daemon used to write events to disk and is governed by the parameters set in the `audit.conf` configuration file. Two primary ways to configure the log generation rules are through the command line `auditctl` utility and the file `/etc/audit/audit.rules`,  containing a sequence of `auditctl` commands loaded at boot time.(Citation: Red Hat System Auditing)(Citation: IzyKnows auditd threat detection 2022)
@@ -223,12 +153,6 @@ With root privileges, adversaries may be able to ensure their activity is not lo
 ### T1562.013: Disable or Modify Network Device Firewall
 
 ^t1562013-disable-or-modify-network-device-firewall
-
-**Parent Technique**
-- [[T1562-impair_defenses|T1562: Impair Defenses]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may disable network device-based firewall mechanisms entirely or add, delete, or modify particular rules in order to bypass controls limiting network usage. 
  

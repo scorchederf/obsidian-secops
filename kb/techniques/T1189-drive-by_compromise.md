@@ -8,10 +8,6 @@ x_mitre_version: 1.7
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[initial_access|Initial Access]]
-
 Adversaries may gain access to a system through a user visiting a website over the normal course of browsing. Multiple ways of delivering exploit code to a browser exist (i.e., [Drive-by Target](https://attack.mitre.org/techniques/T1608/004)), including:
 
 * A legitimate website is compromised, allowing adversaries to inject malicious code

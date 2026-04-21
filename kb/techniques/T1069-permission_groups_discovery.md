@@ -8,10 +8,6 @@ x_mitre_version: 2.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[discovery|Discovery]]
-
 Adversaries may attempt to discover group and permission settings. This information can help adversaries determine which user accounts and groups are available, the membership of users in particular groups, and which users and groups have elevated permissions.
 
 Adversaries may attempt to discover group permission settings in many different ways. This data may provide the adversary with information about the compromised environment that can be used in follow-on activity and targeting.(Citation: CrowdStrike BloodHound April 2018)
@@ -22,12 +18,6 @@ Adversaries may attempt to discover group permission settings in many different 
 
 ^t1069001-local-groups
 
-**Parent Technique**
-- [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
-
 Adversaries may attempt to find local system groups and permission settings. The knowledge of local system permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated permissions, such as the users found within the local administrators group.
 
 Commands such as <code>net localgroup</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscl . -list /Groups</code> on macOS, and <code>groups</code> on Linux can list local groups.
@@ -36,12 +26,6 @@ Commands such as <code>net localgroup</code> of the [Net](https://attack.mitre.o
 
 ^t1069002-domain-groups
 
-**Parent Technique**
-- [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
-
 Adversaries may attempt to find domain-level groups and permission settings. The knowledge of domain-level permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated permissions, such as domain administrators.
 
 Commands such as <code>net group /domain</code> of the [Net](https://attack.mitre.org/software/S0039) utility,  <code>dscacheutil -q group</code> on macOS, and <code>ldapsearch</code> on Linux can list domain-level groups.
@@ -49,12 +33,6 @@ Commands such as <code>net group /domain</code> of the [Net](https://attack.mitr
 ### T1069.003: Cloud Groups
 
 ^t1069003-cloud-groups
-
-**Parent Technique**
-- [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
 
 Adversaries may attempt to find cloud groups and permission settings. The knowledge of cloud permission groups can help adversaries determine the particular roles of users and groups within an environment, as well as which users are associated with a particular group.
 

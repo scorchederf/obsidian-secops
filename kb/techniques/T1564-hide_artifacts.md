@@ -8,10 +8,6 @@ x_mitre_version: 1.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may attempt to hide artifacts associated with their behaviors to evade detection. Operating systems may have features to hide various artifacts, such as important system files and administrative task execution, to avoid disrupting user work environments and prevent users from changing files or features on the system. Adversaries may abuse these features to hide artifacts such as files, directories, user accounts, or other system activity to evade detection.(Citation: Sofacy Komplex Trojan)(Citation: Cybereason OSX Pirrit)(Citation: MalwareBytes ADS July 2015)
 
 Adversaries may also attempt to hide artifacts associated with malicious behavior by creating computing regions that are isolated from common security instrumentation, such as through the use of virtualization technology.(Citation: Sophos Ragnar May 2020)
@@ -21,12 +17,6 @@ Adversaries may also attempt to hide artifacts associated with malicious behavio
 ### T1564.001: Hidden Files and Directories
 
 ^t1564001-hidden-files-and-directories
-
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may set files and directories to be hidden to evade detection mechanisms. To prevent normal users from accidentally changing special files on a system, most operating systems have the concept of a ‘hidden’ file. These files don’t show up when a user browses the file system with a GUI or when using normal commands on the command line. Users must explicitly ask to show the hidden files either via a series of Graphical User Interface (GUI) prompts or with command line switches (<code>dir /a</code> for Windows and <code>ls –a</code> for Linux and macOS).
 
@@ -42,12 +32,6 @@ Adversaries can use this to their advantage to hide files and folders anywhere o
 
 ^t1564002-hidden-users
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may use hidden users to hide the presence of user accounts they create or modify. Administrators may want to hide users when there are many user accounts on a given system or if they want to hide their administrative or other management accounts from other users. 
 
 In macOS, adversaries can create or modify a user to be hidden through manipulating plist files, folder attributes, and user attributes. To prevent a user from being shown on the login screen and in System Preferences, adversaries can set the userID to be under 500 and set the key value <code>Hide500Users</code> to <code>TRUE</code> in the <code>/Library/Preferences/com.apple.loginwindow</code> plist file.(Citation: Cybereason OSX Pirrit) Every user has a userID associated with it. When the <code>Hide500Users</code> key value is set to <code>TRUE</code>, users with a userID under 500 do not appear on the login screen and in System Preferences. Using the command line, adversaries can use the <code>dscl</code> utility to create hidden user accounts by setting the <code>IsHidden</code> attribute to <code>1</code>. Adversaries can also hide a user’s home folder by changing the <code>chflags</code> to hidden.(Citation: Apple Support Hide a User Account) 
@@ -59,12 +43,6 @@ On Linux systems, adversaries may hide user accounts from the login screen, also
 ### T1564.003: Hidden Window
 
 ^t1564003-hidden-window
-
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may use hidden windows to conceal malicious activity from the plain sight of users. In some cases, windows that would typically be displayed when an application carries out an operation can be hidden. This may be utilized by system administrators to avoid disrupting user work environments when carrying out administrative tasks. 
 
@@ -84,12 +62,6 @@ Adversaries may also leverage cmd.exe(Citation: Cybereason - Hidden Malicious Re
 
 ^t1564004-ntfs-file-attributes
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may use NTFS file attributes to hide their malicious data in order to evade detection. Every New Technology File System (NTFS) formatted partition contains a Master File Table (MFT) that maintains a record for every file/directory on the partition. (Citation: SpectorOps Host-Based Jul 2017) Within MFT entries are file attributes, (Citation: Microsoft NTFS File Attributes Aug 2010) such as Extended Attributes (EA) and Data [known as Alternate Data Streams (ADSs) when more than one Data attribute is present], that can be used to store arbitrary data (and even complete files). (Citation: SpectorOps Host-Based Jul 2017) (Citation: Microsoft File Streams) (Citation: MalwareBytes ADS July 2015) (Citation: Microsoft ADS Mar 2014)
 
 Adversaries may store malicious data or binaries in file attribute metadata instead of directly in files. This may be done to evade some defenses, such as static indicator scanning tools and anti-virus. (Citation: Journey into IR ZeroAccess NTFS EA) (Citation: MalwareBytes ADS July 2015)
@@ -98,12 +70,6 @@ Adversaries may store malicious data or binaries in file attribute metadata inst
 
 ^t1564005-hidden-file-system
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may use a hidden file system to conceal malicious activity from users and security tools. File systems provide a structure to store and access data from physical storage. Typically, a user engages with a file system through applications that allow them to access files and directories, which are an abstraction from their physical location (ex: disk sector). Standard file systems include FAT, NTFS, ext4, and APFS. File systems can also contain other structures, such as the Volume Boot Record (VBR) and Master File Table (MFT) in NTFS.(Citation: MalwareTech VFS Nov 2014)
 
 Adversaries may use their own abstracted file system, separate from the standard file system present on the infected system. In doing so, adversaries can hide the presence of malicious components and file input/output from security tools. Hidden file systems, sometimes referred to as virtual file systems, can be implemented in numerous ways. One implementation would be to store a file system in reserved disk space unused by disk structures or standard file system partitions.(Citation: MalwareTech VFS Nov 2014)(Citation: FireEye Bootkits) Another implementation could be for an adversary to drop their own portable partition image as a file on top of the standard file system.(Citation: ESET ComRAT May 2020) Adversaries may also fragment files across the existing file system structure in non-standard ways.(Citation: Kaspersky Equation QA)
@@ -111,12 +77,6 @@ Adversaries may use their own abstracted file system, separate from the standard
 ### T1564.006: Run Virtual Instance
 
 ^t1564006-run-virtual-instance
-
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may carry out malicious operations using a virtual instance to avoid detection. A wide variety of virtualization technologies exist that allow for the emulation of a computer or computing environment. By running malicious code inside of a virtual instance, adversaries can hide artifacts associated with their behavior from security tools that are unable to monitor activity inside the virtual instance.(Citation: CyberCX Akira Ransomware) Additionally, depending on the virtual networking implementation (ex: bridged adapter), network traffic generated by the virtual instance can be difficult to trace back to the compromised host as the IP address and hostname might not match known values.(Citation: SingHealth Breach Jan 2019)
 
@@ -130,12 +90,6 @@ In VMWare environments, adversaries may leverage the vCenter console to create n
 
 ^t1564007-vba-stomping
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may hide malicious Visual Basic for Applications (VBA) payloads embedded within MS Office documents by replacing the VBA source code with benign data.(Citation: FireEye VBA stomp Feb 2020)
 
 MS Office documents with embedded VBA content store source code inside of module streams. Each module stream has a <code>PerformanceCache</code> that stores a separate compiled version of the VBA source code known as p-code. The p-code is executed when the MS Office version specified in the <code>_VBA_PROJECT</code> stream (which contains the version-dependent description of the VBA project) matches the version of the host MS Office application.(Citation: Evil Clippy May 2019)(Citation: Microsoft _VBA_PROJECT Stream)
@@ -145,12 +99,6 @@ An adversary may hide malicious VBA code by overwriting the VBA source code loca
 ### T1564.008: Email Hiding Rules
 
 ^t1564008-email-hiding-rules
-
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may use email rules to hide inbound emails in a compromised user's mailbox. Many email clients allow users to create inbox rules for various email functions, including moving emails to other folders, marking emails as read, or deleting emails. Rules may be created or modified within email clients or through external features such as the <code>New-InboxRule</code> or <code>Set-InboxRule</code> [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlets on Windows systems.(Citation: Microsoft Inbox Rules)(Citation: MacOS Email Rules)(Citation: Microsoft New-InboxRule)(Citation: Microsoft Set-InboxRule)
 
@@ -164,12 +112,6 @@ In some environments, administrators may be able to enable email rules that oper
 
 ^t1564009-resource-forking
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may abuse resource forks to hide malicious code or executables to evade detection and bypass security applications. A resource fork provides applications a structured way to store resources such as thumbnail images, menu definitions, icons, dialog boxes, and code.(Citation: macOS Hierarchical File System Overview) Usage of a resource fork is identifiable when displaying a file’s extended attributes, using <code>ls -l@</code> or <code>xattr -l</code> commands. Resource forks have been deprecated and replaced with the application bundle structure. Non-localized resources are placed at the top level directory of an application bundle, while localized resources are placed in the <code>/Resources</code> folder.(Citation: Resource and Data Forks)(Citation: ELC Extended Attributes)
 
 Adversaries can use resource forks to hide malicious data that may otherwise be stored directly in files. Adversaries can execute content with an attached resource fork, at a specified offset, that is moved to an executable location then invoked. Resource fork content may also be obfuscated/encrypted until execution.(Citation: sentinellabs resource named fork 2020)(Citation: tau bundlore erika noerenberg 2020)
@@ -177,12 +119,6 @@ Adversaries can use resource forks to hide malicious data that may otherwise be 
 ### T1564.010: Process Argument Spoofing
 
 ^t1564010-process-argument-spoofing
-
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may attempt to hide process command-line arguments by overwriting process memory. Process command-line arguments are stored in the process environment block (PEB), a data structure used by Windows to store various information about/used by a process. The PEB includes the process command-line arguments that are referenced when executing the process. When a process is created, defensive tools/sensors that monitor process creations may retrieve the process arguments from the PEB.(Citation: Microsoft PEB 2021)(Citation: Xpn Argue Like Cobalt 2019)
 
@@ -196,12 +132,6 @@ This behavior may also be combined with other tricks (such as [Parent PID Spoofi
 
 ^t1564011-ignore-process-interrupts
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may evade defensive mechanisms by executing commands that hide from process interrupt signals. Many operating systems use signals to deliver messages to control process behavior. Command interpreters often include specific commands/flags that ignore errors and other hangups, such as when the user of the active session logs off.(Citation: Linux Signal Man)  These interrupt signals may also be used by defensive tools and/or analysts to pause or terminate specified running processes. 
 
 Adversaries may invoke processes using `nohup`, [PowerShell](https://attack.mitre.org/techniques/T1059/001) `-ErrorAction SilentlyContinue`, or similar commands that may be immune to hangups.(Citation: nohup Linux Man)(Citation: Microsoft PowerShell SilentlyContinue) This may enable malicious commands and malware to continue execution through system events that would otherwise terminate its execution, such as users logging off or the termination of its C2 network connection.
@@ -212,12 +142,6 @@ Hiding from process interrupt signals may allow malware to continue execution, b
 
 ^t1564012-file-path-exclusions
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may attempt to hide their file-based artifacts by writing them to specific folders or file names excluded from antivirus (AV) scanning and other defensive capabilities. AV and other file-based scanners often include exclusions to optimize performance as well as ease installation and legitimate use of applications. These exclusions may be contextual (e.g., scans are only initiated in response to specific triggering events/alerts), but are also often hardcoded strings referencing specific folders and/or files assumed to be trusted and legitimate.(Citation: Microsoft File Folder Exclusions)
 
 Adversaries may abuse these exclusions to hide their file-based artifacts. For example, rather than  tampering with tool settings to add a new exclusion (i.e., [Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001)), adversaries may drop their file-based payloads in default or otherwise well-known exclusions. Adversaries may also use [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001) and other [Discovery](https://attack.mitre.org/tactics/TA0007)/[Reconnaissance](https://attack.mitre.org/tactics/TA0043) activities to both discover and verify existing exclusions in a victim environment.
@@ -226,12 +150,6 @@ Adversaries may abuse these exclusions to hide their file-based artifacts. For e
 
 ^t1564013-bind-mounts
 
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may abuse bind mounts on file structures to hide their activity and artifacts from native utilities. A bind mount maps a directory or file from one location on the filesystem to another, similar to a shortcut on Windows. It’s commonly used to provide access to specific files or directories across different environments, such as inside containers or chroot environments, and requires sudo access. 
 
 Adversaries may use bind mounts to map either an empty directory or a benign `/proc` directory to a malicious process’s `/proc` directory. Using the commands `mount –o bind /proc/benign-process /proc/malicious-process` (or `mount –B`), the malicious process's `/proc` directory is overlayed with the contents of a benign process's `/proc` directory. When system utilities query process activity, such as `ps` and `top`, the kernel follows the bind mount and presents the benign directory’s contents instead of the malicious process's actual `/proc` directory. As a result, these utilities display information that appears to come from the benign process, effectively hiding the malicious process's metadata, executable, or other artifacts from detection.(Citation: Cado Security Commando Cat 2024)(Citation: Ahn Lab CoinMiner 2023)
@@ -239,12 +157,6 @@ Adversaries may use bind mounts to map either an empty directory or a benign `/p
 ### T1564.014: Extended Attributes
 
 ^t1564014-extended-attributes
-
-**Parent Technique**
-- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse extended attributes (xattrs) on macOS and Linux to hide their malicious data in order to evade detection. Extended attributes are key-value pairs of file and directory metadata used by both macOS and Linux. They are not visible through standard tools like `Finder`,  `ls`, or `cat` and require utilities such as `xattr` (macOS) or `getfattr` (Linux) for inspection. Operating systems and applications use xattrs for tagging, integrity checks, and access control. On Linux, xattrs are organized into namespaces such as `user.` (user permissions), `trusted.` (root permissions), `security.`, and `system.`, each with specific permissions. On macOS, xattrs are flat strings without namespace prefixes, commonly prefixed with `com.apple.*` (e.g., `com.apple.quarantine`, `com.apple.metadata:_kMDItemUserTags`) and used by system features like Gatekeeper and Spotlight.(Citation: Establishing persistence using extended attributes on Linux)
 

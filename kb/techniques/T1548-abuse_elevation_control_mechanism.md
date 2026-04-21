@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. Most modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can perform on a machine. Authorization has to be granted to specific users in order to perform tasks that can be considered of higher risk.(Citation: TechNet How UAC Works)(Citation: sudo man page 2018) An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system.(Citation: OSX Keydnap malware)(Citation: Fortinet Fareit)
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may circumvent mechanisms designed to control elevate privileges to 
 ### T1548.001: Setuid and Setgid
 
 ^t1548001-setuid-and-setgid
-
-**Parent Technique**
-- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 An adversary may abuse configurations where an application has the setuid or setgid bits set in order to get code running in a different (and possibly more privileged) user’s context. On Linux or macOS, when the setuid or setgid bits are set for an application binary, the application will run with the privileges of the owning user or group respectively.(Citation: setuid man page) Normally an application is run in the current user’s context, regardless of which user or group owns the application. However, there are instances where programs need to be executed in an elevated context to function properly, but the user running them may not have the specific required privileges.
 
@@ -37,12 +27,6 @@ Alternatively, adversaries may choose to find and target vulnerable binaries wit
 ### T1548.002: Bypass User Account Control
 
 ^t1548002-bypass-user-account-control
-
-**Parent Technique**
-- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may bypass UAC mechanisms to elevate process privileges on system. Windows User Account Control (UAC) allows a program to elevate its privileges (tracked as integrity levels ranging from low to high) to perform a task under administrator-level permissions, possibly by prompting the user for confirmation. The impact to the user ranges from denying the operation under high enforcement to allowing the user to perform the action if they are in the local administrators group and click through the prompt or allowing them to enter an administrator password to complete the action.(Citation: TechNet How UAC Works)
 
@@ -58,12 +42,6 @@ Another bypass is possible through some lateral movement techniques if credentia
 
 ^t1548003-sudo-and-sudo-caching
 
-**Parent Technique**
-- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may perform sudo caching and/or use the sudoers file to elevate privileges. Adversaries may do this to execute commands as other users or spawn processes with higher privileges.
 
 Within Linux and MacOS systems, sudo (sometimes referred to as "superuser do") allows users to perform commands from terminals with elevated privileges and to control who can perform these commands on the system. The <code>sudo</code> command "allows a system administrator to delegate authority to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while providing an audit trail of the commands and their arguments."(Citation: sudo man page 2018) Since sudo was made for the system administrator, it has some useful configuration features such as a <code>timestamp_timeout</code>, which is the amount of time in minutes between instances of <code>sudo</code> before it will re-prompt for a password. This is because <code>sudo</code> has the ability to cache credentials for a period of time. Sudo creates (or touches) a file at <code>/var/db/sudo</code> with a timestamp of when sudo was last run to determine this timeout. Additionally, there is a <code>tty_tickets</code> variable that treats each new tty (terminal session) in isolation. This means that, for example, the sudo timeout of one tty will not affect another tty (you will have to type the password again).
@@ -78,12 +56,6 @@ In the wild, malware has disabled <code>tty_tickets</code> to potentially make s
 
 ^t1548004-elevated-execution-with-prompt
 
-**Parent Technique**
-- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may leverage the <code>AuthorizationExecuteWithPrivileges</code> API to escalate privileges by prompting the user for credentials.(Citation: AppleDocs AuthorizationExecuteWithPrivileges) The purpose of this API is to give application developers an easy way to perform operations with root privileges, such as for application installation or updating. This API does not validate that the program requesting root privileges comes from a reputable source or has been maliciously modified. 
 
 Although this API is deprecated, it still fully functions in the latest releases of macOS. When calling this API, the user will be prompted to enter their credentials but no checks on the origin or integrity of the program are made. The program calling the API may also load world writable files which can be modified to perform malicious behavior with elevated privileges.
@@ -93,12 +65,6 @@ Adversaries may abuse <code>AuthorizationExecuteWithPrivileges</code> to obtain 
 ### T1548.005: Temporary Elevated Cloud Access
 
 ^t1548005-temporary-elevated-cloud-access
-
-**Parent Technique**
-- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse permission configurations that allow them to gain temporarily elevated access to cloud resources. Many cloud environments allow administrators to grant user or service accounts permission to request just-in-time access to roles, impersonate other accounts, pass roles onto resources and services, or otherwise gain short-term access to a set of privileges that may be distinct from their own. 
 
@@ -115,12 +81,6 @@ While users require specific role assignments in order to use any of these featu
 ### T1548.006: TCC Manipulation
 
 ^t1548006-tcc-manipulation
-
-**Parent Technique**
-- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries can manipulate or abuse the Transparency, Consent, & Control (TCC) service or database to grant malicious executables elevated permissions. TCC is a Privacy & Security macOS control mechanism used to determine if the running process has permission to access the data or services protected by TCC, such as screen sharing, camera, microphone, or Full Disk Access (FDA).
 

@@ -8,10 +8,6 @@ x_mitre_version: 1.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[execution|Execution]]
-
 Adversaries may abuse system services or daemons to execute commands or programs. Adversaries can execute malicious content by interacting with or creating services either locally or remotely. Many services are set to run at boot, which can aid in achieving persistence ([Create or Modify System Process](https://attack.mitre.org/techniques/T1543)), but adversaries can also abuse services for one-time or temporary execution.
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may abuse system services or daemons to execute commands or programs
 ### T1569.001: Launchctl
 
 ^t1569001-launchctl
-
-**Parent Technique**
-- [[T1569-system_services|T1569: System Services]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse launchctl to execute commands or programs. Launchctl interfaces with launchd, the service management framework for macOS. Launchctl supports taking subcommands on the command-line, interactively, or even redirected from standard input.(Citation: Launchctl Man)
 
@@ -35,12 +25,6 @@ Adversaries use launchctl to execute commands and programs as [Launch Agent](htt
 
 ^t1569002-service-execution
 
-**Parent Technique**
-- [[T1569-system_services|T1569: System Services]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse the Windows service control manager to execute malicious commands or payloads. The Windows service control manager (<code>services.exe</code>) is an interface to manage and manipulate services.(Citation: Microsoft Service Control Manager) The service control manager is accessible to users via GUI components as well as system utilities such as <code>sc.exe</code> and [Net](https://attack.mitre.org/software/S0039).
 
 [PsExec](https://attack.mitre.org/software/S0029) can also be used to execute commands or payloads via a temporary Windows service created through the service control manager API.(Citation: Russinovich Sysinternals) Tools such as [PsExec](https://attack.mitre.org/software/S0029) and <code>sc.exe</code> can accept remote servers as arguments and may be used to conduct remote execution.
@@ -50,12 +34,6 @@ Adversaries may leverage these mechanisms to execute malicious content. This can
 ### T1569.003: Systemctl
 
 ^t1569003-systemctl
-
-**Parent Technique**
-- [[T1569-system_services|T1569: System Services]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse systemctl to execute commands or programs. Systemctl is the primary interface for systemd, the Linux init system and service manager. Typically invoked from a shell, Systemctl can also be integrated into scripts or applications.   
 

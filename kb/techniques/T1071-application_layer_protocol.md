@@ -8,10 +8,6 @@ x_mitre_version: 2.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[command_and_control|Command and Control]]
-
 Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
 Adversaries may utilize many different protocols, including those used for web browsing, transferring files, electronic mail, DNS, or publishing/subscribing. For connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), commonly used protocols are SMB, SSH, or RDP.(Citation: Mandiant APT29 Eye Spy Email Nov 22) 
@@ -22,12 +18,6 @@ Adversaries may utilize many different protocols, including those used for web b
 
 ^t1071001-web-protocols
 
-**Parent Technique**
-- [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
-
 Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
 Protocols such as HTTP/S(Citation: CrowdStrike Putter Panda) and WebSocket(Citation: Brazking-Websockets) that carry web traffic may be very common in environments. HTTP/S packets have many fields and headers in which data can be concealed. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic. 
@@ -35,12 +25,6 @@ Protocols such as HTTP/S(Citation: CrowdStrike Putter Panda) and WebSocket(Citat
 ### T1071.002: File Transfer Protocols
 
 ^t1071002-file-transfer-protocols
-
-**Parent Technique**
-- [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
 
 Adversaries may communicate using application layer protocols associated with transferring files to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
@@ -50,12 +34,6 @@ Protocols such as SMB(Citation: US-CERT TA18-074A), FTP(Citation: ESET Machete J
 
 ^t1071003-mail-protocols
 
-**Parent Technique**
-- [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
-
 Adversaries may communicate using application layer protocols associated with electronic mail delivery to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
 Protocols such as SMTP/S, POP3/S, and IMAP that carry electronic mail may be very common in environments.  Packets produced from these protocols may have many fields and headers in which data can be concealed. Data could also be concealed within the email messages themselves. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic.(Citation: FireEye APT28) 
@@ -63,12 +41,6 @@ Protocols such as SMTP/S, POP3/S, and IMAP that carry electronic mail may be ver
 ### T1071.004: DNS
 
 ^t1071004-dns
-
-**Parent Technique**
-- [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
 
 Adversaries may communicate using the Domain Name System (DNS) application layer protocol to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
@@ -79,12 +51,6 @@ DNS beaconing may be used to send commands to remote systems via DNS queries. A 
 ### T1071.005: Publish/Subscribe Protocols
 
 ^t1071005-publish-subscribe-protocols
-
-**Parent Technique**
-- [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
 
 Adversaries may communicate using publish/subscribe (pub/sub) application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 

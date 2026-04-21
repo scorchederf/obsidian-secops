@@ -8,10 +8,6 @@ x_mitre_version: 1.3
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may undermine security controls that will either warn users of untrusted activity or prevent execution of untrusted programs. Operating systems and security products may contain mechanisms to identify programs or websites as possessing some level of trust. Examples of such features would include a program being allowed to run because it is signed by a valid code signing certificate, a program prompting the user with a warning because it has an attribute set from being downloaded from the Internet, or getting an indication that you are about to connect to an untrusted site.
 
 Adversaries may attempt to subvert these trust mechanisms. The method adversaries use will depend on the specific mechanism they seek to subvert. Adversaries may conduct [File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222) or [Modify Registry](https://attack.mitre.org/techniques/T1112) in support of subverting these controls.(Citation: SpectorOps Subverting Trust Sept 2017) Adversaries may also create or steal code signing certificates to acquire trust on target systems.(Citation: Securelist Digital Certificates)(Citation: Symantec Digital Certificates) 
@@ -21,12 +17,6 @@ Adversaries may attempt to subvert these trust mechanisms. The method adversarie
 ### T1553.001: Gatekeeper Bypass
 
 ^t1553001-gatekeeper-bypass
-
-**Parent Technique**
-- [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may modify file attributes and subvert Gatekeeper functionality to evade user prompts and execute untrusted programs. Gatekeeper is a set of technologies that act as layer of Apple’s security model to ensure only trusted applications are executed on a host. Gatekeeper was built on top of File Quarantine in Snow Leopard (10.6, 2009) and has grown to include Code Signing, security policy compliance, Notarization, and more. Gatekeeper also treats applications running for the first time differently than reopened applications.(Citation: TheEclecticLightCompany Quarantine and the flag)(Citation: TheEclecticLightCompany apple notarization )
 
@@ -48,12 +38,6 @@ Applications and files loaded onto the system from a USB flash drive, optical di
 
 ^t1553002-code-signing
 
-**Parent Technique**
-- [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may create, acquire, or steal code signing materials to sign their malware or tools. Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with. (Citation: Wikipedia Code Signing) The certificates used during an operation may be created, acquired, or stolen by the adversary. (Citation: Securelist Digital Certificates) (Citation: Symantec Digital Certificates) Unlike [Invalid Code Signature](https://attack.mitre.org/techniques/T1036/001), this activity will result in a valid signature.
 
 Code signing to verify software on first run can be used on modern Windows and macOS systems. It is not used on Linux due to the decentralized nature of the platform. (Citation: Wikipedia Code Signing)(Citation: EclecticLightChecksonEXECodeSigning)
@@ -63,12 +47,6 @@ Code signing certificates may be used to bypass security policies that require s
 ### T1553.003: SIP and Trust Provider Hijacking
 
 ^t1553003-sip-and-trust-provider-hijacking
-
-**Parent Technique**
-- [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may tamper with SIP and trust provider components to mislead the operating system and application control tools when conducting signature validation checks. In user mode, Windows Authenticode (Citation: Microsoft Authenticode) digital signatures are used to verify a file's origin and integrity, variables that may be used to establish trust in signed code (ex: a driver with a valid Microsoft signature may be handled as safe). The signature validation process is handled via the WinVerifyTrust application programming interface (API) function,  (Citation: Microsoft WinVerifyTrust) which accepts an inquiry and coordinates with the appropriate trust provider, which is responsible for validating parameters of a signature. (Citation: SpectorOps Subverting Trust Sept 2017)
 
@@ -87,12 +65,6 @@ Hijacking SIP or trust provider components can also enable persistent code execu
 
 ^t1553004-install-root-certificate
 
-**Parent Technique**
-- [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may install a root certificate on a compromised system to avoid warnings when connecting to adversary controlled web servers. Root certificates are used in public key cryptography to identify a root certificate authority (CA). When a root certificate is installed, the system or application will trust certificates in the root's chain of trust that have been signed by the root certificate.(Citation: Wikipedia Root Certificate) Certificates are commonly used for establishing secure TLS/SSL communications within a web browser. When a user attempts to browse a website that presents a certificate that is not trusted an error message will be displayed to warn the user of the security risk. Depending on the security settings, the browser may not allow the user to establish a connection to the website.
 
 Installation of a root certificate on a compromised system would give an adversary a way to degrade the security of that system. Adversaries have used this technique to avoid security warnings prompting users when compromised systems connect over HTTPS to adversary controlled web servers that spoof legitimate websites in order to collect login credentials.(Citation: Operation Emmental)
@@ -107,12 +79,6 @@ In macOS, the Ay MaMi malware uses <code>/usr/bin/security add-trusted-cert -d -
 
 ^t1553005-mark-of-the-web-bypass
 
-**Parent Technique**
-- [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may abuse specific file formats to subvert Mark-of-the-Web (MOTW) controls. In Windows, when files are downloaded from the Internet, they are tagged with a hidden NTFS Alternate Data Stream (ADS) named <code>Zone.Identifier</code> with a specific value known as the MOTW.(Citation: Microsoft Zone.Identifier 2020) Files that are tagged with MOTW are protected and cannot perform certain actions. For example, starting in MS Office 10, if a MS Office file has the MOTW, it will open in Protected View. Executables tagged with the MOTW will be processed by Windows Defender SmartScreen that compares files with an allowlist of well-known executables. If the file is not known/trusted, SmartScreen will prevent the execution and warn the user not to run it.(Citation: Beek Use of VHD Dec 2020)(Citation: Outflank MotW 2020)(Citation: Intezer Russian APT Dec 2020)
 
 Adversaries may abuse container files such as compressed/archive (.arj, .gzip) and/or disk image (.iso, .vhd) file formats to deliver malicious payloads that may not be tagged with MOTW. Container files downloaded from the Internet will be marked with MOTW but the files within may not inherit the MOTW after the container files are extracted and/or mounted. MOTW is a NTFS feature and many container files do not support NTFS alternative data streams. After a container file is extracted and/or mounted, the files contained within them may be treated as local files on disk and run without protections.(Citation: Beek Use of VHD Dec 2020)(Citation: Outflank MotW 2020)
@@ -120,12 +86,6 @@ Adversaries may abuse container files such as compressed/archive (.arj, .gzip) a
 ### T1553.006: Code Signing Policy Modification
 
 ^t1553006-code-signing-policy-modification
-
-**Parent Technique**
-- [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may modify code signing policies to enable execution of unsigned or self-signed code. Code signing provides a level of authenticity on a program from a developer and a guarantee that the program has not been tampered with. Security controls can include enforcement mechanisms to ensure that only valid, signed code can be run on an operating system. 
 

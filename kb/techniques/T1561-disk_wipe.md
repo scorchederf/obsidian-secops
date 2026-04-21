@@ -8,10 +8,6 @@ x_mitre_version: 1.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[impact|Impact]]
-
 Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network to interrupt availability to system and network resources. With direct write access to a disk, adversaries may attempt to overwrite portions of disk data. Adversaries may opt to wipe arbitrary portions of disk data and/or wipe disk structures like the master boot record (MBR). A complete wipe of all disk sectors may be attempted.
 
 To maximize impact on the target organization in operations where network-wide availability interruption is the goal, malware used for wiping disks may have worm-like features to propagate across a network by leveraging additional techniques like [Valid Accounts](https://attack.mitre.org/techniques/T1078), [OS Credential Dumping](https://attack.mitre.org/techniques/T1003), and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002).(Citation: Novetta Blockbuster Destructive Malware)
@@ -24,12 +20,6 @@ On network devices, adversaries may wipe configuration files and other data from
 
 ^t1561001-disk-content-wipe
 
-**Parent Technique**
-- [[T1561-disk_wipe|T1561: Disk Wipe]]
-
-**Tactic**
-- [[impact|Impact]]
-
 Adversaries may erase the contents of storage devices on specific systems or in large numbers in a network to interrupt availability to system and network resources.
 
 Adversaries may partially or completely overwrite the contents of a storage device rendering the data irrecoverable through the storage interface.(Citation: Novetta Blockbuster)(Citation: Novetta Blockbuster Destructive Malware)(Citation: DOJ Lazarus Sony 2018) Instead of wiping specific disk structures or files, adversaries with destructive intent may wipe arbitrary portions of disk content. To wipe disk content, adversaries may acquire direct access to the hard drive in order to overwrite arbitrarily sized portions of disk with random data.(Citation: Novetta Blockbuster Destructive Malware) Adversaries have also been observed leveraging third-party drivers like [RawDisk](https://attack.mitre.org/software/S0364) to directly access disk content.(Citation: Novetta Blockbuster)(Citation: Novetta Blockbuster Destructive Malware) This behavior is distinct from [Data Destruction](https://attack.mitre.org/techniques/T1485) because sections of the disk are erased instead of individual files.
@@ -39,12 +29,6 @@ To maximize impact on the target organization in operations where network-wide a
 ### T1561.002: Disk Structure Wipe
 
 ^t1561002-disk-structure-wipe
-
-**Parent Technique**
-- [[T1561-disk_wipe|T1561: Disk Wipe]]
-
-**Tactic**
-- [[impact|Impact]]
 
 Adversaries may corrupt or wipe the disk data structures on a hard drive necessary to boot a system; targeting specific critical systems or in large numbers in a network to interrupt availability to system and network resources. 
 

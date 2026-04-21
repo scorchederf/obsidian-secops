@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[collection|Collection]]
-
 Adversaries may stage collected data in a central location or directory prior to Exfiltration. Data may be kept in separate files or combined into one file through techniques such as [Archive Collected Data](https://attack.mitre.org/techniques/T1560). Interactive command shells may be used, and common functionality within [cmd](https://attack.mitre.org/software/S0106) and bash may be used to copy data into a staging location.(Citation: PWC Cloud Hopper April 2017)
 
 In cloud environments, adversaries may stage data within a particular instance or virtual machine before exfiltration. An adversary may [Create Cloud Instance](https://attack.mitre.org/techniques/T1578/002) and stage data in that instance.(Citation: Mandiant M-Trends 2020)
@@ -24,12 +20,6 @@ Adversaries may choose to stage data from a victim network in a centralized loca
 
 ^t1074001-local-data-staging
 
-**Parent Technique**
-- [[T1074-data_staged|T1074: Data Staged]]
-
-**Tactic**
-- [[collection|Collection]]
-
 Adversaries may stage collected data in a central location or directory on the local system prior to Exfiltration. Data may be kept in separate files or combined into one file through techniques such as [Archive Collected Data](https://attack.mitre.org/techniques/T1560). Interactive command shells may be used, and common functionality within [cmd](https://attack.mitre.org/software/S0106) and bash may be used to copy data into a staging location.
 
 Adversaries may also stage collected data in various available formats/locations of a system, including local storage databases/repositories or the Windows Registry.(Citation: Prevailion DarkWatchman 2021)
@@ -37,12 +27,6 @@ Adversaries may also stage collected data in various available formats/locations
 ### T1074.002: Remote Data Staging
 
 ^t1074002-remote-data-staging
-
-**Parent Technique**
-- [[T1074-data_staged|T1074: Data Staged]]
-
-**Tactic**
-- [[collection|Collection]]
 
 Adversaries may stage data collected from multiple systems in a central location or directory on one system prior to Exfiltration. Data may be kept in separate files or combined into one file through techniques such as [Archive Collected Data](https://attack.mitre.org/techniques/T1560). Interactive command shells may be used, and common functionality within [cmd](https://attack.mitre.org/software/S0106) and bash may be used to copy data into a staging location.
 

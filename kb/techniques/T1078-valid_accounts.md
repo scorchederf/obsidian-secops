@@ -8,10 +8,6 @@ x_mitre_version: 2.8
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[initial_access|Initial Access]]
-
 Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access, network devices, and remote desktop.(Citation: volexity_0day_sophos_FW) Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. Adversaries may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.
 
 In some cases, adversaries may abuse inactive accounts: for example, those belonging to individuals who are no longer part of an organization. Using these accounts may allow the adversary to evade detection, as the original account user will not be present to identify any anomalous activity taking place on their account.(Citation: CISA MFA PrintNightmare)
@@ -24,12 +20,6 @@ The overlap of permissions for local, domain, and cloud accounts across a networ
 
 ^t1078001-default-accounts
 
-**Parent Technique**
-- [[T1078-valid_accounts|T1078: Valid Accounts]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
-
 Adversaries may obtain and abuse credentials of a default account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Default accounts are those that are built-into an OS, such as the Guest or Administrator accounts on Windows systems. Default accounts also include default factory/provider set accounts on other types of systems, software, or devices, including the root user account in AWS, the root user account in ESXi, and the default service account in Kubernetes.(Citation: Microsoft Local Accounts Feb 2019)(Citation: AWS Root User)(Citation: Threat Matrix for Kubernetes)
 
 Default accounts are not limited to client machines; rather, they also include accounts that are preset for equipment such as network devices and computer applications, whether they are internal, open source, or commercial. Appliances that come preset with a username and password combination pose a serious threat to organizations that do not change it post installation, as they are easy targets for an adversary. Similarly, adversaries may also utilize publicly disclosed or stolen [Private Keys](https://attack.mitre.org/techniques/T1552/004) or credential materials to legitimately connect to remote environments via [Remote Services](https://attack.mitre.org/techniques/T1021).(Citation: Metasploit SSH Module)
@@ -40,12 +30,6 @@ Default accounts may be created on a system after initial setup by connecting or
 
 ^t1078002-domain-accounts
 
-**Parent Technique**
-- [[T1078-valid_accounts|T1078: Valid Accounts]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
-
 Adversaries may obtain and abuse credentials of a domain account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.(Citation: TechNet Credential Theft) Domain accounts are those managed by Active Directory Domain Services where access and permissions are configured across systems and services that are part of that domain. Domain accounts can cover users, administrators, and services.(Citation: Microsoft AD Accounts)
 
 Adversaries may compromise domain accounts, some with a high level of privileges, through various means such as [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or password reuse, allowing access to privileged resources of the domain.
@@ -54,12 +38,6 @@ Adversaries may compromise domain accounts, some with a high level of privileges
 
 ^t1078003-local-accounts
 
-**Parent Technique**
-- [[T1078-valid_accounts|T1078: Valid Accounts]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
-
 Adversaries may obtain and abuse credentials of a local account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Local accounts are those configured by an organization for use by users, remote support, services, or for administration on a single system or service.
 
 Local Accounts may also be abused to elevate privileges and harvest credentials through [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). Password reuse may allow the abuse of local accounts across a set of machines on a network for the purposes of Privilege Escalation and Lateral Movement. 
@@ -67,12 +45,6 @@ Local Accounts may also be abused to elevate privileges and harvest credentials 
 ### T1078.004: Cloud Accounts
 
 ^t1078004-cloud-accounts
-
-**Parent Technique**
-- [[T1078-valid_accounts|T1078: Valid Accounts]]
-
-**Tactic**
-- [[initial_access|Initial Access]]
 
 Valid accounts in cloud environments may allow adversaries to perform actions to achieve Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application. Cloud Accounts can exist solely in the cloud; alternatively, they may be hybrid-joined between on-premises systems and the cloud through syncing or federation with other identity sources such as Windows Active Directory.(Citation: AWS Identity Federation)(Citation: Google Federating GC)(Citation: Microsoft Deploying AD Federation)
 

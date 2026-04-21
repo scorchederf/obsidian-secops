@@ -8,10 +8,6 @@ x_mitre_version: 2.3
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[exfiltration|Exfiltration]]
-
 Adversaries may steal data by exfiltrating it over an existing command and control channel. Stolen data is encoded into the normal communications channel using the same protocol as command and control communications.
 
 ## Mitigations

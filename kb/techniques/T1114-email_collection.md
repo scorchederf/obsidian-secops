@@ -8,10 +8,6 @@ x_mitre_version: 2.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[collection|Collection]]
-
 Adversaries may target user email to collect sensitive information. Emails may contain sensitive data, including trade secrets or personal information, that can prove valuable to adversaries. Emails may also contain details of ongoing incident response operations, which may allow adversaries to adjust their techniques in order to maintain persistence or evade defenses.(Citation: TrustedSec OOB Communications)(Citation: CISA AA20-352A 2021) Adversaries can collect or forward email from mail servers or clients. 
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may target user email to collect sensitive information. Emails may c
 ### T1114.001: Local Email Collection
 
 ^t1114001-local-email-collection
-
-**Parent Technique**
-- [[T1114-email_collection|T1114: Email Collection]]
-
-**Tactic**
-- [[collection|Collection]]
 
 Adversaries may target user email on local systems to collect sensitive information. Files containing email data can be acquired from a user’s local system, such as Outlook storage or cache files.
 
@@ -34,23 +24,11 @@ Outlook stores data locally in offline data files with an extension of .ost. Out
 
 ^t1114002-remote-email-collection
 
-**Parent Technique**
-- [[T1114-email_collection|T1114: Email Collection]]
-
-**Tactic**
-- [[collection|Collection]]
-
 Adversaries may target an Exchange server, Office 365, or Google Workspace to collect sensitive information. Adversaries may leverage a user's credentials and interact directly with the Exchange server to acquire information from within a network. Adversaries may also access externally facing Exchange services, Office 365, or Google Workspace to access email using credentials or access tokens. Tools such as [MailSniper](https://attack.mitre.org/software/S0413) can be used to automate searches for specific keywords.
 
 ### T1114.003: Email Forwarding Rule
 
 ^t1114003-email-forwarding-rule
-
-**Parent Technique**
-- [[T1114-email_collection|T1114: Email Collection]]
-
-**Tactic**
-- [[collection|Collection]]
 
 Adversaries may setup email forwarding rules to collect sensitive information. Adversaries may abuse email forwarding rules to monitor the activities of a victim, steal information, and further gain intelligence on the victim or the victim’s organization to use as part of further exploits or operations.(Citation: US-CERT TA18-068A 2018) Furthermore, email forwarding rules can allow adversaries to maintain persistent access to victim's emails even after compromised credentials are reset by administrators.(Citation: Pfammatter - Hidden Inbox Rules) Most email clients allow users to create inbox rules for various email functions, including forwarding to a different recipient. These rules may be created through a local email application, a web interface, or by command-line interface. Messages can be forwarded to internal or external recipients, and there are no restrictions limiting the extent of this rule. Administrators may also create forwarding rules for user accounts with the same considerations and outcomes.(Citation: Microsoft Tim McMichael Exchange Mail Forwarding 2)(Citation: Mac Forwarding Rules)
 

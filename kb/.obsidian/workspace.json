@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "395c0e3eb2ac1d9a",
+        "id": "8e1bcc292d4c3adc",
         "type": "tabs",
         "children": [
           {
-            "id": "6ccb02277e6be342",
+            "id": "7f7cdcb4004bea19",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "tools/attrib.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": true,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "attrib"
             }
           }
         ]
@@ -176,13 +190,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "6ccb02277e6be342",
+  "active": "7f7cdcb4004bea19",
   "lastOpenFiles": [
-    "techniques/T1569-system_services.md",
-    "tactics/execution.md",
-    "techniques/T1059-command_and_scripting_interpreter.md",
-    "tactics/discovery.md",
-    "tactics/defense_evasion.md",
+    "techniques/T1056-input_capture.md",
+    "tools/asyncrat.md",
+    "tactics/collection.md",
     "tools/psexec.md",
     "tools/quick_assist.md",
     "tools/havij.md",
@@ -204,6 +216,8 @@
     "tools/koadic.md",
     "tools/crackmapexec.md",
     "tools/esentutl.md",
+    "tools/route.md",
+    "tools/cmd.md",
     "tools",
     "mitigations",
     "techniques",

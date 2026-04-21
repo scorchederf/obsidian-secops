@@ -8,10 +8,6 @@ x_mitre_version: 2.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may use scripts automatically executed at boot or logon initialization to establish persistence.(Citation: Mandiant APT29 Eye Spy Email Nov 22)(Citation: Anomali Rocke March 2019) Initialization scripts can be used to perform administrative functions, which may often execute other programs or send information to an internal logging server. These scripts can vary based on operating system and whether applied locally or remotely.  
 
 Adversaries may use these scripts to maintain persistence on a single system. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary. 
@@ -24,12 +20,6 @@ An adversary may also be able to escalate their privileges since some boot or lo
 
 ^t1037001-logon-script-(windows)
 
-**Parent Technique**
-- [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may use Windows logon scripts automatically executed at logon initialization to establish persistence. Windows allows logon scripts to be run whenever a specific user or group of users log into a system.(Citation: TechNet Logon Scripts) This is done via adding a path to a script to the <code>HKCU\Environment\UserInitMprLogonScript</code> Registry key.(Citation: Hexacorn Logon Scripts)
 
 Adversaries may use these scripts to maintain persistence on a single system. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary. 
@@ -37,12 +27,6 @@ Adversaries may use these scripts to maintain persistence on a single system. De
 ### T1037.002: Login Hook
 
 ^t1037002-login-hook
-
-**Parent Technique**
-- [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may use a Login Hook to establish persistence executed upon user logon. A login hook is a plist file that points to a specific script to execute with root privileges upon user logon. The plist file is located in the <code>/Library/Preferences/com.apple.loginwindow.plist</code> file and can be modified using the <code>defaults</code> command-line utility. This behavior is the same for logout hooks where a script can be executed upon user logout. All hooks require administrator permissions to modify or create hooks.(Citation: Login Scripts Apple Dev)(Citation: LoginWindowScripts Apple Dev) 
 
@@ -54,12 +38,6 @@ Adversaries can add or insert a path to a malicious script in the <code>com.appl
 
 ^t1037003-network-logon-script
 
-**Parent Technique**
-- [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may use network logon scripts automatically executed at logon initialization to establish persistence. Network logon scripts can be assigned using Active Directory or Group Policy Objects.(Citation: Petri Logon Script AD) These logon scripts run with the privileges of the user they are assigned to. Depending on the systems within the network, initializing one of these scripts could apply to more than one or potentially all systems.  
  
 Adversaries may use these scripts to maintain persistence on a network. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary.
@@ -67,12 +45,6 @@ Adversaries may use these scripts to maintain persistence on a network. Dependin
 ### T1037.004: RC Scripts
 
 ^t1037004-rc-scripts
-
-**Parent Technique**
-- [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may establish persistence by modifying RC scripts, which are executed during a Unix-like system’s startup. These files allow system administrators to map and start custom services at startup for different run levels. RC scripts require root privileges to modify.
 
@@ -85,12 +57,6 @@ Several Unix-like systems have moved to Systemd and deprecated the use of RC scr
 ### T1037.005: Startup Items
 
 ^t1037005-startup-items
-
-**Parent Technique**
-- [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may use startup items automatically executed at boot initialization to establish persistence. Startup items execute during the final phase of the boot process and contain shell scripts or other executable files along with configuration information used by the system to determine the execution order for all startup items.(Citation: Startup Items)
 

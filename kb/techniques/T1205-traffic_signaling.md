@@ -8,10 +8,6 @@ x_mitre_version: 2.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[command_and_control|Command and Control]]
-
 Adversaries may use traffic signaling to hide open ports or other malicious functionality used for persistence or command and control. Traffic signaling involves the use of a magic value or sequence that must be sent to a system to trigger a special response, such as opening a closed port or executing a malicious task. This may take the form of sending a series of packets with certain characteristics before a port will be opened that the adversary can use for command and control. Usually this series of packets consists of attempted connections to a predefined sequence of closed ports (i.e. [Port Knocking](https://attack.mitre.org/techniques/T1205/001)), but can involve unusual flags, specific strings, or other unique characteristics. After the sequence is completed, opening a port may be accomplished by the host-based firewall, but could also be implemented by custom software.
 
 Adversaries may also communicate with an already open port, but the service listening on that port will only respond to commands or trigger other malicious functionality if passed the appropriate magic value(s).
@@ -28,12 +24,6 @@ Adversaries may also use the Wake-on-LAN feature to turn on powered off systems.
 
 ^t1205001-port-knocking
 
-**Parent Technique**
-- [[T1205-traffic_signaling|T1205: Traffic Signaling]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
-
 Adversaries may use port knocking to hide open ports used for persistence or command and control. To enable a port, an adversary sends a series of attempted connections to a predefined sequence of closed ports. After the sequence is completed, opening a port is often accomplished by the host based firewall, but could also be implemented by custom software.
 
 This technique has been observed both for the dynamic opening of a listening port as well as the initiating of a connection to a listening server on a different system.
@@ -43,12 +33,6 @@ The observation of the signal packets to trigger the communication can be conduc
 ### T1205.002: Socket Filters
 
 ^t1205002-socket-filters
-
-**Parent Technique**
-- [[T1205-traffic_signaling|T1205: Traffic Signaling]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
 
 Adversaries may attach filters to a network socket to monitor then activate backdoors used for persistence or command and control. With elevated permissions, adversaries can use features such as the `libpcap` library to open sockets and install filters to allow or disallow certain types of data to come through the socket. The filter may apply to all traffic passing through the specified network interface (or every interface if not specified). When the network interface receives a packet matching the filter criteria, additional actions can be triggered on the host, such as activation of a reverse shell.
 

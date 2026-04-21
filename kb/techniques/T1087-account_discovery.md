@@ -8,10 +8,6 @@ x_mitre_version: 2.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[discovery|Discovery]]
-
 Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses on a system or within a compromised environment. This information can help adversaries determine which accounts exist, which can aid in follow-on behavior such as brute-forcing, spear-phishing attacks, or account takeovers (e.g., [Valid Accounts](https://attack.mitre.org/techniques/T1078)).
 
 Adversaries may use several methods to enumerate accounts, including abuse of existing tools, built-in commands, and potential misconfigurations that leak account names and roles or permissions in the targeted environment.
@@ -24,12 +20,6 @@ For examples, cloud environments typically provide easily accessible interfaces 
 
 ^t1087001-local-account
 
-**Parent Technique**
-- [[T1087-account_discovery|T1087: Account Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
-
 Adversaries may attempt to get a listing of local system accounts. This information can help adversaries determine which local accounts exist on a system to aid in follow-on behavior.
 
 Commands such as <code>net user</code> and <code>net localgroup</code> of the [Net](https://attack.mitre.org/software/S0039) utility and <code>id</code> and <code>groups</code> on macOS and Linux can list local users and groups.(Citation: Mandiant APT1)(Citation: id man page)(Citation: groups man page) On Linux, local users can also be enumerated through the use of the <code>/etc/passwd</code> file. On macOS, the <code>dscl . list /Users</code> command can be used to enumerate local accounts. On ESXi servers, the `esxcli system account list` command can list local user accounts.(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)
@@ -38,12 +28,6 @@ Commands such as <code>net user</code> and <code>net localgroup</code> of the [N
 
 ^t1087002-domain-account
 
-**Parent Technique**
-- [[T1087-account_discovery|T1087: Account Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
-
 Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior such as targeting specific accounts which possess particular privileges.
 
 Commands such as <code>net user /domain</code> and <code>net group /domain</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscacheutil -q group</code> on macOS, and <code>ldapsearch</code> on Linux can list domain users and groups. [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlets including <code>Get-ADUser</code> and <code>Get-ADGroupMember</code> may enumerate members of Active Directory groups.(Citation: CrowdStrike StellarParticle January 2022)  
@@ -51,12 +35,6 @@ Commands such as <code>net user /domain</code> and <code>net group /domain</code
 ### T1087.003: Email Account
 
 ^t1087003-email-account
-
-**Parent Technique**
-- [[T1087-account_discovery|T1087: Account Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
 
 Adversaries may attempt to get a listing of email addresses and accounts. Adversaries may try to dump Exchange address lists such as global address lists (GALs).(Citation: Microsoft Exchange Address Lists)
 
@@ -67,12 +45,6 @@ In Google Workspace, the GAL is shared with Microsoft Outlook users through the 
 ### T1087.004: Cloud Account
 
 ^t1087004-cloud-account
-
-**Parent Technique**
-- [[T1087-account_discovery|T1087: Account Discovery]]
-
-**Tactic**
-- [[discovery|Discovery]]
 
 Adversaries may attempt to get a listing of cloud accounts. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application.
 

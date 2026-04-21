@@ -8,10 +8,6 @@ x_mitre_version: 2.8
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may manipulate accounts to maintain and/or elevate access to victim systems. Account manipulation may consist of any action that preserves or modifies adversary access to a compromised account, such as modifying credentials or permission groups.(Citation: FireEye SMOKEDHAM June 2021) These actions could also include account activity designed to subvert security policies, such as performing iterative password updates to bypass password duration policies and preserve the life of compromised credentials. 
 
 In order to create or manipulate accounts, the adversary must already have sufficient permissions on systems or the domain. However, account manipulation may also lead to privilege escalation where modifications grant access to additional roles, permissions, or higher-privileged [Valid Accounts](https://attack.mitre.org/techniques/T1078).
@@ -21,12 +17,6 @@ In order to create or manipulate accounts, the adversary must already have suffi
 ### T1098.001: Additional Cloud Credentials
 
 ^t1098001-additional-cloud-credentials
-
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may add adversary-controlled credentials to a cloud account to maintain persistent access to victim accounts and instances within the environment.
 
@@ -45,12 +35,6 @@ In Entra ID environments with the app password feature enabled, adversaries may 
 
 ^t1098002-additional-email-delegate-permissions
 
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may grant additional permission levels to maintain persistent access to an adversary-controlled email account. 
 
 For example, the <code>Add-MailboxPermission</code> [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlet, available in on-premises Exchange and in the cloud-based service Office 365, adds permissions to a mailbox.(Citation: Microsoft - Add-MailboxPermission)(Citation: FireEye APT35 2018)(Citation: Crowdstrike Hiding in Plain Sight 2018) In Google Workspace, delegation can be enabled via the Google Admin console and users can delegate accounts via their Gmail settings.(Citation: Gmail Delegation)(Citation: Google Ensuring Your Information is Safe) 
@@ -62,12 +46,6 @@ This may be used in persistent threat incidents as well as BEC (Business Email C
 ### T1098.003: Additional Cloud Roles
 
 ^t1098003-additional-cloud-roles
-
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 An adversary may add additional roles or permissions to an adversary-controlled cloud account to maintain persistent access to a tenant. For example, adversaries may update IAM policies in cloud-based environments or add a new global administrator in Office 365 environments.(Citation: AWS IAM Policies and Permissions)(Citation: Google Cloud IAM Policies)(Citation: Microsoft Support O365 Add Another Admin, October 2019)(Citation: Microsoft O365 Admin Roles) With sufficient permissions, a compromised account can gain almost unlimited access to data and settings (including the ability to reset the passwords of other admins).(Citation: Expel AWS Attacker)
 (Citation: Microsoft O365 Admin Roles) 
@@ -82,12 +60,6 @@ In some cases, adversaries may add roles to adversary-controlled accounts outsid
 
 ^t1098004-ssh-authorized-keys
 
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may modify the SSH <code>authorized_keys</code> file to maintain persistence on a victim host. Linux distributions, macOS, and ESXi hypervisors commonly use key-based authentication to secure the authentication process of SSH sessions for remote management. The <code>authorized_keys</code> file in SSH specifies the SSH keys that can be used for logging into the user account for which the file is configured. This file is usually found in the user's home directory under <code>&lt;user-home&gt;/.ssh/authorized_keys</code> (or, on ESXi, `/etc/ssh/keys-<username>/authorized_keys`).(Citation: SSH Authorized Keys) Users may edit the system’s SSH config file to modify the directives `PubkeyAuthentication` and `RSAAuthentication` to the value `yes` to ensure public key and RSA authentication are enabled, as well as modify the directive `PermitRootLogin` to the value `yes` to enable root authentication via SSH.(Citation: Broadcom ESXi SSH) The SSH config file is usually located under <code>/etc/ssh/sshd_config</code>.
 
 Adversaries may modify SSH <code>authorized_keys</code> files directly with scripts or shell commands to add their own adversary-supplied public keys. In cloud environments, adversaries may be able to modify the SSH authorized_keys file of a particular virtual machine via the command line interface or rest API. For example, by using the Google Cloud CLI’s “add-metadata” command an adversary may add SSH keys to a user account.(Citation: Google Cloud Add Metadata)(Citation: Google Cloud Privilege Escalation) Similarly, in Azure, an adversary may update the authorized_keys file of a virtual machine via a PATCH request to the API.(Citation: Azure Update Virtual Machines) This ensures that an adversary possessing the corresponding private key may log in as an existing user via SSH.(Citation: Venafi SSH Key Abuse)(Citation: Cybereason Linux Exim Worm) It may also lead to privilege escalation where the virtual machine or instance has distinct permissions from the requesting user.
@@ -99,12 +71,6 @@ SSH keys can also be added to accounts on network devices, such as with the `ip 
 ### T1098.005: Device Registration
 
 ^t1098005-device-registration
-
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may register a device to an adversary-controlled account. Devices may be registered in a multifactor authentication (MFA) system, which handles authentication to the network, or in a device management system, which handles device access and compliance.
 
@@ -118,12 +84,6 @@ Devices registered in Entra ID may be able to conduct [Internal Spearphishing](h
 
 ^t1098006-additional-container-cluster-roles
 
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 An adversary may add additional roles or permissions to an adversary-controlled user or service account to maintain persistent access to a container orchestration system. For example, an adversary with sufficient permissions may create a RoleBinding or a ClusterRoleBinding to bind a Role or ClusterRole to a Kubernetes account.(Citation: Kubernetes RBAC)(Citation: Aquasec Kubernetes Attack 2023) Where attribute-based access control (ABAC) is in use, an adversary with sufficient permissions may modify a Kubernetes ABAC policy to give the target account additional permissions.(Citation: Kuberentes ABAC)
  
 This account modification may immediately follow [Create Account](https://attack.mitre.org/techniques/T1136) or other malicious account activity. Adversaries may also modify existing [Valid Accounts](https://attack.mitre.org/techniques/T1078) that they have compromised.  
@@ -133,12 +93,6 @@ Note that where container orchestration systems are deployed in cloud environmen
 ### T1098.007: Additional Local or Domain Groups
 
 ^t1098007-additional-local-or-domain-groups
-
-**Parent Technique**
-- [[T1098-account_manipulation|T1098: Account Manipulation]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 An adversary may add additional local or domain groups to an adversary-controlled account to maintain persistent access to a system or domain.
 

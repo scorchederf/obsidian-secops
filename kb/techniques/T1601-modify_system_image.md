@@ -8,10 +8,6 @@ x_mitre_version: 1.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may make changes to the operating system of embedded network devices to weaken defenses and provide new capabilities for themselves.  On such devices, the operating systems are typically monolithic and most of the device functionality and capabilities are contained within a single file.
 
 To change the operating system, the adversary typically only needs to affect this one file, replacing or modifying it.  This can either be done live in memory during system runtime for immediate effect, or in storage to implement the change on the next boot of the network device.
@@ -21,12 +17,6 @@ To change the operating system, the adversary typically only needs to affect thi
 ### T1601.001: Patch System Image
 
 ^t1601001-patch-system-image
-
-**Parent Technique**
-- [[T1601-modify_system_image|T1601: Modify System Image]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may modify the operating system of a network device to introduce new capabilities or weaken existing defenses.(Citation: Killing the myth of Cisco IOS rootkits) (Citation: Killing IOS diversity myth) (Citation: Cisco IOS Shellcode) (Citation: Cisco IOS Forensics Developments) (Citation: Juniper Netscreen of the Dead) Some network devices are built with a monolithic architecture, where the entire operating system and most of the functionality of the device is contained within a single file.  Adversaries may change this file in storage, to be loaded in a future boot, or in memory during runtime.
 
@@ -47,12 +37,6 @@ When the technique is performed on the running operating system in memory and no
 ### T1601.002: Downgrade System Image
 
 ^t1601002-downgrade-system-image
-
-**Parent Technique**
-- [[T1601-modify_system_image|T1601: Modify System Image]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may install an older version of the operating system of a network device to weaken security.  Older operating system versions on network devices often have weaker encryption ciphers and, in general, fewer/less updated defensive features. (Citation: Cisco Synful Knock Evolution)
 

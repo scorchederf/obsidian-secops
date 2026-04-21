@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[exfiltration|Exfiltration]]
-
 Adversaries may use an existing, legitimate external Web service to exfiltrate data rather than their primary command and control channel. Popular Web services acting as an exfiltration mechanism may give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to compromise. Firewall rules may also already exist to permit traffic to these services.
 
 Web service providers also commonly use SSL/TLS encryption, giving adversaries an added level of protection.
@@ -22,12 +18,6 @@ Web service providers also commonly use SSL/TLS encryption, giving adversaries a
 
 ^t1567001-exfiltration-to-code-repository
 
-**Parent Technique**
-- [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
-
 Adversaries may exfiltrate data to a code repository rather than over their primary command and control channel. Code repositories are often accessible via an API (ex: https://api.github.com). Access to these APIs are often over HTTPS, which gives the adversary an additional level of protection.
 
 Exfiltration to a code repository can also provide a significant amount of cover to the adversary if it is a popular service already used by hosts within the network. 
@@ -36,12 +26,6 @@ Exfiltration to a code repository can also provide a significant amount of cover
 
 ^t1567002-exfiltration-to-cloud-storage
 
-**Parent Technique**
-- [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
-
 Adversaries may exfiltrate data to a cloud storage service rather than over their primary command and control channel. Cloud storage services allow for the storage, edit, and retrieval of data from a remote cloud storage server over the Internet.
 
 Examples of cloud storage services include Dropbox and Google Docs. Exfiltration to these cloud storage services can provide a significant amount of cover to the adversary if hosts within the network are already communicating with the service. 
@@ -49,12 +33,6 @@ Examples of cloud storage services include Dropbox and Google Docs. Exfiltration
 ### T1567.003: Exfiltration to Text Storage Sites
 
 ^t1567003-exfiltration-to-text-storage-sites
-
-**Parent Technique**
-- [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
 
 Adversaries may exfiltrate data to text storage sites instead of their primary command and control channel. Text storage sites, such as <code>pastebin[.]com</code>, are commonly used by developers to share code and other information.  
 
@@ -65,12 +43,6 @@ Text storage sites are often used to host malicious code for C2 communication (e
 ### T1567.004: Exfiltration Over Webhook
 
 ^t1567004-exfiltration-over-webhook
-
-**Parent Technique**
-- [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
 
 Adversaries may exfiltrate data to a webhook endpoint rather than over their primary command and control channel. Webhooks are simple mechanisms for allowing a server to push data over HTTP/S to a client without the need for the client to continuously poll the server.(Citation: RedHat Webhooks) Many public and commercial services, such as Discord, Slack, and `webhook.site`, support the creation of webhook endpoints that can be used by other services, such as Github, Jira, or Trello.(Citation: Discord Intro to Webhooks) When changes happen in the linked services (such as pushing a repository update or modifying a ticket), these services will automatically post the data to the webhook endpoint for use by the consuming application. 
 

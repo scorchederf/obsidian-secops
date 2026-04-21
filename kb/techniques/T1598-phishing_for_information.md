@@ -8,10 +8,6 @@ x_mitre_version: 1.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[reconnaissance|Reconnaissance]]
-
 Adversaries may send phishing messages to elicit sensitive information that can be used during targeting. Phishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Phishing for information is different from [Phishing](https://attack.mitre.org/techniques/T1566) in that the objective is gathering data from the victim rather than executing malicious code.
 
 All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass credential harvesting campaigns.
@@ -28,12 +24,6 @@ Phishing for information may also involve evasive techniques, such as removing o
 
 ^t1598001-spearphishing-service
 
-**Parent Technique**
-- [[T1598-phishing_for_information|T1598: Phishing for Information]]
-
-**Tactic**
-- [[reconnaissance|Reconnaissance]]
-
 Adversaries may send spearphishing messages via third-party services to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)) and/or sending multiple, seemingly urgent messages.
 
 All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries send messages through various social media services, personal webmail, and other non-enterprise controlled services.(Citation: ThreatPost Social Media Phishing) These services are more likely to have a less-strict security policy than an enterprise. As with most kinds of spearphishing, the goal is to generate rapport with the target or get the target's interest in some way. Adversaries may create fake social media accounts and message employees for potential job opportunities. Doing so allows a plausible reason for asking about services, policies, and information about their environment. Adversaries may also use information from previous reconnaissance efforts (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)) to craft persuasive and believable lures.
@@ -41,12 +31,6 @@ All forms of spearphishing are electronically delivered social engineering targe
 ### T1598.002: Spearphishing Attachment
 
 ^t1598002-spearphishing-attachment
-
-**Parent Technique**
-- [[T1598-phishing_for_information|T1598: Phishing for Information]]
-
-**Tactic**
-- [[reconnaissance|Reconnaissance]]
 
 Adversaries may send spearphishing messages with a malicious attachment to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)) and/or sending multiple, seemingly urgent messages.
 
@@ -57,12 +41,6 @@ Adversaries may also use information from previous reconnaissance efforts (ex: [
 ### T1598.003: Spearphishing Link
 
 ^t1598003-spearphishing-link
-
-**Parent Technique**
-- [[T1598-phishing_for_information|T1598: Phishing for Information]]
-
-**Tactic**
-- [[reconnaissance|Reconnaissance]]
 
 Adversaries may send spearphishing messages with a malicious link to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)) and/or sending multiple, seemingly urgent messages.
 
@@ -81,12 +59,6 @@ From the fake website, information is gathered in web forms and sent to the adve
 ### T1598.004: Spearphishing Voice
 
 ^t1598004-spearphishing-voice
-
-**Parent Technique**
-- [[T1598-phishing_for_information|T1598: Phishing for Information]]
-
-**Tactic**
-- [[reconnaissance|Reconnaissance]]
 
 Adversaries may use voice communications to elicit sensitive information that can be used during targeting. Spearphishing for information is an attempt to trick targets into divulging information, frequently credentials or other actionable information. Spearphishing for information frequently involves social engineering techniques, such as posing as a source with a reason to collect information (ex: [Impersonation](https://attack.mitre.org/techniques/T1656)) and/or creating a sense of urgency or alarm for the recipient.
 

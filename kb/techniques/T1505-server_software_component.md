@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[persistence|Persistence]]
-
 Adversaries may abuse legitimate extensible development features of servers to establish persistent access to systems. Enterprise server applications may include features that allow developers to write and install software or scripts to extend the functionality of the main application. Adversaries may install malicious components to extend and abuse server applications.(Citation: volexity_0day_sophos_FW)
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may abuse legitimate extensible development features of servers to e
 ### T1505.001: SQL Stored Procedures
 
 ^t1505001-sql-stored-procedures
-
-**Parent Technique**
-- [[T1505-server_software_component|T1505: Server Software Component]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse SQL stored procedures to establish persistent access to systems. SQL Stored Procedures are code that can be saved and reused so that database users do not waste time rewriting frequently used SQL queries. Stored procedures can be invoked via SQL statements to the database using the procedure name or via defined events (e.g. when a SQL server application is started/restarted).
 
@@ -36,12 +26,6 @@ Microsoft SQL Server can enable common language runtime (CLR) integration. With 
 
 ^t1505002-transport-agent
 
-**Parent Technique**
-- [[T1505-server_software_component|T1505: Server Software Component]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may abuse Microsoft transport agents to establish persistent access to systems. Microsoft Exchange transport agents can operate on email messages passing through the transport pipeline to perform various tasks such as filtering spam, filtering malicious attachments, journaling, or adding a corporate signature to the end of all outgoing emails.(Citation: Microsoft TransportAgent Jun 2016)(Citation: ESET LightNeuron May 2019) Transport agents can be written by application developers and then compiled to .NET assemblies that are subsequently registered with the Exchange server. Transport agents will be invoked during a specified stage of email processing and carry out developer defined tasks. 
 
 Adversaries may register a malicious transport agent to provide a persistence mechanism in Exchange Server that can be triggered by adversary-specified email events.(Citation: ESET LightNeuron May 2019) Though a malicious transport agent may be invoked for all emails passing through the Exchange transport pipeline, the agent can be configured to only carry out specific tasks in response to adversary defined criteria. For example, the transport agent may only carry out an action like copying in-transit attachments and saving them for later exfiltration if the recipient email address matches an entry on a list provided by the adversary. 
@@ -50,12 +34,6 @@ Adversaries may register a malicious transport agent to provide a persistence me
 
 ^t1505003-web-shell
 
-**Parent Technique**
-- [[T1505-server_software_component|T1505: Server Software Component]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may backdoor web servers with web shells to establish persistent access to systems. A Web shell is a Web script that is placed on an openly accessible Web server to allow an adversary to access the Web server as a gateway into a network. A Web shell may provide a set of functions to execute or a command-line interface on the system that hosts the Web server.(Citation: volexity_0day_sophos_FW)
 
 In addition to a server-side script, a Web shell may have a client interface program that is used to talk to the Web server (e.g. [China Chopper](https://attack.mitre.org/software/S0020) Web shell client).(Citation: Lee 2013)
@@ -63,12 +41,6 @@ In addition to a server-side script, a Web shell may have a client interface pro
 ### T1505.004: IIS Components
 
 ^t1505004-iis-components
-
-**Parent Technique**
-- [[T1505-server_software_component|T1505: Server Software Component]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may install malicious components that run on Internet Information Services (IIS) web servers to establish persistence. IIS provides several mechanisms to extend the functionality of the web servers. For example, Internet Server Application Programming Interface (ISAPI) extensions and filters can be installed to examine and/or modify incoming and outgoing IIS web requests. Extensions and filters are deployed as DLL files that export three functions: <code>Get{Extension/Filter}Version</code>, <code>Http{Extension/Filter}Proc</code>, and (optionally) <code>Terminate{Extension/Filter}</code>. IIS modules may also be installed to extend IIS web servers.(Citation: Microsoft ISAPI Extension Overview 2017)(Citation: Microsoft ISAPI Filter Overview 2017)(Citation: IIS Backdoor 2011)(Citation: Trustwave IIS Module 2013)
 
@@ -80,12 +52,6 @@ Adversaries may also install malicious IIS modules to observe and/or modify traf
 
 ^t1505005-terminal-services-dll
 
-**Parent Technique**
-- [[T1505-server_software_component|T1505: Server Software Component]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may abuse components of Terminal Services to enable persistent access to systems. Microsoft Terminal Services, renamed to Remote Desktop Services in some Windows Server OSs as of 2022, enable remote terminal connections to hosts. Terminal Services allows servers to transmit a full, interactive, graphical user interface to clients via RDP.(Citation: Microsoft Remote Desktop Services)
 
 [Windows Service](https://attack.mitre.org/techniques/T1543/003)s that are run as a "generic" process (ex: <code>svchost.exe</code>) load the service's DLL file, the location of which is stored in a Registry entry named <code>ServiceDll</code>.(Citation: Microsoft System Services Fundamentals) The <code>termsrv.dll</code> file, typically stored in `%SystemRoot%\System32\`, is the default <code>ServiceDll</code> value for Terminal Services in `HKLM\System\CurrentControlSet\services\TermService\Parameters\`.
@@ -95,12 +61,6 @@ Adversaries may modify and/or replace the Terminal Services DLL to enable persis
 ### T1505.006: vSphere Installation Bundles
 
 ^t1505006-vsphere-installation-bundles
-
-**Parent Technique**
-- [[T1505-server_software_component|T1505: Server Software Component]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse vSphere Installation Bundles (VIBs) to establish persistent access to ESXi hypervisors. VIBs are collections of files used for software distribution and virtual system management in VMware environments. Since ESXi uses an in-memory filesystem where changes made to most files are stored in RAM rather than in persistent storage, these modifications are lost after a reboot. However, VIBs can be used to create startup tasks, apply custom firewall rules, or deploy binaries that persist across reboots. Typically, administrators use VIBs for updates and system maintenance.
 

@@ -8,10 +8,6 @@ x_mitre_version: 1.3
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may configure system settings to automatically execute a program during system boot or logon to maintain persistence or gain higher-level privileges on compromised systems. Operating systems may have mechanisms for automatically running a program on system boot or account logon.(Citation: Microsoft Run Key)(Citation: MSDN Authentication Packages)(Citation: Microsoft TimeProvider)(Citation: Cylance Reg Persistence Sept 2013)(Citation: Linux Kernel Programming) These mechanisms may include automatically executing programs that are placed in specially designated directories or are referenced by repositories that store configuration information, such as the Windows Registry. An adversary may achieve the same goal by modifying or extending features of the kernel.
 
 Since some boot or logon autostart programs run with higher privileges, an adversary may leverage these to elevate privileges.
@@ -21,12 +17,6 @@ Since some boot or logon autostart programs run with higher privileges, an adver
 ### T1547.001: Registry Run Keys / Startup Folder
 
 ^t1547001-registry-run-keys---startup-folder
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key. Adding an entry to the "run keys" in the Registry or startup folder will cause the program referenced to be executed when a user logs in.(Citation: Microsoft Run Key) These programs will be executed under the context of the user and will have the account's associated permissions level.
 
@@ -70,12 +60,6 @@ Adversaries can use these configuration locations to execute malware, such as re
 
 ^t1547002-authentication-package
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may abuse authentication packages to execute DLLs when the system boots. Windows authentication package DLLs are loaded by the Local Security Authority (LSA) process at system start. They provide support for multiple logon processes and multiple security protocols to the operating system.(Citation: MSDN Authentication Packages)
 
 Adversaries can use the autostart mechanism provided by LSA authentication packages for persistence by placing a reference to a binary in the Windows Registry location <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\</code> with the key value of <code>"Authentication Packages"=&lt;target binary&gt;</code>. The binary will then be executed by the system when the authentication packages are loaded.
@@ -83,12 +67,6 @@ Adversaries can use the autostart mechanism provided by LSA authentication packa
 ### T1547.003: Time Providers
 
 ^t1547003-time-providers
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may abuse time providers to execute DLLs when the system boots. The Windows Time service (W32Time) enables time synchronization across and within domains.(Citation: Microsoft W32Time Feb 2018) W32Time time providers are responsible for retrieving time stamps from hardware/network resources and outputting these values to other network clients.(Citation: Microsoft TimeProvider)
 
@@ -99,12 +77,6 @@ Adversaries may abuse this architecture to establish persistence, specifically b
 ### T1547.004: Winlogon Helper DLL
 
 ^t1547004-winlogon-helper-dll
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may abuse features of Winlogon to execute DLLs and/or executables when a user logs in. Winlogon.exe is a Windows component responsible for actions at logon/logoff as well as the secure attention sequence (SAS) triggered by Ctrl-Alt-Delete. Registry entries in <code>HKLM\Software[\\Wow6432Node\\]\Microsoft\Windows NT\CurrentVersion\Winlogon\</code> and <code>HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\</code> are used to manage additional helper programs and functionalities that support Winlogon.(Citation: Cylance Reg Persistence Sept 2013) 
 
@@ -120,12 +92,6 @@ Adversaries may take advantage of these features to repeatedly execute malicious
 
 ^t1547005-security-support-provider
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may abuse security support providers (SSPs) to execute DLLs when the system boots. Windows SSP DLLs are loaded into the Local Security Authority (LSA) process at system start. Once loaded into the LSA, SSP DLLs have access to encrypted and plaintext passwords that are stored in Windows, such as any logged-on user's Domain password or smart card PINs.
 
 The SSP configuration is stored in two Registry keys: <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Security Packages</code> and <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig\Security Packages</code>. An adversary may modify these Registry keys to add new SSPs, which will be loaded the next time the system boots, or when the AddSecurityPackage Windows API function is called.(Citation: Graeber 2014)
@@ -133,12 +99,6 @@ The SSP configuration is stored in two Registry keys: <code>HKLM\SYSTEM\CurrentC
 ### T1547.006: Kernel Modules and Extensions
 
 ^t1547006-kernel-modules-and-extensions
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may modify the kernel to automatically execute programs on system boot. Loadable Kernel Modules (LKMs) are pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system. For example, one type of module is the device driver, which allows the kernel to access hardware connected to the system.(Citation: Linux Kernel Programming) 
 
@@ -154,12 +114,6 @@ Adversaries can use LKMs and kexts to conduct [Persistence](https://attack.mitre
 
 ^t1547007-re-opened-applications
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may modify plist files to automatically run an application when a user logs in. When a user logs out or restarts via the macOS Graphical User Interface (GUI), a prompt is provided to the user with a checkbox to "Reopen windows when logging back in".(Citation: Re-Open windows on Mac) When selected, all applications currently open are added to a property list file named <code>com.apple.loginwindow.[UUID].plist</code> within the <code>~/Library/Preferences/ByHost</code> directory.(Citation: Methods of Mac Malware Persistence)(Citation: Wardle Persistence Chapter) Applications listed in this file are automatically reopened upon the user’s next logon.
 
 Adversaries can establish [Persistence](https://attack.mitre.org/tactics/TA0003) by adding a malicious application path to the <code>com.apple.loginwindow.[UUID].plist</code> file to execute payloads when a user logs in.
@@ -168,12 +122,6 @@ Adversaries can establish [Persistence](https://attack.mitre.org/tactics/TA0003)
 
 ^t1547008-lsass-driver
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may modify or add LSASS drivers to obtain persistence on compromised systems. The Windows security subsystem is a set of components that manage and enforce the security policy for a computer or domain. The Local Security Authority (LSA) is the main component responsible for local security policy and user authentication. The LSA includes multiple dynamic link libraries (DLLs) associated with various other security functions, all of which run in the context of the LSA Subsystem Service (LSASS) lsass.exe process.(Citation: Microsoft Security Subsystem)
 
 Adversaries may target LSASS drivers to obtain persistence. By either replacing or adding illegitimate drivers (e.g., [Hijack Execution Flow](https://attack.mitre.org/techniques/T1574)), an adversary can use LSA operations to continuously execute malicious payloads.
@@ -181,12 +129,6 @@ Adversaries may target LSASS drivers to obtain persistence. By either replacing 
 ### T1547.009: Shortcut Modification
 
 ^t1547009-shortcut-modification
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may create or modify shortcuts that can execute a program during system boot or user login. Shortcuts or symbolic links are used to reference other files or programs that will be opened or executed when the shortcut is clicked or executed by a system startup process.
 
@@ -197,12 +139,6 @@ Shortcuts can also be abused to establish persistence by implementing other meth
 ### T1547.010: Port Monitors
 
 ^t1547010-port-monitors
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may use port monitors to run an adversary supplied DLL during system boot for persistence or privilege escalation. A port monitor can be set through the <code>AddMonitor</code> API call to set a DLL to be loaded at startup.(Citation: AddMonitor) This DLL can be located in <code>C:\Windows\System32</code> and will be loaded and run by the print spooler service, `spoolsv.exe`, under SYSTEM level permissions on boot.(Citation: Bloxham) 
 
@@ -218,12 +154,6 @@ Alternatively, an arbitrary DLL can be loaded if permissions allow writing a ful
 
 ^t1547012-print-processors
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may abuse print processors to run malicious DLLs during system boot for persistence and/or privilege escalation. Print processors are DLLs that are loaded by the print spooler service, `spoolsv.exe`, during boot.(Citation: Microsoft Intro Print Processors)
 
 Adversaries may abuse the print spooler service by adding print processors that load malicious DLLs at startup. A print processor can be installed through the <code>AddPrintProcessor</code> API call with an account that has <code>SeLoadDriverPrivilege</code> enabled. Alternatively, a print processor can be registered to the print spooler service by adding the <code>HKLM\SYSTEM\\[CurrentControlSet or ControlSet001]\Control\Print\Environments\\[Windows architecture: e.g., Windows x64]\Print Processors\\[user defined]\Driver</code> Registry key that points to the DLL.
@@ -236,12 +166,6 @@ The print spooler service runs under SYSTEM level permissions, therefore print p
 
 ^t1547013-xdg-autostart-entries
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may add or modify XDG Autostart Entries to execute malicious programs or commands when a user’s desktop environment is loaded at login. XDG Autostart entries are available for any XDG-compliant Linux system. XDG Autostart entries use Desktop Entry files (`.desktop`) to configure the user’s desktop environment upon user login. These configuration files determine what applications launch upon user login, define associated applications to open specific file types, and define applications used to open removable media.(Citation: Free Desktop Application Autostart Feb 2006)(Citation: Free Desktop Entry Keys)
 
 Adversaries may abuse this feature to establish persistence by adding a path to a malicious binary or command to the `Exec` directive in the `.desktop` configuration file. When the user’s desktop environment is loaded at user login, the `.desktop` files located in the XDG Autostart directories are automatically executed. System-wide Autostart entries are located in the `/etc/xdg/autostart` directory while the user entries are located in the `~/.config/autostart` directory.
@@ -252,12 +176,6 @@ Adversaries may combine this technique with [Masquerading](https://attack.mitre.
 
 ^t1547014-active-setup
 
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
-
 Adversaries may achieve persistence by adding a Registry key to the Active Setup of the local machine. Active Setup is a Windows mechanism that is used to execute programs when a user logs in. The value stored in the Registry key will be executed after a user logs into the computer.(Citation: Klein Active Setup 2010) These programs will be executed under the context of the user and will have the account's associated permissions level.
 
 Adversaries may abuse Active Setup by creating a key under <code> HKLM\SOFTWARE\Microsoft\Active Setup\Installed Components\</code> and setting a malicious value for <code>StubPath</code>. This value will serve as the program that will be executed when a user logs into the computer.(Citation: Mandiant Glyer APT 2010)(Citation: Citizenlab Packrat 2015)(Citation: FireEye CFR Watering Hole 2012)(Citation: SECURELIST Bright Star 2015)(Citation: paloalto Tropic Trooper 2016)
@@ -267,12 +185,6 @@ Adversaries can abuse these components to execute malware, such as remote access
 ### T1547.015: Login Items
 
 ^t1547015-login-items
-
-**Parent Technique**
-- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-
-**Tactic**
-- [[privilege_escalation|Privilege Escalation]]
 
 Adversaries may add login items to execute upon user login to gain persistence or escalate privileges. Login items are applications, documents, folders, or server connections that are automatically launched when a user logs in.(Citation: Open Login Items Apple) Login items can be added via a shared file list or Service Management Framework.(Citation: Adding Login Items) Shared file list login items can be set using scripting languages such as [AppleScript](https://attack.mitre.org/techniques/T1059/002), whereas the Service Management Framework uses the API call <code>SMLoginItemSetEnabled</code>.
 

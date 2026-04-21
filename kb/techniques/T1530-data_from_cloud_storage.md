@@ -8,10 +8,6 @@ x_mitre_version: 2.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[collection|Collection]]
-
 Adversaries may access data from cloud storage.
 
 Many IaaS providers offer solutions for online data object storage such as Amazon S3, Azure Storage, and Google Cloud Storage. Similarly, SaaS enterprise platforms such as Office 365 and Google Workspace provide cloud-based document storage to users through services such as OneDrive and Google Drive, while SaaS application providers such as Slack, Confluence, Salesforce, and Dropbox may provide cloud storage solutions as a peripheral or primary use case of their platform. 

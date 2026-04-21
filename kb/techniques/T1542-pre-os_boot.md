@@ -8,10 +8,6 @@ x_mitre_version: 1.3
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may abuse Pre-OS Boot mechanisms as a way to establish persistence on a system. During the booting process of a computer, firmware and various startup services are loaded before the operating system. These programs control flow of execution before the operating system takes control.(Citation: Wikipedia Booting)
 
 Adversaries may overwrite data in boot drivers or firmware such as BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) to persist on systems at a layer below the operating system. This can be particularly difficult to detect as malware at this level will not be detected by host software-based defenses.
@@ -22,12 +18,6 @@ Adversaries may overwrite data in boot drivers or firmware such as BIOS (Basic I
 
 ^t1542001-system-firmware
 
-**Parent Technique**
-- [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify system firmware to persist on systems.The BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) or Extensible Firmware Interface (EFI) are examples of system firmware that operate as the software interface between the operating system and hardware of a computer.(Citation: Wikipedia BIOS)(Citation: Wikipedia UEFI)(Citation: About UEFI)
 
 System firmware like BIOS and (U)EFI underly the functionality of a computer and may be modified by an adversary to perform or assist in malicious activity. Capabilities exist to overwrite the system firmware, which may give sophisticated adversaries a means to install malicious firmware updates as a means of persistence on a system that may be difficult to detect.
@@ -36,12 +26,6 @@ System firmware like BIOS and (U)EFI underly the functionality of a computer and
 
 ^t1542002-component-firmware
 
-**Parent Technique**
-- [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify component firmware to persist on systems. Some adversaries may employ sophisticated means to compromise computer components and install malicious firmware that will execute adversary code outside of the operating system and main system firmware or BIOS. This technique may be similar to [System Firmware](https://attack.mitre.org/techniques/T1542/001) but conducted upon other system components/devices that may not have the same capability or level of integrity checking.
 
 Malicious component firmware could provide both a persistent level of access to systems despite potential typical failures to maintain access and hard disk re-images, as well as a way to evade host software-based defenses and integrity checks.
@@ -49,12 +33,6 @@ Malicious component firmware could provide both a persistent level of access to 
 ### T1542.003: Bootkit
 
 ^t1542003-bootkit
-
-**Parent Technique**
-- [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may use bootkits to persist on systems. A bootkit is a malware variant that modifies the boot sectors of a hard drive, allowing malicious code to execute before a computer's operating system has loaded. Bootkits reside at a layer below the operating system and may make it difficult to perform full remediation unless an organization suspects one was used and can act accordingly.
 
@@ -68,12 +46,6 @@ In UEFI (Unified Extensible Firmware Interface) systems, a bootkit may instead c
 
 ^t1542004-rommonkit
 
-**Parent Technique**
-- [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may abuse the ROM Monitor (ROMMON) by loading an unauthorized firmware with adversary code to provide persistent access and manipulate device behavior that is difficult to detect. (Citation: Cisco Synful Knock Evolution)(Citation: Cisco Blog Legacy Device Attacks)
 
 
@@ -82,12 +54,6 @@ ROMMON is a Cisco network device firmware that functions as a boot loader, boot 
 ### T1542.005: TFTP Boot
 
 ^t1542005-tftp-boot
-
-**Parent Technique**
-- [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse netbooting to load an unauthorized network device operating system from a Trivial File Transfer Protocol (TFTP) server. TFTP boot (netbooting) is commonly used by network administrators to load configuration-controlled network device images from a centralized management server. Netbooting is one option in the boot sequence and can be used to centralize, manage, and control device images.
 

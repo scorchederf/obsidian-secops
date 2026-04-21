@@ -156,8 +156,8 @@ def write_technique_tactic_link(tf, tactic):
     """
     tactic_safe = make_safe_name(tactic.name)
 
-    tf.write("## Tactic\n\n")
-    tf.write(f"- [[{tactic_safe}|{tactic.name}]]\n\n")
+    #tf.write("## Tactic\n\n")
+    #tf.write(f"- [[{tactic_safe}|{tactic.name}]]\n\n")
 
 
 def write_technique_description(tf, technique):
@@ -218,11 +218,11 @@ def write_subtechniques_section(tf, mitre, technique, tactic, attack_id):
             parent_file = f"{attack_id}-{parent_safe}"
             tactic_safe = make_safe_name(tactic.name)
 
-            tf.write("**Parent Technique**\n")
-            tf.write(f"- [[{parent_file}|{attack_id}: {technique.name}]]\n\n")
+            # tf.write("**Parent Technique**\n")
+            # tf.write(f"- [[{parent_file}|{attack_id}: {technique.name}]]\n\n")
 
-            tf.write("**Tactic**\n")
-            tf.write(f"- [[{tactic_safe}|{tactic.name}]]\n\n")
+            # tf.write("**Tactic**\n")
+            # tf.write(f"- [[{tactic_safe}|{tactic.name}]]\n\n")
 
             if hasattr(sub, "description"):
                 tf.write(f"{sub.description}\n\n")

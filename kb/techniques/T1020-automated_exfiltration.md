@@ -8,10 +8,6 @@ x_mitre_version: 1.3
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[exfiltration|Exfiltration]]
-
 Adversaries may exfiltrate data, such as sensitive documents, through the use of automated processing after being gathered during Collection.(Citation: ESET Gamaredon June 2020) 
 
 When automated exfiltration is used, other exfiltration techniques likely apply as well to transfer the information out of the network, such as [Exfiltration Over C2 Channel](https://attack.mitre.org/techniques/T1041) and [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048).
@@ -21,12 +17,6 @@ When automated exfiltration is used, other exfiltration techniques likely apply 
 ### T1020.001: Traffic Duplication
 
 ^t1020001-traffic-duplication
-
-**Parent Technique**
-- [[T1020-automated_exfiltration|T1020: Automated Exfiltration]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
 
 Adversaries may leverage traffic mirroring in order to automate data exfiltration over compromised infrastructure. Traffic mirroring is a native feature for some devices, often used for network analysis. For example, devices may be configured to forward network traffic to one or more destinations for analysis by a network analyzer or other monitoring device. (Citation: Cisco Traffic Mirroring)(Citation: Juniper Traffic Mirroring)
 

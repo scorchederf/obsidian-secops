@@ -8,10 +8,6 @@ x_mitre_version: 2.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[execution|Execution]]
-
 Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities, for example, macOS and Linux distributions include some flavor of [Unix Shell](https://attack.mitre.org/techniques/T1059/004) while Windows installations include the [Windows Command Shell](https://attack.mitre.org/techniques/T1059/003) and [PowerShell](https://attack.mitre.org/techniques/T1059/001).
 
 There are also cross-platform interpreters such as [Python](https://attack.mitre.org/techniques/T1059/006), as well as those commonly associated with client applications such as [JavaScript](https://attack.mitre.org/techniques/T1059/007) and [Visual Basic](https://attack.mitre.org/techniques/T1059/005).
@@ -23,12 +19,6 @@ Adversaries may abuse these technologies in various ways as a means of executing
 ### T1059.001: PowerShell
 
 ^t1059001-powershell
-
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system.(Citation: TechNet PowerShell) Adversaries can use PowerShell to perform a number of actions, including discovery of information and execution of code. Examples include the <code>Start-Process</code> cmdlet which can be used to run an executable and the <code>Invoke-Command</code> cmdlet which runs a command locally or on a remote computer (though administrator permissions are required to use PowerShell to connect to remote systems).
 
@@ -42,12 +32,6 @@ PowerShell commands/scripts can also be executed without directly invoking the <
 
 ^t1059002-applescript
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse AppleScript for execution. AppleScript is a macOS scripting language designed to control applications and parts of the OS via inter-application messages called AppleEvents.(Citation: Apple AppleScript) These AppleEvent messages can be sent independently or easily scripted with AppleScript. These events can locate open windows, send keystrokes, and interact with almost any open application locally or remotely.
 
 Scripts can be run from the command-line via <code>osascript /path/to/script</code> or <code>osascript -e "script here"</code>. Aside from the command line, scripts can be executed in numerous ways including Mail rules, Calendar.app alarms, and Automator workflows. AppleScripts can also be executed as plain text shell scripts by adding <code>#!/usr/bin/osascript</code> to the start of the script file.(Citation: SentinelOne AppleScript)
@@ -60,12 +44,6 @@ Adversaries may abuse AppleScript to execute various behaviors, such as interact
 
 ^t1059003-windows-command-shell
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse the Windows command shell for execution. The Windows command shell ([cmd](https://attack.mitre.org/software/S0106)) is the primary command prompt on Windows systems. The Windows command prompt can be used to control almost any aspect of a system, with various permission levels required for different subsets of commands. The command prompt can be invoked remotely via [Remote Services](https://attack.mitre.org/techniques/T1021) such as [SSH](https://attack.mitre.org/techniques/T1021/004).(Citation: SSH in Windows)
 
 Batch files (ex: .bat or .cmd) also provide the shell with a list of sequential commands to run, as well as normal scripting operations such as conditionals and loops. Common uses of batch files include long or repetitive tasks, or the need to run the same set of commands on multiple systems.
@@ -75,12 +53,6 @@ Adversaries may leverage [cmd](https://attack.mitre.org/software/S0106) to execu
 ### T1059.004: Unix Shell
 
 ^t1059004-unix-shell
-
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse Unix shell commands and scripts for execution. Unix shells are the primary command prompt on Linux, macOS, and ESXi systems, though many variations of the Unix shell exist (e.g. sh, ash, bash, zsh, etc.) depending on the specific OS or distribution.(Citation: DieNet Bash)(Citation: Apple ZShell) Unix shells can control every aspect of a system, with certain commands requiring elevated privileges.
 
@@ -94,12 +66,6 @@ Some systems, such as embedded devices, lightweight Linux distributions, and ESX
 
 ^t1059005-visual-basic
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse Visual Basic (VB) for execution. VB is a programming language created by Microsoft with interoperability with many Windows technologies such as [Component Object Model](https://attack.mitre.org/techniques/T1559/001) and the [Native API](https://attack.mitre.org/techniques/T1106) through the Windows API. Although tagged as legacy with no planned future evolutions, VB is integrated and supported in the .NET Framework and cross-platform .NET Core.(Citation: VB .NET Mar 2020)(Citation: VB Microsoft)
 
 Derivative languages based on VB have also been created, such as Visual Basic for Applications (VBA) and VBScript. VBA is an event-driven programming language built into Microsoft Office, as well as several third-party applications.(Citation: Microsoft VBA)(Citation: Wikipedia VBA) VBA enables documents to contain macros used to automate the execution of tasks and other functionality on the host. VBScript is a default scripting language on Windows hosts and can also be used in place of [JavaScript](https://attack.mitre.org/techniques/T1059/007) on HTML Application (HTA) webpages served to Internet Explorer (though most modern browsers do not come with VBScript support).(Citation: Microsoft VBScript)
@@ -110,12 +76,6 @@ Adversaries may use VB payloads to execute malicious commands. Common malicious 
 
 ^t1059006-python
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse Python commands and scripts for execution. Python is a very popular scripting/programming language, with capabilities to perform many functions. Python can be executed interactively from the command-line (via the <code>python.exe</code> interpreter) or via scripts (.py) that can be written and distributed to different systems. Python code can also be compiled into binary executables.(Citation: Zscaler APT31 Covid-19 October 2020)
 
 Python comes with many built-in packages to interact with the underlying system, such as file operations and device I/O. Adversaries can use these libraries to download and execute commands or other scripts as well as perform various malicious behaviors.
@@ -123,12 +83,6 @@ Python comes with many built-in packages to interact with the underlying system,
 ### T1059.007: JavaScript
 
 ^t1059007-javascript
-
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse various implementations of JavaScript for execution. JavaScript (JS) is a platform-independent scripting language (compiled just-in-time at runtime) commonly associated with scripts in webpages, though JS can be executed in runtime environments outside the browser.(Citation: NodeJS)
 
@@ -142,12 +96,6 @@ Adversaries may abuse various implementations of JavaScript to execute various b
 
 ^t1059008-network-device-cli
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse scripting or built-in command line interpreters (CLI) on network devices to execute malicious command and payloads. The CLI is the primary means through which users and administrators interact with the device in order to view system information, modify device operations, or perform diagnostic and administrative functions. CLIs typically contain various permission levels required for different commands. 
 
 Scripting interpreters automate tasks and extend functionality beyond the command set included in the network OS. The CLI and scripting interpreter are accessible through a direct console connection, or through remote means, such as telnet or [SSH](https://attack.mitre.org/techniques/T1021/004).
@@ -157,12 +105,6 @@ Adversaries can use the network CLI to change how network devices behave and ope
 ### T1059.009: Cloud API
 
 ^t1059009-cloud-api
-
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse cloud APIs to execute malicious commands. APIs available in cloud environments provide various functionalities and are a feature-rich method for programmatic access to nearly all aspects of a tenant. These APIs may be utilized through various methods such as command line interpreters (CLIs), in-browser Cloud Shells, [PowerShell](https://attack.mitre.org/techniques/T1059/001) modules like Azure for PowerShell(Citation: Microsoft - Azure PowerShell), or software developer kits (SDKs) available for languages such as [Python](https://attack.mitre.org/techniques/T1059/006).  
 
@@ -174,12 +116,6 @@ With proper permissions (often via use of credentials such as [Application Acces
 
 ^t1059010-autohotkey-&-autoit
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may execute commands and perform malicious tasks using AutoIT and AutoHotKey automation scripts. AutoIT and AutoHotkey (AHK) are scripting languages that enable users to automate Windows tasks. These automation scripts can be used to perform a wide variety of actions, such as clicking on buttons, entering text, and opening and closing programs.(Citation: AutoIT)(Citation: AutoHotKey)
 
 Adversaries may use AHK (`.ahk`) and AutoIT (`.au3`) scripts to execute malicious code on a victim's system. For example, adversaries have used for AHK to execute payloads and other modular malware such as keyloggers. Adversaries have also used custom AHK files containing embedded malware as [Phishing](https://attack.mitre.org/techniques/T1566) payloads.(Citation: Splunk DarkGate)
@@ -190,12 +126,6 @@ These scripts may also be compiled into self-contained executable payloads (`.ex
 
 ^t1059011-lua
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse Lua commands and scripts for execution. Lua is a cross-platform scripting and programming language primarily designed for embedded use in applications. Lua can be executed on the command-line (through the stand-alone lua interpreter), via scripts (<code>.lua</code>), or from Lua-embedded programs (through the <code>struct lua_State</code>).(Citation: Lua main page)(Citation: Lua state)
 
 Lua scripts may be executed by adversaries for malicious purposes. Adversaries may incorporate, abuse, or replace existing Lua interpreters to allow for malicious Lua command execution at runtime.(Citation: PoetRat Lua)(Citation: Lua Proofpoint Sunseed)(Citation: Cyphort EvilBunny)(Citation: Kaspersky Lua)
@@ -204,12 +134,6 @@ Lua scripts may be executed by adversaries for malicious purposes. Adversaries m
 
 ^t1059012-hypervisor-cli
 
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may abuse hypervisor command line interpreters (CLIs) to execute malicious commands. Hypervisor CLIs typically enable a wide variety of functionality for managing both the hypervisor itself and the guest virtual machines it hosts. 
 
 For example, on ESXi systems, tools such as `esxcli` and `vim-cmd` allow administrators to configure firewall rules and log forwarding on the hypervisor, list virtual machines, start and stop virtual machines, and more.(Citation: Broadcom ESXCLI Reference)(Citation: Crowdstrike Hypervisor Jackpotting Pt 2 2021)(Citation: LOLESXi) Adversaries may be able to leverage these tools in order to support further actions, such as [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) or [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486).
@@ -217,12 +141,6 @@ For example, on ESXi systems, tools such as `esxcli` and `vim-cmd` allow adminis
 ### T1059.013: Container CLI/API
 
 ^t1059013-container-cli-api
-
-**Parent Technique**
-- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may abuse built-in CLI tools or API calls to execute malicious commands in containerized environments.
 

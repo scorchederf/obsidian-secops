@@ -8,10 +8,6 @@ x_mitre_version: 1.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[lateral_movement|Lateral Movement]]
-
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a service that accepts remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.
 
 In an enterprise environment, servers and workstations can be organized into domains. Domains provide centralized identity management, allowing users to login using one set of credentials across the entire network. If an adversary is able to obtain a set of valid domain credentials, they could login to many different machines using remote access protocols such as secure shell (SSH) or remote desktop protocol (RDP).(Citation: SSH Secure Shell)(Citation: TechNet Remote Desktop Services) They could also login to accessible SaaS or IaaS services, such as those that federate their identities to the domain, or management platforms for internal virtualization environments such as VMware vCenter. 
@@ -24,12 +20,6 @@ Legitimate applications (such as [Software Deployment Tools](https://attack.mitr
 
 ^t1021001-remote-desktop-protocol
 
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
-
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a computer using the Remote Desktop Protocol (RDP). The adversary may then perform actions as the logged-on user.
 
 Remote desktop is a common feature in operating systems. It allows a user to log into an interactive session with a system desktop graphical user interface on a remote system. Microsoft refers to its implementation of the Remote Desktop Protocol (RDP) as Remote Desktop Services (RDS).(Citation: TechNet Remote Desktop Services) 
@@ -40,12 +30,6 @@ Adversaries may connect to a remote system over RDP/RDS to expand access if the 
 
 ^t1021002-smb-windows-admin-shares
 
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
-
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with a remote network share using Server Message Block (SMB). The adversary may then perform actions as the logged-on user.
 
 SMB is a file, printer, and serial port sharing protocol for Windows machines on the same network or domain. Adversaries may use SMB to interact with file shares, allowing them to move laterally throughout a network. Linux and macOS implementations of SMB typically use Samba.
@@ -55,12 +39,6 @@ Windows systems have hidden network shares that are accessible only to administr
 ### T1021.003: Distributed Component Object Model
 
 ^t1021003-distributed-component-object-model
-
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
 
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote machines by taking advantage of Distributed Component Object Model (DCOM). The adversary may then perform actions as the logged-on user.
 
@@ -74,12 +52,6 @@ Through DCOM, adversaries operating in the context of an appropriately privilege
 
 ^t1021004-ssh
 
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
-
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into remote machines using Secure Shell (SSH). The adversary may then perform actions as the logged-on user.
 
 SSH is a protocol that allows authorized users to open remote shells on other computers. Many Linux and macOS versions come with SSH installed by default, although typically disabled until the user enables it. On ESXi, SSH can be enabled either directly on the host (e.g., via `vim-cmd hostsvc/enable_ssh`) or via vCenter.(Citation: Sygnia ESXi Ransomware 2025)(Citation: TrendMicro ESXI Ransomware)(Citation: Sygnia Abyss Locker 2025) The SSH server can be configured to use standard password authentication or public-private keypairs in lieu of or in addition to a password. In this authentication scenario, the user’s public key must be in a special file on the computer running the server that lists which keypairs are allowed to login as that user (i.e., [SSH Authorized Keys](https://attack.mitre.org/techniques/T1098/004)).
@@ -87,12 +59,6 @@ SSH is a protocol that allows authorized users to open remote shells on other co
 ### T1021.005: VNC
 
 ^t1021005-vnc
-
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
 
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to remotely control machines using Virtual Network Computing (VNC).  VNC is a platform-independent desktop sharing system that uses the RFB (“remote framebuffer”) protocol to enable users to remotely control another computer’s display by relaying the screen, mouse, and keyboard inputs over the network.(Citation: The Remote Framebuffer Protocol)
 
@@ -104,12 +70,6 @@ Adversaries may abuse VNC to perform malicious actions as the logged-on user suc
 
 ^t1021006-windows-remote-management
 
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
-
 Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to interact with remote systems using Windows Remote Management (WinRM). The adversary may then perform actions as the logged-on user.
 
 WinRM is the name of both a Windows service and a protocol that allows a user to interact with a remote system (e.g., run an executable, modify the Registry, modify services).(Citation: Microsoft WinRM) It may be called with the `winrm` command or by any number of programs such as PowerShell.(Citation: Jacobsen 2014) WinRM  can be used as a method of remotely interacting with [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047).(Citation: MSDN WMI)
@@ -117,12 +77,6 @@ WinRM is the name of both a Windows service and a protocol that allows a user to
 ### T1021.007: Cloud Services
 
 ^t1021007-cloud-services
-
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
 
 Adversaries may log into accessible cloud services within a compromised environment using [Valid Accounts](https://attack.mitre.org/techniques/T1078) that are synchronized with or federated to on-premises user identities. The adversary may then perform management actions or access cloud-hosted resources as the logged-on user. 
 
@@ -133,12 +87,6 @@ In some cases, adversaries may be able to authenticate to these services via [Ap
 ### T1021.008: Direct Cloud VM Connections
 
 ^t1021008-direct-cloud-vm-connections
-
-**Parent Technique**
-- [[T1021-remote_services|T1021: Remote Services]]
-
-**Tactic**
-- [[lateral_movement|Lateral Movement]]
 
 Adversaries may leverage [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log directly into accessible cloud hosted compute infrastructure through cloud native methods. Many cloud providers offer interactive connections to virtual infrastructure that can be accessed through the [Cloud API](https://attack.mitre.org/techniques/T1059/009), such as Azure Serial Console(Citation: Azure Serial Console), AWS EC2 Instance Connect(Citation: EC2 Instance Connect)(Citation: lucr-3: Getting SaaS-y in the cloud), and AWS System Manager.(Citation: AWS System Manager).
 

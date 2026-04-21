@@ -8,10 +8,6 @@ x_mitre_version: 2.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[collection|Collection]]
-
 Adversaries may attempt to position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as [Network Sniffing](https://attack.mitre.org/techniques/T1040), [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002), or replay attacks ([Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212)). By abusing features of common networking protocols that can determine the flow of network traffic (e.g. ARP, DNS, LLMNR, etc.), adversaries may force a device to communicate through an adversary controlled system so they can collect information or perform additional actions.(Citation: Rapid7 MiTM Basics)
 
 For example, adversaries may manipulate victim DNS settings to enable other malicious activities such as preventing/redirecting users from accessing legitimate sites and/or pushing additional malware.(Citation: ttint_rat)(Citation: dns_changer_trojans)(Citation: ad_blocker_with_miner) Adversaries may also manipulate DNS and leverage their position in order to intercept user credentials, including access tokens ([Steal Application Access Token](https://attack.mitre.org/techniques/T1528)) and session cookies ([Steal Web Session Cookie](https://attack.mitre.org/techniques/T1539)).(Citation: volexity_0day_sophos_FW)(Citation: Token tactics) [Downgrade Attack](https://attack.mitre.org/techniques/T1562/010)s can also be used to establish an AiTM position, such as by negotiating a less secure, deprecated, or weaker version of communication protocol (SSL/TLS) or encryption algorithm.(Citation: mitm_tls_downgrade_att)(Citation: taxonomy_downgrade_att_tls)(Citation: tlseminar_downgrade_att)
@@ -23,12 +19,6 @@ Adversaries may also leverage the AiTM position to attempt to monitor and/or mod
 ### T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay
 
 ^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay
-
-**Parent Technique**
-- [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
-
-**Tactic**
-- [[collection|Collection]]
 
 By responding to LLMNR/NBT-NS network traffic, adversaries may spoof an authoritative source for name resolution to force communication with an adversary controlled system. This activity may be used to collect or relay authentication materials. 
 
@@ -44,12 +34,6 @@ Several tools may be used to poison name services within local networks such as 
 
 ^t1557002-arp-cache-poisoning
 
-**Parent Technique**
-- [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
-
-**Tactic**
-- [[collection|Collection]]
-
 Adversaries may poison Address Resolution Protocol (ARP) caches to position themselves between the communication of two or more networked devices. This activity may be used to enable follow-on behaviors such as [Network Sniffing](https://attack.mitre.org/techniques/T1040) or [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002).
 
 The ARP protocol is used to resolve IPv4 addresses to link layer addresses, such as a media access control (MAC) address.(Citation: RFC826 ARP) Devices in a local network segment communicate with each other by using link layer addresses. If a networked device does not have the link layer address of a particular networked device, it may send out a broadcast ARP request to the local network to translate the IP address to a MAC address. The device with the associated IP address directly replies with its MAC address. The networked device that made the ARP request will then use as well as store that information in its ARP cache.
@@ -64,12 +48,6 @@ Adversaries may use ARP cache poisoning as a means to intercept network traffic.
 ### T1557.003: DHCP Spoofing
 
 ^t1557003-dhcp-spoofing
-
-**Parent Technique**
-- [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
-
-**Tactic**
-- [[collection|Collection]]
 
 Adversaries may redirect network traffic to adversary-owned systems by spoofing Dynamic Host Configuration Protocol (DHCP) traffic and acting as a malicious DHCP server on the victim network. By achieving the adversary-in-the-middle (AiTM) position, adversaries may collect network communications, including passed credentials, especially those sent over insecure, unencrypted protocols. This may also enable follow-on behaviors such as [Network Sniffing](https://attack.mitre.org/techniques/T1040) or [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002).
 
@@ -92,12 +70,6 @@ Rather than establishing an AiTM position, adversaries may also abuse DHCP spoof
 ### T1557.004: Evil Twin
 
 ^t1557004-evil-twin
-
-**Parent Technique**
-- [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
-
-**Tactic**
-- [[collection|Collection]]
 
 Adversaries may host seemingly genuine Wi-Fi access points to deceive users into connecting to malicious networks as a way of supporting follow-on behaviors such as [Network Sniffing](https://attack.mitre.org/techniques/T1040), [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002), or [Input Capture](https://attack.mitre.org/techniques/T1056).(Citation: Australia ‘Evil Twin’)
 

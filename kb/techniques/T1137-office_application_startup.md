@@ -8,10 +8,6 @@ x_mitre_version: 1.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[persistence|Persistence]]
-
 Adversaries may leverage Microsoft Office-based applications for persistence between startups. Microsoft Office is a fairly common application suite on Windows-based operating systems within an enterprise network. There are multiple mechanisms that can be used with Office for persistence when an Office-based application is started; this can include the use of Office Template Macros and add-ins.
 
 A variety of features have been discovered in Outlook that can be abused to obtain persistence, such as Outlook rules, forms, and Home Page.(Citation: SensePost Ruler GitHub) These persistence mechanisms can work within Outlook or be used through Office 365.(Citation: TechNet O365 Outlook Rules)
@@ -21,12 +17,6 @@ A variety of features have been discovered in Outlook that can be abused to obta
 ### T1137.001: Office Template Macros
 
 ^t1137001-office-template-macros
-
-**Parent Technique**
-- [[T1137-office_application_startup|T1137: Office Application Startup]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse Microsoft Office templates to obtain persistence on a compromised system. Microsoft Office contains templates that are part of common Office applications and are used to customize styles. The base templates within the application are used each time an application starts. (Citation: Microsoft Change Normal Template)
 
@@ -46,12 +36,6 @@ An adversary may need to enable macros to execute unrestricted depending on the 
 
 ^t1137002-office-test
 
-**Parent Technique**
-- [[T1137-office_application_startup|T1137: Office Application Startup]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may abuse the Microsoft Office "Office Test" Registry key to obtain persistence on a compromised system. An Office Test Registry location exists that allows a user to specify an arbitrary DLL that will be executed every time an Office application is started. This Registry key is thought to be used by Microsoft to load DLLs for testing and debugging purposes while developing Office applications. This Registry key is not created by default during an Office installation.(Citation: Hexacorn Office Test)(Citation: Palo Alto Office Test Sofacy)
 
 There exist user and global Registry keys for the Office Test feature, such as:
@@ -65,12 +49,6 @@ Adversaries may add this Registry key and specify a malicious DLL that will be e
 
 ^t1137003-outlook-forms
 
-**Parent Technique**
-- [[T1137-office_application_startup|T1137: Office Application Startup]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may abuse Microsoft Outlook forms to obtain persistence on a compromised system. Outlook forms are used as templates for presentation and functionality in Outlook messages. Custom Outlook forms can be created that will execute code when a specifically crafted email is sent by an adversary utilizing the same custom Outlook form.(Citation: SensePost Outlook Forms)
 
 Once malicious forms have been added to the user’s mailbox, they will be loaded when Outlook is started. Malicious forms will execute when an adversary sends a specifically crafted email to the user.(Citation: SensePost Outlook Forms)
@@ -78,12 +56,6 @@ Once malicious forms have been added to the user’s mailbox, they will be loade
 ### T1137.004: Outlook Home Page
 
 ^t1137004-outlook-home-page
-
-**Parent Technique**
-- [[T1137-office_application_startup|T1137: Office Application Startup]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse Microsoft Outlook's Home Page feature to obtain persistence on a compromised system. Outlook Home Page is a legacy feature used to customize the presentation of Outlook folders. This feature allows for an internal or external URL to be loaded and presented whenever a folder is opened. A malicious HTML page can be crafted that will execute code when loaded by Outlook Home Page.(Citation: SensePost Outlook Home Page)
 
@@ -94,12 +66,6 @@ Once malicious home pages have been added to the user’s mailbox, they will be 
 
 ^t1137005-outlook-rules
 
-**Parent Technique**
-- [[T1137-office_application_startup|T1137: Office Application Startup]]
-
-**Tactic**
-- [[persistence|Persistence]]
-
 Adversaries may abuse Microsoft Outlook rules to obtain persistence on a compromised system. Outlook rules allow a user to define automated behavior to manage email messages. A benign rule might, for example, automatically move an email to a particular folder in Outlook if it contains specific words from a specific sender. Malicious Outlook rules can be created that can trigger code execution when an adversary sends a specifically crafted email to that user.(Citation: SilentBreak Outlook Rules)
 
 Once malicious rules have been added to the user’s mailbox, they will be loaded when Outlook is started. Malicious rules will execute when an adversary sends a specifically crafted email to the user.(Citation: SilentBreak Outlook Rules)
@@ -107,12 +73,6 @@ Once malicious rules have been added to the user’s mailbox, they will be loade
 ### T1137.006: Add-ins
 
 ^t1137006-add-ins
-
-**Parent Technique**
-- [[T1137-office_application_startup|T1137: Office Application Startup]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse Microsoft Office add-ins to obtain persistence on a compromised system. Office add-ins can be used to add functionality to Office programs. (Citation: Microsoft Office Add-ins) There are different types of add-ins that can be used by the various Office products; including Word/Excel add-in Libraries (WLL/XLL), VBA add-ins, Office Component Object Model (COM) add-ins, automation add-ins, VBA Editor (VBE), Visual Studio Tools for Office (VSTO) add-ins, and Outlook add-ins. (Citation: MRWLabs Office Persistence Add-ins)(Citation: FireEye Mail CDS 2018)
 

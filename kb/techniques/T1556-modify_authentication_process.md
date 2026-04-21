@@ -8,10 +8,6 @@ x_mitre_version: 2.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify authentication mechanisms and processes to access user credentials or enable otherwise unwarranted access to accounts. The authentication process is handled by mechanisms, such as the Local Security Authentication Server (LSASS) process and the Security Accounts Manager (SAM) on Windows, pluggable authentication modules (PAM) on Unix-based systems, and authorization plugins on MacOS systems, responsible for gathering, storing, and validating credentials. By modifying an authentication process, an adversary may be able to authenticate to a service or system without using [Valid Accounts](https://attack.mitre.org/techniques/T1078).
 
 Adversaries may maliciously modify a part of this process to either reveal credentials or bypass authentication mechanisms. Compromised credentials or access may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop.
@@ -22,12 +18,6 @@ Adversaries may maliciously modify a part of this process to either reveal crede
 
 ^t1556001-domain-controller-authentication
 
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may patch the authentication process on a domain controller to bypass the typical authentication mechanisms and enable access to accounts. 
 
 Malware may be used to inject false credentials into the authentication process on a domain controller with the intent of creating a backdoor used to access any user’s account and/or credentials (ex: [Skeleton Key](https://attack.mitre.org/software/S0007)). Skeleton key works through a patch on an enterprise domain controller authentication process (LSASS) with credentials that adversaries may use to bypass the standard authentication system. Once patched, an adversary can use the injected password to successfully authenticate as any domain user account (until the the skeleton key is erased from memory by a reboot of the domain controller). Authenticated access may enable unfettered access to hosts and/or resources within single-factor authentication environments.(Citation: Dell Skeleton)
@@ -35,12 +25,6 @@ Malware may be used to inject false credentials into the authentication process 
 ### T1556.002: Password Filter DLL
 
 ^t1556002-password-filter-dll
-
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may register malicious password filter dynamic link libraries (DLLs) into the authentication process to acquire user credentials as they are validated. 
 
@@ -52,12 +36,6 @@ Adversaries can register malicious password filters to harvest credentials from 
 
 ^t1556003-pluggable-authentication-modules
 
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify pluggable authentication modules (PAM) to access user credentials or enable otherwise unwarranted access to accounts. PAM is a modular system of configuration files, libraries, and executable files which guide authentication for many services. The most common authentication module is <code>pam_unix.so</code>, which retrieves, sets, and verifies account authentication information in <code>/etc/passwd</code> and <code>/etc/shadow</code>.(Citation: Apple PAM)(Citation: Man Pam_Unix)(Citation: Red Hat PAM)
 
 Adversaries may modify components of the PAM system to create backdoors. PAM components, such as <code>pam_unix.so</code>, can be patched to accept arbitrary adversary supplied values as legitimate credentials.(Citation: PAM Backdoor)
@@ -68,12 +46,6 @@ Malicious modifications to the PAM system may also be abused to steal credential
 
 ^t1556004-network-device-authentication
 
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T1601/001) to hard code a password in the operating system, thus bypassing of native authentication mechanisms for local accounts on network devices.
 
 [Modify System Image](https://attack.mitre.org/techniques/T1601) may include implanted code to the operating system for network devices to provide access for adversaries using a specific password.  The modification includes a specific password which is implanted in the operating system image via the patch.  Upon authentication attempts, the inserted code will first check to see if the user input is the password. If so, access is granted. Otherwise, the implanted code will pass the credentials on for verification of potentially valid credentials.(Citation: Mandiant - Synful Knock)
@@ -81,12 +53,6 @@ Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T16
 ### T1556.005: Reversible Encryption
 
 ^t1556005-reversible-encryption
-
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 An adversary may abuse Active Directory authentication encryption properties to gain access to credentials on Windows systems. The <code>AllowReversiblePasswordEncryption</code> property specifies whether reversible password encryption for an account is enabled or disabled. By default this property is disabled (instead storing user credentials as the output of one-way hashing functions) and should not be enabled unless legacy or other software require it.(Citation: store_pwd_rev_enc)
 
@@ -105,12 +71,6 @@ An adversary may set this property at various scopes through Local Group Policy 
 
 ^t1556006-multi-factor-authentication
 
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may disable or modify multi-factor authentication (MFA) mechanisms to enable persistent access to compromised accounts.
 
 Once adversaries have gained access to a network by either compromising an account lacking MFA or by employing an MFA bypass method such as [Multi-Factor Authentication Request Generation](https://attack.mitre.org/techniques/T1621), adversaries may leverage their access to modify or completely disable MFA defenses. This can be accomplished by abusing legitimate features, such as excluding users from Azure AD Conditional Access Policies, registering a new yet vulnerable/adversary-controlled MFA method, or by manually patching MFA programs and configuration files to bypass expected functionality.(Citation: Mandiant APT42)(Citation: Azure AD Conditional Access Exclusions)
@@ -122,12 +82,6 @@ Depending on the scope, goals, and privileges of the adversary, MFA defenses may
 ### T1556.007: Hybrid Identity
 
 ^t1556007-hybrid-identity
-
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may patch, modify, or otherwise backdoor cloud authentication processes that are tied to on-premises user identities in order to bypass typical authentication mechanisms, access credentials, and enable persistent access to accounts.  
 
@@ -147,12 +101,6 @@ In some cases, adversaries may be able to modify the hybrid identity authenticat
 
 ^t1556008-network-provider-dll
 
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may register malicious network provider dynamic link libraries (DLLs) to capture cleartext user credentials during the authentication process. Network provider DLLs allow Windows to interface with specific network protocols and can also support add-on credential management functions.(Citation: Network Provider API) During the logon process, Winlogon (the interactive logon module) sends credentials to the local `mpnotify.exe` process via RPC. The `mpnotify.exe` process then shares the credentials in cleartext with registered credential managers when notifying that a logon event is happening.(Citation: NPPSPY - Huntress)(Citation: NPPSPY Video)(Citation: NPLogonNotify) 
 
 Adversaries can configure a malicious network provider DLL to receive credentials from `mpnotify.exe`.(Citation: NPPSPY) Once installed as a credential manager (via the Registry), a malicious DLL can receive and save credentials each time a user logs onto a Windows workstation or domain via the `NPLogonNotify()` function.(Citation: NPLogonNotify)
@@ -162,12 +110,6 @@ Adversaries may target planting malicious network provider DLLs on systems known
 ### T1556.009: Conditional Access Policies
 
 ^t1556009-conditional-access-policies
-
-**Parent Technique**
-- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may disable or modify conditional access policies to enable persistent access to compromised accounts. Conditional access policies are additional verifications used by identity providers and identity and access management systems to determine whether a user should be granted access to a resource.
 

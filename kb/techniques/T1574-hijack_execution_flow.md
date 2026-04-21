@@ -8,10 +8,6 @@ x_mitre_version: 1.3
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs. Hijacking execution flow can be for the purposes of persistence, since this hijacked execution may reoccur over time. Adversaries may also use these mechanisms to elevate privileges or evade defenses, such as application control or other restrictions on execution.
 
 There are many ways an adversary may hijack the flow of execution, including by manipulating how the operating system locates programs to be executed. How the operating system locates libraries to be used by a program can also be intercepted. Locations where the operating system looks for programs/resources, such as file directories and in the case of Windows the Registry, could also be poisoned to include malicious payloads.
@@ -21,12 +17,6 @@ There are many ways an adversary may hijack the flow of execution, including by 
 ### T1574.001: DLL
 
 ^t1574001-dll
-
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse dynamic-link library files (DLLs) in order to achieve persistence, escalate privileges, and evade defenses. DLLs are libraries that contain code and data that can be simultaneously utilized by multiple programs. While DLLs are not malicious by nature, they can be abused through mechanisms such as side-loading, hijacking search order, and phantom DLL hijacking.(Citation: unit 42)
 
@@ -63,12 +53,6 @@ If a valid DLL is configured to run at a higher privilege level, then the advers
 
 ^t1574004-dylib-hijacking
 
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may execute their own payloads by placing a malicious dynamic library (dylib) with an expected name in a path a victim application searches at runtime. The dynamic loader will try to find the dylibs based on the sequential order of the search paths. Paths to dylibs may be prefixed with <code>@rpath</code>, which allows developers to use relative paths to specify an array of search paths used at runtime based on the location of the executable.  Additionally, if weak linking is used, such as the <code>LC_LOAD_WEAK_DYLIB</code> function, an application will still execute even if an expected dylib is not present. Weak linking enables developers to run an application on multiple macOS versions as new APIs are added.
 
 Adversaries may gain execution by inserting malicious dylibs with the name of the missing dylib in the identified path.(Citation: Wardle Dylib Hijack Vulnerable Apps)(Citation: Wardle Dylib Hijacking OSX 2015)(Citation: Github EmpireProject HijackScanner)(Citation: Github EmpireProject CreateHijacker Dylib) Dylibs are loaded into an application's address space allowing the malicious dylib to inherit the application's privilege level and resources. Based on the application, this could result in privilege escalation and uninhibited network access. This method may also evade detection from security products since the execution is masked under a legitimate process.(Citation: Writing Bad Malware for OSX)(Citation: wardle artofmalware volume1)(Citation: MalwareUnicorn macOS Dylib Injection MachO)
@@ -76,12 +60,6 @@ Adversaries may gain execution by inserting malicious dylibs with the name of th
 ### T1574.005: Executable Installer File Permissions Weakness
 
 ^t1574005-executable-installer-file-permissions-weakness
-
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may execute their own malicious payloads by hijacking the binaries used by an installer. These processes may automatically execute specific binaries as part of their functionality or to perform other actions. If the permissions on the file system directory containing a target binary, or permissions on the binary itself, are improperly set, then the target binary may be overwritten with another binary using user-level permissions and executed by the original process. If the original process and thread are running under a higher permissions level, then the replaced binary will also execute under higher-level permissions, which could include SYSTEM.
 
@@ -93,12 +71,6 @@ Adversaries may use this technique to replace legitimate binaries with malicious
 
 ^t1574006-dynamic-linker-hijacking
 
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may execute their own malicious payloads by hijacking environment variables the dynamic linker uses to load shared libraries. During the execution preparation phase of a program, the dynamic linker loads specified absolute paths of shared libraries from various environment variables and files, such as <code>LD_PRELOAD</code> on Linux or <code>DYLD_INSERT_LIBRARIES</code> on macOS.(Citation: TheEvilBit DYLD_INSERT_LIBRARIES)(Citation: Timac DYLD_INSERT_LIBRARIES)(Citation: Gabilondo DYLD_INSERT_LIBRARIES Catalina Bypass) Libraries specified in environment variables are loaded first, taking precedence over system libraries with the same function name.(Citation: Man LD.SO)(Citation: TLDP Shared Libraries)(Citation: Apple Doco Archive Dynamic Libraries) Each platform's linker uses an extensive list of environment variables at different points in execution. These variables are often used by developers to debug binaries without needing to recompile, deconflict mapped symbols, and implement custom functions in the original library.(Citation: Baeldung LD_PRELOAD)
 
 Hijacking dynamic linker variables may grant access to the victim process's memory, system/network resources, and possibly elevated privileges. On Linux, adversaries may set <code>LD_PRELOAD</code> to point to malicious libraries that match the name of legitimate libraries which are requested by a victim program, causing the operating system to load the adversary's malicious code upon execution of the victim program. For example, adversaries have used `LD_PRELOAD` to inject a malicious library into every descendant process of the `sshd` daemon, resulting in execution under a legitimate process. When the executing sub-process calls the `execve` function, for example, the malicious library’s `execve` function is executed rather than the system function `execve` contained in the system library on disk. This allows adversaries to [Hide Artifacts](https://attack.mitre.org/techniques/T1564) from detection, as hooking system functions such as `execve` and `readdir` enables malware to scrub its own artifacts from the results of commands such as `ls`, `ldd`, `iptables`, and `dmesg`.(Citation: ESET Ebury Oct 2017)(Citation: Intezer Symbiote 2022)(Citation: Elastic Security Labs Pumakit 2024)
@@ -108,12 +80,6 @@ Hijacking dynamic linker variables may grant access to the victim process's memo
 ### T1574.007: Path Interception by PATH Environment Variable
 
 ^t1574007-path-interception-by-path-environment-variable
-
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may execute their own malicious payloads by hijacking environment variables used to load libraries. The PATH environment variable contains a list of directories (User and System) that the OS searches sequentially through in search of the binary that was called from a script or the command line. 
 
@@ -127,12 +93,6 @@ Adversaries may also directly modify the $PATH variable specifying the directori
 
 ^t1574008-path-interception-by-search-order-hijacking
 
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may execute their own malicious payloads by hijacking the search order used to load other programs. Because some programs do not call other programs using the full path, adversaries may place their own file in the directory where the calling program is located, causing the operating system to launch their malicious software at the request of the calling program.
 
 Search order hijacking occurs when an adversary abuses the order in which Windows searches for programs that are not given a path. Unlike [DLL](https://attack.mitre.org/techniques/T1574/001) search order hijacking, the search order differs depending on the method that is used to execute the program. (Citation: Microsoft CreateProcess) (Citation: Windows NT Command Shell) (Citation: Microsoft WinExec) However, it is common for Windows to search in the directory of the initiating program before searching through the Windows system directory. An adversary who finds a program vulnerable to search order hijacking (i.e., a program that does not specify the path to an executable) may take advantage of this vulnerability by creating a program named after the improperly specified program and placing it within the initiating program's directory.
@@ -145,12 +105,6 @@ Search order hijacking is also a common practice for hijacking DLL loads and is 
 
 ^t1574009-path-interception-by-unquoted-path
 
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may execute their own malicious payloads by hijacking vulnerable file path references. Adversaries can take advantage of paths that lack surrounding quotations by placing an executable in a higher level directory within the path, so that Windows will choose the adversary's executable to launch.
 
 Service paths (Citation: Microsoft CurrentControlSet Services) and shortcut paths may also be vulnerable to path interception if the path has one or more spaces and is not surrounded by quotation marks (e.g., <code>C:\unsafe path with space\program.exe</code> vs. <code>"C:\safe path with space\program.exe"</code>). (Citation: Help eliminate unquoted path) (stored in Windows Registry keys) An adversary can place an executable in a higher level directory of the path, and Windows will resolve that executable instead of the intended executable. For example, if the path in a shortcut is <code>C:\program files\myapp.exe</code>, an adversary may create a program at <code>C:\program.exe</code> that will be run instead of the intended program. (Citation: Windows Unquoted Services) (Citation: Windows Privilege Escalation Guide)
@@ -161,12 +115,6 @@ This technique can be used for persistence if executables are called on a regula
 
 ^t1574010-services-file-permissions-weakness
 
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may execute their own malicious payloads by hijacking the binaries used by services. Adversaries may use flaws in the permissions of Windows services to replace the binary that is executed upon service start. These service processes may automatically execute specific binaries as part of their functionality or to perform other actions. If the permissions on the file system directory containing a target binary, or permissions on the binary itself are improperly set, then the target binary may be overwritten with another binary using user-level permissions and executed by the original process. If the original process and thread are running under a higher permissions level, then the replaced binary will also execute under higher-level permissions, which could include SYSTEM.
 
 Adversaries may use this technique to replace legitimate binaries with malicious ones as a means of executing code at a higher permissions level. If the executing process is set to run at a specific time or during a certain event (e.g., system bootup) then this technique can also be used for persistence.
@@ -174,12 +122,6 @@ Adversaries may use this technique to replace legitimate binaries with malicious
 ### T1574.011: Services Registry Permissions Weakness
 
 ^t1574011-services-registry-permissions-weakness
-
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may execute their own malicious payloads by hijacking the Registry entries used by services. Flaws in the permissions for Registry keys related to services can allow adversaries to redirect the originally specified executable to one they control, launching their own code when a service starts. Windows stores local service configuration information in the Registry under <code>HKLM\SYSTEM\CurrentControlSet\Services</code>. The information stored under a service's Registry keys can be manipulated to modify a service's execution parameters through tools such as the service controller, sc.exe,  [PowerShell](https://attack.mitre.org/techniques/T1059/001), or [Reg](https://attack.mitre.org/software/S0075). Access to Registry keys is controlled through access control lists and user permissions. (Citation: Registry Key Security)(Citation: malware_hides_service)
 
@@ -201,12 +143,6 @@ This ensures persistence, as it causes the DLL (in this case, foo.dll) to be loa
 
 ^t1574012-cor-profiler
 
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may leverage the COR_PROFILER environment variable to hijack the execution flow of programs that load the .NET CLR. The COR_PROFILER is a .NET Framework feature which allows developers to specify an unmanaged (or external of .NET) profiling DLL to be loaded into each .NET process that loads the Common Language Runtime (CLR). These profilers are designed to monitor, troubleshoot, and debug managed code executed by the .NET CLR.(Citation: Microsoft Profiling Mar 2017)(Citation: Microsoft COR_PROFILER Feb 2013)
 
 The COR_PROFILER environment variable can be set at various scopes (system, user, or process) resulting in different levels of influence. System and user-wide environment variable scopes are specified in the Registry, where a [Component Object Model](https://attack.mitre.org/techniques/T1559/001) (COM) object can be registered as a profiler DLL. A process scope COR_PROFILER can also be created in-memory without modifying the Registry. Starting with .NET Framework 4, the profiling DLL does not need to be registered as long as the location of the DLL is specified in the COR_PROFILER_PATH environment variable.(Citation: Microsoft COR_PROFILER Feb 2013)
@@ -216,12 +152,6 @@ Adversaries may abuse COR_PROFILER to establish persistence that executes a mali
 ### T1574.013: KernelCallbackTable
 
 ^t1574013-kernelcallbacktable
-
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse the <code>KernelCallbackTable</code> of a process to hijack its execution flow in order to run their own payloads.(Citation: Lazarus APT January 2022)(Citation: FinFisher exposed ) The <code>KernelCallbackTable</code> can be found in the Process Environment Block (PEB) and is initialized to an array of graphic functions available to a GUI process once <code>user32.dll</code> is loaded.(Citation: Windows Process Injection KernelCallbackTable)
 
@@ -234,12 +164,6 @@ The tampered function is typically invoked using a Windows message. After the pr
 ### T1574.014: AppDomainManager
 
 ^t1574014-appdomainmanager
-
-**Parent Technique**
-- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may execute their own malicious payloads by hijacking how the .NET `AppDomainManager` loads assemblies. The .NET framework uses the `AppDomainManager` class to create and manage one or more isolated runtime environments (called application domains) inside a process to host the execution of .NET applications. Assemblies (`.exe` or `.dll` binaries compiled to run as .NET code) may be loaded into an application domain as executable code.(Citation: Microsoft App Domains) 
 

@@ -8,10 +8,6 @@ x_mitre_version: 1.5
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[credential_access|Credential Access]]
-
 Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [Shell History](https://attack.mitre.org/techniques/T1552/003)), operating system or application-specific repositories (e.g. [Credentials in Registry](https://attack.mitre.org/techniques/T1552/002)),  or other specialized files/artifacts (e.g. [Private Keys](https://attack.mitre.org/techniques/T1552/004)).(Citation: Brining MimiKatz to Unix)
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may search compromised systems to find and obtain insecurely stored 
 ### T1552.001: Credentials In Files
 
 ^t1552001-credentials-in-files
-
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may search local file systems and remote file shares for files containing insecurely stored credentials. These can be files created by users to store their own credentials, shared credential stores for a group of individuals, configuration files containing passwords for a system or service, or source code/binary files containing embedded passwords.
 
@@ -35,12 +25,6 @@ In cloud and/or containerized environments, authenticated user and service accou
 ### T1552.002: Credentials in Registry
 
 ^t1552002-credentials-in-registry
-
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may search the Registry on compromised systems for insecurely stored credentials. The Windows Registry stores configuration information that can be used by the system or other programs. Adversaries may query the Registry looking for credentials and passwords that have been stored for use by other programs or services. Sometimes these credentials are used for automatic logons.
 
@@ -53,12 +37,6 @@ Example commands to find Registry keys related to password information: (Citatio
 
 ^t1552003-shell-history
 
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may search the command history on compromised systems for insecurely stored credentials.
 
 On Linux and macOS systems, shells such as Bash and Zsh keep track of the commands users type on the command-line with the "history" utility. Once a user logs out, the history is flushed to the user's history file. For each user, this file resides at the same location: for example, `~/.bash_history` or `~/.zsh_history`. Typically, these files keeps track of the user's last 1000 commands.
@@ -70,12 +48,6 @@ Users often type usernames and passwords on the command-line as parameters to pr
 ### T1552.004: Private Keys
 
 ^t1552004-private-keys
-
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may search for private key certificate files on compromised systems for insecurely stored credentials. Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures.(Citation: Wikipedia Public Key Crypto) Common key and certificate file extensions include: .key, .pgp, .gpg, .ppk., .p12, .pem, .pfx, .cer, .p7b, .asc. 
 
@@ -91,12 +63,6 @@ Some private keys require a password or passphrase for operation, so an adversar
 
 ^t1552005-cloud-instance-metadata-api
 
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may attempt to access the Cloud Instance Metadata API to collect credentials and other sensitive data.
 
 Most cloud service providers support a Cloud Instance Metadata API which is a service provided to running virtual instances that allows applications to access information about the running virtual instance. Available information generally includes name, security group, and additional metadata including sensitive data such as credentials and UserData scripts that may contain additional secrets. The Instance Metadata API is provided as a convenience to assist in managing applications and is accessible by anyone who can access the instance.(Citation: AWS Instance Metadata API) A cloud metadata API has been used in at least one high profile compromise.(Citation: Krebs Capital One August 2019)
@@ -109,12 +75,6 @@ The de facto standard across cloud service providers is to host the Instance Met
 ### T1552.006: Group Policy Preferences
 
 ^t1552006-group-policy-preferences
-
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may attempt to find unsecured credentials in Group Policy Preferences (GPP). GPP are tools that allow administrators to create domain policies with embedded credentials. These policies allow administrators to set local accounts.(Citation: Microsoft GPP 2016)
 
@@ -133,12 +93,6 @@ On the SYSVOL share, adversaries may use the following command to enumerate pote
 
 ^t1552007-container-api
 
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may gather credentials via APIs within a containers environment. APIs in these environments, such as the Docker API and Kubernetes APIs, allow a user to remotely manage their container resources and cluster components.(Citation: Docker API)(Citation: Kubernetes API)
 
 An adversary may access the Docker API to collect logs that contain credentials to cloud, container, and various other resources in the environment.(Citation: Unit 42 Unsecured Docker Daemons) An adversary with sufficient permissions, such as via a pod's service account, may also use the Kubernetes API to retrieve credentials from the Kubernetes API server. These credentials may include those needed for Docker API authentication or secrets from Kubernetes cluster components. 
@@ -146,12 +100,6 @@ An adversary may access the Docker API to collect logs that contain credentials 
 ### T1552.008: Chat Messages
 
 ^t1552008-chat-messages
-
-**Parent Technique**
-- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may directly collect unsecured credentials stored or passed through user communication services. Credentials may be sent and stored in user chat communication applications such as email, chat services like Slack or Teams, collaboration tools like Jira or Trello, and any other services that support user communication. Users may share various forms of credentials (such as usernames and passwords, API keys, or authentication tokens) on private or public corporate internal communications channels.
 

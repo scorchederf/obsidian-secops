@@ -8,10 +8,6 @@ x_mitre_version: 1.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. 
 
 There are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform specific. 
@@ -23,12 +19,6 @@ More sophisticated samples may perform multiple process injections to segment mo
 ### T1055.001: Dynamic-link Library Injection
 
 ^t1055001-dynamic-link-library-injection
-
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may inject dynamic-link libraries (DLLs) into processes in order to evade process-based defenses as well as possibly elevate privileges. DLL injection is a method of executing arbitrary code in the address space of a separate live process.  
 
@@ -44,12 +34,6 @@ Running code in the context of another process may allow access to the process's
 
 ^t1055002-portable-executable-injection
 
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject portable executables (PE) into processes in order to evade process-based defenses as well as possibly elevate privileges. PE injection is a method of executing arbitrary code in the address space of a separate live process. 
 
 PE injection is commonly performed by copying code (perhaps without a file on disk) into the virtual address space of the target process before invoking it via a new thread. The write can be performed with native Windows API calls such as <code>VirtualAllocEx</code> and <code>WriteProcessMemory</code>, then invoked with <code>CreateRemoteThread</code> or additional code (ex: shellcode). The displacement of the injected code does introduce the additional requirement for functionality to remap memory references. (Citation: Elastic Process Injection July 2017) 
@@ -59,12 +43,6 @@ Running code in the context of another process may allow access to the process's
 ### T1055.003: Thread Execution Hijacking
 
 ^t1055003-thread-execution-hijacking
-
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may inject malicious code into hijacked processes in order to evade process-based defenses as well as possibly elevate privileges. Thread Execution Hijacking is a method of executing arbitrary code in the address space of a separate live process. 
 
@@ -78,12 +56,6 @@ Running code in the context of another process may allow access to the process's
 
 ^t1055004-asynchronous-procedure-call
 
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject malicious code into processes via the asynchronous procedure call (APC) queue in order to evade process-based defenses as well as possibly elevate privileges. APC injection is a method of executing arbitrary code in the address space of a separate live process. 
 
 APC injection is commonly performed by attaching malicious code to the APC Queue (Citation: Microsoft APC) of a process's thread. Queued APC functions are executed when the thread enters an alterable state.(Citation: Microsoft APC) A handle to an existing victim process is first created with native Windows API calls such as <code>OpenThread</code>. At this point <code>QueueUserAPC</code> can be used to invoke a function (such as <code>LoadLibrayA</code> pointing to a malicious DLL). 
@@ -96,12 +68,6 @@ Running code in the context of another process may allow access to the process's
 
 ^t1055005-thread-local-storage
 
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject malicious code into processes via thread local storage (TLS) callbacks in order to evade process-based defenses as well as possibly elevate privileges. TLS callback injection is a method of executing arbitrary code in the address space of a separate live process. 
 
 TLS callback injection involves manipulating pointers inside a portable executable (PE) to redirect a process to malicious code before reaching the code's legitimate entry point. TLS callbacks are normally used by the OS to setup and/or cleanup data used by threads. Manipulating TLS callbacks may be performed by allocating and writing to specific offsets within a process’ memory space using other [Process Injection](https://attack.mitre.org/techniques/T1055) techniques such as [Process Hollowing](https://attack.mitre.org/techniques/T1055/012).(Citation: FireEye TLS Nov 2017)
@@ -111,12 +77,6 @@ Running code in the context of another process may allow access to the process's
 ### T1055.008: Ptrace System Calls
 
 ^t1055008-ptrace-system-calls
-
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may inject malicious code into processes via ptrace (process trace) system calls in order to evade process-based defenses as well as possibly elevate privileges. Ptrace system call injection is a method of executing arbitrary code in the address space of a separate live process. 
 
@@ -130,12 +90,6 @@ Running code in the context of another process may allow access to the process's
 
 ^t1055009-proc-memory
 
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject malicious code into processes via the /proc filesystem in order to evade process-based defenses as well as possibly elevate privileges. Proc memory injection is a method of executing arbitrary code in the address space of a separate live process. 
 
 Proc memory injection involves enumerating the memory of a process via the /proc filesystem (<code>/proc/[pid]</code>) then crafting a return-oriented programming (ROP) payload with available gadgets/instructions. Each running process has its own directory, which includes memory mappings. Proc memory injection is commonly performed by overwriting the target processes’ stack using memory mappings provided by the /proc filesystem. This information can be used to enumerate offsets (including the stack) and gadgets (or instructions within the program that can be used to build a malicious payload) otherwise hidden by process memory protections such as address space layout randomization (ASLR). Once enumerated, the target processes’ memory map within <code>/proc/[pid]/maps</code> can be overwritten using dd.(Citation: Uninformed Needle)(Citation: GDS Linux Injection)(Citation: DD Man) 
@@ -147,12 +101,6 @@ Running code in the context of another process may allow access to the process's
 ### T1055.011: Extra Window Memory Injection
 
 ^t1055011-extra-window-memory-injection
-
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may inject malicious code into process via Extra Window Memory (EWM) in order to evade process-based defenses as well as possibly elevate privileges. EWM injection is a method of executing arbitrary code in the address space of a separate live process. 
 
@@ -168,12 +116,6 @@ Running code in the context of another process may allow access to the process's
 
 ^t1055012-process-hollowing
 
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject malicious code into suspended and hollowed processes in order to evade process-based defenses. Process hollowing is a method of executing arbitrary code in the address space of a separate live process.  
 
 Process hollowing is commonly performed by creating a process in a suspended state then unmapping/hollowing its memory, which can then be replaced with malicious code. A victim process can be created with native Windows API calls such as <code>CreateProcess</code>, which includes a flag to suspend the processes primary thread. At this point the process can be unmapped using APIs calls such as <code>ZwUnmapViewOfSection</code> or <code>NtUnmapViewOfSection</code>  before being written to, realigned to the injected code, and resumed via <code>VirtualAllocEx</code>, <code>WriteProcessMemory</code>, <code>SetThreadContext</code>, then <code>ResumeThread</code> respectively.(Citation: Leitch Hollowing)(Citation: Elastic Process Injection July 2017)
@@ -183,12 +125,6 @@ This is very similar to [Thread Local Storage](https://attack.mitre.org/techniqu
 ### T1055.013: Process Doppelgänging
 
 ^t1055013-process-doppelgänging
-
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may inject malicious code into process via process doppelgänging in order to evade process-based defenses as well as possibly elevate privileges. Process doppelgänging is a method of executing arbitrary code in the address space of a separate live process. 
 
@@ -211,12 +147,6 @@ This behavior will likely not result in elevated privileges since the injected p
 
 ^t1055014-vdso-hijacking
 
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may inject malicious code into processes via VDSO hijacking in order to evade process-based defenses as well as possibly elevate privileges. Virtual dynamic shared object (vdso) hijacking is a method of executing arbitrary code in the address space of a separate live process. 
 
 VDSO hijacking involves redirecting calls to dynamically linked shared libraries. Memory protections may prevent writing executable code to a process via [Ptrace System Calls](https://attack.mitre.org/techniques/T1055/008). However, an adversary may hijack the syscall interface code stubs mapped into a process from the vdso shared object to execute syscalls to open and map a malicious shared object. This code can then be invoked by redirecting the execution flow of the process via patched memory address references stored in a process' global offset table (which store absolute addresses of mapped library functions).(Citation: ELF Injection May 2009)(Citation: Backtrace VDSO)(Citation: VDSO Aug 2005)(Citation: Syscall 2014)
@@ -226,12 +156,6 @@ Running code in the context of another process may allow access to the process's
 ### T1055.015: ListPlanting
 
 ^t1055015-listplanting
-
-**Parent Technique**
-- [[T1055-process_injection|T1055: Process Injection]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse list-view controls to inject malicious code into hijacked processes in order to evade process-based defenses as well as possibly elevate privileges. ListPlanting is a method of executing arbitrary code in the address space of a separate live process.(Citation: Hexacorn Listplanting) Code executed via ListPlanting may also evade detection from security products since the execution is masked under a legitimate process.
 

@@ -8,10 +8,6 @@ x_mitre_version: 2.1
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may use trusted scripts, often signed with certificates, to proxy the execution of malicious files. Several Microsoft signed scripts that have been downloaded from Microsoft or are default on Windows installations can be used to proxy execution of other files.(Citation: LOLBAS Project) This behavior may be abused by adversaries to execute malicious files that could bypass application control and signature validation on systems.(Citation: GitHub Ultimate AppLocker Bypass List)
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may use trusted scripts, often signed with certificates, to proxy th
 ### T1216.001: PubPrn
 
 ^t1216001-pubprn
-
-**Parent Technique**
-- [[T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may use PubPrn to proxy execution of malicious remote files. PubPrn.vbs is a [Visual Basic](https://attack.mitre.org/techniques/T1059/005) script that publishes a printer to Active Directory Domain Services. The script may be signed by Microsoft and is commonly executed through the [Windows Command Shell](https://attack.mitre.org/techniques/T1059/003) via <code>Cscript.exe</code>. For example, the following code publishes a printer within the specified domain: <code>cscript pubprn Printer1 LDAP://CN=Container1,DC=Domain1,DC=Com</code>.(Citation: pubprn)
 
@@ -35,12 +25,6 @@ In later versions of Windows (10+), <code>PubPrn.vbs</code> has been updated to 
 ### T1216.002: SyncAppvPublishingServer
 
 ^t1216002-syncappvpublishingserver
-
-**Parent Technique**
-- [[T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may abuse SyncAppvPublishingServer.vbs to proxy execution of malicious [PowerShell](https://attack.mitre.org/techniques/T1059/001) commands. SyncAppvPublishingServer.vbs is a Visual Basic script associated with how Windows virtualizes applications (Microsoft Application Virtualization, or App-V).(Citation: 1 - appv) For example, Windows may render Win32 applications to users as virtual applications, allowing users to launch and interact with them as if they were installed locally.(Citation: 2 - appv)(Citation: 3 - appv)
     

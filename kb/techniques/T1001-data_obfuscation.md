@@ -8,10 +8,6 @@ x_mitre_version: 1.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[command_and_control|Command and Control]]
-
 Adversaries may obfuscate command and control traffic to make it more difficult to detect.(Citation: Bitdefender FunnyDream Campaign November 2020) Command and control (C2) communications are hidden (but not necessarily encrypted) in an attempt to make the content more difficult to discover or decipher and to make the communication less conspicuous and hide commands from being seen. This encompasses many methods, such as adding junk data to protocol traffic, using steganography, or impersonating legitimate protocols. 
 
 ## Subtechniques
@@ -20,35 +16,17 @@ Adversaries may obfuscate command and control traffic to make it more difficult 
 
 ^t1001001-junk-data
 
-**Parent Technique**
-- [[T1001-data_obfuscation|T1001: Data Obfuscation]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
-
 Adversaries may add junk data to protocols used for command and control to make detection more difficult.(Citation: FireEye SUNBURST Backdoor December 2020) By adding random or meaningless data to the protocols used for command and control, adversaries can prevent trivial methods for decoding, deciphering, or otherwise analyzing the traffic. Examples may include appending/prepending data with junk characters or writing junk characters between significant characters. 
 
 ### T1001.002: Steganography
 
 ^t1001002-steganography
 
-**Parent Technique**
-- [[T1001-data_obfuscation|T1001: Data Obfuscation]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
-
 Adversaries may use steganographic techniques to hide command and control traffic to make detection efforts more difficult. Steganographic techniques can be used to hide data in digital messages that are transferred between systems. This hidden information can be used for command and control of compromised systems. In some cases, the passing of files embedded using steganography, such as image or document files, can be used for command and control. 
 
 ### T1001.003: Protocol or Service Impersonation
 
 ^t1001003-protocol-or-service-impersonation
-
-**Parent Technique**
-- [[T1001-data_obfuscation|T1001: Data Obfuscation]]
-
-**Tactic**
-- [[command_and_control|Command and Control]]
 
 Adversaries may impersonate legitimate protocols or web service traffic to disguise command and control activity and thwart analysis efforts. By impersonating legitimate protocols or web services, adversaries can make their command and control traffic blend in with legitimate network traffic.  
 

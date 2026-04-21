@@ -8,10 +8,6 @@ x_mitre_version: 1.8
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[execution|Execution]]
-
 An adversary may rely upon specific actions by a user in order to gain execution. Users may be subjected to social engineering to get them to execute malicious code by, for example, opening a malicious document file or link. These user actions will typically be observed as follow-on behavior from forms of [Phishing](https://attack.mitre.org/techniques/T1566).
 
 While [User Execution](https://attack.mitre.org/techniques/T1204) frequently occurs shortly after Initial Access it may occur at other phases of an intrusion, such as when an adversary places a file in a shared directory or on a user's desktop hoping that a user will click on it. This activity may also be seen shortly after [Internal Spearphishing](https://attack.mitre.org/techniques/T1534).
@@ -31,23 +27,11 @@ For example, tech support scams can be facilitated through [Phishing](https://at
 
 ^t1204001-malicious-link
 
-**Parent Technique**
-- [[T1204-user_execution|T1204: User Execution]]
-
-**Tactic**
-- [[execution|Execution]]
-
 An adversary may rely upon a user clicking a malicious link in order to gain execution. Users may be subjected to social engineering to get them to click on a link that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Link](https://attack.mitre.org/techniques/T1566/002). Clicking on a link may also lead to other execution techniques such as exploitation of a browser or application vulnerability via [Exploitation for Client Execution](https://attack.mitre.org/techniques/T1203). Links may also lead users to download files that require execution via [Malicious File](https://attack.mitre.org/techniques/T1204/002).
 
 ### T1204.002: Malicious File
 
 ^t1204002-malicious-file
-
-**Parent Technique**
-- [[T1204-user_execution|T1204: User Execution]]
-
-**Tactic**
-- [[execution|Execution]]
 
 An adversary may rely upon a user opening a malicious file in order to gain execution. Users may be subjected to social engineering to get them to open a file that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001). Adversaries may use several types of files that require a user to execute them, including .doc, .pdf, .xls, .rtf, .scr, .exe, .lnk, .pif, .cpl, .reg, and .iso.(Citation: Mandiant Trojanized Windows 10)
 
@@ -59,12 +43,6 @@ While [Malicious File](https://attack.mitre.org/techniques/T1204/002) frequently
 
 ^t1204003-malicious-image
 
-**Parent Technique**
-- [[T1204-user_execution|T1204: User Execution]]
-
-**Tactic**
-- [[execution|Execution]]
-
 Adversaries may rely on a user running a malicious image to facilitate execution. Amazon Web Services (AWS) Amazon Machine Images (AMIs), Google Cloud Platform (GCP) Images, and Azure Images as well as popular container runtimes such as Docker can be backdoored. Backdoored images may be uploaded to a public repository via [Upload Malware](https://attack.mitre.org/techniques/T1608/001), and users may then download and deploy an instance or container from the image without realizing the image is malicious, thus bypassing techniques that specifically achieve Initial Access. This can lead to the execution of malicious code, such as code that executes cryptocurrency mining, in the instance or container.(Citation: Summit Route Malicious AMIs)
 
 Adversaries may also name images a certain way to increase the chance of users mistakenly deploying an instance or container from the image (ex: [Match Legitimate Resource Name or Location](https://attack.mitre.org/techniques/T1036/005)).(Citation: Aqua Security Cloud Native Threat Report June 2021)
@@ -72,12 +50,6 @@ Adversaries may also name images a certain way to increase the chance of users m
 ### T1204.004: Malicious Copy and Paste
 
 ^t1204004-malicious-copy-and-paste
-
-**Parent Technique**
-- [[T1204-user_execution|T1204: User Execution]]
-
-**Tactic**
-- [[execution|Execution]]
 
 An adversary may rely upon a user copying and pasting code in order to gain execution. Users may be subjected to social engineering to get them to copy and paste code directly into a [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059). One such strategy is "ClickFix," in which adversaries present users with seemingly helpful solutions—such as prompts to fix errors or complete CAPTCHAs—that instead instruct the user to copy and paste malicious code.
 
@@ -90,12 +62,6 @@ Tricking a user into executing a command themselves may help to bypass email fil
 ### T1204.005: Malicious Library
 
 ^t1204005-malicious-library
-
-**Parent Technique**
-- [[T1204-user_execution|T1204: User Execution]]
-
-**Tactic**
-- [[execution|Execution]]
 
 Adversaries may rely on a user installing a malicious library to facilitate execution. Threat actors may [Upload Malware](https://attack.mitre.org/techniques/T1608/001) to package managers such as NPM and PyPi, as well as to public code repositories such as GitHub. User may install libraries without realizing they are malicious, thus bypassing techniques that specifically achieve Initial Access. This can lead to the execution of malicious code, such as code that establishes persistence, steals data, or mines cryptocurrency.(Citation: Datadog Security Labs Malicious PyPi Packages 2024)(Citation: Fortinet Malicious NPM Packages 2023)
 

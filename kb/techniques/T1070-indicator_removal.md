@@ -8,10 +8,6 @@ x_mitre_version: 2.4
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators related to monitored events, such as strings from downloaded files, logs that are generated from user actions, and other data analyzed by defenders. Location, format, and type of artifact (such as command or login history) are often specific to each platform.
 
 Removal of these indicators may interfere with event collection, reporting, or other processes used to detect intrusion activity. This may compromise the integrity of security solutions by causing notable events to go unreported. This activity may also impede forensic analysis and incident response, due to lack of sufficient data to determine what occurred.
@@ -21,12 +17,6 @@ Removal of these indicators may interfere with event collection, reporting, or o
 ### T1070.001: Clear Windows Event Logs
 
 ^t1070001-clear-windows-event-logs
-
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may clear Windows Event Logs to hide the activity of an intrusion. Windows Event Logs are a record of a computer's alerts and notifications. There are three system-defined sources of events: System, Application, and Security, with five event types: Error, Warning, Information, Success Audit, and Failure Audit.
 
@@ -45,12 +35,6 @@ Adversaries may also attempt to clear logs by directly deleting the stored log f
 
 ^t1070002-clear-linux-or-mac-system-logs
 
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may clear system logs to hide evidence of an intrusion. macOS and Linux both keep track of system or user-initiated actions via system logs. The majority of native system logging is stored under the <code>/var/log/</code> directory. Subfolders in this directory categorize logs by their related functions, such as:(Citation: Linux Logs)
 
 * <code>/var/log/messages:</code>: General and system-related messages
@@ -65,12 +49,6 @@ Adversaries may clear system logs to hide evidence of an intrusion. macOS and Li
 ### T1070.003: Clear Command History
 
 ^t1070003-clear-command-history
-
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 In addition to clearing system logs, an adversary may clear the command history of a compromised account to conceal the actions undertaken during an intrusion. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what they've done.
 
@@ -88,12 +66,6 @@ Adversaries may run the PowerShell command <code>Clear-History</code> to flush t
 
 ^t1070004-file-deletion
 
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may delete files left behind by the actions of their intrusion activity. Malware, tools, or other non-native files dropped or created on a system by an adversary (ex: [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) may leave traces to indicate to what was done within a network and how. Removal of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.
 
 There are tools available from the host operating system to perform cleanup, but adversaries may use other tools as well.(Citation: Microsoft SDelete July 2016) Examples of built-in [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) functions include <code>del</code> on Windows, <code>rm</code> or <code>unlink</code> on Linux and macOS, and `rm` on ESXi.
@@ -102,23 +74,11 @@ There are tools available from the host operating system to perform cleanup, but
 
 ^t1070005-network-share-connection-removal
 
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation. Windows shared drive and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002) connections can be removed when no longer needed. [Net](https://attack.mitre.org/software/S0039) is an example utility that can be used to remove network share connections with the <code>net use \\system\share /delete</code> command. (Citation: Technet Net Use)
 
 ### T1070.006: Timestomp
 
 ^t1070006-timestomp
-
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may modify file time attributes to hide new files or changes to existing files. Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder and blend malicious files with legitimate files.
 
@@ -136,12 +96,6 @@ Timestomping may be used along with file name [Masquerading](https://attack.mitr
 
 ^t1070007-clear-network-connection-history-and-configurations
 
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may clear or remove evidence of malicious network connections in order to clean up traces of their operations. Configuration settings as well as various artifacts that highlight connection history may be created on a system and/or in application logs from behaviors that require network connections, such as [Remote Services](https://attack.mitre.org/techniques/T1021) or [External Remote Services](https://attack.mitre.org/techniques/T1133). Defenders may use these artifacts to monitor or otherwise analyze network connections created by adversaries.
 
 Network connection history may be stored in various locations. For example, RDP connection history may be stored in Windows Registry values under (Citation: Microsoft RDP Removal):
@@ -158,12 +112,6 @@ Malicious network connections may also require changes to third-party applicatio
 
 ^t1070008-clear-mailbox-data
 
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify mail and mail application data to remove evidence of their activity. Email applications allow users and other programs to export and delete mailbox data via command line tools or use of APIs. Mail application data can be emails, email metadata, or logs generated by the application or operating system, such as export requests. 
 
 Adversaries may manipulate emails and mailbox data to remove logs, artifacts, and metadata, such as evidence of [Phishing](https://attack.mitre.org/techniques/T1566)/[Internal Spearphishing](https://attack.mitre.org/techniques/T1534), [Email Collection](https://attack.mitre.org/techniques/T1114), [Mail Protocols](https://attack.mitre.org/techniques/T1071/003) for command and control, or email-based exfiltration such as [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048). For example, to remove evidence on Exchange servers adversaries have used the <code>ExchangePowerShell</code> [PowerShell](https://attack.mitre.org/techniques/T1059/001) module, including <code>Remove-MailboxExportRequest</code> to remove evidence of mailbox exports.(Citation: Volexity SolarWinds)(Citation: ExchangePowerShell Module) On Linux and macOS, adversaries may also delete emails through a command line utility called <code>mail</code>  or use [AppleScript](https://attack.mitre.org/techniques/T1059/002) to interact with APIs on macOS.(Citation: Cybereason Cobalt Kitty 2017)(Citation: mailx man page)
@@ -174,12 +122,6 @@ Adversaries may also remove emails and metadata/headers indicative of spam or su
 
 ^t1070009-clear-persistence
 
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may clear artifacts associated with previously established persistence on a host system to remove evidence of their activity. This may involve various actions, such as removing services, deleting executables, [Modify Registry](https://attack.mitre.org/techniques/T1112), [Plist File Modification](https://attack.mitre.org/techniques/T1647), or other methods of cleanup to prevent defenders from collecting evidence of their persistent presence.(Citation: Cylance Dust Storm) Adversaries may also delete accounts previously created to maintain persistence (i.e. [Create Account](https://attack.mitre.org/techniques/T1136)).(Citation: Talos - Cisco Attack 2022)
 
 In some instances, artifacts of persistence may also be removed once an adversary’s persistence is executed in order to prevent errors with the new instance of the malware.(Citation: NCC Group Team9 June 2020)
@@ -187,12 +129,6 @@ In some instances, artifacts of persistence may also be removed once an adversar
 ### T1070.010: Relocate Malware
 
 ^t1070010-relocate-malware
-
-**Parent Technique**
-- [[T1070-indicator_removal|T1070: Indicator Removal]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Once a payload is delivered, adversaries may reproduce copies of the same malware on the victim system to remove evidence of their presence and/or avoid defenses. Copying malware payloads to new locations may also be combined with [File Deletion](https://attack.mitre.org/techniques/T1070/004) to cleanup older artifacts.
 

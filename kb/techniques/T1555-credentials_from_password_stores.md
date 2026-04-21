@@ -8,10 +8,6 @@ x_mitre_version: 1.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[credential_access|Credential Access]]
-
 Adversaries may search for common password storage locations to obtain user credentials.(Citation: F-Secure The Dukes) Passwords are stored in several places on a system, depending on the operating system or application holding the credentials. There are also specific applications and services that store passwords to make them easier for users to manage and maintain, such as password managers and cloud secrets vaults. Once credentials are obtained, they can be used to perform lateral movement and access restricted information.
 
 ## Subtechniques
@@ -19,12 +15,6 @@ Adversaries may search for common password storage locations to obtain user cred
 ### T1555.001: Keychain
 
 ^t1555001-keychain
-
-**Parent Technique**
-- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may acquire credentials from Keychain. Keychain (or Keychain Services) is the macOS credential management system that stores account names, passwords, private keys, certificates, sensitive application data, payment data, and secure notes. There are three types of Keychains: Login Keychain, System Keychain, and Local Items (iCloud) Keychain. The default Keychain is the Login Keychain, which stores user passwords and information. The System Keychain stores items accessed by the operating system, such as items shared among users on a host. The Local Items (iCloud) Keychain is used for items synced with Apple’s iCloud service. 
 
@@ -36,12 +26,6 @@ Adversaries may gather user credentials from Keychain storage/memory. For exampl
 
 ^t1555002-securityd-memory
 
-**Parent Technique**
-- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 An adversary with root access may gather credentials by reading `securityd`’s memory. `securityd` is a service/daemon responsible for implementing security protocols such as encryption and authorization.(Citation: Apple Dev SecurityD) A privileged adversary may be able to scan through `securityd`'s memory to find the correct sequence of keys to decrypt the user’s logon keychain. This may provide the adversary with various plaintext passwords, such as those for users, WiFi, mail, browsers, certificates, secure notes, etc.(Citation: OS X Keychain)(Citation: OSX Keydnap malware)
 
 In OS X prior to El Capitan, users with root access can read plaintext keychain passwords of logged-in users because Apple’s keychain implementation allows these credentials to be cached so that users are not repeatedly prompted for passwords.(Citation: OS X Keychain)(Citation: External to DA, the OS X Way) Apple’s `securityd` utility takes the user’s logon password, encrypts it with PBKDF2, and stores this master key in memory. Apple also uses a set of keys and algorithms to encrypt the user’s password, but once the master key is found, an adversary need only iterate over the other values to unlock the final password.(Citation: OS X Keychain)
@@ -49,12 +33,6 @@ In OS X prior to El Capitan, users with root access can read plaintext keychain 
 ### T1555.003: Credentials from Web Browsers
 
 ^t1555003-credentials-from-web-browsers
-
-**Parent Technique**
-- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may acquire credentials from web browsers by reading files specific to the target browser.(Citation: Talos Olympic Destroyer 2018) Web browsers commonly save credentials such as website usernames and passwords so that they do not need to be entered manually in the future. Web browsers typically store the credentials in an encrypted format within a credential store; however, methods exist to extract plaintext credentials from web browsers.
 
@@ -69,12 +47,6 @@ After acquiring credentials from web browsers, adversaries may attempt to recycl
 ### T1555.004: Windows Credential Manager
 
 ^t1555004-windows-credential-manager
-
-**Parent Technique**
-- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may acquire credentials from the Windows Credential Manager. The Credential Manager stores credentials for signing into websites, applications, and/or devices that request authentication through NTLM or Kerberos in Credential Lockers (previously known as Windows Vaults).(Citation: Microsoft Credential Manager store)(Citation: Microsoft Credential Locker)
 
@@ -92,12 +64,6 @@ Password recovery tools may also obtain plain text passwords from the Credential
 
 ^t1555005-password-managers
 
-**Parent Technique**
-- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may acquire user credentials from third-party password managers.(Citation: ise Password Manager February 2019) Password managers are applications designed to store user credentials, normally in an encrypted database. Credentials are typically accessible after a user provides a master password that unlocks the database. After the database is unlocked, these credentials may be copied to memory. These databases can be stored as files on disk.(Citation: ise Password Manager February 2019)
 
 Adversaries may acquire user credentials from password managers by extracting the master password and/or plain-text credentials from memory.(Citation: FoxIT Wocao December 2019)(Citation: Github KeeThief) Adversaries may extract credentials from memory via [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212).(Citation: NVD CVE-2019-3610)
@@ -106,12 +72,6 @@ Adversaries may acquire user credentials from password managers by extracting th
 ### T1555.006: Cloud Secrets Management Stores
 
 ^t1555006-cloud-secrets-management-stores
-
-**Parent Technique**
-- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may acquire credentials from cloud-native secret management solutions such as AWS Secrets Manager, GCP Secret Manager, Azure Key Vault, and Terraform Vault.  
 

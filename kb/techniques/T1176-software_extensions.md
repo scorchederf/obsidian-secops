@@ -8,10 +8,6 @@ x_mitre_version: 2.0
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[persistence|Persistence]]
-
 Adversaries may abuse software extensions to establish persistent access to victim systems. Software extensions are modular components that enhance or customize the functionality of software applications, including web browsers, Integrated Development Environments (IDEs), and other platforms.(Citation: Chrome Extension C2 Malware)(Citation: Abramovsky VSCode Security) Extensions are typically installed via official marketplaces, app stores, or manually loaded by users, and they often inherit the permissions and access levels of the host application. 
 
   
@@ -24,12 +20,6 @@ The modular nature of extensions and their integration with host applications ma
 ### T1176.001: Browser Extensions
 
 ^t1176001-browser-extensions
-
-**Parent Technique**
-- [[T1176-software_extensions|T1176: Software Extensions]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse internet browser extensions to establish persistent access to victim systems. Browser extensions or plugins are small programs that can add functionality to and customize aspects of internet browsers. They can be installed directly via a local file or custom URL or through a browser's app store - an official online platform where users can browse, install, and manage extensions for a specific web browser. Extensions generally inherit the web browser's permissions previously granted.(Citation: Wikipedia Browser Extension)(Citation: Chrome Extensions Definition) 
  
@@ -46,12 +36,6 @@ There have also been instances of botnets using a persistent backdoor through ma
 ### T1176.002: IDE Extensions
 
 ^t1176002-ide-extensions
-
-**Parent Technique**
-- [[T1176-software_extensions|T1176: Software Extensions]]
-
-**Tactic**
-- [[persistence|Persistence]]
 
 Adversaries may abuse an integrated development environment (IDE) extension to establish persistent access to victim systems.(Citation: Mnemonic misuse visual studio) IDEs such as Visual Studio Code, IntelliJ IDEA, and Eclipse support extensions - software components that add features like code linting, auto-completion, task automation, or integration with tools like Git and Docker. A malicious extension can be installed through an extension marketplace (i.e., [Compromise Software Dependencies and Development Tools](https://attack.mitre.org/techniques/T1195/001)) or side-loaded directly into the IDE.(Citation: Abramovsky VSCode Security)(Citation: Lakshmanan Visual Studio Marketplace)   
 

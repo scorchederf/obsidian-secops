@@ -8,10 +8,6 @@ x_mitre_version: 2.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[credential_access|Credential Access]]
-
 Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0008) and access restricted information.
 
 Several of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well.
@@ -22,12 +18,6 @@ Several of the tools mentioned in associated sub-techniques may be used by both 
 ### T1003.001: LSASS Memory
 
 ^t1003001-lsass-memory
-
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested by an administrative user or SYSTEM and used to conduct [Lateral Movement](https://attack.mitre.org/tactics/TA0008) using [Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550).
 
@@ -62,12 +52,6 @@ The following SSPs can be used to access credentials:
 
 ^t1003002-security-account-manager
 
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may attempt to extract credential material from the Security Account Manager (SAM) database either through in-memory techniques or through the Windows Registry where the SAM database is stored. The SAM is a database file that contains local accounts for the host, typically those found with the <code>net user</code> command. Enumerating the SAM database requires SYSTEM level access.
 
 A number of tools can be used to retrieve the SAM file through in-memory techniques:
@@ -95,12 +79,6 @@ Notes:
 
 ^t1003003-ntds
 
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may attempt to access or create a copy of the Active Directory domain database in order to steal credential information, as well as obtain other information about domain members such as devices, users, and access rights. By default, the NTDS file (NTDS.dit) is located in <code>%SystemRoot%\NTDS\Ntds.dit</code> of a domain controller.(Citation: Wikipedia Active Directory)
 
 In addition to looking for NTDS files on active Domain Controllers, adversaries may search for backups that contain the same or similar information.(Citation: Metcalf 2015)
@@ -117,12 +95,6 @@ The following tools and techniques can be used to enumerate the NTDS file and th
 
 ^t1003004-lsa-secrets
 
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries with SYSTEM access to a host may attempt to access Local Security Authority (LSA) secrets, which can contain a variety of different credential materials, such as credentials for service accounts.(Citation: Passcape LSA Secrets)(Citation: Microsoft AD Admin Tier Model)(Citation: Tilbury Windows Credentials) LSA secrets are stored in the registry at <code>HKEY_LOCAL_MACHINE\SECURITY\Policy\Secrets</code>. LSA secrets can also be dumped from memory.(Citation: ired Dumping LSA Secrets)
 
 [Reg](https://attack.mitre.org/software/S0075) can be used to extract from the Registry. [Mimikatz](https://attack.mitre.org/software/S0002) can be used to extract secrets from memory.(Citation: ired Dumping LSA Secrets)
@@ -130,12 +102,6 @@ Adversaries with SYSTEM access to a host may attempt to access Local Security Au
 ### T1003.005: Cached Domain Credentials
 
 ^t1003005-cached-domain-credentials
-
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may attempt to access cached domain credentials used to allow authentication to occur in the event a domain controller is unavailable.(Citation: Microsoft - Cached Creds)
 
@@ -151,12 +117,6 @@ Note: Cached credentials for Windows Vista are derived using PBKDF2.(Citation: P
 
 ^t1003006-dcsync
 
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may attempt to access credentials and other sensitive information by abusing a Windows Domain Controller's application programming interface (API)(Citation: Microsoft DRSR Dec 2017) (Citation: Microsoft GetNCCChanges) (Citation: Samba DRSUAPI) (Citation: Wine API samlib.dll) to simulate the replication process from a remote domain controller using a technique called DCSync.
 
 Members of the Administrators, Domain Admins, and Enterprise Admin groups or computer accounts on the domain controller are able to run DCSync to pull password data(Citation: ADSecurity Mimikatz DCSync) from Active Directory, which may include current and historical hashes of potentially useful accounts such as KRBTGT and Administrators. The hashes can then in turn be used to create a [Golden Ticket](https://attack.mitre.org/techniques/T1558/001) for use in [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003)(Citation: Harmj0y Mimikatz and DCSync) or change an account's password as noted in [Account Manipulation](https://attack.mitre.org/techniques/T1098).(Citation: InsiderThreat ChangeNTLM July 2017)
@@ -167,12 +127,6 @@ DCSync functionality has been included in the "lsadump" module in [Mimikatz](htt
 
 ^t1003007-proc-filesystem
 
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
-
 Adversaries may gather credentials from the proc filesystem or `/proc`. The proc filesystem is a pseudo-filesystem used as an interface to kernel data structures for Linux based systems managing virtual memory. For each process, the `/proc/<PID>/maps` file shows how memory is mapped within the process’s virtual address space. And `/proc/<PID>/mem`, exposed for debugging purposes, provides access to the process’s virtual address space.(Citation: Picus Labs Proc cump 2022)(Citation: baeldung Linux proc map 2022)
 
 When executing with root privileges, adversaries can search these memory locations for all processes on a system that contain patterns indicative of credentials. Adversaries may use regex patterns, such as <code>grep -E "^[0-9a-f-]* r" /proc/"$pid"/maps | cut -d' ' -f 1</code>, to look for fixed strings in memory structures or cached hashes.(Citation: atomic-red proc file system) When running without privileged access, processes can still view their own virtual memory locations. Some services or programs may save credentials in clear text inside the process’s memory.(Citation: MimiPenguin GitHub May 2017)(Citation: Polop Linux PrivEsc Gitbook)
@@ -182,12 +136,6 @@ If running as or with the permissions of a web browser, a process can search the
 ### T1003.008: /etc/passwd and /etc/shadow
 
 ^t1003008--etc-passwd-and--etc-shadow
-
-**Parent Technique**
-- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-
-**Tactic**
-- [[credential_access|Credential Access]]
 
 Adversaries may attempt to dump the contents of <code>/etc/passwd</code> and <code>/etc/shadow</code> to enable offline password cracking. Most modern Linux operating systems use a combination of <code>/etc/passwd</code> and <code>/etc/shadow</code> to store user account information, including password hashes in <code>/etc/shadow</code>. By default, <code>/etc/shadow</code> is only readable by the root user.(Citation: Linux Password and Shadow File Formats)
 

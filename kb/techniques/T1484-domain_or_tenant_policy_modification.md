@@ -8,10 +8,6 @@ x_mitre_version: 3.2
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify the configuration settings of a domain or identity tenant to evade defenses and/or escalate privileges in centrally managed environments. Such services provide a centralized means of managing identity resources such as devices and accounts, and often include configuration settings that may apply between domains or tenants such as trust relationships, identity syncing, or identity federation.
 
 Modifications to domain or tenant settings may include altering domain Group Policy Objects (GPOs) in Microsoft Active Directory (AD) or changing trust settings for domains, including federation trusts relationships between domains or tenants.
@@ -31,12 +27,6 @@ Adversaries may temporarily modify domain or tenant policy, carry out a maliciou
 
 ^t1484001-group-policy-modification
 
-**Parent Technique**
-- [[T1484-domain_or_tenant_policy_modification|T1484: Domain or Tenant Policy Modification]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
-
 Adversaries may modify Group Policy Objects (GPOs) to subvert the intended discretionary access controls for a domain, usually with the intention of escalating privileges on the domain. Group policy allows for centralized management of user and computer settings in Active Directory (AD). GPOs are containers for group policy settings made up of files stored within a predictable network path `\<DOMAIN>\SYSVOL\<DOMAIN>\Policies\`.(Citation: TechNet Group Policy Basics)(Citation: ADSecurity GPO Persistence 2016) 
 
 Like other objects in AD, GPOs have access controls associated with them. By default all user accounts in the domain have permission to read GPOs. It is possible to delegate GPO access control permissions, e.g. write access, to specific users or groups in the domain.
@@ -48,12 +38,6 @@ For example, publicly available scripts such as <code>New-GPOImmediateTask</code
 ### T1484.002: Trust Modification
 
 ^t1484002-trust-modification
-
-**Parent Technique**
-- [[T1484-domain_or_tenant_policy_modification|T1484: Domain or Tenant Policy Modification]]
-
-**Tactic**
-- [[defense_evasion|Defense Evasion]]
 
 Adversaries may add new domain trusts, modify the properties of existing domain trusts, or otherwise change the configuration of trust relationships between domains and tenants to evade defenses and/or elevate privileges.Trust details, such as whether or not user identities are federated, allow authentication and authorization properties to apply between domains or tenants for the purpose of accessing shared resources.(Citation: Microsoft - Azure AD Federation) These trust objects may include accounts, credentials, and other authentication material applied to servers, tokens, and domains.
 

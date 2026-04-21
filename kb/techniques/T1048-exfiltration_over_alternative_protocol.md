@@ -8,10 +8,6 @@ x_mitre_version: 1.6
 x_mitre_domains: enterprise-attack
 ---
 
-## Tactic
-
-- [[exfiltration|Exfiltration]]
-
 Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.  
 
 Alternate protocols include FTP, SMTP, HTTP/S, DNS, SMB, or any other network protocol not being used as the main command and control channel. Adversaries may also opt to encrypt and/or obfuscate these alternate channels. 
@@ -26,12 +22,6 @@ Many IaaS and SaaS platforms (such as Microsoft Exchange, Microsoft SharePoint, 
 
 ^t1048001-exfiltration-over-symmetric-encrypted-non-c2-protocol
 
-**Parent Technique**
-- [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
-
 Adversaries may steal data by exfiltrating it over a symmetrically encrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server. 
 
 Symmetric encryption algorithms are those that use shared or the same keys/secrets on each end of the channel. This requires an exchange or pre-arranged agreement/possession of the value used to encrypt and decrypt data. 
@@ -42,12 +32,6 @@ Network protocols that use asymmetric encryption often utilize symmetric encrypt
 
 ^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol
 
-**Parent Technique**
-- [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
-
 Adversaries may steal data by exfiltrating it over an asymmetrically encrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server. 
 
 Asymmetric encryption algorithms are those that use different keys on each end of the channel. Also known as public-key cryptography, this requires pairs of cryptographic keys that can encrypt/decrypt data from the corresponding key. Each end of the communication channels requires a private key (only in the procession of that entity) and the public key of the other entity. The public keys of each entity are exchanged before encrypted communications begin. 
@@ -57,12 +41,6 @@ Network protocols that use asymmetric encryption (such as HTTPS/TLS/SSL) often u
 ### T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol
 
 ^t1048003-exfiltration-over-unencrypted-non-c2-protocol
-
-**Parent Technique**
-- [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
-
-**Tactic**
-- [[exfiltration|Exfiltration]]
 
 Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.(Citation: copy_cmd_cisco)
 
