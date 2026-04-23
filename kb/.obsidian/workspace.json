@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9937c3526649071e",
+        "id": "0001396e58173079",
         "type": "tabs",
         "children": [
           {
-            "id": "704d81fba2d95495",
+            "id": "3200f8775d16204d",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "kb/d3fend/techniques/D3-ACH-application_configuration_hardening.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "D3-ACH-application_configuration_hardening"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.50260543823242
+    "width": 390.5026054382324
   },
   "right": {
     "id": "b6767bb04d8dfa3c",
@@ -108,11 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "kb/d3fend/techniques/D3-ACH-application_configuration_hardening.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from D3-ACH-application_configuration_hardening"
             }
           },
           {
@@ -158,12 +163,12 @@
               "title": "Outline"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,39 +181,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "704d81fba2d95495",
+  "active": "3eac7a5fff81f400",
   "lastOpenFiles": [
-    "data-components/DC0001-scheduled_job_creation.md",
-    "data-sources/DS0002-user_account.md",
-    "data-sources/DS0001-firmware.md",
-    "mitigations/M1032-multi-factor_authentication.md",
-    "techniques/T1114-email_collection.md",
-    "tactics/TA0009-collection.md",
-    "techniques/T1059-command_and_scripting_interpreter.md",
-    "tactics/TA0002-execution.md",
-    "techniques/T1195-supply_chain_compromise.md",
-    "tactics/TA0001-initial_access.md",
-    "data-components/DC0106-response_metadata.md",
-    "data-components/DC0105-group_metadata.md",
-    "data-components/DC0104-response_content.md",
-    "data-components/DC0103-active_dns.md",
-    "data-components/DC0102-network_share_access.md",
-    "data-components/DC0101-domain_registration.md",
-    "data-components/DC0100-volume_metadata.md",
-    "data-components/DC0099-group_enumeration.md",
-    "data-components/DC0098-volume_deletion.md",
-    "data-components/DC0097-volume_creation.md",
-    "data-components/DC0096-passive_dns.md",
-    "data-components/DC0095-volume_enumeration.md",
-    "data-components/DC0094-group_modification.md",
-    "data-components/DC0093-certificate_registration.md",
-    "data-components/DC0092-volume_modification.md",
-    "data-components/DC0091-container_enumeration.md",
-    "data-components",
-    "data-sources",
-    "tools",
-    "mitigations",
-    "techniques",
-    "tactics"
+    "notes/d3fend/techniques/d3-ach-notes.md",
+    "kb/d3fend/techniques/D3-ACH-application_configuration_hardening.md",
+    "kb/d3fend/techniques",
+    "kb/d3fend",
+    "attack/tools/fgdump.md",
+    "attack/tools/aadinternals.md",
+    "attack/techniques/T1195-supply_chain_compromise.md",
+    "kb/notes/attack/techniques/t1195-notes.md",
+    "kb/notes/attack/techniques",
+    "attack/tactics/TA0001-initial_access.md",
+    "kb/notes/attack/tactics/ta0001-notes.md",
+    "kb/notes/attack/tactics",
+    "kb/notes/attack",
+    "kb/notes",
+    "kb",
+    "notes/attack/tactics/ta0001-notes.md",
+    "notes/attack/mitigations/m1013-notes.md",
+    "notes/attack/data-sources/ds0001-notes.md",
+    "notes/attack/data-components/dc0001-notes.md",
+    "notes/d3fend/techniques/d3-wsam-notes.md",
+    "notes/d3fend/techniques/d3-wsaa-notes.md",
+    "notes/d3fend/techniques/d3-vtv-notes.md",
+    "notes/d3fend/techniques/d3-vs-notes.md",
+    "notes/d3fend/techniques/d3-vi-notes.md",
+    "notes/d3fend/techniques/d3-usica-notes.md",
+    "notes/d3fend/techniques/d3-ura-notes.md",
+    "notes/d3fend/techniques/d3-ula-notes.md",
+    "notes/d3fend/techniques/d3-uglpa-notes.md",
+    "notes/d3fend/techniques/d3-udta-notes.md",
+    "notes/d3fend/techniques/d3-uba-notes.md",
+    "notes/d3fend/techniques/d3-uap-notes.md",
+    "notes/d3fend/techniques/d3-ua-notes.md",
+    "notes/d3fend/techniques/d3-tl-notes.md",
+    "notes/d3fend/techniques",
+    "notes/attack/techniques",
+    "notes/attack/tools"
   ]
 }

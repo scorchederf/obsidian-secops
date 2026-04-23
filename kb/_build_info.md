@@ -1,6 +1,6 @@
 # Vault Build Info
 
-- build_date: 2026-04-23 20:16:46
+- build_date: 2026-04-23 22:40:56
 - build_source: script
 - matrix: enterprise
 - attack_json_file: enterprise-attack.json
@@ -10,3 +10,4 @@
 - tools: 91
 - data_sources: 38
 - data_components: 106
+- d3fend_techniques: 271
