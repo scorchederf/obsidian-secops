@@ -1,11 +1,19 @@
 ---
-id: S0111
-name: schtasks
-created: 2017-05-31 21:33:07.218000+00:00
-modified: 2025-04-16 20:38:56.004000+00:00
-type: tool
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "S0111"
+mitre_name: "schtasks"
+mitre_type: "tool"
+mitre_stix_id: "tool--c9703cd3-141c-43a0-a926-380082be5d04"
+mitre_created: "2017-05-31T21:33:07.218Z"
+mitre_modified: "2025-04-16T20:38:56.004Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0111/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "schtasks"
+  - "schtasks.exe"
 ---
 
 # schtasks
@@ -15,5 +23,5 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
-    - [[T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+- [[T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 

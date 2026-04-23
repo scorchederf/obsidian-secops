@@ -1,14 +1,33 @@
 ---
-id: T1001
-name: Data Obfuscation
-created: 2017-05-31 21:30:18.931000+00:00
-modified: 2025-10-24 17:49:13.380000+00:00
-type: attack-pattern
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "T1001"
+mitre_name: "Data Obfuscation"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--ad255bfe-a9e6-4b52-a258-8d3462abe842"
+mitre_created: "2017-05-31T21:30:18.931Z"
+mitre_modified: "2025-10-24T17:49:13.380Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1001/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "ESXi"
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0011"
 ---
 
+# T1001: Data Obfuscation
+
 Adversaries may obfuscate command and control traffic to make it more difficult to detect.(Citation: Bitdefender FunnyDream Campaign November 2020) Command and control (C2) communications are hidden (but not necessarily encrypted) in an attempt to make the content more difficult to discover or decipher and to make the communication less conspicuous and hide commands from being seen. This encompasses many methods, such as adding junk data to protocol traffic, using steganography, or impersonating legitimate protocols. 
+
+## Tactics
+
+- [[TA0011-command_and_control|TA0011: Command and Control]]
 
 ## Subtechniques
 

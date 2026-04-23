@@ -1,12 +1,19 @@
 ---
-id: M1039
-name: Environment Variable Permissions
-created: 2019-06-11 16:40:14.543000+00:00
-modified: 2024-12-11 17:54:05.697000+00:00
-type: course-of-action
+mitre_id: "M1039"
+mitre_name: "Environment Variable Permissions"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--609191bf-7d06-40e4-b1f8-9e11eb3ff8a6"
+mitre_created: "2019-06-11T16:40:14.543Z"
+mitre_modified: "2024-12-11T17:54:05.697Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1039/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Environment Variable Permissions
+# M1039: Environment Variable Permissions
 
 Restrict the modification of environment variables to authorized users and processes by enforcing strict permissions and policies. This ensures the integrity of environment variables, preventing adversaries from abusing or altering them for malicious purposes. This mitigation can be implemented through the following measures:
 
@@ -33,7 +40,7 @@ Audit Environment Variable Changes:
 ## Mitigates Techniques
 
 - [[T1070-indicator_removal|T1070: Indicator Removal]]
-    - [[T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
+- [[T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 - [[T1562-impair_defenses|T1562: Impair Defenses]]
-    - [[T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
+- [[T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
 

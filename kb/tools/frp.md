@@ -1,11 +1,18 @@
 ---
-id: S1144
-name: FRP
-created: 2024-07-10 18:46:33.555000+00:00
-modified: 2024-07-30 18:17:09.725000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S1144"
+mitre_name: "FRP"
+mitre_type: "tool"
+mitre_stix_id: "tool--36dd807e-b5bc-4c3e-91ed-80682360148c"
+mitre_created: "2024-07-10T18:46:33.555Z"
+mitre_modified: "2024-07-30T18:17:09.725Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S1144/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "FRP"
 ---
 
 # FRP
@@ -17,14 +24,15 @@ x_mitre_domains: enterprise-attack
 - [[T1046-network_service_discovery|T1046: Network Service Discovery]]
 - [[T1049-system_network_connections_discovery|T1049: System Network Connections Discovery]]
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-    - [[T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
+- [[T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 - [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-    - [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+- [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 - [[T1090-proxy|T1090: Proxy]]
-    - [[T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
+- [[T1090-proxy|T1090: Proxy]]
+- [[T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 - [[T1095-non-application_layer_protocol|T1095: Non-Application Layer Protocol]]
 - [[T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 - [[T1573-encrypted_channel|T1573: Encrypted Channel]]
-    - [[T1573-encrypted_channel#^t1573001-symmetric-cryptography|T1573.001: Symmetric Cryptography]]
-    - [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
+- [[T1573-encrypted_channel#^t1573001-symmetric-cryptography|T1573.001: Symmetric Cryptography]]
+- [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
 

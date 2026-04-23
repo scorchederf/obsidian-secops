@@ -1,11 +1,18 @@
 ---
-id: S0231
-name: Invoke-PSImage
-created: 2018-04-18 17:59:24.739000+00:00
-modified: 2025-04-16 20:38:55.222000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0231"
+mitre_name: "Invoke-PSImage"
+mitre_type: "tool"
+mitre_stix_id: "tool--b52d6583-14a2-4ddc-8527-87fd2142558f"
+mitre_created: "2018-04-18T17:59:24.739Z"
+mitre_modified: "2025-04-16T20:38:55.222Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0231/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Invoke-PSImage"
 ---
 
 # Invoke-PSImage
@@ -15,6 +22,6 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
-    - [[T1027-obfuscated_files_or_information#^t1027003-steganography|T1027.003: Steganography]]
-    - [[T1027-obfuscated_files_or_information#^t1027009-embedded-payloads|T1027.009: Embedded Payloads]]
+- [[T1027-obfuscated_files_or_information#^t1027003-steganography|T1027.003: Steganography]]
+- [[T1027-obfuscated_files_or_information#^t1027009-embedded-payloads|T1027.009: Embedded Payloads]]
 

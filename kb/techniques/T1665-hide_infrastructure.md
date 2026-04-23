@@ -1,20 +1,40 @@
 ---
-id: T1665
-name: Hide Infrastructure
-created: 2024-02-13 17:00:00.175000+00:00
-modified: 2025-10-22 03:57:22.646000+00:00
-type: attack-pattern
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "T1665"
+mitre_name: "Hide Infrastructure"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--eb897572-8979-4242-a089-56f294f4c91d"
+mitre_created: "2024-02-13T17:00:00.175Z"
+mitre_modified: "2025-10-22T03:57:22.646Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1665/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "ESXi"
+  - "Linux"
+  - "Network Devices"
+  - "Windows"
+  - "macOS"
+mitre_tactic_ids:
+  - "TA0011"
 ---
+
+# T1665: Hide Infrastructure
 
 Adversaries may manipulate network traffic in order to hide and evade detection of their C2 infrastructure. This can be accomplished by identifying and filtering traffic from defensive tools,(Citation: TA571) masking malicious domains to obfuscate the true destination from both automated scanning tools and security researchers,(Citation: Schema-abuse)(Citation: Facad1ng)(Citation: Browser-updates) and otherwise hiding malicious artifacts to delay discovery and prolong the effectiveness of adversary infrastructure that could otherwise be identified, blocked, or taken down entirely.
 
-C2 networks may include the use of [Proxy](https://attack.mitre.org/techniques/T1090) or VPNs to disguise IP addresses, which can allow adversaries to blend in with normal network traffic and bypass conditional access policies or anti-abuse protections. For example, an adversary may use a virtual private cloud to spoof their IP address to closer align with a victim's IP address ranges. This may also bypass security measures relying on geolocation of the source IP address.(Citation: sysdig)(Citation: Orange Residential Proxies)
+C2 networks may include the use of [[T1090-proxy|T1090: Proxy]] or VPNs to disguise IP addresses, which can allow adversaries to blend in with normal network traffic and bypass conditional access policies or anti-abuse protections. For example, an adversary may use a virtual private cloud to spoof their IP address to closer align with a victim's IP address ranges. This may also bypass security measures relying on geolocation of the source IP address.(Citation: sysdig)(Citation: Orange Residential Proxies)
 
-Adversaries may also attempt to filter network traffic in order to evade defensive tools in numerous ways, including blocking/redirecting common incident responder or security appliance user agents.(Citation: mod_rewrite)(Citation: SocGholish-update) Filtering traffic based on IP and geo-fencing may also avoid automated sandboxing or researcher activity (i.e., [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497)).(Citation: TA571)(Citation: mod_rewrite)
+Adversaries may also attempt to filter network traffic in order to evade defensive tools in numerous ways, including blocking/redirecting common incident responder or security appliance user agents.(Citation: mod_rewrite)(Citation: SocGholish-update) Filtering traffic based on IP and geo-fencing may also avoid automated sandboxing or researcher activity (i.e., [[T1497-virtualization_sandbox_evasion|T1497: Virtualization/Sandbox Evasion]]).(Citation: TA571)(Citation: mod_rewrite)
 
-Hiding C2 infrastructure may also be supported by [Resource Development](https://attack.mitre.org/tactics/TA0042) activities such as [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) and [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584). For example, using widely trusted hosting services or domains such as prominent URL shortening providers or marketing services for C2 networks may enable adversaries to present benign content that later redirects victims to malicious web pages or infrastructure once specific conditions are met.(Citation: StarBlizzard)(Citation: QR-cofense)
+Hiding C2 infrastructure may also be supported by [[TA0042-resource_development|TA0042: Resource Development]] activities such as [[T1583-acquire_infrastructure|T1583: Acquire Infrastructure]] and [[T1584-compromise_infrastructure|T1584: Compromise Infrastructure]]. For example, using widely trusted hosting services or domains such as prominent URL shortening providers or marketing services for C2 networks may enable adversaries to present benign content that later redirects victims to malicious web pages or infrastructure once specific conditions are met.(Citation: StarBlizzard)(Citation: QR-cofense)
+
+## Tactics
+
+- [[TA0011-command_and_control|TA0011: Command and Control]]
 
 ## Platforms
 

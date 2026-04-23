@@ -1,17 +1,35 @@
 ---
-id: T1003
-name: OS Credential Dumping
-created: 2017-05-31 21:30:19.735000+00:00
-modified: 2025-10-24 17:48:22.201000+00:00
-type: attack-pattern
-x_mitre_version: 2.2
-x_mitre_domains: enterprise-attack
+mitre_id: "T1003"
+mitre_name: "OS Credential Dumping"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--0a3ead4e-6d47-4ccb-854c-a6a4f9d96b22"
+mitre_created: "2017-05-31T21:30:19.735Z"
+mitre_modified: "2025-10-24T17:48:22.201Z"
+mitre_version: "2.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1003/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0006"
 ---
 
-Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0008) and access restricted information.
+# T1003: OS Credential Dumping
+
+Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [[TA0008-lateral_movement|TA0008: Lateral Movement]] and access restricted information.
 
 Several of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well.
 
+
+## Tactics
+
+- [[TA0006-credential_access|TA0006: Credential Access]]
 
 ## Subtechniques
 
@@ -19,26 +37,26 @@ Several of the tools mentioned in associated sub-techniques may be used by both 
 
 ^t1003001-lsass-memory
 
-Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested by an administrative user or SYSTEM and used to conduct [Lateral Movement](https://attack.mitre.org/tactics/TA0008) using [Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550).
+Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested by an administrative user or SYSTEM and used to conduct [[TA0008-lateral_movement|TA0008: Lateral Movement]] using [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]].
 
 As well as in-memory techniques, the LSASS process memory can be dumped from the target host and analyzed on a local system.
 
 For example, on the target host use procdump:
 
-* <code>procdump -ma lsass.exe lsass_dump</code>
+* `procdump -ma lsass.exe lsass_dump`
 
 Locally, mimikatz can be run using:
 
-* <code>sekurlsa::Minidump lsassdump.dmp</code>
-* <code>sekurlsa::logonPasswords</code>
+* `sekurlsa::Minidump lsassdump.dmp`
+* `sekurlsa::logonPasswords`
 
 Built-in Windows tools such as `comsvcs.dll` can also be used:
 
-* <code>rundll32.exe C:\Windows\System32\comsvcs.dll MiniDump PID  lsass.dmp full</code>(Citation: Volexity Exchange Marauder March 2021)(Citation: Symantec Attacks Against Government Sector)
+* `rundll32.exe C:\Windows\System32\comsvcs.dll MiniDump PID  lsass.dmp full`(Citation: Volexity Exchange Marauder March 2021)(Citation: Symantec Attacks Against Government Sector)
 
-Similar to [Image File Execution Options Injection](https://attack.mitre.org/techniques/T1546/012), the silent process exit mechanism can be abused to create a memory dump of `lsass.exe` through Windows Error Reporting (`WerFault.exe`).(Citation: Deep Instinct LSASS)
+Similar to [[T1546-event_triggered_execution#^t1546012-image-file-execution-options-injection|T1546.012: Image File Execution Options Injection]], the silent process exit mechanism can be abused to create a memory dump of `lsass.exe` through Windows Error Reporting (`WerFault.exe`).(Citation: Deep Instinct LSASS)
 
-Windows Security Support Provider (SSP) DLLs are loaded into LSASS process at system start. Once loaded into the LSA, SSP DLLs have access to encrypted and plaintext passwords that are stored in Windows, such as any logged-on user's Domain password or smart card PINs. The SSP configuration is stored in two Registry keys: <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Security Packages</code> and <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig\Security Packages</code>. An adversary may modify these Registry keys to add new SSPs, which will be loaded the next time the system boots, or when the AddSecurityPackage Windows API function is called.(Citation: Graeber 2014)
+Windows Security Support Provider (SSP) DLLs are loaded into LSASS process at system start. Once loaded into the LSA, SSP DLLs have access to encrypted and plaintext passwords that are stored in Windows, such as any logged-on user's Domain password or smart card PINs. The SSP configuration is stored in two Registry keys: `HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Security Packages` and `HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig\Security Packages`. An adversary may modify these Registry keys to add new SSPs, which will be loaded the next time the system boots, or when the AddSecurityPackage Windows API function is called.(Citation: Graeber 2014)
 
 The following SSPs can be used to access credentials:
 
@@ -52,19 +70,19 @@ The following SSPs can be used to access credentials:
 
 ^t1003002-security-account-manager
 
-Adversaries may attempt to extract credential material from the Security Account Manager (SAM) database either through in-memory techniques or through the Windows Registry where the SAM database is stored. The SAM is a database file that contains local accounts for the host, typically those found with the <code>net user</code> command. Enumerating the SAM database requires SYSTEM level access.
+Adversaries may attempt to extract credential material from the Security Account Manager (SAM) database either through in-memory techniques or through the Windows Registry where the SAM database is stored. The SAM is a database file that contains local accounts for the host, typically those found with the `net user` command. Enumerating the SAM database requires SYSTEM level access.
 
 A number of tools can be used to retrieve the SAM file through in-memory techniques:
 
 * pwdumpx.exe
-* [gsecdump](https://attack.mitre.org/software/S0008)
-* [Mimikatz](https://attack.mitre.org/software/S0002)
+* [[gsecdump|gsecdump]]
+* [[mimikatz|Mimikatz]]
 * secretsdump.py
 
 Alternatively, the SAM can be extracted from the Registry with Reg:
 
-* <code>reg save HKLM\sam sam</code>
-* <code>reg save HKLM\system system</code>
+* `reg save HKLM\sam sam`
+* `reg save HKLM\system system`
 
 Creddump7 can then be used to process the SAM database locally to retrieve hashes.(Citation: GitHub Creddump7)
 
@@ -79,7 +97,7 @@ Notes:
 
 ^t1003003-ntds
 
-Adversaries may attempt to access or create a copy of the Active Directory domain database in order to steal credential information, as well as obtain other information about domain members such as devices, users, and access rights. By default, the NTDS file (NTDS.dit) is located in <code>%SystemRoot%\NTDS\Ntds.dit</code> of a domain controller.(Citation: Wikipedia Active Directory)
+Adversaries may attempt to access or create a copy of the Active Directory domain database in order to steal credential information, as well as obtain other information about domain members such as devices, users, and access rights. By default, the NTDS file (NTDS.dit) is located in `%SystemRoot%\NTDS\Ntds.dit` of a domain controller.(Citation: Wikipedia Active Directory)
 
 In addition to looking for NTDS files on active Domain Controllers, adversaries may search for backups that contain the same or similar information.(Citation: Metcalf 2015)
 
@@ -95,9 +113,9 @@ The following tools and techniques can be used to enumerate the NTDS file and th
 
 ^t1003004-lsa-secrets
 
-Adversaries with SYSTEM access to a host may attempt to access Local Security Authority (LSA) secrets, which can contain a variety of different credential materials, such as credentials for service accounts.(Citation: Passcape LSA Secrets)(Citation: Microsoft AD Admin Tier Model)(Citation: Tilbury Windows Credentials) LSA secrets are stored in the registry at <code>HKEY_LOCAL_MACHINE\SECURITY\Policy\Secrets</code>. LSA secrets can also be dumped from memory.(Citation: ired Dumping LSA Secrets)
+Adversaries with SYSTEM access to a host may attempt to access Local Security Authority (LSA) secrets, which can contain a variety of different credential materials, such as credentials for service accounts.(Citation: Passcape LSA Secrets)(Citation: Microsoft AD Admin Tier Model)(Citation: Tilbury Windows Credentials) LSA secrets are stored in the registry at `HKEY_LOCAL_MACHINE\SECURITY\Policy\Secrets`. LSA secrets can also be dumped from memory.(Citation: ired Dumping LSA Secrets)
 
-[Reg](https://attack.mitre.org/software/S0075) can be used to extract from the Registry. [Mimikatz](https://attack.mitre.org/software/S0002) can be used to extract secrets from memory.(Citation: ired Dumping LSA Secrets)
+[[reg|Reg]] can be used to extract from the Registry. [[mimikatz|Mimikatz]] can be used to extract secrets from memory.(Citation: ired Dumping LSA Secrets)
 
 ### T1003.005: Cached Domain Credentials
 
@@ -105,11 +123,11 @@ Adversaries with SYSTEM access to a host may attempt to access Local Security Au
 
 Adversaries may attempt to access cached domain credentials used to allow authentication to occur in the event a domain controller is unavailable.(Citation: Microsoft - Cached Creds)
 
-On Windows Vista and newer, the hash format is DCC2 (Domain Cached Credentials version 2) hash, also known as MS-Cache v2 hash.(Citation: PassLib mscache) The number of default cached credentials varies and can be altered per system. This hash does not allow pass-the-hash style attacks, and instead requires [Password Cracking](https://attack.mitre.org/techniques/T1110/002) to recover the plaintext password.(Citation: ired mscache)
+On Windows Vista and newer, the hash format is DCC2 (Domain Cached Credentials version 2) hash, also known as MS-Cache v2 hash.(Citation: PassLib mscache) The number of default cached credentials varies and can be altered per system. This hash does not allow pass-the-hash style attacks, and instead requires [[T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]] to recover the plaintext password.(Citation: ired mscache)
 
-On Linux systems, Active Directory credentials can be accessed through caches maintained by software like System Security Services Daemon (SSSD) or Quest Authentication Services (formerly VAS). Cached credential hashes are typically located at `/var/lib/sss/db/cache.[domain].ldb` for SSSD or `/var/opt/quest/vas/authcache/vas_auth.vdb` for Quest. Adversaries can use utilities, such as `tdbdump`, on these database files to dump the cached hashes and use [Password Cracking](https://attack.mitre.org/techniques/T1110/002) to obtain the plaintext password.(Citation: Brining MimiKatz to Unix) 
+On Linux systems, Active Directory credentials can be accessed through caches maintained by software like System Security Services Daemon (SSSD) or Quest Authentication Services (formerly VAS). Cached credential hashes are typically located at `/var/lib/sss/db/cache.[domain].ldb` for SSSD or `/var/opt/quest/vas/authcache/vas_auth.vdb` for Quest. Adversaries can use utilities, such as `tdbdump`, on these database files to dump the cached hashes and use [[T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]] to obtain the plaintext password.(Citation: Brining MimiKatz to Unix) 
 
-With SYSTEM or sudo access, the tools/utilities such as [Mimikatz](https://attack.mitre.org/software/S0002), [Reg](https://attack.mitre.org/software/S0075), and secretsdump.py for Windows or Linikatz for Linux can be used to extract the cached credentials.(Citation: Brining MimiKatz to Unix)
+With SYSTEM or sudo access, the tools/utilities such as [[mimikatz|Mimikatz]], [[reg|Reg]], and secretsdump.py for Windows or Linikatz for Linux can be used to extract the cached credentials.(Citation: Brining MimiKatz to Unix)
 
 Note: Cached credentials for Windows Vista are derived using PBKDF2.(Citation: PassLib mscache)
 
@@ -119,9 +137,9 @@ Note: Cached credentials for Windows Vista are derived using PBKDF2.(Citation: P
 
 Adversaries may attempt to access credentials and other sensitive information by abusing a Windows Domain Controller's application programming interface (API)(Citation: Microsoft DRSR Dec 2017) (Citation: Microsoft GetNCCChanges) (Citation: Samba DRSUAPI) (Citation: Wine API samlib.dll) to simulate the replication process from a remote domain controller using a technique called DCSync.
 
-Members of the Administrators, Domain Admins, and Enterprise Admin groups or computer accounts on the domain controller are able to run DCSync to pull password data(Citation: ADSecurity Mimikatz DCSync) from Active Directory, which may include current and historical hashes of potentially useful accounts such as KRBTGT and Administrators. The hashes can then in turn be used to create a [Golden Ticket](https://attack.mitre.org/techniques/T1558/001) for use in [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003)(Citation: Harmj0y Mimikatz and DCSync) or change an account's password as noted in [Account Manipulation](https://attack.mitre.org/techniques/T1098).(Citation: InsiderThreat ChangeNTLM July 2017)
+Members of the Administrators, Domain Admins, and Enterprise Admin groups or computer accounts on the domain controller are able to run DCSync to pull password data(Citation: ADSecurity Mimikatz DCSync) from Active Directory, which may include current and historical hashes of potentially useful accounts such as KRBTGT and Administrators. The hashes can then in turn be used to create a [[T1558-steal_or_forge_kerberos_tickets#^t1558001-golden-ticket|T1558.001: Golden Ticket]] for use in [[T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]](Citation: Harmj0y Mimikatz and DCSync) or change an account's password as noted in [[T1098-account_manipulation|T1098: Account Manipulation]].(Citation: InsiderThreat ChangeNTLM July 2017)
 
-DCSync functionality has been included in the "lsadump" module in [Mimikatz](https://attack.mitre.org/software/S0002).(Citation: GitHub Mimikatz lsadump Module) Lsadump also includes NetSync, which performs DCSync over a legacy replication protocol.(Citation: Microsoft NRPC Dec 2017)
+DCSync functionality has been included in the "lsadump" module in [[mimikatz|Mimikatz]].(Citation: GitHub Mimikatz lsadump Module) Lsadump also includes NetSync, which performs DCSync over a legacy replication protocol.(Citation: Microsoft NRPC Dec 2017)
 
 ### T1003.007: Proc Filesystem
 
@@ -129,7 +147,7 @@ DCSync functionality has been included in the "lsadump" module in [Mimikatz](htt
 
 Adversaries may gather credentials from the proc filesystem or `/proc`. The proc filesystem is a pseudo-filesystem used as an interface to kernel data structures for Linux based systems managing virtual memory. For each process, the `/proc/<PID>/maps` file shows how memory is mapped within the process’s virtual address space. And `/proc/<PID>/mem`, exposed for debugging purposes, provides access to the process’s virtual address space.(Citation: Picus Labs Proc cump 2022)(Citation: baeldung Linux proc map 2022)
 
-When executing with root privileges, adversaries can search these memory locations for all processes on a system that contain patterns indicative of credentials. Adversaries may use regex patterns, such as <code>grep -E "^[0-9a-f-]* r" /proc/"$pid"/maps | cut -d' ' -f 1</code>, to look for fixed strings in memory structures or cached hashes.(Citation: atomic-red proc file system) When running without privileged access, processes can still view their own virtual memory locations. Some services or programs may save credentials in clear text inside the process’s memory.(Citation: MimiPenguin GitHub May 2017)(Citation: Polop Linux PrivEsc Gitbook)
+When executing with root privileges, adversaries can search these memory locations for all processes on a system that contain patterns indicative of credentials. Adversaries may use regex patterns, such as `grep -E "^[0-9a-f-]* r" /proc/"$pid"/maps | cut -d' ' -f 1`, to look for fixed strings in memory structures or cached hashes.(Citation: atomic-red proc file system) When running without privileged access, processes can still view their own virtual memory locations. Some services or programs may save credentials in clear text inside the process’s memory.(Citation: MimiPenguin GitHub May 2017)(Citation: Polop Linux PrivEsc Gitbook)
 
 If running as or with the permissions of a web browser, a process can search the `/maps` & `/mem` locations for common website credential patterns (that can also be used to find adjacent memory within the same structure) in which hashes or cleartext credentials may be located.
 
@@ -137,11 +155,11 @@ If running as or with the permissions of a web browser, a process can search the
 
 ^t1003008--etc-passwd-and--etc-shadow
 
-Adversaries may attempt to dump the contents of <code>/etc/passwd</code> and <code>/etc/shadow</code> to enable offline password cracking. Most modern Linux operating systems use a combination of <code>/etc/passwd</code> and <code>/etc/shadow</code> to store user account information, including password hashes in <code>/etc/shadow</code>. By default, <code>/etc/shadow</code> is only readable by the root user.(Citation: Linux Password and Shadow File Formats)
+Adversaries may attempt to dump the contents of `/etc/passwd` and `/etc/shadow` to enable offline password cracking. Most modern Linux operating systems use a combination of `/etc/passwd` and `/etc/shadow` to store user account information, including password hashes in `/etc/shadow`. By default, `/etc/shadow` is only readable by the root user.(Citation: Linux Password and Shadow File Formats)
 
-Linux stores user information such as user ID, group ID, home directory path, and login shell in <code>/etc/passwd</code>. A "user" on the system may belong to a person or a service. All password hashes are stored in <code>/etc/shadow</code> - including entries for users with no passwords and users with locked or disabled accounts.(Citation: Linux Password and Shadow File Formats)
+Linux stores user information such as user ID, group ID, home directory path, and login shell in `/etc/passwd`. A "user" on the system may belong to a person or a service. All password hashes are stored in `/etc/shadow` - including entries for users with no passwords and users with locked or disabled accounts.(Citation: Linux Password and Shadow File Formats)
 
-Adversaries may attempt to read or dump the <code>/etc/passwd</code> and <code>/etc/shadow</code> files on Linux systems via command line utilities such as the <code>cat</code> command.(Citation: Arctic Wolf) Additionally, the Linux utility <code>unshadow</code> can be used to combine the two files in a format suited for password cracking utilities such as John the Ripper - for example, via the command <code>/usr/bin/unshadow /etc/passwd /etc/shadow > /tmp/crack.password.db</code>(Citation: nixCraft - John the Ripper). Since the user information stored in <code>/etc/passwd</code> are linked to the password hashes in <code>/etc/shadow</code>, an adversary would need to have access to both.
+Adversaries may attempt to read or dump the `/etc/passwd` and `/etc/shadow` files on Linux systems via command line utilities such as the `cat` command.(Citation: Arctic Wolf) Additionally, the Linux utility `unshadow` can be used to combine the two files in a format suited for password cracking utilities such as John the Ripper - for example, via the command `/usr/bin/unshadow /etc/passwd /etc/shadow > /tmp/crack.password.db`(Citation: nixCraft - John the Ripper). Since the user information stored in `/etc/passwd` are linked to the password hashes in `/etc/shadow`, an adversary would need to have access to both.
 
 ## Mitigations
 

@@ -1,18 +1,36 @@
 ---
-id: T1219
-name: Remote Access Tools
-created: 2018-04-18 17:59:24.739000+00:00
-modified: 2025-10-24 17:48:42.154000+00:00
-type: attack-pattern
-x_mitre_version: 3.0
-x_mitre_domains: enterprise-attack
+mitre_id: "T1219"
+mitre_name: "Remote Access Tools"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--4061e78c-1284-44b4-9116-73e4ac3912f7"
+mitre_created: "2018-04-18T17:59:24.739Z"
+mitre_modified: "2025-10-24T17:48:42.154Z"
+mitre_version: "3.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1219/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0011"
 ---
+
+# T1219: Remote Access Tools
 
 An adversary may use legitimate remote access tools to establish an interactive command and control channel within a network. Remote access tools create a session between two trusted hosts through a graphical interface, a command line interaction, a protocol tunnel via development or management software, or hardware-level access such as KVM (Keyboard, Video, Mouse) over IP solutions. Desktop support software (usually graphical interface) and remote management software (typically command line interface) allow a user to control a computer remotely as if they are a local user inheriting the user or software permissions. This software is commonly used for troubleshooting, software installation, and system management.(Citation: Symantec Living off the Land)(Citation: CrowdStrike 2015 Global Threat Report)(Citation: CrySyS Blog TeamSpy) Adversaries may similarly abuse response features included in EDR and other defensive tools that enable remote access.
 
 Remote access tools may be installed and used post-compromise as an alternate communications channel for redundant access or to establish an interactive remote desktop session with the target system. It may also be used as a malware component to establish a reverse connection or back-connect to a service or adversary-controlled system.
 
-Installation of many remote access tools may also include persistence (e.g., the software's installation routine creates a [Windows Service](https://attack.mitre.org/techniques/T1543/003)). Remote access modules/features may also exist as part of otherwise existing software (e.g., Google Chrome’s Remote Desktop).(Citation: Google Chrome Remote Desktop)(Citation: Chrome Remote Desktop)
+Installation of many remote access tools may also include persistence (e.g., the software's installation routine creates a [[T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]). Remote access modules/features may also exist as part of otherwise existing software (e.g., Google Chrome’s Remote Desktop).(Citation: Google Chrome Remote Desktop)(Citation: Chrome Remote Desktop)
+
+## Tactics
+
+- [[TA0011-command_and_control|TA0011: Command and Control]]
 
 ## Subtechniques
 
@@ -24,7 +42,7 @@ Adversaries may abuse Integrated Development Environment (IDE) software with rem
 
 Additionally, adversaries may use IDE tunneling for persistence. Some IDEs, such as Visual Studio Code and JetBrains, support automatic reconnection. Adversaries may configure the IDE to auto-launch at startup, re-establishing the tunnel upon execution. Compromised developer machines may also be exploited as jump hosts to move further into the network.
 
-IDE tunneling tools may be built-in or installed as [IDE Extensions](https://attack.mitre.org/techniques/T1176/002).
+IDE tunneling tools may be built-in or installed as [[T1176-software_extensions#^t1176002-ide-extensions|T1176.002: IDE Extensions]].
 
 ### T1219.002: Remote Desktop Software
 

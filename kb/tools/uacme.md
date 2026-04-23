@@ -1,11 +1,16 @@
 ---
-id: S0116
-name: UACMe
-created: 2017-05-31 21:33:09.047000+00:00
-modified: 2025-04-25 14:45:13.232000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S0116"
+mitre_name: "UACMe"
+mitre_type: "tool"
+mitre_stix_id: "tool--102c3898-85e0-43ee-ae28-62a0a3ed9507"
+mitre_created: "2017-05-31T21:33:09.047Z"
+mitre_modified: "2025-04-25T14:45:13.232Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0116/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
 # UACMe
@@ -15,5 +20,5 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-    - [[T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+- [[T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 

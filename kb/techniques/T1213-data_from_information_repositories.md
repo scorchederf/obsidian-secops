@@ -1,14 +1,31 @@
 ---
-id: T1213
-name: Data from Information Repositories
-created: 2018-04-18 17:59:24.739000+00:00
-modified: 2025-10-24 17:49:26.262000+00:00
-type: attack-pattern
-x_mitre_version: 3.4
-x_mitre_domains: enterprise-attack
+mitre_id: "T1213"
+mitre_name: "Data from Information Repositories"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--d28ef391-8ed4-45dc-bc4a-2f43abf54416"
+mitre_created: "2018-04-18T17:59:24.739Z"
+mitre_modified: "2025-10-24T17:49:26.262Z"
+mitre_version: "3.4"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1213/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "Windows"
+  - "macOS"
+  - "SaaS"
+  - "IaaS"
+  - "Office Suite"
+mitre_tactic_ids:
+  - "TA0009"
 ---
 
-Adversaries may leverage information repositories to mine valuable information. Information repositories are tools that allow for storage of information, typically to facilitate collaboration or information sharing between users, and can store a wide variety of data that may aid adversaries in further objectives, such as Credential Access, Lateral Movement, or Defense Evasion, or direct access to the target information. Adversaries may also abuse external sharing features to share sensitive documents with recipients outside of the organization (i.e., [Transfer Data to Cloud Account](https://attack.mitre.org/techniques/T1537)). 
+# T1213: Data from Information Repositories
+
+Adversaries may leverage information repositories to mine valuable information. Information repositories are tools that allow for storage of information, typically to facilitate collaboration or information sharing between users, and can store a wide variety of data that may aid adversaries in further objectives, such as Credential Access, Lateral Movement, or Defense Evasion, or direct access to the target information. Adversaries may also abuse external sharing features to share sensitive documents with recipients outside of the organization (i.e., [[T1537-transfer_data_to_cloud_account|T1537: Transfer Data to Cloud Account]]). 
 
 The following is a brief list of example information that may hold potential value to an adversary and may also be found on an information repository:
 
@@ -16,7 +33,7 @@ The following is a brief list of example information that may hold potential val
 * Physical / logical network diagrams
 * System architecture diagrams
 * Technical system documentation
-* Testing / development credentials (i.e., [Unsecured Credentials](https://attack.mitre.org/techniques/T1552)) 
+* Testing / development credentials (i.e., [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]) 
 * Work / project schedules
 * Source code snippets
 * Links to network shares and other internal resources
@@ -29,6 +46,10 @@ Information stored in a repository may vary based on the specific instance or en
 * Messaging platforms such as Slack and Microsoft Teams 
 
 In some cases, information repositories have been improperly secured, typically by unintentionally allowing for overly-broad access by all users or even public access to unauthenticated users. This is particularly common with cloud-native or cloud-hosted services, such as AWS Relational Database Service (RDS), Redis, or ElasticSearch.(Citation: Mitiga)(Citation: TrendMicro Exposed Redis 2020)(Citation: Cybernews Reuters Leak 2022)
+
+## Tactics
+
+- [[TA0009-collection|TA0009: Collection]]
 
 ## Subtechniques
 
@@ -43,7 +64,7 @@ Adversaries may leverage Confluence repositories to mine valuable information. O
 * Physical / logical network diagrams
 * System architecture diagrams
 * Technical system documentation
-* Testing / development credentials (i.e., [Unsecured Credentials](https://attack.mitre.org/techniques/T1552))
+* Testing / development credentials (i.e., [[T1552-unsecured_credentials|T1552: Unsecured Credentials]])
 * Work / project schedules
 * Source code snippets
 * Links to network shares and other internal resources
@@ -59,7 +80,7 @@ Adversaries may leverage the SharePoint repository as a source to mine valuable 
 * Physical / logical network diagrams
 * System architecture diagrams
 * Technical system documentation
-* Testing / development credentials (i.e., [Unsecured Credentials](https://attack.mitre.org/techniques/T1552))
+* Testing / development credentials (i.e., [[T1552-unsecured_credentials|T1552: Unsecured Credentials]])
 * Work / project schedules
 * Source code snippets
 * Links to network shares and other internal resources
@@ -71,9 +92,9 @@ Adversaries may leverage the SharePoint repository as a source to mine valuable 
 
 Adversaries may leverage code repositories to collect valuable information. Code repositories are tools/services that store source code and automate software builds. They may be hosted internally or privately on third party sites such as Github, GitLab, SourceForge, and BitBucket. Users typically interact with code repositories through a web application or command-line utilities such as git.
 
-Once adversaries gain access to a victim network or a private code repository, they may collect sensitive information such as proprietary source code or [Unsecured Credentials](https://attack.mitre.org/techniques/T1552) contained within software's source code.  Having access to software's source code may allow adversaries to develop [Exploits](https://attack.mitre.org/techniques/T1587/004), while credentials may provide access to additional resources using [Valid Accounts](https://attack.mitre.org/techniques/T1078).(Citation: Wired Uber Breach)(Citation: Krebs Adobe)
+Once adversaries gain access to a victim network or a private code repository, they may collect sensitive information such as proprietary source code or [[T1552-unsecured_credentials|T1552: Unsecured Credentials]] contained within software's source code.  Having access to software's source code may allow adversaries to develop [[T1587-develop_capabilities#^t1587004-exploits|T1587.004: Exploits]], while credentials may provide access to additional resources using [[T1078-valid_accounts|T1078: Valid Accounts]].(Citation: Wired Uber Breach)(Citation: Krebs Adobe)
 
-**Note:** This is distinct from [Code Repositories](https://attack.mitre.org/techniques/T1593/003), which focuses on conducting [Reconnaissance](https://attack.mitre.org/tactics/TA0043) via public code repositories.
+**Note:** This is distinct from [[T1593-search_open_websites_domains#^t1593003-code-repositories|T1593.003: Code Repositories]], which focuses on conducting [[TA0043-reconnaissance|TA0043: Reconnaissance]] via public code repositories.
 
 ### T1213.004: Customer Relationship Management Software
 
@@ -81,7 +102,7 @@ Once adversaries gain access to a victim network or a private code repository, t
 
 Adversaries may leverage Customer Relationship Management (CRM) software to mine valuable information. CRM software is used to assist organizations in tracking and managing customer interactions, as well as storing customer data.
 
-Once adversaries gain access to a victim organization, they may mine CRM software for customer data. This may include personally identifiable information (PII) such as full names, emails, phone numbers, and addresses, as well as additional details such as purchase histories and IT support interactions. By collecting this data, an adversary may be able to send personalized [Phishing](https://attack.mitre.org/techniques/T1566) emails, engage in SIM swapping, or otherwise target the organization’s customers in ways that enable financial gain or the compromise of additional organizations.(Citation: Bleeping Computer US Cellular Hack 2022)(Citation: Bleeping Computer Mint Mobile Hack 2021)(Citation: Bleeping Computer Bank Hack 2020)
+Once adversaries gain access to a victim organization, they may mine CRM software for customer data. This may include personally identifiable information (PII) such as full names, emails, phone numbers, and addresses, as well as additional details such as purchase histories and IT support interactions. By collecting this data, an adversary may be able to send personalized [[T1566-phishing|T1566: Phishing]] emails, engage in SIM swapping, or otherwise target the organization’s customers in ways that enable financial gain or the compromise of additional organizations.(Citation: Bleeping Computer US Cellular Hack 2022)(Citation: Bleeping Computer Mint Mobile Hack 2021)(Citation: Bleeping Computer Bank Hack 2020)
 
 CRM software may be hosted on-premises or in the cloud. Information stored in these solutions may vary based on the specific instance or environment. Examples of CRM software include Microsoft Dynamics 365, Salesforce, Zoho, Zendesk, and HubSpot.
 
@@ -93,7 +114,7 @@ Adversaries may leverage chat and messaging applications, such as Microsoft Team
 
 The following is a brief list of example information that may hold potential value to an adversary and may also be found on messaging applications: 
 
-* Testing / development credentials (i.e., [Chat Messages](https://attack.mitre.org/techniques/T1552/008)) 
+* Testing / development credentials (i.e., [[T1552-unsecured_credentials#^t1552008-chat-messages|T1552.008: Chat Messages]]) 
 * Source code snippets 
 * Links to network shares and other internal resources 
 * Proprietary data(Citation: Guardian Grand Theft Auto Leak 2022)
@@ -107,7 +128,7 @@ In addition to exfiltrating data from messaging applications, adversaries may le
 
 Adversaries may leverage databases to mine valuable information. These databases may be hosted on-premises or in the cloud (both in platform-as-a-service and software-as-a-service environments). 
 
-Examples of databases from which information may be collected include MySQL, PostgreSQL, MongoDB, Amazon Relational Database Service, Azure SQL Database, Google Firebase, and Snowflake. Databases may include a variety of information of interest to adversaries, such as usernames, hashed passwords, personally identifiable information, and financial data. Data collected from databases may be used for [Lateral Movement](https://attack.mitre.org/tactics/TA0008), [Command and Control](https://attack.mitre.org/tactics/TA0011), or [Exfiltration](https://attack.mitre.org/tactics/TA0010). Data exfiltrated from databases may also be used to extort victims or may be sold for profit.(Citation: Google Cloud Threat Intelligence UNC5537 Snowflake 2024)
+Examples of databases from which information may be collected include MySQL, PostgreSQL, MongoDB, Amazon Relational Database Service, Azure SQL Database, Google Firebase, and Snowflake. Databases may include a variety of information of interest to adversaries, such as usernames, hashed passwords, personally identifiable information, and financial data. Data collected from databases may be used for [[TA0008-lateral_movement|TA0008: Lateral Movement]], [[TA0011-command_and_control|TA0011: Command and Control]], or [[TA0010-exfiltration|TA0010: Exfiltration]]. Data exfiltrated from databases may also be used to extort victims or may be sold for profit.(Citation: Google Cloud Threat Intelligence UNC5537 Snowflake 2024)
 
 ## Mitigations
 

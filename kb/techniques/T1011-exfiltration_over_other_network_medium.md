@@ -1,16 +1,34 @@
 ---
-id: T1011
-name: Exfiltration Over Other Network Medium
-created: 2017-05-31 21:30:25.159000+00:00
-modified: 2025-10-24 17:48:47.042000+00:00
-type: attack-pattern
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "T1011"
+mitre_name: "Exfiltration Over Other Network Medium"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--51ea26b1-ff1e-4faa-b1a0-1114cd298c87"
+mitre_created: "2017-05-31T21:30:25.159Z"
+mitre_modified: "2025-10-24T17:48:47.042Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1011/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0010"
 ---
+
+# T1011: Exfiltration Over Other Network Medium
 
 Adversaries may attempt to exfiltrate data over a different network medium than the command and control channel. If the command and control network is a wired Internet connection, the exfiltration may occur, for example, over a WiFi connection, modem, cellular data connection, Bluetooth, or another radio frequency (RF) channel.
 
 Adversaries may choose to do this if they have sufficient access or proximity, and the connection might not be secured or defended as well as the primary Internet-connected channel because it is not routed through the same enterprise network.
+
+## Tactics
+
+- [[TA0010-exfiltration|TA0010: Exfiltration]]
 
 ## Subtechniques
 

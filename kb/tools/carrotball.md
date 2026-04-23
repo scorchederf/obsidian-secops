@@ -1,11 +1,18 @@
 ---
-id: S0465
-name: CARROTBALL
-created: 2020-06-02 19:10:29.513000+00:00
-modified: 2025-04-25 14:45:20.112000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S0465"
+mitre_name: "CARROTBALL"
+mitre_type: "tool"
+mitre_stix_id: "tool--5fc81b43-62b5-41b1-9113-c79ae5f030c4"
+mitre_created: "2020-06-02T19:10:29.513Z"
+mitre_modified: "2025-04-25T14:45:20.112Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0465/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "CARROTBALL"
 ---
 
 # CARROTBALL
@@ -16,8 +23,8 @@ x_mitre_domains: enterprise-attack
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 - [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-    - [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
+- [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 - [[T1204-user_execution|T1204: User Execution]]
-    - [[T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
+- [[T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 

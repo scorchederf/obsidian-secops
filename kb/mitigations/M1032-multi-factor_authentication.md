@@ -1,12 +1,19 @@
 ---
-id: M1032
-name: Multi-factor Authentication
-created: 2019-06-10 20:53:36.319000+00:00
-modified: 2025-05-09 15:48:18.053000+00:00
-type: course-of-action
+mitre_id: "M1032"
+mitre_name: "Multi-factor Authentication"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--b045d015-6bed-4490-bd38-56b41ece59a0"
+mitre_created: "2019-06-10T20:53:36.319Z"
+mitre_modified: "2025-05-09T15:48:18.053Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1032/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Multi-factor Authentication
+# M1032: Multi-factor Authentication
 
 Multi-Factor Authentication (MFA) enhances security by requiring users to provide at least two forms of verification to prove their identity before granting access. These factors typically include:
 
@@ -46,51 +53,61 @@ Training and Policy Enforcement:
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]
-    - [[T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
-    - [[T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
-    - [[T1021-remote_services#^t1021007-cloud-services|T1021.007: Cloud Services]]
+- [[T1021-remote_services|T1021: Remote Services]]
+- [[T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
+- [[T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
+- [[T1021-remote_services#^t1021007-cloud-services|T1021.007: Cloud Services]]
 - [[T1040-network_sniffing|T1040: Network Sniffing]]
 - [[T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
-    - [[T1078-valid_accounts#^t1078001-default-accounts|T1078.001: Default Accounts]]
-    - [[T1078-valid_accounts#^t1078002-domain-accounts|T1078.002: Domain Accounts]]
-    - [[T1078-valid_accounts#^t1078003-local-accounts|T1078.003: Local Accounts]]
-    - [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+- [[T1078-valid_accounts|T1078: Valid Accounts]]
+- [[T1078-valid_accounts#^t1078001-default-accounts|T1078.001: Default Accounts]]
+- [[T1078-valid_accounts#^t1078002-domain-accounts|T1078.002: Domain Accounts]]
+- [[T1078-valid_accounts#^t1078003-local-accounts|T1078.003: Local Accounts]]
+- [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 - [[T1098-account_manipulation|T1098: Account Manipulation]]
-    - [[T1098-account_manipulation#^t1098001-additional-cloud-credentials|T1098.001: Additional Cloud Credentials]]
-    - [[T1098-account_manipulation#^t1098002-additional-email-delegate-permissions|T1098.002: Additional Email Delegate Permissions]]
-    - [[T1098-account_manipulation#^t1098003-additional-cloud-roles|T1098.003: Additional Cloud Roles]]
-    - [[T1098-account_manipulation#^t1098005-device-registration|T1098.005: Device Registration]]
-    - [[T1098-account_manipulation#^t1098006-additional-container-cluster-roles|T1098.006: Additional Container Cluster Roles]]
+- [[T1098-account_manipulation|T1098: Account Manipulation]]
+- [[T1098-account_manipulation#^t1098001-additional-cloud-credentials|T1098.001: Additional Cloud Credentials]]
+- [[T1098-account_manipulation#^t1098002-additional-email-delegate-permissions|T1098.002: Additional Email Delegate Permissions]]
+- [[T1098-account_manipulation#^t1098003-additional-cloud-roles|T1098.003: Additional Cloud Roles]]
+- [[T1098-account_manipulation#^t1098005-device-registration|T1098.005: Device Registration]]
+- [[T1098-account_manipulation#^t1098006-additional-container-cluster-roles|T1098.006: Additional Container Cluster Roles]]
 - [[T1110-brute_force|T1110: Brute Force]]
-    - [[T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
-    - [[T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]]
-    - [[T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
-    - [[T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
+- [[T1110-brute_force|T1110: Brute Force]]
+- [[T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
+- [[T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]]
+- [[T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
+- [[T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
 - [[T1114-email_collection|T1114: Email Collection]]
-    - [[T1114-email_collection#^t1114002-remote-email-collection|T1114.002: Remote Email Collection]]
+- [[T1114-email_collection|T1114: Email Collection]]
+- [[T1114-email_collection#^t1114002-remote-email-collection|T1114.002: Remote Email Collection]]
 - [[T1133-external_remote_services|T1133: External Remote Services]]
 - [[T1136-create_account|T1136: Create Account]]
-    - [[T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
-    - [[T1136-create_account#^t1136002-domain-account|T1136.002: Domain Account]]
-    - [[T1136-create_account#^t1136003-cloud-account|T1136.003: Cloud Account]]
+- [[T1136-create_account|T1136: Create Account]]
+- [[T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
+- [[T1136-create_account#^t1136002-domain-account|T1136.002: Domain Account]]
+- [[T1136-create_account#^t1136003-cloud-account|T1136.003: Cloud Account]]
 - [[T1199-trusted_relationship|T1199: Trusted Relationship]]
 - [[T1213-data_from_information_repositories|T1213: Data from Information Repositories]]
-    - [[T1213-data_from_information_repositories#^t1213003-code-repositories|T1213.003: Code Repositories]]
+- [[T1213-data_from_information_repositories|T1213: Data from Information Repositories]]
+- [[T1213-data_from_information_repositories#^t1213003-code-repositories|T1213.003: Code Repositories]]
 - [[T1485-data_destruction|T1485: Data Destruction]]
 - [[T1530-data_from_cloud_storage|T1530: Data from Cloud Storage]]
 - [[T1539-steal_web_session_cookie|T1539: Steal Web Session Cookie]]
 - [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-    - [[T1556-modify_authentication_process#^t1556001-domain-controller-authentication|T1556.001: Domain Controller Authentication]]
-    - [[T1556-modify_authentication_process#^t1556003-pluggable-authentication-modules|T1556.003: Pluggable Authentication Modules]]
-    - [[T1556-modify_authentication_process#^t1556004-network-device-authentication|T1556.004: Network Device Authentication]]
-    - [[T1556-modify_authentication_process#^t1556006-multi-factor-authentication|T1556.006: Multi-Factor Authentication]]
-    - [[T1556-modify_authentication_process#^t1556007-hybrid-identity|T1556.007: Hybrid Identity]]
+- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
+- [[T1556-modify_authentication_process#^t1556001-domain-controller-authentication|T1556.001: Domain Controller Authentication]]
+- [[T1556-modify_authentication_process#^t1556003-pluggable-authentication-modules|T1556.003: Pluggable Authentication Modules]]
+- [[T1556-modify_authentication_process#^t1556004-network-device-authentication|T1556.004: Network Device Authentication]]
+- [[T1556-modify_authentication_process#^t1556006-multi-factor-authentication|T1556.006: Multi-Factor Authentication]]
+- [[T1556-modify_authentication_process#^t1556007-hybrid-identity|T1556.007: Hybrid Identity]]
 - [[T1599-network_boundary_bridging|T1599: Network Boundary Bridging]]
-    - [[T1599-network_boundary_bridging#^t1599001-network-address-translation-traversal|T1599.001: Network Address Translation Traversal]]
+- [[T1599-network_boundary_bridging|T1599: Network Boundary Bridging]]
+- [[T1599-network_boundary_bridging#^t1599001-network-address-translation-traversal|T1599.001: Network Address Translation Traversal]]
 - [[T1601-modify_system_image|T1601: Modify System Image]]
-    - [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
-    - [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
+- [[T1601-modify_system_image|T1601: Modify System Image]]
+- [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
+- [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
 - [[T1621-multi-factor_authentication_request_generation|T1621: Multi-Factor Authentication Request Generation]]
 - [[T1669-wi-fi_networks|T1669: Wi-Fi Networks]]
 

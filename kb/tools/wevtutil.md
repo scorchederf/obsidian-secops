@@ -1,11 +1,18 @@
 ---
-id: S0645
-name: Wevtutil
-created: 2021-09-14 21:45:30.280000+00:00
-modified: 2024-09-25 20:32:25.006000+00:00
-type: tool
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "S0645"
+mitre_name: "Wevtutil"
+mitre_type: "tool"
+mitre_stix_id: "tool--f91162cc-1686-4ff8-8115-bf3f61a4cc7a"
+mitre_created: "2021-09-14T21:45:30.280Z"
+mitre_modified: "2024-09-25T20:32:25.006Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0645/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Wevtutil"
 ---
 
 # Wevtutil
@@ -16,7 +23,7 @@ x_mitre_domains: enterprise-attack
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]
 - [[T1070-indicator_removal|T1070: Indicator Removal]]
-    - [[T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
+- [[T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
 - [[T1562-impair_defenses|T1562: Impair Defenses]]
-    - [[T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
+- [[T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 

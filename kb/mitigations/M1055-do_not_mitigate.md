@@ -1,12 +1,19 @@
 ---
-id: M1055
-name: Do Not Mitigate
-created: 2019-07-19 14:58:42.715000+00:00
-modified: 2024-12-10 19:25:57.870000+00:00
-type: course-of-action
+mitre_id: "M1055"
+mitre_name: "Do Not Mitigate"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--787fb64d-c87b-4ee5-a341-0ef17ec4c15c"
+mitre_created: "2019-07-19T14:58:42.715Z"
+mitre_modified: "2024-12-10T19:25:57.870Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1055/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Do Not Mitigate
+# M1055: Do Not Mitigate
 
 The Do Not Mitigate category highlights scenarios where attempting to mitigate a specific technique may inadvertently increase the organization's security risk or operational instability. This could happen due to the complexity of the system, the integration of critical processes, or the potential for introducing new vulnerabilities. Instead of direct mitigation, these situations may call for alternative strategies such as detection, monitoring, or response. The Do Not Mitigate category underscores the importance of assessing the trade-offs between mitigation efforts and overall system integrity. This mitigation can be implemented through the following measures:
 
@@ -33,6 +40,7 @@ Negative Impact on Performance and Availability:
 ## Mitigates Techniques
 
 - [[T1480-execution_guardrails|T1480: Execution Guardrails]]
-    - [[T1480-execution_guardrails#^t1480001-environmental-keying|T1480.001: Environmental Keying]]
-    - [[T1480-execution_guardrails#^t1480002-mutual-exclusion|T1480.002: Mutual Exclusion]]
+- [[T1480-execution_guardrails|T1480: Execution Guardrails]]
+- [[T1480-execution_guardrails#^t1480001-environmental-keying|T1480.001: Environmental Keying]]
+- [[T1480-execution_guardrails#^t1480002-mutual-exclusion|T1480.002: Mutual Exclusion]]
 

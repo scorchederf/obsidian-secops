@@ -1,16 +1,35 @@
 ---
-id: T1538
-name: Cloud Service Dashboard
-created: 2019-08-30 18:11:24.582000+00:00
-modified: 2025-10-24 17:49:32.022000+00:00
-type: attack-pattern
-x_mitre_version: 1.5
-x_mitre_domains: enterprise-attack
+mitre_id: "T1538"
+mitre_name: "Cloud Service Dashboard"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--e49920b0-6c54-40c1-9571-73723653205f"
+mitre_created: "2019-08-30T18:11:24.582Z"
+mitre_modified: "2025-10-24T17:49:32.022Z"
+mitre_version: "1.5"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1538/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "IaaS"
+  - "SaaS"
+  - "Office Suite"
+  - "Identity Provider"
+mitre_tactic_ids:
+  - "TA0007"
 ---
+
+# T1538: Cloud Service Dashboard
 
 An adversary may use a cloud service dashboard GUI with stolen credentials to gain useful information from an operational cloud environment, such as specific services, resources, and features. For example, the GCP Command Center can be used to view all assets, review findings of potential security risks, and run additional queries, such as finding public IP addresses and open ports.(Citation: Google Command Center Dashboard)
 
 Depending on the configuration of the environment, an adversary may be able to enumerate more information via the graphical dashboard than an API. This also allows the adversary to gain information without manually making any API requests.
+
+## Tactics
+
+- [[TA0007-discovery|TA0007: Discovery]]
 
 ## Mitigations
 

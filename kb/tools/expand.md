@@ -1,11 +1,18 @@
 ---
-id: S0361
-name: Expand
-created: 2019-02-19 19:17:14.971000+00:00
-modified: 2025-04-25 14:45:29.018000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0361"
+mitre_name: "Expand"
+mitre_type: "tool"
+mitre_stix_id: "tool--ca656c25-44f1-471b-9d9f-e2a3bbb84973"
+mitre_created: "2019-02-19T19:17:14.971Z"
+mitre_modified: "2025-04-25T14:45:29.018Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0361/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Expand"
 ---
 
 # Expand
@@ -16,6 +23,6 @@ x_mitre_domains: enterprise-attack
 
 - [[T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 - [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-    - [[T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
+- [[T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 - [[T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
 

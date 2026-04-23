@@ -1,12 +1,19 @@
 ---
-id: M1044
-name: Restrict Library Loading
-created: 2019-06-11 17:00:01.740000+00:00
-modified: 2024-12-18 20:22:48.602000+00:00
-type: course-of-action
+mitre_id: "M1044"
+mitre_name: "Restrict Library Loading"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--e8242a33-481c-4891-af63-4cf3e4cf6aff"
+mitre_created: "2019-06-11T17:00:01.740Z"
+mitre_modified: "2024-12-18T20:22:48.602Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1044/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Restrict Library Loading
+# M1044: Restrict Library Loading
 
 Restricting library loading involves implementing security controls to ensure that only trusted and verified libraries (DLLs, shared objects, etc.) are loaded into processes. Adversaries often abuse Dynamic-Link Library (DLL) Injection, DLL Search Order Hijacking, or LD_PRELOAD mechanisms to execute malicious code by forcing the operating system to load untrusted libraries. This mitigation can be implemented through the following measures: 
 
@@ -57,7 +64,8 @@ Cross-Platform Solutions:
 ## Mitigates Techniques
 
 - [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-    - [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-    - [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
+- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
+- [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 

@@ -1,16 +1,43 @@
 ---
-id: T1556
-name: Modify Authentication Process
-created: 2020-02-11 19:01:56.887000+00:00
-modified: 2025-10-24 17:49:36.944000+00:00
-type: attack-pattern
-x_mitre_version: 2.6
-x_mitre_domains: enterprise-attack
+mitre_id: "T1556"
+mitre_name: "Modify Authentication Process"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--f4c1826f-a322-41cd-9557-562100848c84"
+mitre_created: "2020-02-11T19:01:56.887Z"
+mitre_modified: "2025-10-24T17:49:36.944Z"
+mitre_version: "2.6"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1556/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+  - "Linux"
+  - "macOS"
+  - "Network Devices"
+  - "IaaS"
+  - "SaaS"
+  - "Office Suite"
+  - "Identity Provider"
+mitre_tactic_ids:
+  - "TA0006"
+  - "TA0005"
+  - "TA0003"
 ---
 
-Adversaries may modify authentication mechanisms and processes to access user credentials or enable otherwise unwarranted access to accounts. The authentication process is handled by mechanisms, such as the Local Security Authentication Server (LSASS) process and the Security Accounts Manager (SAM) on Windows, pluggable authentication modules (PAM) on Unix-based systems, and authorization plugins on MacOS systems, responsible for gathering, storing, and validating credentials. By modifying an authentication process, an adversary may be able to authenticate to a service or system without using [Valid Accounts](https://attack.mitre.org/techniques/T1078).
+# T1556: Modify Authentication Process
+
+Adversaries may modify authentication mechanisms and processes to access user credentials or enable otherwise unwarranted access to accounts. The authentication process is handled by mechanisms, such as the Local Security Authentication Server (LSASS) process and the Security Accounts Manager (SAM) on Windows, pluggable authentication modules (PAM) on Unix-based systems, and authorization plugins on MacOS systems, responsible for gathering, storing, and validating credentials. By modifying an authentication process, an adversary may be able to authenticate to a service or system without using [[T1078-valid_accounts|T1078: Valid Accounts]].
 
 Adversaries may maliciously modify a part of this process to either reveal credentials or bypass authentication mechanisms. Compromised credentials or access may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop.
+
+## Tactics
+
+- [[TA0006-credential_access|TA0006: Credential Access]]
+- [[TA0005-defense_evasion|TA0005: Defense Evasion]]
+- [[TA0003-persistence|TA0003: Persistence]]
 
 ## Subtechniques
 
@@ -36,9 +63,9 @@ Adversaries can register malicious password filters to harvest credentials from 
 
 ^t1556003-pluggable-authentication-modules
 
-Adversaries may modify pluggable authentication modules (PAM) to access user credentials or enable otherwise unwarranted access to accounts. PAM is a modular system of configuration files, libraries, and executable files which guide authentication for many services. The most common authentication module is <code>pam_unix.so</code>, which retrieves, sets, and verifies account authentication information in <code>/etc/passwd</code> and <code>/etc/shadow</code>.(Citation: Apple PAM)(Citation: Man Pam_Unix)(Citation: Red Hat PAM)
+Adversaries may modify pluggable authentication modules (PAM) to access user credentials or enable otherwise unwarranted access to accounts. PAM is a modular system of configuration files, libraries, and executable files which guide authentication for many services. The most common authentication module is `pam_unix.so`, which retrieves, sets, and verifies account authentication information in `/etc/passwd` and `/etc/shadow`.(Citation: Apple PAM)(Citation: Man Pam_Unix)(Citation: Red Hat PAM)
 
-Adversaries may modify components of the PAM system to create backdoors. PAM components, such as <code>pam_unix.so</code>, can be patched to accept arbitrary adversary supplied values as legitimate credentials.(Citation: PAM Backdoor)
+Adversaries may modify components of the PAM system to create backdoors. PAM components, such as `pam_unix.so`, can be patched to accept arbitrary adversary supplied values as legitimate credentials.(Citation: PAM Backdoor)
 
 Malicious modifications to the PAM system may also be abused to steal credentials. Adversaries may infect PAM resources with code to harvest user credentials, since the values exchanged with PAM components may be plain-text since PAM does not store passwords.(Citation: PAM Creds)(Citation: Apple PAM)
 
@@ -46,26 +73,26 @@ Malicious modifications to the PAM system may also be abused to steal credential
 
 ^t1556004-network-device-authentication
 
-Adversaries may use [Patch System Image](https://attack.mitre.org/techniques/T1601/001) to hard code a password in the operating system, thus bypassing of native authentication mechanisms for local accounts on network devices.
+Adversaries may use [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]] to hard code a password in the operating system, thus bypassing of native authentication mechanisms for local accounts on network devices.
 
-[Modify System Image](https://attack.mitre.org/techniques/T1601) may include implanted code to the operating system for network devices to provide access for adversaries using a specific password.  The modification includes a specific password which is implanted in the operating system image via the patch.  Upon authentication attempts, the inserted code will first check to see if the user input is the password. If so, access is granted. Otherwise, the implanted code will pass the credentials on for verification of potentially valid credentials.(Citation: Mandiant - Synful Knock)
+[[T1601-modify_system_image|T1601: Modify System Image]] may include implanted code to the operating system for network devices to provide access for adversaries using a specific password.  The modification includes a specific password which is implanted in the operating system image via the patch.  Upon authentication attempts, the inserted code will first check to see if the user input is the password. If so, access is granted. Otherwise, the implanted code will pass the credentials on for verification of potentially valid credentials.(Citation: Mandiant - Synful Knock)
 
 ### T1556.005: Reversible Encryption
 
 ^t1556005-reversible-encryption
 
-An adversary may abuse Active Directory authentication encryption properties to gain access to credentials on Windows systems. The <code>AllowReversiblePasswordEncryption</code> property specifies whether reversible password encryption for an account is enabled or disabled. By default this property is disabled (instead storing user credentials as the output of one-way hashing functions) and should not be enabled unless legacy or other software require it.(Citation: store_pwd_rev_enc)
+An adversary may abuse Active Directory authentication encryption properties to gain access to credentials on Windows systems. The `AllowReversiblePasswordEncryption` property specifies whether reversible password encryption for an account is enabled or disabled. By default this property is disabled (instead storing user credentials as the output of one-way hashing functions) and should not be enabled unless legacy or other software require it.(Citation: store_pwd_rev_enc)
 
 If the property is enabled and/or a user changes their password after it is enabled, an adversary may be able to obtain the plaintext of passwords created/changed after the property was enabled. To decrypt the passwords, an adversary needs four components:
 
-1. Encrypted password (<code>G$RADIUSCHAP</code>) from the Active Directory user-structure <code>userParameters</code>
-2. 16 byte randomly-generated value (<code>G$RADIUSCHAPKEY</code>) also from <code>userParameters</code>
-3. Global LSA secret (<code>G$MSRADIUSCHAPKEY</code>)
-4. Static key hardcoded in the Remote Access Subauthentication DLL (<code>RASSFM.DLL</code>)
+1. Encrypted password (`G$RADIUSCHAP`) from the Active Directory user-structure `userParameters`
+2. 16 byte randomly-generated value (`G$RADIUSCHAPKEY`) also from `userParameters`
+3. Global LSA secret (`G$MSRADIUSCHAPKEY`)
+4. Static key hardcoded in the Remote Access Subauthentication DLL (`RASSFM.DLL`)
 
 With this information, an adversary may be able to reproduce the encryption key and subsequently decrypt the encrypted password value.(Citation: how_pwd_rev_enc_1)(Citation: how_pwd_rev_enc_2)
 
-An adversary may set this property at various scopes through Local Group Policy Editor, user properties, Fine-Grained Password Policy (FGPP), or via the ActiveDirectory [PowerShell](https://attack.mitre.org/techniques/T1059/001) module. For example, an adversary may implement and apply a FGPP to users or groups if the Domain Functional Level is set to "Windows Server 2008" or higher.(Citation: dump_pwd_dcsync) In PowerShell, an adversary may make associated changes to user settings using commands similar to <code>Set-ADUser -AllowReversiblePasswordEncryption $true</code>.
+An adversary may set this property at various scopes through Local Group Policy Editor, user properties, Fine-Grained Password Policy (FGPP), or via the ActiveDirectory [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]] module. For example, an adversary may implement and apply a FGPP to users or groups if the Domain Functional Level is set to "Windows Server 2008" or higher.(Citation: dump_pwd_dcsync) In PowerShell, an adversary may make associated changes to user settings using commands similar to `Set-ADUser -AllowReversiblePasswordEncryption $true`.
 
 ### T1556.006: Multi-Factor Authentication
 
@@ -73,7 +100,7 @@ An adversary may set this property at various scopes through Local Group Policy 
 
 Adversaries may disable or modify multi-factor authentication (MFA) mechanisms to enable persistent access to compromised accounts.
 
-Once adversaries have gained access to a network by either compromising an account lacking MFA or by employing an MFA bypass method such as [Multi-Factor Authentication Request Generation](https://attack.mitre.org/techniques/T1621), adversaries may leverage their access to modify or completely disable MFA defenses. This can be accomplished by abusing legitimate features, such as excluding users from Azure AD Conditional Access Policies, registering a new yet vulnerable/adversary-controlled MFA method, or by manually patching MFA programs and configuration files to bypass expected functionality.(Citation: Mandiant APT42)(Citation: Azure AD Conditional Access Exclusions)
+Once adversaries have gained access to a network by either compromising an account lacking MFA or by employing an MFA bypass method such as [[T1621-multi-factor_authentication_request_generation|T1621: Multi-Factor Authentication Request Generation]], adversaries may leverage their access to modify or completely disable MFA defenses. This can be accomplished by abusing legitimate features, such as excluding users from Azure AD Conditional Access Policies, registering a new yet vulnerable/adversary-controlled MFA method, or by manually patching MFA programs and configuration files to bypass expected functionality.(Citation: Mandiant APT42)(Citation: Azure AD Conditional Access Exclusions)
 
 For example, modifying the Windows hosts file (`C:\windows\system32\drivers\etc\hosts`) to redirect MFA calls to localhost instead of an MFA server may cause the MFA process to fail. If a "fail open" policy is in place, any otherwise successful authentication attempt may be granted access without enforcing MFA. (Citation: Russians Exploit Default MFA Protocol - CISA March 2022) 
 
@@ -115,7 +142,7 @@ Adversaries may disable or modify conditional access policies to enable persiste
 
 For example, in Entra ID, Okta, and JumpCloud, users can be denied access to applications based on their IP address, device enrollment status, and use of multi-factor authentication.(Citation: Microsoft Conditional Access)(Citation: JumpCloud Conditional Access Policies)(Citation: Okta Conditional Access Policies) In some cases, identity providers may also support the use of risk-based metrics to deny sign-ins based on a variety of indicators. In AWS and GCP, IAM policies can contain `condition` attributes that verify arbitrary constraints such as the source IP, the date the request was made, and the nature of the resources or regions being requested.(Citation: AWS IAM Conditions)(Citation: GCP IAM Conditions) These measures help to prevent compromised credentials from resulting in unauthorized access to data or resources, as well as limit user permissions to only those required. 
 
-By modifying conditional access policies, such as adding additional trusted IP ranges, removing [Multi-Factor Authentication](https://attack.mitre.org/techniques/T1556/006) requirements, or allowing additional [Unused/Unsupported Cloud Regions](https://attack.mitre.org/techniques/T1535), adversaries may be able to ensure persistent access to accounts and circumvent defensive measures.
+By modifying conditional access policies, such as adding additional trusted IP ranges, removing [[T1556-modify_authentication_process#^t1556006-multi-factor-authentication|T1556.006: Multi-Factor Authentication]] requirements, or allowing additional [[T1535-unused_unsupported_cloud_regions|T1535: Unused/Unsupported Cloud Regions]], adversaries may be able to ensure persistent access to accounts and circumvent defensive measures.
 
 ## Mitigations
 
@@ -128,6 +155,10 @@ By modifying conditional access policies, such as adding additional trusted IP r
 - [[M1028-operating_system_configuration|M1028: Operating System Configuration]]
 - [[M1032-multi-factor_authentication|M1032: Multi-factor Authentication]]
 - [[M1047-audit|M1047: Audit]]
+
+## Tools
+
+- [[silenttrinity|SILENTTRINITY]]
 
 ## Platforms
 

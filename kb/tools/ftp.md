@@ -1,11 +1,19 @@
 ---
-id: S0095
-name: ftp
-created: 2017-05-31 21:33:00.565000+00:00
-modified: 2025-06-04 16:11:23.752000+00:00
-type: tool
-x_mitre_version: 2.2
-x_mitre_domains: enterprise-attack
+mitre_id: "S0095"
+mitre_name: "ftp"
+mitre_type: "tool"
+mitre_stix_id: "tool--cf23bf4a-e003-4116-bbae-1ea6c558d565"
+mitre_created: "2017-05-31T21:33:00.565Z"
+mitre_modified: "2025-06-04T16:11:23.752Z"
+mitre_version: "2.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0095/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "ftp"
+  - "ftp.exe"
 ---
 
 # ftp
@@ -15,7 +23,7 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
-    - [[T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
+- [[T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 - [[T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
 

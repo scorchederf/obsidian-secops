@@ -1,16 +1,34 @@
 ---
-id: T1565
-name: Data Manipulation
-created: 2020-03-02 14:19:22.609000+00:00
-modified: 2025-10-24 17:49:13.111000+00:00
-type: attack-pattern
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "T1565"
+mitre_name: "Data Manipulation"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--ac9e6b22-11bf-45d7-9181-c1cb08360931"
+mitre_created: "2020-03-02T14:19:22.609Z"
+mitre_modified: "2025-10-24T17:49:13.111Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1565/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0040"
 ---
+
+# T1565: Data Manipulation
 
 Adversaries may insert, delete, or manipulate data in order to influence external outcomes or hide activity, thus threatening the integrity of the data.(Citation: Sygnia Elephant Beetle Jan 2022) By manipulating data, adversaries may attempt to affect a business process, organizational understanding, or decision making.
 
 The type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
+
+## Tactics
+
+- [[TA0040-impact|TA0040: Impact]]
 
 ## Subtechniques
 
@@ -36,7 +54,7 @@ Manipulation may be possible over a network connection or between system process
 
 Adversaries may modify systems in order to manipulate the data as it is accessed and displayed to an end user, thus threatening the integrity of the data.(Citation: FireEye APT38 Oct 2018)(Citation: DOJ Lazarus Sony 2018) By manipulating runtime data, adversaries may attempt to affect a business process, organizational understanding, and decision making.
 
-Adversaries may alter application binaries used to display data in order to cause runtime manipulations. Adversaries may also conduct [Change Default File Association](https://attack.mitre.org/techniques/T1546/001) and [Masquerading](https://attack.mitre.org/techniques/T1036) to cause a similar effect. The type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
+Adversaries may alter application binaries used to display data in order to cause runtime manipulations. Adversaries may also conduct [[T1546-event_triggered_execution#^t1546001-change-default-file-association|T1546.001: Change Default File Association]] and [[T1036-masquerading|T1036: Masquerading]] to cause a similar effect. The type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
 
 ## Mitigations
 

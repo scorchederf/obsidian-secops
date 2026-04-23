@@ -1,12 +1,27 @@
 ---
-id: T1667
-name: Email Bombing
-created: 2025-01-31 14:39:58.478000+00:00
-modified: 2025-04-15 19:59:03.350000+00:00
-type: attack-pattern
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "T1667"
+mitre_name: "Email Bombing"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--bed81616-3dde-4685-be6e-ba9820f9a7ed"
+mitre_created: "2025-01-31T14:39:58.478Z"
+mitre_modified: "2025-04-15T19:59:03.350Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1667/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "Office Suite"
+  - "Windows"
+  - "macOS"
+mitre_tactic_ids:
+  - "TA0040"
 ---
+
+# T1667: Email Bombing
 
 Adversaries may flood targeted email addresses with an overwhelming volume of messages. This may bury legitimate emails in a flood of spam and disrupt business operations.(Citation: sophos-bombing)(Citation: krebs-email-bombing)
 
@@ -14,8 +29,12 @@ An adversary may accomplish email bombing by leveraging an automated bot to regi
 
 By sending hundreds or thousands of e-mails in quick succession, adversaries may successfully divert attention away from and bury legitimate messages including security alerts, daily business processes like help desk tickets and client correspondence, or ongoing scams.(Citation: hhs-email-bombing) This behavior can also be used as a tool of harassment.(Citation: krebs-email-bombing)
 
-This behavior may be a precursor for [Spearphishing Voice](https://attack.mitre.org/techniques/T1566/004). For example, an adversary may email bomb a target and then follow up with a phone call to fraudulently offer assistance. This social engineering may lead to the use of [Remote Access Software](https://attack.mitre.org/techniques/T1663) to steal credentials, deploy ransomware, conduct [Financial Theft](https://attack.mitre.org/techniques/T1657)(Citation: sophos-bombing), or engage in other malicious activity.(Citation: rapid7-email-bombing)
+This behavior may be a precursor for [[T1566-phishing#^t1566004-spearphishing-voice|T1566.004: Spearphishing Voice]]. For example, an adversary may email bomb a target and then follow up with a phone call to fraudulently offer assistance. This social engineering may lead to the use of [Remote Access Software](https://attack.mitre.org/techniques/T1663) to steal credentials, deploy ransomware, conduct [[T1657-financial_theft|T1657: Financial Theft]](Citation: sophos-bombing), or engage in other malicious activity.(Citation: rapid7-email-bombing)
 
+
+## Tactics
+
+- [[TA0040-impact|TA0040: Impact]]
 
 ## Mitigations
 

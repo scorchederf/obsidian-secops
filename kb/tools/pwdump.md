@@ -1,11 +1,18 @@
 ---
-id: S0006
-name: pwdump
-created: 2017-05-31 21:32:13.051000+00:00
-modified: 2025-04-25 14:45:24.744000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0006"
+mitre_name: "pwdump"
+mitre_type: "tool"
+mitre_stix_id: "tool--9de2308e-7bed-43a3-8e58-f194b3586700"
+mitre_created: "2017-05-31T21:32:13.051Z"
+mitre_modified: "2025-04-25T14:45:24.744Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0006/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "pwdump"
 ---
 
 # pwdump
@@ -15,5 +22,5 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-    - [[T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 

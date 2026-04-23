@@ -1,11 +1,18 @@
 ---
-id: S0119
-name: Cachedump
-created: 2017-05-31 21:33:10.197000+00:00
-modified: 2025-04-25 14:45:28.653000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0119"
+mitre_name: "Cachedump"
+mitre_type: "tool"
+mitre_stix_id: "tool--c9cd7ec9-40b7-49db-80be-1399eddd9c52"
+mitre_created: "2017-05-31T21:33:10.197Z"
+mitre_modified: "2025-04-25T14:45:28.653Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0119/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Cachedump"
 ---
 
 # Cachedump
@@ -15,5 +22,5 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-    - [[T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
+- [[T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
 

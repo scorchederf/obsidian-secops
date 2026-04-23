@@ -1,11 +1,16 @@
 ---
-id: S0122
-name: Pass-The-Hash Toolkit
-created: 2017-05-31 21:33:11.426000+00:00
-modified: 2025-04-25 14:45:25.272000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S0122"
+mitre_name: "Pass-The-Hash Toolkit"
+mitre_type: "tool"
+mitre_stix_id: "tool--a52edc76-328d-4596-85e7-d56ef5a9eb69"
+mitre_created: "2017-05-31T21:33:11.426Z"
+mitre_modified: "2025-04-25T14:45:25.272Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0122/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
 # Pass-The-Hash Toolkit
@@ -15,5 +20,5 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-    - [[T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
+- [[T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 

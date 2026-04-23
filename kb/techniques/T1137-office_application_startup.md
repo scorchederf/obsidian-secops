@@ -1,16 +1,33 @@
 ---
-id: T1137
-name: Office Application Startup
-created: 2017-12-14 16:46:06.044000+00:00
-modified: 2025-10-24 17:48:34.614000+00:00
-type: attack-pattern
-x_mitre_version: 1.4
-x_mitre_domains: enterprise-attack
+mitre_id: "T1137"
+mitre_name: "Office Application Startup"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--2c4d4e92-0ccf-4a97-b54c-86d662988a53"
+mitre_created: "2017-12-14T16:46:06.044Z"
+mitre_modified: "2025-10-24T17:48:34.614Z"
+mitre_version: "1.4"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1137/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+  - "Office Suite"
+mitre_tactic_ids:
+  - "TA0003"
 ---
+
+# T1137: Office Application Startup
 
 Adversaries may leverage Microsoft Office-based applications for persistence between startups. Microsoft Office is a fairly common application suite on Windows-based operating systems within an enterprise network. There are multiple mechanisms that can be used with Office for persistence when an Office-based application is started; this can include the use of Office Template Macros and add-ins.
 
 A variety of features have been discovered in Outlook that can be abused to obtain persistence, such as Outlook rules, forms, and Home Page.(Citation: SensePost Ruler GitHub) These persistence mechanisms can work within Outlook or be used through Office 365.(Citation: TechNet O365 Outlook Rules)
+
+## Tactics
+
+- [[TA0003-persistence|TA0003: Persistence]]
 
 ## Subtechniques
 
@@ -23,12 +40,12 @@ Adversaries may abuse Microsoft Office templates to obtain persistence on a comp
 Office Visual Basic for Applications (VBA) macros (Citation: MSDN VBA in Office) can be inserted into the base template and used to execute code when the respective Office application starts in order to obtain persistence. Examples for both Word and Excel have been discovered and published. By default, Word has a Normal.dotm template created that can be modified to include a malicious macro. Excel does not have a template file created by default, but one can be added that will automatically be loaded.(Citation: enigma0x3 normal.dotm)(Citation: Hexacorn Office Template Macros) Shared templates may also be stored and pulled from remote locations.(Citation: GlobalDotName Jun 2019) 
 
 Word Normal.dotm location:<br>
-<code>C:\Users\&lt;username&gt;\AppData\Roaming\Microsoft\Templates\Normal.dotm</code>
+`C:\Users\&lt;username&gt;\AppData\Roaming\Microsoft\Templates\Normal.dotm`
 
 Excel Personal.xlsb location:<br>
-<code>C:\Users\&lt;username&gt;\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB</code>
+`C:\Users\&lt;username&gt;\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB`
 
-Adversaries may also change the location of the base template to point to their own by hijacking the application's search order, e.g. Word 2016 will first look for Normal.dotm under <code>C:\Program Files (x86)\Microsoft Office\root\Office16\</code>, or by modifying the GlobalDotName registry key. By modifying the GlobalDotName registry key an adversary can specify an arbitrary location, file name, and file extension to use for the template that will be loaded on application startup. To abuse GlobalDotName, adversaries may first need to register the template as a trusted document or place it in a trusted location.(Citation: GlobalDotName Jun 2019) 
+Adversaries may also change the location of the base template to point to their own by hijacking the application's search order, e.g. Word 2016 will first look for Normal.dotm under `C:\Program Files (x86)\Microsoft Office\root\Office16\`, or by modifying the GlobalDotName registry key. By modifying the GlobalDotName registry key an adversary can specify an arbitrary location, file name, and file extension to use for the template that will be loaded on application startup. To abuse GlobalDotName, adversaries may first need to register the template as a trusted document or place it in a trusted location.(Citation: GlobalDotName Jun 2019) 
 
 An adversary may need to enable macros to execute unrestricted depending on the system or enterprise security policy on use of macros.
 
@@ -40,8 +57,8 @@ Adversaries may abuse the Microsoft Office "Office Test" Registry key to obtain 
 
 There exist user and global Registry keys for the Office Test feature, such as:
 
-* <code>HKEY_CURRENT_USER\Software\Microsoft\Office test\Special\Perf</code>
-* <code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office test\Special\Perf</code>
+* `HKEY_CURRENT_USER\Software\Microsoft\Office test\Special\Perf`
+* `HKEY_LOCAL_MACHINE\Software\Microsoft\Office test\Special\Perf`
 
 Adversaries may add this Registry key and specify a malicious DLL that will be executed whenever an Office application, such as Word or Excel, is started.
 

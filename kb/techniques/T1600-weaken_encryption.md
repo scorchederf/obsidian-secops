@@ -1,18 +1,34 @@
 ---
-id: T1600
-name: Weaken Encryption
-created: 2020-10-19 18:47:08.759000+00:00
-modified: 2025-10-24 17:48:30.124000+00:00
-type: attack-pattern
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "T1600"
+mitre_name: "Weaken Encryption"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--1f9012ef-1e10-4e48-915e-e03563435fe8"
+mitre_created: "2020-10-19T18:47:08.759Z"
+mitre_modified: "2025-10-24T17:48:30.124Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1600/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Network Devices"
+mitre_tactic_ids:
+  - "TA0005"
 ---
+
+# T1600: Weaken Encryption
 
 Adversaries may compromise a network device’s encryption capability in order to bypass encryption that would otherwise protect data communications. (Citation: Cisco Synful Knock Evolution)
 
 Encryption can be used to protect transmitted network traffic to maintain its confidentiality (protect against unauthorized disclosure) and integrity (protect against unauthorized changes). Encryption ciphers are used to convert a plaintext message to ciphertext and can be computationally intensive to decipher without the associated decryption key. Typically, longer keys increase the cost of cryptanalysis, or decryption without the key.
 
-Adversaries can compromise and manipulate devices that perform encryption of network traffic. For example, through behaviors such as [Modify System Image](https://attack.mitre.org/techniques/T1601), [Reduce Key Space](https://attack.mitre.org/techniques/T1600/001), and [Disable Crypto Hardware](https://attack.mitre.org/techniques/T1600/002), an adversary can negatively effect and/or eliminate a device’s ability to securely encrypt network traffic. This poses a greater risk of unauthorized disclosure and may help facilitate data manipulation, Credential Access, or Collection efforts. (Citation: Cisco Blog Legacy Device Attacks)
+Adversaries can compromise and manipulate devices that perform encryption of network traffic. For example, through behaviors such as [[T1601-modify_system_image|T1601: Modify System Image]], [[T1600-weaken_encryption#^t1600001-reduce-key-space|T1600.001: Reduce Key Space]], and [[T1600-weaken_encryption#^t1600002-disable-crypto-hardware|T1600.002: Disable Crypto Hardware]], an adversary can negatively effect and/or eliminate a device’s ability to securely encrypt network traffic. This poses a greater risk of unauthorized disclosure and may help facilitate data manipulation, Credential Access, or Collection efforts. (Citation: Cisco Blog Legacy Device Attacks)
+
+## Tactics
+
+- [[TA0005-defense_evasion|TA0005: Defense Evasion]]
 
 ## Subtechniques
 
@@ -24,7 +40,7 @@ Adversaries may reduce the level of effort required to decrypt data transmitted 
 
 Adversaries can weaken the encryption software on a compromised network device by reducing the key size used by the software to convert plaintext to ciphertext (e.g., from hundreds or thousands of bytes to just a couple of bytes). As a result, adversaries dramatically reduce the amount of effort needed to decrypt the protected information without the key.
 
-Adversaries may modify the key size used and other encryption parameters using specialized commands in a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) introduced to the system through [Modify System Image](https://attack.mitre.org/techniques/T1601) to change the configuration of the device. (Citation: Cisco Blog Legacy Device Attacks)
+Adversaries may modify the key size used and other encryption parameters using specialized commands in a [[T1059-command_and_scripting_interpreter#^t1059008-network-device-cli|T1059.008: Network Device CLI]] introduced to the system through [[T1601-modify_system_image|T1601: Modify System Image]] to change the configuration of the device. (Citation: Cisco Blog Legacy Device Attacks)
 
 ### T1600.002: Disable Crypto Hardware
 
@@ -32,7 +48,7 @@ Adversaries may modify the key size used and other encryption parameters using s
 
 Adversaries disable a network device’s dedicated hardware encryption, which may enable them to leverage weaknesses in software encryption in order to reduce the effort involved in collecting, manipulating, and exfiltrating transmitted data.
 
-Many network devices such as routers, switches, and firewalls, perform encryption on network traffic to secure transmission across networks. Often, these devices are equipped with special, dedicated encryption hardware to greatly increase the speed of the encryption process as well as to prevent malicious tampering. When an adversary takes control of such a device, they may disable the dedicated hardware, for example, through use of [Modify System Image](https://attack.mitre.org/techniques/T1601), forcing the use of software to perform encryption on general processors. This is typically used in conjunction with attacks to weaken the strength of the cipher in software (e.g., [Reduce Key Space](https://attack.mitre.org/techniques/T1600/001)). (Citation: Cisco Blog Legacy Device Attacks)
+Many network devices such as routers, switches, and firewalls, perform encryption on network traffic to secure transmission across networks. Often, these devices are equipped with special, dedicated encryption hardware to greatly increase the speed of the encryption process as well as to prevent malicious tampering. When an adversary takes control of such a device, they may disable the dedicated hardware, for example, through use of [[T1601-modify_system_image|T1601: Modify System Image]], forcing the use of software to perform encryption on general processors. This is typically used in conjunction with attacks to weaken the strength of the cipher in software (e.g., [[T1600-weaken_encryption#^t1600001-reduce-key-space|T1600.001: Reduce Key Space]]). (Citation: Cisco Blog Legacy Device Attacks)
 
 ## Platforms
 

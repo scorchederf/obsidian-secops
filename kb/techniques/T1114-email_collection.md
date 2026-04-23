@@ -1,14 +1,33 @@
 ---
-id: T1114
-name: Email Collection
-created: 2017-05-31 21:31:25.454000+00:00
-modified: 2025-10-24 17:48:26.463000+00:00
-type: attack-pattern
-x_mitre_version: 2.6
-x_mitre_domains: enterprise-attack
+mitre_id: "T1114"
+mitre_name: "Email Collection"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--1608f3e1-598a-42f4-a01a-2e252e81728f"
+mitre_created: "2017-05-31T21:31:25.454Z"
+mitre_modified: "2025-10-24T17:48:26.463Z"
+mitre_version: "2.6"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1114/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+  - "macOS"
+  - "Linux"
+  - "Office Suite"
+mitre_tactic_ids:
+  - "TA0009"
 ---
 
+# T1114: Email Collection
+
 Adversaries may target user email to collect sensitive information. Emails may contain sensitive data, including trade secrets or personal information, that can prove valuable to adversaries. Emails may also contain details of ongoing incident response operations, which may allow adversaries to adjust their techniques in order to maintain persistence or evade defenses.(Citation: TrustedSec OOB Communications)(Citation: CISA AA20-352A 2021) Adversaries can collect or forward email from mail servers or clients. 
+
+## Tactics
+
+- [[TA0009-collection|TA0009: Collection]]
 
 ## Subtechniques
 
@@ -24,7 +43,7 @@ Outlook stores data locally in offline data files with an extension of .ost. Out
 
 ^t1114002-remote-email-collection
 
-Adversaries may target an Exchange server, Office 365, or Google Workspace to collect sensitive information. Adversaries may leverage a user's credentials and interact directly with the Exchange server to acquire information from within a network. Adversaries may also access externally facing Exchange services, Office 365, or Google Workspace to access email using credentials or access tokens. Tools such as [MailSniper](https://attack.mitre.org/software/S0413) can be used to automate searches for specific keywords.
+Adversaries may target an Exchange server, Office 365, or Google Workspace to collect sensitive information. Adversaries may leverage a user's credentials and interact directly with the Exchange server to acquire information from within a network. Adversaries may also access externally facing Exchange services, Office 365, or Google Workspace to access email using credentials or access tokens. Tools such as [[mailsniper|MailSniper]] can be used to automate searches for specific keywords.
 
 ### T1114.003: Email Forwarding Rule
 

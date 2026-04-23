@@ -1,12 +1,24 @@
 ---
-id: T1677
-name: Poisoned Pipeline Execution
-created: 2025-05-22 20:01:16.611000+00:00
-modified: 2025-10-21 02:38:29.636000+00:00
-type: attack-pattern
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "T1677"
+mitre_name: "Poisoned Pipeline Execution"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--7655ac3b-dfde-49c5-a967-242856174434"
+mitre_created: "2025-05-22T20:01:16.611Z"
+mitre_modified: "2025-10-21T02:38:29.636Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1677/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "SaaS"
+mitre_tactic_ids:
+  - "TA0002"
 ---
+
+# T1677: Poisoned Pipeline Execution
 
 Adversaries may manipulate continuous integration / continuous development (CI/CD) processes by injecting malicious code into the build process. There are several mechanisms for poisoning pipelines: 
 
@@ -14,7 +26,11 @@ Adversaries may manipulate continuous integration / continuous development (CI/C
 * In an <b>Indirect Pipeline Execution</b> scenario, the threat actor injects malicious code into files referenced by the CI configuration file. These may include makefiles, scripts, unit tests, and linters.(Citation: OWASP CICD-SEC-4)
 * In a <b>Public Pipeline Execution</b> scenario, the threat actor does not have direct access to the repository but instead creates a malicious pull request from a fork that triggers a part of the CI/CD pipeline. For example, in GitHub Actions, the `pull_request_target` trigger allows workflows running from forked repositories to access secrets.  If this trigger is combined with an explicit pull request checkout and a location for a threat actor to insert malicious code (e.g., an `npm build` command), a threat actor may be able to leak pipeline credentials.(Citation: Unit 42 Palo Alto GitHub Actions Supply Chain Attack 2025)(Citation: GitHub Security Lab GitHub Actions Security 2021) Similarly, threat actors may craft pull requests with malicious inputs (such as branch names) if the build pipeline treats those inputs as trusted.(Citation: Wiz Ultralytics AI Library Hijack 2024)(Citation: Synactiv Hijacking GitHub Runners)(Citation: GitHub Security Labs GitHub Actions Security Part 2 2021) Finally, if a pipeline leverages a self-hosted runner, a threat actor may be able to execute arbitrary code on a host inside the organization’s network.(Citation: John Stawinski PyTorch Supply Chain Attack 2024)
 
-By poisoning CI/CD pipelines, threat actors may be able to gain access to credentials, laterally move to additional hosts, or input malicious components to be shipped further down the pipeline (i.e., [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195)). 
+By poisoning CI/CD pipelines, threat actors may be able to gain access to credentials, laterally move to additional hosts, or input malicious components to be shipped further down the pipeline (i.e., [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]). 
+
+## Tactics
+
+- [[TA0002-execution|TA0002: Execution]]
 
 ## Mitigations
 

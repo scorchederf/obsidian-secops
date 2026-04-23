@@ -1,0 +1,22 @@
+---
+mitre_id: "DC0084"
+mitre_name: "Active Directory Credential Request"
+mitre_type: "x-mitre-data-component"
+mitre_stix_id: "x-mitre-data-component--02d090b6-8157-48da-98a2-517f7edd49fc"
+mitre_created: "2021-10-20T15:05:19.274Z"
+mitre_modified: "2025-11-12T22:03:39.105Z"
+mitre_version: "2.0"
+mitre_domains:
+  - "enterprise-attack"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+---
+
+# DC0084: Active Directory Credential Request
+
+Requests for authentication credentials via Kerberos or other methods like NTLM and LDAP queries. Examples:
+
+- Kerberos TGT and Service Tickets (Event IDs 4768, 4769)
+- NTLM Authentication Events
+- LDAP Bind Requests.
+

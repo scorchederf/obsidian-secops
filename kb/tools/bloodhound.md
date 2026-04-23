@@ -1,11 +1,18 @@
 ---
-id: S0521
-name: BloodHound
-created: 2020-10-28 12:51:29.358000+00:00
-modified: 2025-03-12 20:27:03.654000+00:00
-type: tool
-x_mitre_version: 1.7
-x_mitre_domains: enterprise-attack
+mitre_id: "S0521"
+mitre_name: "BloodHound"
+mitre_type: "tool"
+mitre_stix_id: "tool--066b057c-944e-4cfc-b654-e3dfba04b926"
+mitre_created: "2020-10-28T12:51:29.358Z"
+mitre_modified: "2025-03-12T20:27:03.654Z"
+mitre_version: "1.7"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0521/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "BloodHound"
 ---
 
 # BloodHound
@@ -17,13 +24,13 @@ x_mitre_domains: enterprise-attack
 - [[T1018-remote_system_discovery|T1018: Remote System Discovery]]
 - [[T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-    - [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 - [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-    - [[T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
-    - [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
+- [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 - [[T1087-account_discovery|T1087: Account Discovery]]
-    - [[T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
-    - [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+- [[T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
+- [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 - [[T1106-native_api|T1106: Native API]]
 - [[T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 - [[T1560-archive_collected_data|T1560: Archive Collected Data]]

@@ -1,14 +1,38 @@
 ---
-id: T1552
-name: Unsecured Credentials
-created: 2020-02-04 12:47:23.631000+00:00
-modified: 2025-10-24 17:48:42.785000+00:00
-type: attack-pattern
-x_mitre_version: 1.5
-x_mitre_domains: enterprise-attack
+mitre_id: "T1552"
+mitre_name: "Unsecured Credentials"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--435dfb86-2697-4867-85b5-2fef496c0517"
+mitre_created: "2020-02-04T12:47:23.631Z"
+mitre_modified: "2025-10-24T17:48:42.785Z"
+mitre_version: "1.5"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1552/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+  - "SaaS"
+  - "IaaS"
+  - "Linux"
+  - "macOS"
+  - "Containers"
+  - "Network Devices"
+  - "Office Suite"
+  - "Identity Provider"
+mitre_tactic_ids:
+  - "TA0006"
 ---
 
-Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [Shell History](https://attack.mitre.org/techniques/T1552/003)), operating system or application-specific repositories (e.g. [Credentials in Registry](https://attack.mitre.org/techniques/T1552/002)),  or other specialized files/artifacts (e.g. [Private Keys](https://attack.mitre.org/techniques/T1552/004)).(Citation: Brining MimiKatz to Unix)
+# T1552: Unsecured Credentials
+
+Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [[T1552-unsecured_credentials#^t1552003-shell-history|T1552.003: Shell History]]), operating system or application-specific repositories (e.g. [[T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]),  or other specialized files/artifacts (e.g. [[T1552-unsecured_credentials#^t1552004-private-keys|T1552.004: Private Keys]]).(Citation: Brining MimiKatz to Unix)
+
+## Tactics
+
+- [[TA0006-credential_access|TA0006: Credential Access]]
 
 ## Subtechniques
 
@@ -18,7 +42,7 @@ Adversaries may search compromised systems to find and obtain insecurely stored 
 
 Adversaries may search local file systems and remote file shares for files containing insecurely stored credentials. These can be files created by users to store their own credentials, shared credential stores for a group of individuals, configuration files containing passwords for a system or service, or source code/binary files containing embedded passwords.
 
-It is possible to extract passwords from backups or saved virtual machines through [OS Credential Dumping](https://attack.mitre.org/techniques/T1003).(Citation: CG 2014) Passwords may also be obtained from Group Policy Preferences stored on the Windows Domain Controller.(Citation: SRD GPP)
+It is possible to extract passwords from backups or saved virtual machines through [[T1003-os_credential_dumping|T1003: OS Credential Dumping]].(Citation: CG 2014) Passwords may also be obtained from Group Policy Preferences stored on the Windows Domain Controller.(Citation: SRD GPP)
 
 In cloud and/or containerized environments, authenticated user and service account credentials are often stored in local configuration and credential files.(Citation: Unit 42 Hildegard Malware) They may also be found as parameters to deployment commands in container logs.(Citation: Unit 42 Unsecured Docker Daemons) In some cases, these files can be copied and reused on another machine or the contents can be read and then used to authenticate without needing to copy any files.(Citation: Specter Ops - Cloud Credential Storage)
 
@@ -30,8 +54,8 @@ Adversaries may search the Registry on compromised systems for insecurely stored
 
 Example commands to find Registry keys related to password information: (Citation: Pentestlab Stored Credentials)
 
-* Local Machine Hive: <code>reg query HKLM /f password /t REG_SZ /s</code>
-* Current User Hive: <code>reg query HKCU /f password /t REG_SZ /s</code>
+* Local Machine Hive: `reg query HKLM /f password /t REG_SZ /s`
+* Current User Hive: `reg query HKCU /f password /t REG_SZ /s`
 
 ### T1552.003: Shell History
 
@@ -51,13 +75,13 @@ Users often type usernames and passwords on the command-line as parameters to pr
 
 Adversaries may search for private key certificate files on compromised systems for insecurely stored credentials. Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures.(Citation: Wikipedia Public Key Crypto) Common key and certificate file extensions include: .key, .pgp, .gpg, .ppk., .p12, .pem, .pfx, .cer, .p7b, .asc. 
 
-Adversaries may also look in common key directories, such as <code>~/.ssh</code> for SSH keys on * nix-based systems or <code>C:&#92;Users&#92;(username)&#92;.ssh&#92;</code> on Windows. Adversary tools may also search compromised systems for file extensions relating to cryptographic keys and certificates.(Citation: Kaspersky Careto)(Citation: Palo Alto Prince of Persia)
+Adversaries may also look in common key directories, such as `~/.ssh` for SSH keys on * nix-based systems or `C:&#92;Users&#92;(username)&#92;.ssh&#92;` on Windows. Adversary tools may also search compromised systems for file extensions relating to cryptographic keys and certificates.(Citation: Kaspersky Careto)(Citation: Palo Alto Prince of Persia)
 
 When a device is registered to Entra ID, a device key and a transport key are generated and used to verify the device’s identity.(Citation: Microsoft Primary Refresh Token) An adversary with access to the device may be able to export the keys in order to impersonate the device.(Citation: AADInternals Azure AD Device Identities)
 
-On network devices, private keys may be exported via [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `crypto pki export`.(Citation: cisco_deploy_rsa_keys) 
+On network devices, private keys may be exported via [[T1059-command_and_scripting_interpreter#^t1059008-network-device-cli|T1059.008: Network Device CLI]] commands such as `crypto pki export`.(Citation: cisco_deploy_rsa_keys) 
 
-Some private keys require a password or passphrase for operation, so an adversary may also use [Input Capture](https://attack.mitre.org/techniques/T1056) for keylogging or attempt to [Brute Force](https://attack.mitre.org/techniques/T1110) the passphrase off-line. These private keys can be used to authenticate to [Remote Services](https://attack.mitre.org/techniques/T1021) like SSH or for use in decrypting other collected files such as email.
+Some private keys require a password or passphrase for operation, so an adversary may also use [[T1056-input_capture|T1056: Input Capture]] for keylogging or attempt to [[T1110-brute_force|T1110: Brute Force]] the passphrase off-line. These private keys can be used to authenticate to [[T1021-remote_services|T1021: Remote Services]] like SSH or for use in decrypting other collected files such as email.
 
 ### T1552.005: Cloud Instance Metadata API
 
@@ -69,7 +93,7 @@ Most cloud service providers support a Cloud Instance Metadata API which is a se
 
 If adversaries have a presence on the running virtual instance, they may query the Instance Metadata API directly to identify credentials that grant access to additional resources. Additionally, adversaries may exploit a Server-Side Request Forgery (SSRF) vulnerability in a public facing web proxy that allows them to gain access to the sensitive information via a request to the Instance Metadata API.(Citation: RedLock Instance Metadata API 2018)
 
-The de facto standard across cloud service providers is to host the Instance Metadata API at <code>http[:]//169.254.169.254</code>.
+The de facto standard across cloud service providers is to host the Instance Metadata API at `http[:]//169.254.169.254`.
 
 
 ### T1552.006: Group Policy Preferences
@@ -82,11 +106,11 @@ These group policies are stored in SYSVOL on a domain controller. This means tha
 
 The following tools and scripts can be used to gather and decrypt the password file from Group Policy Preference XML files:
 
-* Metasploit’s post exploitation module: <code>post/windows/gather/credentials/gpp</code>
+* Metasploit’s post exploitation module: `post/windows/gather/credentials/gpp`
 * Get-GPPPassword(Citation: Obscuresecurity Get-GPPPassword)
 * gpprefdecrypt.py
 
-On the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: <code>dir /s * .xml</code>
+On the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: `dir /s * .xml`
 
 
 ### T1552.007: Container API
@@ -103,7 +127,7 @@ An adversary may access the Docker API to collect logs that contain credentials 
 
 Adversaries may directly collect unsecured credentials stored or passed through user communication services. Credentials may be sent and stored in user chat communication applications such as email, chat services like Slack or Teams, collaboration tools like Jira or Trello, and any other services that support user communication. Users may share various forms of credentials (such as usernames and passwords, API keys, or authentication tokens) on private or public corporate internal communications channels.
 
-Rather than accessing the stored chat logs (i.e., [Credentials In Files](https://attack.mitre.org/techniques/T1552/001)), adversaries may directly access credentials within these services on the user endpoint, through servers hosting the services, or through administrator portals for cloud hosted services. Adversaries may also compromise integration tools like Slack Workflows to automatically search through messages to extract user credentials. These credentials may then be abused to perform follow-on activities such as lateral movement or privilege escalation (Citation: Slack Security Risks).
+Rather than accessing the stored chat logs (i.e., [[T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]), adversaries may directly access credentials within these services on the user endpoint, through servers hosting the services, or through administrator portals for cloud hosted services. Adversaries may also compromise integration tools like Slack Workflows to automatically search through messages to extract user credentials. These credentials may then be abused to perform follow-on activities such as lateral movement or privilege escalation (Citation: Slack Security Risks).
 
 ## Mitigations
 
@@ -118,6 +142,11 @@ Rather than accessing the stored chat logs (i.e., [Credentials In Files](https:/
 - [[M1041-encrypt_sensitive_information|M1041: Encrypt Sensitive Information]]
 - [[M1047-audit|M1047: Audit]]
 - [[M1051-update_software|M1051: Update Software]]
+
+## Tools
+
+- [[pacu|Pacu]]
+- [[nppspy|NPPSPY]]
 
 ## Platforms
 

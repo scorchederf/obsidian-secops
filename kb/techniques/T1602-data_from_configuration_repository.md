@@ -1,16 +1,32 @@
 ---
-id: T1602
-name: Data from Configuration Repository
-created: 2020-10-19 23:46:13.931000+00:00
-modified: 2025-10-24 17:48:22.396000+00:00
-type: attack-pattern
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "T1602"
+mitre_name: "Data from Configuration Repository"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--0ad7bc5c-235a-4048-944b-3b286676cb74"
+mitre_created: "2020-10-19T23:46:13.931Z"
+mitre_modified: "2025-10-24T17:48:22.396Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1602/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Network Devices"
+mitre_tactic_ids:
+  - "TA0009"
 ---
+
+# T1602: Data from Configuration Repository
 
 Adversaries may collect data related to managed devices from configuration repositories. Configuration repositories are used by management systems in order to configure, manage, and control data on remote systems. Configuration repositories may also facilitate remote access and administration of devices.
 
 Adversaries may target these repositories in order to collect large quantities of sensitive system administration data. Data from configuration repositories may be exposed by various protocols and software and can store a wide variety of data, much of which may align with adversary Discovery objectives.(Citation: US-CERT-TA18-106A)(Citation: US-CERT TA17-156A SNMP Abuse 2017)
+
+## Tactics
+
+- [[TA0009-collection|TA0009: Collection]]
 
 ## Subtechniques
 

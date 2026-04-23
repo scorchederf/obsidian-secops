@@ -1,20 +1,43 @@
 ---
-id: T1048
-name: Exfiltration Over Alternative Protocol
-created: 2017-05-31 21:30:44.720000+00:00
-modified: 2025-10-24 17:49:10.460000+00:00
-type: attack-pattern
-x_mitre_version: 1.6
-x_mitre_domains: enterprise-attack
+mitre_id: "T1048"
+mitre_name: "Exfiltration Over Alternative Protocol"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--a19e86f8-1c0a-4fea-8407-23b73d615776"
+mitre_created: "2017-05-31T21:30:44.720Z"
+mitre_modified: "2025-10-24T17:49:10.460Z"
+mitre_version: "1.6"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1048/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "ESXi"
+  - "IaaS"
+  - "Linux"
+  - "macOS"
+  - "Network Devices"
+  - "Office Suite"
+  - "SaaS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0010"
 ---
+
+# T1048: Exfiltration Over Alternative Protocol
 
 Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.  
 
 Alternate protocols include FTP, SMTP, HTTP/S, DNS, SMB, or any other network protocol not being used as the main command and control channel. Adversaries may also opt to encrypt and/or obfuscate these alternate channels. 
 
-[Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048) can be done using various common operating system utilities such as [Net](https://attack.mitre.org/software/S0039)/SMB or FTP.(Citation: Palo Alto OilRig Oct 2016) On macOS and Linux <code>curl</code> may be used to invoke protocols such as HTTP/S or FTP/S to exfiltrate data from a system.(Citation: 20 macOS Common Tools and Techniques)
+[[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]] can be done using various common operating system utilities such as [[net|Net]]/SMB or FTP.(Citation: Palo Alto OilRig Oct 2016) On macOS and Linux `curl` may be used to invoke protocols such as HTTP/S or FTP/S to exfiltrate data from a system.(Citation: 20 macOS Common Tools and Techniques)
 
-Many IaaS and SaaS platforms (such as Microsoft Exchange, Microsoft SharePoint, GitHub, and AWS S3) support the direct download of files, emails, source code, and other sensitive information via the web console or [Cloud API](https://attack.mitre.org/techniques/T1059/009).
+Many IaaS and SaaS platforms (such as Microsoft Exchange, Microsoft SharePoint, GitHub, and AWS S3) support the direct download of files, emails, source code, and other sensitive information via the web console or [[T1059-command_and_scripting_interpreter#^t1059009-cloud-api|T1059.009: Cloud API]].
+
+## Tactics
+
+- [[TA0010-exfiltration|TA0010: Exfiltration]]
 
 ## Subtechniques
 
@@ -54,6 +77,10 @@ Adversaries may opt to obfuscate this data, without the use of encryption, withi
 - [[M1031-network_intrusion_prevention|M1031: Network Intrusion Prevention]]
 - [[M1037-filter_network_traffic|M1037: Filter Network Traffic]]
 - [[M1057-data_loss_prevention|M1057: Data Loss Prevention]]
+
+## Tools
+
+- [[aadinternals|AADInternals]]
 
 ## Platforms
 

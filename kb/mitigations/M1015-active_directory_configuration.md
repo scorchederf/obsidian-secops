@@ -1,12 +1,19 @@
 ---
-id: M1015
-name: Active Directory Configuration
-created: 2019-06-06 16:39:58.291000+00:00
-modified: 2024-12-10 15:57:59.336000+00:00
-type: course-of-action
+mitre_id: "M1015"
+mitre_name: "Active Directory Configuration"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--e3388c78-2a8d-47c2-8422-c1398b324462"
+mitre_created: "2019-06-06T16:39:58.291Z"
+mitre_modified: "2024-12-10T15:57:59.336Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1015/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Active Directory Configuration
+# M1015: Active Directory Configuration
 
 Implement robust Active Directory (AD) configurations using group policies to secure user accounts, control access, and minimize the attack surface. AD configurations enable centralized control over account settings, logon policies, and permissions, reducing the risk of unauthorized access and lateral movement within the network. This mitigation can be implemented through the following measures:
 
@@ -44,20 +51,25 @@ Authentication Silos:
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-    - [[T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
-    - [[T1003-os_credential_dumping#^t1003006-dcsync|T1003.006: DCSync]]
+- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
+- [[T1003-os_credential_dumping#^t1003006-dcsync|T1003.006: DCSync]]
 - [[T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
-    - [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+- [[T1078-valid_accounts|T1078: Valid Accounts]]
+- [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 - [[T1134-access_token_manipulation|T1134: Access Token Manipulation]]
-    - [[T1134-access_token_manipulation#^t1134005-sid-history-injection|T1134.005: SID-History Injection]]
+- [[T1134-access_token_manipulation#^t1134005-sid-history-injection|T1134.005: SID-History Injection]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-    - [[T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
+- [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
+- [[T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 - [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-    - [[T1552-unsecured_credentials#^t1552006-group-policy-preferences|T1552.006: Group Policy Preferences]]
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+- [[T1552-unsecured_credentials#^t1552006-group-policy-preferences|T1552.006: Group Policy Preferences]]
 - [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
-    - [[T1558-steal_or_forge_kerberos_tickets#^t1558001-golden-ticket|T1558.001: Golden Ticket]]
+- [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+- [[T1558-steal_or_forge_kerberos_tickets#^t1558001-golden-ticket|T1558.001: Golden Ticket]]
 - [[T1606-forge_web_credentials|T1606: Forge Web Credentials]]
-    - [[T1606-forge_web_credentials#^t1606002-saml-tokens|T1606.002: SAML Tokens]]
+- [[T1606-forge_web_credentials#^t1606002-saml-tokens|T1606.002: SAML Tokens]]
 - [[T1649-steal_or_forge_authentication_certificates|T1649: Steal or Forge Authentication Certificates]]
 

@@ -1,16 +1,32 @@
 ---
-id: T1591
-name: Gather Victim Org Information
-created: 2020-10-02 16:27:02.339000+00:00
-modified: 2025-10-24 17:49:06.846000+00:00
-type: attack-pattern
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "T1591"
+mitre_name: "Gather Victim Org Information"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23"
+mitre_created: "2020-10-02T16:27:02.339Z"
+mitre_modified: "2025-10-24T17:49:06.846Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1591/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "PRE"
+mitre_tactic_ids:
+  - "TA0043"
 ---
+
+# T1591: Gather Victim Org Information
 
 Adversaries may gather information about the victim's organization that can be used during targeting. Information about an organization may include a variety of details, including the names of divisions/departments, specifics of business operations, as well as the roles and responsibilities of key employees.
 
-Adversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about an organization may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak)(Citation: SEC EDGAR Search) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).
+Adversaries may gather this information in various ways, such as direct elicitation via [[T1598-phishing_for_information|T1598: Phishing for Information]]. Information about an organization may also be exposed to adversaries via online or other accessible data sets (ex: [[T1593-search_open_websites_domains#^t1593001-social-media|T1593.001: Social Media]] or [[T1594-search_victim-owned_websites|T1594: Search Victim-Owned Websites]]).(Citation: ThreatPost Broadvoice Leak)(Citation: SEC EDGAR Search) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [[T1598-phishing_for_information|T1598: Phishing for Information]] or [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]), establishing operational resources (ex: [[T1585-establish_accounts|T1585: Establish Accounts]] or [[T1586-compromise_accounts|T1586: Compromise Accounts]]), and/or initial access (ex: [[T1566-phishing|T1566: Phishing]] or [[T1199-trusted_relationship|T1199: Trusted Relationship]]).
+
+## Tactics
+
+- [[TA0043-reconnaissance|TA0043: Reconnaissance]]
 
 ## Subtechniques
 
@@ -20,7 +36,7 @@ Adversaries may gather this information in various ways, such as direct elicitat
 
 Adversaries may gather the victim's physical location(s) that can be used during targeting. Information about physical locations of a target organization may include a variety of details, including where key resources and infrastructure are housed. Physical locations may also indicate what legal jurisdiction and/or authorities the victim operates within.
 
-Adversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Physical locations of a target organization may also be exposed to adversaries via online or other accessible data sets (ex: [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594) or [Social Media](https://attack.mitre.org/techniques/T1593/001)).(Citation: ThreatPost Broadvoice Leak)(Citation: SEC EDGAR Search) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Hardware Additions](https://attack.mitre.org/techniques/T1200)).
+Adversaries may gather this information in various ways, such as direct elicitation via [[T1598-phishing_for_information|T1598: Phishing for Information]]. Physical locations of a target organization may also be exposed to adversaries via online or other accessible data sets (ex: [[T1594-search_victim-owned_websites|T1594: Search Victim-Owned Websites]] or [[T1593-search_open_websites_domains#^t1593001-social-media|T1593.001: Social Media]]).(Citation: ThreatPost Broadvoice Leak)(Citation: SEC EDGAR Search) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [[T1598-phishing_for_information|T1598: Phishing for Information]] or [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]), establishing operational resources (ex: [[T1587-develop_capabilities|T1587: Develop Capabilities]] or [[T1588-obtain_capabilities|T1588: Obtain Capabilities]]), and/or initial access (ex: [[T1566-phishing|T1566: Phishing]] or [[T1200-hardware_additions|T1200: Hardware Additions]]).
 
 ### T1591.002: Business Relationships
 
@@ -28,7 +44,7 @@ Adversaries may gather this information in various ways, such as direct elicitat
 
 Adversaries may gather information about the victim's business relationships that can be used during targeting. Information about an organization’s business relationships may include a variety of details, including second or third-party organizations/domains (ex: managed service providers, contractors, etc.) that have connected (and potentially elevated) network access. This information may also reveal supply chains and shipment paths for the victim’s hardware and software resources.
 
-Adversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about business relationships may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195), [Drive-by Compromise](https://attack.mitre.org/techniques/T1189), or [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).
+Adversaries may gather this information in various ways, such as direct elicitation via [[T1598-phishing_for_information|T1598: Phishing for Information]]. Information about business relationships may also be exposed to adversaries via online or other accessible data sets (ex: [[T1593-search_open_websites_domains#^t1593001-social-media|T1593.001: Social Media]] or [[T1594-search_victim-owned_websites|T1594: Search Victim-Owned Websites]]).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [[T1598-phishing_for_information|T1598: Phishing for Information]] or [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]), establishing operational resources (ex: [[T1585-establish_accounts|T1585: Establish Accounts]] or [[T1586-compromise_accounts|T1586: Compromise Accounts]]), and/or initial access (ex: [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]], [[T1189-drive-by_compromise|T1189: Drive-by Compromise]], or [[T1199-trusted_relationship|T1199: Trusted Relationship]]).
 
 ### T1591.003: Identify Business Tempo
 
@@ -36,7 +52,7 @@ Adversaries may gather this information in various ways, such as direct elicitat
 
 Adversaries may gather information about the victim's business tempo that can be used during targeting. Information about an organization’s business tempo may include a variety of details, including operational hours/days of the week. This information may also reveal times/dates of purchases and shipments of the victim’s hardware and software resources.
 
-Adversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about business tempo may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199))
+Adversaries may gather this information in various ways, such as direct elicitation via [[T1598-phishing_for_information|T1598: Phishing for Information]]. Information about business tempo may also be exposed to adversaries via online or other accessible data sets (ex: [[T1593-search_open_websites_domains#^t1593001-social-media|T1593.001: Social Media]] or [[T1594-search_victim-owned_websites|T1594: Search Victim-Owned Websites]]).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [[T1598-phishing_for_information|T1598: Phishing for Information]] or [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]), establishing operational resources (ex: [[T1585-establish_accounts|T1585: Establish Accounts]] or [[T1586-compromise_accounts|T1586: Compromise Accounts]]), and/or initial access (ex: [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]] or [[T1199-trusted_relationship|T1199: Trusted Relationship]])
 
 ### T1591.004: Identify Roles
 
@@ -44,7 +60,7 @@ Adversaries may gather this information in various ways, such as direct elicitat
 
 Adversaries may gather information about identities and roles within the victim organization that can be used during targeting. Information about business roles may reveal a variety of targetable details, including identifiable information for key personnel as well as what data/resources they have access to.
 
-Adversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about business roles may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Phishing for Information](https://attack.mitre.org/techniques/T1598) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Establish Accounts](https://attack.mitre.org/techniques/T1585) or [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566)).
+Adversaries may gather this information in various ways, such as direct elicitation via [[T1598-phishing_for_information|T1598: Phishing for Information]]. Information about business roles may also be exposed to adversaries via online or other accessible data sets (ex: [[T1593-search_open_websites_domains#^t1593001-social-media|T1593.001: Social Media]] or [[T1594-search_victim-owned_websites|T1594: Search Victim-Owned Websites]]).(Citation: ThreatPost Broadvoice Leak) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [[T1598-phishing_for_information|T1598: Phishing for Information]] or [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]), establishing operational resources (ex: [[T1585-establish_accounts|T1585: Establish Accounts]] or [[T1586-compromise_accounts|T1586: Compromise Accounts]]), and/or initial access (ex: [[T1566-phishing|T1566: Phishing]]).
 
 ## Mitigations
 

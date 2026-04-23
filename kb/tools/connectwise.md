@@ -1,11 +1,19 @@
 ---
-id: S0591
-name: ConnectWise
-created: 2021-03-18 13:39:27.676000+00:00
-modified: 2025-10-13 20:02:57.828000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0591"
+mitre_name: "ConnectWise"
+mitre_type: "tool"
+mitre_stix_id: "tool--842976c7-f9c8-41b2-8371-41dc64fbe261"
+mitre_created: "2021-03-18T13:39:27.676Z"
+mitre_modified: "2025-10-13T20:02:57.828Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0591/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "ConnectWise"
+  - "ScreenConnect"
 ---
 
 # ConnectWise
@@ -15,7 +23,7 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-    - [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 - [[T1113-screen_capture|T1113: Screen Capture]]
 - [[T1125-video_capture|T1125: Video Capture]]
 

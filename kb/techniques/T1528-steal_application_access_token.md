@@ -1,12 +1,28 @@
 ---
-id: T1528
-name: Steal Application Access Token
-created: 2019-09-04 15:54:25.684000+00:00
-modified: 2025-10-24 17:49:04.660000+00:00
-type: attack-pattern
-x_mitre_version: 1.5
-x_mitre_domains: enterprise-attack
+mitre_id: "T1528"
+mitre_name: "Steal Application Access Token"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--890c9858-598c-401d-a4d5-c67ebcdd703a"
+mitre_created: "2019-09-04T15:54:25.684Z"
+mitre_modified: "2025-10-24T17:49:04.660Z"
+mitre_version: "1.5"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1528/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "SaaS"
+  - "Containers"
+  - "IaaS"
+  - "Office Suite"
+  - "Identity Provider"
+mitre_tactic_ids:
+  - "TA0006"
 ---
+
+# T1528: Steal Application Access Token
 
 Adversaries can steal application access tokens as a means of acquiring credentials to access remote systems and resources.
 
@@ -20,9 +36,13 @@ In Azure, an adversary who compromises a resource with an attached Managed Ident
 
 Token theft can also occur through social engineering, in which case user action may be required to grant access. OAuth is one commonly implemented framework that issues tokens to users for access to systems. An application desiring access to cloud-based services or protected APIs can gain entry using OAuth 2.0 through a variety of authorization protocols. An example commonly-used sequence is Microsoft's Authorization Code Grant flow.(Citation: Microsoft Identity Platform Protocols May 2019)(Citation: Microsoft - OAuth Code Authorization flow - June 2019) An OAuth access token enables a third-party application to interact with resources containing user data in the ways requested by the application without obtaining user credentials. 
  
-Adversaries can leverage OAuth authorization by constructing a malicious application designed to be granted access to resources with the target user's OAuth token.(Citation: Amnesty OAuth Phishing Attacks, August 2019)(Citation: Trend Micro Pawn Storm OAuth 2017) The adversary will need to complete registration of their application with the authorization server, for example Microsoft Identity Platform using Azure Portal, the Visual Studio IDE, the command-line interface, PowerShell, or REST API calls.(Citation: Microsoft - Azure AD App Registration - May 2019) Then, they can send a [Spearphishing Link](https://attack.mitre.org/techniques/T1566/002) to the target user to entice them to grant access to the application. Once the OAuth access token is granted, the application can gain potentially long-term access to features of the user account through [Application Access Token](https://attack.mitre.org/techniques/T1550/001).(Citation: Microsoft - Azure AD Identity Tokens - Aug 2019)
+Adversaries can leverage OAuth authorization by constructing a malicious application designed to be granted access to resources with the target user's OAuth token.(Citation: Amnesty OAuth Phishing Attacks, August 2019)(Citation: Trend Micro Pawn Storm OAuth 2017) The adversary will need to complete registration of their application with the authorization server, for example Microsoft Identity Platform using Azure Portal, the Visual Studio IDE, the command-line interface, PowerShell, or REST API calls.(Citation: Microsoft - Azure AD App Registration - May 2019) Then, they can send a [[T1566-phishing#^t1566002-spearphishing-link|T1566.002: Spearphishing Link]] to the target user to entice them to grant access to the application. Once the OAuth access token is granted, the application can gain potentially long-term access to features of the user account through [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]].(Citation: Microsoft - Azure AD Identity Tokens - Aug 2019)
 
 Application access tokens may function within a limited lifetime, limiting how long an adversary can utilize the stolen token. However, in some cases, adversaries can also steal application refresh tokens(Citation: Auth0 Understanding Refresh Tokens), allowing them to obtain new access tokens without prompting the user.  
+
+## Tactics
+
+- [[TA0006-credential_access|TA0006: Credential Access]]
 
 ## Mitigations
 
@@ -30,6 +50,11 @@ Application access tokens may function within a limited lifetime, limiting how l
 - [[M1018-user_account_management|M1018: User Account Management]]
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]
 - [[M1047-audit|M1047: Audit]]
+
+## Tools
+
+- [[aadinternals|AADInternals]]
+- [[peirates|Peirates]]
 
 ## Platforms
 

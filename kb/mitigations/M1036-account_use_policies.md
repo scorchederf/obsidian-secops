@@ -1,12 +1,19 @@
 ---
-id: M1036
-name: Account Use Policies
-created: 2019-06-11 16:32:21.854000+00:00
-modified: 2024-12-10 15:55:53.913000+00:00
-type: course-of-action
+mitre_id: "M1036"
+mitre_name: "Account Use Policies"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--f9f9e6ef-bc0a-41ad-ba11-0924e5e84c4c"
+mitre_created: "2019-06-11T16:32:21.854Z"
+mitre_modified: "2024-12-10T15:55:53.913Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1036/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Account Use Policies
+# M1036: Account Use Policies
 
 Account Use Policies help mitigate unauthorized access by configuring and enforcing rules that govern how and when accounts can be used. These policies include enforcing account lockout mechanisms, restricting login times, and setting inactivity timeouts. Proper configuration of these policies reduces the risk of brute-force attacks, credential theft, and unauthorized access by limiting the opportunities for malicious actors to exploit accounts. This mitigation can be implemented through the following measures:
 
@@ -46,13 +53,16 @@ Account Expiration and Deactivation:
 ## Mitigates Techniques
 
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
-    - [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+- [[T1078-valid_accounts|T1078: Valid Accounts]]
+- [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 - [[T1110-brute_force|T1110: Brute Force]]
-    - [[T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
-    - [[T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
-    - [[T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
+- [[T1110-brute_force|T1110: Brute Force]]
+- [[T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
+- [[T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
+- [[T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-    - [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
+- [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
+- [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
 - [[T1621-multi-factor_authentication_request_generation|T1621: Multi-Factor Authentication Request Generation]]
 - [[T1648-serverless_execution|T1648: Serverless Execution]]
 

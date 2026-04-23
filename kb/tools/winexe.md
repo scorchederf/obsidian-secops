@@ -1,11 +1,18 @@
 ---
-id: S0191
-name: Winexe
-created: 2018-04-18 17:59:24.739000+00:00
-modified: 2024-09-04 21:09:10.255000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S0191"
+mitre_name: "Winexe"
+mitre_type: "tool"
+mitre_stix_id: "tool--96fd6cc4-a693-4118-83ec-619e5352d07d"
+mitre_created: "2018-04-18T17:59:24.739Z"
+mitre_modified: "2024-09-04T21:09:10.255Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0191/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Winexe"
 ---
 
 # Winexe
@@ -15,5 +22,5 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1569-system_services|T1569: System Services]]
-    - [[T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
+- [[T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 

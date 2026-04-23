@@ -1,11 +1,18 @@
 ---
-id: S0104
-name: netstat
-created: 2017-05-31 21:33:04.545000+00:00
-modified: 2024-11-27 21:54:49.561000+00:00
-type: tool
-x_mitre_version: 1.4
-x_mitre_domains: enterprise-attack
+mitre_id: "S0104"
+mitre_name: "netstat"
+mitre_type: "tool"
+mitre_stix_id: "tool--4664b683-f578-434f-919b-1c1aad2a1111"
+mitre_created: "2017-05-31T21:33:04.545Z"
+mitre_modified: "2024-11-27T21:54:49.561Z"
+mitre_version: "1.4"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0104/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "netstat"
 ---
 
 # netstat

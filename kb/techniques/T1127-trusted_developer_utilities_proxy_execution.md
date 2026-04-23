@@ -1,16 +1,32 @@
 ---
-id: T1127
-name: Trusted Developer Utilities Proxy Execution
-created: 2017-05-31 21:31:39.262000+00:00
-modified: 2025-10-24 17:49:40.055000+00:00
-type: attack-pattern
-x_mitre_version: 1.3
-x_mitre_domains: enterprise-attack
+mitre_id: "T1127"
+mitre_name: "Trusted Developer Utilities Proxy Execution"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--ff25900d-76d5-449b-a351-8824e62fc81b"
+mitre_created: "2017-05-31T21:31:39.262Z"
+mitre_modified: "2025-10-24T17:49:40.055Z"
+mitre_version: "1.3"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1127/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0005"
 ---
+
+# T1127: Trusted Developer Utilities Proxy Execution
 
 Adversaries may take advantage of trusted developer utilities to proxy execution of malicious payloads. There are many utilities used for software development related tasks that can be used to execute code in various forms to assist in development, debugging, and reverse engineering.(Citation: engima0x3 DNX Bypass)(Citation: engima0x3 RCSI Bypass)(Citation: Exploit Monday WinDbg)(Citation: LOLBAS Tracker) These utilities may often be signed with legitimate certificates that allow them to execute on a system and proxy execution of malicious code through a trusted process that effectively bypasses application control solutions.
 
-Smart App Control is a feature of Windows that blocks applications it considers potentially malicious from running by verifying unsigned applications against a known safe list from a Microsoft cloud service before executing them.(Citation: Microsoft Smart App Control) However, adversaries may leverage "reputation hijacking" to abuse an operating system’s trust of safe, signed applications that support the execution of arbitrary code. By leveraging [Trusted Developer Utilities Proxy Execution](https://attack.mitre.org/techniques/T1127) to run their malicious code, adversaries may bypass Smart App Control protections.(Citation: Elastic Security Labs)
+Smart App Control is a feature of Windows that blocks applications it considers potentially malicious from running by verifying unsigned applications against a known safe list from a Microsoft cloud service before executing them.(Citation: Microsoft Smart App Control) However, adversaries may leverage "reputation hijacking" to abuse an operating system’s trust of safe, signed applications that support the execution of arbitrary code. By leveraging [[T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]] to run their malicious code, adversaries may bypass Smart App Control protections.(Citation: Elastic Security Labs)
+
+## Tactics
+
+- [[TA0005-defense_evasion|TA0005: Defense Evasion]]
 
 ## Subtechniques
 
@@ -30,11 +46,11 @@ Adversaries may use ClickOnce applications (.appref-ms and .application files) t
 
 Because ClickOnce applications receive only limited permissions, they do not require administrative permissions to install.(Citation: Microsoft Learn ClickOnce) As such, adversaries may abuse ClickOnce to proxy execution of malicious code without needing to escalate privileges.
 
-ClickOnce may be abused in a number of ways. For example, an adversary may rely on [User Execution](https://attack.mitre.org/techniques/T1204). When a user visits a malicious website, the .NET malware is disguised as legitimate software and a ClickOnce popup is displayed for installation.(Citation: NetSPI ClickOnce)
+ClickOnce may be abused in a number of ways. For example, an adversary may rely on [[T1204-user_execution|T1204: User Execution]]. When a user visits a malicious website, the .NET malware is disguised as legitimate software and a ClickOnce popup is displayed for installation.(Citation: NetSPI ClickOnce)
 
-Adversaries may also abuse ClickOnce to execute malware via a [Rundll32](https://attack.mitre.org/techniques/T1218/011) script using the command `rundll32.exe dfshim.dll,ShOpenVerbApplication1`.(Citation: LOLBAS /Dfsvc.exe)
+Adversaries may also abuse ClickOnce to execute malware via a [[T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]] script using the command `rundll32.exe dfshim.dll,ShOpenVerbApplication1`.(Citation: LOLBAS /Dfsvc.exe)
 
-Additionally, an adversary can move the ClickOnce application file to a remote user’s startup folder for continued malicious code deployment (i.e., [Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001)).(Citation: Burke/CISA ClickOnce BlackHat)(Citation: Burke/CISA ClickOnce Paper)
+Additionally, an adversary can move the ClickOnce application file to a remote user’s startup folder for continued malicious code deployment (i.e., [[T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]).(Citation: Burke/CISA ClickOnce BlackHat)(Citation: Burke/CISA ClickOnce Paper)
 
 ### T1127.003: JamPlus
 

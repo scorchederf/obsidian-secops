@@ -1,21 +1,41 @@
 ---
-id: T1659
-name: Content Injection
-created: 2023-09-01 21:03:13.406000+00:00
-modified: 2025-04-15 22:10:29.343000+00:00
-type: attack-pattern
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "T1659"
+mitre_name: "Content Injection"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--43c9bc06-715b-42db-972f-52d25c09a20c"
+mitre_created: "2023-09-01T21:03:13.406Z"
+mitre_modified: "2025-04-15T22:10:29.343Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1659/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0001"
+  - "TA0011"
 ---
 
-Adversaries may gain access and continuously communicate with victims by injecting malicious content into systems through online network traffic. Rather than luring victims to malicious payloads hosted on a compromised website (i.e., [Drive-by Target](https://attack.mitre.org/techniques/T1608/004) followed by [Drive-by Compromise](https://attack.mitre.org/techniques/T1189)), adversaries may initially access victims through compromised data-transfer channels where they can manipulate traffic and/or inject their own content. These compromised online network channels may also be used to deliver additional payloads (i.e., [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) and other data to already compromised systems.(Citation: ESET MoustachedBouncer)
+# T1659: Content Injection
+
+Adversaries may gain access and continuously communicate with victims by injecting malicious content into systems through online network traffic. Rather than luring victims to malicious payloads hosted on a compromised website (i.e., [[T1608-stage_capabilities#^t1608004-drive-by-target|T1608.004: Drive-by Target]] followed by [[T1189-drive-by_compromise|T1189: Drive-by Compromise]]), adversaries may initially access victims through compromised data-transfer channels where they can manipulate traffic and/or inject their own content. These compromised online network channels may also be used to deliver additional payloads (i.e., [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]) and other data to already compromised systems.(Citation: ESET MoustachedBouncer)
 
 Adversaries may inject content to victim systems in various ways, including:
 
-* From the middle, where the adversary is in-between legitimate online client-server communications (**Note:** this is similar but distinct from [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557), which describes AiTM activity solely within an enterprise environment) (Citation: Kaspersky Encyclopedia MiTM)
+* From the middle, where the adversary is in-between legitimate online client-server communications (**Note:** this is similar but distinct from [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]], which describes AiTM activity solely within an enterprise environment) (Citation: Kaspersky Encyclopedia MiTM)
 * From the side, where malicious content is injected and races to the client as a fake response to requests of a legitimate online server (Citation: Kaspersky ManOnTheSide)
 
 Content injection is often the result of compromised upstream communication channels, for example at the level of an internet service provider (ISP) as is the case with "lawful interception."(Citation: Kaspersky ManOnTheSide)(Citation: ESET MoustachedBouncer)(Citation: EFF China GitHub Attack)
+
+## Tactics
+
+- [[TA0001-initial_access|TA0001: Initial Access]]
+- [[TA0011-command_and_control|TA0011: Command and Control]]
 
 ## Mitigations
 

@@ -1,18 +1,36 @@
 ---
-id: T1652
-name: Device Driver Discovery
-created: 2023-03-28 20:14:49.087000+00:00
-modified: 2025-04-15 22:17:22.391000+00:00
-type: attack-pattern
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "T1652"
+mitre_name: "Device Driver Discovery"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--215d9700-5881-48b8-8265-6449dbb7195d"
+mitre_created: "2023-03-28T20:14:49.087Z"
+mitre_modified: "2025-04-15T22:17:22.391Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1652/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0007"
 ---
 
-Adversaries may attempt to enumerate local device drivers on a victim host. Information about device drivers may highlight various insights that shape follow-on behaviors, such as the function/purpose of the host, present security tools (i.e. [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001)) or other defenses (e.g., [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497)), as well as potential exploitable vulnerabilities (e.g., [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068)).
+# T1652: Device Driver Discovery
 
-Many OS utilities may provide information about local device drivers, such as `driverquery.exe` and the `EnumDeviceDrivers()` API function on Windows.(Citation: Microsoft Driverquery)(Citation: Microsoft EnumDeviceDrivers) Information about device drivers (as well as associated services, i.e., [System Service Discovery](https://attack.mitre.org/techniques/T1007)) may also be available in the Registry.(Citation: Microsoft Registry Drivers)
+Adversaries may attempt to enumerate local device drivers on a victim host. Information about device drivers may highlight various insights that shape follow-on behaviors, such as the function/purpose of the host, present security tools (i.e. [[T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]) or other defenses (e.g., [[T1497-virtualization_sandbox_evasion|T1497: Virtualization/Sandbox Evasion]]), as well as potential exploitable vulnerabilities (e.g., [[T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]).
+
+Many OS utilities may provide information about local device drivers, such as `driverquery.exe` and the `EnumDeviceDrivers()` API function on Windows.(Citation: Microsoft Driverquery)(Citation: Microsoft EnumDeviceDrivers) Information about device drivers (as well as associated services, i.e., [[T1007-system_service_discovery|T1007: System Service Discovery]]) may also be available in the Registry.(Citation: Microsoft Registry Drivers)
 
 On Linux/macOS, device drivers (in the form of kernel modules) may be visible within `/dev` or using utilities such as `lsmod` and `modinfo`.(Citation: Linux Kernel Programming)(Citation: lsmod man)(Citation: modinfo man)
+
+## Tactics
+
+- [[TA0007-discovery|TA0007: Discovery]]
 
 ## Platforms
 

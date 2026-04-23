@@ -1,12 +1,19 @@
 ---
-id: M1025
-name: Privileged Process Integrity
-created: 2019-06-06 21:08:58.465000+00:00
-modified: 2024-12-18 18:51:02.792000+00:00
-type: course-of-action
+mitre_id: "M1025"
+mitre_name: "Privileged Process Integrity"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--72dade3e-1cba-4182-b3b3-a77ca52f02a1"
+mitre_created: "2019-06-06T21:08:58.465Z"
+mitre_modified: "2024-12-18T18:51:02.792Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1025/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Privileged Process Integrity
+# M1025: Privileged Process Integrity
 
 Privileged Process Integrity focuses on defending highly privileged processes (e.g., system services, antivirus, or authentication processes) from tampering, injection, or compromise by adversaries. These processes often interact with critical components, making them prime targets for techniques like code injection, privilege escalation, and process manipulation. This mitigation can be implemented through the following measures:
 
@@ -67,11 +74,13 @@ Kernel Protection:
 ## Mitigates Techniques
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-    - [[T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
+- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 - [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-    - [[T1547-boot_or_logon_autostart_execution#^t1547002-authentication-package|T1547.002: Authentication Package]]
-    - [[T1547-boot_or_logon_autostart_execution#^t1547005-security-support-provider|T1547.005: Security Support Provider]]
-    - [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547002-authentication-package|T1547.002: Authentication Package]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547005-security-support-provider|T1547.005: Security Support Provider]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 - [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
-    - [[T1556-modify_authentication_process#^t1556001-domain-controller-authentication|T1556.001: Domain Controller Authentication]]
+- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
+- [[T1556-modify_authentication_process#^t1556001-domain-controller-authentication|T1556.001: Domain Controller Authentication]]
 

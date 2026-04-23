@@ -1,11 +1,18 @@
 ---
-id: S0552
-name: AdFind
-created: 2020-12-28 18:35:50.244000+00:00
-modified: 2024-09-25 15:21:53.462000+00:00
-type: tool
-x_mitre_version: 1.5
-x_mitre_domains: enterprise-attack
+mitre_id: "S0552"
+mitre_name: "AdFind"
+mitre_type: "tool"
+mitre_stix_id: "tool--f59508a6-3615-47c3-b493-6676e1a39a87"
+mitre_created: "2020-12-28T18:35:50.244Z"
+mitre_modified: "2024-09-25T15:21:53.462Z"
+mitre_version: "1.5"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0552/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "AdFind"
 ---
 
 # AdFind
@@ -17,8 +24,8 @@ x_mitre_domains: enterprise-attack
 - [[T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
 - [[T1018-remote_system_discovery|T1018: Remote System Discovery]]
 - [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-    - [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 - [[T1087-account_discovery|T1087: Account Discovery]]
-    - [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+- [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 - [[T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 

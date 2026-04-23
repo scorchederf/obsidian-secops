@@ -1,12 +1,28 @@
 ---
-id: T1499
-name: Endpoint Denial of Service
-created: 2019-04-18 11:00:55.862000+00:00
-modified: 2025-10-24 17:49:22.088000+00:00
-type: attack-pattern
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "T1499"
+mitre_name: "Endpoint Denial of Service"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--c675646d-e204-4aa8-978d-e3d6d65885c4"
+mitre_created: "2019-04-18T11:00:55.862Z"
+mitre_modified: "2025-10-24T17:49:22.088Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1499/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+  - "Linux"
+  - "macOS"
+  - "Containers"
+  - "IaaS"
+mitre_tactic_ids:
+  - "TA0040"
 ---
+
+# T1499: Endpoint Denial of Service
 
 Adversaries may perform Endpoint Denial of Service (DoS) attacks to degrade or block the availability of services to users. Endpoint DoS can be performed by exhausting the system resources those services are hosted on or exploiting the system to cause a persistent crash condition. Example services include websites, email services, DNS, and web-based applications. Adversaries have been observed conducting DoS attacks for political purposes(Citation: FireEye OpPoisonedHandover February 2016) and to support other malicious activities, including distraction(Citation: FSISAC FraudNetDoS September 2012), hacktivism, and extortion.(Citation: Symantec DDoS October 2014)
 
@@ -20,8 +36,12 @@ Botnets are commonly used to conduct DDoS attacks against networks and services.
 
 In cases where traffic manipulation is used, there may be points in the global network (such as high traffic gateway routers) where packets can be altered and cause legitimate clients to execute code that directs network packets toward a target in high volume. This type of capability was previously used for the purposes of web censorship where client HTTP traffic was modified to include a reference to JavaScript that generated the DDoS code to overwhelm target web servers.(Citation: ArsTechnica Great Firewall of China)
 
-For attacks attempting to saturate the providing network, see [Network Denial of Service](https://attack.mitre.org/techniques/T1498).
+For attacks attempting to saturate the providing network, see [[T1498-network_denial_of_service|T1498: Network Denial of Service]].
 
+
+## Tactics
+
+- [[TA0040-impact|TA0040: Impact]]
 
 ## Subtechniques
 
@@ -57,7 +77,7 @@ Adversaries may target resource intensive features of applications to cause a de
 
 Adversaries may exploit software vulnerabilities that can cause an application or system to crash and deny availability to users. (Citation: Sucuri BIND9 August 2015) Some systems may automatically restart critical applications and services when crashes occur, but they can likely be re-exploited to cause a persistent denial of service (DoS) condition.
 
-Adversaries may exploit known or zero-day vulnerabilities to crash applications and/or systems, which may also lead to dependent applications and/or systems to be in a DoS condition. Crashed or restarted applications or systems may also have other effects such as [Data Destruction](https://attack.mitre.org/techniques/T1485), [Firmware Corruption](https://attack.mitre.org/techniques/T1495), [Service Stop](https://attack.mitre.org/techniques/T1489) etc. which may further cause a DoS condition and deny availability to critical information, applications and/or systems. 
+Adversaries may exploit known or zero-day vulnerabilities to crash applications and/or systems, which may also lead to dependent applications and/or systems to be in a DoS condition. Crashed or restarted applications or systems may also have other effects such as [[T1485-data_destruction|T1485: Data Destruction]], [[T1495-firmware_corruption|T1495: Firmware Corruption]], [[T1489-service_stop|T1489: Service Stop]] etc. which may further cause a DoS condition and deny availability to critical information, applications and/or systems. 
 
 ## Mitigations
 

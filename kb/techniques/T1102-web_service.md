@@ -1,16 +1,35 @@
 ---
-id: T1102
-name: Web Service
-created: 2017-05-31 21:31:13.915000+00:00
-modified: 2025-10-24 17:49:02.831000+00:00
-type: attack-pattern
-x_mitre_version: 1.3
-x_mitre_domains: enterprise-attack
+mitre_id: "T1102"
+mitre_name: "Web Service"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665"
+mitre_created: "2017-05-31T21:31:13.915Z"
+mitre_modified: "2025-10-24T17:49:02.831Z"
+mitre_version: "1.3"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1102/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "ESXi"
+  - "Linux"
+  - "Windows"
+  - "macOS"
+mitre_tactic_ids:
+  - "TA0011"
 ---
+
+# T1102: Web Service
 
 Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system. Popular websites, cloud services, and social media acting as a mechanism for C2 may give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google, Microsoft, or Twitter, makes it easier for adversaries to hide in expected noise.(Citation: Broadcom BirdyClient Microsoft Graph API 2024) Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection.
 
 Use of Web services may also protect back-end C2 infrastructure from discovery through malware binary analysis while also enabling operational resiliency (since this infrastructure may be dynamically changed).
+
+## Tactics
+
+- [[TA0011-command_and_control|TA0011: Command and Control]]
 
 ## Subtechniques
 
@@ -44,6 +63,11 @@ Popular websites and social media acting as a mechanism for C2 may give a signif
 
 - [[M1021-restrict_web-based_content|M1021: Restrict Web-Based Content]]
 - [[M1031-network_intrusion_prevention|M1031: Network Intrusion Prevention]]
+
+## Tools
+
+- [[ngrok|ngrok]]
+- [[brute_ratel_c4|Brute Ratel C4]]
 
 ## Platforms
 

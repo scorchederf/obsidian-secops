@@ -1,11 +1,19 @@
 ---
-id: S0099
-name: Arp
-created: 2017-05-31 21:33:02.428000+00:00
-modified: 2025-04-16 20:38:50.933000+00:00
-type: tool
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "S0099"
+mitre_name: "Arp"
+mitre_type: "tool"
+mitre_stix_id: "tool--30489451-5886-4c46-90c9-0dff9adc5252"
+mitre_created: "2017-05-31T21:33:02.428Z"
+mitre_modified: "2025-04-16T20:38:50.933Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0099/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Arp"
+  - "arp.exe"
 ---
 
 # Arp

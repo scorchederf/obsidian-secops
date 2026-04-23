@@ -1,12 +1,19 @@
 ---
-id: M1035
-name: Limit Access to Resource Over Network
-created: 2019-06-11 16:30:16.672000+00:00
-modified: 2024-12-18 15:50:51.212000+00:00
-type: course-of-action
+mitre_id: "M1035"
+mitre_name: "Limit Access to Resource Over Network"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--1dcaeb21-9348-42ea-950a-f842aaf1ae1f"
+mitre_created: "2019-06-11T16:30:16.672Z"
+mitre_modified: "2024-12-18T15:50:51.212Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1035/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Limit Access to Resource Over Network
+# M1035: Limit Access to Resource Over Network
 
 Restrict access to network resources, such as file shares, remote systems, and services, to only those users, accounts, or systems with a legitimate business requirement. This can include employing technologies like network concentrators, RDP gateways, and zero-trust network access (ZTNA) models, alongside hardening services and protocols. This mitigation can be implemented through the following measures:
 
@@ -65,22 +72,26 @@ Network Segmentation:
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]
-    - [[T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
-    - [[T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[T1021-remote_services|T1021: Remote Services]]
+- [[T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
+- [[T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
 - [[T1133-external_remote_services|T1133: External Remote Services]]
 - [[T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 - [[T1200-hardware_additions|T1200: Hardware Additions]]
 - [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-    - [[T1542-pre-os_boot#^t1542005-tftp-boot|T1542.005: TFTP Boot]]
+- [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
+- [[T1542-pre-os_boot#^t1542005-tftp-boot|T1542.005: TFTP Boot]]
 - [[T1546-event_triggered_execution|T1546: Event Triggered Execution]]
-    - [[T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
+- [[T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 - [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-    - [[T1552-unsecured_credentials#^t1552005-cloud-instance-metadata-api|T1552.005: Cloud Instance Metadata API]]
-    - [[T1552-unsecured_credentials#^t1552007-container-api|T1552.007: Container API]]
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+- [[T1552-unsecured_credentials#^t1552005-cloud-instance-metadata-api|T1552.005: Cloud Instance Metadata API]]
+- [[T1552-unsecured_credentials#^t1552007-container-api|T1552.007: Container API]]
 - [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
-    - [[T1557-adversary-in-the-middle#^t1557002-arp-cache-poisoning|T1557.002: ARP Cache Poisoning]]
+- [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
+- [[T1557-adversary-in-the-middle#^t1557002-arp-cache-poisoning|T1557.002: ARP Cache Poisoning]]
 - [[T1563-remote_service_session_hijacking|T1563: Remote Service Session Hijacking]]
-    - [[T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
+- [[T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
 - [[T1609-container_administration_command|T1609: Container Administration Command]]
 - [[T1610-deploy_container|T1610: Deploy Container]]
 - [[T1612-build_image_on_host|T1612: Build Image on Host]]

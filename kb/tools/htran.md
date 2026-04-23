@@ -1,11 +1,19 @@
 ---
-id: S0040
-name: HTRAN
-created: 2017-05-31 21:32:32.011000+00:00
-modified: 2024-11-17 16:27:34.671000+00:00
-type: tool
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "S0040"
+mitre_name: "HTRAN"
+mitre_type: "tool"
+mitre_stix_id: "tool--d5e96a35-7b0b-4c6a-9533-d63ecbda563e"
+mitre_created: "2017-05-31T21:32:32.011Z"
+mitre_modified: "2024-11-17T16:27:34.671Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0040/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "HTRAN"
+  - "HUC Packet Transmit Tool"
 ---
 
 # HTRAN

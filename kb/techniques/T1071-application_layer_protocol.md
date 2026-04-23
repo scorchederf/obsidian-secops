@@ -1,16 +1,36 @@
 ---
-id: T1071
-name: Application Layer Protocol
-created: 2017-05-31 21:30:56.776000+00:00
-modified: 2025-10-24 17:48:38.368000+00:00
-type: attack-pattern
-x_mitre_version: 2.4
-x_mitre_domains: enterprise-attack
+mitre_id: "T1071"
+mitre_name: "Application Layer Protocol"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--355be19c-ffc9-46d5-8d50-d6a036c675b6"
+mitre_created: "2017-05-31T21:30:56.776Z"
+mitre_modified: "2025-10-24T17:48:38.368Z"
+mitre_version: "2.4"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1071/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "macOS"
+  - "Windows"
+  - "Network Devices"
+  - "ESXi"
+mitre_tactic_ids:
+  - "TA0011"
 ---
+
+# T1071: Application Layer Protocol
 
 Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
 Adversaries may utilize many different protocols, including those used for web browsing, transferring files, electronic mail, DNS, or publishing/subscribing. For connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), commonly used protocols are SMB, SSH, or RDP.(Citation: Mandiant APT29 Eye Spy Email Nov 22) 
+
+## Tactics
+
+- [[TA0011-command_and_control|TA0011: Command and Control]]
 
 ## Subtechniques
 
@@ -46,7 +66,7 @@ Adversaries may communicate using the Domain Name System (DNS) application layer
 
 The DNS protocol serves an administrative function in computer networking and thus may be very common in environments. DNS traffic may also be allowed even before network authentication is completed. DNS packets contain many fields and headers in which data can be concealed. Often known as DNS tunneling, adversaries may abuse DNS to communicate with systems under their control within a victim network while also mimicking normal, expected traffic.(Citation: PAN DNS Tunneling)(Citation: Medium DnsTunneling)
 
-DNS beaconing may be used to send commands to remote systems via DNS queries. A DNS beacon is created by tunneling DNS traffic (i.e. [Protocol Tunneling](https://attack.mitre.org/techniques/T1572)). The commands may be embedded into different DNS records, for example, TXT or A records.(Citation: OilRig Uses Updated BONDUPDATER to Target Middle Eastern Government) DNS beacons may be difficult to detect because the beacons infrequently communicate with infected devices.(Citation: DNS Beacons) Infrequent communication conceals the malicious DNS traffic with normal DNS traffic. 
+DNS beaconing may be used to send commands to remote systems via DNS queries. A DNS beacon is created by tunneling DNS traffic (i.e. [[T1572-protocol_tunneling|T1572: Protocol Tunneling]]). The commands may be embedded into different DNS records, for example, TXT or A records.(Citation: OilRig Uses Updated BONDUPDATER to Target Middle Eastern Government) DNS beacons may be difficult to detect because the beacons infrequently communicate with infected devices.(Citation: DNS Beacons) Infrequent communication conceals the malicious DNS traffic with normal DNS traffic. 
 
 ### T1071.005: Publish/Subscribe Protocols
 
@@ -54,12 +74,16 @@ DNS beaconing may be used to send commands to remote systems via DNS queries. A 
 
 Adversaries may communicate using publish/subscribe (pub/sub) application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. 
 
-Protocols such as <code>MQTT</code>, <code>XMPP</code>, <code>AMQP</code>, and <code>STOMP</code> use a publish/subscribe design, with message distribution managed by a centralized broker.(Citation: wailing crab sub/pub)(Citation: Mandiant APT1 Appendix) Publishers categorize their messages by topics, while subscribers receive messages according to their subscribed topics.(Citation: wailing crab sub/pub) An adversary may abuse publish/subscribe protocols to communicate with systems under their control from behind a message broker while also mimicking normal, expected traffic.
+Protocols such as `MQTT`, `XMPP`, `AMQP`, and `STOMP` use a publish/subscribe design, with message distribution managed by a centralized broker.(Citation: wailing crab sub/pub)(Citation: Mandiant APT1 Appendix) Publishers categorize their messages by topics, while subscribers receive messages according to their subscribed topics.(Citation: wailing crab sub/pub) An adversary may abuse publish/subscribe protocols to communicate with systems under their control from behind a message broker while also mimicking normal, expected traffic.
 
 ## Mitigations
 
 - [[M1031-network_intrusion_prevention|M1031: Network Intrusion Prevention]]
 - [[M1037-filter_network_traffic|M1037: Filter Network Traffic]]
+
+## Tools
+
+- [[sliver|Sliver]]
 
 ## Platforms
 

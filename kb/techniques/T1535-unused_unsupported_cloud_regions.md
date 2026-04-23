@@ -1,12 +1,24 @@
 ---
-id: T1535
-name: Unused/Unsupported Cloud Regions
-created: 2019-09-04 14:35:04.617000+00:00
-modified: 2025-10-24 17:48:49.853000+00:00
-type: attack-pattern
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "T1535"
+mitre_name: "Unused/Unsupported Cloud Regions"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--59bd0dec-f8b2-4b9a-9141-37a1e6899761"
+mitre_created: "2019-09-04T14:35:04.617Z"
+mitre_modified: "2025-10-24T17:48:49.853Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1535/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "IaaS"
+mitre_tactic_ids:
+  - "TA0005"
 ---
+
+# T1535: Unused/Unsupported Cloud Regions
 
 Adversaries may create cloud instances in unused geographic service regions in order to evade detection. Access is usually obtained through compromising accounts used to manage cloud infrastructure.
 
@@ -14,7 +26,11 @@ Cloud service providers often provide infrastructure throughout the world in ord
 
 A variation on this behavior takes advantage of differences in functionality across cloud regions. An adversary could utilize regions which do not support advanced detection services in order to avoid detection of their activity.
 
-An example of adversary use of unused AWS regions is to mine cryptocurrency through [Resource Hijacking](https://attack.mitre.org/techniques/T1496), which can cost organizations substantial amounts of money over time depending on the processing power used.(Citation: CloudSploit - Unused AWS Regions)
+An example of adversary use of unused AWS regions is to mine cryptocurrency through [[T1496-resource_hijacking|T1496: Resource Hijacking]], which can cost organizations substantial amounts of money over time depending on the processing power used.(Citation: CloudSploit - Unused AWS Regions)
+
+## Tactics
+
+- [[TA0005-defense_evasion|TA0005: Defense Evasion]]
 
 ## Mitigations
 

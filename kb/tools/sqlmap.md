@@ -1,11 +1,16 @@
 ---
-id: S0225
-name: sqlmap
-created: 2018-04-18 17:59:24.739000+00:00
-modified: 2025-04-25 14:45:24.383000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S0225"
+mitre_name: "sqlmap"
+mitre_type: "tool"
+mitre_stix_id: "tool--9a2640c2-9f43-46fe-b13f-bde881e55555"
+mitre_created: "2018-04-18T17:59:24.739Z"
+mitre_modified: "2025-04-25T14:45:24.383Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0225/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
 # sqlmap

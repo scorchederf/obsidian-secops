@@ -1,11 +1,18 @@
 ---
-id: S0358
-name: Ruler
-created: 2019-02-04 18:27:00.501000+00:00
-modified: 2025-04-25 14:45:22.953000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0358"
+mitre_name: "Ruler"
+mitre_type: "tool"
+mitre_stix_id: "tool--90ac9266-68ce-46f2-b24f-5eb3b2a8ea38"
+mitre_created: "2019-02-04T18:27:00.501Z"
+mitre_modified: "2025-04-25T14:45:22.953Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0358/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "Ruler"
 ---
 
 # Ruler
@@ -15,9 +22,9 @@ x_mitre_domains: enterprise-attack
 ## Uses Techniques
 
 - [[T1087-account_discovery|T1087: Account Discovery]]
-    - [[T1087-account_discovery#^t1087003-email-account|T1087.003: Email Account]]
+- [[T1087-account_discovery#^t1087003-email-account|T1087.003: Email Account]]
 - [[T1137-office_application_startup|T1137: Office Application Startup]]
-    - [[T1137-office_application_startup#^t1137003-outlook-forms|T1137.003: Outlook Forms]]
-    - [[T1137-office_application_startup#^t1137004-outlook-home-page|T1137.004: Outlook Home Page]]
-    - [[T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
+- [[T1137-office_application_startup#^t1137003-outlook-forms|T1137.003: Outlook Forms]]
+- [[T1137-office_application_startup#^t1137004-outlook-home-page|T1137.004: Outlook Home Page]]
+- [[T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
 

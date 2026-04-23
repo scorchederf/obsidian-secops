@@ -1,12 +1,28 @@
 ---
-id: T1498
-name: Network Denial of Service
-created: 2019-04-17 20:23:15.105000+00:00
-modified: 2025-10-24 17:49:28.162000+00:00
-type: attack-pattern
-x_mitre_version: 1.2
-x_mitre_domains: enterprise-attack
+mitre_id: "T1498"
+mitre_name: "Network Denial of Service"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--d74c4a7e-ffbf-432f-9365-7ebf1f787cab"
+mitre_created: "2019-04-17T20:23:15.105Z"
+mitre_modified: "2025-10-24T17:49:28.162Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1498/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Windows"
+  - "IaaS"
+  - "Linux"
+  - "macOS"
+  - "Containers"
+mitre_tactic_ids:
+  - "TA0040"
 ---
+
+# T1498: Network Denial of Service
 
 Adversaries may perform Network Denial of Service (DoS) attacks to degrade or block the availability of targeted resources to users. Network DoS can be performed by exhausting the network bandwidth services rely on. Example resources include specific websites, email services, DNS, and web-based applications. Adversaries have been observed conducting network DoS attacks for political purposes(Citation: FireEye OpPoisonedHandover February 2016) and to support other malicious activities, including distraction(Citation: FSISAC FraudNetDoS September 2012), hacktivism, and extortion.(Citation: Symantec DDoS October 2014)
 
@@ -16,7 +32,11 @@ To perform Network DoS attacks several aspects apply to multiple methods, includ
 
 Adversaries may use the original IP address of an attacking system, or spoof the source IP address to make the attack traffic more difficult to trace back to the attacking system or to enable reflection. This can increase the difficulty defenders have in defending against the attack by reducing or eliminating the effectiveness of filtering by the source address on network defense devices.
 
-For DoS attacks targeting the hosting system directly, see [Endpoint Denial of Service](https://attack.mitre.org/techniques/T1499).
+For DoS attacks targeting the hosting system directly, see [[T1499-endpoint_denial_of_service|T1499: Endpoint Denial of Service]].
+
+## Tactics
+
+- [[TA0040-impact|TA0040: Impact]]
 
 ## Subtechniques
 
@@ -24,7 +44,7 @@ For DoS attacks targeting the hosting system directly, see [Endpoint Denial of S
 
 ^t1498001-direct-network-flood
 
-Adversaries may attempt to cause a denial of service (DoS) by directly sending a high-volume of network traffic to a target. This DoS attack may also reduce the availability and functionality of the targeted system(s) and network. [Direct Network Flood](https://attack.mitre.org/techniques/T1498/001)s are when one or more systems are used to send a high-volume of network packets towards the targeted service's network. Almost any network protocol may be used for flooding. Stateless protocols such as UDP or ICMP are commonly used but stateful protocols such as TCP can be used as well.
+Adversaries may attempt to cause a denial of service (DoS) by directly sending a high-volume of network traffic to a target. This DoS attack may also reduce the availability and functionality of the targeted system(s) and network. [[T1498-network_denial_of_service#^t1498001-direct-network-flood|T1498.001: Direct Network Flood]]s are when one or more systems are used to send a high-volume of network packets towards the targeted service's network. Almost any network protocol may be used for flooding. Stateless protocols such as UDP or ICMP are commonly used but stateful protocols such as TCP can be used as well.
 
 Botnets are commonly used to conduct network flooding attacks against networks and services. Large botnets can generate a significant amount of traffic from systems spread across the global Internet. Adversaries may have the resources to build out and control their own botnet infrastructure or may rent time on an existing botnet to conduct an attack. In some of the worst cases for distributed DoS (DDoS), so many systems are used to generate the flood that each one only needs to send out a small amount of traffic to produce enough volume to saturate the target network. In such circumstances, distinguishing DDoS traffic from legitimate clients becomes exceedingly difficult. Botnets have been used in some of the most high-profile DDoS flooding attacks, such as the 2012 series of incidents that targeted major US banks.(Citation: USNYAG IranianBotnet March 2016)
 

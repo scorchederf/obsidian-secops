@@ -1,11 +1,18 @@
 ---
-id: S0590
-name: NBTscan
-created: 2021-03-17 15:26:20.015000+00:00
-modified: 2025-04-25 14:45:26.872000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S0590"
+mitre_name: "NBTscan"
+mitre_type: "tool"
+mitre_stix_id: "tool--b63970b7-ddfb-4aee-97b1-80d335e033a8"
+mitre_created: "2021-03-17T15:26:20.015Z"
+mitre_modified: "2025-04-25T14:45:26.872Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0590/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "NBTscan"
 ---
 
 # NBTscan

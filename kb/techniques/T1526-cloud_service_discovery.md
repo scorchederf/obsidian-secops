@@ -1,12 +1,27 @@
 ---
-id: T1526
-name: Cloud Service Discovery
-created: 2019-08-30 13:01:10.120000+00:00
-modified: 2025-10-24 17:49:30.791000+00:00
-type: attack-pattern
-x_mitre_version: 1.4
-x_mitre_domains: enterprise-attack
+mitre_id: "T1526"
+mitre_name: "Cloud Service Discovery"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--e24fcba8-2557-4442-a139-1ee2f2e784db"
+mitre_created: "2019-08-30T13:01:10.120Z"
+mitre_modified: "2025-10-24T17:49:30.791Z"
+mitre_version: "1.4"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1526/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "IaaS"
+  - "Identity Provider"
+  - "Office Suite"
+  - "SaaS"
+mitre_tactic_ids:
+  - "TA0007"
 ---
+
+# T1526: Cloud Service Discovery
 
 An adversary may attempt to enumerate the cloud services running on a system after gaining access. These methods can differ from platform-as-a-service (PaaS), to infrastructure-as-a-service (IaaS), or software-as-a-service (SaaS). Many services exist throughout the various cloud providers and can include Continuous Integration and Continuous Delivery (CI/CD), Lambda Functions, Entra ID, etc. They may also include security services, such as AWS GuardDuty and Microsoft Defender for Cloud, and logging services, such as AWS CloudTrail and Google Cloud Audit Logs.
 
@@ -14,7 +29,17 @@ Adversaries may attempt to discover information about the services enabled throu
 
 For example, Stormspotter is an open source tool for enumerating and constructing a graph for Azure resources and services, and Pacu is an open source AWS exploitation framework that supports several methods for discovering cloud services.(Citation: Azure - Stormspotter)(Citation: GitHub Pacu)
 
-Adversaries may use the information gained to shape follow-on behaviors, such as targeting data or credentials from enumerated services or evading identified defenses through [Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001) or [Disable or Modify Cloud Logs](https://attack.mitre.org/techniques/T1562/008).
+Adversaries may use the information gained to shape follow-on behaviors, such as targeting data or credentials from enumerated services or evading identified defenses through [[T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]] or [[T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]].
+
+## Tactics
+
+- [[TA0007-discovery|TA0007: Discovery]]
+
+## Tools
+
+- [[aadinternals|AADInternals]]
+- [[roadtools|ROADTools]]
+- [[pacu|Pacu]]
 
 ## Platforms
 

@@ -1,12 +1,27 @@
 ---
-id: T1195
-name: Supply Chain Compromise
-created: 2018-04-18 17:59:24.739000+00:00
-modified: 2025-10-24 17:48:41.675000+00:00
-type: attack-pattern
-x_mitre_version: 1.7
-x_mitre_domains: enterprise-attack
+mitre_id: "T1195"
+mitre_name: "Supply Chain Compromise"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--3f18edba-28f4-4bb9-82c3-8aa60dcac5f7"
+mitre_created: "2018-04-18T17:59:24.739Z"
+mitre_modified: "2025-10-24T17:48:41.675Z"
+mitre_version: "1.7"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1195/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "Windows"
+  - "macOS"
+  - "SaaS"
+mitre_tactic_ids:
+  - "TA0001"
 ---
+
+# T1195: Supply Chain Compromise
 
 Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.
 
@@ -26,6 +41,10 @@ While supply chain compromise can impact any component of hardware or software, 
 
 In some cases, adversaries may conduct “second-order” supply chain compromises by leveraging the access gained from an initial supply chain compromise to further compromise a software component.(Citation: Krebs 3cx overview 2023) This may allow the threat actor to spread to even more victims.  
 
+## Tactics
+
+- [[TA0001-initial_access|TA0001: Initial Access]]
+
 ## Subtechniques
 
 ### T1195.001: Compromise Software Dependencies and Development Tools
@@ -34,7 +53,7 @@ In some cases, adversaries may conduct “second-order” supply chain compromis
 
 Adversaries may manipulate software dependencies and development tools prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source projects that are used as dependencies in many applications, such as pip and NPM packages, may be targeted as a means to add malicious code to users of the dependency.(Citation: Trendmicro NPM Compromise)(Citation: Bitdefender NPM Repositories Compromised 2021)(Citation: MANDVI Malicious npm and PyPI Packages Disguised) This may also include abandoned packages, which in some cases could be re-registered by threat actors after being removed by adversaries.(Citation: The Hacker News PyPi Revival Hijack 2024) Adversaries may also employ "typosquatting" or name-confusion by choosing names similar to existing popular libraries or packages in order to deceive a user.(Citation: Ahmed Backdoors in Python and NPM Packages)(Citation: Meyer PyPI Supply Chain Attack Uncovered)(Citation: Checkmarx-oss-seo)
 
-Additionally, CI/CD pipeline components, such as GitHub Actions, may be targeted in order to gain access to the building, testing, and deployment cycles of an application.(Citation: Unit 42 Palo Alto GitHub Actions Supply Chain Attack 2025) By adding malicious code into a GitHub action, a threat actor may be able to collect runtime credentials (e.g., via [Proc Filesystem](https://attack.mitre.org/techniques/T1003/007)) or insert further malicious components into the build pipelines for a second-order supply chain compromise.(Citation: OWASP CICD-SEC-4) As GitHub Actions are often dependent on other GitHub Actions, threat actors may be able to infect a large number of repositories via the compromise of a single Action.(Citation: Palo Alto Networks GitHub Actions Worm 2023)
+Additionally, CI/CD pipeline components, such as GitHub Actions, may be targeted in order to gain access to the building, testing, and deployment cycles of an application.(Citation: Unit 42 Palo Alto GitHub Actions Supply Chain Attack 2025) By adding malicious code into a GitHub action, a threat actor may be able to collect runtime credentials (e.g., via [[T1003-os_credential_dumping#^t1003007-proc-filesystem|T1003.007: Proc Filesystem]]) or insert further malicious components into the build pipelines for a second-order supply chain compromise.(Citation: OWASP CICD-SEC-4) As GitHub Actions are often dependent on other GitHub Actions, threat actors may be able to infect a large number of repositories via the compromise of a single Action.(Citation: Palo Alto Networks GitHub Actions Worm 2023)
 
 Targeting may be specific to a desired victim set or may be distributed to a broad set of consumers but only move on to additional tactics on specific victims. 
 

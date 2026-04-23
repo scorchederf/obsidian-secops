@@ -1,12 +1,19 @@
 ---
-id: M1045
-name: Code Signing
-created: 2019-06-11 17:01:25.405000+00:00
-modified: 2024-12-10 18:52:40.747000+00:00
-type: course-of-action
+mitre_id: "M1045"
+mitre_name: "Code Signing"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--590777b3-b475-4c7c-aaf8-f4a73b140312"
+mitre_created: "2019-06-11T17:01:25.405Z"
+mitre_modified: "2024-12-10T18:52:40.747Z"
+mitre_version: "1.2"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1045/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Code Signing
+# M1045: Code Signing
 
 Code Signing is a security process that ensures the authenticity and integrity of software by digitally signing executables, scripts, and other code artifacts. It prevents untrusted or malicious code from executing by verifying the digital signatures against trusted sources. Code signing protects against tampering, impersonation, and distribution of unauthorized or malicious software, forming a critical defense against supply chain and software exploitation attacks. This mitigation can be implemented through the following measures:
 
@@ -46,28 +53,33 @@ Script Integrity in CI/CD Pipelines:
 ## Mitigates Techniques
 
 - [[T1036-masquerading|T1036: Masquerading]]
-    - [[T1036-masquerading#^t1036001-invalid-code-signature|T1036.001: Invalid Code Signature]]
-    - [[T1036-masquerading#^t1036005-match-legitimate-resource-name-or-location|T1036.005: Match Legitimate Resource Name or Location]]
+- [[T1036-masquerading|T1036: Masquerading]]
+- [[T1036-masquerading#^t1036001-invalid-code-signature|T1036.001: Invalid Code Signature]]
+- [[T1036-masquerading#^t1036005-match-legitimate-resource-name-or-location|T1036.005: Match Legitimate Resource Name or Location]]
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-    - [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
-    - [[T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
+- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
+- [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
 - [[T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
-    - [[T1127-trusted_developer_utilities_proxy_execution#^t1127002-clickonce|T1127.002: ClickOnce]]
+- [[T1127-trusted_developer_utilities_proxy_execution#^t1127002-clickonce|T1127.002: ClickOnce]]
 - [[T1204-user_execution|T1204: User Execution]]
-    - [[T1204-user_execution#^t1204003-malicious-image|T1204.003: Malicious Image]]
+- [[T1204-user_execution#^t1204003-malicious-image|T1204.003: Malicious Image]]
 - [[T1505-server_software_component|T1505: Server Software Component]]
-    - [[T1505-server_software_component#^t1505001-sql-stored-procedures|T1505.001: SQL Stored Procedures]]
-    - [[T1505-server_software_component#^t1505002-transport-agent|T1505.002: Transport Agent]]
-    - [[T1505-server_software_component#^t1505004-iis-components|T1505.004: IIS Components]]
-    - [[T1505-server_software_component#^t1505006-vsphere-installation-bundles|T1505.006: vSphere Installation Bundles]]
+- [[T1505-server_software_component|T1505: Server Software Component]]
+- [[T1505-server_software_component#^t1505001-sql-stored-procedures|T1505.001: SQL Stored Procedures]]
+- [[T1505-server_software_component#^t1505002-transport-agent|T1505.002: Transport Agent]]
+- [[T1505-server_software_component#^t1505004-iis-components|T1505.004: IIS Components]]
+- [[T1505-server_software_component#^t1505006-vsphere-installation-bundles|T1505.006: vSphere Installation Bundles]]
 - [[T1525-implant_internal_image|T1525: Implant Internal Image]]
 - [[T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
-    - [[T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
+- [[T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 - [[T1546-event_triggered_execution|T1546: Event Triggered Execution]]
-    - [[T1546-event_triggered_execution#^t1546006-lc-load-dylib-addition|T1546.006: LC_LOAD_DYLIB Addition]]
-    - [[T1546-event_triggered_execution#^t1546013-powershell-profile|T1546.013: PowerShell Profile]]
+- [[T1546-event_triggered_execution#^t1546006-lc-load-dylib-addition|T1546.006: LC_LOAD_DYLIB Addition]]
+- [[T1546-event_triggered_execution#^t1546013-powershell-profile|T1546.013: PowerShell Profile]]
 - [[T1554-compromise_host_software_binary|T1554: Compromise Host Software Binary]]
 - [[T1601-modify_system_image|T1601: Modify System Image]]
-    - [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
-    - [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
+- [[T1601-modify_system_image|T1601: Modify System Image]]
+- [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
+- [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
 

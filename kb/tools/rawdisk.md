@@ -1,11 +1,18 @@
 ---
-id: S0364
-name: RawDisk
-created: 2019-03-25 12:30:40.919000+00:00
-modified: 2024-11-17 19:51:16.652000+00:00
-type: tool
-x_mitre_version: 1.1
-x_mitre_domains: enterprise-attack
+mitre_id: "S0364"
+mitre_name: "RawDisk"
+mitre_type: "tool"
+mitre_stix_id: "tool--3ffbdc1f-d2bf-41ab-91a2-c7b857e98079"
+mitre_created: "2019-03-25T12:30:40.919Z"
+mitre_modified: "2024-11-17T19:51:16.652Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S0364/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "RawDisk"
 ---
 
 # RawDisk
@@ -16,6 +23,6 @@ x_mitre_domains: enterprise-attack
 
 - [[T1485-data_destruction|T1485: Data Destruction]]
 - [[T1561-disk_wipe|T1561: Disk Wipe]]
-    - [[T1561-disk_wipe#^t1561001-disk-content-wipe|T1561.001: Disk Content Wipe]]
-    - [[T1561-disk_wipe#^t1561002-disk-structure-wipe|T1561.002: Disk Structure Wipe]]
+- [[T1561-disk_wipe#^t1561001-disk-content-wipe|T1561.001: Disk Content Wipe]]
+- [[T1561-disk_wipe#^t1561002-disk-structure-wipe|T1561.002: Disk Structure Wipe]]
 

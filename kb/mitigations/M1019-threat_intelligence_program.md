@@ -1,12 +1,19 @@
 ---
-id: M1019
-name: Threat Intelligence Program
-created: 2019-06-06 19:55:50.927000+00:00
-modified: 2024-12-24 14:05:21.946000+00:00
-type: course-of-action
+mitre_id: "M1019"
+mitre_name: "Threat Intelligence Program"
+mitre_type: "course-of-action"
+mitre_stix_id: "course-of-action--874c0166-e407-45c2-a1d9-e4e3a6570fd8"
+mitre_created: "2019-06-06T19:55:50.927Z"
+mitre_modified: "2024-12-24T14:05:21.946Z"
+mitre_version: "1.1"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/mitigations/M1019/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
 ---
 
-# Threat Intelligence Program
+# M1019: Threat Intelligence Program
 
 A Threat Intelligence Program enables organizations to proactively identify, analyze, and act on cyber threats by leveraging internal and external data sources. The program supports decision-making processes, prioritizes defenses, and improves incident response by delivering actionable intelligence tailored to the organization's risk profile and operational environment. This mitigation can be implemented through the following measures:
 

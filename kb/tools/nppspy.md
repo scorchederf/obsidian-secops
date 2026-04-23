@@ -1,11 +1,18 @@
 ---
-id: S1131
-name: NPPSPY
-created: 2024-05-17 18:49:15.318000+00:00
-modified: 2024-10-28 19:00:14.732000+00:00
-type: tool
-x_mitre_version: 1.0
-x_mitre_domains: enterprise-attack
+mitre_id: "S1131"
+mitre_name: "NPPSPY"
+mitre_type: "tool"
+mitre_stix_id: "tool--0630d1a7-54da-4a48-a6af-eb8a62b13c17"
+mitre_created: "2024-05-17T18:49:15.318Z"
+mitre_modified: "2024-10-28T19:00:14.732Z"
+mitre_version: "1.0"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/software/S1131/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_aliases:
+  - "NPPSPY"
 ---
 
 # NPPSPY

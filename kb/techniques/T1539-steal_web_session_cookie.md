@@ -1,22 +1,42 @@
 ---
-id: T1539
-name: Steal Web Session Cookie
-created: 2019-10-08 20:04:35.508000+00:00
-modified: 2025-10-24 17:48:25.272000+00:00
-type: attack-pattern
-x_mitre_version: 1.5
-x_mitre_domains: enterprise-attack
+mitre_id: "T1539"
+mitre_name: "Steal Web Session Cookie"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--10ffac09-e42d-4f56-ab20-db94c67d76ff"
+mitre_created: "2019-10-08T20:04:35.508Z"
+mitre_modified: "2025-10-24T17:48:25.272Z"
+mitre_version: "1.5"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1539/"
+build_date: "2026-04-21 20:44:18"
+build_source: "script"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "Linux"
+  - "Office Suite"
+  - "SaaS"
+  - "Windows"
+  - "macOS"
+mitre_tactic_ids:
+  - "TA0006"
 ---
+
+# T1539: Steal Web Session Cookie
 
 An adversary may steal web application or service session cookies and use them to gain access to web applications or Internet services as an authenticated user without needing credentials. Web applications and services often use session cookies as an authentication token after a user has authenticated to a website.
 
 Cookies are often valid for an extended period of time, even if the web application is not actively used. Cookies can be found on disk, in the process memory of the browser, and in network traffic to remote systems. Additionally, other applications on the targets machine might store sensitive authentication cookies in memory (e.g. apps which authenticate to cloud services). Session cookies can be used to bypasses some multi-factor authentication protocols.(Citation: Pass The Cookie)
 
-There are several examples of malware targeting cookies from web browsers on the local system.(Citation: Kaspersky TajMahal April 2019)(Citation: Unit 42 Mac Crypto Cookies January 2019) Adversaries may also steal cookies by injecting malicious JavaScript content into websites or relying on [User Execution](https://attack.mitre.org/techniques/T1204) by tricking victims into running malicious JavaScript in their browser.(Citation: Talos Roblox Scam 2023)(Citation: Krebs Discord Bookmarks 2023)
+There are several examples of malware targeting cookies from web browsers on the local system.(Citation: Kaspersky TajMahal April 2019)(Citation: Unit 42 Mac Crypto Cookies January 2019) Adversaries may also steal cookies by injecting malicious JavaScript content into websites or relying on [[T1204-user_execution|T1204: User Execution]] by tricking victims into running malicious JavaScript in their browser.(Citation: Talos Roblox Scam 2023)(Citation: Krebs Discord Bookmarks 2023)
 
-There are also open source frameworks such as `Evilginx2` and `Muraena` that can gather session cookies through a malicious proxy (e.g., [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557)) that can be set up by an adversary and used in phishing campaigns.(Citation: Github evilginx2)(Citation: GitHub Mauraena)
+There are also open source frameworks such as `Evilginx2` and `Muraena` that can gather session cookies through a malicious proxy (e.g., [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]) that can be set up by an adversary and used in phishing campaigns.(Citation: Github evilginx2)(Citation: GitHub Mauraena)
 
-After an adversary acquires a valid cookie, they can then perform a [Web Session Cookie](https://attack.mitre.org/techniques/T1550/004) technique to login to the corresponding web application.
+After an adversary acquires a valid cookie, they can then perform a [[T1550-use_alternate_authentication_material#^t1550004-web-session-cookie|T1550.004: Web Session Cookie]] technique to login to the corresponding web application.
+
+## Tactics
+
+- [[TA0006-credential_access|TA0006: Credential Access]]
 
 ## Mitigations
 
