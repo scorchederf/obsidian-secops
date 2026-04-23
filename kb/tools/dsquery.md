@@ -9,7 +9,7 @@ mitre_version: "1.4"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0105/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "dsquery"
@@ -23,9 +23,9 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-- [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+    - [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 - [[T1082-system_information_discovery|T1082: System Information Discovery]]
 - [[T1087-account_discovery|T1087: Account Discovery]]
-- [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+    - [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 - [[T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 

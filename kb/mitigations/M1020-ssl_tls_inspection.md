@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1020/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -49,8 +49,8 @@ Monitor and Tune:
 
 - [[T1090-proxy|T1090: Proxy]]
 - [[T1090-proxy|T1090: Proxy]]
-- [[T1090-proxy#^t1090004-domain-fronting|T1090.004: Domain Fronting]]
+    - [[T1090-proxy#^t1090004-domain-fronting|T1090.004: Domain Fronting]]
 - [[T1573-encrypted_channel|T1573: Encrypted Channel]]
 - [[T1573-encrypted_channel|T1573: Encrypted Channel]]
-- [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
+    - [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
 

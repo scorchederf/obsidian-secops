@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1029/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -51,15 +51,15 @@ Tools: OpenSSL, BitLocker, LUKS for Linux.
 
 - [[T1070-indicator_removal|T1070: Indicator Removal]]
 - [[T1070-indicator_removal|T1070: Indicator Removal]]
-- [[T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
-- [[T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
-- [[T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
-- [[T1070-indicator_removal#^t1070007-clear-network-connection-history-and-configurations|T1070.007: Clear Network Connection History and Configurations]]
-- [[T1070-indicator_removal#^t1070008-clear-mailbox-data|T1070.008: Clear Mailbox Data]]
-- [[T1070-indicator_removal#^t1070009-clear-persistence|T1070.009: Clear Persistence]]
+    - [[T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
+    - [[T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
+    - [[T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
+    - [[T1070-indicator_removal#^t1070007-clear-network-connection-history-and-configurations|T1070.007: Clear Network Connection History and Configurations]]
+    - [[T1070-indicator_removal#^t1070008-clear-mailbox-data|T1070.008: Clear Mailbox Data]]
+    - [[T1070-indicator_removal#^t1070009-clear-persistence|T1070.009: Clear Persistence]]
 - [[T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 - [[T1119-automated_collection|T1119: Automated Collection]]
 - [[T1565-data_manipulation|T1565: Data Manipulation]]
 - [[T1565-data_manipulation|T1565: Data Manipulation]]
-- [[T1565-data_manipulation#^t1565001-stored-data-manipulation|T1565.001: Stored Data Manipulation]]
+    - [[T1565-data_manipulation#^t1565001-stored-data-manipulation|T1565.001: Stored Data Manipulation]]
 

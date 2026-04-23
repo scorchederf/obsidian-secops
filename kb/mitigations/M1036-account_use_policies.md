@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1036/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -54,15 +54,15 @@ Account Expiration and Deactivation:
 
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
-- [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+    - [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 - [[T1110-brute_force|T1110: Brute Force]]
 - [[T1110-brute_force|T1110: Brute Force]]
-- [[T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
-- [[T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
-- [[T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
+    - [[T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
+    - [[T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
+    - [[T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-- [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
+    - [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
 - [[T1621-multi-factor_authentication_request_generation|T1621: Multi-Factor Authentication Request Generation]]
 - [[T1648-serverless_execution|T1648: Serverless Execution]]
 

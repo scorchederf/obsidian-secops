@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0227/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "spwebmember"
@@ -22,5 +22,5 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1213-data_from_information_repositories|T1213: Data from Information Repositories]]
-- [[T1213-data_from_information_repositories#^t1213002-sharepoint|T1213.002: Sharepoint]]
+    - [[T1213-data_from_information_repositories#^t1213002-sharepoint|T1213.002: Sharepoint]]
 

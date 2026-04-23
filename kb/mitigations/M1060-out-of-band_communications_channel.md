@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1060/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -21,11 +21,11 @@ Establish secure out-of-band communication channels to ensure the continuity of 
 
 - [[T1114-email_collection|T1114: Email Collection]]
 - [[T1114-email_collection|T1114: Email Collection]]
-- [[T1114-email_collection#^t1114001-local-email-collection|T1114.001: Local Email Collection]]
-- [[T1114-email_collection#^t1114002-remote-email-collection|T1114.002: Remote Email Collection]]
-- [[T1114-email_collection#^t1114003-email-forwarding-rule|T1114.003: Email Forwarding Rule]]
+    - [[T1114-email_collection#^t1114001-local-email-collection|T1114.001: Local Email Collection]]
+    - [[T1114-email_collection#^t1114002-remote-email-collection|T1114.002: Remote Email Collection]]
+    - [[T1114-email_collection#^t1114003-email-forwarding-rule|T1114.003: Email Forwarding Rule]]
 - [[T1213-data_from_information_repositories|T1213: Data from Information Repositories]]
 - [[T1213-data_from_information_repositories|T1213: Data from Information Repositories]]
-- [[T1213-data_from_information_repositories#^t1213005-messaging-applications|T1213.005: Messaging Applications]]
+    - [[T1213-data_from_information_repositories#^t1213005-messaging-applications|T1213.005: Messaging Applications]]
 - [[T1489-service_stop|T1489: Service Stop]]
 

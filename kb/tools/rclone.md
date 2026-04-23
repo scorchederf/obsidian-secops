@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S1040/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Rclone"
@@ -23,11 +23,11 @@ mitre_aliases:
 
 - [[T1030-data_transfer_size_limits|T1030: Data Transfer Size Limits]]
 - [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
-- [[T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
-- [[T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
+    - [[T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
+    - [[T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 - [[T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 - [[T1560-archive_collected_data|T1560: Archive Collected Data]]
-- [[T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
+    - [[T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 - [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
-- [[T1567-exfiltration_over_web_service#^t1567002-exfiltration-to-cloud-storage|T1567.002: Exfiltration to Cloud Storage]]
+    - [[T1567-exfiltration_over_web_service#^t1567002-exfiltration-to-cloud-storage|T1567.002: Exfiltration to Cloud Storage]]
 

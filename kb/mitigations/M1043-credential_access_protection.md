@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1043/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -46,17 +46,17 @@ Enable Secure Boot and Memory Protections:
 
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 - [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
-- [[T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
+    - [[T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 - [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-- [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
+    - [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 - [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
 - [[T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
-- [[T1558-steal_or_forge_kerberos_tickets#^t1558005-ccache-files|T1558.005: Ccache Files]]
+    - [[T1558-steal_or_forge_kerberos_tickets#^t1558005-ccache-files|T1558.005: Ccache Files]]
 - [[T1599-network_boundary_bridging|T1599: Network Boundary Bridging]]
 - [[T1599-network_boundary_bridging|T1599: Network Boundary Bridging]]
-- [[T1599-network_boundary_bridging#^t1599001-network-address-translation-traversal|T1599.001: Network Address Translation Traversal]]
+    - [[T1599-network_boundary_bridging#^t1599001-network-address-translation-traversal|T1599.001: Network Address Translation Traversal]]
 - [[T1601-modify_system_image|T1601: Modify System Image]]
 - [[T1601-modify_system_image|T1601: Modify System Image]]
-- [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
-- [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
+    - [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
+    - [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
 

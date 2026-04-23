@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1034/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -78,11 +78,11 @@ Firmware management tools like Dell Command Update or HP Sure Start
 
 - [[T1052-exfiltration_over_physical_medium|T1052: Exfiltration Over Physical Medium]]
 - [[T1052-exfiltration_over_physical_medium|T1052: Exfiltration Over Physical Medium]]
-- [[T1052-exfiltration_over_physical_medium#^t1052001-exfiltration-over-usb|T1052.001: Exfiltration over USB]]
+    - [[T1052-exfiltration_over_physical_medium#^t1052001-exfiltration-over-usb|T1052.001: Exfiltration over USB]]
 - [[T1091-replication_through_removable_media|T1091: Replication Through Removable Media]]
 - [[T1200-hardware_additions|T1200: Hardware Additions]]
 - [[T1219-remote_access_tools|T1219: Remote Access Tools]]
 - [[T1219-remote_access_tools|T1219: Remote Access Tools]]
-- [[T1219-remote_access_tools#^t1219003-remote-access-hardware|T1219.003: Remote Access Hardware]]
+    - [[T1219-remote_access_tools#^t1219003-remote-access-hardware|T1219.003: Remote Access Hardware]]
 - [[T1674-input_injection|T1674: Input Injection]]
 

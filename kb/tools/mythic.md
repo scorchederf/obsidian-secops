@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0699/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Mythic"
@@ -24,17 +24,17 @@ mitre_aliases:
 - [[T1008-fallback_channels|T1008: Fallback Channels]]
 - [[T1030-data_transfer_size_limits|T1030: Data Transfer Size Limits]]
 - [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-- [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
-- [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
-- [[T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
+    - [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+    - [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
+    - [[T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
 - [[T1090-proxy|T1090: Proxy]]
-- [[T1090-proxy#^t1090001-internal-proxy|T1090.001: Internal Proxy]]
-- [[T1090-proxy#^t1090002-external-proxy|T1090.002: External Proxy]]
-- [[T1090-proxy#^t1090004-domain-fronting|T1090.004: Domain Fronting]]
+    - [[T1090-proxy#^t1090001-internal-proxy|T1090.001: Internal Proxy]]
+    - [[T1090-proxy#^t1090002-external-proxy|T1090.002: External Proxy]]
+    - [[T1090-proxy#^t1090004-domain-fronting|T1090.004: Domain Fronting]]
 - [[T1095-non-application_layer_protocol|T1095: Non-Application Layer Protocol]]
 - [[T1119-automated_collection|T1119: Automated Collection]]
 - [[T1132-data_encoding|T1132: Data Encoding]]
 - [[T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 - [[T1573-encrypted_channel|T1573: Encrypted Channel]]
-- [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
+    - [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
 

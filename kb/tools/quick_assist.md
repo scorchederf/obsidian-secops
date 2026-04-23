@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S1209/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Quick Assist"
@@ -22,7 +22,7 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-- [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+    - [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 - [[T1113-screen_capture|T1113: Screen Capture]]
 - [[T1125-video_capture|T1125: Video Capture]]
 

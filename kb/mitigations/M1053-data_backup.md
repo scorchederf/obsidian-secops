@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1053/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -41,15 +41,15 @@ Backup Testing:
 
 - [[T1485-data_destruction|T1485: Data Destruction]]
 - [[T1485-data_destruction|T1485: Data Destruction]]
-- [[T1485-data_destruction#^t1485001-lifecycle-triggered-deletion|T1485.001: Lifecycle-Triggered Deletion]]
+    - [[T1485-data_destruction#^t1485001-lifecycle-triggered-deletion|T1485.001: Lifecycle-Triggered Deletion]]
 - [[T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 - [[T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 - [[T1491-defacement|T1491: Defacement]]
 - [[T1491-defacement|T1491: Defacement]]
-- [[T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
-- [[T1491-defacement#^t1491002-external-defacement|T1491.002: External Defacement]]
+    - [[T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
+    - [[T1491-defacement#^t1491002-external-defacement|T1491.002: External Defacement]]
 - [[T1561-disk_wipe|T1561: Disk Wipe]]
 - [[T1561-disk_wipe|T1561: Disk Wipe]]
-- [[T1561-disk_wipe#^t1561001-disk-content-wipe|T1561.001: Disk Content Wipe]]
-- [[T1561-disk_wipe#^t1561002-disk-structure-wipe|T1561.002: Disk Structure Wipe]]
+    - [[T1561-disk_wipe#^t1561001-disk-content-wipe|T1561.001: Disk Content Wipe]]
+    - [[T1561-disk_wipe#^t1561002-disk-structure-wipe|T1561.002: Disk Structure Wipe]]
 

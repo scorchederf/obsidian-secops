@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0191/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Winexe"
@@ -22,5 +22,5 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1569-system_services|T1569: System Services]]
-- [[T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
+    - [[T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 

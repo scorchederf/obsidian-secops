@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0075/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Reg"
@@ -27,5 +27,5 @@ Utilities such as [Reg](https://attack.mitre.org/software/S0075) are known to be
 - [[T1012-query_registry|T1012: Query Registry]]
 - [[T1112-modify_registry|T1112: Modify Registry]]
 - [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
-- [[T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]
+    - [[T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]
 

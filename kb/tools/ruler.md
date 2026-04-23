@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0358/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Ruler"
@@ -22,9 +22,9 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1087-account_discovery|T1087: Account Discovery]]
-- [[T1087-account_discovery#^t1087003-email-account|T1087.003: Email Account]]
+    - [[T1087-account_discovery#^t1087003-email-account|T1087.003: Email Account]]
 - [[T1137-office_application_startup|T1137: Office Application Startup]]
-- [[T1137-office_application_startup#^t1137003-outlook-forms|T1137.003: Outlook Forms]]
-- [[T1137-office_application_startup#^t1137004-outlook-home-page|T1137.004: Outlook Home Page]]
-- [[T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
+    - [[T1137-office_application_startup#^t1137003-outlook-forms|T1137.003: Outlook Forms]]
+    - [[T1137-office_application_startup#^t1137004-outlook-home-page|T1137.004: Outlook Home Page]]
+    - [[T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
 

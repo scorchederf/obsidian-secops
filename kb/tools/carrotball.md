@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0465/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "CARROTBALL"
@@ -23,8 +23,8 @@ mitre_aliases:
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 - [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-- [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
+    - [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 - [[T1204-user_execution|T1204: User Execution]]
-- [[T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
+    - [[T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 

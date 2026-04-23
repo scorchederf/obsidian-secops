@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0592/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "RemoteUtilities"
@@ -25,5 +25,5 @@ mitre_aliases:
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 - [[T1113-screen_capture|T1113: Screen Capture]]
 - [[T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
-- [[T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
+    - [[T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
 

@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/tactics/TA0008/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_shortname: "lateral-movement"
 ---
@@ -23,26 +23,26 @@ Lateral Movement consists of techniques that adversaries use to enter and contro
 ## Related Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]
-- [[T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
-- [[T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
-- [[T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
-- [[T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
-- [[T1021-remote_services#^t1021005-vnc|T1021.005: VNC]]
-- [[T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
-- [[T1021-remote_services#^t1021007-cloud-services|T1021.007: Cloud Services]]
-- [[T1021-remote_services#^t1021008-direct-cloud-vm-connections|T1021.008: Direct Cloud VM Connections]]
+    - [[T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
+    - [[T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+    - [[T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
+    - [[T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
+    - [[T1021-remote_services#^t1021005-vnc|T1021.005: VNC]]
+    - [[T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
+    - [[T1021-remote_services#^t1021007-cloud-services|T1021.007: Cloud Services]]
+    - [[T1021-remote_services#^t1021008-direct-cloud-vm-connections|T1021.008: Direct Cloud VM Connections]]
 - [[T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 - [[T1080-taint_shared_content|T1080: Taint Shared Content]]
 - [[T1091-replication_through_removable_media|T1091: Replication Through Removable Media]]
 - [[T1210-exploitation_of_remote_services|T1210: Exploitation of Remote Services]]
 - [[T1534-internal_spearphishing|T1534: Internal Spearphishing]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-- [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
-- [[T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
-- [[T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
-- [[T1550-use_alternate_authentication_material#^t1550004-web-session-cookie|T1550.004: Web Session Cookie]]
+    - [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
+    - [[T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
+    - [[T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
+    - [[T1550-use_alternate_authentication_material#^t1550004-web-session-cookie|T1550.004: Web Session Cookie]]
 - [[T1563-remote_service_session_hijacking|T1563: Remote Service Session Hijacking]]
-- [[T1563-remote_service_session_hijacking#^t1563001-ssh-hijacking|T1563.001: SSH Hijacking]]
-- [[T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
+    - [[T1563-remote_service_session_hijacking#^t1563001-ssh-hijacking|T1563.001: SSH Hijacking]]
+    - [[T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
 - [[T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
 

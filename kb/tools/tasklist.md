@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0057/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Tasklist"
@@ -24,5 +24,5 @@ The [Tasklist](https://attack.mitre.org/software/S0057) utility displays a list 
 - [[T1007-system_service_discovery|T1007: System Service Discovery]]
 - [[T1057-process_discovery|T1057: Process Discovery]]
 - [[T1518-software_discovery|T1518: Software Discovery]]
-- [[T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]
+    - [[T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]
 

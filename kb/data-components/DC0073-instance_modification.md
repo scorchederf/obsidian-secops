@@ -8,7 +8,7 @@ mitre_modified: "2025-10-21T15:14:40.223Z"
 mitre_version: "2.0"
 mitre_domains:
   - "enterprise-attack"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 

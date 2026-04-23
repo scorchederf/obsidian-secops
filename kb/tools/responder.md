@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0174/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Responder"
@@ -23,5 +23,5 @@ Responder is an open source tool used for LLMNR, NBT-NS and MDNS poisoning, with
 
 - [[T1040-network_sniffing|T1040: Network Sniffing]]
 - [[T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
-- [[T1557-adversary-in-the-middle#^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay|T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay]]
+    - [[T1557-adversary-in-the-middle#^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay|T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay]]
 

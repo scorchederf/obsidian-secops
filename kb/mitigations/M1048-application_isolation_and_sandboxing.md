@@ -9,7 +9,7 @@ mitre_version: "1.3"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1048/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -40,10 +40,10 @@ Endpoint Sandboxing:
 ## Mitigates Techniques
 
 - [[T1021-remote_services|T1021: Remote Services]]
-- [[T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
+    - [[T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
-- [[T1027-obfuscated_files_or_information#^t1027006-html-smuggling|T1027.006: HTML Smuggling]]
-- [[T1027-obfuscated_files_or_information#^t1027017-svg-smuggling|T1027.017: SVG Smuggling]]
+    - [[T1027-obfuscated_files_or_information#^t1027006-html-smuggling|T1027.006: HTML Smuggling]]
+    - [[T1027-obfuscated_files_or_information#^t1027017-svg-smuggling|T1027.017: SVG Smuggling]]
 - [[T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 - [[T1189-drive-by_compromise|T1189: Drive-by Compromise]]
 - [[T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
@@ -53,7 +53,7 @@ Endpoint Sandboxing:
 - [[T1212-exploitation_for_credential_access|T1212: Exploitation for Credential Access]]
 - [[T1559-inter-process_communication|T1559: Inter-Process Communication]]
 - [[T1559-inter-process_communication|T1559: Inter-Process Communication]]
-- [[T1559-inter-process_communication#^t1559001-component-object-model|T1559.001: Component Object Model]]
-- [[T1559-inter-process_communication#^t1559002-dynamic-data-exchange|T1559.002: Dynamic Data Exchange]]
+    - [[T1559-inter-process_communication#^t1559001-component-object-model|T1559.001: Component Object Model]]
+    - [[T1559-inter-process_communication#^t1559002-dynamic-data-exchange|T1559.002: Dynamic Data Exchange]]
 - [[T1611-escape_to_host|T1611: Escape to Host]]
 

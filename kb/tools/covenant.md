@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S1155/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Covenant"
@@ -23,16 +23,16 @@ mitre_aliases:
 
 - [[T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-- [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
-- [[T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
+    - [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+    - [[T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 - [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
-- [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+    - [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 - [[T1082-system_information_discovery|T1082: System Information Discovery]]
 - [[T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
-- [[T1218-system_binary_proxy_execution#^t1218004-installutil|T1218.004: InstallUtil]]
-- [[T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
-- [[T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
+    - [[T1218-system_binary_proxy_execution#^t1218004-installutil|T1218.004: InstallUtil]]
+    - [[T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
+    - [[T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 - [[T1571-non-standard_port|T1571: Non-Standard Port]]
 - [[T1573-encrypted_channel|T1573: Encrypted Channel]]
-- [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
+    - [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
 

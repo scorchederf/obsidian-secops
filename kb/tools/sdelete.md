@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0195/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "SDelete"
@@ -22,6 +22,6 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1070-indicator_removal|T1070: Indicator Removal]]
-- [[T1070-indicator_removal#^t1070004-file-deletion|T1070.004: File Deletion]]
+    - [[T1070-indicator_removal#^t1070004-file-deletion|T1070.004: File Deletion]]
 - [[T1485-data_destruction|T1485: Data Destruction]]
 

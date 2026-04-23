@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1057/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -46,18 +46,18 @@ Cloud Data Security:
 
 - [[T1005-data_from_local_system|T1005: Data from Local System]]
 - [[T1020-automated_exfiltration|T1020: Automated Exfiltration]]
-- [[T1020-automated_exfiltration#^t1020001-traffic-duplication|T1020.001: Traffic Duplication]]
+    - [[T1020-automated_exfiltration#^t1020001-traffic-duplication|T1020.001: Traffic Duplication]]
 - [[T1025-data_from_removable_media|T1025: Data from Removable Media]]
 - [[T1041-exfiltration_over_c2_channel|T1041: Exfiltration Over C2 Channel]]
 - [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 - [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
-- [[T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
-- [[T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
+    - [[T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
+    - [[T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 - [[T1052-exfiltration_over_physical_medium|T1052: Exfiltration Over Physical Medium]]
 - [[T1052-exfiltration_over_physical_medium|T1052: Exfiltration Over Physical Medium]]
-- [[T1052-exfiltration_over_physical_medium#^t1052001-exfiltration-over-usb|T1052.001: Exfiltration over USB]]
+    - [[T1052-exfiltration_over_physical_medium#^t1052001-exfiltration-over-usb|T1052.001: Exfiltration over USB]]
 - [[T1537-transfer_data_to_cloud_account|T1537: Transfer Data to Cloud Account]]
 - [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
 - [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
-- [[T1567-exfiltration_over_web_service#^t1567004-exfiltration-over-webhook|T1567.004: Exfiltration Over Webhook]]
+    - [[T1567-exfiltration_over_web_service#^t1567004-exfiltration-over-webhook|T1567.004: Exfiltration Over Webhook]]
 

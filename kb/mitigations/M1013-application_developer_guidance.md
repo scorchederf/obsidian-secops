@@ -10,7 +10,7 @@ mitre_domains:
   - "enterprise-attack"
   - "mobile-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1013/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -54,25 +54,25 @@ Threat Modeling in the Design Phase:
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
 - [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
 - [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
-- [[T1195-supply_chain_compromise#^t1195001-compromise-software-dependencies-and-development-tools|T1195.001: Compromise Software Dependencies and Development Tools]]
+    - [[T1195-supply_chain_compromise#^t1195001-compromise-software-dependencies-and-development-tools|T1195.001: Compromise Software Dependencies and Development Tools]]
 - [[T1212-exploitation_for_credential_access|T1212: Exploitation for Credential Access]]
 - [[T1496-resource_hijacking|T1496: Resource Hijacking]]
-- [[T1496-resource_hijacking#^t1496003-sms-pumping|T1496.003: SMS Pumping]]
+    - [[T1496-resource_hijacking#^t1496003-sms-pumping|T1496.003: SMS Pumping]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-- [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
+    - [[T1550-use_alternate_authentication_material#^t1550001-application-access-token|T1550.001: Application Access Token]]
 - [[T1559-inter-process_communication|T1559: Inter-Process Communication]]
 - [[T1559-inter-process_communication|T1559: Inter-Process Communication]]
-- [[T1559-inter-process_communication#^t1559003-xpc-services|T1559.003: XPC Services]]
+    - [[T1559-inter-process_communication#^t1559003-xpc-services|T1559.003: XPC Services]]
 - [[T1564-hide_artifacts|T1564: Hide Artifacts]]
 - [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-- [[T1564-hide_artifacts#^t1564009-resource-forking|T1564.009: Resource Forking]]
-- [[T1564-hide_artifacts#^t1564012-file-path-exclusions|T1564.012: File/Path Exclusions]]
+    - [[T1564-hide_artifacts#^t1564009-resource-forking|T1564.009: Resource Forking]]
+    - [[T1564-hide_artifacts#^t1564012-file-path-exclusions|T1564.012: File/Path Exclusions]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-- [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
+    - [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 - [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]
 - [[T1593-search_open_websites_domains|T1593: Search Open Websites/Domains]]
-- [[T1593-search_open_websites_domains#^t1593003-code-repositories|T1593.003: Code Repositories]]
+    - [[T1593-search_open_websites_domains#^t1593003-code-repositories|T1593.003: Code Repositories]]
 - [[T1647-plist_file_modification|T1647: Plist File Modification]]
 

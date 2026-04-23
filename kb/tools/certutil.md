@@ -9,7 +9,7 @@ mitre_version: "1.5"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0160/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "certutil"
@@ -25,7 +25,7 @@ mitre_aliases:
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 - [[T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 - [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-- [[T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
+    - [[T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
 - [[T1560-archive_collected_data|T1560: Archive Collected Data]]
-- [[T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
+    - [[T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 

@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0684/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "ROADTools"
@@ -23,11 +23,11 @@ mitre_aliases:
 
 - [[T1018-remote_system_discovery|T1018: Remote System Discovery]]
 - [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-- [[T1069-permission_groups_discovery#^t1069003-cloud-groups|T1069.003: Cloud Groups]]
+    - [[T1069-permission_groups_discovery#^t1069003-cloud-groups|T1069.003: Cloud Groups]]
 - [[T1078-valid_accounts|T1078: Valid Accounts]]
-- [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+    - [[T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 - [[T1087-account_discovery|T1087: Account Discovery]]
-- [[T1087-account_discovery#^t1087004-cloud-account|T1087.004: Cloud Account]]
+    - [[T1087-account_discovery#^t1087004-cloud-account|T1087.004: Cloud Account]]
 - [[T1119-automated_collection|T1119: Automated Collection]]
 - [[T1526-cloud_service_discovery|T1526: Cloud Service Discovery]]
 

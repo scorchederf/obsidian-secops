@@ -9,7 +9,7 @@ mitre_version: "1.3"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0110/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "at"
@@ -23,5 +23,5 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
-- [[T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
+    - [[T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 

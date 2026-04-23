@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0231/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "Invoke-PSImage"
@@ -22,6 +22,6 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
-- [[T1027-obfuscated_files_or_information#^t1027003-steganography|T1027.003: Steganography]]
-- [[T1027-obfuscated_files_or_information#^t1027009-embedded-payloads|T1027.009: Embedded Payloads]]
+    - [[T1027-obfuscated_files_or_information#^t1027003-steganography|T1027.003: Steganography]]
+    - [[T1027-obfuscated_files_or_information#^t1027009-embedded-payloads|T1027.009: Embedded Payloads]]
 

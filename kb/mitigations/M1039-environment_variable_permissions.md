@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1039/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -40,7 +40,7 @@ Audit Environment Variable Changes:
 ## Mitigates Techniques
 
 - [[T1070-indicator_removal|T1070: Indicator Removal]]
-- [[T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
+    - [[T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 - [[T1562-impair_defenses|T1562: Impair Defenses]]
-- [[T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
+    - [[T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
 

@@ -424,6 +424,19 @@ def parse_attack_objects(bundle):
             relationships.append(obj)
             continue
 
+        # MITRE currently ships Data Sources in the Enterprise bundle, but the
+        # objects themselves are marked deprecated in the source data.
+        # We still want them in the vault because they are useful for local
+        # linking and for documenting ATT&CK detection coverage.
+        #
+        # We only skip truly revoked Data Sources.
+        if obj_type == "x-mitre-data-source":
+            if obj.get("revoked") is True:
+                continue
+
+            data_sources.append(obj)
+            continue
+
         if is_revoked_or_deprecated(obj):
             continue
 
@@ -445,10 +458,6 @@ def parse_attack_objects(bundle):
         if obj_type == "tool":
             if is_enterprise_object(obj):
                 tools.append(obj)
-            continue
-
-        if obj_type == "x-mitre-data-source":
-            data_sources.append(obj)
             continue
 
         if obj_type == "x-mitre-data-component":
@@ -506,6 +515,26 @@ def build_attack_id_lookup(object_groups):
 
             if attack_id:
                 lookup[attack_id] = obj
+
+    return lookup
+
+
+def build_name_lookup(objects):
+    """
+    Build lowercase name -> object.
+
+    This is used as a simple fallback when MITRE provides data source names
+    directly on a technique but there is no relationship object we can use.
+    """
+    lookup = {}
+
+    for obj in objects:
+        name = obj.get("name", "")
+
+        if not name:
+            continue
+
+        lookup[name.strip().lower()] = obj
 
     return lookup
 
@@ -841,6 +870,27 @@ def build_data_source_to_technique_map(data_source_to_component_map, data_compon
         mapping[source_id].sort()
 
     return mapping
+
+
+def split_mitre_data_source_value(value):
+    """
+    Split a MITRE data source string into source and component names.
+
+    Example:
+    "Process: Process Creation" -> ("Process", "Process Creation")
+    "Cloud Service" -> ("Cloud Service", "")
+    """
+    if not value:
+        return "", ""
+
+    parts = value.split(":", 1)
+    source_name = parts[0].strip()
+    component_name = ""
+
+    if len(parts) > 1:
+        component_name = parts[1].strip()
+
+    return source_name, component_name
 
 
 # ============================================================
@@ -1184,6 +1234,8 @@ def build_technique_note(
     technique_to_tool_map,
     technique_to_data_component_map,
     data_component_to_source_map,
+    data_source_name_lookup,
+    data_component_name_lookup,
     tactic_lookup,
     attack_id_lookup,
     subtechnique_attack_id_to_parent,
@@ -1212,6 +1264,7 @@ def build_technique_note(
                 tactic_ids.append(tactic_attack_id)
 
     yaml_write_list(yaml_lines, "mitre_tactic_ids", tactic_ids)
+    yaml_write_list(yaml_lines, "mitre_data_source_values", technique.get("x_mitre_data_sources", []))
 
     component_ids = []
     source_ids = []
@@ -1261,13 +1314,17 @@ def build_technique_note(
 
     data_source_links = []
     data_component_links = []
+    mitre_data_source_values = []
     seen_source_ids = []
+    seen_component_ids = []
+    seen_data_source_values = []
 
     for component in technique_to_data_component_map.get(technique["id"], []):
         component_attack_id = get_attack_id(component)
         component_name = component.get("name", "")
 
-        if component_attack_id:
+        if component_attack_id and component_attack_id not in seen_component_ids:
+            seen_component_ids.append(component_attack_id)
             data_component_links.append(make_data_component_link(component_attack_id, component_name))
 
         source = data_component_to_source_map.get(component["id"])
@@ -1279,8 +1336,42 @@ def build_technique_note(
                 seen_source_ids.append(source_attack_id)
                 data_source_links.append(make_data_source_link(source_attack_id, source_name))
 
+    for raw_value in technique.get("x_mitre_data_sources", []):
+        if raw_value in seen_data_source_values:
+            continue
+
+        seen_data_source_values.append(raw_value)
+        source_name, component_name = split_mitre_data_source_value(raw_value)
+
+        source_obj = data_source_name_lookup.get(source_name.lower())
+        component_obj = data_component_name_lookup.get(component_name.lower())
+
+        if source_obj is not None:
+            source_attack_id = get_attack_id(source_obj)
+            source_title = source_obj.get("name", "")
+
+            if source_attack_id and source_attack_id not in seen_source_ids:
+                seen_source_ids.append(source_attack_id)
+                data_source_links.append(make_data_source_link(source_attack_id, source_title))
+
+        elif raw_value not in mitre_data_source_values:
+            mitre_data_source_values.append(raw_value)
+
+        if component_name:
+            if component_obj is not None:
+                component_attack_id = get_attack_id(component_obj)
+                component_title = component_obj.get("name", "")
+
+                if component_attack_id and component_attack_id not in seen_component_ids:
+                    seen_component_ids.append(component_attack_id)
+                    data_component_links.append(make_data_component_link(component_attack_id, component_title))
+
+            elif raw_value not in mitre_data_source_values:
+                mitre_data_source_values.append(raw_value)
+
     text += write_bullet_links("Data Sources", data_source_links)
     text += write_bullet_links("Data Components", data_component_links)
+    text += write_bullet_values("MITRE Data Sources", mitre_data_source_values)
 
     detection = technique.get("x_mitre_detection", "")
     if detection:
@@ -1581,21 +1672,30 @@ def sort_objects_by_attack_id(objects):
 
 def write_nested_bullet_links(title, rows):
     """
-    Write bullet links.
+    Write nested bullet links.
 
-    Supports two input styles:
+    Supported input styles:
 
     1. Flat list of strings:
        ["[[link1]]", "[[link2]]"]
 
-    2. Nested list of dictionaries:
+    2. Rows with explicit levels:
+       [
+           {"level": 0, "link": "[[parent]]"},
+           {"level": 1, "link": "[[child]]"},
+       ]
+
+    3. Parent/children dictionaries:
        [
            {
-               "parent": "[[parent link]]",
+               "parent": "[[parent]]",
                "children": ["[[child 1]]", "[[child 2]]"]
            }
        ]
     """
+    if not rows:
+        return ""
+
     text = f"## {title}\n\n"
 
     for row in rows:
@@ -1613,18 +1713,24 @@ def write_nested_bullet_links(title, rows):
 
                 for child in children:
                     text += f"    - {child}\n"
+
                 continue
 
             link = row.get("link")
+            level = row.get("level", 0)
+
             if link:
-                text += f"- {link}\n"
+                if level < 0:
+                    level = 0
+
+                indent = "    " * level
+                text += f"{indent}- {link}\n"
                 continue
 
         text += f"- {str(row)}\n"
 
     text += "\n"
     return text
-
 
 def main():
     log("Starting ATT&CK vault build", "INFO")
@@ -1647,6 +1753,8 @@ def main():
     tool_lookup = build_object_lookup(groups["tools"])
     data_source_lookup = build_object_lookup(groups["data_sources"])
     data_component_lookup = build_object_lookup(groups["data_components"])
+    data_source_name_lookup = build_name_lookup(groups["data_sources"])
+    data_component_name_lookup = build_name_lookup(groups["data_components"])
 
     attack_id_lookup = build_attack_id_lookup(groups)
     tactic_shortname_lookup = build_tactic_shortname_lookup(groups["tactics"])
@@ -1711,6 +1819,8 @@ def main():
             technique_to_tool_map,
             technique_to_data_component_map,
             data_component_to_source_map,
+            data_source_name_lookup,
+            data_component_name_lookup,
             tactic_shortname_lookup,
             attack_id_lookup,
             sub_to_parent,

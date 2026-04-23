@@ -9,7 +9,7 @@ mitre_version: "1.2"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1052/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -62,14 +62,14 @@ Third-Party Security Tools:
 ## Mitigates Techniques
 
 - [[T1546-event_triggered_execution|T1546: Event Triggered Execution]]
-- [[T1546-event_triggered_execution#^t1546011-application-shimming|T1546.011: Application Shimming]]
+    - [[T1546-event_triggered_execution#^t1546011-application-shimming|T1546.011: Application Shimming]]
 - [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
 - [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
-- [[T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+    - [[T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 - [[T1550-use_alternate_authentication_material|T1550: Use Alternate Authentication Material]]
-- [[T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
+    - [[T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-- [[T1574-hijack_execution_flow#^t1574005-executable-installer-file-permissions-weakness|T1574.005: Executable Installer File Permissions Weakness]]
-- [[T1574-hijack_execution_flow#^t1574010-services-file-permissions-weakness|T1574.010: Services File Permissions Weakness]]
+    - [[T1574-hijack_execution_flow#^t1574005-executable-installer-file-permissions-weakness|T1574.005: Executable Installer File Permissions Weakness]]
+    - [[T1574-hijack_execution_flow#^t1574010-services-file-permissions-weakness|T1574.010: Services File Permissions Weakness]]
 

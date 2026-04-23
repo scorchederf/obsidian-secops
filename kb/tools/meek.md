@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0175/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "meek"
@@ -22,5 +22,5 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1090-proxy|T1090: Proxy]]
-- [[T1090-proxy#^t1090004-domain-fronting|T1090.004: Domain Fronting]]
+    - [[T1090-proxy#^t1090004-domain-fronting|T1090.004: Domain Fronting]]
 

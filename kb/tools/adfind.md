@@ -9,7 +9,7 @@ mitre_version: "1.5"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0552/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "AdFind"
@@ -24,8 +24,8 @@ mitre_aliases:
 - [[T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
 - [[T1018-remote_system_discovery|T1018: Remote System Discovery]]
 - [[T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
-- [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+    - [[T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 - [[T1087-account_discovery|T1087: Account Discovery]]
-- [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+    - [[T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 - [[T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 

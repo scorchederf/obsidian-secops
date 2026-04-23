@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1044/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -64,8 +64,8 @@ Cross-Platform Solutions:
 ## Mitigates Techniques
 
 - [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
-- [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
+    - [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
 - [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
-- [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
+    - [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 

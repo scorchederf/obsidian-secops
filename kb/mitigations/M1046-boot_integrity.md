@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/mitigations/M1046/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 ---
 
@@ -41,21 +41,21 @@ Runtime Integrity Monitoring:
 
 - [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
 - [[T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
-- [[T1195-supply_chain_compromise#^t1195003-compromise-hardware-supply-chain|T1195.003: Compromise Hardware Supply Chain]]
+    - [[T1195-supply_chain_compromise#^t1195003-compromise-hardware-supply-chain|T1195.003: Compromise Hardware Supply Chain]]
 - [[T1495-firmware_corruption|T1495: Firmware Corruption]]
 - [[T1505-server_software_component|T1505: Server Software Component]]
 - [[T1505-server_software_component|T1505: Server Software Component]]
-- [[T1505-server_software_component#^t1505006-vsphere-installation-bundles|T1505.006: vSphere Installation Bundles]]
+    - [[T1505-server_software_component#^t1505006-vsphere-installation-bundles|T1505.006: vSphere Installation Bundles]]
 - [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
 - [[T1542-pre-os_boot|T1542: Pre-OS Boot]]
-- [[T1542-pre-os_boot#^t1542001-system-firmware|T1542.001: System Firmware]]
-- [[T1542-pre-os_boot#^t1542003-bootkit|T1542.003: Bootkit]]
-- [[T1542-pre-os_boot#^t1542004-rommonkit|T1542.004: ROMMONkit]]
-- [[T1542-pre-os_boot#^t1542005-tftp-boot|T1542.005: TFTP Boot]]
+    - [[T1542-pre-os_boot#^t1542001-system-firmware|T1542.001: System Firmware]]
+    - [[T1542-pre-os_boot#^t1542003-bootkit|T1542.003: Bootkit]]
+    - [[T1542-pre-os_boot#^t1542004-rommonkit|T1542.004: ROMMONkit]]
+    - [[T1542-pre-os_boot#^t1542005-tftp-boot|T1542.005: TFTP Boot]]
 - [[T1553-subvert_trust_controls|T1553: Subvert Trust Controls]]
-- [[T1553-subvert_trust_controls#^t1553006-code-signing-policy-modification|T1553.006: Code Signing Policy Modification]]
+    - [[T1553-subvert_trust_controls#^t1553006-code-signing-policy-modification|T1553.006: Code Signing Policy Modification]]
 - [[T1601-modify_system_image|T1601: Modify System Image]]
 - [[T1601-modify_system_image|T1601: Modify System Image]]
-- [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
-- [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
+    - [[T1601-modify_system_image#^t1601001-patch-system-image|T1601.001: Patch System Image]]
+    - [[T1601-modify_system_image#^t1601002-downgrade-system-image|T1601.002: Downgrade System Image]]
 

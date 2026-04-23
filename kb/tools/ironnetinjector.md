@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0581/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "IronNetInjector"
@@ -22,16 +22,16 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
-- [[T1027-obfuscated_files_or_information#^t1027013-encrypted-encoded-file|T1027.013: Encrypted/Encoded File]]
+    - [[T1027-obfuscated_files_or_information#^t1027013-encrypted-encoded-file|T1027.013: Encrypted/Encoded File]]
 - [[T1036-masquerading|T1036: Masquerading]]
-- [[T1036-masquerading#^t1036004-masquerade-task-or-service|T1036.004: Masquerade Task or Service]]
+    - [[T1036-masquerading#^t1036004-masquerade-task-or-service|T1036.004: Masquerade Task or Service]]
 - [[T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
-- [[T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+    - [[T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 - [[T1055-process_injection|T1055: Process Injection]]
 - [[T1055-process_injection|T1055: Process Injection]]
-- [[T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
+    - [[T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 - [[T1057-process_discovery|T1057: Process Discovery]]
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-- [[T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
+    - [[T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
 - [[T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 

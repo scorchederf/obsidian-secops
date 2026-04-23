@@ -9,7 +9,7 @@ mitre_version: "1.4"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0508/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "ngrok"
@@ -25,6 +25,6 @@ mitre_aliases:
 - [[T1102-web_service|T1102: Web Service]]
 - [[T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
 - [[T1568-dynamic_resolution|T1568: Dynamic Resolution]]
-- [[T1568-dynamic_resolution#^t1568002-domain-generation-algorithms|T1568.002: Domain Generation Algorithms]]
+    - [[T1568-dynamic_resolution#^t1568002-domain-generation-algorithms|T1568.002: Domain Generation Algorithms]]
 - [[T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 

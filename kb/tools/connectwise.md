@@ -9,7 +9,7 @@ mitre_version: "1.1"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S0591/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "ConnectWise"
@@ -23,7 +23,7 @@ mitre_aliases:
 ## Uses Techniques
 
 - [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
-- [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+    - [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 - [[T1113-screen_capture|T1113: Screen Capture]]
 - [[T1125-video_capture|T1125: Video Capture]]
 

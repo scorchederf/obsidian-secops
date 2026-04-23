@@ -9,7 +9,7 @@ mitre_version: "1.0"
 mitre_domains:
   - "enterprise-attack"
 mitre_url: "https://attack.mitre.org/software/S1087/"
-build_date: "2026-04-21 20:44:18"
+build_date: "2026-04-23 20:16:46"
 build_source: "script"
 mitre_aliases:
   - "AsyncRAT"
@@ -23,18 +23,18 @@ mitre_aliases:
 
 - [[T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 - [[T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
-- [[T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+    - [[T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 - [[T1056-input_capture|T1056: Input Capture]]
-- [[T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
+    - [[T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
 - [[T1057-process_discovery|T1057: Process Discovery]]
 - [[T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 - [[T1106-native_api|T1106: Native API]]
 - [[T1113-screen_capture|T1113: Screen Capture]]
 - [[T1125-video_capture|T1125: Video Capture]]
 - [[T1497-virtualization_sandbox_evasion|T1497: Virtualization/Sandbox Evasion]]
-- [[T1497-virtualization_sandbox_evasion#^t1497001-system-checks|T1497.001: System Checks]]
+    - [[T1497-virtualization_sandbox_evasion#^t1497001-system-checks|T1497.001: System Checks]]
 - [[T1564-hide_artifacts|T1564: Hide Artifacts]]
-- [[T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
+    - [[T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
 - [[T1568-dynamic_resolution|T1568: Dynamic Resolution]]
 - [[T1622-debugger_evasion|T1622: Debugger Evasion]]
 - [[T1680-local_storage_discovery|T1680: Local Storage Discovery]]
