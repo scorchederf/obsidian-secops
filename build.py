@@ -28,39 +28,49 @@ from urllib.parse import quote
 # a third-party library.
 # ============================================================
 
-LOG_LEVEL = "INFO"  # DEBUG, INFO, ERROR
+# Debug builds are the normal build mode while this project is being developed.
+DEBUG_BUILD = True
+LOG_LEVEL = "DEBUG" if DEBUG_BUILD else "INFO"  # DEBUG, INFO, ERROR
+
+# Keep full rebuilds enabled so generated pages do not leave stale files behind.
 FULL_REBUILD = True
 DOWNLOAD_JSON_IF_MISSING = True
 
-VAULT = "kb"
-ATTACK_DIR = os.path.join(VAULT, "attack")
-D3FEND_DIR = os.path.join(VAULT, "d3fend")
+# The output root. Open this folder as your Obsidian vault.
+VAULT = "secopskb"
+
+# The vault has a simple top-level structure:
+# - kb: generated reference content
+# - notes: analyst-owned notes created by clicking links in Obsidian
+KB_DIR = os.path.join(VAULT, "kb")
+NOTES_DIR = os.path.join(VAULT, "notes")
+
+ATTACK_DIR = os.path.join(KB_DIR, "attack")
+D3FEND_DIR = os.path.join(KB_DIR, "defend")
+TOOLS_DIR = os.path.join(KB_DIR, "tools")
 
 TACTICS_DIR = os.path.join(ATTACK_DIR, "tactics")
 TECHNIQUES_DIR = os.path.join(ATTACK_DIR, "techniques")
 MITIGATIONS_DIR = os.path.join(ATTACK_DIR, "mitigations")
-TOOLS_DIR = os.path.join(ATTACK_DIR, "tools")
 DATA_SOURCES_DIR = os.path.join(ATTACK_DIR, "data-sources")
 DATA_COMPONENTS_DIR = os.path.join(ATTACK_DIR, "data-components")
 D3FEND_TECHNIQUES_DIR = os.path.join(D3FEND_DIR, "techniques")
-
-NOTES_DIR = os.path.join(VAULT, "notes")
 
 NOTES_ATTACK_DIR = os.path.join(NOTES_DIR, "attack")
 NOTES_ATTACK_TACTICS_DIR = os.path.join(NOTES_ATTACK_DIR, "tactics")
 NOTES_ATTACK_TECHNIQUES_DIR = os.path.join(NOTES_ATTACK_DIR, "techniques")
 NOTES_ATTACK_MITIGATIONS_DIR = os.path.join(NOTES_ATTACK_DIR, "mitigations")
-NOTES_ATTACK_TOOLS_DIR = os.path.join(NOTES_ATTACK_DIR, "tools")
 NOTES_ATTACK_DATA_SOURCES_DIR = os.path.join(NOTES_ATTACK_DIR, "data-sources")
 NOTES_ATTACK_DATA_COMPONENTS_DIR = os.path.join(NOTES_ATTACK_DIR, "data-components")
-
-NOTES_D3FEND_DIR = os.path.join(NOTES_DIR, "d3fend")
+NOTES_TOOLS_DIR = os.path.join(NOTES_DIR, "tools")
+NOTES_D3FEND_DIR = os.path.join(NOTES_DIR, "defend")
 NOTES_D3FEND_TECHNIQUES_DIR = os.path.join(NOTES_D3FEND_DIR, "techniques")
 
 ATTACK_JSON_FILE = "enterprise-attack.json"
-D3FEND_JSON_FILE = "d3fend.json"
-D3FEND_OFFENSIVE_ALL_FILE = "d3fend-offensive-techniques-all.json"
-D3FEND_OFFENSIVE_DETAILS_DIR = "d3fend-offensive-techniques"
+WORKING_DIR = "workingdir"
+D3FEND_JSON_FILE = os.path.join(WORKING_DIR, "d3fend.json")
+D3FEND_OFFENSIVE_ALL_FILE = os.path.join(WORKING_DIR, "d3fend-offensive-techniques-all.json")
+D3FEND_OFFENSIVE_DETAILS_DIR = os.path.join(WORKING_DIR, "d3fend-offensive-techniques")
 ATTACK_JSON_URL = (
     "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/"
     "enterprise-attack/enterprise-attack.json"
@@ -405,19 +415,48 @@ def load_attack_bundle():
 
 
 
-def download_d3fend_json_if_needed():
+def ensure_parent_folder_for_file(filepath):
     """
-    Download the D3FEND ontology JSON file if it does not exist.
+    Create the parent folder for a file path when one is needed.
+
+    Some cache files live in workingdir. Source files may live beside the
+    script. This helper supports both cases.
     """
-    if os.path.exists(D3FEND_JSON_FILE):
+    folder_path = os.path.dirname(filepath)
+
+    if not folder_path:
         return
 
-    log("Downloading MITRE D3FEND JSON...", "INFO")
-    response = requests.get(D3FEND_JSON_URL, timeout=120)
+    ensure_folder(folder_path)
+
+
+def download_json_file_if_missing(filepath, url, display_name):
+    """
+    Download a JSON file only when the local cached copy is missing.
+
+    There is no age or checksum validation yet. If the file exists, the build
+    trusts it and uses the cached copy. Delete the file manually when you want
+    to force a fresh download.
+    """
+    if os.path.exists(filepath):
+        log(f"Using cached {display_name}: {filepath}", "DEBUG")
+        return
+
+    ensure_parent_folder_for_file(filepath)
+
+    log(f"Downloading {display_name}...", "INFO")
+    response = requests.get(url, timeout=120)
     response.raise_for_status()
 
-    with open(D3FEND_JSON_FILE, "w", encoding="utf-8") as f:
+    with open(filepath, "w", encoding="utf-8") as f:
         f.write(response.text)
+
+
+def download_d3fend_json_if_needed():
+    """
+    Download the D3FEND ontology JSON file if it is not already cached.
+    """
+    download_json_file_if_missing(D3FEND_JSON_FILE, D3FEND_JSON_URL, "MITRE D3FEND JSON")
 
 
 
@@ -432,17 +471,13 @@ def load_d3fend_bundle():
 
 def download_d3fend_offensive_all_if_needed():
     """
-    Download the MITRE D3FEND offensive-technique index JSON if it does not exist.
+    Download the MITRE D3FEND offensive-technique index JSON if it is not cached.
     """
-    if os.path.exists(D3FEND_OFFENSIVE_ALL_FILE):
-        return
-
-    log("Downloading MITRE D3FEND offensive-technique index JSON...", "INFO")
-    response = requests.get(D3FEND_OFFENSIVE_ALL_URL, timeout=120)
-    response.raise_for_status()
-
-    with open(D3FEND_OFFENSIVE_ALL_FILE, "w", encoding="utf-8") as f:
-        f.write(response.text)
+    download_json_file_if_missing(
+        D3FEND_OFFENSIVE_ALL_FILE,
+        D3FEND_OFFENSIVE_ALL_URL,
+        "MITRE D3FEND offensive-technique index JSON",
+    )
 
 
 
@@ -480,6 +515,7 @@ def download_d3fend_offensive_detail_if_needed(attack_id):
     filepath = build_d3fend_offensive_detail_filepath(attack_id)
 
     if os.path.exists(filepath):
+        log(f"Using cached D3FEND offensive-technique detail for {attack_id}", "DEBUG")
         return
 
     url = D3FEND_OFFENSIVE_DETAIL_URL_TEMPLATE.format(attack_id=quote(attack_id, safe=""))
@@ -1676,9 +1712,16 @@ def build_notes_tags(parent_framework, parent_object_type):
 
 def convert_path_to_wikilink_target(path_value):
     """
-    Convert a file path into an Obsidian wiki link target.
+    Convert a filesystem path into an Obsidian wiki link target.
+
+    The script writes files under VAULT. In Obsidian that folder is the vault
+    root, so links should not include the VAULT folder name.
     """
     target = path_value.replace("\\", "/")
+    vault_prefix = VAULT.replace("\\", "/") + "/"
+
+    if target.startswith(vault_prefix):
+        target = target[len(vault_prefix):]
 
     if target.endswith(".md"):
         target = target[:-3]
@@ -1687,21 +1730,52 @@ def convert_path_to_wikilink_target(path_value):
 
 
 
-def make_workspace_note_filename(object_id):
+def make_workspace_note_filename(object_id, name):
     """
-    Build the workspace note filename from the object id only.
+    Build the workspace note filename from the object id and display name.
+
+    Example:
+    TA0001 + Initial Access -> TA0001-initial_access-note.md
     """
-    return make_safe_name(object_id + "-notes")
+    safe_name = make_safe_name(name)
+    return f"{object_id}-{safe_name}-note"
+
+
+
+def build_horizontal_navigation():
+    """
+    Build a compact navigation row for every generated page.
+    """
+    text = "[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[notes/index|Notes]]\n\n"
+    text += "---\n\n"
+    return text
 
 
 
 def build_workspace_link_section(link_target, alias_text="Open workspace note"):
     """
-    Build a small section that links to the analyst workspace page.
+    Build the analyst workspace area.
+
+    The normal wiki link lets an analyst click through to the note.
+    The embed shows the note inline once it exists.
+    The script does not create the note file; Obsidian creates it when clicked.
     """
     text = "## Workspace\n\n"
     text += f"- [[{link_target}|{alias_text}]]\n\n"
+    text += f"![[{link_target}]]\n\n"
     return text
+
+
+
+def build_page_start():
+    """
+    Build the standard top navigation for generated pages.
+
+    Page-specific descriptions are written immediately after this navigation.
+    The workspace block is written after the description so analysts see the
+    MITRE context before the embedded workspace note.
+    """
+    return build_horizontal_navigation()
 
 
 
@@ -1764,11 +1838,11 @@ def make_generated_reference_target(folder_path, filename_without_extension):
 
 
 
-def make_workspace_target(folder_path, object_id):
+def make_workspace_target(folder_path, object_id, name):
     """
     Build a vault-root-relative target for a workspace note.
     """
-    filename = make_workspace_note_filename(object_id)
+    filename = make_workspace_note_filename(object_id, name)
     return convert_path_to_wikilink_target(os.path.join(folder_path, filename + ".md"))
 
 
@@ -1856,11 +1930,13 @@ def build_d3fend_note(
     yaml_write_list(yaml_lines, "attack_technique_ids", d3fend_to_attack_map.get(d3fend_id, []))
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(f"{d3fend_id}: {name}")
+    text += build_page_start()
 
     definition = get_d3fend_text_value(entry, "d3f:definition")
     if definition:
         text += definition + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_D3FEND_TECHNIQUES_DIR, d3fend_id, name))
 
     parent = child_to_parent.get(ontology_id)
     if parent is not None:
@@ -1909,7 +1985,6 @@ def build_d3fend_note(
     if related_values:
         text += write_bullet_values("Ontology Relationships", related_values)
 
-    text += build_workspace_link_section(make_workspace_target(NOTES_D3FEND_TECHNIQUES_DIR, d3fend_id))
     return text
 
 
@@ -2204,14 +2279,6 @@ def write_subtechnique_blocks(
             description = clean_mitre_text(description, attack_id_lookup, subtechnique_attack_id_to_parent)
             text += description + "\n\n"
 
-        if attack_to_d3fend_map is not None and d3fend_id_lookup is not None:
-            d3fend_links = build_d3fend_links_from_attack_id(
-                sub_attack_id,
-                attack_to_d3fend_map,
-                d3fend_id_lookup,
-            )
-            text += write_bullet_links("D3FEND", d3fend_links)
-
     return text
 
 
@@ -2233,11 +2300,13 @@ def build_tactic_note(tactic, tactic_to_technique_map, parent_to_subs, attack_id
     yaml_write_line(yaml_lines, "mitre_shortname", tactic.get("x_mitre_shortname", ""))
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(f"{attack_id}: {name}")
+    text += build_page_start()
 
     description = tactic.get("description", "")
     if description:
         text += description + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_TACTICS_DIR, attack_id, name))
 
     related_links = []
 
@@ -2262,7 +2331,6 @@ def build_tactic_note(tactic, tactic_to_technique_map, parent_to_subs, attack_id
             )
 
     text += write_nested_bullet_links("Related Techniques", related_links)
-    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_TACTICS_DIR, attack_id))
     return text
 
 
@@ -2341,12 +2409,14 @@ def build_technique_note(
     yaml_write_list(yaml_lines, "tags", build_attack_tags("technique", include_detection, include_telemetry))
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(f"{attack_id}: {name}")
+    text += build_page_start()
 
     description = technique.get("description", "")
     if description:
         description = clean_mitre_text(description, attack_id_lookup, subtechnique_attack_id_to_parent)
         text += description + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_TECHNIQUES_DIR, attack_id, name))
 
     tactic_links = []
     for phase_name in [phase.get("phase_name", "") for phase in kill_chain_phases]:
@@ -2449,7 +2519,6 @@ def build_technique_note(
 
     text += write_bullet_values("Platforms", technique.get("x_mitre_platforms", []))
     text += write_bullet_values("Required Permissions", technique.get("x_mitre_permissions_required", []))
-    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_TECHNIQUES_DIR, attack_id))
 
     return text
 
@@ -2467,11 +2536,13 @@ def build_mitigation_note(mitigation, technique_to_mitigation_map, sub_to_parent
     yaml_write_list(yaml_lines, "tags", build_attack_tags("mitigation"))
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(f"{attack_id}: {name}")
+    text += build_page_start()
 
     description = mitigation.get("description", "")
     if description:
         text += description + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_MITIGATIONS_DIR, attack_id, name))
 
     links = []
     seen_parent_links = []
@@ -2513,7 +2584,6 @@ def build_mitigation_note(mitigation, technique_to_mitigation_map, sub_to_parent
                 links.append({"level": 0, "link": make_technique_link(get_attack_id(technique), technique.get("name", ""))})
 
     text += write_nested_bullet_links("Mitigates Techniques", links)
-    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_MITIGATIONS_DIR, attack_id))
     return text
 
 
@@ -2532,11 +2602,13 @@ def build_tool_note(tool, technique_to_tool_map, sub_to_parent, technique_lookup
     yaml_write_list(yaml_lines, "mitre_aliases", aliases)
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(name)
+    text += build_page_start()
 
     description = tool.get("description", "")
     if description:
         text += description + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_TOOLS_DIR, attack_id, name))
 
     links = []
     seen_parent_links = []
@@ -2578,7 +2650,6 @@ def build_tool_note(tool, technique_to_tool_map, sub_to_parent, technique_lookup
                 links.append({"level": 0, "link": make_technique_link(get_attack_id(technique), technique.get("name", ""))})
 
     text += write_nested_bullet_links("Uses Techniques", links)
-    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_TOOLS_DIR, attack_id))
     return text
 
 
@@ -2604,11 +2675,13 @@ def build_data_source_note(data_source, data_source_to_component_map, data_sourc
     yaml_write_list(yaml_lines, "mitre_data_component_ids", component_ids)
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(f"{attack_id}: {name}")
+    text += build_page_start()
 
     description = data_source.get("description", "")
     if description:
         text += description + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_DATA_SOURCES_DIR, attack_id, name))
 
     component_links = []
     for component in data_source_to_component_map.get(data_source["id"], []):
@@ -2628,7 +2701,6 @@ def build_data_source_note(data_source, data_source_to_component_map, data_sourc
         technique_links.append(make_technique_link(get_attack_id(technique), technique.get("name", "")))
 
     text += write_bullet_links("Related Techniques", technique_links)
-    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_DATA_SOURCES_DIR, attack_id))
     return text
 
 
@@ -2650,11 +2722,13 @@ def build_data_component_note(data_component, data_component_to_source_map, data
         yaml_write_line(yaml_lines, "mitre_data_source_name", parent_source.get("name", ""))
 
     text = render_yaml_block(yaml_lines)
-    text += write_h1(f"{attack_id}: {name}")
+    text += build_page_start()
 
     description = data_component.get("description", "")
     if description:
         text += description + "\n\n"
+
+    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_DATA_COMPONENTS_DIR, attack_id, name))
 
     if parent_source is not None:
         source_link = make_data_source_link(get_attack_id(parent_source), parent_source.get("name", ""))
@@ -2673,7 +2747,6 @@ def build_data_component_note(data_component, data_component_to_source_map, data
         technique_links.append(make_technique_link(get_attack_id(technique), technique.get("name", "")))
 
     text += write_bullet_links("Related Techniques", technique_links)
-    text += build_workspace_link_section(make_workspace_target(NOTES_ATTACK_DATA_COMPONENTS_DIR, attack_id))
     return text
 
 
@@ -2715,32 +2788,364 @@ def write_build_info_note(counts):
     write_text_file_if_changed(filepath, text)
 
 
+
+
+def make_index_link(folder_path, filename_without_extension, alias_text):
+    """
+    Build a vault-root-relative index link.
+
+    Index pages should be useful navigation pages, not just count summaries.
+    This helper keeps index links consistent with the rest of the vault.
+    """
+    target = make_generated_reference_target(folder_path, filename_without_extension)
+    return f"[[{target}|{alias_text}]]"
+
+
+
+def write_index_note(folder_path, title, sections):
+    """
+    Write a generated index note with real navigation links.
+
+    sections is a simple list of dictionaries:
+    [
+        {"title": "Section", "rows": ["[[link]]", "[[link2]]"]}
+    ]
+    """
+    text = build_horizontal_navigation()
+    text += f"# {title}\n\n"
+
+    for section in sections:
+        section_title = section.get("title", "")
+        rows = section.get("rows", [])
+
+        if section_title:
+            text += f"## {section_title}\n\n"
+
+        if not rows:
+            text += "_No entries._\n\n"
+            continue
+
+        for row in rows:
+            if str(row).startswith("    - "):
+                text += str(row) + "\n"
+            else:
+                text += f"- {row}\n"
+
+        text += "\n"
+
+    write_text_file_if_changed(os.path.join(folder_path, "index.md"), text)
+
+
+
+def build_tactic_index_rows(tactics):
+    """
+    Build rows for the tactics index.
+    """
+    rows = []
+
+    for tactic in tactics:
+        attack_id = get_attack_id(tactic)
+        name = tactic.get("name", "")
+        filename = make_tactic_filename(attack_id, name)
+        rows.append(make_index_link(TACTICS_DIR, filename, f"{attack_id}: {name}"))
+
+    return rows
+
+
+
+def build_technique_index_rows(techniques, parent_to_subs):
+    """
+    Build rows for the techniques index.
+
+    Parent techniques link to files. Sub-techniques link to block anchors inside
+    their parent technique files because sub-techniques are not separate files.
+    """
+    rows = []
+
+    for technique in techniques:
+        if technique.get("x_mitre_is_subtechnique") is True:
+            continue
+
+        attack_id = get_attack_id(technique)
+        name = technique.get("name", "")
+        filename = make_technique_filename(attack_id, name)
+        rows.append(make_index_link(TECHNIQUES_DIR, filename, f"{attack_id}: {name}"))
+
+        for sub in parent_to_subs.get(technique["id"], []):
+            sub_attack_id = get_attack_id(sub)
+            sub_name = sub.get("name", "")
+            sub_link = make_subtechnique_block_link(attack_id, name, sub_attack_id, sub_name)
+            rows.append("    - " + sub_link)
+
+    return rows
+
+
+
+def build_mitigation_index_rows(mitigations):
+    """
+    Build rows for the mitigations index.
+    """
+    rows = []
+
+    for mitigation in mitigations:
+        attack_id = get_attack_id(mitigation)
+        if not attack_id.startswith("M"):
+            continue
+
+        name = mitigation.get("name", "")
+        filename = make_mitigation_filename(attack_id, name)
+        rows.append(make_index_link(MITIGATIONS_DIR, filename, f"{attack_id}: {name}"))
+
+    return rows
+
+
+
+def build_tool_index_rows(tools):
+    """
+    Build rows for the MITRE tools index.
+    """
+    rows = []
+
+    for tool in tools:
+        name = tool.get("name", "")
+        attack_id = get_attack_id(tool)
+        filename = make_tool_filename(name)
+
+        if attack_id:
+            alias_text = f"{attack_id}: {name}"
+        else:
+            alias_text = name
+
+        rows.append(make_index_link(TOOLS_DIR, filename, alias_text))
+
+    return rows
+
+
+
+def build_data_source_index_rows(data_sources):
+    """
+    Build rows for the data sources index.
+    """
+    rows = []
+
+    for data_source in data_sources:
+        attack_id = get_attack_id(data_source)
+        if not attack_id.startswith("DS"):
+            continue
+
+        name = data_source.get("name", "")
+        filename = make_data_source_filename(attack_id, name)
+        rows.append(make_index_link(DATA_SOURCES_DIR, filename, f"{attack_id}: {name}"))
+
+    return rows
+
+
+
+def build_data_component_index_rows(data_components):
+    """
+    Build rows for the data components index.
+    """
+    rows = []
+
+    for data_component in data_components:
+        attack_id = get_attack_id(data_component)
+        if not attack_id.startswith("DC"):
+            continue
+
+        name = data_component.get("name", "")
+        filename = make_data_component_filename(attack_id, name)
+        rows.append(make_index_link(DATA_COMPONENTS_DIR, filename, f"{attack_id}: {name}"))
+
+    return rows
+
+
+
+def build_d3fend_index_rows(d3fend_techniques):
+    """
+    Build rows for the D3FEND techniques index.
+    """
+    rows = []
+
+    for entry in d3fend_techniques:
+        d3fend_id = get_d3fend_id(entry)
+        name = get_d3fend_label(entry)
+        filename = make_d3fend_filename(d3fend_id, name)
+        rows.append(make_index_link(D3FEND_TECHNIQUES_DIR, filename, f"{d3fend_id}: {name}"))
+
+    return rows
+
+
+
+def write_root_index_note():
+    """
+    Write the vault home page.
+    """
+    write_index_note(
+        VAULT,
+        "SecOps Knowledge Base",
+        [
+            {
+                "title": "Start Here",
+                "rows": [
+                    "[[kb/index|Knowledge Base]]",
+                    "[[kb/attack/index|ATT&CK]]",
+                    "[[kb/tools/index|MITRE Tools]]",
+                    "[[kb/defend/index|D3FEND]]",
+                    "[[notes/index|Analyst Notes]]",
+                ],
+            }
+        ],
+    )
+
+
+
+def write_generated_index_notes(groups, d3fend_groups, parent_to_subs, counts):
+    """
+    Write useful generated index pages.
+
+    These pages are intentionally simple. They provide click paths into the
+    generated vault without requiring search or Dataview.
+    """
+    tactic_rows = build_tactic_index_rows(groups["tactics"])
+    technique_rows = build_technique_index_rows(groups["techniques"], parent_to_subs)
+    mitigation_rows = build_mitigation_index_rows(groups["mitigations"])
+    tool_rows = build_tool_index_rows(groups["tools"])
+    data_source_rows = build_data_source_index_rows(groups["data_sources"])
+    data_component_rows = build_data_component_index_rows(groups["data_components"])
+    d3fend_rows = build_d3fend_index_rows(d3fend_groups["techniques"])
+
+    write_root_index_note()
+
+    write_index_note(
+        KB_DIR,
+        "Knowledge Base",
+        [
+            {
+                "title": "Generated Reference Areas",
+                "rows": [
+                    f"[[kb/attack/index|ATT&CK]] ({counts['tactics']} tactics, {counts['techniques']} techniques)",
+                    f"[[kb/tools/index|MITRE Tools]] ({counts['tools']} tools)",
+                    f"[[kb/defend/index|D3FEND]] ({counts['d3fend_techniques']} techniques)",
+                ],
+            }
+        ],
+    )
+
+    write_index_note(
+        ATTACK_DIR,
+        "ATT&CK",
+        [
+            {
+                "title": "ATT&CK Areas",
+                "rows": [
+                    f"[[kb/attack/tactics/index|Tactics]] ({counts['tactics']})",
+                    f"[[kb/attack/techniques/index|Techniques]] ({counts['techniques']})",
+                    f"[[kb/attack/mitigations/index|Mitigations]] ({counts['mitigations']})",
+                    f"[[kb/attack/data-sources/index|Data Sources]] ({counts['data_sources']})",
+                    f"[[kb/attack/data-components/index|Data Components]] ({counts['data_components']})",
+                ],
+            }
+        ],
+    )
+
+    write_index_note(TOOLS_DIR, "MITRE Tools", [{"title": "Tools", "rows": tool_rows}])
+    write_index_note(D3FEND_DIR, "D3FEND", [{"title": "Areas", "rows": [f"[[kb/defend/techniques/index|Techniques]] ({counts['d3fend_techniques']})"]}])
+    write_index_note(TACTICS_DIR, "ATT&CK Tactics", [{"title": "Tactics", "rows": tactic_rows}])
+    write_index_note(TECHNIQUES_DIR, "ATT&CK Techniques", [{"title": "Techniques", "rows": technique_rows}])
+    write_index_note(MITIGATIONS_DIR, "ATT&CK Mitigations", [{"title": "Mitigations", "rows": mitigation_rows}])
+    write_index_note(DATA_SOURCES_DIR, "ATT&CK Data Sources", [{"title": "Data Sources", "rows": data_source_rows}])
+    write_index_note(DATA_COMPONENTS_DIR, "ATT&CK Data Components", [{"title": "Data Components", "rows": data_component_rows}])
+    write_index_note(D3FEND_TECHNIQUES_DIR, "D3FEND Techniques", [{"title": "Techniques", "rows": d3fend_rows}])
+
+    write_index_note(
+        NOTES_DIR,
+        "Analyst Notes",
+        [
+            {
+                "title": "Note Areas",
+                "rows": [
+                    "[[notes/attack/index|ATT&CK Notes]]",
+                    "[[notes/tools/index|Tool Notes]]",
+                    "[[notes/defend/index|D3FEND Notes]]",
+                ],
+            }
+        ],
+    )
+
+    write_index_note(
+        NOTES_ATTACK_DIR,
+        "ATT&CK Notes",
+        [
+            {
+                "title": "How to Use",
+                "rows": [
+                    "Open a generated ATT&CK page, then click its workspace note link.",
+                    "The script creates folders only. Obsidian creates note files when links are clicked.",
+                ],
+            }
+        ],
+    )
+
+    write_index_note(
+        NOTES_TOOLS_DIR,
+        "Tool Notes",
+        [
+            {
+                "title": "How to Use",
+                "rows": [
+                    "Open a generated MITRE tool page, then click its workspace note link.",
+                    "Use this area for analyst-owned notes about generated MITRE tools.",
+                ],
+            }
+        ],
+    )
+
+    write_index_note(
+        NOTES_D3FEND_DIR,
+        "D3FEND Notes",
+        [
+            {
+                "title": "How to Use",
+                "rows": [
+                    "Open a generated D3FEND page, then click its workspace note link.",
+                    "Use this area for analyst-owned defensive technique notes.",
+                ],
+            }
+        ],
+    )
+
+
 # ============================================================
 # MAIN BUILD
 # ============================================================
 
 def prepare_folders():
     """
-    Create folders and optionally clear old markdown files.
+    Create folders and optionally clear old generated markdown files.
+
+    The notes folders are created so Obsidian has a clean place to create
+    analyst notes when links are clicked. The script does not create note files.
     """
     folders = [
+        WORKING_DIR,
         VAULT,
+        KB_DIR,
         ATTACK_DIR,
         D3FEND_DIR,
+        TOOLS_DIR,
         NOTES_DIR,
         NOTES_ATTACK_DIR,
         NOTES_ATTACK_TACTICS_DIR,
         NOTES_ATTACK_TECHNIQUES_DIR,
         NOTES_ATTACK_MITIGATIONS_DIR,
-        NOTES_ATTACK_TOOLS_DIR,
         NOTES_ATTACK_DATA_SOURCES_DIR,
         NOTES_ATTACK_DATA_COMPONENTS_DIR,
+        NOTES_TOOLS_DIR,
         NOTES_D3FEND_DIR,
         NOTES_D3FEND_TECHNIQUES_DIR,
         TACTICS_DIR,
         TECHNIQUES_DIR,
         MITIGATIONS_DIR,
-        TOOLS_DIR,
         DATA_SOURCES_DIR,
         DATA_COMPONENTS_DIR,
         D3FEND_TECHNIQUES_DIR,
@@ -2934,17 +3339,6 @@ def main():
         content = build_tactic_note(tactic, tactic_to_technique_map, parent_to_subs, attack_id_lookup, sub_to_parent)
         write_note(TACTICS_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(TACTICS_DIR, filename)
-        workspace_filename = make_workspace_note_filename(attack_id)
-        workspace_title = f"{attack_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "attack",
-            "tactic",
-            attack_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_ATTACK_TACTICS_DIR, workspace_filename, workspace_content)
 
     log("Writing technique notes", "INFO")
     for technique in groups["techniques"]:
@@ -2970,17 +3364,6 @@ def main():
         )
         write_note(TECHNIQUES_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(TECHNIQUES_DIR, filename)
-        workspace_filename = make_workspace_note_filename(attack_id)
-        workspace_title = f"{attack_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "attack",
-            "technique",
-            attack_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_ATTACK_TECHNIQUES_DIR, workspace_filename, workspace_content)
 
     log("Writing mitigation notes", "INFO")
     for mitigation in groups["mitigations"]:
@@ -2999,17 +3382,6 @@ def main():
         )
         write_note(MITIGATIONS_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(MITIGATIONS_DIR, filename)
-        workspace_filename = make_workspace_note_filename(attack_id)
-        workspace_title = f"{attack_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "attack",
-            "mitigation",
-            attack_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_ATTACK_MITIGATIONS_DIR, workspace_filename, workspace_content)
 
     log("Writing tool notes", "INFO")
     for tool in groups["tools"]:
@@ -3025,17 +3397,6 @@ def main():
         )
         write_note(TOOLS_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(TOOLS_DIR, filename)
-        workspace_filename = make_workspace_note_filename(attack_id)
-        workspace_title = f"{attack_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "attack",
-            "tool",
-            attack_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_ATTACK_TOOLS_DIR, workspace_filename, workspace_content)
 
     log("Writing data source notes", "INFO")
     for data_source in groups["data_sources"]:
@@ -3054,17 +3415,6 @@ def main():
         )
         write_note(DATA_SOURCES_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(DATA_SOURCES_DIR, filename)
-        workspace_filename = make_workspace_note_filename(attack_id)
-        workspace_title = f"{attack_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "attack",
-            "data-source",
-            attack_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_ATTACK_DATA_SOURCES_DIR, workspace_filename, workspace_content)
 
     log("Writing data component notes", "INFO")
     for data_component in groups["data_components"]:
@@ -3083,17 +3433,6 @@ def main():
         )
         write_note(DATA_COMPONENTS_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(DATA_COMPONENTS_DIR, filename)
-        workspace_filename = make_workspace_note_filename(attack_id)
-        workspace_title = f"{attack_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "attack",
-            "data-component",
-            attack_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_ATTACK_DATA_COMPONENTS_DIR, workspace_filename, workspace_content)
 
     log("Writing D3FEND notes", "INFO")
     for entry in d3fend_groups["techniques"]:
@@ -3110,17 +3449,6 @@ def main():
         )
         write_note(D3FEND_TECHNIQUES_DIR, filename, content)
 
-        reference_target = make_generated_reference_target(D3FEND_TECHNIQUES_DIR, filename)
-        workspace_filename = make_workspace_note_filename(d3fend_id)
-        workspace_title = f"{d3fend_id} Workspace"
-        workspace_content = build_workspace_note_content(
-            workspace_title,
-            "d3fend",
-            "defensive-technique",
-            d3fend_id,
-            reference_target,
-        )
-        ensure_workspace_note_if_missing(NOTES_D3FEND_TECHNIQUES_DIR, workspace_filename, workspace_content)
 
     counts = {
         "tactics": len(groups["tactics"]),
@@ -3133,6 +3461,7 @@ def main():
         "attack_d3fend_mappings": len(attack_to_d3fend_map),
     }
 
+    write_generated_index_notes(groups, d3fend_groups, parent_to_subs, counts)
     write_build_info_note(counts)
 
     log("Build complete", "INFO")

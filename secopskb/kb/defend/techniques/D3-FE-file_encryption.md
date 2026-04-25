@@ -1,0 +1,350 @@
+---
+framework: "d3fend"
+object_type: "defensive-technique"
+generated: "true"
+d3fend_id: "D3-FE"
+d3fend_name: "File Encryption"
+d3fend_ontology_id: "d3f:FileEncryption"
+d3fend_url: "https://d3fend.mitre.org/technique/d3f%3AFileEncryption/"
+tags:
+  - "d3fend"
+  - "defensive-technique"
+  - "defense"
+  - "countermeasure"
+build_date: "2026-04-25 14:47:22"
+build_source: "script"
+attack_technique_ids:
+  - "T1003"
+  - "T1003.007"
+  - "T1003.008"
+  - "T1005"
+  - "T1014"
+  - "T1016"
+  - "T1016.001"
+  - "T1016.002"
+  - "T1018"
+  - "T1027"
+  - "T1027.001"
+  - "T1027.002"
+  - "T1027.004"
+  - "T1033"
+  - "T1036"
+  - "T1036.001"
+  - "T1036.003"
+  - "T1036.005"
+  - "T1036.006"
+  - "T1037"
+  - "T1037.001"
+  - "T1037.002"
+  - "T1037.003"
+  - "T1037.004"
+  - "T1041"
+  - "T1048"
+  - "T1048.002"
+  - "T1053"
+  - "T1055"
+  - "T1055.001"
+  - "T1055.002"
+  - "T1055.003"
+  - "T1055.009"
+  - "T1055.014"
+  - "T1059"
+  - "T1059.001"
+  - "T1059.002"
+  - "T1059.003"
+  - "T1059.004"
+  - "T1059.005"
+  - "T1059.006"
+  - "T1059.007"
+  - "T1059.008"
+  - "T1059.009"
+  - "T1059.010"
+  - "T1059.011"
+  - "T1059.012"
+  - "T1059.013"
+  - "T1070"
+  - "T1070.002"
+  - "T1070.004"
+  - "T1071"
+  - "T1071.001"
+  - "T1071.002"
+  - "T1071.003"
+  - "T1071.004"
+  - "T1071.005"
+  - "T1072"
+  - "T1074"
+  - "T1074.001"
+  - "T1083"
+  - "T1114"
+  - "T1114.001"
+  - "T1119"
+  - "T1127"
+  - "T1127.001"
+  - "T1137"
+  - "T1137.001"
+  - "T1137.003"
+  - "T1140"
+  - "T1187"
+  - "T1204"
+  - "T1204.002"
+  - "T1218"
+  - "T1218.005"
+  - "T1218.011"
+  - "T1220"
+  - "T1486"
+  - "T1505"
+  - "T1505.003"
+  - "T1534"
+  - "T1543"
+  - "T1543.001"
+  - "T1543.002"
+  - "T1543.004"
+  - "T1546"
+  - "T1546.002"
+  - "T1546.004"
+  - "T1546.005"
+  - "T1546.006"
+  - "T1546.008"
+  - "T1546.009"
+  - "T1546.010"
+  - "T1546.013"
+  - "T1546.014"
+  - "T1546.015"
+  - "T1547"
+  - "T1547.001"
+  - "T1547.006"
+  - "T1547.007"
+  - "T1547.008"
+  - "T1547.009"
+  - "T1548"
+  - "T1548.002"
+  - "T1548.003"
+  - "T1552"
+  - "T1552.001"
+  - "T1552.003"
+  - "T1555"
+  - "T1555.001"
+  - "T1555.002"
+  - "T1555.003"
+  - "T1555.004"
+  - "T1555.005"
+  - "T1555.006"
+  - "T1556"
+  - "T1556.002"
+  - "T1556.003"
+  - "T1560"
+  - "T1560.001"
+  - "T1560.002"
+  - "T1560.003"
+  - "T1562"
+  - "T1562.003"
+  - "T1564"
+  - "T1564.002"
+  - "T1564.003"
+  - "T1564.006"
+  - "T1564.007"
+  - "T1565"
+  - "T1565.001"
+  - "T1565.003"
+  - "T1566"
+  - "T1566.001"
+  - "T1566.002"
+  - "T1566.003"
+  - "T1573"
+  - "T1573.002"
+  - "T1574"
+  - "T1574.001"
+  - "T1574.004"
+  - "T1574.006"
+  - "T1574.007"
+  - "T1574.008"
+  - "T1574.009"
+  - "T1574.012"
+  - "T1649"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[notes/index|Notes]]
+
+---
+
+Encrypting a file using a cryptographic key.
+
+## Workspace
+
+- [[notes/defend/techniques/D3-FE-file_encryption-note|Open workspace note]]
+
+![[notes/defend/techniques/D3-FE-file_encryption-note]]
+
+## Parent Technique
+
+- [[D3-PH-platform_hardening|D3-PH: Platform Hardening]]
+
+## Related ATT&CK Techniques
+
+- [[T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[T1003-os_credential_dumping#^t1003007-proc-filesystem|T1003.007: Proc Filesystem]]
+- [[T1003-os_credential_dumping#^t1003008--etc-passwd-and--etc-shadow|T1003.008: /etc/passwd and /etc/shadow]]
+- [[T1005-data_from_local_system|T1005: Data from Local System]]
+- [[T1014-rootkit|T1014: Rootkit]]
+- [[T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
+- [[T1016-system_network_configuration_discovery#^t1016001-internet-connection-discovery|T1016.001: Internet Connection Discovery]]
+- [[T1016-system_network_configuration_discovery#^t1016002-wi-fi-discovery|T1016.002: Wi-Fi Discovery]]
+- [[T1018-remote_system_discovery|T1018: Remote System Discovery]]
+- [[T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
+- [[T1027-obfuscated_files_or_information#^t1027001-binary-padding|T1027.001: Binary Padding]]
+- [[T1027-obfuscated_files_or_information#^t1027002-software-packing|T1027.002: Software Packing]]
+- [[T1027-obfuscated_files_or_information#^t1027004-compile-after-delivery|T1027.004: Compile After Delivery]]
+- [[T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
+- [[T1036-masquerading|T1036: Masquerading]]
+- [[T1036-masquerading#^t1036001-invalid-code-signature|T1036.001: Invalid Code Signature]]
+- [[T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
+- [[T1036-masquerading#^t1036005-match-legitimate-resource-name-or-location|T1036.005: Match Legitimate Resource Name or Location]]
+- [[T1036-masquerading#^t1036006-space-after-filename|T1036.006: Space after Filename]]
+- [[T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]]
+- [[T1037-boot_or_logon_initialization_scripts#^t1037001-logon-script-(windows)|T1037.001: Logon Script (Windows)]]
+- [[T1037-boot_or_logon_initialization_scripts#^t1037002-login-hook|T1037.002: Login Hook]]
+- [[T1037-boot_or_logon_initialization_scripts#^t1037003-network-logon-script|T1037.003: Network Logon Script]]
+- [[T1037-boot_or_logon_initialization_scripts#^t1037004-rc-scripts|T1037.004: RC Scripts]]
+- [[T1041-exfiltration_over_c2_channel|T1041: Exfiltration Over C2 Channel]]
+- [[T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
+- [[T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
+- [[T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
+- [[T1055-process_injection|T1055: Process Injection]]
+- [[T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
+- [[T1055-process_injection#^t1055002-portable-executable-injection|T1055.002: Portable Executable Injection]]
+- [[T1055-process_injection#^t1055003-thread-execution-hijacking|T1055.003: Thread Execution Hijacking]]
+- [[T1055-process_injection#^t1055009-proc-memory|T1055.009: Proc Memory]]
+- [[T1055-process_injection#^t1055014-vdso-hijacking|T1055.014: VDSO Hijacking]]
+- [[T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
+- [[T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
+- [[T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
+- [[T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
+- [[T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
+- [[T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
+- [[T1059-command_and_scripting_interpreter#^t1059008-network-device-cli|T1059.008: Network Device CLI]]
+- [[T1059-command_and_scripting_interpreter#^t1059009-cloud-api|T1059.009: Cloud API]]
+- [[T1059-command_and_scripting_interpreter#^t1059010-autohotkey-&-autoit|T1059.010: AutoHotKey & AutoIT]]
+- [[T1059-command_and_scripting_interpreter#^t1059011-lua|T1059.011: Lua]]
+- [[T1059-command_and_scripting_interpreter#^t1059012-hypervisor-cli|T1059.012: Hypervisor CLI]]
+- [[T1059-command_and_scripting_interpreter#^t1059013-container-cli-api|T1059.013: Container CLI/API]]
+- [[T1070-indicator_removal|T1070: Indicator Removal]]
+- [[T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
+- [[T1070-indicator_removal#^t1070004-file-deletion|T1070.004: File Deletion]]
+- [[T1071-application_layer_protocol|T1071: Application Layer Protocol]]
+- [[T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+- [[T1071-application_layer_protocol#^t1071002-file-transfer-protocols|T1071.002: File Transfer Protocols]]
+- [[T1071-application_layer_protocol#^t1071003-mail-protocols|T1071.003: Mail Protocols]]
+- [[T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
+- [[T1071-application_layer_protocol#^t1071005-publish-subscribe-protocols|T1071.005: Publish/Subscribe Protocols]]
+- [[T1072-software_deployment_tools|T1072: Software Deployment Tools]]
+- [[T1074-data_staged|T1074: Data Staged]]
+- [[T1074-data_staged#^t1074001-local-data-staging|T1074.001: Local Data Staging]]
+- [[T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
+- [[T1114-email_collection|T1114: Email Collection]]
+- [[T1114-email_collection#^t1114001-local-email-collection|T1114.001: Local Email Collection]]
+- [[T1119-automated_collection|T1119: Automated Collection]]
+- [[T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
+- [[T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
+- [[T1137-office_application_startup|T1137: Office Application Startup]]
+- [[T1137-office_application_startup#^t1137001-office-template-macros|T1137.001: Office Template Macros]]
+- [[T1137-office_application_startup#^t1137003-outlook-forms|T1137.003: Outlook Forms]]
+- [[T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
+- [[T1187-forced_authentication|T1187: Forced Authentication]]
+- [[T1204-user_execution|T1204: User Execution]]
+- [[T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
+- [[T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
+- [[T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
+- [[T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
+- [[T1220-xsl_script_processing|T1220: XSL Script Processing]]
+- [[T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
+- [[T1505-server_software_component|T1505: Server Software Component]]
+- [[T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
+- [[T1534-internal_spearphishing|T1534: Internal Spearphishing]]
+- [[T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
+- [[T1543-create_or_modify_system_process#^t1543001-launch-agent|T1543.001: Launch Agent]]
+- [[T1543-create_or_modify_system_process#^t1543002-systemd-service|T1543.002: Systemd Service]]
+- [[T1543-create_or_modify_system_process#^t1543004-launch-daemon|T1543.004: Launch Daemon]]
+- [[T1546-event_triggered_execution|T1546: Event Triggered Execution]]
+- [[T1546-event_triggered_execution#^t1546002-screensaver|T1546.002: Screensaver]]
+- [[T1546-event_triggered_execution#^t1546004-unix-shell-configuration-modification|T1546.004: Unix Shell Configuration Modification]]
+- [[T1546-event_triggered_execution#^t1546005-trap|T1546.005: Trap]]
+- [[T1546-event_triggered_execution#^t1546006-lc-load-dylib-addition|T1546.006: LC_LOAD_DYLIB Addition]]
+- [[T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
+- [[T1546-event_triggered_execution#^t1546009-appcert-dlls|T1546.009: AppCert DLLs]]
+- [[T1546-event_triggered_execution#^t1546010-appinit-dlls|T1546.010: AppInit DLLs]]
+- [[T1546-event_triggered_execution#^t1546013-powershell-profile|T1546.013: PowerShell Profile]]
+- [[T1546-event_triggered_execution#^t1546014-emond|T1546.014: Emond]]
+- [[T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
+- [[T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547006-kernel-modules-and-extensions|T1547.006: Kernel Modules and Extensions]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547007-re-opened-applications|T1547.007: Re-opened Applications]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
+- [[T1547-boot_or_logon_autostart_execution#^t1547009-shortcut-modification|T1547.009: Shortcut Modification]]
+- [[T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
+- [[T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+- [[T1548-abuse_elevation_control_mechanism#^t1548003-sudo-and-sudo-caching|T1548.003: Sudo and Sudo Caching]]
+- [[T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+- [[T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
+- [[T1552-unsecured_credentials#^t1552003-shell-history|T1552.003: Shell History]]
+- [[T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
+- [[T1555-credentials_from_password_stores#^t1555001-keychain|T1555.001: Keychain]]
+- [[T1555-credentials_from_password_stores#^t1555002-securityd-memory|T1555.002: Securityd Memory]]
+- [[T1555-credentials_from_password_stores#^t1555003-credentials-from-web-browsers|T1555.003: Credentials from Web Browsers]]
+- [[T1555-credentials_from_password_stores#^t1555004-windows-credential-manager|T1555.004: Windows Credential Manager]]
+- [[T1555-credentials_from_password_stores#^t1555005-password-managers|T1555.005: Password Managers]]
+- [[T1555-credentials_from_password_stores#^t1555006-cloud-secrets-management-stores|T1555.006: Cloud Secrets Management Stores]]
+- [[T1556-modify_authentication_process|T1556: Modify Authentication Process]]
+- [[T1556-modify_authentication_process#^t1556002-password-filter-dll|T1556.002: Password Filter DLL]]
+- [[T1556-modify_authentication_process#^t1556003-pluggable-authentication-modules|T1556.003: Pluggable Authentication Modules]]
+- [[T1560-archive_collected_data|T1560: Archive Collected Data]]
+- [[T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
+- [[T1560-archive_collected_data#^t1560002-archive-via-library|T1560.002: Archive via Library]]
+- [[T1560-archive_collected_data#^t1560003-archive-via-custom-method|T1560.003: Archive via Custom Method]]
+- [[T1562-impair_defenses|T1562: Impair Defenses]]
+- [[T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
+- [[T1564-hide_artifacts|T1564: Hide Artifacts]]
+- [[T1564-hide_artifacts#^t1564002-hidden-users|T1564.002: Hidden Users]]
+- [[T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
+- [[T1564-hide_artifacts#^t1564006-run-virtual-instance|T1564.006: Run Virtual Instance]]
+- [[T1564-hide_artifacts#^t1564007-vba-stomping|T1564.007: VBA Stomping]]
+- [[T1565-data_manipulation|T1565: Data Manipulation]]
+- [[T1565-data_manipulation#^t1565001-stored-data-manipulation|T1565.001: Stored Data Manipulation]]
+- [[T1565-data_manipulation#^t1565003-runtime-data-manipulation|T1565.003: Runtime Data Manipulation]]
+- [[T1566-phishing|T1566: Phishing]]
+- [[T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
+- [[T1566-phishing#^t1566002-spearphishing-link|T1566.002: Spearphishing Link]]
+- [[T1566-phishing#^t1566003-spearphishing-via-service|T1566.003: Spearphishing via Service]]
+- [[T1573-encrypted_channel|T1573: Encrypted Channel]]
+- [[T1573-encrypted_channel#^t1573002-asymmetric-cryptography|T1573.002: Asymmetric Cryptography]]
+- [[T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
+- [[T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
+- [[T1574-hijack_execution_flow#^t1574004-dylib-hijacking|T1574.004: Dylib Hijacking]]
+- [[T1574-hijack_execution_flow#^t1574006-dynamic-linker-hijacking|T1574.006: Dynamic Linker Hijacking]]
+- [[T1574-hijack_execution_flow#^t1574007-path-interception-by-path-environment-variable|T1574.007: Path Interception by PATH Environment Variable]]
+- [[T1574-hijack_execution_flow#^t1574008-path-interception-by-search-order-hijacking|T1574.008: Path Interception by Search Order Hijacking]]
+- [[T1574-hijack_execution_flow#^t1574009-path-interception-by-unquoted-path|T1574.009: Path Interception by Unquoted Path]]
+- [[T1574-hijack_execution_flow#^t1574012-cor-profiler|T1574.012: COR_PROFILER]]
+- [[T1649-steal_or_forge_authentication_certificates|T1649: Steal or Forge Authentication Certificates]]
+
+## Knowledge Base Article
+
+## How it Works
+Files are encrypted using either a single key for both encryption and decryption or separate keys. Single key encryption is symmetric encryption and using two key distinct keys is asymmetric encryption.
+
+### Symmetric Cryptography
+Symmetric encryption uses the same cryptographic key for both the encryption and decryption a file. Managing keys at scale sometimes uses asymmetric key exchange. Protocols such as RSA or Diffie-Hellman can be used to share the symmetric cryptographic key with the others.
+
+### Asymmetric Cryptography
+Asymmetric encryption is typically accomplished using public and private key certificates based on the X.509 standard. Files are encrypted using the public key and decrypted using their private key. Asymmetric encryption is typically slower than symmetric encryption and not widely used for large file encryption, but is popular for key wrapping, key exchanges, and digital signatures.
+
+## Considerations
+- Continuous monitoring must be carried out to ensure private keys are not compromised and the certificate authority (CA) is trusted.
+- Transfer of private keys between multiple devices must be performed securely.
+
+## Ontology Relationships
+
+- [[D3-PH-platform_hardening|D3-PH: Platform Hardening]]
+
