@@ -7,11 +7,12 @@ controlled patches before execution:
 - MITRE tool links display both the name and the ATT&CK software id,
   for example [[xcmd|xCmd (S0123)]].
 - MITRE tool YAML gets aliases for the ATT&CK id and tool name when possible.
+- MITRE tool links are sorted alphabetically where possible.
 - The analyst-owned folder is named workspaces instead of notes.
 
-This wrapper is deliberately defensive. It validates the patched legacy build
-before executing it so half-patched legacy_build.py files fail early with a
-useful error instead of failing halfway through a vault build.
+This wrapper is deliberately defensive. It validates the critical patches before
+executing the legacy build. Sorting is also handled after the build as a fallback
+so small upstream text drift does not break the whole run.
 """
 
 import os
@@ -20,12 +21,12 @@ import runpy
 
 import requests
 
-from utils.config import LEGACY_BUILD_FILE, LEGACY_BUILD_URL
+from utils.config import LEGACY_BUILD_FILE, LEGACY_BUILD_URL, NEW_VAULT
 from utils.files import read_text_file, write_text_file
 from utils.logging_utils import log
 
-TOOL_PATCH_MARKER = "# stage1_tool_name_first_patch_applied_v4"
-WORKSPACE_PATCH_MARKER = "# stage1_workspaces_patch_applied_v4"
+TOOL_PATCH_MARKER = "# stage1_tool_name_first_patch_applied_v6"
+WORKSPACE_PATCH_MARKER = "# stage1_workspaces_patch_applied_v6"
 
 
 BACKWARD_COMPATIBLE_TOOL_LINK_FUNCTION = '''def make_tool_link(attack_id_or_name, name=""):
@@ -83,7 +84,6 @@ def regex_replace_optional(text, pattern, replacement, description):
 def patch_make_tool_link_function(text):
     """Replace either old or half-patched make_tool_link with safe function."""
 
-    # Original upstream function.
     original_pattern = (
         r'def make_tool_link\(name\):\s+'
         r'filename = make_tool_filename\(name\)\s+'
@@ -102,8 +102,6 @@ def patch_make_tool_link_function(text):
         log("Patched original make_tool_link function", "DEBUG")
         return new_text
 
-    # Older v2/v3 patched function. Replace it too, because it was not backward
-    # compatible and can crash if any old call site remains.
     patched_pattern = (
         r'def make_tool_link\(attack_id, name\):\s+'
         r'filename = make_tool_filename\(name\)\s+'
@@ -124,7 +122,7 @@ def patch_make_tool_link_function(text):
         log("Replaced non-compatible make_tool_link function", "DEBUG")
         return new_text
 
-    if "def make_tool_link(attack_id_or_name, name=\"\")" in text:
+    if 'def make_tool_link(attack_id_or_name, name="")' in text:
         log("make_tool_link is already backward-compatible", "DEBUG")
         return text
 
@@ -149,6 +147,48 @@ def patch_tool_call_sites(text):
     )
 
     return text
+
+
+def patch_tool_link_sorting(text):
+    """Try to sort generated tool links inside legacy_build.py.
+
+    This patch is deliberately optional. If the exact legacy source block has
+    drifted, the build should still run. A post-build markdown sorter also runs
+    as a fallback.
+    """
+
+    if "tool_links.sort()" in text:
+        log("Tool link sorting patch already present", "DEBUG")
+        return text
+
+    simple_old = (
+        '    for tool in tools:\n'
+        '        tool_links.append(make_tool_link(get_attack_id(tool), tool.get("name", "")))\n'
+    )
+    simple_new = simple_old + '    tool_links.sort()\n'
+
+    if simple_old in text:
+        log("Patched section: alphabetical tool link sorting", "DEBUG")
+        return text.replace(simple_old, simple_new, 1)
+
+    pattern = (
+        r'(?m)^([ ]*)for tool in tools:\n'
+        r'([ ]*)tool_links\.append\(make_tool_link\(get_attack_id\(tool\), tool\.get\("name", ""\)\)\)\n'
+    )
+
+    replacement = (
+        r'\1for tool in tools:\n'
+        r'\2tool_links.append(make_tool_link(get_attack_id(tool), tool.get("name", "")))\n'
+        r'\1tool_links.sort()\n'
+    )
+
+    new_text, count = re.subn(pattern, replacement, text, count=1)
+    if count == 0:
+        log("Could not patch legacy_build.py alphabetical tool sorting; post-build sorter will run", "ERROR")
+        return text
+
+    log("Patched section: alphabetical tool link sorting", "DEBUG")
+    return new_text
 
 
 def patch_tool_aliases(text):
@@ -185,6 +225,7 @@ def apply_tool_name_first_patch():
 
     text = patch_make_tool_link_function(text)
     text = patch_tool_call_sites(text)
+    text = patch_tool_link_sorting(text)
     text = patch_tool_aliases(text)
 
     if TOOL_PATCH_MARKER not in text:
@@ -196,20 +237,33 @@ def apply_tool_name_first_patch():
 
 
 def apply_workspaces_patch():
+    """Patch legacy_build.py so analyst-owned files live under workspaces/.
+
+    This function must be safe across repeated runs. Previous packages could
+    leave legacy_build.py half-patched, so this handles all three states:
+
+    1. original file points NOTES_DIR at notes
+    2. already-patched file points NOTES_DIR at workspaces
+    3. marker exists from a previous run
+    """
+
     text = read_text_file(LEGACY_BUILD_FILE)
 
-    if WORKSPACE_PATCH_MARKER in text:
-        log("Workspaces patch marker already present; validating current file", "DEBUG")
-        validate_legacy_build_workspaces_patch()
-        return
+    notes_line = 'NOTES_DIR = os.path.join(VAULT, "notes")'
+    workspaces_line = 'NOTES_DIR = os.path.join(VAULT, "workspaces")'
 
-    text = replace_required(
-        text,
-        'NOTES_DIR = os.path.join(VAULT, "notes")',
-        'NOTES_DIR = os.path.join(VAULT, "workspaces")',
-        "workspace root folder",
-    )
+    if notes_line in text:
+        text = text.replace(notes_line, workspaces_line, 1)
+        log("Patched workspace root folder", "DEBUG")
+    elif workspaces_line in text:
+        log("Workspace root folder already points to workspaces", "DEBUG")
+    else:
+        raise RuntimeError(
+            "legacy_build.py workspace patch validation failed: could not find NOTES_DIR root folder line"
+        )
 
+    # These replacements are safe on repeated runs. If the text is already
+    # changed, replace() simply does nothing.
     text = text.replace("notes/", "workspaces/")
     text = text.replace("[[notes/index|Notes]]", "[[workspaces/index|Workspaces]]")
     text = text.replace("Analyst Notes", "Analyst Workspace")
@@ -237,11 +291,12 @@ def apply_workspaces_patch():
         "workspace YAML framework",
     )
 
-    text = WORKSPACE_PATCH_MARKER + "\n" + text
+    if WORKSPACE_PATCH_MARKER not in text:
+        text = WORKSPACE_PATCH_MARKER + "\n" + text
+
     write_text_file(LEGACY_BUILD_FILE, text)
     validate_legacy_build_workspaces_patch()
     log("Applied and validated workspaces patch", "INFO")
-
 
 def validate_legacy_build_tool_patch():
     text = read_text_file(LEGACY_BUILD_FILE)
@@ -251,13 +306,13 @@ def validate_legacy_build_tool_patch():
     if 'def make_tool_link(attack_id_or_name, name="")' not in text:
         failures.append("make_tool_link is not backward-compatible")
 
-    if 'def make_tool_link(attack_id, name):' in text:
+    if "def make_tool_link(attack_id, name):" in text:
         failures.append("old non-compatible make_tool_link signature still exists")
 
-    if 'def make_tool_link(name):' in text:
+    if "def make_tool_link(name):" in text:
         failures.append("original make_tool_link signature still exists")
 
-    if 'return make_tool_link(name)' in text:
+    if "return make_tool_link(name)" in text:
         failures.append("old return make_tool_link(name) call site still exists")
 
     if 'tool_links.append(make_tool_link(tool.get("name", "")))' in text:
@@ -282,10 +337,117 @@ def validate_legacy_build_workspaces_patch():
     log("Workspaces patch validation passed", "DEBUG")
 
 
+def is_tool_link_line(line):
+    stripped = line.strip()
+    if not stripped.startswith("- [["):
+        return False
+    if "|" not in stripped:
+        return False
+    if "]]" not in stripped:
+        return False
+    return True
+
+
+def sort_tool_section_lines(lines):
+    """Sort bullet links inside sections named Tools.
+
+    This is a fallback for cases where the source-code patch could not find the
+    exact legacy builder block. It only sorts simple bullet links under a Tools
+    heading and leaves all other markdown alone.
+    """
+
+    output = []
+    index = 0
+    changed = False
+
+    while index < len(lines):
+        line = lines[index]
+        output.append(line)
+
+        if line.strip().lower() not in ["## tools", "### tools"]:
+            index += 1
+            continue
+
+        index += 1
+        section_lines = []
+
+        while index < len(lines):
+            current = lines[index]
+            stripped = current.strip()
+
+            if stripped.startswith("#"):
+                break
+
+            section_lines.append(current)
+            index += 1
+
+        sortable_lines = []
+        other_lines = []
+
+        for section_line in section_lines:
+            if is_tool_link_line(section_line):
+                sortable_lines.append(section_line)
+            else:
+                other_lines.append(section_line)
+
+        sorted_lines = sorted(sortable_lines, key=lambda item: item.lower())
+        if sorted_lines != sortable_lines:
+            changed = True
+
+        if sortable_lines and not other_lines:
+            output.extend(sorted_lines)
+        else:
+            # Conservative mode: only sort if the whole section is simple bullet
+            # links and blank lines. This avoids mangling prose or tables.
+            safe_to_sort = True
+            for section_line in other_lines:
+                if section_line.strip() != "":
+                    safe_to_sort = False
+
+            if safe_to_sort:
+                output.extend(sorted_lines)
+                output.extend(other_lines)
+            else:
+                output.extend(section_lines)
+
+    return output, changed
+
+
+def sort_generated_tool_sections():
+    if not os.path.isdir(NEW_VAULT):
+        log("Generated vault not found for post-build tool sorting: " + NEW_VAULT, "DEBUG")
+        return
+
+    changed_count = 0
+
+    for folder, folder_names, file_names in os.walk(NEW_VAULT):
+        folder_names.sort()
+        file_names.sort()
+
+        for file_name in file_names:
+            if not file_name.endswith(".md"):
+                continue
+
+            path = os.path.join(folder, file_name)
+            content = read_text_file(path)
+            lines = content.splitlines()
+            sorted_lines, changed = sort_tool_section_lines(lines)
+
+            if changed:
+                new_content = "\n".join(sorted_lines)
+                if content.endswith("\n"):
+                    new_content += "\n"
+                write_text_file(path, new_content)
+                changed_count += 1
+
+    log("Post-build tool section sorting updated " + str(changed_count) + " files", "INFO")
+
+
 def build_attack():
     log("Starting ATT&CK/D3FEND legacy build", "INFO")
     download_legacy_build_if_missing()
     apply_tool_name_first_patch()
     apply_workspaces_patch()
     runpy.run_path(LEGACY_BUILD_FILE, run_name="__main__")
+    sort_generated_tool_sections()
     log("Finished ATT&CK/D3FEND legacy build", "INFO")
