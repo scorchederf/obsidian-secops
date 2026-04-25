@@ -1,0 +1,101 @@
+---
+mitre_id: "T1083"
+mitre_name: "File and Directory Discovery"
+mitre_type: "attack-pattern"
+mitre_stix_id: "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18"
+mitre_created: "2017-05-31T21:31:04.710Z"
+mitre_modified: "2025-10-24T17:49:00.036Z"
+mitre_version: "1.7"
+mitre_domains:
+  - "enterprise-attack"
+mitre_url: "https://attack.mitre.org/techniques/T1083/"
+framework: "attack"
+generated: "true"
+build_date: "2026-04-25 20:43:29"
+build_source: "script"
+object_type: "technique"
+mitre_is_subtechnique: "False"
+mitre_platforms:
+  - "ESXi"
+  - "Linux"
+  - "macOS"
+  - "Network Devices"
+  - "Windows"
+mitre_tactic_ids:
+  - "TA0007"
+d3fend_ids:
+  - "D3-CF"
+  - "D3-CM"
+  - "D3-CQ"
+  - "D3-DF"
+  - "D3-FA"
+  - "D3-FE"
+  - "D3-FEV"
+  - "D3-FIM"
+  - "D3-LFP"
+  - "D3-RF"
+  - "D3-RFAM"
+tags:
+  - "attack"
+  - "technique"
+  - "offense"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[workspaces/index|Notes]]
+
+---
+
+Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system. Adversaries may use the information from [[T1083-file_and_directory_discovery|T1083: File and Directory Discovery]] during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.
+
+Many command shell utilities can be used to obtain this information. Examples include `dir`, `tree`, `ls`, `find`, and `locate`.(Citation: Windows Commands JPCERT) Custom tools may also be used to gather file and directory information and interact with the [[T1106-native_api|T1106: Native API]]. Adversaries may also leverage a [[T1059-command_and_scripting_interpreter#^t1059008-network-device-cli|T1059.008: Network Device CLI]] on network devices to gather file and directory information (e.g. `dir`, `show flash`, and/or `nvram`).(Citation: US-CERT-TA18-106A)
+
+Some files and directories may require elevated or specific user permissions to access.
+
+## Workspace
+
+- [[workspaces/attack/techniques/T1083-file_and_directory_discovery-note|Open workspace note]]
+
+![[workspaces/attack/techniques/T1083-file_and_directory_discovery-note]]
+
+## Tactics
+
+- [[TA0007-discovery|TA0007: Discovery]]
+
+## D3FEND
+
+- [[D3-CF-content_filtering|D3-CF: Content Filtering]]
+- [[D3-CM-content_modification|D3-CM: Content Modification]]
+- [[D3-CQ-content_quarantine|D3-CQ: Content Quarantine]]
+- [[D3-DF-decoy_file|D3-DF: Decoy File]]
+- [[D3-FA-file_analysis|D3-FA: File Analysis]]
+- [[D3-FE-file_encryption|D3-FE: File Encryption]]
+- [[D3-FEV-file_eviction|D3-FEV: File Eviction]]
+- [[D3-FIM-file_integrity_monitoring|D3-FIM: File Integrity Monitoring]]
+- [[D3-LFP-local_file_permissions|D3-LFP: Local File Permissions]]
+- [[D3-RF-restore_file|D3-RF: Restore File]]
+- [[D3-RFAM-remote_file_access_mediation|D3-RFAM: Remote File Access Mediation]]
+
+## Tools
+
+- [[cmd|cmd (S0106)]]
+- [[pupy|Pupy (S0192)]]
+- [[forfiles|Forfiles (S0193)]]
+- [[koadic|Koadic (S0250)]]
+- [[remcos|Remcos (S0332)]]
+- [[empire|Empire (S0363)]]
+- [[poshc2|PoshC2 (S0378)]]
+- [[imminent_monitor|Imminent Monitor (S0434)]]
+- [[crackmapexec|CrackMapExec (S0488)]]
+- [[remoteutilities|RemoteUtilities (S0592)]]
+- [[sliver|Sliver (S0633)]]
+- [[silenttrinity|SILENTTRINITY (S0692)]]
+- [[rclone|Rclone (S1040)]]
+
+## Platforms
+
+- ESXi
+- Linux
+- macOS
+- Network Devices
+- Windows
+
