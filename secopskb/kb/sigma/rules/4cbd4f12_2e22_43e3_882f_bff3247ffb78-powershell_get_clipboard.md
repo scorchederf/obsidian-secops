@@ -1,0 +1,69 @@
+---
+sigma_id: "4cbd4f12-2e22-43e3-882f-bff3247ffb78"
+title: "PowerShell Get Clipboard"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/powershell/powershell_module/posh_pm_get_clipboard.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_module/posh_pm_get_clipboard.yml"
+build_date: "2026-04-26 14:14:33"
+status: "test"
+level: "medium"
+logsource: "windows / ps_module"
+aliases:
+  - "4cbd4f12-2e22-43e3-882f-bff3247ffb78"
+  - "PowerShell Get Clipboard"
+attack_technique_ids:
+  - "T1115"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# PowerShell Get Clipboard
+
+A General detection for the Get-Clipboard commands in PowerShell logs. This could be an adversary capturing clipboard contents.
+
+## Metadata
+
+- Rule ID: 4cbd4f12-2e22-43e3-882f-bff3247ffb78
+- Status: test
+- Level: medium
+- Author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+- Date: 2020-05-02
+- Modified: 2023-01-04
+- Source Path: rules/windows/powershell/powershell_module/posh_pm_get_clipboard.yml
+
+## Logsource
+
+- category: ps_module
+- definition: 0ad03ef1-f21b-4a79-8ce8-e6900c54b65b
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1115-clipboard_data|T1115]]
+
+## Detection
+
+```yaml
+selection:
+  Payload|contains: Get-Clipboard
+condition: selection
+```
+
+## False Positives
+
+- Unknown
+
+## References
+
+- https://github.com/OTRF/detection-hackathon-apt29/issues/16
+- https://github.com/OTRF/ThreatHunter-Playbook/blob/2d4257f630f4c9770f78d0c1df059f891ffc3fec/docs/evals/apt29/detections/7.A.2_F4609F7E-C4DB-4327-91D4-59A58C962A02.md
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_module/posh_pm_get_clipboard.yml)

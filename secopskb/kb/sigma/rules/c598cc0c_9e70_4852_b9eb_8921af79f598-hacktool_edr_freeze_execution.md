@@ -1,0 +1,83 @@
+---
+sigma_id: "c598cc0c-9e70-4852-b9eb-8921af79f598"
+title: "Hacktool - EDR-Freeze Execution"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/process_creation/proc_creation_win_hktl_edr_freeze.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_edr_freeze.yml"
+build_date: "2026-04-26 14:14:27"
+status: "experimental"
+level: "high"
+logsource: "windows / process_creation"
+aliases:
+  - "c598cc0c-9e70-4852-b9eb-8921af79f598"
+  - "Hacktool - EDR-Freeze Execution"
+attack_technique_ids:
+  - "T1562.001"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# Hacktool - EDR-Freeze Execution
+
+Detects execution of EDR-Freeze, a tool that exploits the MiniDumpWriteDump function and WerFaultSecure.exe to suspend EDR and Antivirus processes on Windows.
+EDR-Freeze leverages a race-condition attack to put security processes into a dormant state by suspending WerFaultSecure at the moment it freezes the target process.
+This technique does not require kernel-level exploits or BYOVD, but instead abuses user-mode functionality to temporarily disable monitoring by EDR or Antimalware solutions.
+
+## Metadata
+
+- Rule ID: c598cc0c-9e70-4852-b9eb-8921af79f598
+- Status: experimental
+- Level: high
+- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
+- Date: 2025-09-24
+- Modified: 2025-11-27
+- Source Path: rules/windows/process_creation/proc_creation_win_hktl_edr_freeze.yml
+
+## Logsource
+
+- category: process_creation
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+
+## Detection
+
+```yaml
+selection_img:
+  Image|contains:
+  - \EDR-Freeze
+  - \EDRFreeze
+  Image|endswith: .exe
+selection_imphash:
+  Hashes|contains:
+  - IMPHASH=1195F7935954A2CD09157390C33F8E8C
+  - IMPHASH=129F58DE3D687FB7F012BF6C3D679997
+  - IMPHASH=2C617A175D0086251642C6619F7CC8BA
+  - IMPHASH=8828F0B906F7844358FB92A899E9520F
+  - IMPHASH=AF76D95157EC554DC1EF178E4E66D447
+  - IMPHASH=E1B04316B61ACA31DD52ABBEC0A37FD5
+  - IMPHASH=8B2D5B54AFCFEC60D54F6B31D80ED4A0
+  - IMPHASH=AB8BB31EDD91D2A05FE7B62A535E9EB7
+condition: 1 of selection_*
+```
+
+## False Positives
+
+- Unlikely
+
+## References
+
+- https://www.zerosalarium.com/2025/09/EDR-Freeze-Puts-EDRs-Antivirus-Into-Coma.html
+- https://github.com/TwoSevenOneT/EDR-Freeze
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_edr_freeze.yml)

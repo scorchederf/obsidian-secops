@@ -1,0 +1,118 @@
+---
+sigma_id: "6ec820f2-e963-4801-9127-d8b2dce4d31b"
+title: "APT User Agent"
+framework: "sigma"
+generated: "true"
+source_path: "rules/web/proxy_generic/proxy_ua_apt.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/proxy_generic/proxy_ua_apt.yml"
+build_date: "2026-04-26 14:14:19"
+status: "test"
+level: "high"
+logsource: "proxy"
+aliases:
+  - "6ec820f2-e963-4801-9127-d8b2dce4d31b"
+  - "APT User Agent"
+attack_technique_ids:
+  - "T1071.001"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# APT User Agent
+
+Detects suspicious user agent strings used in APT malware in proxy logs
+
+## Metadata
+
+- Rule ID: 6ec820f2-e963-4801-9127-d8b2dce4d31b
+- Status: test
+- Level: high
+- Author: Florian Roth (Nextron Systems), Markus Neis
+- Date: 2019-11-12
+- Modified: 2024-02-15
+- Source Path: rules/web/proxy_generic/proxy_ua_apt.yml
+
+## Logsource
+
+- category: proxy
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
+
+## Detection
+
+```yaml
+selection:
+  c-useragent:
+  - SJZJ (compatible; MSIE 6.0; Win32)
+  - Mozilla/5.0 (Windows NT 6.; WOW64; rv:20.0) Gecko/20100101 Firefox/20.0
+  - 'User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC'
+  - Mozilla/4.0 (compatible; MSIE 7.4; Win32;32-bit)
+  - webclient
+  - Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-EN; rv:1.7.12) Gecko/200
+  - Mozilla/4.0 (compatible; MSI 6.0;
+  - Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0
+  - Mozilla/5.0 (Windows NT 6.2; WOW64; rv:20.0) Gecko/20100101 Firefox/
+  - Mozilla/5.0 (Windows NT 6.; WOW64; rv:20.0) Gecko/20100101 Firefox/2
+  - Mozilla/4.0
+  - Netscape
+  - Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-EN; rv:1.7.12) Gecko/20100719 Firefox/1.0.7
+  - Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.13) Firefox/3.6.13 GTB7.1
+  - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+  - Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2;
+    .NETCLR 2.0.50727)
+  - Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; SV1)
+  - Mozilla/4.0 (compatible; MSIE 11.0; Windows NT 6.1; SV1)
+  - Mozilla/4.0 (compatible; MSIE 8.0; Win32)
+  - Mozilla v5.1 (Windows NT 6.1; rv:6.0.1) Gecko/20100101 Firefox/6.0.1
+  - Mozilla/6.1 (compatible; MSIE 9.0; Windows NT 5.3; Trident/5.0)
+  - Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET
+    CLR 2.0.50727; .NET CLR 3.0.04506.30; .NET CLR 3.0.04506.648; InfoPath.1)
+  - Mozilla/5.0 (Windows NT 6.1; WOW64) WinHttp/1.6.3.8 (WinHTTP/5.1) like Gecko
+  - Mozilla v5.1 *
+  - MSIE 8.0
+  - Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727;
+    .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E;
+    InfoPath.2)
+  - Mozilla/4.0 (compatible; RMS)
+  - Mozilla/4.0 (compatible; MSIE 6.0; DynGate)
+  - O/9.27 (W; U; Z)
+  - Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0;  Trident/5.0*
+  - Mozilla/5.0 (Windows NT 9; *
+  - hots scot
+  - Mozilla/5.0 (compatible; MSIE 10.0; Windows NT)
+  - Mozilla/5.0 (Windows NT 6.1; WOW64) Chrome/28.0.1500.95 Safari/537.36
+  - Mozilla/5.0 (Windows NT 6.2; Win32; rv:47.0)
+  - Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1;
+  - Mozilla/5.0 (X11; Linux i686; rv:22.0) Firefox/22.0
+  - Mozilla/5.0 Chrome/72.0.3626.109 Safari/537.36
+  - Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:FTS_06) Gecko/22.36.35.06 Firefox/2.0
+  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+    Chrome/102.0.5005.63 Safari/537.36 Edg/100.0.1185.39
+  - Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2;
+    .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; InfoPath.3; .NET4.0C;
+    .NET4.0E)
+  - Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 10.0; .NET4.0C; .NET4.0E; Tablet
+    PC 2.0)
+  - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+    Chrome/42.0.2311.135 Safari/537.36 Edge/12.246001
+condition: selection
+```
+
+## False Positives
+
+- Old browsers
+
+## References
+
+- Internal Research
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/web/proxy_generic/proxy_ua_apt.yml)

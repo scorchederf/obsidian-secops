@@ -1,0 +1,109 @@
+---
+sigma_id: "c3dbbc9f-ef1d-470a-a90a-d343448d5875"
+title: "Suspicious Non-Browser Network Communication With Telegram API"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/network_connection/net_connection_win_domain_telegram_api_non_browser_access.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_telegram_api_non_browser_access.yml"
+build_date: "2026-04-26 14:14:36"
+status: "test"
+level: "medium"
+logsource: "windows / network_connection"
+aliases:
+  - "c3dbbc9f-ef1d-470a-a90a-d343448d5875"
+  - "Suspicious Non-Browser Network Communication With Telegram API"
+attack_technique_ids:
+  - "T1102"
+  - "T1567"
+  - "T1105"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# Suspicious Non-Browser Network Communication With Telegram API
+
+Detects an a non-browser process interacting with the Telegram API which could indicate use of a covert C2
+
+## Metadata
+
+- Rule ID: c3dbbc9f-ef1d-470a-a90a-d343448d5875
+- Status: test
+- Level: medium
+- Author: Nasreddine Bencherchali (Nextron Systems)
+- Date: 2023-05-19
+- Source Path: rules/windows/network_connection/net_connection_win_domain_telegram_api_non_browser_access.yml
+
+## Logsource
+
+- category: network_connection
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1102-web_service|T1102]]
+- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+
+## Detection
+
+```yaml
+selection:
+  DestinationHostname|contains: api.telegram.org
+filter_main_brave:
+  Image|endswith: \brave.exe
+filter_main_chrome:
+  Image:
+  - C:\Program Files\Google\Chrome\Application\chrome.exe
+  - C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+filter_main_firefox:
+  Image:
+  - C:\Program Files\Mozilla Firefox\firefox.exe
+  - C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+filter_main_ie:
+  Image:
+  - C:\Program Files (x86)\Internet Explorer\iexplore.exe
+  - C:\Program Files\Internet Explorer\iexplore.exe
+filter_main_maxthon:
+  Image|endswith: \maxthon.exe
+filter_main_edge_1:
+- Image|startswith: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\
+- Image|endswith: \WindowsApps\MicrosoftEdge.exe
+- Image:
+  - C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+  - C:\Program Files\Microsoft\Edge\Application\msedge.exe
+filter_main_edge_2:
+  Image|startswith:
+  - C:\Program Files (x86)\Microsoft\EdgeCore\
+  - C:\Program Files\Microsoft\EdgeCore\
+  Image|endswith:
+  - \msedge.exe
+  - \msedgewebview2.exe
+filter_main_opera:
+  Image|endswith: \opera.exe
+filter_main_safari:
+  Image|endswith: \safari.exe
+filter_main_seamonkey:
+  Image|endswith: \seamonkey.exe
+filter_main_vivaldi:
+  Image|endswith: \vivaldi.exe
+filter_main_whale:
+  Image|endswith: \whale.exe
+condition: selection and not 1 of filter_main_*
+```
+
+## False Positives
+
+- Legitimate applications communicating with the Telegram API e.g. web browsers not in the exclusion list, app with an RSS  etc.
+
+## References
+
+- https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/small-sieve/NCSC-MAR-Small-Sieve.pdf
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_telegram_api_non_browser_access.yml)

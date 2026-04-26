@@ -1,0 +1,153 @@
+---
+sigma_id: "e043f529-8514-4205-8ab0-7f7d2927b400"
+title: "DNS Query To AzureWebsites.NET By Non-Browser Process"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/dns_query/dns_query_win_domain_azurewebsites.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_domain_azurewebsites.yml"
+build_date: "2026-04-26 14:14:23"
+status: "test"
+level: "medium"
+logsource: "windows / dns_query"
+aliases:
+  - "e043f529-8514-4205-8ab0-7f7d2927b400"
+  - "DNS Query To AzureWebsites.NET By Non-Browser Process"
+attack_technique_ids:
+  - "T1219.002"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# DNS Query To AzureWebsites.NET By Non-Browser Process
+
+Detects a DNS query by a non browser process on the system to "azurewebsites.net". The latter was often used by threat actors as a malware hosting and exfiltration site.
+
+## Metadata
+
+- Rule ID: e043f529-8514-4205-8ab0-7f7d2927b400
+- Status: test
+- Level: medium
+- Author: Nasreddine Bencherchali (Nextron Systems)
+- Date: 2024-06-24
+- Source Path: rules/windows/dns_query/dns_query_win_domain_azurewebsites.yml
+
+## Logsource
+
+- category: dns_query
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1219-remote_access_tools|T1219.002]]
+
+## Detection
+
+```yaml
+selection:
+  QueryName|endswith: azurewebsites.net
+filter_optional_chrome:
+  Image:
+  - C:\Program Files\Google\Chrome\Application\chrome.exe
+  - C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+filter_optional_firefox:
+  Image:
+  - C:\Program Files\Mozilla Firefox\firefox.exe
+  - C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+filter_optional_ie:
+  Image:
+  - C:\Program Files (x86)\Internet Explorer\iexplore.exe
+  - C:\Program Files\Internet Explorer\iexplore.exe
+filter_optional_edge_1:
+- Image|startswith: C:\Program Files (x86)\Microsoft\EdgeWebView\Application\
+- Image|endswith: \WindowsApps\MicrosoftEdge.exe
+- Image:
+  - C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+  - C:\Program Files\Microsoft\Edge\Application\msedge.exe
+filter_optional_edge_2:
+  Image|startswith:
+  - C:\Program Files (x86)\Microsoft\EdgeCore\
+  - C:\Program Files\Microsoft\EdgeCore\
+  Image|endswith:
+  - \msedge.exe
+  - \msedgewebview2.exe
+filter_optional_safari:
+  Image|endswith: \safari.exe
+filter_optional_defender:
+  Image|endswith:
+  - \MsMpEng.exe
+  - \MsSense.exe
+filter_optional_brave:
+  Image|endswith: \brave.exe
+  Image|startswith: C:\Program Files\BraveSoftware\
+filter_optional_maxthon:
+  Image|contains: \AppData\Local\Maxthon\
+  Image|endswith: \maxthon.exe
+filter_optional_opera:
+  Image|contains: \AppData\Local\Programs\Opera\
+  Image|endswith: \opera.exe
+filter_optional_seamonkey:
+  Image|startswith:
+  - C:\Program Files\SeaMonkey\
+  - C:\Program Files (x86)\SeaMonkey\
+  Image|endswith: \seamonkey.exe
+filter_optional_vivaldi:
+  Image|contains: \AppData\Local\Vivaldi\
+  Image|endswith: \vivaldi.exe
+filter_optional_whale:
+  Image|startswith:
+  - C:\Program Files\Naver\Naver Whale\
+  - C:\Program Files (x86)\Naver\Naver Whale\
+  Image|endswith: \whale.exe
+filter_optional_tor:
+  Image|contains: \Tor Browser\
+filter_optional_whaterfox:
+  Image|startswith:
+  - C:\Program Files\Waterfox\
+  - C:\Program Files (x86)\Waterfox\
+  Image|endswith: \Waterfox.exe
+filter_optional_midori:
+  Image|contains: \AppData\Local\Programs\midori-ng\
+  Image|endswith: \Midori Next Generation.exe
+filter_optional_slimbrowser:
+  Image|startswith:
+  - C:\Program Files\SlimBrowser\
+  - C:\Program Files (x86)\SlimBrowser\
+  Image|endswith: \slimbrowser.exe
+filter_optional_flock:
+  Image|contains: \AppData\Local\Flock\
+  Image|endswith: \Flock.exe
+filter_optional_phoebe:
+  Image|contains: \AppData\Local\Phoebe\
+  Image|endswith: \Phoebe.exe
+filter_optional_falkon:
+  Image|startswith:
+  - C:\Program Files\Falkon\
+  - C:\Program Files (x86)\Falkon\
+  Image|endswith: \falkon.exe
+filter_optional_avant:
+  Image|startswith:
+  - C:\Program Files (x86)\Avant Browser\
+  - C:\Program Files\Avant Browser\
+  Image|endswith: \avant.exe
+condition: selection and not 1 of filter_optional_*
+```
+
+## False Positives
+
+- Likely with other browser software. Apply additional filters for any other browsers you might use.
+
+## References
+
+- https://www.sentinelone.com/labs/wip26-espionage-threat-actors-abuse-cloud-infrastructure-in-targeted-telco-attacks/
+- https://symantec-enterprise-blogs.security.com/threat-intelligence/harvester-new-apt-attacks-asia
+- https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/higaisa-or-winnti-apt-41-backdoors-old-and-new/
+- https://intezer.com/blog/research/how-we-escaped-docker-in-azure-functions/
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_domain_azurewebsites.yml)

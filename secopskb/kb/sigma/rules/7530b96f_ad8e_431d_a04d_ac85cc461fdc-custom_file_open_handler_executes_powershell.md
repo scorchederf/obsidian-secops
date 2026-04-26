@@ -1,0 +1,70 @@
+---
+sigma_id: "7530b96f-ad8e-431d-a04d-ac85cc461fdc"
+title: "Custom File Open Handler Executes PowerShell"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/registry/registry_set/registry_set_custom_file_open_handler_powershell_execution.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_custom_file_open_handler_powershell_execution.yml"
+build_date: "2026-04-26 14:14:23"
+status: "test"
+level: "high"
+logsource: "windows / registry_set"
+aliases:
+  - "7530b96f-ad8e-431d-a04d-ac85cc461fdc"
+  - "Custom File Open Handler Executes PowerShell"
+attack_technique_ids:
+  - "T1202"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# Custom File Open Handler Executes PowerShell
+
+Detects the abuse of custom file open handler, executing powershell
+
+## Metadata
+
+- Rule ID: 7530b96f-ad8e-431d-a04d-ac85cc461fdc
+- Status: test
+- Level: high
+- Author: CD_R0M_
+- Date: 2022-06-11
+- Modified: 2023-08-17
+- Source Path: rules/windows/registry/registry_set/registry_set_custom_file_open_handler_powershell_execution.yml
+
+## Logsource
+
+- category: registry_set
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+
+## Detection
+
+```yaml
+selection:
+  TargetObject|contains: shell\open\command\
+  Details|contains|all:
+  - powershell
+  - -command
+condition: selection
+```
+
+## False Positives
+
+- Unknown
+
+## References
+
+- https://news.sophos.com/en-us/2022/02/01/solarmarker-campaign-used-novel-registry-changes-to-establish-persistence/?cmp=30728
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_custom_file_open_handler_powershell_execution.yml)

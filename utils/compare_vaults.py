@@ -40,8 +40,12 @@ def normalize_line(line):
     stripped = line.strip()
     if stripped in IGNORED_COMPARE_EXACT_LINES:
         return None
+    if stripped.startswith("- [[kb/sigma/index|Sigma]]"):
+        return None
     if "[[kb/car/index|CAR]]" in line:
         line = line.replace(" • [[kb/car/index|CAR]]", "")
+    if "[[kb/sigma/index|Sigma]]" in line:
+        line = line.replace(" • [[kb/sigma/index|Sigma]]", "")
     for prefix in IGNORED_COMPARE_LINE_PREFIXES:
         if stripped.startswith(prefix):
             return prefix + " <ignored>"

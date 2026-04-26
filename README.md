@@ -1,6 +1,6 @@
 # Obsidian SecOps Builder
 
-Builds an Obsidian vault for ATT&CK, D3FEND, tools, workspaces, and MITRE CAR.
+Builds an Obsidian vault for ATT&CK, D3FEND, tools, workspaces, MITRE CAR, and Sigma.
 
 ## What changed
 
@@ -10,6 +10,7 @@ Builds an Obsidian vault for ATT&CK, D3FEND, tools, workspaces, and MITRE CAR.
 - MITRE tool links display name and ATT&CK software id, for example `[[xcmd|xCmd (S0123)]]`.
 - The analyst-owned folder is now `workspaces/` instead of `notes/`.
 - MITRE CAR analytics are generated from the upstream CAR YAML source.
+- Sigma rules are generated from the upstream SigmaHQ rule repository.
 - The patch validates `legacy_build.py` before executing it.
 
 ## Why v4 exists

@@ -11,10 +11,14 @@
             "id": "bf353bf2a4dce0f6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "kb/attack/techniques/T1016-system_network_configuration_discovery.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "T1016-system_network_configuration_discovery"
             }
           }
         ]
@@ -178,19 +182,35 @@
   },
   "active": "bf353bf2a4dce0f6",
   "lastOpenFiles": [
-    "kb/car/analytics/CAR-2019-04-004-credential_dumping_via_mimikatz.md",
-    "kb/car/techniques/index.md",
-    "kb/car/index.md",
-    "kb/attack/techniques/T1134-access_token_manipulation.md",
-    "kb/attack/tactics/TA0004-privilege_escalation.md",
+    "kb/defend/techniques/D3-DF-decoy_file.md",
+    "kb/attack/techniques/T1016-system_network_configuration_discovery.md",
+    "kb/attack/tactics/TA0007-discovery.md",
     "kb/attack/tactics/index.md",
     "kb/attack/index.md",
-    "kb/index.md",
-    "kb/car/analytics/CAR-2013-01-003-smb_events_monitoring.md",
-    "kb/car/analytics/index.md",
-    "kb/attack/techniques/T1078-valid_accounts.md",
-    "kb/attack/techniques/T1003-os_credential_dumping.md",
-    "kb/attack/tactics/TA0001-initial_access.md",
-    "index.md"
+    "index.md",
+    "kb/sigma/rules/410d2a41_1e6d_452f_85e5_abdd8257a823-azure_application_deleted.md",
+    "kb/sigma/logsources/index.md",
+    "kb/sigma/rules/238527ad_3c2c_4e4f_a1f6_92fd63adb864-antivirus_exploitation_framework_detection.md",
+    "kb/sigma/index.md",
+    "kb/sigma/techniques/index.md",
+    "kb/sigma/rules/index.md",
+    "kb/sigma/rules/52a85084_6989_40c3_8f32_091e12e13f09-smbexec_py_service_installation.md",
+    "kb/sigma/rules/b7a3c9a3_09ea_4934_8864_6a32cacd98d9-zip_a_folder_with_powershell_for_staging_in_temp_powershell_script.md",
+    "kb/sigma/rules/71ff406e_b633_4989_96ec_bc49d825a412-zip_a_folder_with_powershell_for_staging_in_temp_powershell.md",
+    "kb/sigma/rules/daf7eb81_35fd_410d_9d7a_657837e602bb-zip_a_folder_with_powershell_for_staging_in_temp_powershell_module.md",
+    "kb/sigma/rules/18f37338_b9bd_4117_a039_280c81f7a596-zerologon_exploitation_using_well_known_tools.md",
+    "kb/sigma/rules/193d5ccd_6f59_40c6_b5b0_8e32d5ddd3d1-xwizard_exe_execution_from_non_default_location.md",
+    "kb/sigma/rules/05c36dd6_79d6_4a9a_97da_3db20298ab2d-xsl_script_execution_via_wmic_exe.md",
+    "kb/sigma/rules/d22e2925_cfd8_463f_96f6_89cec9d9bc5f-xbap_execution_from_uncommon_locations_via_presentationhost_exe.md",
+    "kb/sigma/rules/ef64fc9c_a45e_43cc_8fd8_7d75d73b4c99-wusa_exe_executed_by_parent_process_located_in_suspicious_location.md",
+    "kb/sigma/rules/2c28c248_7f50_417a_9186_a85b223010ee-wscript_shell_run_in_commandline.md",
+    "kb/sigma/rules/ae9b0bd7_8888_4606_b444_0ed7410cb728-writing_of_malicious_files_to_the_fonts_folder.md",
+    "kb/sigma/rules/4aafb0fa_bff5_4b9d_b99e_8093e659c65f-writing_local_admin_share.md",
+    "kb/sigma/rules/75f7a0e2_7154_4c4d_9eae_5cdb4e0a5c13-write_protect_for_storage_disabled.md",
+    "kb/sigma/rules/480421f9_417f_4d3b_9552_fd2728443ec8-wow6432node_windows_nt_currentversion_autorun_keys_modification.md",
+    "kb/sigma/techniques",
+    "kb/sigma/rules",
+    "kb/sigma/logsources",
+    "kb/sigma"
   ]
 }

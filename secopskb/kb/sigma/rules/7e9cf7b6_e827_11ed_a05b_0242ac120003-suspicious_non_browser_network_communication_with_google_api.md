@@ -1,0 +1,125 @@
+---
+sigma_id: "7e9cf7b6-e827-11ed-a05b-0242ac120003"
+title: "Suspicious Non-Browser Network Communication With Google API"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/network_connection/net_connection_win_domain_google_api_non_browser_access.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_google_api_non_browser_access.yml"
+build_date: "2026-04-26 14:14:36"
+status: "experimental"
+level: "medium"
+logsource: "windows / network_connection"
+aliases:
+  - "7e9cf7b6-e827-11ed-a05b-0242ac120003"
+  - "Suspicious Non-Browser Network Communication With Google API"
+attack_technique_ids:
+  - "T1102"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# Suspicious Non-Browser Network Communication With Google API
+
+Detects a non-browser process interacting with the Google API which could indicate the use of a covert C2 such as Google Sheet C2 (GC2-sheet)
+
+## Metadata
+
+- Rule ID: 7e9cf7b6-e827-11ed-a05b-0242ac120003
+- Status: experimental
+- Level: medium
+- Author: Gavin Knapp
+- Date: 2023-05-01
+- Modified: 2025-02-22
+- Source Path: rules/windows/network_connection/net_connection_win_domain_google_api_non_browser_access.yml
+
+## Logsource
+
+- category: network_connection
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1102-web_service|T1102]]
+
+## Detection
+
+```yaml
+selection:
+  DestinationHostname|contains:
+  - drive.googleapis.com
+  - oauth2.googleapis.com
+  - sheets.googleapis.com
+  - www.googleapis.com
+filter_optional_brave:
+  Image|endswith: \brave.exe
+filter_optional_chrome:
+  Image|endswith:
+  - :\Program Files\Google\Chrome\Application\chrome.exe
+  - :\Program Files (x86)\Google\Chrome\Application\chrome.exe
+filter_optional_google_drive:
+  Image|contains: :\Program Files\Google\Drive File Stream\
+  Image|endswith: \GoogleDriveFS.exe
+filter_optional_firefox:
+  Image|endswith:
+  - :\Program Files\Mozilla Firefox\firefox.exe
+  - :\Program Files (x86)\Mozilla Firefox\firefox.exe
+filter_optional_ie:
+  Image|endswith:
+  - :\Program Files (x86)\Internet Explorer\iexplore.exe
+  - :\Program Files\Internet Explorer\iexplore.exe
+filter_optional_maxthon:
+  Image|endswith: \maxthon.exe
+filter_optional_edge_1:
+- Image|contains: :\Program Files (x86)\Microsoft\EdgeWebView\Application\
+- Image|endswith:
+  - :\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+  - :\Program Files\Microsoft\Edge\Application\msedge.exe
+  - \WindowsApps\MicrosoftEdge.exe
+filter_optional_edge_2:
+  Image|contains:
+  - :\Program Files (x86)\Microsoft\EdgeCore\
+  - :\Program Files\Microsoft\EdgeCore\
+  Image|endswith:
+  - \msedge.exe
+  - \msedgewebview2.exe
+filter_optional_opera:
+  Image|endswith: \opera.exe
+filter_optional_safari:
+  Image|endswith: \safari.exe
+filter_optional_seamonkey:
+  Image|endswith: \seamonkey.exe
+filter_optional_vivaldi:
+  Image|endswith: \vivaldi.exe
+filter_optional_whale:
+  Image|endswith: \whale.exe
+filter_optional_googleupdate:
+  Image|endswith: \GoogleUpdate.exe
+filter_optional_outlook_exe:
+  Image|endswith: \outlook.exe
+filter_main_null:
+  Image: null
+filter_main_empty:
+  Image: ''
+condition: selection and not 1 of filter_main_* and not 1 of filter_optional_*
+```
+
+## False Positives
+
+- Legitimate applications communicating with the "googleapis.com" endpoints that are not already in the exclusion list. This is environmental dependent and requires further testing and tuning.
+
+## References
+
+- https://github.com/looCiprian/GC2-sheet
+- https://youtu.be/n2dFlSaBBKo
+- https://services.google.com/fh/files/blogs/gcat_threathorizons_full_apr2023.pdf
+- https://www.tanium.com/blog/apt41-deploys-google-gc2-for-attacks-cyber-threat-intelligence-roundup/
+- https://www.bleepingcomputer.com/news/security/hackers-abuse-google-command-and-control-red-team-tool-in-attacks/
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_google_api_non_browser_access.yml)

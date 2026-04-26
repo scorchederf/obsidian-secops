@@ -1,0 +1,70 @@
+---
+sigma_id: "de7ce410-b3fb-4e8a-b38c-3b999e2c3420"
+title: "PAExec Service Installation"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/builtin/system/service_control_manager/win_system_service_install_paexec.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_service_install_paexec.yml"
+build_date: "2026-04-26 14:14:30"
+status: "test"
+level: "medium"
+logsource: "windows / system"
+aliases:
+  - "de7ce410-b3fb-4e8a-b38c-3b999e2c3420"
+  - "PAExec Service Installation"
+attack_technique_ids:
+  - "T1569.002"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# PAExec Service Installation
+
+Detects PAExec service installation
+
+## Metadata
+
+- Rule ID: de7ce410-b3fb-4e8a-b38c-3b999e2c3420
+- Status: test
+- Level: medium
+- Author: Nasreddine Bencherchali (Nextron Systems)
+- Date: 2022-10-26
+- Source Path: rules/windows/builtin/system/service_control_manager/win_system_service_install_paexec.yml
+
+## Logsource
+
+- product: windows
+- service: system
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+
+## Detection
+
+```yaml
+selection_eid:
+  Provider_Name: Service Control Manager
+  EventID: 7045
+selection_image:
+- ServiceName|startswith: PAExec-
+- ImagePath|startswith: C:\WINDOWS\PAExec-
+condition: all of selection_*
+```
+
+## False Positives
+
+- Unknown
+
+## References
+
+- https://www.poweradmin.com/paexec/
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_service_install_paexec.yml)

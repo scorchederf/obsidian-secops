@@ -12,10 +12,12 @@ IGNORED_COMPARE_LINE_PREFIXES = [
 ]
 IGNORED_COMPARE_PATH_PREFIXES = [
     "kb/car/",
+    "kb/sigma/",
 ]
 IGNORED_COMPARE_EXACT_LINES = [
     "- [[kb/car/index|CAR]]",
     "- [[kb/car/index|CAR]] (102 analytics)",
+    "- [[kb/sigma/index|Sigma]]",
 ]
 IGNORED_COMPARE_REGEXES = [
     r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}",

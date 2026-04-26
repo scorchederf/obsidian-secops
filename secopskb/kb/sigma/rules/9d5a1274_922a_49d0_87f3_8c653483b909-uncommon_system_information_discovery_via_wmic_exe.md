@@ -1,0 +1,81 @@
+---
+sigma_id: "9d5a1274-922a-49d0-87f3-8c653483b909"
+title: "Uncommon System Information Discovery Via Wmic.EXE"
+framework: "sigma"
+generated: "true"
+source_path: "rules/windows/process_creation/proc_creation_win_wmic_recon_system_info_uncommon.yml"
+source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmic_recon_system_info_uncommon.yml"
+build_date: "2026-04-26 14:14:38"
+status: "test"
+level: "medium"
+logsource: "windows / process_creation"
+aliases:
+  - "9d5a1274-922a-49d0-87f3-8c653483b909"
+  - "Uncommon System Information Discovery Via Wmic.EXE"
+attack_technique_ids:
+  - "T1082"
+tags:
+  - "sigma"
+  - "detection-rule"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+
+# Uncommon System Information Discovery Via Wmic.EXE
+
+Detects the use of the WMI command-line (WMIC) utility to identify and display various system information,
+including OS, CPU, GPU, and disk drive names; memory capacity; display resolution; and baseboard, BIOS,
+and GPU driver products/versions.
+Some of these commands were used by Aurora Stealer in late 2022/early 2023.
+
+## Metadata
+
+- Rule ID: 9d5a1274-922a-49d0-87f3-8c653483b909
+- Status: test
+- Level: medium
+- Author: TropChaud
+- Date: 2023-01-26
+- Modified: 2023-12-19
+- Source Path: rules/windows/process_creation/proc_creation_win_wmic_recon_system_info_uncommon.yml
+
+## Logsource
+
+- category: process_creation
+- product: windows
+
+## ATT&CK Mapping
+
+### Techniques
+
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
+
+## Detection
+
+```yaml
+selection_wmic:
+- Description: WMI Commandline Utility
+- OriginalFileName: wmic.exe
+- Image|endswith: \WMIC.exe
+selection_commands:
+  CommandLine|contains:
+  - LOGICALDISK get Name,Size,FreeSpace
+  - os get Caption,OSArchitecture,Version
+condition: all of selection_*
+```
+
+## False Positives
+
+- Unknown
+
+## References
+
+- https://github.com/redcanaryco/atomic-red-team/blob/a2ccd19c37d0278b4ffa8583add3cf52060a5418/atomics/T1082/T1082.md#atomic-test-25---system-information-discovery-with-wmic
+- https://nwgat.ninja/getting-system-information-with-wmic-on-windows/
+- https://blog.sekoia.io/aurora-a-rising-stealer-flying-under-the-radar
+- https://blog.cyble.com/2023/01/18/aurora-a-stealer-using-shapeshifting-tactics/
+- https://app.any.run/tasks/a6aa0057-82ec-451f-8f99-55650ca537da/
+- https://www.virustotal.com/gui/file/d6f6bc10ae0e634ed4301d584f61418cee18e5d58ad9af72f8aa552dc4aaeca3/behavior
+
+## Source
+
+- [Source YAML](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmic_recon_system_info_uncommon.yml)
