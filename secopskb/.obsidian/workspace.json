@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2c2bef00a7b02428",
+        "id": "4992e75a903455d6",
         "type": "tabs",
         "children": [
           {
-            "id": "1d5cd54c55102618",
+            "id": "bf353bf2a4dce0f6",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,14 +176,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "1d5cd54c55102618",
+  "active": "bf353bf2a4dce0f6",
   "lastOpenFiles": [
-    "kb/attack/techniques/T1078-valid_accounts.md",
-    "kb/attack/techniques/T1003-os_credential_dumping.md",
-    "kb/attack/tactics/TA0001-initial_access.md",
+    "kb/car/analytics/CAR-2019-04-004-credential_dumping_via_mimikatz.md",
+    "kb/car/techniques/index.md",
+    "kb/car/index.md",
+    "kb/attack/techniques/T1134-access_token_manipulation.md",
+    "kb/attack/tactics/TA0004-privilege_escalation.md",
     "kb/attack/tactics/index.md",
     "kb/attack/index.md",
     "kb/index.md",
+    "kb/car/analytics/CAR-2013-01-003-smb_events_monitoring.md",
+    "kb/car/analytics/index.md",
+    "kb/attack/techniques/T1078-valid_accounts.md",
+    "kb/attack/techniques/T1003-os_credential_dumping.md",
+    "kb/attack/tactics/TA0001-initial_access.md",
     "index.md"
   ]
 }

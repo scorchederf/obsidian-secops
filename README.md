@@ -1,6 +1,6 @@
-# Obsidian SecOps Builder - Stage 1 Workspaces v4
+# Obsidian SecOps Builder
 
-Stage 1 only. CAR has not been added yet.
+Builds an Obsidian vault for ATT&CK, D3FEND, tools, workspaces, and MITRE CAR.
 
 ## What changed
 
@@ -9,6 +9,7 @@ Stage 1 only. CAR has not been added yet.
 - MITRE tool pages use name-first filenames, for example `xcmd.md`.
 - MITRE tool links display name and ATT&CK software id, for example `[[xcmd|xCmd (S0123)]]`.
 - The analyst-owned folder is now `workspaces/` instead of `notes/`.
+- MITRE CAR analytics are generated from the upstream CAR YAML source.
 - The patch validates `legacy_build.py` before executing it.
 
 ## Why v4 exists

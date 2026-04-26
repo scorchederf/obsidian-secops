@@ -2,7 +2,12 @@ import difflib
 import os
 import re
 
-from utils.config import IGNORED_COMPARE_LINE_PREFIXES, IGNORED_COMPARE_REGEXES
+from utils.config import (
+    IGNORED_COMPARE_EXACT_LINES,
+    IGNORED_COMPARE_LINE_PREFIXES,
+    IGNORED_COMPARE_PATH_PREFIXES,
+    IGNORED_COMPARE_REGEXES,
+)
 from utils.files import ensure_folder, remove_folder_if_exists, write_text_file
 from utils.logging_utils import log
 
@@ -27,8 +32,16 @@ def get_markdown_files(root_folder):
     return files
 
 
+def should_ignore_compare_path(relative_path):
+    return any(relative_path.startswith(prefix) for prefix in IGNORED_COMPARE_PATH_PREFIXES)
+
+
 def normalize_line(line):
     stripped = line.strip()
+    if stripped in IGNORED_COMPARE_EXACT_LINES:
+        return None
+    if "[[kb/car/index|CAR]]" in line:
+        line = line.replace(" • [[kb/car/index|CAR]]", "")
     for prefix in IGNORED_COMPARE_LINE_PREFIXES:
         if stripped.startswith(prefix):
             return prefix + " <ignored>"
@@ -40,7 +53,12 @@ def normalize_line(line):
 
 def read_normalized_lines(filepath):
     with open(filepath, "r", encoding="utf-8") as file:
-        return [normalize_line(line) for line in file.read().splitlines()]
+        lines = []
+        for line in file.read().splitlines():
+            normalized = normalize_line(line)
+            if normalized is not None:
+                lines.append(normalized)
+        return lines
 
 
 def make_diff_filename(relative_path):
@@ -102,6 +120,8 @@ def compare_vaults(old_vault, new_vault, report_file, diff_folder):
     ensure_folder(diff_folder)
     old_set = set(get_markdown_files(old_vault))
     new_set = set(get_markdown_files(new_vault))
+    old_set = {path for path in old_set if not should_ignore_compare_path(path)}
+    new_set = {path for path in new_set if not should_ignore_compare_path(path)}
     only_old = sorted(old_set - new_set)
     only_new = sorted(new_set - old_set)
     changed_results = []
