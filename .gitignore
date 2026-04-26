@@ -2,7 +2,6 @@
 __pycache__/
 *.pyc
 workingdir/
-secopskb/
-secopskb01/
+secopskb02/
 vault_compare_report.md
 vault_compare_diffs/

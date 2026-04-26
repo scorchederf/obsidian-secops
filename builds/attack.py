@@ -27,7 +27,8 @@ from utils.logging_utils import log
 
 TOOL_PATCH_MARKER = "# stage1_tool_name_first_patch_applied_v6"
 WORKSPACE_PATCH_MARKER = "# stage1_workspaces_patch_applied_v6"
-
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LEGACY_BUILD_PATH = os.path.join(PROJECT_ROOT, LEGACY_BUILD_FILE)
 
 BACKWARD_COMPATIBLE_TOOL_LINK_FUNCTION = '''def make_tool_link(attack_id_or_name, name=""):
     # Backward-compatible signature.
@@ -46,17 +47,14 @@ BACKWARD_COMPATIBLE_TOOL_LINK_FUNCTION = '''def make_tool_link(attack_id_or_name
 
 
 def download_legacy_build_if_missing():
-    if os.path.exists(LEGACY_BUILD_FILE):
-        log("Using local " + LEGACY_BUILD_FILE, "DEBUG")
-        return
+    legacy_build_path = os.path.join(PROJECT_ROOT, LEGACY_BUILD_FILE)
 
-    log("Downloading current build.py as " + LEGACY_BUILD_FILE, "INFO")
-    response = requests.get(LEGACY_BUILD_URL, timeout=120)
-    response.raise_for_status()
+    if not os.path.exists(legacy_build_path):
+        raise FileNotFoundError(
+            legacy_build_path + " is missing. Repo is in inconsistent state."
+        )
 
-    with open(LEGACY_BUILD_FILE, "w", encoding="utf-8") as file:
-        file.write(response.text)
-
+    log("Using local " + legacy_build_path, "INFO")
 
 def replace_required(text, old, new, description):
     if old not in text:
@@ -221,7 +219,7 @@ def patch_tool_aliases(text):
 
 
 def apply_tool_name_first_patch():
-    text = read_text_file(LEGACY_BUILD_FILE)
+    text = read_text_file(LEGACY_BUILD_PATH)
 
     text = patch_make_tool_link_function(text)
     text = patch_tool_call_sites(text)
@@ -231,7 +229,7 @@ def apply_tool_name_first_patch():
     if TOOL_PATCH_MARKER not in text:
         text = TOOL_PATCH_MARKER + "\n" + text
 
-    write_text_file(LEGACY_BUILD_FILE, text)
+    write_text_file(LEGACY_BUILD_PATH, text)
     validate_legacy_build_tool_patch()
     log("Applied and validated tool name-first patch", "INFO")
 
@@ -247,7 +245,7 @@ def apply_workspaces_patch():
     3. marker exists from a previous run
     """
 
-    text = read_text_file(LEGACY_BUILD_FILE)
+    text = read_text_file(LEGACY_BUILD_PATH)
 
     notes_line = 'NOTES_DIR = os.path.join(VAULT, "notes")'
     workspaces_line = 'NOTES_DIR = os.path.join(VAULT, "workspaces")'
@@ -294,12 +292,12 @@ def apply_workspaces_patch():
     if WORKSPACE_PATCH_MARKER not in text:
         text = WORKSPACE_PATCH_MARKER + "\n" + text
 
-    write_text_file(LEGACY_BUILD_FILE, text)
+    write_text_file(LEGACY_BUILD_PATH, text)
     validate_legacy_build_workspaces_patch()
     log("Applied and validated workspaces patch", "INFO")
 
 def validate_legacy_build_tool_patch():
-    text = read_text_file(LEGACY_BUILD_FILE)
+    text = read_text_file(LEGACY_BUILD_PATH)
 
     failures = []
 
@@ -326,7 +324,7 @@ def validate_legacy_build_tool_patch():
 
 
 def validate_legacy_build_workspaces_patch():
-    text = read_text_file(LEGACY_BUILD_FILE)
+    text = read_text_file(LEGACY_BUILD_PATH)
 
     if 'NOTES_DIR = os.path.join(VAULT, "notes")' in text:
         raise RuntimeError("legacy_build.py workspace patch validation failed: NOTES_DIR still points to notes")
@@ -448,6 +446,12 @@ def build_attack():
     download_legacy_build_if_missing()
     apply_tool_name_first_patch()
     apply_workspaces_patch()
-    runpy.run_path(LEGACY_BUILD_FILE, run_name="__main__")
+    #legacy_build_path = os.path.join(PROJECT_ROOT, LEGACY_BUILD_FILE)
+    current_folder = os.getcwd()
+    try:
+        os.chdir(PROJECT_ROOT)
+        runpy.run_path(LEGACY_BUILD_PATH, run_name="__main__")
+    finally:
+        os.chdir(current_folder)
     sort_generated_tool_sections()
     log("Finished ATT&CK/D3FEND legacy build", "INFO")
