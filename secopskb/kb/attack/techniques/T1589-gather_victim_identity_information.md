@@ -41,6 +41,15 @@ Gathering this information may reveal opportunities for other forms of reconnais
 
 ![[workspaces/attack/techniques/T1589-gather_victim_identity_information-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/19128e5e_4743_48dc_bd97_52e5775af817-azure_ad_account_credential_leaked|Azure AD Account Credential Leaked (high; azure / riskdetection)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0043-reconnaissance|TA0043: Reconnaissance]]

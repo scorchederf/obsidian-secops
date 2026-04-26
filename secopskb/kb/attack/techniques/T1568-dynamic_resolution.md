@@ -59,6 +59,20 @@ Adversaries may use dynamic resolution for the purpose of [[T1008-fallback_chann
 
 ![[workspaces/attack/techniques/T1568-dynamic_resolution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated (high; windows / network_connection)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/cc367493_3a00_4c4a_a685_16b73339167c-dga_simulation_python|DGA Simulation (Python) (bash; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

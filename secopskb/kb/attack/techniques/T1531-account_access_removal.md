@@ -55,6 +55,22 @@ Adversaries who use ransomware or similar attacks may first perform this and oth
 
 ![[workspaces/attack/techniques/T1531-account_access_removal-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1b99ef28_f83c_4ec5_8a08_1a56263a5bb2-change_user_password_windows|Change User Password - Windows (command_prompt; windows)]]
+- [[kb/atomic/tests/3c717bf3_2ecc_4d79_8ac8_0bfbf08fbce6-change_user_password_via_passwd|Change User Password via passwd (sh; macos, linux)]]
+- [[kb/atomic/tests/43f71395_6c37_498e_ab17_897d814a0947-remove_account_from_domain_admin_group|Remove Account From Domain Admin Group (powershell; windows)]]
+- [[kb/atomic/tests/4d938c43_2fe8_4d70_a5b3_5bf239aa7846-delete_user_via_dscl_utility|Delete User via dscl utility (sh; macos)]]
+- [[kb/atomic/tests/4f577511_dc1c_4045_bcb8_75d2457f01f4-azure_ad_delete_user_via_azure_ad_powershell|Azure AD - Delete user via Azure AD PowerShell (powershell; azure-ad)]]
+- [[kb/atomic/tests/c955c1c7_3145_4a22_af2d_63eea0d967f0-azure_ad_delete_user_via_azure_cli|Azure AD - Delete user via Azure CLI (powershell; azure-ad)]]
+- [[kb/atomic/tests/d3812c4e_30ee_466a_a0aa_07e355b561d6-delete_user_via_sysadminctl_utility|Delete User via sysadminctl utility (sh; macos)]]
+- [[kb/atomic/tests/f21a1d7d_a62f_442a_8c3a_2440d43b19e5-delete_user_windows|Delete User - Windows (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

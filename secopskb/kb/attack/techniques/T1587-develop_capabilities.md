@@ -39,6 +39,22 @@ As with legitimate development efforts, different skill sets may be required for
 
 ![[workspaces/attack/techniques/T1587-develop_capabilities-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/207b0396_3689_42d9_8399_4222658efc99-potential_privilege_escalation_to_local_system|Potential Privilege Escalation To LOCAL SYSTEM (high; windows / process_creation)]]
+- [[kb/sigma/rules/550d3350_bb8a_4ff3_9533_2ba533f4a1c0-proxylogon_msexchange_oabvirtualdirectory|ProxyLogon MSExchange OabVirtualDirectory (critical; windows / msexchange-management)]]
+- [[kb/sigma/rules/8834e2f7_6b4b_4f09_8906_d2276470ee23-psexec_paexec_escalation_to_local_system|PsExec/PAExec Escalation to LOCAL SYSTEM (high; windows / process_creation)]]
+- [[kb/sigma/rules/a015e032_146d_4717_8944_7a1884122111-linux_hacktool_execution|Linux HackTool Execution (high; linux / process_creation)]]
+- [[kb/sigma/rules/a10a2c40_2c4d_49f8_b557_1a946bc55d9d-uncommon_file_created_in_office_startup_folder|Uncommon File Created In Office Startup Folder (high; windows / file_event)]]
+- [[kb/sigma/rules/d08a2711_ee8b_4323_bdec_b7d85e892b31-pua_csexec_execution|PUA - CsExec Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/ea011323_7045_460b_b2d7_0f7442ea6b38-potential_psexec_remote_execution|Potential PsExec Remote Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/ff23ffbc_3378_435e_992f_0624dcf93ab4-hacktool_purplesharp_execution|HackTool - PurpleSharp Execution (critical; windows / process_creation)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0042-resource_development|TA0042: Resource Development]]

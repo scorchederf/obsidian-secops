@@ -45,6 +45,22 @@ Adversaries may modify visual content available internally or externally to an e
 
 ![[workspaces/attack/techniques/T1491-defacement-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/8b9606c9_28be_4a38_b146_0e313cc232c1-potential_ransomware_activity_using_legalnotice_message|Potential Ransomware Activity Using LegalNotice Message (high; windows / registry_set)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0eeb68ce_e64c_4420_8d53_ad5bdc6f86d5-windows_display_a_simulated_ransom_note_via_notepad_non_destructive|Windows - Display a simulated ransom note via Notepad (non-destructive) (powershell; windows)]]
+- [[kb/atomic/tests/30558d53_9d76_41c4_9267_a7bd5184bed3-replace_desktop_wallpaper|Replace Desktop Wallpaper (powershell; windows)]]
+- [[kb/atomic/tests/30905f21_34f3_4504_8b4c_f7a5e314b810-esxi_change_welcome_message_on_direct_console_user_interface_dcui|ESXi - Change Welcome Message on Direct Console User Interface (DCUI) (command_prompt; windows)]]
+- [[kb/atomic/tests/ffcbfaab_c9ff_470b_928c_f086b326089b-configure_legalnoticecaption_and_legalnoticetext_registry_keys_to_display_ransom_message|Configure LegalNoticeCaption and LegalNoticeText registry keys to display ransom message (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

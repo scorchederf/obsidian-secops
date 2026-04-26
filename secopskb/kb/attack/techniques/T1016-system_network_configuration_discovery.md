@@ -65,6 +65,34 @@ Adversaries may use the information from [[T1016-system_network_configuration_di
 
 ![[workspaces/attack/techniques/T1016-system_network_configuration_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2016-03-001-host_discovery_commands|CAR-2016-03-001: Host Discovery Commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/e9856028_fd4e_46e6_b3d1_10f7ceb95078-opencanary_snmp_oid_request|OpenCanary - SNMP OID Request (high; opencanary / application)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/038263cb_00f4_4b0a_98ae_0696c67e1752-list_windows_firewall_rules|List Windows Firewall Rules (command_prompt; windows)]]
+- [[kb/atomic/tests/121de5c6_5818_4868_b8a7_8fd07c455c1b-qakbot_recon|Qakbot Recon (command_prompt; windows)]]
+- [[kb/atomic/tests/34557863_344a_468f_808b_a1bfb89b4fa9-dns_server_discovery_using_nslookup|DNS Server Discovery Using nslookup (command_prompt; windows)]]
+- [[kb/atomic/tests/4b467538_f102_491d_ace7_ed487b853bf5-list_open_egress_ports|List Open Egress Ports (powershell; windows)]]
+- [[kb/atomic/tests/53cf1903_0fa7_4177_ab14_f358ae809eec-enumerate_stored_wi_fi_profiles_and_passwords_via_netsh|Enumerate Stored Wi-Fi Profiles And Passwords via netsh (command_prompt; windows)]]
+- [[kb/atomic/tests/7c35779d_42ec_42ab_a283_6255b28e9d68-check_internet_connection_using_test_netconnection_in_powershell_tcp_http|Check internet connection using Test-NetConnection in PowerShell (TCP-HTTP) (powershell; windows)]]
+- [[kb/atomic/tests/970ab6a1_0157_4f3f_9a73_ec4166754b23-system_network_configuration_discovery_on_windows|System Network Configuration Discovery on Windows (command_prompt; windows)]]
+- [[kb/atomic/tests/9bb45dd7_c466_4f93_83a1_be30e56033ee-adfind_enumerate_active_directory_subnet_objects|Adfind - Enumerate Active Directory Subnet Objects (command_prompt; windows)]]
+- [[kb/atomic/tests/be8f4019_d8b6_434c_a814_53123cdcc11e-check_internet_connection_using_ping_freebsd_linux_or_macos|Check internet connection using ping freebsd, linux or macos (bash; macos, linux)]]
+- [[kb/atomic/tests/c141bbdb_7fca_4254_9fd6_f47e79447e17-system_network_configuration_discovery|System Network Configuration Discovery (sh; macos, linux)]]
+- 5 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

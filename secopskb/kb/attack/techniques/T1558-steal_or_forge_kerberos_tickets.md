@@ -64,6 +64,39 @@ On Windows, the built-in `klist` utility can be used to list and analyze cached 
 
 ![[workspaces/attack/techniques/T1558-steal_or_forge_kerberos_tickets-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/12827a56_61a4_476a_a9cb_f3068f191073-hacktool_krbrelayup_execution|HackTool - KrbRelayUp Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/12e6d621_194f_4f59_90cc_1959e21e69f7-register_new_logon_process_by_rubeus|Register new Logon Process by Rubeus (high; windows / security)]]
+- [[kb/sigma/rules/3245cd30_e015_40ff_a31d_5cadd5f377ec-hacktool_rubeus_execution_scriptblock|HackTool - Rubeus Execution - ScriptBlock (high; windows / ps_script)]]
+- [[kb/sigma/rules/5a44727c_3b85_4713_8c44_4401d5499629-replay_attack_detected|Replay Attack Detected (high; windows / security)]]
+- [[kb/sigma/rules/6daac7fc_77d1_449a_a71a_e6b4d59a0e54-user_couldn_t_call_a_privileged_service_lsaregisterlogonprocess|User Couldn't Call a Privileged Service 'LsaRegisterLogonProcess' (high; windows / security)]]
+- [[kb/sigma/rules/78cc2dd2_7d20_4d32_93ff_057084c38b93-antivirus_password_dumper_detection|Antivirus Password Dumper Detection (critical; antivirus)]]
+- [[kb/sigma/rules/7ec2c172_dceb_4c10_92c9_87c1881b7e18-hacktool_rubeus_execution|HackTool - Rubeus Execution (critical; windows / process_creation)]]
+- [[kb/sigma/rules/9e099d99_44c2_42b6_a6d8_54c3545cab29-hacktool_mimikatz_kirbi_file_creation|HackTool - Mimikatz Kirbi File Creation (critical; windows / file_event)]]
+- [[kb/sigma/rules/a7664b14_75fb_4a50_a223_cb9bc0afbacf-hacktool_remotekrbrelay_execution|HackTool - RemoteKrbRelay Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/a861d835_af37_4930_bcd6_5b178bfb54df-suspicious_kerberos_ticket_request_via_powershell_script_scriptblock|Suspicious Kerberos Ticket Request via PowerShell Script - ScriptBlock (high; windows / ps_script)]]
+- 2 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/14625569_6def_4497_99ac_8e7817105b55-rubeus_kerberoast|Rubeus kerberoast (powershell; windows)]]
+- [[kb/atomic/tests/29094950_2c96_4cbd_b5e4_f7c65079678f-winpwn_powersharppack_kerberoasting_using_rubeus|WinPwn - PowerSharpPack - Kerberoasting Using Rubeus (powershell; windows)]]
+- [[kb/atomic/tests/385e59aa_113e_4711_84d9_f637aef01f2c-crafting_active_directory_silver_tickets_with_mimikatz|Crafting Active Directory silver tickets with mimikatz (powershell; windows)]]
+- [[kb/atomic/tests/3f987809_3681_43c8_bcd8_b3ff3a28533a-request_for_service_tickets|Request for service tickets (powershell; windows)]]
+- [[kb/atomic/tests/615bd568_2859_41b5_9aed_61f6a88e48dd-rubeus_asreproast|Rubeus asreproast (powershell; windows)]]
+- [[kb/atomic/tests/78d10e20_c874_45f2_a9df_6fea0120ec27-winpwn_kerberoasting|WinPwn - Kerberoasting (powershell; windows)]]
+- [[kb/atomic/tests/8c385f88_4d47_4c9a_814d_93d9deec8c71-winpwn_powersharppack_kerberoasting_using_rubeus|WinPwn - PowerSharpPack - Kerberoasting Using Rubeus (powershell; windows)]]
+- [[kb/atomic/tests/902f4ed2_1aba_4133_90f2_cff6d299d6da-request_all_tickets_via_powershell|Request All Tickets via PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/9726592a_dabc_4d4d_81cd_44070008b3af-crafting_active_directory_golden_tickets_with_mimikatz|Crafting Active Directory golden tickets with mimikatz (powershell; windows)]]
+- [[kb/atomic/tests/988539bc_2ed7_4e62_aec6_7c5cf6680863-request_a_single_ticket_via_powershell|Request A Single Ticket via PowerShell (powershell; windows)]]
+- 3 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

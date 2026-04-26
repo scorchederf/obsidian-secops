@@ -59,6 +59,46 @@ Files can also be transferred using various [[T1102-web_service|T1102: Web Servi
 
 ![[workspaces/attack/techniques/T1105-ingress_tool_transfer-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-07-001-suspicious_arguments|CAR-2013-07-001: Suspicious Arguments]]
+- [[kb/car/analytics/CAR-2021-05-005-bitsadmin_download_file|CAR-2021-05-005: BITSAdmin Download File]]
+- [[kb/car/analytics/CAR-2021-05-006-certutil_download_with_urlcache_and_split_arguments|CAR-2021-05-006: CertUtil Download With URLCache and Split Arguments]]
+- [[kb/car/analytics/CAR-2021-05-007-certutil_download_with_verifyctl_and_split_arguments|CAR-2021-05-007: CertUtil Download With VerifyCtl and Split Arguments]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/00d49ed5_4491_4271_a8db_650a4ef6f8c1-suspicious_download_from_office_domain|Suspicious Download from Office Domain (high; windows / process_creation)]]
+- [[kb/sigma/rules/0dba975d_a193_4ed1_a067_424df57570d1-uncommon_network_connection_initiated_by_certutil_exe|Uncommon Network Connection Initiated By Certutil.EXE (high; windows / network_connection)]]
+- [[kb/sigma/rules/0e8cfe08_02c9_4815_a2f8_0d157b7ed33e-file_download_with_headless_browser|File Download with Headless Browser (high; windows / process_creation)]]
+- [[kb/sigma/rules/13e6fe51_d478_4c7e_b0f2_6da9b400a829-suspicious_file_downloaded_from_direct_ip_via_certutil_exe|Suspicious File Downloaded From Direct IP Via Certutil.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/1cf465a1_2609_4c15_9b66_c32dbe4bfd67-legitimate_application_writing_files_in_uncommon_location|Legitimate Application Writing Files In Uncommon Location (high; windows / file_event)]]
+- [[kb/sigma/rules/21dd6d38_2b18_4453_9404_a0fe4a0cc288-curl_download_and_execute_combination|Curl Download And Execute Combination (high; windows / process_creation)]]
+- [[kb/sigma/rules/25eabf56_22f0_4915_a1ed_056b8dae0a68-suspicious_dropbox_api_usage|Suspicious Dropbox API Usage (high; windows / network_connection)]]
+- [[kb/sigma/rules/2ddef153_167b_4e89_86b6_757a9e65dcac-file_download_via_bitsadmin_to_a_suspicious_target_folder|File Download Via Bitsadmin To A Suspicious Target Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/3aff0be0_7802_4a7e_a4fa_c60c74bc5e1d-lolbas_onedrivestandaloneupdater_exe_proxy_download|Lolbas OneDriveStandaloneUpdater.exe Proxy Download (high; windows / registry_set)]]
+- [[kb/sigma/rules/42a5f1e7_9603_4f6d_97ae_3f37d130d794-suspicious_file_downloaded_from_file_sharing_website_via_certutil_exe|Suspicious File Downloaded From File-Sharing Website Via Certutil.EXE (high; windows / process_creation)]]
+- 20 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0139dba1_f391_405e_a4f5_f3989f2c88ef-sftp_remote_file_copy_pull|sftp remote file copy (pull) (sh; linux, macos)]]
+- [[kb/atomic/tests/0fc6e977_cb12_44f6_b263_2824ba917409-rsync_remote_file_copy_push|rsync remote file copy (push) (sh; linux, macos)]]
+- [[kb/atomic/tests/1a02df58_09af_4064_a765_0babe1a0d1e2-download_a_file_with_imewdbld_exe|Download a file with IMEWDBLD.exe (powershell; windows)]]
+- [[kb/atomic/tests/205e676e_0401_4bae_83a5_94b8c5daeb22-windows_push_file_using_sftp_exe|Windows push file using sftp.exe (powershell; windows)]]
+- [[kb/atomic/tests/2a4b0d29_e5dd_4b66_b729_07423ba1cd9d-windows_push_file_using_scp_exe|Windows push file using scp.exe (powershell; windows)]]
+- [[kb/atomic/tests/2b080b99_0deb_4d51_af0f_833d37c4ca6a-curl_download_file|Curl Download File (command_prompt; windows)]]
+- [[kb/atomic/tests/2ca61766_b456_4fcf_a35a_1233685e1cad-ostap_worming_activity|OSTAP Worming Activity (command_prompt; windows)]]
+- [[kb/atomic/tests/3180f7d5_52c0_4493_9ea0_e3431a84773f-rsync_remote_file_copy_pull|rsync remote file copy (pull) (sh; linux, macos)]]
+- [[kb/atomic/tests/3d25f1f2_55cb_4a41_a523_d17ad4cfba19-windows_pull_file_using_sftp_exe|Windows pull file using sftp.exe (powershell; windows)]]
+- [[kb/atomic/tests/3dd6a6cf_9c78_462c_bd75_e9b54fc8925b-download_a_file_with_onedrive_standalone_updater|Download a file with OneDrive Standalone Updater (powershell; windows)]]
+- 29 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

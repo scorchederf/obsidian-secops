@@ -82,6 +82,31 @@ Caching alternate authentication material allows the system to verify an identit
 
 ![[workspaces/attack/techniques/T1550-use_alternate_authentication_material-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2016-04-004-successful_local_account_login|CAR-2016-04-004: Successful Local Account Login]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/12827a56_61a4_476a_a9cb_f3068f191073-hacktool_krbrelayup_execution|HackTool - KrbRelayUp Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/192a0330_c20b_4356_90b6_7b7049ae0b87-successful_overpass_the_hash_attempt|Successful Overpass the Hash Attempt (high; windows / security)]]
+- [[kb/sigma/rules/24549159_ac1b_479c_8175_d42aea947cae-hacktool_ruler|Hacktool Ruler (high; windows / security)]]
+- [[kb/sigma/rules/3245cd30_e015_40ff_a31d_5cadd5f377ec-hacktool_rubeus_execution_scriptblock|HackTool - Rubeus Execution - ScriptBlock (high; windows / ps_script)]]
+- [[kb/sigma/rules/7ec2c172_dceb_4c10_92c9_87c1881b7e18-hacktool_rubeus_execution|HackTool - Rubeus Execution (critical; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/a2fc4ec5_12c6_4fb4_b661_961f23f359cb-rubeus_kerberos_pass_the_ticket|Rubeus Kerberos Pass The Ticket (powershell; windows)]]
+- [[kb/atomic/tests/dbf38128_7ba7_4776_bedf_cc2eed432098-mimikatz_kerberos_ticket_attack|Mimikatz Kerberos Ticket Attack (command_prompt; windows)]]
+- [[kb/atomic/tests/eb05b028_16c8_4ad8_adea_6f5b219da9a9-crackmapexec_pass_the_hash|crackmapexec Pass the Hash (command_prompt; windows)]]
+- [[kb/atomic/tests/ec23cef9_27d9_46e4_a68d_6f75f7b86908-mimikatz_pass_the_hash|Mimikatz Pass the Hash (command_prompt; windows)]]
+- [[kb/atomic/tests/f8757545_b00a_4e4e_8cfb_8cfb961ee713-invoke_wmiexec_pass_the_hash|Invoke-WMIExec Pass the Hash (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

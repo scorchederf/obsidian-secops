@@ -68,6 +68,49 @@ There are many ways an adversary may hijack the flow of execution, including by 
 
 ![[workspaces/attack/techniques/T1574-hijack_execution_flow-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-002-autorun_differences|CAR-2013-01-002: Autorun Differences]]
+- [[kb/car/analytics/CAR-2013-03-001-reg_exe_called_from_command_shell|CAR-2013-03-001: Reg.exe called from Command Shell]]
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2014-02-001-service_binary_modifications|CAR-2014-02-001: Service Binary Modifications]]
+- [[kb/car/analytics/CAR-2014-07-001-service_search_path_interception|CAR-2014-07-001: Service Search Path Interception]]
+- [[kb/car/analytics/CAR-2020-05-003-rare_lolbas_command_lines|CAR-2020-05-003: Rare LolBAS Command Lines]]
+- [[kb/car/analytics/CAR-2021-11-001-registry_edit_with_creation_of_safedllsearchmode_key_set_to_0|CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0a4f6091_223b_41f6_8743_f322ec84930b-suspicious_gup_usage|Suspicious GUP Usage (high; windows / process_creation)]]
+- [[kb/sigma/rules/0b0ea3cc_99c8_4730_9c53_45deee2a4c86-microsoft_defender_blocked_from_loading_unsigned_dll|Microsoft Defender Blocked from Loading Unsigned DLL (high; windows / security-mitigations)]]
+- [[kb/sigma/rules/0cbe38c0_270c_41d9_ab79_6e5a9a669290-trusted_path_bypass_via_windows_directory_spoofing|Trusted Path Bypass via Windows Directory Spoofing (high; windows / image_load)]]
+- [[kb/sigma/rules/0e0bc253_07ed_43f1_816d_e1b220fe8971-potential_rjvplatform_dll_sideloading_from_non_default_location|Potential RjvPlatform.DLL Sideloading From Non-Default Location (high; windows / image_load)]]
+- [[kb/sigma/rules/0f9c21f1_6a73_4b0e_9809_cb562cb8d981-potential_privilege_escalation_via_service_permissions_weakness|Potential Privilege Escalation via Service Permissions Weakness (high; windows / process_creation)]]
+- [[kb/sigma/rules/13fc89a9_971e_4ca6_b9dc_aa53a445bf40-dhcp_server_loaded_the_callout_dll|DHCP Server Loaded the CallOut DLL (high; windows / system)]]
+- [[kb/sigma/rules/1908fcc1_1b92_4272_8214_0fbaf2fa5163-malicious_dll_file_dropped_in_the_teams_or_onedrive_folder|Malicious DLL File Dropped in the Teams or OneDrive Folder (high; windows / file_event)]]
+- [[kb/sigma/rules/193d5ccd_6f59_40c6_b5b0_8e32d5ddd3d1-xwizard_exe_execution_from_non_default_location|Xwizard.EXE Execution From Non-Default Location (high; windows / process_creation)]]
+- [[kb/sigma/rules/22d80745_6f2c_46da_826b_77adaededd74-suspicious_service_dacl_modification_via_set_service_cmdlet_ps|Suspicious Service DACL Modification Via Set-Service Cmdlet - PS (high; windows / ps_script)]]
+- [[kb/sigma/rules/24b6cf51_6122_469e_861a_22974e9c1e5b-potential_smadhook_dll_sideloading|Potential SmadHook.DLL Sideloading (high; windows / image_load)]]
+- 44 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1561de08_0b4b_498e_8261_e922f3494aae-powershell_persistence_via_hijacking_default_modules_get_variable_exe|powerShell Persistence via hijacking default modules - Get-Variable.exe (powershell; windows)]]
+- [[kb/atomic/tests/2770dea7_c50f_457b_84c4_c40a47460d9f-execution_of_program_exe_as_service_with_unquoted_service_path|Execution of program.exe as service with unquoted service path (command_prompt; windows)]]
+- [[kb/atomic/tests/39cb0e67_dd0d_4b74_a74b_c072db7ae991-shared_library_injection_via_etc_ld_so_preload|Shared Library Injection via /etc/ld.so.preload (bash; linux)]]
+- [[kb/atomic/tests/46ed938b_c617_429a_88dc_d49b5c9ffedb-phantom_dll_hijacking_winappxrt_dll|Phantom Dll Hijacking - WinAppXRT.dll (command_prompt; windows)]]
+- [[kb/atomic/tests/4d66029d_7355_43fd_93a4_b63ba92ea1be-dylib_injection_via_dyld_insert_libraries|Dylib Injection via DYLD_INSERT_LIBRARIES (bash; macos)]]
+- [[kb/atomic/tests/5898902d_c5ad_479a_8545_6f5ab3cfc87f-phantom_dll_hijacking_ualapi_dll|Phantom Dll Hijacking - ualapi.dll (command_prompt; windows)]]
+- [[kb/atomic/tests/65526037_7079_44a9_bda1_2cb624838040-dll_side_loading_using_the_notepad_gup_exe_binary|DLL Side-Loading using the Notepad++ GUP.exe binary (command_prompt; windows)]]
+- [[kb/atomic/tests/79d57242_bbef_41db_b301_9d01d9f6e817-registry_free_process_scope_cor_profiler|Registry-free process scope COR_PROFILER (powershell; windows)]]
+- [[kb/atomic/tests/8549ad4b_b5df_4a2d_a3d7_2aee9e7052a3-dll_search_order_hijacking_amsi_dll|DLL Search Order Hijacking - amsi.dll (command_prompt; windows)]]
+- [[kb/atomic/tests/9d5f89dc_c3a5_4f8a_a4fc_a6ed02e7cb5a-user_scope_cor_profiler|User scope COR_PROFILER (powershell; windows)]]
+- 6 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

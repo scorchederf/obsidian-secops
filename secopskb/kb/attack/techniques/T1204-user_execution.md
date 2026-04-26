@@ -83,6 +83,43 @@ For example, tech support scams can be facilitated through [[T1566-phishing|T156
 
 ![[workspaces/attack/techniques/T1204-user_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-05-002-batch_file_write_to_system32|CAR-2021-05-002: Batch File Write to System32]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/208748f7_881d_47ac_a29c_07ea84bf691d-suspicious_outlook_child_process|Suspicious Outlook Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/28208707_fe31_437f_9a7f_4b1108b94d2e-suspicious_startup_folder_persistence|Suspicious Startup Folder Persistence (high; windows / file_event)]]
+- [[kb/sigma/rules/3ae9974a_eb09_4044_8e70_8980a50c12c8-suspicious_explorer_process_with_whitespace_padding_clickfix_filefix|Suspicious Explorer Process with Whitespace Padding - ClickFix/FileFix (high; windows / process_creation)]]
+- [[kb/sigma/rules/438025f9_5856_4663_83f7_52f878a70a50-suspicious_microsoft_office_child_process|Suspicious Microsoft Office Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/4922a5dd_6743_4fc2_8e81_144374280997-flash_player_update_from_suspicious_location|Flash Player Update from Suspicious Location (high; proxy)]]
+- [[kb/sigma/rules/4fee3d51_8069_4a4c_a0f7_924fcaff2c70-filefix_command_evidence_in_typedpaths|FileFix - Command Evidence in TypedPaths (high; windows / registry_set)]]
+- [[kb/sigma/rules/69483748_1525_4a6c_95ca_90dc8d431b68-suspicious_microsoft_office_child_process_macos|Suspicious Microsoft Office Child Process - MacOS (high; macos / process_creation)]]
+- [[kb/sigma/rules/7a1b4c5e_8f3d_4b9a_7c2e_1f4a5b8c6d9e-suspicious_space_characters_in_runmru_registry_path_clickfix|Suspicious Space Characters in RunMRU Registry Path - ClickFix (high; windows / registry_set)]]
+- [[kb/sigma/rules/7bdde3bf_2a42_4c39_aa31_a92b3e17afac-hacktool_littlecorporal_generated_maldoc_injection|HackTool - LittleCorporal Generated Maldoc Injection (high; windows / process_access)]]
+- [[kb/sigma/rules/8a582fe2_0882_4b89_a82a_da6b2dc32937-suspicious_wmiprvse_child_process|Suspicious WmiPrvSE Child Process (high; windows / process_creation)]]
+- 14 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/02f35d62_9fdc_4a97_b899_a5d9a876d295-potentially_unwanted_applications_pua|Potentially Unwanted Applications (PUA) (powershell; windows)]]
+- [[kb/atomic/tests/0330a5d2_a45a_4272_a9ee_e364411c4b18-maldoc_choice_flags_command_execution|Maldoc choice flags command execution (powershell; windows)]]
+- [[kb/atomic/tests/22386853_f68d_4b50_a362_de235127c443-simulate_click_fix_via_downloaded_bat_file|Simulate Click-Fix via Downloaded BAT File (powershell; windows)]]
+- [[kb/atomic/tests/24fd9719_7419_42dd_bce6_ab3463110b3c-mirror_blast_emulation|Mirror Blast Emulation (powershell; windows)]]
+- [[kb/atomic/tests/3f3120f0_7e50_4be2_88ae_54c61230cb9f-clickfix_campaign_abuse_runmru_to_launch_mshta_via_powershell|ClickFix Campaign - Abuse RunMRU to Launch mshta via PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/3f3af983_118a_4fa1_85d3_ba4daa739d80-ostap_payload_download|OSTap Payload Download (command_prompt; windows)]]
+- [[kb/atomic/tests/4ea1fc97_8a46_4b4e_ba48_af43d2a98052-excel_4_macro|Excel 4 Macro (powershell; windows)]]
+- [[kb/atomic/tests/5202ee05_c420_4148_bf5e_fd7f7d24850c-office_generic_payload_download|Office Generic Payload Download (powershell; windows)]]
+- [[kb/atomic/tests/581d7521_9c4b_420e_9695_2aec5241167f-lnk_payload_download|LNK Payload Download (powershell; windows)]]
+- [[kb/atomic/tests/8bebc690_18c7_4549_bc98_210f7019efff-ostap_style_macro_execution|OSTap Style Macro Execution (powershell; windows)]]
+- 4 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

@@ -39,6 +39,46 @@ Adversaries may abuse system services or daemons to execute commands or programs
 
 ![[workspaces/attack/techniques/T1569-system_services-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2014-02-001-service_binary_modifications|CAR-2014-02-001: Service Binary Modifications]]
+- [[kb/car/analytics/CAR-2014-03-005-remotely_launched_executables_via_services|CAR-2014-03-005: Remotely Launched Executables via Services]]
+- [[kb/car/analytics/CAR-2021-05-012-create_service_in_suspicious_file_path|CAR-2021-05-012: Create Service In Suspicious File Path]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/10018e73_06ec_46ec_8107_9172f1e04ff2-remote_server_service_abuse_for_lateral_movement|Remote Server Service Abuse for Lateral Movement (high; rpc_firewall / application)]]
+- [[kb/sigma/rules/2a926e6a_4b81_4011_8a96_e36cc8c04302-powershell_scripts_installed_as_services_security|PowerShell Scripts Installed as Services - Security (high; windows / security)]]
+- [[kb/sigma/rules/31c51af6_e7aa_4da7_84d4_8f32cc580af2-sliver_c2_default_service_installation|Sliver C2 Default Service Installation (high; windows / system)]]
+- [[kb/sigma/rules/4976aa50_8f41_45c6_8b15_ab3fc10e79ed-credential_dumping_tools_service_execution_system|Credential Dumping Tools Service Execution - System (high; windows / system)]]
+- [[kb/sigma/rules/4a5f5a5e_ac01_474b_9b4e_d61298c9df1d-powershell_as_a_service_in_registry|PowerShell as a Service in Registry (high; windows / registry_set)]]
+- [[kb/sigma/rules/52a85084_6989_40c3_8f32_091e12e13f09-smbexec_py_service_installation|smbexec.py Service Installation (high; windows / system)]]
+- [[kb/sigma/rules/5a105d34_05fc_401e_8553_272b45c1522d-cobaltstrike_service_installations_system|CobaltStrike Service Installations - System (critical; windows / system)]]
+- [[kb/sigma/rules/5bb68627_3198_40ca_b458_49f973db8752-rundll32_execution_without_parameters|Rundll32 Execution Without Parameters (high; windows / process_creation)]]
+- [[kb/sigma/rules/61a7697c_cb79_42a8_a2ff_5f0cdfae0130-potential_cobaltstrike_service_installations_registry|Potential CobaltStrike Service Installations - Registry (high; windows / registry_set)]]
+- [[kb/sigma/rules/6fb63b40_e02a_403e_9ffd_3bcc1d749442-metasploit_or_impacket_service_installation_via_smb_psexec|Metasploit Or Impacket Service Installation Via SMB PsExec (high; windows / security)]]
+- 11 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/004a5d68_627b_452d_af3d_43bd1fc75a3b-pipe_creation_psexec_tool_execution_from_suspicious_locations|Pipe Creation - PsExec Tool Execution From Suspicious Locations (powershell; windows)]]
+- [[kb/atomic/tests/1e5be8d4_605a_4acb_8709_2f80b2d8ea95-enumerate_all_systemd_services_using_systemctl|Enumerate All systemd Services Using systemctl (sh; linux)]]
+- [[kb/atomic/tests/2382dee2_a75f_49aa_9378_f52df6ed3fb1-execute_a_command_as_a_service|Execute a Command as a Service (command_prompt; windows)]]
+- [[kb/atomic/tests/2fc6c0ab_4f88_4eb8_ab1b_f739fc22bba7-enable_systemd_service_for_persistence_with_auto_restart|Enable systemd Service for Persistence with Auto-Restart (sh; linux)]]
+- [[kb/atomic/tests/31eb7828_97d7_4067_9c1e_c6feb85edc4b-blackcat_pre_encryption_cmds_with_lateral_movement|BlackCat pre-encryption cmds with Lateral Movement (powershell; windows)]]
+- [[kb/atomic/tests/6123928f_6389_4914_8d25_a5d69bd657fa-modify_existing_systemd_service_to_execute_malicious_command|Modify Existing systemd Service to Execute Malicious Command (sh; linux)]]
+- [[kb/atomic/tests/6fb61988_724e_4755_a595_07743749d4e2-launchctl|Launchctl (bash; macos)]]
+- [[kb/atomic/tests/6fec8560_ff64_4bbf_bc79_734fea48f7ca-masquerade_malicious_service_as_legitimate_system_service|Masquerade Malicious Service as Legitimate System Service (sh; linux)]]
+- [[kb/atomic/tests/873106b7_cfed_454b_8680_fa9f6400431c-use_psexec_to_execute_a_command_on_a_remote_host|Use PsExec to execute a command on a remote host (command_prompt; windows)]]
+- [[kb/atomic/tests/a1fa406e_2354_4a24_b6d6_94157e7564d4-create_systemd_service_unit_from_tmp_unusual_location|Create systemd Service Unit from /tmp (Unusual Location) (sh; linux)]]
+- 7 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

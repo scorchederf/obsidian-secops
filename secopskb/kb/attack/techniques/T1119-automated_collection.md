@@ -60,6 +60,18 @@ This technique may incorporate use of other techniques such as [[T1083-file_and_
 
 ![[workspaces/attack/techniques/T1119-automated_collection-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/634bd9b9_dc83_4229_b19f_7f83ba9ad313-automated_collection_powershell|Automated Collection PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/aa1180e2_f329_4e1e_8625_2472ec0bfaf3-recon_information_for_export_with_command_prompt|Recon information for export with Command Prompt (command_prompt; windows)]]
+- [[kb/atomic/tests/c3f6d794_50dd_482f_b640_0384fbb7db26-recon_information_for_export_with_powershell|Recon information for export with PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/cb379146_53f1_43e0_b884_7ce2c635ff5b-automated_collection_command_prompt|Automated Collection Command Prompt (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

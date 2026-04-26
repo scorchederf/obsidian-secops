@@ -56,6 +56,29 @@ Adversaries may also leverage the AiTM position to attempt to monitor and/or mod
 
 ![[workspaces/attack/techniques/T1557-adversary-in-the-middle-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0ed99dda_6a35_11ef_8c99_0242ac120002-attempts_of_kerberos_coercion_via_dns_spn_spoofing|Attempts of Kerberos Coercion Via DNS SPN Spoofing (high; windows / process_creation)]]
+- [[kb/sigma/rules/16f5d8ca_44bd_47c8_acbe_6fc95a16c12f-rottenpotato_like_attack_pattern|RottenPotato Like Attack Pattern (high; windows / security)]]
+- [[kb/sigma/rules/3b8f4c92_6a51_4d7e_9c3a_8e2d1f5a7b09-uncommon_file_created_by_notepad_updater_gup_exe|Uncommon File Created by Notepad++ Updater Gup.EXE (high; windows / file_event)]]
+- [[kb/sigma/rules/4627c6ae_6899_46e2_aa0c_6ebcb1becd19-hacktool_impacket_tools_execution|HackTool - Impacket Tools Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/5588576c_5898_4fac_bcdd_7475a60e8f43-suspicious_dns_query_indicating_kerberos_coercion_via_dns_object_spn_spoofing_network|Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing - Network (high; zeek / dns)]]
+- [[kb/sigma/rules/5589ab4f_a767_433c_961d_c91f3f704db1-potential_smb_relay_attack_tool_execution|Potential SMB Relay Attack Tool Execution (critical; windows / process_creation)]]
+- [[kb/sigma/rules/679085d5_f427_4484_9f58_1dc30a7c426d-windivert_driver_load|WinDivert Driver Load (high; windows / driver_load)]]
+- [[kb/sigma/rules/b07e58cf_cacc_4135_8473_ccb2eba63dd2-potential_kerberos_coercion_by_spoofing_spns_via_dns_manipulation|Potential Kerberos Coercion by Spoofing SPNs via DNS Manipulation (high; windows / security)]]
+- [[kb/sigma/rules/bb0e87ce_c89f_4857_84fa_095e4483e9cb-suspicious_child_process_of_notepad_updater_gup_exe|Suspicious Child Process of Notepad++ Updater - GUP.Exe (high; windows / process_creation)]]
+- [[kb/sigma/rules/bc2e25ed_b92b_4daa_b074_b502bdd1982b-local_privilege_escalation_indicator_tabtip|Local Privilege Escalation Indicator TabTip (high; windows / system)]]
+- 2 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/deecd55f_afe0_4a62_9fba_4d1ba2deb321-llmnr_poisoning_with_inveigh_powershell|LLMNR Poisoning with Inveigh (PowerShell) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

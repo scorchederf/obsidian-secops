@@ -43,6 +43,19 @@ On Linux/macOS, device drivers (in the form of kernel modules) may be visible wi
 
 ![[workspaces/attack/techniques/T1652-device_driver_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/13c0fef5_9be9_4d7f_9c6b_901624e53770-enumerate_kernel_driver_files_linux|Enumerate Kernel Driver Files (Linux) (bash; linux)]]
+- [[kb/atomic/tests/235b30a2_e5b1_441f_9705_be6231c88ddd-device_driver_discovery|Device Driver Discovery (powershell; windows)]]
+- [[kb/atomic/tests/71eab73d_5d7d_4681_9a72_7873489a5b85-list_loaded_kernel_extensions_macos|List loaded kernel extensions (macOS) (bash; macos)]]
+- [[kb/atomic/tests/c63bbe52_6f17_4832_b221_f07ba8b1736f-find_kernel_extensions_macos|Find Kernel Extensions (macOS) (bash; macos)]]
+- [[kb/atomic/tests/d57dfc9e_ed9a_418e_88f8_b59c85f8cfd1-device_driver_discovery_linux|Device Driver Discovery (Linux) (bash; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

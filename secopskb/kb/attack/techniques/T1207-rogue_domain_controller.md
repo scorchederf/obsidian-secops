@@ -56,6 +56,15 @@ This technique may bypass system logging and security monitors such as security 
 
 ![[workspaces/attack/techniques/T1207-rogue_domain_controller-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0f4c5eb0_98a0_4496_9c3d_656b4f2bc8f6-dcshadow_active_directory|DCShadow (Active Directory) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

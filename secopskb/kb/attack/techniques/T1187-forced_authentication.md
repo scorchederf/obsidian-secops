@@ -66,6 +66,29 @@ Alternatively, by leveraging the `EfsRpcOpenFileRaw` function, an adversary can 
 
 ![[workspaces/attack/techniques/T1187-forced_authentication-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-09-003-smb_session_setups|CAR-2013-09-003: SMB Session Setups]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0ed99dda_6a35_11ef_8c99_0242ac120002-attempts_of_kerberos_coercion_via_dns_spn_spoofing|Attempts of Kerberos Coercion Via DNS SPN Spoofing (high; windows / process_creation)]]
+- [[kb/sigma/rules/1ce8c8a3_2723_48ed_8246_906ac91061a6-possible_petitpotam_coerce_authentication_attempt|Possible PetitPotam Coerce Authentication Attempt (high; windows / security)]]
+- [[kb/sigma/rules/5588576c_5898_4fac_bcdd_7475a60e8f43-suspicious_dns_query_indicating_kerberos_coercion_via_dns_object_spn_spoofing_network|Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing - Network (high; zeek / dns)]]
+- [[kb/sigma/rules/6a53d871_682d_40b6_83e0_b7c1a6c4e3a5-petitpotam_suspicious_kerberos_tgt_request|PetitPotam Suspicious Kerberos TGT Request (high; windows / security)]]
+- [[kb/sigma/rules/e7a21b5f_d8c4_4ae5_b8d9_93c5d3f28e1c-suspicious_dns_query_indicating_kerberos_coercion_via_dns_object_spn_spoofing|Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing (high; windows / dns_query)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/485ce873_2e65_4706_9c7e_ae3ab9e14213-petitpotam|PetitPotam (powershell; windows)]]
+- [[kb/atomic/tests/7f06b25c_799e_40f1_89db_999c9cc84317-winpwn_powersharppack_retrieving_ntlm_hashes_without_touching_lsass|WinPwn - PowerSharpPack - Retrieving NTLM Hashes without Touching LSASS (powershell; windows)]]
+- [[kb/atomic/tests/81cfdd7f_1f41_4cc5_9845_bb5149438e37-trigger_an_authenticated_rpc_call_to_a_target_server_with_no_sign_flag_set|Trigger an authenticated RPC call to a target server with no Sign flag set (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

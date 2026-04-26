@@ -47,6 +47,17 @@ Permissions gained from the modification of infrastructure components may bypass
 
 ![[workspaces/attack/techniques/T1578-modify_cloud_compute_infrastructure-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/89e69b4b_3458_4ec6_b819_b3008debc1bc-azure_create_snapshot_from_managed_disk|Azure - Create Snapshot from Managed Disk (sh; iaas:azure)]]
+- [[kb/atomic/tests/a3c09662_85bb_4ea8_b15b_6dc8a844e236-aws_create_snapshot_from_ebs_volume|AWS - Create Snapshot from EBS Volume (sh; iaas:aws)]]
+- [[kb/atomic/tests/e6fbc036_91e7_4ad3_b9cb_f7210f40dd5d-gcp_create_snapshot_from_persistent_disk|GCP - Create Snapshot from Persistent Disk (sh; iaas:gcp)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

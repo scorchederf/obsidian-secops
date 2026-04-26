@@ -47,6 +47,16 @@ Content injection is often the result of compromised upstream communication chan
 
 ![[workspaces/attack/techniques/T1659-content_injection-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/9b360eaf_c778_4f07_a6e7_895c4f01ac1c-mitm_proxy_injection|MITM Proxy Injection (bash; macos, linux)]]
+- [[kb/atomic/tests/dcc2ca85_a21c_43a4_acc7_7314d4e5891c-mitm_proxy_injection_windows|MITM Proxy Injection (Windows) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0001-initial_access|TA0001: Initial Access]]

@@ -48,6 +48,29 @@ Password policies can be discovered in cloud environments using available APIs s
 
 ![[workspaces/attack/techniques/T1201-password_policy_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/085fe567_ac84_47c7_ac4c_2688ce28265b-examine_password_complexity_policy_ubuntu|Examine password complexity policy - Ubuntu (bash; linux)]]
+- [[kb/atomic/tests/15330820_d405_450b_bd08_16b5be5be9f4-examine_aws_password_policy|Examine AWS Password Policy (sh; iaas:aws)]]
+- [[kb/atomic/tests/3177f4da_3d4b_4592_8bdc_aa23d0b2e843-get_domainpolicy_with_powerview|Get-DomainPolicy with PowerView (powershell; windows)]]
+- [[kb/atomic/tests/4588d243_f24e_4549_b2e3_e627acc089f6-examine_local_password_policy_windows|Examine local password policy - Windows (command_prompt; windows)]]
+- [[kb/atomic/tests/46c2c362_2679_4ef5_aec9_0e958e135be4-examine_domain_password_policy_windows|Examine domain password policy - Windows (command_prompt; windows)]]
+- [[kb/atomic/tests/4b7fa042_9482_45e1_b348_4b756b2a0742-examine_password_policy_macos|Examine password policy - macOS (bash; macos)]]
+- [[kb/atomic/tests/510cc97f_56ac_4cd3_a198_d3218c23d889-use_of_secedit_exe_to_export_the_local_security_policy_including_the_password_policy|Use of SecEdit.exe to export the local security policy (including the password policy) (command_prompt; windows)]]
+- [[kb/atomic/tests/6ce12552_0adb_4f56_89ff_95ce268f6358-examine_password_complexity_policy_centos_rhel_6_x|Examine password complexity policy - CentOS/RHEL 6.x (bash; linux)]]
+- [[kb/atomic/tests/78a12e65_efff_4617_bc01_88f17d71315d-examine_password_complexity_policy_centos_rhel_7_x|Examine password complexity policy - CentOS/RHEL 7.x (bash; linux)]]
+- [[kb/atomic/tests/7c86c55c_70fa_4a05_83c9_3aa19b145d1a-examine_password_expiration_policy_all_linux|Examine password expiration policy - All Linux (bash; linux)]]
+- 2 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

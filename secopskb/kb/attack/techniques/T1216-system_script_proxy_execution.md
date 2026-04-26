@@ -37,6 +37,22 @@ Adversaries may use trusted scripts, often signed with certificates, to proxy th
 
 ![[workspaces/attack/techniques/T1216-system_script_proxy_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/84b14121_9d14_416e_800b_f3b829c5a14d-suspicious_customshellhost_execution|Suspicious CustomShellHost Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/c363385c_f75d_4753_a108_c1a8e28bdbda-potential_manage_bde_wsf_abuse_to_proxy_execution|Potential Manage-bde.wsf Abuse To Proxy Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/275d963d_3f36_476c_8bef_a2a3960ee6eb-syncappvpublishingserver_signed_script_powershell_command_execution|SyncAppvPublishingServer Signed Script PowerShell Command Execution (command_prompt; windows)]]
+- [[kb/atomic/tests/2a8f2d3c_3dec_4262_99dd_150cb2a4d63a-manage_bde_wsf_signed_script_command_execution|manage-bde.wsf Signed Script Command Execution (command_prompt; windows)]]
+- [[kb/atomic/tests/9dd29a1f_1e16_4862_be83_913b10a88f6c-pubprn_vbs_signed_script_bypass|PubPrn.vbs Signed Script Bypass (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

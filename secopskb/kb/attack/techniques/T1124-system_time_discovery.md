@@ -56,6 +56,24 @@ This information could be useful for performing other techniques, such as execut
 
 ![[workspaces/attack/techniques/T1124-system_time_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/6da2c9f5_7c53_401b_aacb_92c040ce1215-use_of_w32tm_as_timer|Use of W32tm as Timer (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1d5711d6_655c_4a47_ae9c_6503c74fa877-system_time_discovery_powershell|System Time Discovery - PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/20aba24b_e61f_4b26_b4ce_4784f763ca20-system_time_discovery|System Time Discovery (command_prompt; windows)]]
+- [[kb/atomic/tests/25c5d1f1_a24b_494a_a6c5_5f50a1ae7f47-discover_system_time_zone_via_registry|Discover System Time Zone via Registry (command_prompt; windows)]]
+- [[kb/atomic/tests/53ead5db_7098_4111_bb3f_563be390e72e-system_time_with_windows_time_command|System Time with Windows time Command (command_prompt; windows)]]
+- [[kb/atomic/tests/d5d5a6b0_0f92_42d8_985d_47aafa2dd4db-system_time_discovery_w32tm_as_a_delay|System Time Discovery W32tm as a Delay (command_prompt; windows)]]
+- [[kb/atomic/tests/f449c933_0891_407f_821e_7916a21a1a6f-system_time_discovery_in_freebsd_macos|System Time Discovery in FreeBSD/macOS (sh; linux, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

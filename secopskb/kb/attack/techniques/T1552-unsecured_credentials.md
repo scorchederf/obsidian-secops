@@ -73,6 +73,43 @@ Adversaries may search compromised systems to find and obtain insecurely stored 
 
 ![[workspaces/attack/techniques/T1552-unsecured_credentials-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2020-09-004-credentials_in_files_registry|CAR-2020-09-004: Credentials in Files & Registry]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0cf7a157_8879_41a2_8f55_388dd23746b7-linux_recon_indicators|Linux Recon Indicators (high; linux / process_creation)]]
+- [[kb/sigma/rules/0f60b28c_64dd_4e2c_9a63_5334d3e3a6e6-script_interpreter_spawning_credential_scanner_windows|Script Interpreter Spawning Credential Scanner - Windows (high; windows / process_creation)]]
+- [[kb/sigma/rules/1b45b0d1_773f_4f23_aedc_814b759563b1-application_appid_uri_configuration_changes|Application AppID Uri Configuration Changes (high; azure / auditlogs)]]
+- [[kb/sigma/rules/1f978c6a_4415_47fb_aca5_736a44d7ca3d-cisco_crypto_commands|Cisco Crypto Commands (high; cisco / aaa)]]
+- [[kb/sigma/rules/53b1b378_9b06_4992_b972_dde6e423d2b4-credentials_in_files|Credentials In Files (high; macos / process_creation)]]
+- [[kb/sigma/rules/6ea858a8_ba71_4a12_b2cc_5d83312404c7-hacktool_typical_hivenightmare_sam_file_export|HackTool - Typical HiveNightmare SAM File Export (high; windows / file_event)]]
+- [[kb/sigma/rules/7892ec59_c5bb_496d_8968_e5d210ca3ac4-dpapi_backup_keys_and_certificate_export_activity_ioc|DPAPI Backup Keys And Certificate Export Activity IOC (high; windows / file_event)]]
+- [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock (high; windows / ps_script)]]
+- [[kb/sigma/rules/91a2c315_9ee6_4052_a853_6f6a8238f90d-findstr_gpp_passwords|Findstr GPP Passwords (high; windows / process_creation)]]
+- [[kb/sigma/rules/91b76b84_8589_47aa_9605_c837583b82a9-potential_okta_password_in_alternateid_field|Potential Okta Password in AlternateID Field (high; okta / okta)]]
+- 8 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/00e3e3c7_6c3c_455e_bd4b_461c7f0e7797-winpwn_passhunt|WinPwn - passhunt (powershell; windows)]]
+- [[kb/atomic/tests/0d4f2281_f720_4572_adc8_d5bb1618affe-list_credential_files_via_powershell|List Credential Files via PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/0e56bf29_ff49_4ea5_9af4_3b81283fd513-extracting_passwords_with_findstr|Extracting passwords with findstr (powershell; windows)]]
+- [[kb/atomic/tests/114dd4e3_8d1c_4ea7_bb8d_8d8f6aca21f0-winpwn_sensitivefiles|WinPwn - sensitivefiles (powershell; windows)]]
+- [[kb/atomic/tests/12e4a260_a7fd_4ed8_bf18_1a28c1395775-copy_private_ssh_keys_with_cp_freebsd|Copy Private SSH Keys with CP (freebsd) (sh; linux)]]
+- [[kb/atomic/tests/290df60e_4b5d_4a5e_b0c7_dc5348ea0c86-export_certificates_with_mimikatz|Export Certificates with Mimikatz (command_prompt; windows)]]
+- [[kb/atomic/tests/2a5a0601_f5fb_4e2e_aa09_73282ae6afca-copy_the_users_gnupg_directory_with_rsync|Copy the users GnuPG directory with rsync (sh; macos, linux)]]
+- [[kb/atomic/tests/31e794c4_48fd_4a76_aca4_6587c155bc11-list_all_secrets|List All Secrets (bash; containers)]]
+- [[kb/atomic/tests/336b25bf_4514_4684_8924_474974f28137-certutil_exportpfx|CertUtil ExportPFX (powershell; windows)]]
+- [[kb/atomic/tests/367d4004_5fc0_446d_823f_960c74ae52c3-access_unattend_xml|Access unattend.xml (command_prompt; windows)]]
+- 34 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

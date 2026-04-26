@@ -39,6 +39,20 @@ Adversaries may perform different forms of active scanning depending on what inf
 
 ![[workspaces/attack/techniques/T1595-active_scanning-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/aff715fa_4dd5_497a_8db3_910bea555566-dns_query_to_external_service_interaction_domains|DNS Query to External Service Interaction Domains (high; dns)]]
+- [[kb/sigma/rules/b37998de_a70b_4f33_b219_ec36bf433dc0-pua_pingcastle_execution_from_potentially_suspicious_parent|PUA - PingCastle Execution From Potentially Suspicious Parent (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/89a83c3e_0b39_4c80_99f5_c2aa084098bd-web_server_wordlist_scan|Web Server Wordlist Scan (powershell; windows, linux, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0043-reconnaissance|TA0043: Reconnaissance]]

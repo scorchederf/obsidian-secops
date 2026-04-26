@@ -81,6 +81,31 @@ Victims may also receive phishing messages that instruct them to call a phone nu
 
 ![[workspaces/attack/techniques/T1566-phishing-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/023394c4_29d5_46ab_92b8_6a534c6f447b-suspicious_hwp_sub_processes|Suspicious HWP Sub Processes (high; windows / process_creation)]]
+- [[kb/sigma/rules/1ae64f96_72b6_48b3_ad3d_e71dff6c6398-suspicious_external_webdav_execution|Suspicious External WebDAV Execution (high; proxy)]]
+- [[kb/sigma/rules/1cdd9a09_06c9_4769_99ff_626e2b3991b8-suspicious_double_extension_file_execution|Suspicious Double Extension File Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/2f9356ae_bf43_41b8_b858_4496d83b2acb-iso_file_created_within_temp_folders|ISO File Created Within Temp Folders (high; windows / file_event)]]
+- [[kb/sigma/rules/38e7f511_3f74_41d4_836e_f57dfa18eead-potential_malicious_usage_of_cloudtrail_system_manager|Potential Malicious Usage of CloudTrail System Manager (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/571498c8_908e_40b4_910b_d2369159a3da-password_protected_zip_file_opened_email_attachment|Password Protected ZIP File Opened (Email Attachment) (high; windows / security)]]
+- [[kb/sigma/rules/a018fdc3_46a3_44e5_9afb_2cd4af1d4b39-suspicious_execution_from_outlook_temporary_folder|Suspicious Execution From Outlook Temporary Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/b1c50487_1967_4315_a026_6491686d860e-office_macro_file_creation_from_suspicious_process|Office Macro File Creation From Suspicious Process (high; windows / file_event)]]
+- [[kb/sigma/rules/c27515df_97a9_4162_8a60_dc0eeb51b775-suspicious_microsoft_onenote_child_process|Suspicious Microsoft OneNote Child Process (high; windows / process_creation)]]
+- 4 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/114ccff9_ae6d_4547_9ead_4cd69f687306-download_macro_enabled_phishing_attachment|Download Macro-Enabled Phishing Attachment (powershell; windows)]]
+- [[kb/atomic/tests/bc177ef9_6a12_4ebc_a2ec_d41e19c2791d-paste_and_run_technique|Paste and run technique (powershell; windows)]]
+- [[kb/atomic/tests/cbb6799a_425c_4f83_9194_5447a909d67f-word_spawned_a_command_shell_and_used_an_ip_address_in_the_command_line|Word spawned a command shell and used an IP address in the command line (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0001-initial_access|TA0001: Initial Access]]

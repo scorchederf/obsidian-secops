@@ -52,6 +52,21 @@ Adversaries may obfuscate command and control traffic to make it more difficult 
 
 ![[workspaces/attack/techniques/T1001-data_obfuscation-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/d00a9a72_2c09_4459_ad03_5e0a23351e36-suspicious_ldap_attributes_used|Suspicious LDAP-Attributes Used (high; windows / security)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/04bb8e3d_1670_46ab_a3f1_5cee64da29b6-embedded_script_in_image_execution_via_extract_invoke_psimage|Embedded Script in Image Execution via Extract-Invoke-PSImage (powershell; windows)]]
+- [[kb/atomic/tests/4ff61684_ad91_405c_9fbc_048354ff1d07-execute_embedded_script_in_image_via_steganography|Execute Embedded Script in Image via Steganography (sh; linux)]]
+- [[kb/atomic/tests/c7921449_8b62_4c4d_8a83_d9281ac0190b-steganographic_tarball_embedding|Steganographic Tarball Embedding (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

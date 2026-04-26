@@ -2,7 +2,7 @@
 
 ---
 
-# MITRE Tools
+# Tools
 
 ## Tools
 - [[kb/tools/aadinternals|S0677: AADInternals]]

@@ -78,6 +78,37 @@ If an adversary guesses the correct password but fails to login to a compromised
 
 ![[workspaces/attack/techniques/T1110-brute_force-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/28ecba0a_c743_4690_ad29_9a8f6f25a6f9-password_spray_activity|Password Spray Activity (high; azure / riskdetection)]]
+- [[kb/sigma/rules/39b31e81_5f5f_4898_9c0e_2160cfc0f9bf-hacktool_hashcat_password_cracker_execution|HackTool - Hashcat Password Cracker Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/53bb4f7f_48a8_4475_ac30_5a82ddfdf6fc-potential_mfa_bypass_using_legacy_client_authentication|Potential MFA Bypass Using Legacy Client Authentication (high; azure / signinlogs)]]
+- [[kb/sigma/rules/60f6535a_760f_42a9_be3f_c9a0a025906e-use_of_legacy_authentication_protocols|Use of Legacy Authentication Protocols (high; azure / signinlogs)]]
+- [[kb/sigma/rules/78d5cab4_557e_454f_9fb9_a222bd0d5edc-external_remote_smb_logon_from_public_ip|External Remote SMB Logon from Public IP (high; windows / security)]]
+- [[kb/sigma/rules/aaafa146_074c_11eb_adc1_0242ac120002-hacktool_hydra_password_bruteforce_execution|HackTool - Hydra Password Bruteforce Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/b4a6d707_9430_4f5f_af68_0337f52d5c42-sign_in_failure_due_to_conditional_access_requirements_not_met|Sign-in Failure Due to Conditional Access Requirements Not Met (high; azure / signinlogs)]]
+- [[kb/sigma/rules/c42a3073_30fb_48ae_8c99_c23ada84b103-hack_tool_user_agent|Hack Tool User Agent (high; proxy)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/09480053_2f98_4854_be6e_71ae5f672224-brute_force_credentials_of_single_active_directory_domain_users_via_smb|Brute Force Credentials of single Active Directory domain users via SMB (command_prompt; windows)]]
+- [[kb/atomic/tests/263ae743_515f_4786_ac7d_41ef3a0d4b2b-password_spray_domainpasswordspray|Password Spray (DomainPasswordSpray) (powershell; windows)]]
+- [[kb/atomic/tests/4097bc00_5eeb_4d56_aaf9_287d60351d95-sudo_brute_force_redhat|SUDO Brute Force - Redhat (bash; linux)]]
+- [[kb/atomic/tests/4852c630_87a9_409b_bb5e_5dc12c9ebcde-brute_force_credential_stuffing_using_kerbrute_tool|Brute Force:Credential Stuffing using Kerbrute Tool (powershell; windows)]]
+- [[kb/atomic/tests/4f08197a_2a8a_472d_9589_cd2895ef22ad-ssh_credential_stuffing_from_linux|SSH Credential Stuffing From Linux (bash; linux)]]
+- [[kb/atomic/tests/59dbeb1a_79a7_4c2a_baf4_46d0f4c761c4-password_brute_user_using_kerbrute_tool|Password Brute User using Kerbrute Tool (powershell; windows)]]
+- [[kb/atomic/tests/5a51ef57_299e_4d62_8e11_2d440df55e69-brute_force_credentials_of_single_azure_ad_user|Brute Force Credentials of single Azure AD user (powershell; azure-ad)]]
+- [[kb/atomic/tests/5ccf4bbd_7bf6_43fc_83ac_d9e38aff1d82-winpwn_domainpasswordspray_attacks|WinPwn - DomainPasswordSpray Attacks (powershell; windows)]]
+- [[kb/atomic/tests/6d27df5d_69d4_4c91_bc33_5983ffe91692-password_cracking_with_hashcat|Password Cracking with Hashcat (command_prompt; windows)]]
+- [[kb/atomic/tests/90bc2e54_6c84_47a5_9439_0a2a92b4b175-password_spray_all_domain_users|Password Spray all Domain Users (command_prompt; windows)]]
+- 12 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

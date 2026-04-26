@@ -46,6 +46,15 @@ Aware that some malware cannot survive system reboots, adversaries may entirely 
 
 ![[workspaces/attack/techniques/T1653-power_settings-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/c172b7b5_f3a1_4af2_90b7_822c63df86cb-mask_system_power_settings_via_systemctl|Mask System Power Settings Via Systemctl (high; linux / process_creation)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

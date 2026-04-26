@@ -43,6 +43,23 @@ macOS and Linux also have commands, such as `pbpaste`, to grab clipboard content
 
 ![[workspaces/attack/techniques/T1115-clipboard_data-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/7794fa3c_edea_4cff_bec7_267dd4770fd7-clipboard_data_collection_via_osascript|Clipboard Data Collection Via OSAScript (high; macos / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0cd14633_58d4_4422_9ede_daa2c9474ae7-utilize_clipboard_to_store_or_execute_commands_from|Utilize Clipboard to store or execute commands from (command_prompt; windows)]]
+- [[kb/atomic/tests/1ac2247f_65f8_4051_b51f_b0ccdfaaa5ff-execute_commands_from_clipboard|Execute commands from clipboard (bash; macos)]]
+- [[kb/atomic/tests/9c8d5a72_9c98_48d3_b9bf_da2cc43bdf52-collect_clipboard_data_via_vba|Collect Clipboard Data via VBA (powershell; windows)]]
+- [[kb/atomic/tests/d6dc21af_bec9_4152_be86_326b6babd416-execute_commands_from_clipboard_using_powershell|Execute Commands from Clipboard using PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/ee363e53_b083_4230_aff3_f8d955f2d5bb-add_or_copy_content_to_clipboard_with_xclip|Add or copy content to clipboard with xClip (sh; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

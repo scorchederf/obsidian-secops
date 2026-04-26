@@ -66,6 +66,17 @@ The type of modification and the impact it will have depends on the target appli
 
 ![[workspaces/attack/techniques/T1565-data_manipulation-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/1182f3b3_e716_4efa_99ab_d2685d04360f-history_file_deletion|History File Deletion (high; linux / process_creation)]]
+- [[kb/sigma/rules/4368354e_1797_463c_bc39_a309effbe8d7-powershell_add_name_resolution_policy_table_rule|Powershell Add Name Resolution Policy Table Rule (high; windows / ps_script)]]
+- [[kb/sigma/rules/e09eb557_96d2_4de9_ba2d_30f712a5afd3-commands_to_clear_or_remove_the_syslog_builtin|Commands to Clear or Remove the Syslog - Builtin (high; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

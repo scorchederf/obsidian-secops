@@ -88,6 +88,47 @@ Adversaries may also impair routine operations that contribute to defensive hygi
 
 ![[workspaces/attack/techniques/T1562-impair_defenses-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2016-04-003-user_activity_from_stopping_windows_defensive_services|CAR-2016-04-003: User Activity from Stopping Windows Defensive Services]]
+- [[kb/car/analytics/CAR-2020-09-003-indicator_blocking_driver_unloaded|CAR-2020-09-003: Indicator Blocking - Driver Unloaded]]
+- [[kb/car/analytics/CAR-2021-01-007-detecting_tampering_of_windows_defender_command_prompt|CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt]]
+- [[kb/car/analytics/CAR-2022-03-001-disable_windows_event_logging|CAR-2022-03-001: Disable Windows Event Logging]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/01aeb693_138d_49d2_9403_c4f52d7d3d62-rdp_connection_allowed_via_netsh_exe|RDP Connection Allowed Via Netsh.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/023c654f_8f16_44d9_bb2b_00ff36a62af9-python_function_execution_security_warning_disabled_in_excel|Python Function Execution Security Warning Disabled In Excel (high; windows / process_creation)]]
+- [[kb/sigma/rules/05b2aa93_1210_42c8_8d9a_2fcc13b284f5-service_registry_key_deleted_via_reg_exe|Service Registry Key Deleted Via Reg.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/07330162_dba1_4746_8121_a9647d49d297-aws_config_disabling_channel_recorder|AWS Config Disabling Channel/Recorder (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/07e3cb2c_0608_410d_be4b_1511cb1a0448-tamper_windows_defender_remove_mppreference|Tamper Windows Defender Remove-MpPreference (high; windows / process_creation)]]
+- [[kb/sigma/rules/09706624_b7f6_455d_9d02_adee024cee1d-hacktool_cobaltstrike_bof_injection_pattern|HackTool - CobaltStrike BOF Injection Pattern (high; windows / process_access)]]
+- [[kb/sigma/rules/0a13e132_651d_11eb_ae93_0242ac130002-audit_policy_tampering_via_auditpol|Audit Policy Tampering Via Auditpol (high; windows / process_creation)]]
+- [[kb/sigma/rules/0cb8d736_995d_4ce7_a31e_1e8d452a1459-potential_eventlog_file_location_tampering|Potential EventLog File Location Tampering (high; windows / registry_set)]]
+- [[kb/sigma/rules/0eb46774_f1ab_4a74_8238_1155855f2263-disable_windows_defender_functionalities_via_registry_keys|Disable Windows Defender Functionalities Via Registry Keys (high; windows / registry_set)]]
+- [[kb/sigma/rules/115fdba9_f017_42e6_84cf_d5573bf2ddf8-disable_of_etw_trace_powershell|Disable of ETW Trace - Powershell (high; windows / ps_script)]]
+- 120 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/062f92c9_28b1_4391_a5f8_9d8ca6852091-esxi_change_vib_acceptance_level_to_communitysupported_via_powercli|ESXi - Change VIB acceptance level to CommunitySupported via PowerCLI (powershell; linux)]]
+- [[kb/atomic/tests/07f43b33_1e15_4e99_be70_bc094157c849-disable_opendns_umbrella|Disable OpenDNS Umbrella (sh; macos)]]
+- [[kb/atomic/tests/091a6290_cd29_41cb_81ea_b12f133c66cb-esxi_disable_account_lockout_policy_via_powercli|ESXi - Disable Account Lockout Policy via PowerCLI (powershell; linux)]]
+- [[kb/atomic/tests/0b19f4ee_de90_4059_88cb_63c800c683ed-tamper_with_windows_defender_evade_scanning_folder|Tamper with Windows Defender Evade Scanning -Folder (powershell; windows)]]
+- [[kb/atomic/tests/0ca82ed1_0a94_4774_9a9a_a2c83a8022b7-stop_start_packet_filter|Stop/Start Packet Filter (sh; linux)]]
+- [[kb/atomic/tests/0e7b8a4b_2ca5_4743_a9f9_96051abb6e50-delete_microsoft_defender_asr_rules_gpo|Delete Microsoft Defender ASR Rules - GPO (powershell; windows)]]
+- [[kb/atomic/tests/10ab786a_028e_4465_96f6_9e83ca6c5f24-setting_the_histcontrol_environment_variable|Setting the HISTCONTROL environment variable (bash; linux)]]
+- [[kb/atomic/tests/110b4281_43fe_405f_a184_5d8eaf228ebf-disable_net_event_tracing_for_windows_via_environment_variable_hklm_registry_cmd|Disable .NET Event Tracing for Windows Via Environment Variable HKLM Registry - Cmd (command_prompt; windows)]]
+- [[kb/atomic/tests/1174b5df_2c33_490f_8854_f5eb80c907ca-block_cybersecurity_communication_by_leveraging_windows_name_resolution_policy_table|Block Cybersecurity communication by leveraging Windows Name Resolution Policy Table (powershell; windows)]]
+- [[kb/atomic/tests/11e65d8d_e7e4_470e_a3ff_82bc56ad938e-aws_guardduty_suspension_or_deletion|AWS - GuardDuty Suspension or Deletion (bash; iaas:aws)]]
+- 130 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

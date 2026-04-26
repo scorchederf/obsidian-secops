@@ -39,6 +39,16 @@ These resources can be viewed within web applications such as the Kubernetes das
 
 ![[workspaces/attack/techniques/T1613-container_and_resource_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/ea2255df_d781_493b_9693_ac328f9afc3f-docker_container_and_resource_discovery|Docker Container and Resource Discovery (sh; containers)]]
+- [[kb/atomic/tests/fc631702_3f03_4f2b_8d8a_6b3d055580a1-podman_container_and_resource_discovery|Podman Container and Resource Discovery (sh; containers)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

@@ -48,6 +48,29 @@ Adversaries may attempt to shutdown/reboot a system after impacting it in other 
 
 ![[workspaces/attack/techniques/T1529-system_shutdown_reboot-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/3ceb2083_a27f_449a_be33_14ec1b7cc973-silence_eda_detection|Silence.EDA Detection (critical; windows / ps_script)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/189f7d6e_9442_4160_9bc3_5e4104d93ece-esxi_avoslocker_enumerates_vms_and_forcefully_kills_vms|ESXi - Avoslocker enumerates VMs and forcefully kills VMs (command_prompt; windows)]]
+- [[kb/atomic/tests/3d8c25b5_7ff5_4c9d_b21f_85ebd06654a4-logoff_system_windows|Logoff System - Windows (command_prompt; windows)]]
+- [[kb/atomic/tests/47d0b042_a918_40ab_8cf9_150ffe919027-restart_system_via_reboot_freebsd_macos_linux|Restart System via `reboot` - FreeBSD/macOS/Linux (sh; linux, macos)]]
+- [[kb/atomic/tests/4963a81e_a3ad_4f02_adda_812343b351de-shutdown_system_via_shutdown_freebsd_macos_linux|Shutdown System via `shutdown` - FreeBSD/macOS/Linux (sh; linux, macos)]]
+- [[kb/atomic/tests/5a282e50_86ff_438d_8cef_8ae01c9e62e1-reboot_system_via_poweroff_freebsd|Reboot System via `poweroff` - FreeBSD (sh; linux)]]
+- [[kb/atomic/tests/61303105_ff60_427b_999e_efb90b314e41-reboot_system_via_poweroff_linux|Reboot System via `poweroff` - Linux (bash; linux)]]
+- [[kb/atomic/tests/622cc1a0_45e7_428c_aed7_c96dd605fbe6-esxi_vim_cmd_used_to_power_off_vms|ESXi - vim-cmd Used to Power Off VMs (command_prompt; windows)]]
+- [[kb/atomic/tests/6326dbc4_444b_4c04_88f4_27e94d0327cb-restart_system_via_shutdown_freebsd_macos_linux|Restart System via `shutdown` - FreeBSD/macOS/Linux (sh; linux, macos)]]
+- [[kb/atomic/tests/73a90cd2_48a2_4ac5_8594_2af35fa909fa-shutdown_system_via_poweroff_freebsd_linux|Shutdown System via `poweroff` - FreeBSD/Linux (sh; linux)]]
+- [[kb/atomic/tests/78f92e14_f1e9_4446_b3e9_f1b921f2459e-reboot_system_via_halt_linux|Reboot System via `halt` - Linux (bash; linux)]]
+- 6 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

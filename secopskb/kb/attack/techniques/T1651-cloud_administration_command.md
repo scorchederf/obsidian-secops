@@ -39,6 +39,15 @@ If an adversary gains administrative access to a cloud environment, they may be 
 
 ![[workspaces/attack/techniques/T1651-cloud_administration_command-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/a3cc9c95_c160_4b86_af6f_84fba87bfd30-aws_run_command_and_control|AWS Run Command (and Control) (powershell; iaas:aws)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

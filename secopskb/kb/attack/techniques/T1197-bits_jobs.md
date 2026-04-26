@@ -58,6 +58,35 @@ BITS upload functionalities can also be used to perform [[T1048-exfiltration_ove
 
 ![[workspaces/attack/techniques/T1197-bits_jobs-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-05-004-bits_job_persistence|CAR-2021-05-004: BITS Job Persistence]]
+- [[kb/car/analytics/CAR-2021-05-005-bitsadmin_download_file|CAR-2021-05-005: BITSAdmin Download File]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/2ddef153_167b_4e89_86b6_757a9e65dcac-file_download_via_bitsadmin_to_a_suspicious_target_folder|File Download Via Bitsadmin To A Suspicious Target Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/5b80a791_ad9b_4b75_bcc1_ad4e1e89c200-file_with_suspicious_extension_downloaded_via_bitsadmin|File With Suspicious Extension Downloaded Via Bitsadmin (high; windows / process_creation)]]
+- [[kb/sigma/rules/8518ed3d_f7c9_4601_a26c_f361a4256a0c-suspicious_download_from_file_sharing_website_via_bitsadmin|Suspicious Download From File-Sharing Website Via Bitsadmin (high; windows / process_creation)]]
+- [[kb/sigma/rules/8ccd35a2_1c7c_468b_b568_ac6cdf80eec3-bitsadmin_to_uncommon_ip_server_address|Bitsadmin to Uncommon IP Server Address (high; proxy)]]
+- [[kb/sigma/rules/90f138c1_f578_4ac3_8c49_eecfd847c8b7-bits_transfer_job_download_from_direct_ip|BITS Transfer Job Download From Direct IP (high; windows / bits-client)]]
+- [[kb/sigma/rules/99c840f2_2012_46fd_9141_c761987550ef-suspicious_download_from_direct_ip_via_bitsadmin|Suspicious Download From Direct IP Via Bitsadmin (high; windows / process_creation)]]
+- [[kb/sigma/rules/9eb68894_7476_4cd6_8752_23b51f5883a7-bitsadmin_to_uncommon_tld|Bitsadmin to Uncommon TLD (high; proxy)]]
+- [[kb/sigma/rules/d635249d_86b5_4dad_a8c7_d7272b788586-bits_transfer_job_download_from_file_sharing_domains|BITS Transfer Job Download From File Sharing Domains (high; windows / bits-client)]]
+- [[kb/sigma/rules/f8a56cb7_a363_44ed_a82f_5926bb44cd05-bits_transfer_job_download_to_potential_suspicious_folder|BITS Transfer Job Download To Potential Suspicious Folder (high; windows / bits-client)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/3c73d728_75fb_4180_a12f_6712864d7421-bitsadmin_download_cmd|Bitsadmin Download (cmd) (command_prompt; windows)]]
+- [[kb/atomic/tests/62a06ec5_5754_47d2_bcfc_123d8314c6ae-persist_download_execute|Persist, Download, & Execute (command_prompt; windows)]]
+- [[kb/atomic/tests/afb5e09e_e385_4dee_9a94_6ee60979d114-bits_download_using_desktopimgdownldr_exe_cmd|Bits download using desktopimgdownldr.exe (cmd) (command_prompt; windows)]]
+- [[kb/atomic/tests/f63b8bc4_07e5_4112_acba_56f646f3f0bc-bitsadmin_download_powershell|Bitsadmin Download (PowerShell) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

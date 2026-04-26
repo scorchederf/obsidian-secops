@@ -56,6 +56,35 @@ Adversaries can also take advantage of routing schemes in Content Delivery Netwo
 
 ![[workspaces/attack/techniques/T1090-proxy-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/32410e29_5f94_4568_b6a3_d91a8adad863-pua_fast_reverse_proxy_frp_execution|PUA - Fast Reverse Proxy (FRP) Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/36440e1c_5c22_467a_889b_593e66498472-malicious_ip_address_sign_in_suspicious|Malicious IP Address Sign-In Suspicious (high; azure / riskdetection)]]
+- [[kb/sigma/rules/3ab65069_d82a_4d44_a759_466661a082d1-communication_to_localtonet_tunneling_service_initiated|Communication To LocaltoNet Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/5498fc09_adc6_4804_b9d9_5cca1f0b8760-opencanary_httpproxy_login_attempt|OpenCanary - HTTPPROXY Login Attempt (high; opencanary / application)]]
+- [[kb/sigma/rules/5bed80b6_b3e8_428e_a3ae_d3c757589e41-rdp_over_reverse_ssh_tunnel_wfp|RDP over Reverse SSH Tunnel WFP (high; windows / security)]]
+- [[kb/sigma/rules/62f7c9bf_9135_49b2_8aeb_1e54a6ecc13c-tor_client_browser_execution|Tor Client/Browser Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/64d51a51_32a6_49f0_9f3d_17e34d640272-ngrok_usage_with_remote_desktop_service|Ngrok Usage with Remote Desktop Service (high; windows / terminalservices-localsessionmanager)]]
+- [[kb/sigma/rules/68d37776_61db_42f5_bf54_27e87072d17e-pua_nps_tunneling_tool_execution|PUA - NPS Tunneling Tool Execution (high; windows / process_creation)]]
+- 11 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0ac21132_4485_4212_a681_349e8a6637cd-connection_proxy|Connection Proxy (sh; linux, macos)]]
+- [[kb/atomic/tests/12631354_fdbc_4164_92be_402527e748da-tor_proxy_usage_macos|Tor Proxy Usage - MacOS (sh; macos)]]
+- [[kb/atomic/tests/14d55ca0_920e_4b44_8425_37eedd72b173-psiphon|Psiphon (powershell; windows)]]
+- [[kb/atomic/tests/5ff9d047_6e9c_4357_b39b_5cf89d9b59c7-tor_proxy_usage_debian_ubuntu_freebsd|Tor Proxy Usage - Debian/Ubuntu/FreeBSD (sh; linux)]]
+- [[kb/atomic/tests/648d68c1_8bcd_4486_9abe_71c6655b6a2c-connection_proxy_for_macos_ui|Connection Proxy for macOS UI (sh; macos)]]
+- [[kb/atomic/tests/7b9d85e5_c4ce_4434_8060_d3de83595e69-tor_proxy_usage_windows|Tor Proxy Usage - Windows (powershell; windows)]]
+- [[kb/atomic/tests/b8223ea9_4be2_44a6_b50a_9657a3d4e72a-portproxy_reg_key|portproxy reg key (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

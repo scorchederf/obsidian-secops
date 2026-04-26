@@ -51,6 +51,24 @@ In some cases, adversaries may leverage multiple types of Resource Hijacking at 
 
 ![[workspaces/attack/techniques/T1496-resource_hijacking-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/66c3b204_9f88_4d0a_a7f7_8a57d521ca55-potential_crypto_mining_activity|Potential Crypto Mining Activity (high; windows / process_creation)]]
+- [[kb/sigma/rules/9069ea3c_b213_4c52_be13_86506a227ab1-linux_crypto_mining_indicators|Linux Crypto Mining Indicators (high; linux / process_creation)]]
+- [[kb/sigma/rules/a46c93b7_55ed_4d27_a41b_c259456c4746-linux_crypto_mining_pool_connections|Linux Crypto Mining Pool Connections (high; linux / network_connection)]]
+- [[kb/sigma/rules/b593fd50_7335_4682_a36c_4edcb68e4641-monero_crypto_coin_mining_pool_lookup|Monero Crypto Coin Mining Pool Lookup (high; dns)]]
+- [[kb/sigma/rules/fa5b1358_b040_4403_9868_15f7d9ab6329-network_communication_with_crypto_mining_pool|Network Communication With Crypto Mining Pool (high; windows / network_connection)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/44315fb0_f78d_4cef_b10f_cf21c1fe2c75-windows_simulate_cpu_load_with_powershell|Windows - Simulate CPU Load with PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/904a5a0e_fb02_490d_9f8d_0e256eb37549-freebsd_macos_linux_simulate_cpu_load_with_yes|FreeBSD/macOS/Linux - Simulate CPU Load with Yes (sh; linux, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

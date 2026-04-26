@@ -39,6 +39,18 @@ Adversaries may attempt to gather information about attached peripheral devices 
 
 ![[workspaces/attack/techniques/T1120-peripheral_device_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/2cb4dbf2_2dca_4597_8678_4d39d207a3a5-win32_pnpentity_hardware_inventory|Win32_PnPEntity Hardware Inventory (powershell; windows)]]
+- [[kb/atomic/tests/424e18fd_48b8_4201_8d3a_bf591523a686-peripheral_device_discovery_via_fsutil|Peripheral Device Discovery via fsutil (command_prompt; windows)]]
+- [[kb/atomic/tests/5c876daf_db1e_41cf_988d_139a7443ccd4-get_printer_device_list_via_powershell_command|Get Printer Device List via PowerShell Command (powershell; windows)]]
+- [[kb/atomic/tests/cb6e76ca_861e_4a7f_be08_564caa3e6f75-winpwn_printercheck|WinPwn - printercheck (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

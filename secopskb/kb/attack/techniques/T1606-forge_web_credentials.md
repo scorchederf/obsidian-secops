@@ -59,6 +59,23 @@ Once forged, adversaries may use these web credentials to access resources (ex: 
 
 ![[workspaces/attack/techniques/T1606-forge_web_credentials-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-05-008-certutil_exe_certificate_extraction|CAR-2021-05-008: Certutil exe certificate extraction]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/e3393cba_31f0_4207_831e_aef90ab17a8c-saml_token_issuer_anomaly|SAML Token Issuer Anomaly (high; azure / riskdetection)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/b16a03bc_1089_4dcc_ad98_30fe8f3a2b31-golden_saml|Golden SAML (powershell; azure-ad)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

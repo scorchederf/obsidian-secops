@@ -52,6 +52,21 @@ Adversaries may encode data to make the content of command and control traffic m
 
 ![[workspaces/attack/techniques/T1132-data_encoding-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/98a96a5a_64a0_4c42_92c5_489da3866cb0-dns_exfiltration_and_tunneling_tools_execution|DNS Exfiltration and Tunneling Tools Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1164f70f_9a88_4dff_b9ff_dc70e7bf0c25-base64_encoded_data|Base64 Encoded data. (sh; macos, linux)]]
+- [[kb/atomic/tests/2d97c626_7652_449e_a986_b02d9051c298-base64_encoded_data_freebsd|Base64 Encoded data (freebsd) (sh; linux)]]
+- [[kb/atomic/tests/c3ed6d2a_e3ad_400d_ad78_bbfdbfeacc08-xor_encoded_data|XOR Encoded data. (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

@@ -54,6 +54,23 @@ Use of Web services may also protect back-end C2 infrastructure from discovery t
 
 ![[workspaces/attack/techniques/T1102-web_service-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/18249279_932f_45e2_b37a_8925f2597670-process_initiated_network_connection_to_ngrok_domain|Process Initiated Network Connection To Ngrok Domain (high; windows / network_connection)]]
+- [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/297ae038_edc2_4b2e_bb3e_7c5fc94dd5c7-new_connection_initiated_to_potential_dead_drop_resolver_domain|New Connection Initiated To Potential Dead Drop Resolver Domain (high; windows / network_connection)]]
+- [[kb/sigma/rules/2b1ee7e4_89b6_4739_b7bb_b811b6607e5e-pwndrp_access|PwnDrp Access (critical; proxy)]]
+- [[kb/sigma/rules/3ab65069_d82a_4d44_a759_466661a082d1-communication_to_localtonet_tunneling_service_initiated|Communication To LocaltoNet Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/5468045b_4fcc_4d1a_973c_c9c9578edacb-raw_paste_service_access|Raw Paste Service Access (high; proxy)]]
+- [[kb/sigma/rules/c4568f5d_131f_4e78_83d4_45b2da0ec4f1-communication_to_localtonet_tunneling_service_initiated_linux|Communication To LocaltoNet Tunneling Service Initiated - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/cea2b7ea_792b_405f_95a1_b903ea06458f-suspicious_child_process_of_manage_engine_servicedesk|Suspicious Child Process Of Manage Engine ServiceDesk (high; windows / process_creation)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

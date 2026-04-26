@@ -41,6 +41,15 @@ By using compromised infrastructure, adversaries may enable follow-on malicious 
 
 ![[workspaces/attack/techniques/T1584-compromise_infrastructure-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/1ae64f96_72b6_48b3_ad3d_e71dff6c6398-suspicious_external_webdav_execution|Suspicious External WebDAV Execution (high; proxy)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0042-resource_development|TA0042: Resource Development]]

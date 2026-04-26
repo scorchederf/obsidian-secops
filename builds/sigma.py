@@ -443,12 +443,13 @@ def update_root_indexes(rule_count):
             continue
         text = read_text_file(filepath)
         text = text.replace(SIGMA_NAV, ATOMIC_NAV).replace(CAR_NAV, ATOMIC_NAV).replace(BASE_NAV, ATOMIC_NAV)
-        text = re.sub(
-            r"- \[\[kb/sigma/index\|Sigma\]\](?: \(\d+ rules\))?",
-            "- [[kb/sigma/index|Sigma]] (" + str(rule_count) + " rules)",
-            text,
-            count=1,
-        )
+        if relative_path == os.path.join("kb", "index.md"):
+            text = re.sub(
+                r"- \[\[kb/sigma/index\|Sigma\]\](?: \(\d+ rules\))?",
+                "- [[kb/sigma/index|Sigma]] (" + str(rule_count) + " rules)",
+                text,
+                count=1,
+            )
         body_without_nav = text.replace(ATOMIC_NAV, "")
         if "- [[kb/sigma/index|Sigma]]" not in body_without_nav:
             for old, new in replacements:

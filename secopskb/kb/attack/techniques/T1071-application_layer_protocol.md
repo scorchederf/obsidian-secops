@@ -73,6 +73,36 @@ Adversaries may utilize many different protocols, including those used for web b
 
 ![[workspaces/attack/techniques/T1071-application_layer_protocol-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/03552375_cc2c_4883_bbe4_7958d5a980be-hacktool_silenttrinity_stager_execution|HackTool - SILENTTRINITY Stager Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/0d18728b_f5bf_4381_9dcf_915539fff6c2-suspicious_cobalt_strike_dns_beaconing_dns_client|Suspicious Cobalt Strike DNS Beaconing - DNS Client (critical; windows / dns-client)]]
+- [[kb/sigma/rules/2975af79_28c4_4d2f_a951_9095f229df29-cobalt_strike_dns_beaconing|Cobalt Strike DNS Beaconing (critical; dns)]]
+- [[kb/sigma/rules/2b1ee7e4_89b6_4739_b7bb_b811b6607e5e-pwndrp_access|PwnDrp Access (critical; proxy)]]
+- [[kb/sigma/rules/2cf29f11_e356_4f61_98c0_1bdb9393d6da-renamed_visual_studio_code_tunnel_execution|Renamed Visual Studio Code Tunnel Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/2fdaf50b_9fd5_449f_ba69_f17248119af6-network_connection_initiated_via_finger_exe|Network Connection Initiated via Finger.EXE (high; windows / network_connection)]]
+- [[kb/sigma/rules/304810ed_8853_437f_9e36_c4975c3dfd7e-hacktool_babyshark_agent_default_url_pattern|HackTool - BabyShark Agent Default URL Pattern (critical; proxy)]]
+- [[kb/sigma/rules/37e4024a_6c80_4d8f_b95d_2e7e94f3a8d1-outbound_network_connection_initiated_by_microsoft_dialer|Outbound Network Connection Initiated By Microsoft Dialer (high; windows / network_connection)]]
+- [[kb/sigma/rules/3ceb2083_a27f_449a_be33_14ec1b7cc973-silence_eda_detection|Silence.EDA Detection (critical; windows / ps_script)]]
+- [[kb/sigma/rules/3eaf6218_3bed_4d8a_8707_274096f12a18-wannacry_killswitch_domain|Wannacry Killswitch Domain (high; dns)]]
+- 16 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1700f5d6_5a44_487b_84de_bc66f507b0a6-dns_large_query_volume|DNS Large Query Volume (powershell; windows)]]
+- [[kb/atomic/tests/2d7c471a_e887_4b78_b0dc_b0df1f2e0658-malicious_user_agents_nix|Malicious User Agents - Nix (sh; linux, macos)]]
+- [[kb/atomic/tests/3b0df731_030c_4768_b492_2a3216d90e53-telnet_c2|Telnet C2 (powershell; windows)]]
+- [[kb/atomic/tests/3efc144e_1af8_46bb_8ca2_1376bb6db8b6-dns_regular_beaconing|DNS Regular Beaconing (powershell; windows)]]
+- [[kb/atomic/tests/81c13829_f6c9_45b8_85a6_053366d55297-malicious_user_agents_powershell|Malicious User Agents - Powershell (powershell; windows)]]
+- [[kb/atomic/tests/dc3488b0_08c7_4fea_b585_905c83b48180-malicious_user_agents_cmd|Malicious User Agents - CMD (command_prompt; windows)]]
+- [[kb/atomic/tests/e7bf9802_2e78_4db9_93b5_181b7bcd37d7-dns_c2|DNS C2 (powershell; windows)]]
+- [[kb/atomic/tests/fef31710_223a_40ee_8462_a396d6b66978-dns_long_domain_query|DNS Long Domain Query (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

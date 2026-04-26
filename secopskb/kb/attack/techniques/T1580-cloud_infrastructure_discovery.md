@@ -41,6 +41,16 @@ An adversary may enumerate resources using a compromised user's access keys to d
 
 ![[workspaces/attack/techniques/T1580-cloud_infrastructure_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/99b38f24_5acc_4aa3_85e5_b7f97a5d37ac-aws_ec2_security_group_enumeration|AWS - EC2 Security Group Enumeration (command_prompt; iaas:aws)]]
+- [[kb/atomic/tests/99ee161b_dcb1_4276_8ecb_7cfdcb207820-aws_ec2_enumeration_from_cloud_instance|AWS - EC2 Enumeration from Cloud Instance (sh; linux, macos, iaas:aws)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

@@ -84,6 +84,38 @@ Adversaries may abuse legitimate extensible development features of servers to e
 
 ![[workspaces/attack/techniques/T1505-server_software_component-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-02-001-webshell_indicative_process_tree|CAR-2021-02-001: Webshell-Indicative Process Tree]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/043c4b8b_3a54_4780_9682_081cb6b8185c-suspicious_iis_module_registration|Suspicious IIS Module Registration (high; windows / process_creation)]]
+- [[kb/sigma/rules/1f0489be_b496_4ddf_b3a9_5900f2044e9c-suspicious_file_write_to_sharepoint_layouts_directory|Suspicious File Write to SharePoint Layouts Directory (high; windows / file_event)]]
+- [[kb/sigma/rules/2ea44a60_cfda_11ea_87d0_0242ac130003-webshell_regeorg_detection_via_web_logs|Webshell ReGeorg Detection Via Web Logs (high; webserver)]]
+- [[kb/sigma/rules/4ebc877f_4612_45cb_b3a5_8e3834db36c9-webshell_hacking_activity_patterns|Webshell Hacking Activity Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/516376b4_05cd_4122_bae0_ad7641c38d48-mailbox_export_to_exchange_webserver|Mailbox Export to Exchange Webserver (critical; windows / msexchange-management)]]
+- [[kb/sigma/rules/7280c9f3_a5af_45d0_916a_bc01cb4151c9-suspicious_msexchangemailboxreplication_aspx_write|Suspicious MSExchangeMailboxReplication ASPX Write (high; windows / file_event)]]
+- [[kb/sigma/rules/7ff9db12_1b94_4a79_ba68_a2402c5d6729-windows_webshell_strings|Windows Webshell Strings (high; webserver)]]
+- [[kb/sigma/rules/818f7b24_0fba_4c49_a073_8b755573b9c7-linux_webshell_indicators|Linux Webshell Indicators (high; linux / process_creation)]]
+- [[kb/sigma/rules/8202070f_edeb_4d31_a010_a26c72ac5600-suspicious_process_by_web_server_process|Suspicious Process By Web Server Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/869b9ca7_9ea2_4a5a_8325_e80e62f75445-suspicious_child_process_of_sql_server|Suspicious Child Process Of SQL Server (high; windows / process_creation)]]
+- 12 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0a2ce662_1efa_496f_a472_2fe7b080db16-web_shell_written_to_disk|Web Shell Written to Disk (command_prompt; windows)]]
+- [[kb/atomic/tests/0b2eadeb_4a64_4449_9d43_3d999f4a317b-simulate_patching_termsrv_dll|Simulate Patching termsrv.dll (powershell; windows)]]
+- [[kb/atomic/tests/18136e38_0530_49b2_b309_eed173787471-modify_terminal_services_dll_path|Modify Terminal Services DLL Path (powershell; windows)]]
+- [[kb/atomic/tests/43e92449_ff60_46e9_83a3_1a38089df94d-install_ms_exchange_transport_agent_persistence|Install MS Exchange Transport Agent Persistence (powershell; windows)]]
+- [[kb/atomic/tests/53adbdfa_8200_490c_871c_d3b1ab3324b2-install_iis_module_using_appcmd_exe|Install IIS Module using AppCmd.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/cc3381fb_4bd0_405c_a8e4_6cacfac3b06c-install_iis_module_using_powershell_cmdlet_new_webglobalmodule|Install IIS Module using PowerShell Cmdlet New-WebGlobalModule (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

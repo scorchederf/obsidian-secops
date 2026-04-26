@@ -72,6 +72,44 @@ Adversaries may also attempt to hide artifacts associated with malicious behavio
 
 ![[workspaces/attack/techniques/T1564-hide_artifacts-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2020-08-001-ntfs_alternate_data_stream_execution_system_utilities|CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities]]
+- [[kb/car/analytics/CAR-2020-08-002-ntfs_alternate_data_stream_execution_lolbas|CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/025bd229_fd1f_4fdb_97ab_20006e1a5368-unusual_file_download_from_direct_ip_address|Unusual File Download from Direct IP Address (high; windows / create_stream_hash)]]
+- [[kb/sigma/rules/0d7a9363_af70_4e7b_a3b7_1a176b7fbe84-exports_registry_key_to_an_alternate_data_stream|Exports Registry Key To an Alternate Data Stream (high; windows / create_stream_hash)]]
+- [[kb/sigma/rules/0e8cfe08_02c9_4815_a2f8_0d157b7ed33e-file_download_with_headless_browser|File Download with Headless Browser (high; windows / process_creation)]]
+- [[kb/sigma/rules/1547e27c_3974_43e2_a7d7_7f484fb928ec-registry_persistence_via_service_in_safe_mode|Registry Persistence via Service in Safe Mode (high; windows / registry_set)]]
+- [[kb/sigma/rules/19b041f6_e583_40dc_b842_d6fa8011493f-hacktool_named_file_stream_created|HackTool Named File Stream Created (high; windows / create_stream_hash)]]
+- [[kb/sigma/rules/1f2b5353_573f_4880_8e33_7d04dcf97744-sysmon_configuration_modification|Sysmon Configuration Modification (high; windows / sysmon_status)]]
+- [[kb/sigma/rules/3e8207c5_fcd2_4ea6_9418_15d45b4890e4-potential_data_stealing_via_chromium_headless_debugging|Potential Data Stealing Via Chromium Headless Debugging (high; windows / process_creation)]]
+- [[kb/sigma/rules/45a594aa_1fbd_4972_a809_ff5a99dd81b8-run_powershell_script_from_ads|Run PowerShell Script from ADS (high; windows / process_creation)]]
+- [[kb/sigma/rules/52182dfb_afb7_41db_b4bc_5336cb29b464-suspicious_file_download_from_file_sharing_websites_file_stream|Suspicious File Download From File Sharing Websites -  File Stream (high; windows / create_stream_hash)]]
+- [[kb/sigma/rules/69bd9b97_2be2_41b6_9816_fb08757a4d1a-potentially_suspicious_execution_from_parent_process_in_public_folder|Potentially Suspicious Execution From Parent Process In Public Folder (high; windows / process_creation)]]
+- 10 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0045ea16_ed3c_4d4c_a9ee_15e44d1560d1-create_ads_powershell|Create ADS PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/0ad9ab92_c48c_4f08_9b20_9633277c4646-headless_browser_accessing_mockbin|Headless Browser Accessing Mockbin (command_prompt; windows)]]
+- [[kb/atomic/tests/173126b7_afe4_45eb_8680_fa9f6400431c-create_hidden_user_in_registry|Create Hidden User in Registry (command_prompt; windows)]]
+- [[kb/atomic/tests/17e7637a_ddaf_4a82_8622_377e20de8fdb-create_ads_command_prompt|Create ADS command prompt (command_prompt; windows)]]
+- [[kb/atomic/tests/2748ab4a_1e0b_4cf2_a2b0_8ef765bec7be-command_execution_with_nircmd|Command Execution with NirCmd (powershell; windows)]]
+- [[kb/atomic/tests/2ab75061_f5d5_4c1a_b666_ba2a50df5b02-store_file_in_alternate_data_stream_ads|Store file in Alternate Data Stream (ADS) (powershell; windows)]]
+- [[kb/atomic/tests/2ec63cc2_4975_41a6_bf09_dffdfb610778-create_a_hidden_user_called|Create a Hidden User Called "$" (command_prompt; windows)]]
+- [[kb/atomic/tests/30f7d3d1_78e2_4bf0_9efa_a175b5fce2a9-new_inbox_rule_to_hide_e_mail_in_m365|New-Inbox Rule to Hide E-mail in M365 (powershell; office-365)]]
+- [[kb/atomic/tests/333c7de0_6fbe_42aa_ac2b_c7e40b18246a-create_and_hide_a_service_with_sc_exe|Create and Hide a Service with sc.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/3b7015f2_3144_4205_b799_b05580621379-hidden_files|Hidden files (sh; macos)]]
+- 20 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

@@ -46,6 +46,18 @@ Cloud service providers offer APIs allowing users to enumerate objects stored wi
 
 ![[workspaces/attack/techniques/T1619-cloud_storage_object_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/070322a4_2c60_4c50_8ffb_c450a34fe7bf-azure_enumerate_storage_account_objects_via_shared_key_authorization_using_azure_cli|Azure - Enumerate Storage Account Objects via Shared Key authorization using Azure CLI (powershell; iaas:azure)]]
+- [[kb/atomic/tests/146af1f1_b74e_4aa7_9895_505eb559b4b0-azure_scan_for_anonymous_access_to_azure_storage_powershell|Azure - Scan for Anonymous Access to Azure Storage (Powershell) (powershell; iaas:azure)]]
+- [[kb/atomic/tests/3c7094f8_71ec_4917_aeb8_a633d7ec4ef5-aws_s3_enumeration|AWS S3 Enumeration (sh; iaas:aws)]]
+- [[kb/atomic/tests/3dab4bcc_667f_4459_aea7_4162dd2d6590-azure_enumerate_azure_blobs_with_microburst|Azure - Enumerate Azure Blobs with MicroBurst (powershell; iaas:azure)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

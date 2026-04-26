@@ -51,6 +51,15 @@ When scheduled exfiltration is used, other exfiltration techniques likely apply 
 
 ![[workspaces/attack/techniques/T1029-scheduled_transfer-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0010-exfiltration|TA0010: Exfiltration]]

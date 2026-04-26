@@ -39,6 +39,33 @@ Adversaries may abuse these features for [[TA0005-defense_evasion|TA0005: Defens
 
 ![[workspaces/attack/techniques/T1202-indirect_command_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/1775e15e_b61b_4d14_a1a3_80981298085a-rundll32_execution_without_commandline_parameters|Rundll32 Execution Without CommandLine Parameters (high; windows / process_creation)]]
+- [[kb/sigma/rules/1f1a8509_2cbb_44f5_8751_8e1571518ce2-suspicious_splwow64_without_params|Suspicious Splwow64 Without Params (high; windows / process_creation)]]
+- [[kb/sigma/rules/2433a154_bb3d_42e4_86c3_a26bdac91c45-renamed_pingcastle_binary_execution|Renamed PingCastle Binary Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/258fc8ce_8352_443a_9120_8a11e4857fa5-potential_arbitrary_command_execution_using_msdt_exe|Potential Arbitrary Command Execution Using Msdt.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/264982dc_dbad_4dce_b707_1e0d3e0f73d9-renamed_nircmd_exe_execution|Renamed NirCmd.EXE Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/340a090b_c4e9_412e_bb36_b4b16fe96f9b-renamed_zoho_dctask64_execution|Renamed ZOHO Dctask64 Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/4ae3e30b_b03f_43aa_87e3_b622f4048eed-potential_arbitrary_file_download_using_office_application|Potential Arbitrary File Download Using Office Application (high; windows / process_creation)]]
+- [[kb/sigma/rules/55f0a3a1_846e_40eb_8273_677371b8d912-outlook_enableunsafeclientmailrules_setting_enabled|Outlook EnableUnsafeClientMailRules Setting Enabled (high; windows / process_creation)]]
+- [[kb/sigma/rules/6f1a11aa_4b8a_4b7f_9e13_4d3e4ff0e0d4-wsl_kali_linux_usage|WSL Kali-Linux Usage (high; windows / process_creation)]]
+- [[kb/sigma/rules/7530b96f_ad8e_431d_a04d_ac85cc461fdc-custom_file_open_handler_executes_powershell|Custom File Open Handler Executes PowerShell (high; windows / registry_set)]]
+- 8 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0fd14730_6226_4f5e_8d67_43c65f1be940-indirect_command_execution_scriptrunner_exe|Indirect Command Execution - Scriptrunner.exe (powershell; windows)]]
+- [[kb/atomic/tests/8b34a448_40d9_4fc3_a8c8_4bb286faf7dc-indirect_command_execution_forfiles_exe|Indirect Command Execution - forfiles.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/cecfea7a_5f03_4cdd_8bc8_6f7c22862440-indirect_command_execution_pcalua_exe|Indirect Command Execution - pcalua.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/cf3391e0_b482_4b02_87fc_ca8362269b29-indirect_command_execution_conhost_exe|Indirect Command Execution - conhost.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/de323a93_2f18_4bd5_ba60_d6fca6aeff76-indirect_command_execution_runmru_dialog|Indirect Command Execution - RunMRU Dialog (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

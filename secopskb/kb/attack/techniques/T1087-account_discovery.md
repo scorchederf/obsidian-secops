@@ -58,6 +58,44 @@ For examples, cloud environments typically provide easily accessible interfaces 
 
 ![[workspaces/attack/techniques/T1087-account_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2016-03-001-host_discovery_commands|CAR-2016-03-001: Host Discovery Commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/02030f2f_6199_49ec_b258_ea71b07e03dc-malicious_powershell_commandlets_processcreation|Malicious PowerShell Commandlets - ProcessCreation (high; windows / process_creation)]]
+- [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files (high; windows / file_event)]]
+- [[kb/sigma/rules/24549159_ac1b_479c_8175_d42aea947cae-hacktool_ruler|Hacktool Ruler (high; windows / security)]]
+- [[kb/sigma/rules/35b781cc_1a08_4a5a_80af_42fd7c315c6b-discovery_using_azurehound|Discovery Using AzureHound (high; azure / signinlogs)]]
+- [[kb/sigma/rules/35ba1d85_724d_42a3_889f_2e2362bcaf23-ad_privileged_users_or_groups_reconnaissance|AD Privileged Users or Groups Reconnaissance (high; windows / security)]]
+- [[kb/sigma/rules/38646daa_e78f_4ace_9de0_55547b2d30da-pua_seatbelt_execution|PUA - Seatbelt Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/455b9d50_15a1_4b99_853f_8d37655a4c1b-pua_suspicious_activedirectory_enumeration_via_adfind_exe|PUA - Suspicious ActiveDirectory Enumeration Via AdFind.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/4ebc877f_4612_45cb_b3a5_8e3834db36c9-webshell_hacking_activity_patterns|Webshell Hacking Activity Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/65f77b1e_8e79_45bf_bb67_5988a8ce45a5-sharphound_recon_account_discovery|SharpHound Recon Account Discovery (high; rpc_firewall / application)]]
+- [[kb/sigma/rules/7d0d0329_0ef1_4e84_a9f5_49500f9d7c6c-malicious_powershell_commandlets_poshmodule|Malicious PowerShell Commandlets - PoshModule (high; windows / ps_module)]]
+- 11 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/00c652e2_0750_4ca6_82ff_0204684a6fe4-enumerate_root_domain_linked_policies_discovery|Enumerate Root Domain linked policies Discovery (powershell; windows)]]
+- [[kb/atomic/tests/02e8be5a_3065_4e54_8cc8_a14d138834d3-enumerate_active_directory_users_with_adsisearcher|Enumerate Active Directory Users with ADSISearcher (powershell; windows)]]
+- [[kb/atomic/tests/096b6d2a_b63f_4100_8fa0_525da4cd25ca-active_directory_domain_search|Active Directory Domain Search (sh; linux)]]
+- [[kb/atomic/tests/0f0b6a29_08c3_44ad_a30b_47fd996b2110-show_if_a_user_account_has_ever_logged_in_remotely|Show if a user account has ever logged in remotely (sh; linux)]]
+- [[kb/atomic/tests/161dcd85_d014_4f5e_900c_d3eaae82a0f7-enumerate_logged_on_users_via_cmd_domain|Enumerate logged on users via CMD (Domain) (command_prompt; windows)]]
+- [[kb/atomic/tests/319e9f6c_7a9e_432e_8c62_9385c803b6f2-enumerate_users_and_groups|Enumerate users and groups (sh; macos)]]
+- [[kb/atomic/tests/394012d9_2164_4d4f_b9e5_acf30ba933fe-suspicious_laps_attributes_query_with_get_adcomputer_all_properties|Suspicious LAPS Attributes Query with Get-ADComputer all properties (powershell; windows)]]
+- [[kb/atomic/tests/46f8dbe9_22a5_4770_8513_66119c5be63b-enumerate_active_directory_for_unconstrained_delegation|Enumerate Active Directory for Unconstrained Delegation (powershell; windows)]]
+- [[kb/atomic/tests/51a98f96_0269_4e09_a10f_e307779a8b05-suspicious_laps_attributes_query_with_adfind_ms_mcs_admpwd|Suspicious LAPS Attributes Query with adfind ms-Mcs-AdmPwd (powershell; windows)]]
+- [[kb/atomic/tests/5e2938fb_f919_47b6_8b29_2f6a1f718e99-adfind_enumerate_active_directory_exchange_ad_objects|Adfind - Enumerate Active Directory Exchange AD Objects (command_prompt; windows)]]
+- 25 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

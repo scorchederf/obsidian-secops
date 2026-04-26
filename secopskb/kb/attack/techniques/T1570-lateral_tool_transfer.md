@@ -56,6 +56,28 @@ Files can also be transferred using native or otherwise present tools on the vic
 
 ![[workspaces/attack/techniques/T1570-lateral_tool_transfer-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-05-003-smb_write_request|CAR-2013-05-003: SMB Write Request]]
+- [[kb/car/analytics/CAR-2013-05-005-smb_copy_and_execution|CAR-2013-05-005: SMB Copy and Execution]]
+- [[kb/car/analytics/CAR-2014-03-001-smb_write_request_namedpipes|CAR-2014-03-001: SMB Write Request - NamedPipes]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/304afd73_55a5_4bb9_8c21_0b1fc84ea9e4-psexec_remote_execution_file_artefact|PSEXEC Remote Execution File Artefact (high; windows / file_event)]]
+- [[kb/sigma/rules/5bb68627_3198_40ca_b458_49f973db8752-rundll32_execution_without_parameters|Rundll32 Execution Without Parameters (high; windows / process_creation)]]
+- [[kb/sigma/rules/6fb63b40_e02a_403e_9ffd_3bcc1d749442-metasploit_or_impacket_service_installation_via_smb_psexec|Metasploit Or Impacket Service Installation Via SMB PsExec (high; windows / security)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/183235ca_8e6c_422c_88c2_3aa28c4825d9-exfiltration_over_smb_over_quic_net_use|Exfiltration Over SMB over QUIC (NET USE) (powershell; windows)]]
+- [[kb/atomic/tests/d8d13303_159e_4f33_89f4_9f07812d016f-exfiltration_over_smb_over_quic_new_smbmapping|Exfiltration Over SMB over QUIC (New-SmbMapping) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0008-lateral_movement|TA0008: Lateral Movement]]

@@ -42,6 +42,20 @@ Adversaries may search network shares on computers they have compromised to find
 
 ![[workspaces/attack/techniques/T1039-data_from_network_shared_drive-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-003-smb_events_monitoring|CAR-2013-01-003: SMB Events Monitoring]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/6ed67921_1774_44ba_bac6_adb51ed60660-copy_a_sensitive_file_over_administrative_share_with_copy|Copy a sensitive File over Administrative share with copy (command_prompt; windows)]]
+- [[kb/atomic/tests/7762e120_5879_44ff_97f8_008b401b9a98-copy_a_sensitive_file_over_administrative_share_with_powershell|Copy a sensitive File over Administrative share with Powershell (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

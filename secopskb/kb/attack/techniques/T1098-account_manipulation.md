@@ -78,6 +78,43 @@ In order to create or manipulate accounts, the adversary must already have suffi
 
 ![[workspaces/attack/techniques/T1098-account_manipulation-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/055fb148_60f8_462d_ad16_26926ce050f1-aws_user_login_profile_was_modified|AWS User Login Profile Was Modified (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/0ac15ec3_d24f_4246_aa2a_3077bb1cf90e-privileged_user_has_been_created|Privileged User Has Been Created (high; linux)]]
+- [[kb/sigma/rules/102e11e3_2db5_4c9e_bc26_357d42585d21-bulk_deletion_changes_to_privileged_account_permissions|Bulk Deletion Changes To Privileged Account Permissions (high; azure / auditlogs)]]
+- [[kb/sigma/rules/10fb649c_3600_4d37_b1e6_56ea90bb7e09-user_added_to_highly_privileged_group|User Added To Highly Privileged Group (high; windows / process_creation)]]
+- [[kb/sigma/rules/258b6593_215d_4a26_a141_c8e31c1299a6-anomalous_user_activity|Anomalous User Activity (high; azure / riskdetection)]]
+- [[kb/sigma/rules/2c99737c_585d_4431_b61a_c911d86ff32f-powerview_add_domainobjectacl_dcsync_ad_extend_right|Powerview Add-DomainObjectAcl DCSync AD Extend Right (high; windows / security)]]
+- [[kb/sigma/rules/300bac00_e041_4ee2_9c36_e262656a6ecc-active_directory_user_backdoors|Active Directory User Backdoors (high; windows / security)]]
+- [[kb/sigma/rules/311b6ce2_7890_4383_a8c2_663a9f6b43cd-enabled_user_right_in_ad_to_control_user_objects|Enabled User Right in AD to Control User Objects (high; windows / security)]]
+- [[kb/sigma/rules/53ad8e36_f573_46bf_97e4_15ba5bf4bb51-password_change_on_directory_service_restore_mode_dsrm_account|Password Change on Directory Service Restore Mode (DSRM) Account (high; windows / security)]]
+- [[kb/sigma/rules/5aecf3d5_f8a0_48e7_99be_3a759df7358f-app_granted_privileged_delegated_or_app_permissions|App Granted Privileged Delegated Or App Permissions (high; azure / auditlogs)]]
+- 4 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0e65ae27_5385_46b4_98ac_607a8ee82261-azure_ad_adding_user_to_azure_ad_role|Azure AD - adding user to Azure AD role (powershell; azure-ad)]]
+- [[kb/atomic/tests/14f3af20_61f1_45b8_ad31_4637815f3f44-simulate_post_bec_persistence_via_user_password_reset_followed_by_user_added_to_company_administrator_role|Simulate - Post BEC persistence via user password reset followed by user added to company administrator role (powershell; azure-ad)]]
+- [[kb/atomic/tests/17d046be_fdd0_4cbb_b5c7_55c85d9d0714-exo_full_access_mailbox_permission_granted_to_a_user|EXO - Full access mailbox permission granted to a user (powershell; office-365)]]
+- [[kb/atomic/tests/1a94b3fc_b080_450a_b3d8_6d9b57b472ea-azure_adding_user_to_azure_role_in_subscription|Azure - adding user to Azure role in subscription (powershell; iaas:azure)]]
+- [[kb/atomic/tests/342cc723_127c_4d3a_8292_9c0c6b4ecadc-modify_ssh_authorized_keys|Modify SSH Authorized Keys (sh; linux, macos)]]
+- [[kb/atomic/tests/4d77f913_56f5_4a14_b4b1_bf7bb24298ad-azure_ad_add_company_administrator_role_to_a_user|Azure AD - Add Company Administrator Role to a user (powershell; azure-ad)]]
+- [[kb/atomic/tests/5598f7cb_cf43_455e_883a_f6008c5d46af-admin_account_manipulate|Admin Account Manipulate (powershell; windows)]]
+- [[kb/atomic/tests/68190529_069b_4ffc_a942_919704158065-domain_password_policy_check_no_number_in_password|Domain Password Policy Check: No Number in Password (powershell; windows)]]
+- [[kb/atomic/tests/784d1349_5a26_4d20_af5e_d6af53bae460-domain_password_policy_check_only_two_character_classes|Domain Password Policy Check: Only Two Character Classes (powershell; windows)]]
+- [[kb/atomic/tests/7d984ef2_2db2_4cec_b090_e637e1698f61-domain_password_policy_check_no_special_character_in_password|Domain Password Policy Check: No Special Character in Password (powershell; windows)]]
+- 14 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

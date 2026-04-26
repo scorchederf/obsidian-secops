@@ -44,6 +44,17 @@ Staging of capabilities can aid the adversary in a number of initial access and 
 
 ![[workspaces/attack/techniques/T1608-stage_capabilities-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/00d49ed5_4491_4271_a8db_650a4ef6f8c1-suspicious_download_from_office_domain|Suspicious Download from Office Domain (high; windows / process_creation)]]
+- [[kb/sigma/rules/1279262f_1464_422f_ac0d_5b545320c526-aws_kms_imported_key_material_usage|AWS KMS Imported Key Material Usage (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/ac8866c7_ce44_46fd_8c17_b24acff96ca8-hybridconnectionmanager_service_installation_registry|HybridConnectionManager Service Installation - Registry (high; windows / registry_event)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0042-resource_development|TA0042: Resource Development]]

@@ -61,6 +61,15 @@ For DoS attacks targeting the hosting system directly, see [[T1499-endpoint_deni
 
 ![[workspaces/attack/techniques/T1498-network_denial_of_service-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/7cded4b3_f09e_405a_b96f_24248433ba44-opencanary_ntp_monlist_request|OpenCanary - NTP Monlist Request (high; opencanary / application)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

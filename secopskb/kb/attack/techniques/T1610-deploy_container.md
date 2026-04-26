@@ -40,6 +40,15 @@ Containers can be deployed by various means, such as via Docker's `create` and `
 
 ![[workspaces/attack/techniques/T1610-deploy_container-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/59aa6f26_7620_417e_9318_589e0fb7a372-deploy_docker_container|Deploy Docker container (bash; containers)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

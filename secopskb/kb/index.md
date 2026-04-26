@@ -7,7 +7,7 @@
 ## Generated Reference Areas
 
 - [[kb/attack/index|ATT&CK]] (14 tactics, 691 techniques)
-- [[kb/tools/index|MITRE Tools]] (91 tools)
+- [[kb/tools/index|Tools]] (91 tools)
 - [[kb/defend/index|D3FEND]] (271 techniques)
 - [[kb/car/index|CAR]] (102 analytics)
 - [[kb/sigma/index|Sigma]] (1484 rules)

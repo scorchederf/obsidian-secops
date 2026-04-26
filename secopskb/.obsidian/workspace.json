@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "6f716de832ad5e89",
+        "id": "4f05b7023e37cef5",
         "type": "tabs",
         "children": [
           {
-            "id": "c256c061b8e82929",
+            "id": "7de01b302d7d3444",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "kb/atomic/tests/04bb8e3d_1670_46ab_a3f1_5cee64da29b6-embedded_script_in_image_execution_via_extract_invoke_psimage.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "04bb8e3d_1670_46ab_a3f1_5cee64da29b6-embedded_script_in_image_execution_via_extract_invoke_psimage"
+              "title": "New tab"
             }
           }
         ]
@@ -180,8 +176,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "c256c061b8e82929",
+  "active": "bf4dbdba13e21401",
   "lastOpenFiles": [
+    "c.zip",
+    "b.zip",
+    "kb/atomic/tests/04bb8e3d_1670_46ab_a3f1_5cee64da29b6-embedded_script_in_image_execution_via_extract_invoke_psimage.md",
     "a.zip",
     "kb/atomic/techniques/index.md",
     "kb/atomic/index.md",
@@ -208,15 +207,12 @@
     "kb/atomic/tests/87a4a141_c2bb_49d1_a604_8679082d8b91-lambda_function_hijack.md",
     "kb/atomic/tests/394a538e_09bb_4a4a_95d1_b93cf12682a8-plist_modification.md",
     "kb/atomic/tests/58bd8c8d_3a1a_4467_a69c_439c75469b07-detect_a_debugger_presence_in_the_machine.md",
-    "kb/atomic/tests/56b9589c_9170_4682_8c3d_33b86ecb5119-winpwn_reflectively_load_mimik_tz_into_memory.md",
     "kb/atomic/tests",
     "kb/atomic/techniques",
     "kb/atomic/platforms",
     "kb/atomic/executors",
     "kb/atomic",
     "kb/sigma/techniques",
-    "kb/sigma/rules",
-    "kb/sigma/logsources",
-    "kb/sigma"
+    "kb/sigma/rules"
   ]
 }

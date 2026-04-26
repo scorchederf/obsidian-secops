@@ -76,6 +76,16 @@ Unlike [[T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Ap
 
 ![[workspaces/attack/techniques/T1189-drive-by_compromise-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/4922a5dd_6743_4fc2_8e81_144374280997-flash_player_update_from_suspicious_location|Flash Player Update from Suspicious Location (high; proxy)]]
+- [[kb/sigma/rules/65354b83_a2ea_4ea6_8414_3ab38be0d409-cross_site_scripting_strings|Cross Site Scripting Strings (high; webserver)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0001-initial_access|TA0001: Initial Access]]

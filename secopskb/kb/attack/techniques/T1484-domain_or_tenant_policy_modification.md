@@ -55,6 +55,21 @@ Adversaries may temporarily modify domain or tenant policy, carry out a maliciou
 
 ![[workspaces/attack/techniques/T1484-domain_or_tenant_policy_modification-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/9494bff8_959f_4440_bbce_fb87a208d517-changes_to_device_registration_policy|Changes to Device Registration Policy (high; azure / auditlogs)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/8906c5d0_3ee5_4f63_897a_f6cafd3fdbb7-add_federation_to_azure_ad|Add Federation to Azure AD (powershell; azure-ad)]]
+- [[kb/atomic/tests/9ab80952_74ee_43da_a98c_1e740a985f28-lockbit_black_modify_group_policy_settings_cmd|LockBit Black - Modify Group policy settings -cmd (command_prompt; windows)]]
+- [[kb/atomic/tests/b51eae65_5441_4789_b8e8_64783c26c1d1-lockbit_black_modify_group_policy_settings_powershell|LockBit Black - Modify Group policy settings -Powershell (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

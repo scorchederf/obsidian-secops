@@ -47,6 +47,16 @@ In addition to gaining a better understanding of the environment, adversaries ma
 
 ![[workspaces/attack/techniques/T1654-log_enumeration-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/a9030b20_dd4b_4405_875e_3462c6078fdc-get_eventlog_to_enumerate_windows_security_log|Get-EventLog To Enumerate Windows Security Log (powershell; windows)]]
+- [[kb/atomic/tests/fef0ace1_3550_4bf1_a075_9fea55a778dd-enumerate_windows_security_log_via_wevtutil|Enumerate Windows Security Log via WevtUtil (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

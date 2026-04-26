@@ -46,6 +46,19 @@ Reflective code injection is very similar to [[T1055-process_injection|T1055: Pr
 
 ![[workspaces/attack/techniques/T1620-reflective_code_loading-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/62b7ccc9_23b4_471e_aa15_6da3663c4d59-powershell_base64_encoded_reflective_assembly_load|PowerShell Base64 Encoded Reflective Assembly Load (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/56b9589c_9170_4682_8c3d_33b86ecb5119-winpwn_reflectively_load_mimik_tz_into_memory|WinPwn - Reflectively load Mimik@tz into memory (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

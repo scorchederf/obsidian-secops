@@ -48,6 +48,31 @@ Adversaries may use the information from [[T1007-system_service_discovery|T1007:
 
 ![[workspaces/attack/techniques/T1007-system_service_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2016-03-001-host_discovery_commands|CAR-2016-03-001: Host Discovery Commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/51f17016_d8fa_4360_888a_df4bf92c4a04-get_service_execution|Get-Service Execution (command_prompt; windows)]]
+- [[kb/atomic/tests/5f864a3f_8ce9_45c0_812c_bdf7d8aeacc3-system_service_discovery_net_exe|System Service Discovery - net.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/7cd7eaa3_9ccc_460d_96d2_c6fb13e6d58a-system_service_discovery_windows_scheduled_tasks_schtasks|System Service Discovery - Windows Scheduled Tasks (schtasks) (command_prompt; windows)]]
+- [[kb/atomic/tests/89676ba1_b1f8_47ee_b940_2e1a113ebc71-system_service_discovery|System Service Discovery (command_prompt; windows)]]
+- [[kb/atomic/tests/8f2a5d2b_4018_46d4_8f3f_0fea53754690-system_service_discovery_linux_init_scripts|System Service Discovery - Linux init scripts (sh; linux)]]
+- [[kb/atomic/tests/9b378962_a75e_4856_b117_2503d6dcebba-system_service_discovery_macos_launchctl|System Service Discovery - macOS launchctl (sh; macos)]]
+- [[kb/atomic/tests/d70d82bd_bb00_4837_b146_b40d025551b2-system_service_discovery_services_registry_enumeration|System Service Discovery - Services Registry Enumeration (powershell; windows)]]
+- [[kb/atomic/tests/f4b26bce_4c2c_46c0_bcc5_fce062d38bef-system_service_discovery_systemctl_service|System Service Discovery - systemctl/service (bash; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

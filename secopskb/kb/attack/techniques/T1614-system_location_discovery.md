@@ -51,6 +51,25 @@ Adversaries may also attempt to infer the location of a victim host using IP add
 
 ![[workspaces/attack/techniques/T1614-system_location_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/07ce871a_b3c3_44a3_97fa_a20118fdc7c9-discover_system_language_with_localectl|Discover System Language with localectl (sh; linux)]]
+- [[kb/atomic/tests/1f23bfe8_36d4_49ce_903a_19a1e8c6631b-discover_system_language_with_powershell|Discover System Language with Powershell (powershell; windows)]]
+- [[kb/atomic/tests/4758003d_db14_4959_9c0f_9e87558ac69e-discover_system_language_with_wmic|Discover System Language with WMIC (command_prompt; windows)]]
+- [[kb/atomic/tests/552b4db3_8850_412c_abce_ab5cc8a86604-get_geolocation_info_through_ip_lookup_services_using_curl_freebsd_linux_or_macos|Get geolocation info through IP-Lookup services using curl freebsd, linux or macos (bash; macos, linux)]]
+- [[kb/atomic/tests/5d7057c9_2c8a_4026_91dd_13b5584daa69-discover_system_language_by_locale_file|Discover System Language by locale file (sh; linux)]]
+- [[kb/atomic/tests/631d4cf1_42c9_4209_8fe9_6bd4de9421be-discover_system_language_by_registry_query|Discover System Language by Registry Query (command_prompt; windows)]]
+- [[kb/atomic/tests/69f625ba_938f_4900_bdff_82ada3df5d9c-discover_system_language_with_dism_exe|Discover System Language with dism.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/837d609b_845e_4519_90ce_edc3b4b0e138-discover_system_language_with_locale|Discover System Language with locale (sh; linux)]]
+- [[kb/atomic/tests/cb8f7cdc_36c4_4ed0_befc_7ad7d24dfd7a-discover_system_language_by_environment_variable_query|Discover System Language by Environment Variable Query (sh; linux)]]
+- [[kb/atomic/tests/d91473ca_944e_477a_b484_0e80217cd789-discover_system_language_with_chcp|Discover System Language with chcp (command_prompt; windows)]]
+- 2 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

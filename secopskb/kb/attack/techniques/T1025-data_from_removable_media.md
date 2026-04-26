@@ -45,6 +45,15 @@ Some adversaries may also use [[T1119-automated_collection|T1119: Automated Coll
 
 ![[workspaces/attack/techniques/T1025-data_from_removable_media-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0b29f7e3_a050_44b7_bf05_9fb86af1ec2e-identify_documents_on_usb_and_removable_media_via_powershell|Identify Documents on USB and Removable Media via PowerShell (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

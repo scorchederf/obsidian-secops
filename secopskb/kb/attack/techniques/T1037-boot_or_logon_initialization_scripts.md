@@ -67,6 +67,32 @@ An adversary may also be able to escalate their privileges since some boot or lo
 
 ![[workspaces/attack/techniques/T1037-boot_or_logon_initialization_scripts-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-002-autorun_differences|CAR-2013-01-002: Autorun Differences]]
+- [[kb/car/analytics/CAR-2020-11-001-boot_or_logon_initialization_scripts|CAR-2020-11-001: Boot or Logon Initialization Scripts]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0a98a10c_685d_4ab0_bddc_b6bdd1d48458-uncommon_userinit_child_process|Uncommon Userinit Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/21d856f9_9281_4ded_9377_51a1a6e2a432-potential_persistence_via_logon_scripts_commandline|Potential Persistence Via Logon Scripts - CommandLine (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/10cf5bec_49dd_4ebf_8077_8f47e420096f-add_launch_script_to_launch_agent|Add launch script to launch agent (bash; macos)]]
+- [[kb/atomic/tests/126f71af_e1c9_405c_94ef_26a47b16c102-rc_local|rc.local (sh; linux)]]
+- [[kb/atomic/tests/134627c3_75db_410e_bff8_7a920075f198-add_file_to_local_library_startupitems|Add file to Local Library StartupItems (sh; macos)]]
+- [[kb/atomic/tests/97a48daa_8bca_4bc0_b1a9_c1d163e762de-rc_common|rc.common (bash; macos)]]
+- [[kb/atomic/tests/c33f3d80_5f04_419b_a13a_854d1cbdbf3a-rc_common|rc.common (bash; linux)]]
+- [[kb/atomic/tests/d6042746_07d4_4c92_9ad8_e644c114a231-logon_scripts|Logon Scripts (command_prompt; windows)]]
+- [[kb/atomic/tests/f047c7de_a2d9_406e_a62b_12a09d9516f4-logon_scripts_mac|Logon Scripts - Mac (manual; macos)]]
+- [[kb/atomic/tests/fc369906_90c7_4a15_86fd_d37da624dde6-add_launch_script_to_launch_daemon|Add launch script to launch daemon (bash; macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

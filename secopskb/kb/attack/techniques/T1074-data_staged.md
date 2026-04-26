@@ -62,6 +62,17 @@ Adversaries may choose to stage data from a victim network in a centralized loca
 
 ![[workspaces/attack/techniques/T1074-data_staged-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/107706a5_6f9f_451a_adae_bab8c667829f-stage_data_from_discovery_bat|Stage data from Discovery.bat (powershell; windows)]]
+- [[kb/atomic/tests/39ce0303_ae16_4b9e_bb5b_4f53e8262066-stage_data_from_discovery_sh|Stage data from Discovery.sh (sh; linux, macos)]]
+- [[kb/atomic/tests/a57fbe4b_3440_452a_88a7_943531ac872a-zip_a_folder_with_powershell_for_staging_in_temp|Zip a Folder with PowerShell for Staging in Temp (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

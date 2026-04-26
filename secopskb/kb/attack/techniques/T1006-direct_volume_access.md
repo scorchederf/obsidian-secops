@@ -40,6 +40,15 @@ Utilities, such as `NinjaCopy`, exist to perform these actions in PowerShell.(Ci
 
 ![[workspaces/attack/techniques/T1006-direct_volume_access-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/88f6327e_51ec_4bbf_b2e8_3fea534eab8b-read_volume_boot_sector_via_dos_device_path_powershell|Read volume boot sector via DOS device path (PowerShell) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

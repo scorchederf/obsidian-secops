@@ -39,6 +39,16 @@ In Docker, adversaries may specify an entrypoint during container deployment tha
 
 ![[workspaces/attack/techniques/T1609-container_administration_command-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/900e2c49_221b_42ec_ae3c_4717e41e6219-docker_exec_into_container|Docker Exec Into Container (bash; containers)]]
+- [[kb/atomic/tests/d03bfcd3_ed87_49c8_8880_44bb772dea4b-execintocontainer|ExecIntoContainer (bash; containers)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

@@ -61,6 +61,44 @@ An adversary can use WMI to interact with local and remote systems and use it as
 
 ![[workspaces/attack/techniques/T1047-windows_management_instrumentation-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2014-11-007-remote_windows_management_instrumentation_wmi_over_rpc|CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC]]
+- [[kb/car/analytics/CAR-2014-12-001-remotely_launched_executables_via_wmi|CAR-2014-12-001: Remotely Launched Executables via WMI]]
+- [[kb/car/analytics/CAR-2016-03-002-create_remote_process_via_wmic|CAR-2016-03-002: Create Remote Process via WMIC]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/058f4380_962d_40a5_afce_50207d36d7e2-hacktool_crackmapexec_execution_patterns|HackTool - CrackMapExec Execution Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/10c14723_61c7_4c75_92ca_9af245723ad2-hacktool_potential_impacket_lateral_movement_activity|HackTool - Potential Impacket Lateral Movement Activity (high; windows / process_creation)]]
+- [[kb/sigma/rules/3c89a1e8_0fba_449e_8f1b_8409d6267ec8-suspicious_process_created_via_wmic_exe|Suspicious Process Created Via Wmic.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/438025f9_5856_4663_83f7_52f878a70a50-suspicious_microsoft_office_child_process|Suspicious Microsoft Office Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/51cbac1e_eee3_4a90_b1b7_358efb81fa0a-potential_windows_defender_tampering_via_wmic_exe|Potential Windows Defender Tampering Via Wmic.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/614a7e17_5643_4d89_b6fe_f9df1a79641c-wmiprvse_wbemcomn_dll_hijack_file|Wmiprvse Wbemcomn DLL Hijack - File (critical; windows / file_event)]]
+- [[kb/sigma/rules/68050b10_e477_4377_a99b_3721b422d6ef-remote_dcom_wmi_lateral_movement|Remote DCOM/WMI Lateral Movement (high; rpc_firewall / application)]]
+- [[kb/sigma/rules/7707a579_e0d8_4886_a853_ce47e4575aaa-wmiprvse_wbemcomn_dll_hijack|Wmiprvse Wbemcomn DLL Hijack (high; windows / image_load)]]
+- 11 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/00738d2a_4651_4d76_adf2_c43a41dfb243-wmi_execute_rundll32|WMI Execute rundll32 (command_prompt; windows)]]
+- [[kb/atomic/tests/0fd48ef7_d890_4e93_a533_f7dedd5191d3-wmi_reconnaissance_list_remote_services|WMI Reconnaissance List Remote Services (command_prompt; windows)]]
+- [[kb/atomic/tests/10447c83_fc38_462a_a936_5102363b1c43-create_a_process_using_obfuscated_win32_process|Create a Process using obfuscated Win32_Process (powershell; windows)]]
+- [[kb/atomic/tests/5750aa16_0e59_4410_8b9a_8a47ca2788e2-wmi_reconnaissance_processes|WMI Reconnaissance Processes (command_prompt; windows)]]
+- [[kb/atomic/tests/718aebaa_d0e0_471a_8241_c5afa69c7414-wmi_reconnaissance_software|WMI Reconnaissance Software (command_prompt; windows)]]
+- [[kb/atomic/tests/7db7a7f9_9531_4840_9b30_46220135441c-create_a_process_using_wmi_query_and_an_encoded_command|Create a Process using WMI Query and an Encoded Command (command_prompt; windows)]]
+- [[kb/atomic/tests/9c8ef159_c666_472f_9874_90c8d60d136b-wmi_execute_remote_process|WMI Execute Remote Process (command_prompt; windows)]]
+- [[kb/atomic/tests/b3bdfc91_b33e_4c6d_a5c8_d64bee0276b3-wmi_execute_local_process|WMI Execute Local Process (command_prompt; windows)]]
+- [[kb/atomic/tests/c107778c_dcf5_47c5_af2e_1d058a3df3ea-wmi_reconnaissance_users|WMI Reconnaissance Users (command_prompt; windows)]]
+- [[kb/atomic/tests/c510d25b_1667_467d_8331_a56d3e9bc4ff-application_uninstall_using_wmic|Application uninstall using WMIC (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

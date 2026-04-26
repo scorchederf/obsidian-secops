@@ -48,6 +48,15 @@ Adversaries may use the information learned from these debugger checks during au
 
 ![[workspaces/attack/techniques/T1622-debugger_evasion-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/58bd8c8d_3a1a_4467_a69c_439c75469b07-detect_a_debugger_presence_in_the_machine|Detect a Debugger Presence in the Machine (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

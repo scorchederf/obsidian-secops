@@ -48,6 +48,19 @@ Adversaries typically abuse system features for this type of enumeration. For ex
 
 ![[workspaces/attack/techniques/T1010-application_window_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/fe94a1c3_3e22_4dc9_9fdf_3a8bdbc10dc4-list_process_main_windows_c_net|List Process Main Windows - C# .NET (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

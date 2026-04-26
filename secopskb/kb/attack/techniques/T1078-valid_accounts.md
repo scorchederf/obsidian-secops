@@ -63,6 +63,47 @@ The overlap of permissions for local, domain, and cloud accounts across a networ
 
 ![[workspaces/attack/techniques/T1078-valid_accounts-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-02-008-simultaneous_logins_on_a_host|CAR-2013-02-008: Simultaneous Logins on a Host]]
+- [[kb/car/analytics/CAR-2013-02-012-user_logged_in_to_multiple_hosts|CAR-2013-02-012: User Logged in to Multiple Hosts]]
+- [[kb/car/analytics/CAR-2013-05-003-smb_write_request|CAR-2013-05-003: SMB Write Request]]
+- [[kb/car/analytics/CAR-2013-05-005-smb_copy_and_execution|CAR-2013-05-005: SMB Copy and Execution]]
+- [[kb/car/analytics/CAR-2013-10-001-user_login_activity_monitoring|CAR-2013-10-001: User Login Activity Monitoring]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0055ad1f_be85_4798_83cf_a6da17c993b3-application_uri_configuration_changes|Application URI Configuration Changes (high; azure / auditlogs)]]
+- [[kb/sigma/rules/039a7469_0296_4450_84c0_f6966b16dc6d-pim_approvals_and_deny_elevation|PIM Approvals And Deny Elevation (high; azure / auditlogs)]]
+- [[kb/sigma/rules/09438caa_07b1_4870_8405_1dbafe3dad95-azure_subscription_permission_elevation_via_activitylogs|Azure Subscription Permission Elevation Via ActivityLogs (high; azure / activitylogs)]]
+- [[kb/sigma/rules/11c767ae_500b_423b_bae3_b234450736ed-users_added_to_global_or_device_admin_roles|Users Added to Global or Device Admin Roles (high; azure / auditlogs)]]
+- [[kb/sigma/rules/128faeef_79dd_44ca_b43c_a9e236a60f49-unfamiliar_sign_in_properties|Unfamiliar Sign-In Properties (high; azure / riskdetection)]]
+- [[kb/sigma/rules/13f2d3f5_6497_44a7_bf5f_dc13ffafe5dc-azure_login_bypassing_conditional_access_policies|Azure Login Bypassing Conditional Access Policies (high; m365 / audit)]]
+- [[kb/sigma/rules/1a41023f_1e70_4026_921a_4d9341a9038e-atypical_travel|Atypical Travel (high; azure / riskdetection)]]
+- [[kb/sigma/rules/1b45b0d1_773f_4f23_aedc_814b759563b1-application_appid_uri_configuration_changes|Application AppID Uri Configuration Changes (high; azure / auditlogs)]]
+- [[kb/sigma/rules/352a918a_34d8_4882_8470_44830c507aa3-malicious_usage_of_imds_credentials_outside_of_aws_infrastructure|Malicious Usage Of IMDS Credentials Outside Of AWS Infrastructure (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/39698b3f_da92_4bc6_bfb5_645a98386e45-win_susp_computer_name_containing_samtheadmin|Win Susp Computer Name Containing Samtheadmin (critical; windows / security)]]
+- 31 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/02a91c34_8a5b_4bed_87af_501103eb5357-create_local_account_linux|Create local account (Linux) (bash; linux)]]
+- [[kb/atomic/tests/0315bdff_4178_47e9_81e4_f31a6d23f7e4-enable_guest_account_on_macos|Enable Guest Account on macOS (sh; macos)]]
+- [[kb/atomic/tests/09e3380a_fae5_4255_8b19_9950be0252cf-reactivate_a_locked_expired_account_freebsd|Reactivate a locked/expired account (FreeBSD) (sh; linux)]]
+- [[kb/atomic/tests/16f6374f_7600_459a_9b16_6a88fd96d310-login_as_nobody_freebsd|Login as nobody (freebsd) (sh; linux)]]
+- [[kb/atomic/tests/191db57d_091a_47d5_99f3_97fde53de505-create_local_account_with_admin_privileges_using_sysadminctl_utility_macos|Create local account with admin privileges using sysadminctl utility - MacOS (bash; macos)]]
+- [[kb/atomic/tests/20b40ea9_0e17_4155_b8e6_244911a678ac-enable_root_account_using_dsenableroot_utility_macos|Enable root account using dsenableroot utility - MacOS (bash; macos)]]
+- [[kb/atomic/tests/348f4d14_4bd3_4f6b_bd8a_61237f78b3ac-azure_persistence_automation_runbook_created_or_modified|Azure Persistence Automation Runbook Created or Modified (powershell; iaas:azure)]]
+- [[kb/atomic/tests/3a159042_69e6_4398_9a69_3308a4841c85-gcp_create_custom_iam_role|GCP - Create Custom IAM Role (sh; iaas:gcp)]]
+- [[kb/atomic/tests/3d2cd093_ee05_41bd_a802_59ee5c301b85-login_as_nobody_linux|Login as nobody (Linux) (bash; linux)]]
+- [[kb/atomic/tests/433842ba_e796_4fd5_a14f_95d3a1970875-add_a_new_existing_user_to_the_admin_group_using_dseditgroup_utility_macos|Add a new/existing user to the admin group using dseditgroup utility - macOS (bash; macos)]]
+- 9 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

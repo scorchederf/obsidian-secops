@@ -44,6 +44,15 @@ Mobile devices may also be used to infect PCs with malware if connected via USB.
 
 ![[workspaces/attack/techniques/T1091-replication_through_removable_media-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/d44b7297_622c_4be8_ad88_ec40d7563c75-usb_malware_spread_simulation|USB Malware Spread Simulation (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0008-lateral_movement|TA0008: Lateral Movement]]

@@ -41,6 +41,22 @@ In addition to purchasing capabilities, adversaries may steal capabilities from 
 
 ![[workspaces/attack/techniques/T1588-obtain_capabilities-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/24e3e58a_646b_4b50_adef_02ef935b9fc8-hacktool_execution_imphash|Hacktool Execution - Imphash (critical; windows / process_creation)]]
+- [[kb/sigma/rules/36aa86ca_fd9d_4456_814e_d3b1b8e1e0bb-relevant_clamav_message|Relevant ClamAV Message (high; linux / clamav)]]
+- [[kb/sigma/rules/37c1333a_a0db_48be_b64b_7393b2386e3b-hacktool_execution_pe_metadata|Hacktool Execution - PE Metadata (high; windows / process_creation)]]
+- [[kb/sigma/rules/78bc5783_81d9_4d73_ac97_59f6db4f72a8-relevant_anti_virus_signature_keywords_in_application_log|Relevant Anti-Virus Signature Keywords In Application Log (high; windows / application)]]
+- [[kb/sigma/rules/8023f872_3f1d_4301_a384_801889917ab4-usage_of_renamed_sysinternals_tools_registryset|Usage of Renamed Sysinternals Tools - RegistrySet (high; windows / registry_set)]]
+- [[kb/sigma/rules/c9a88268_0047_4824_ba6e_4d81ce0b907c-antivirus_relevant_file_paths_alerts|Antivirus Relevant File Paths Alerts (high; antivirus)]]
+- [[kb/sigma/rules/cd764533_2e07_40d6_a718_cfeec7f2da7f-renamed_sysinternals_debugview_execution|Renamed SysInternals DebugView Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/f50f3c09_557d_492d_81db_9064a8d4e211-suspicious_execution_of_renamed_sysinternals_tools_registry|Suspicious Execution Of Renamed Sysinternals Tools - Registry (high; windows / registry_set)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0042-resource_development|TA0042: Resource Development]]

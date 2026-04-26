@@ -55,6 +55,29 @@ Adversaries may use methods of capturing user input to obtain credentials or col
 
 ![[workspaces/attack/techniques/T1056-input_capture-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/49aae26c_450e_448b_911d_b3c13d178dfc-linux_keylogging_with_pam_d|Linux Keylogging with Pam.d (high; linux / auditd)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0e59d59d_3265_4d35_bebd_bf5c1ec40db5-logging_bash_history_to_syslog|Logging bash history to syslog (sh; linux)]]
+- [[kb/atomic/tests/2b162bfd_0928_4d4c_9ec3_4d9f88374b52-powershell_prompt_user_for_password|PowerShell - Prompt User for Password (powershell; windows)]]
+- [[kb/atomic/tests/76628574_0bc1_4646_8fe2_8f4427b47d15-applescript_prompt_user_for_password|AppleScript - Prompt User for Password (bash; macos)]]
+- [[kb/atomic/tests/7f85a946_a0ea_48aa_b6ac_8ff539278258-bash_session_based_keylogger|Bash session based keylogger (bash; linux)]]
+- [[kb/atomic/tests/81d7d2ad_d644_4b6a_bea7_28ffe43becca-sshd_pam_keylogger|SSHD PAM keylogger (sh; linux)]]
+- [[kb/atomic/tests/9c6bdb34_a89f_4b90_acb1_5970614c711b-living_off_the_land_terminal_input_capture_on_linux_with_pam_d|Living off the land Terminal Input Capture on Linux with pam.d (sh; linux)]]
+- [[kb/atomic/tests/a668edb9_334e_48eb_8c2e_5413a40867af-auditd_keylogger|Auditd keylogger (sh; linux)]]
+- [[kb/atomic/tests/aee3a097_4c5c_4fff_bbd3_0a705867ae29-macos_swift_keylogger|MacOS Swift Keylogger (bash; macos)]]
+- [[kb/atomic/tests/b04284dc_3bd9_4840_8d21_61b8d31c99f2-logging_sh_history_to_syslog_messages|Logging sh history to syslog/messages (sh; linux)]]
+- [[kb/atomic/tests/b7037b89_947a_427a_ba29_e7e9f09bc045-applescript_spoofing_a_credential_prompt_using_osascript|AppleScript - Spoofing a credential prompt using osascript (bash; macos)]]
+- 2 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

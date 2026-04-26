@@ -44,6 +44,24 @@ Adversaries may use commands such as `gpresult` or various publicly available Po
 
 ![[workspaces/attack/techniques/T1615-group_policy_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/07aa184a_870d_413d_893a_157f317f6f58-suspicious_reconnaissance_activity_via_gathernetworkinfo_vbs|Suspicious Reconnaissance Activity Via GatherNetworkInfo.VBS (high; windows / process_creation)]]
+- [[kb/sigma/rules/c484e533_ee16_4a93_b6ac_f0ea4868b2f1-hacktool_sharpup_privesc_tool_execution|HackTool - SharpUp PrivEsc Tool Execution (critical; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0976990f_53b1_4d3f_a185_6df5be429d3b-display_group_policy_information_via_gpresult|Display group policy information via gpresult (command_prompt; windows)]]
+- [[kb/atomic/tests/4e524c4e_0e02_49aa_8df5_93f3f7959b9f-get_domaingpo_to_display_group_policy_information_via_powerview|Get-DomainGPO to display group policy information via PowerView (powershell; windows)]]
+- [[kb/atomic/tests/52778a8f_a10b_41a4_9eae_52ddb74072bf-msft_get_gpo_cmdlet|MSFT Get-GPO Cmdlet (powershell; windows)]]
+- [[kb/atomic/tests/7230d01a_0a72_4bd5_9d7f_c6d472bc6a59-winpwn_gporemoteaccesspolicy|WinPwn - GPORemoteAccessPolicy (powershell; windows)]]
+- [[kb/atomic/tests/bc25c04b_841e_4965_855f_d1f645d7ab73-winpwn_gpoaudit|WinPwn - GPOAudit (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

@@ -66,6 +66,47 @@ Since some boot or logon autostart programs run with higher privileges, an adver
 
 ![[workspaces/attack/techniques/T1547-boot_or_logon_autostart_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-002-autorun_differences|CAR-2013-01-002: Autorun Differences]]
+- [[kb/car/analytics/CAR-2013-03-001-reg_exe_called_from_command_shell|CAR-2013-03-001: Reg.exe called from Command Shell]]
+- [[kb/car/analytics/CAR-2020-05-003-rare_lolbas_command_lines|CAR-2020-05-003: Rare LolBAS Command Lines]]
+- [[kb/car/analytics/CAR-2021-11-002-registry_edit_with_modification_of_userinit_shell_or_notify|CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify]]
+- [[kb/car/analytics/CAR-2021-12-002-modification_of_default_startup_folder_in_the_registry_key_common_startup|CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup']]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/02ee49e2_e294_4d0f_9278_f5b3212fc588-new_run_key_pointing_to_suspicious_folder|New RUN Key Pointing to Suspicious Folder (high; windows / registry_set)]]
+- [[kb/sigma/rules/106d7cbd_80ff_4985_b682_a7043e5acb72-loading_of_kernel_module_via_insmod|Loading of Kernel Module via Insmod (high; linux / auditd)]]
+- [[kb/sigma/rules/277efb8f_60be_4f10_b4d3_037802f37167-registry_persistence_mechanisms_in_recycle_bin|Registry Persistence Mechanisms in Recycle Bin (high; windows / registry_event)]]
+- [[kb/sigma/rules/28208707_fe31_437f_9a7f_4b1108b94d2e-suspicious_startup_folder_persistence|Suspicious Startup Folder Persistence (high; windows / file_event)]]
+- [[kb/sigma/rules/318557a5_150c_4c8d_b70e_a9910e199857-file_creation_in_suspicious_directory_by_msdt_exe|File Creation In Suspicious Directory By Msdt.EXE (high; windows / file_event)]]
+- [[kb/sigma/rules/46490193_1b22_4c29_bdd6_5bf63907216f-vbscript_payload_stored_in_registry|VBScript Payload Stored in Registry (high; windows / registry_set)]]
+- [[kb/sigma/rules/509e84b9_a71a_40e0_834f_05470369bd1e-default_rdp_port_changed_to_non_standard_port|Default RDP Port Changed to Non Standard Port (high; windows / registry_set)]]
+- [[kb/sigma/rules/674202d0_b22a_4af4_ae5f_2eda1f3da1af-bypass_uac_using_event_viewer|Bypass UAC Using Event Viewer (high; windows / registry_set)]]
+- [[kb/sigma/rules/74a2b37d_fea4_41e0_9ac7_c9fbcf1f60cc-winrar_creating_files_in_startup_locations|WinRAR Creating Files in Startup Locations (high; windows / file_event)]]
+- [[kb/sigma/rules/8c3c76ca_8f8b_4b1d_aaf3_81aebcd367c9-creation_exe_for_service_with_unquoted_path|Creation Exe for Service with Unquoted Path (high; windows / file_event)]]
+- 15 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/04d55cef_f283_40ba_ae2a_316bc3b5e78c-hklm_re_execute_internet_explorer_core_fonts_stubpath_payload_by_decreasing_version_number|HKLM - re-execute 'Internet Explorer Core Fonts' StubPath payload by decreasing version number (powershell; windows)]]
+- [[kb/atomic/tests/14fdc3f1_6fc3_4556_8d36_aa89d9d42d02-secedit_used_to_create_a_run_key_in_the_hklm_hive|secedit used to create a Run key in the HKLM Hive (command_prompt; windows)]]
+- [[kb/atomic/tests/1d958c61_09c6_4d9e_b26b_4130314e520e-hklm_modify_default_system_shell_winlogon_shell_key_value|HKLM - Modify default System Shell - Winlogon Shell KEY Value  (powershell; windows)]]
+- [[kb/atomic/tests/24e55612_85f6_4bd6_ae74_a73d02e3441d-add_executable_shortcut_link_to_user_startup_folder|Add Executable Shortcut Link to User Startup Folder (powershell; windows)]]
+- [[kb/atomic/tests/29e0afca_8d1d_471a_8d34_25512fc48315-edit_an_existing_time_provider|Edit an existing time provider (powershell; windows)]]
+- [[kb/atomic/tests/2cb98256_625e_4da9_9d44_f2e5f90b8bd5-suspicious_vbs_file_run_from_startup_folder|Suspicious vbs file run from startup Folder (powershell; windows)]]
+- [[kb/atomic/tests/39e417dd_4fed_4d9c_ae3a_ba433b4d0e9a-hklm_add_malicious_stubpath_value_to_existing_active_setup_entry|HKLM - Add malicious StubPath value to existing Active Setup Entry (powershell; windows)]]
+- [[kb/atomic/tests/554cbd88_cde1_4b56_8168_0be552eed9eb-reg_key_runonce|Reg Key RunOnce (command_prompt; windows)]]
+- [[kb/atomic/tests/5b6768e4_44d2_44f0_89da_a01d1430fd5e-suspicious_bat_file_run_from_startup_folder|Suspicious bat file run from startup Folder (powershell; windows)]]
+- [[kb/atomic/tests/5cb0b071_8a5a_412f_839d_116beb2ed9f7-driver_installation_using_pnputil_exe|Driver Installation Using pnputil.exe (powershell; windows)]]
+- 40 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

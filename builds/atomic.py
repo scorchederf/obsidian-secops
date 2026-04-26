@@ -384,12 +384,13 @@ def update_root_indexes(test_count):
             continue
         text = read_text_file(filepath)
         text = text.replace(SIGMA_NAV, ATOMIC_NAV).replace(CAR_NAV, ATOMIC_NAV).replace(BASE_NAV, ATOMIC_NAV)
-        text = re.sub(
-            r"- \[\[kb/atomic/index\|Atomic\]\](?: \(\d+ tests\))?",
-            "- [[kb/atomic/index|Atomic]] (" + str(test_count) + " tests)",
-            text,
-            count=1,
-        )
+        if relative_path == os.path.join("kb", "index.md"):
+            text = re.sub(
+                r"- \[\[kb/atomic/index\|Atomic\]\](?: \(\d+ tests\))?",
+                "- [[kb/atomic/index|Atomic]] (" + str(test_count) + " tests)",
+                text,
+                count=1,
+            )
         body_without_nav = text.replace(ATOMIC_NAV, "")
         if "- [[kb/atomic/index|Atomic]]" not in body_without_nav:
             for old, new in replacements:

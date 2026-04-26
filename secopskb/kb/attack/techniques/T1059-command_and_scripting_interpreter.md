@@ -64,6 +64,48 @@ Adversaries may abuse these technologies in various ways as a means of executing
 
 ![[workspaces/attack/techniques/T1059-command_and_scripting_interpreter-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-02-003-processes_spawning_cmd_exe|CAR-2013-02-003: Processes Spawning cmd.exe]]
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2014-04-003-powershell_execution|CAR-2014-04-003: Powershell Execution]]
+- [[kb/car/analytics/CAR-2014-11-002-outlier_parents_of_cmd|CAR-2014-11-002: Outlier Parents of Cmd]]
+- [[kb/car/analytics/CAR-2014-11-004-remote_powershell_sessions|CAR-2014-11-004: Remote PowerShell Sessions]]
+- [[kb/car/analytics/CAR-2021-01-002-unusually_long_command_line_strings|CAR-2021-01-002: Unusually Long Command Line Strings]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/002bdb95_0cf1_46a6_9e08_d38c128a6127-wscript_or_cscript_dropper_file|WScript or CScript Dropper - File (high; windows / file_event)]]
+- [[kb/sigma/rules/02030f2f_6199_49ec_b258_ea71b07e03dc-malicious_powershell_commandlets_processcreation|Malicious PowerShell Commandlets - ProcessCreation (high; windows / process_creation)]]
+- [[kb/sigma/rules/023394c4_29d5_46ab_92b8_6a534c6f447b-suspicious_hwp_sub_processes|Suspicious HWP Sub Processes (high; windows / process_creation)]]
+- [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files (high; windows / file_event)]]
+- [[kb/sigma/rules/03d83090_8cba_44a0_b02f_0b756a050306-potential_winapi_calls_via_powershell_scripts|Potential WinAPI Calls Via PowerShell Scripts (high; windows / ps_script)]]
+- [[kb/sigma/rules/058f4380_962d_40a5_afce_50207d36d7e2-hacktool_crackmapexec_execution_patterns|HackTool - CrackMapExec Execution Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/07aa184a_870d_413d_893a_157f317f6f58-suspicious_reconnaissance_activity_via_gathernetworkinfo_vbs|Suspicious Reconnaissance Activity Via GatherNetworkInfo.VBS (high; windows / process_creation)]]
+- [[kb/sigma/rules/07ad2ea8_6a55_4ac6_bf3e_91b8e59676eb-invoke_obfuscation_via_use_mshta_powershell_module|Invoke-Obfuscation Via Use MSHTA - PowerShell Module (high; windows / ps_module)]]
+- [[kb/sigma/rules/087790e3_3287_436c_bccf_cbd0184a7db1-potential_commandline_path_traversal_via_cmd_exe|Potential CommandLine Path Traversal Via Cmd.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/09576804_7a05_458e_a817_eb718ca91f54-suspicious_powershell_iex_execution_patterns|Suspicious PowerShell IEX Execution Patterns (high; windows / process_creation)]]
+- 183 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/00682c9f_7df4_4df8_950b_6dcaaa3ad9af-command_prompt_writing_script_to_file_then_executes_it|Command prompt writing script to file then executes it (command_prompt; windows)]]
+- [[kb/atomic/tests/01d75adf_ca1b_4dd1_ac96_7c9550ad1035-jscript_execution_to_gather_local_computer_information_via_cscript|JScript execution to gather local computer information via cscript (command_prompt; windows)]]
+- [[kb/atomic/tests/06a220b6_7e29_4bd8_9d07_5b4d86742372-invoke_apppathbypass|Invoke-AppPathBypass (command_prompt; windows)]]
+- [[kb/atomic/tests/0709945e_4fec_4c49_9faf_c3c292a74484-jscript_execution_to_gather_local_computer_information_via_wscript|JScript execution to gather local computer information via wscript (command_prompt; windows)]]
+- [[kb/atomic/tests/0b44d79b_570a_4b27_a31f_3bf2156e5eaa-execute_python_via_python_executables|Execute Python via Python executables (sh; linux)]]
+- [[kb/atomic/tests/0d181431_ddf3_4826_8055_2dbf63ae848b-athpowershellcommandlineparameter_encodedcommand_parameter_variations_with_encoded_arguments|ATHPowerShellCommandLineParameter -EncodedCommand parameter variations with encoded arguments (powershell; windows)]]
+- [[kb/atomic/tests/127b4afe_2346_4192_815c_69042bec570e-writes_text_to_a_file_and_displays_it|Writes text to a file and displays it. (command_prompt; windows)]]
+- [[kb/atomic/tests/1289f78d_22d2_4590_ac76_166737e1811b-powerup_invoke_allchecks|PowerUp Invoke-AllChecks (powershell; windows)]]
+- [[kb/atomic/tests/161d694c_b543_4434_85c3_c3a433e33792-python_pty_module_and_spawn_function_used_to_spawn_sh_or_bash|Python pty module and spawn function used to spawn sh or bash (sh; linux)]]
+- [[kb/atomic/tests/1620de42_160a_4fe5_bbaf_d3fef0181ce9-visual_basic_script_execution_to_gather_local_computer_information|Visual Basic script execution to gather local computer information (powershell; windows)]]
+- 47 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

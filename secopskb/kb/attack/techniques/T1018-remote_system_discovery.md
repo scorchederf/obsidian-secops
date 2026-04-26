@@ -74,6 +74,38 @@ Adversaries may also target discovery of network infrastructure as well as lever
 
 ![[workspaces/attack/techniques/T1018-remote_system_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/4ebc877f_4612_45cb_b3a5_8e3834db36c9-webshell_hacking_activity_patterns|Webshell Hacking Activity Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/7638e5fe_600c_4289_a968_f49dd537ec7d-hacktool_netexec_execution|HackTool - NetExec Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/9a132afa_654e_11eb_ae93_0242ac130002-pua_adfind_suspicious_execution|PUA - AdFind Suspicious Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/bed2a484_9348_4143_8a8a_b801c979301c-webshell_detection_with_command_line_keywords|Webshell Detection With Command Line Keywords (high; windows / process_creation)]]
+- [[kb/sigma/rules/df55196f_f105_44d3_a675_e9dfb6cc2f2b-renamed_adfind_execution|Renamed AdFind Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/fa3c117a_bc0d_416e_a31b_0c0e80653efb-chopper_webshell_process_pattern|Chopper Webshell Process Pattern (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/158bd4dd_6359_40ab_b13c_285b9ef6fa25-remote_system_discovery_ip_neighbour|Remote System Discovery - ip neighbour (sh; linux)]]
+- [[kb/atomic/tests/1a4ebe70_31d0_417b_ade2_ef4cb3e7d0e1-remote_system_discovery_ip_route|Remote System Discovery - ip route (sh; linux)]]
+- [[kb/atomic/tests/2d5a61f5_0447_4be4_944a_1f8530ed6574-remote_system_discovery_arp|Remote System Discovery - arp (command_prompt; windows)]]
+- [[kb/atomic/tests/52ab5108_3f6f_42fb_8ba3_73bc054f22c8-remote_system_discovery_nltest|Remote System Discovery - nltest (command_prompt; windows)]]
+- [[kb/atomic/tests/5838c31e_a0e2_4b9f_b60a_d79d2cb7995e-adfind_enumerate_active_directory_domain_controller_objects|Adfind - Enumerate Active Directory Domain Controller Objects (command_prompt; windows)]]
+- [[kb/atomic/tests/5843529a_5056_4bc1_9c13_a311e2af4ca0-remote_system_discovery_net_group_domain_controller|Remote System Discovery - net group Domain Controller (command_prompt; windows)]]
+- [[kb/atomic/tests/64ede6ac_b57a_41c2_a7d1_32c6cd35397d-enumerate_active_directory_computers_with_adsisearcher|Enumerate Active Directory Computers with ADSISearcher (powershell; windows)]]
+- [[kb/atomic/tests/6c2da894_0b57_43cb_87af_46ea3b501388-remote_system_discovery_ip_tcp_metrics|Remote System Discovery - ip tcp_metrics (sh; linux)]]
+- [[kb/atomic/tests/6db1f57f_d1d5_4223_8a66_55c9c65a9592-remote_system_discovery_ping_sweep|Remote System Discovery - ping sweep (command_prompt; windows)]]
+- [[kb/atomic/tests/85321a9c_897f_4a60_9f20_29788e50bccd-remote_system_discovery_net|Remote System Discovery - net (command_prompt; windows)]]
+- 12 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

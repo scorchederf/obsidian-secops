@@ -45,6 +45,15 @@ The Windows module loader can be instructed to load DLLs from arbitrary local pa
 
 ![[workspaces/attack/techniques/T1129-shared_modules-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/7f843046_abf2_443f_b880_07a83cf968ec-esxi_install_a_custom_vib_on_an_esxi_host|ESXi - Install a custom VIB on an ESXi host (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

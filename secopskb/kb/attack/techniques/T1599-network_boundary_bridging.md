@@ -41,6 +41,15 @@ When an adversary takes control of such a boundary device, they can bypass its p
 
 ![[workspaces/attack/techniques/T1599-network_boundary_bridging-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/679085d5_f427_4484_9f58_1dc30a7c426d-windivert_driver_load|WinDivert Driver Load (high; windows / driver_load)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

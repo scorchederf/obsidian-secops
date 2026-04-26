@@ -91,6 +91,50 @@ Several of the tools mentioned in associated sub-techniques may be used by both 
 
 ![[workspaces/attack/techniques/T1003-os_credential_dumping-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2013-07-001-suspicious_arguments|CAR-2013-07-001: Suspicious Arguments]]
+- [[kb/car/analytics/CAR-2019-04-004-credential_dumping_via_mimikatz|CAR-2019-04-004: Credential Dumping via Mimikatz]]
+- [[kb/car/analytics/CAR-2019-07-002-lsass_process_dump_via_procdump|CAR-2019-07-002: Lsass Process Dump via Procdump]]
+- [[kb/car/analytics/CAR-2019-08-001-credential_dumping_via_windows_task_manager|CAR-2019-08-001: Credential Dumping via Windows Task Manager]]
+- [[kb/car/analytics/CAR-2019-08-002-active_directory_dumping_via_ntdsutil|CAR-2019-08-002: Active Directory Dumping via NTDSUtil]]
+- [[kb/car/analytics/CAR-2020-05-001-minidump_of_lsass|CAR-2020-05-001: MiniDump of LSASS]]
+- [[kb/car/analytics/CAR-2021-05-011-create_remote_thread_into_lsass|CAR-2021-05-011: Create Remote Thread into LSASS]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/03f4ca17_de95_428d_a75a_4ee78b047256-hacktool_impacket_file_indicators|HackTool - Impacket File Indicators (high; windows / file_event)]]
+- [[kb/sigma/rules/0685b176_c816_4837_8e7b_1216f346636b-hacktool_quarks_pwdump_execution|HackTool - Quarks PwDump Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/06d71506_7beb_4f22_8888_e2e5e2ca7fd8-mimikatz_use|Mimikatz Use (high; windows)]]
+- [[kb/sigma/rules/07f8bdc2_c9b3_472a_9817_5a670b872f53-potential_reconnaissance_for_cached_credentials_via_cmdkey_exe|Potential Reconnaissance For Cached Credentials Via Cmdkey.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/0b4ae027_2a2d_4b93_8c7e_962caaba5b2a-time_travel_debugging_utility_usage|Time Travel Debugging Utility Usage (high; windows / process_creation)]]
+- [[kb/sigma/rules/11b1ed55_154d_4e82_8ad7_83739298f720-ntds_dit_creation_by_uncommon_process|NTDS.DIT Creation By Uncommon Process (high; windows / file_event)]]
+- [[kb/sigma/rules/129966c9_de17_4334_a123_8b58172e664d-potential_windows_defender_av_bypass_via_dump64_exe_rename|Potential Windows Defender AV Bypass Via Dump64.EXE Rename (high; windows / process_creation)]]
+- [[kb/sigma/rules/17d619c1_e020_4347_957e_1d1207455c93-active_directory_replication_from_non_machine_account|Active Directory Replication from Non Machine Account (critical; windows / security)]]
+- [[kb/sigma/rules/189e3b02_82b2_4b90_9662_411eb64486d4-potential_invoke_mimikatz_powershell_script|Potential Invoke-Mimikatz PowerShell Script (high; windows / ps_script)]]
+- [[kb/sigma/rules/1a1ed54a_2ba4_4221_94d5_01dee560d71e-renamed_createdump_utility_execution|Renamed CreateDump Utility Execution (high; windows / process_creation)]]
+- 96 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0b207037_813c_4444_ac3f_b597cf280a67-send_ntlm_hash_with_rpc_test_connection|Send NTLM Hash with RPC Test Connection (powershell; windows)]]
+- [[kb/atomic/tests/0be2230c_9ab3_4ac2_8826_3199b9a0ebf8-dump_lsass_exe_memory_using_procdump|Dump LSASS.exe Memory using ProcDump (command_prompt; windows)]]
+- [[kb/atomic/tests/0c0f5f06_166a_4f4d_bb4a_719df9a01dbb-winpwn_loot_local_credentials_dump_sam_file_for_ntlm_hashes|WinPwn - Loot local Credentials - Dump SAM-File for NTLM Hashes (powershell; windows)]]
+- [[kb/atomic/tests/129efd28_8497_4c87_a1b0_73b9a870ca3e-dcsync_active_directory|DCSync (Active Directory) (command_prompt; windows)]]
+- [[kb/atomic/tests/21748c28_2793_4284_9e07_d6d028b66702-create_symlink_to_volume_shadow_copy|Create Symlink to Volume Shadow Copy (command_prompt; windows)]]
+- [[kb/atomic/tests/21c7bf80_3e8b_40fa_8f9d_f5b194ff2865-create_volume_shadow_copy_remotely_wmi_with_esentutl|Create Volume Shadow Copy remotely (WMI) with esentutl (command_prompt; windows)]]
+- [[kb/atomic/tests/21df41be_cdd8_4695_a650_c3981113aa3c-dumping_of_sam_creds_and_secrets_reg_export|Dumping of SAM, creds, and secrets(Reg Export) (command_prompt; windows)]]
+- [[kb/atomic/tests/224f7de0_8f0a_4a94_b5d8_989b036c86da-create_volume_shadow_copy_with_wmi|Create Volume Shadow Copy with WMI (command_prompt; windows)]]
+- [[kb/atomic/tests/2364e33d_ceab_4641_8468_bfb1d7cc2723-dump_active_directory_database_with_ntdsutil|Dump Active Directory Database with NTDSUtil (command_prompt; windows)]]
+- [[kb/atomic/tests/2536dee2_12fb_459a_8c37_971844fa73be-dump_lsass_exe_memory_using_comsvcs_dll|Dump LSASS.exe Memory using comsvcs.dll (powershell; windows)]]
+- 44 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

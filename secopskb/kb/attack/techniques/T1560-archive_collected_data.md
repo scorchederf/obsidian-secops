@@ -53,6 +53,34 @@ Both compression and encryption are done prior to exfiltration, and can be perfo
 
 ![[workspaces/attack/techniques/T1560-archive_collected_data-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-07-005-command_line_usage_of_archiving_software|CAR-2013-07-005: Command Line Usage of Archiving Software]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/5b768e71_86f2_4879_b448_81061cbae951-suspicious_manipulation_of_default_accounts_via_net_exe|Suspicious Manipulation Of Default Accounts Via Net.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/faa48cae_6b25_4f00_a094_08947fef582f-rar_usage_with_password_and_compression_level|Rar Usage with Password and Compression Level (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/001a042b_859f_44d9_bf81_fd1c4e2200b0-compressing_data_using_zipfile_in_python_freebsd_linux|Compressing data using zipfile in Python (FreeBSD/Linux) (sh; linux)]]
+- [[kb/atomic/tests/01df0353_d531_408d_a0c5_3161bf822134-compress_data_and_lock_with_password_for_exfiltration_with_winzip|Compress Data and lock with password for Exfiltration with winzip (command_prompt; windows)]]
+- [[kb/atomic/tests/0286eb44_e7ce_41a0_b109_3da516e05a5f-data_encrypted_with_zip_and_gpg_symmetric|Data Encrypted with zip and gpg symmetric (sh; linux, macos)]]
+- [[kb/atomic/tests/02ea31cb_3b4c_4a2d_9bf1_e4e70ebcf5d0-compress_data_for_exfiltration_with_rar|Compress Data for Exfiltration With Rar (command_prompt; windows)]]
+- [[kb/atomic/tests/05e8942e_f04f_460a_b560_f7781257feec-copy_and_compress_appdata_folder|Copy and Compress AppData Folder (powershell; windows)]]
+- [[kb/atomic/tests/2a7bc405_9555_4f49_ace2_b2ae2941d629-compress_a_file_for_exfiltration_using_makecab|Compress a File for Exfiltration using Makecab (command_prompt; windows)]]
+- [[kb/atomic/tests/36c62584_d360_41d6_886f_d194654be7c2-esxi_remove_syslog_remote_ip|ESXi - Remove Syslog remote IP (powershell; windows)]]
+- [[kb/atomic/tests/391f5298_b12d_4636_8482_35d9c17d53a8-compressing_data_using_gzip_in_python_freebsd_linux|Compressing data using GZip in Python (FreeBSD/Linux) (sh; linux)]]
+- [[kb/atomic/tests/41410c60_614d_4b9d_b66e_b0192dd9c597-compress_data_for_exfiltration_with_powershell|Compress Data for Exfiltration With PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/7af2b51e_ad1c_498c_aca8_d3290c19535a-data_compressed_nix_tar_folder_or_file|Data Compressed - nix - tar Folder or File (sh; linux, macos)]]
+- 7 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

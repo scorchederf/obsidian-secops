@@ -46,6 +46,22 @@ Malware or scripts may be used to interact with the devices through an available
 
 ![[workspaces/attack/techniques/T1123-audio_capture-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/62120148_6b7a_42be_8b91_271c04e281a3-suspicious_camera_and_microphone_access|Suspicious Camera and Microphone Access (high; windows / registry_event)]]
+- [[kb/sigma/rules/e30de276_68ec_435c_ab99_ef3befec6c61-opencanary_sip_request|OpenCanary - SIP Request (high; opencanary / application)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/7a21cce2_6ada_4f7c_afd9_e1e9c481e44a-registry_artefact_when_application_use_microphone|Registry artefact when application use microphone (command_prompt; windows)]]
+- [[kb/atomic/tests/9c3ad250_b185_4444_b5a9_d69218a10c95-using_device_audio_capture_commandlet|using device audio capture commandlet (powershell; windows)]]
+- [[kb/atomic/tests/c7a0bb71_70ce_4a53_b115_881f241b795b-using_quicktime_player|using Quicktime Player (sh; macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

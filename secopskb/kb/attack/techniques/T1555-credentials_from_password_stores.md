@@ -56,6 +56,36 @@ Adversaries may search for common password storage locations to obtain user cred
 
 ![[workspaces/attack/techniques/T1555-credentials_from_password_stores-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/24c77512_782b_448a_8950_eddb0785fc71-sqlite_chromium_profile_data_db_access|SQLite Chromium Profile Data DB Access (high; windows / process_creation)]]
+- [[kb/sigma/rules/58f4ea09_0fc2_4520_ba18_b85c540b0eaf-suspicious_serv_u_process_pattern|Suspicious Serv-U Process Pattern (high; windows / process_creation)]]
+- [[kb/sigma/rules/7679d464_4f74_45e2_9e01_ac66c5eb041a-hacktool_securityxploded_execution|HackTool - SecurityXploded Execution (critical; windows / process_creation)]]
+- [[kb/sigma/rules/77564cc2_7382_438b_a7f6_395c2ae53b9a-remote_thread_created_in_keepass_exe|Remote Thread Created In KeePass.EXE (high; windows / create_remote_thread)]]
+- [[kb/sigma/rules/7892ec59_c5bb_496d_8968_e5d210ca3ac4-dpapi_backup_keys_and_certificate_export_activity_ioc|DPAPI Backup Keys And Certificate Export Activity IOC (high; windows / file_event)]]
+- [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock (high; windows / ps_script)]]
+- [[kb/sigma/rules/a4694263_59a8_4608_a3a0_6f8d3a51664c-suspicious_key_manager_access|Suspicious Key Manager Access (high; windows / process_creation)]]
+- [[kb/sigma/rules/d557dc06_62e8_4468_a8e8_7984124908ce-hacktool_winpwn_execution|HackTool - WinPwn Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/079ee2e9_6f16_47ca_a635_14efcd994118-winpwn_loot_local_credentials_lazagne|WinPwn - Loot local Credentials - lazagne (powershell; windows)]]
+- [[kb/atomic/tests/124e13e5_d8a1_4378_a6ee_a53cd0c7e369-simulating_access_to_chrome_login_data_macos|Simulating Access to Chrome Login Data - MacOS (sh; macos)]]
+- [[kb/atomic/tests/1864fdec_ff86_4452_8c30_f12507582a93-export_certificate_item_s|Export Certificate Item(s) (sh; macos)]]
+- [[kb/atomic/tests/1b83cddb_eaa7_45aa_98a5_85fb0a8807ea-azure_dump_all_azure_key_vaults_with_microburst|Azure - Dump All Azure Key Vaults with Microburst (powershell; iaas:azure)]]
+- [[kb/atomic/tests/234f9b7c_b53d_4f32_897b_b880a6c9ea7b-extract_windows_credential_manager_via_vba|Extract Windows Credential Manager via VBA (powershell; windows)]]
+- [[kb/atomic/tests/28498c17_57e4_495a_b0be_cc1e36de408b-simulating_access_to_opera_login_data|Simulating access to Opera Login Data (powershell; windows)]]
+- [[kb/atomic/tests/36753ded_e5c4_4eb5_bc3c_e8fba236878d-enumerate_credentials_from_windows_credential_manager_using_vaultcmd_exe_windows_credentials|Enumerate credentials from Windows Credential Manager using vaultcmd.exe [Windows Credentials] (powershell; windows)]]
+- [[kb/atomic/tests/3d111226_d09a_4911_8715_fe11664f960d-simulating_access_to_chrome_login_data|Simulating access to Chrome Login Data (powershell; windows)]]
+- [[kb/atomic/tests/5c32102a_c508_49d3_978f_288f8a9f6617-copy_keychain_using_cat_utility|Copy Keychain using cat utility (sh; macos)]]
+- [[kb/atomic/tests/6f2c5c87_a4d5_4898_9bd1_47a55ecaf1dd-browserstealer_chrome_firefox_microsoft_edge|BrowserStealer (Chrome / Firefox / Microsoft Edge) (powershell; windows)]]
+- 22 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

@@ -50,6 +50,31 @@ Adversaries may use assembly to directly or in-directly invoke syscalls in an at
 
 ![[workspaces/attack/techniques/T1106-native_api-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/03d83090_8cba_44a0_b02f_0b756a050306-potential_winapi_calls_via_powershell_scripts|Potential WinAPI Calls Via PowerShell Scripts (high; windows / ps_script)]]
+- [[kb/sigma/rules/09706624_b7f6_455d_9d02_adee024cee1d-hacktool_cobaltstrike_bof_injection_pattern|HackTool - CobaltStrike BOF Injection Pattern (high; windows / process_access)]]
+- [[kb/sigma/rules/808146b2_9332_4d78_9416_d7e47012d83d-bpfdoor_abnormal_process_id_or_lock_file_accessed|BPFDoor Abnormal Process ID or Lock File Accessed (high; linux / auditd)]]
+- [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock (high; windows / ps_script)]]
+- [[kb/sigma/rules/95022b85_ff2a_49fa_939a_d7b8f56eeb9b-hacktool_redmimicry_winnti_playbook_execution|HackTool - RedMimicry Winnti Playbook Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/b1bd3a59_c1fd_4860_9f40_4dd161a7d1f5-hacktool_handlekatz_duplicating_lsass_handle|HackTool - HandleKatz Duplicating LSASS Handle (high; windows / process_access)]]
+- [[kb/sigma/rules/ba3f5c1b_6272_4119_9dbd_0bc8d21c2702-potential_winapi_calls_via_commandline|Potential WinAPI Calls Via CommandLine (high; windows / process_creation)]]
+- [[kb/sigma/rules/d557dc06_62e8_4468_a8e8_7984124908ce-hacktool_winpwn_execution|HackTool - WinPwn Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/e32f92d1_523e_49c3_9374_bdb13b46a3ba-suspicious_mshta_exe_execution_patterns|Suspicious Mshta.EXE Execution Patterns (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/7ec5b74e_8289_4ff2_a162_b6f286a33abd-winpwn_get_system_shell_bind_system_shell_using_createprocess_technique|WinPwn - Get SYSTEM shell - Bind System Shell using CreateProcess technique (powershell; windows)]]
+- [[kb/atomic/tests/99be2089_c52d_4a4a_b5c3_261ee42c8b62-execution_through_api_createprocess|Execution through API - CreateProcess (command_prompt; windows)]]
+- [[kb/atomic/tests/ae56083f_28d0_417d_84da_df4242da1f7c-run_shellcode_via_syscall_in_go|Run Shellcode via Syscall in Go (powershell; windows)]]
+- [[kb/atomic/tests/ce4e76e6_de70_4392_9efe_b281fc2b4087-winpwn_get_system_shell_pop_system_shell_using_createprocess_technique|WinPwn - Get SYSTEM shell - Pop System Shell using CreateProcess technique (powershell; windows)]]
+- [[kb/atomic/tests/e1f93a06_1649_4f07_89a8_f57279a7d60e-winpwn_get_system_shell_pop_system_shell_using_namedpipe_impersonation_technique|WinPwn - Get SYSTEM shell - Pop System Shell using NamedPipe Impersonation technique (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

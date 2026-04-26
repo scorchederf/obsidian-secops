@@ -49,6 +49,29 @@ Adversaries may also establish persistence on network by configuring a Tor hidde
 
 ![[workspaces/attack/techniques/T1133-external_remote_services-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/512cff7a_683a_43ad_afe0_dd398e872f36-opencanary_telnet_login_attempt|OpenCanary - Telnet Login Attempt (high; opencanary / application)]]
+- [[kb/sigma/rules/598290cf_5932_45cd_9123_be1e05ab4f2e-opencanary_rdp_new_connection_attempt|OpenCanary - RDP New Connection Attempt (high; opencanary / application)]]
+- [[kb/sigma/rules/78d5cab4_557e_454f_9fb9_a222bd0d5edc-external_remote_smb_logon_from_public_ip|External Remote SMB Logon from Public IP (high; windows / security)]]
+- [[kb/sigma/rules/8f0b1fb1_9bd4_4e74_8cdf_a8de4d2adfd0-unusual_file_deletion_by_dns_exe|Unusual File Deletion by Dns.exe (high; windows / file_delete)]]
+- [[kb/sigma/rules/9f383dc0_fdeb_4d56_acbc_9f9f4f8f20f3-unusual_file_modification_by_dns_exe|Unusual File Modification by dns.exe (high; windows / file_change)]]
+- [[kb/sigma/rules/a4e3d776_f12e_42c2_8510_9e6ed1f43ec3-unusual_child_process_of_dns_exe|Unusual Child Process of dns.exe (high; windows / process_creation)]]
+- [[kb/sigma/rules/b64a026b_8deb_4c1d_92fd_98893209dff1-running_chrome_vpn_extensions_via_the_registry_2_vpn_extension|Running Chrome VPN Extensions via the Registry 2 VPN Extension (high; windows / registry_set)]]
+- [[kb/sigma/rules/cd55f721_5623_4663_bd9b_5229cab5237d-opencanary_ssh_new_connection_attempt|OpenCanary - SSH New Connection Attempt (high; opencanary / application)]]
+- [[kb/sigma/rules/e890acee_d488_420e_8f20_d9b19b3c3d43-suspicious_file_created_by_arcsoc_exe|Suspicious File Created by ArcSOC.exe (high; windows / file_event)]]
+- [[kb/sigma/rules/ff7139bc_fdb1_4437_92f2_6afefe8884cb-opencanary_ssh_login_attempt|OpenCanary - SSH Login Attempt (high; opencanary / application)]]
+- 1 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/4c8db261_a58b_42a6_a866_0a294deedde4-running_chrome_vpn_extensions_via_the_registry_2_vpn_extension|Running Chrome VPN Extensions via the Registry 2 vpn extension (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

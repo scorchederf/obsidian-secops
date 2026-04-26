@@ -67,6 +67,20 @@ Adversaries who have access to root (or subordinate) CA certificate private keys
 
 ![[workspaces/attack/techniques/T1649-steal_or_forge_authentication_certificates-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/6938366d_8954_4ddc_baff_c830b3ba8fcd-hacktool_certipy_execution|HackTool - Certipy Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/762f2482_ff21_4970_8939_0aa317a886bb-hacktool_certify_execution|HackTool - Certify Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/eb121494_82d1_4148_9e2b_e624e03fbf3d-staging_local_certificates_via_export_certificate|Staging Local Certificates via Export-Certificate (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

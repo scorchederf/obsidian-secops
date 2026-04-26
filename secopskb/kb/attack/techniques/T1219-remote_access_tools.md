@@ -55,6 +55,39 @@ Installation of many remote access tools may also include persistence (e.g., the
 
 ![[workspaces/attack/techniques/T1219-remote_access_tools-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/065b00ca_5d5c_4557_ac95_64a6d0b64d86-remote_access_tool_anydesk_execution_from_suspicious_folder|Remote Access Tool - Anydesk Execution From Suspicious Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/114e7f1c_f137_48c8_8f54_3088c24ce4b9-remote_access_tool_anydesk_silent_installation|Remote Access Tool - AnyDesk Silent Installation (high; windows / process_creation)]]
+- [[kb/sigma/rules/238527ad_3c2c_4e4f_a1f6_92fd63adb864-antivirus_exploitation_framework_detection|Antivirus Exploitation Framework Detection (critical; antivirus)]]
+- [[kb/sigma/rules/2cf29f11_e356_4f61_98c0_1bdb9393d6da-renamed_visual_studio_code_tunnel_execution|Renamed Visual Studio Code Tunnel Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/2d367498_5112_4ae5_a06a_96e7bc33a211-suspicious_binary_writes_via_anydesk|Suspicious Binary Writes Via AnyDesk (high; windows / file_event)]]
+- [[kb/sigma/rules/3ab79e90_9fab_4cdf_a7b2_6522bc742adb-hacktool_remotekrbrelay_smb_relay_secrets_dump_module_indicators|HackTool - RemoteKrbRelay SMB Relay Secrets Dump Module Indicators (high; windows / file_event)]]
+- [[kb/sigma/rules/4bc90587_e6ca_4b41_be0b_ed4d04e4ed0c-suspicious_velociraptor_child_process|Suspicious Velociraptor Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/52753ea4_b3a0_4365_910d_36cff487b789-hijack_legit_rdp_session_to_move_laterally|Hijack Legit RDP Session to Move Laterally (high; windows / file_event)]]
+- [[kb/sigma/rules/6e22722b_dfb1_4508_a911_49ac840b40f8-suspicious_mstsc_exe_execution_with_local_rdp_file|Suspicious Mstsc.EXE Execution With Local RDP File (high; windows / process_creation)]]
+- [[kb/sigma/rules/87261fb2_69d0_42fe_b9de_88c6b5f65a43-atera_agent_installation|Atera Agent Installation (high; windows / application)]]
+- 4 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0ae9e327_3251_465a_a53b_485d4e3f58fa-ammyy_admin_software_execution|Ammyy Admin Software Execution (powershell; windows)]]
+- [[kb/atomic/tests/19acf63b_55c4_4b6a_8552_00a8865105c8-ultraviewer_rat_execution|UltraViewer - RAT Execution (powershell; windows)]]
+- [[kb/atomic/tests/1aea6d15_70f1_4b4e_8b02_397b5d5ffe75-microsoft_app_quick_assist_execution|Microsoft App Quick Assist Execution (powershell; windows)]]
+- [[kb/atomic/tests/1b72b3bd_72f8_4b63_a30b_84e91b9c3578-gotoassist_files_detected_test_on_windows|GoToAssist Files Detected Test on Windows (powershell; windows)]]
+- [[kb/atomic/tests/3e1858ee_3550_401c_86ec_5e70ed79295b-splashtop_streamer_execution|Splashtop Streamer Execution (powershell; windows)]]
+- [[kb/atomic/tests/42e51815_a6cc_4c75_b970_3f0ff54b610e-ultravnc_execution|UltraVNC Execution (powershell; windows)]]
+- [[kb/atomic/tests/4a18cc4e_416f_4966_9a9d_75731c4684c0-screenconnect_application_download_and_install_on_windows|ScreenConnect Application Download and Install on Windows (powershell; windows)]]
+- [[kb/atomic/tests/6b8b7391_5c0a_4f8c_baee_78d8ce0ce330-anydesk_files_detected_test_on_windows|AnyDesk Files Detected Test on Windows (powershell; windows)]]
+- [[kb/atomic/tests/8ca3b96d_8983_4a7f_b125_fc98cc0a2aa0-teamviewer_files_detected_test_on_windows|TeamViewer Files Detected Test on Windows (powershell; windows)]]
+- [[kb/atomic/tests/b025c580_029e_4023_888d_a42710d76934-splashtop_execution|Splashtop Execution (powershell; windows)]]
+- 5 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

@@ -59,6 +59,24 @@ After an adversary acquires a valid cookie, they can then perform a [[T1550-use_
 
 ![[workspaces/attack/techniques/T1539-steal_web_session_cookie-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/24c77512_782b_448a_8950_eddb0785fc71-sqlite_chromium_profile_data_db_access|SQLite Chromium Profile Data DB Access (high; windows / process_creation)]]
+- [[kb/sigma/rules/4833155a_4053_4c9c_a997_777fcea0baa7-sqlite_firefox_profile_data_db_access|SQLite Firefox Profile Data DB Access (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/26a6b840_4943_4965_8df5_ef1f9a282440-steal_chrome_cookies_windows|Steal Chrome Cookies (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/4b437357_f4e9_4c84_9fa6_9bcee6f826aa-steal_firefox_cookies_windows|Steal Firefox Cookies (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/b647f4ee_88de_40ac_9419_f17fac9489a7-steal_chrome_v127_cookies_via_remote_debugging_windows|Steal Chrome v127+ cookies via Remote Debugging (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/e43cfdaf_3fb8_4a45_8de0_7eee8741d072-steal_chrome_cookies_via_remote_debugging_mac|Steal Chrome Cookies via Remote Debugging (Mac) (bash; macos)]]
+- [[kb/atomic/tests/e57ba07b_3a33_40cd_a892_748273b9b49a-copy_safari_binarycookies_files_using_applescript|Copy Safari BinaryCookies files using AppleScript (sh; macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

@@ -51,6 +51,15 @@ Another example involves pivoting browser traffic from the adversary's browser t
 
 ![[workspaces/attack/techniques/T1185-browser_session_hijacking-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/3e8207c5_fcd2_4ea6_9418_15d45b4890e4-potential_data_stealing_via_chromium_headless_debugging|Potential Data Stealing Via Chromium Headless Debugging (high; windows / process_creation)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

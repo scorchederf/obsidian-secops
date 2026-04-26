@@ -49,6 +49,16 @@ Adversaries may also obtain then abuse leaked credentials from source repositori
 
 ![[workspaces/attack/techniques/T1530-data_from_cloud_storage-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/67374845_b4c8_4204_adcc_9b217b65d4f1-azure_dump_azure_storage_account_objects_via_azure_cli|Azure - Dump Azure Storage Account Objects via Azure CLI (powershell; iaas:azure)]]
+- [[kb/atomic/tests/979356b9_b588_4e49_bba4_c35517c484f5-aws_scan_for_anonymous_access_to_s3|AWS - Scan for Anonymous Access to S3 (sh; iaas:aws)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

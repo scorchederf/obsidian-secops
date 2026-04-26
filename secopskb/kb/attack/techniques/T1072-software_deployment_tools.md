@@ -67,6 +67,21 @@ The permissions required for this action vary by system configuration; local cre
 
 ![[workspaces/attack/techniques/T1072-software_deployment_tools-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/b4c8da4a_1c12_46b0_8a2b_0a8521d03442-restricted_software_access_by_srp|Restricted Software Access By SRP (high; windows / application)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/2169e8b0_2ee7_44cb_8a6e_d816a5db7d8a-deploy_7_zip_using_chocolatey|Deploy 7-Zip Using Chocolatey (powershell; windows)]]
+- [[kb/atomic/tests/b4988cad_6ed2_434d_ace5_ea2670782129-radmin_viewer_utility|Radmin Viewer Utility (command_prompt; windows)]]
+- [[kb/atomic/tests/e447b83b_a698_4feb_bed1_a7aaf45c3443-pdq_deploy_rat|PDQ Deploy RAT (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

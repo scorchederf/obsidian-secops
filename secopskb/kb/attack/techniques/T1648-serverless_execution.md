@@ -43,6 +43,15 @@ Serverless functions can also be invoked in response to cloud events (i.e. [[T15
 
 ![[workspaces/attack/techniques/T1648-serverless_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/87a4a141_c2bb_49d1_a604_8679082d8b91-lambda_function_hijack|Lambda Function Hijack (powershell; iaas:aws)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

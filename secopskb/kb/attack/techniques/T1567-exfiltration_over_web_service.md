@@ -56,6 +56,29 @@ Web service providers also commonly use SSL/TLS encryption, giving adversaries a
 
 ![[workspaces/attack/techniques/T1567-exfiltration_over_web_service-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/065cceea_77ec_4030_9052_fc0affea7110-dns_query_for_anonfiles_com_domain_sysmon|DNS Query for Anonfiles.com Domain - Sysmon (high; windows / dns_query)]]
+- [[kb/sigma/rules/18249279_932f_45e2_b37a_8925f2597670-process_initiated_network_connection_to_ngrok_domain|Process Initiated Network Connection To Ngrok Domain (high; windows / network_connection)]]
+- [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/25eabf56_22f0_4915_a1ed_056b8dae0a68-suspicious_dropbox_api_usage|Suspicious Dropbox API Usage (high; windows / network_connection)]]
+- [[kb/sigma/rules/29f171d7_aa47_42c7_9c7b_3c87938164d9-dns_query_for_anonfiles_com_domain_dns_client|DNS Query for Anonfiles.com Domain - DNS Client (high; windows / dns-client)]]
+- [[kb/sigma/rules/6ddff2e8_ea1a_45d0_8938_93dfc1d67ae7-pua_restic_backup_tool_execution|PUA - Restic Backup Tool Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/b593fd50_7335_4682_a36c_4edcb68e4641-monero_crypto_coin_mining_pool_lookup|Monero Crypto Coin Mining Pool Lookup (high; dns)]]
+- [[kb/sigma/rules/e37db05d_d1f9_49c8_b464_cee1a4b11638-pua_rclone_execution|PUA - Rclone Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/8529ee44_279a_4a19_80bf_b846a40dda58-exfiltrate_data_with_rclone_to_cloud_storage_mega_windows|Exfiltrate data with rclone to cloud Storage - Mega (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/a4b74723_5cee_4300_91c3_5e34166909b4-exfiltrate_data_with_rclone_to_cloud_storage_aws_s3|Exfiltrate data with rclone to cloud Storage - AWS S3 (powershell; linux, macos)]]
+- [[kb/atomic/tests/c2e8ab6e_431e_460a_a2aa_3bc6a32022e3-exfiltrate_data_with_http_post_to_text_storage_sites_pastebin_com_windows|Exfiltrate data with HTTP POST to text storage sites - pastebin.com (Windows) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0010-exfiltration|TA0010: Exfiltration]]

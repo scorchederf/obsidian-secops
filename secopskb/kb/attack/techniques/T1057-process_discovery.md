@@ -52,6 +52,32 @@ On network devices, [[T1059-command_and_scripting_interpreter#^t1059008-network-
 
 ![[workspaces/attack/techniques/T1057-process_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2016-03-001-host_discovery_commands|CAR-2016-03-001: Host Discovery Commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/11ba69ee_902e_4a0f_b3b6_418aed7d7ddb-discover_specific_process_tasklist|Discover Specific Process - tasklist (command_prompt; windows)]]
+- [[kb/atomic/tests/3b3809b6_a54b_4f5b_8aff_cb51f2e97b34-process_discovery_get_process|Process Discovery - Get-Process (powershell; windows)]]
+- [[kb/atomic/tests/4fd35378_39aa_481e_b7c4_e3bf49375c67-launch_taskmgr_from_cmd_to_view_running_processes|Launch Taskmgr from cmd to View running processes (command_prompt; windows)]]
+- [[kb/atomic/tests/4ff64f0b_aaf2_4866_b39d_38d9791407cc-process_discovery_ps|Process Discovery - ps (sh; linux, macos)]]
+- [[kb/atomic/tests/640cbf6d_659b_498b_ba53_f6dd1a1cc02c-process_discovery_wmic_process|Process Discovery - wmic process (command_prompt; windows)]]
+- [[kb/atomic/tests/966f4c16_1925_4d9b_8ce0_01334ee0867d-process_discovery_process_hacker|Process Discovery - Process Hacker (powershell; windows)]]
+- [[kb/atomic/tests/b4ca838d_d013_4461_bf2c_f7132617b409-process_discovery_pc_hunter|Process Discovery - PC Hunter (powershell; windows)]]
+- [[kb/atomic/tests/b51239b4_0129_474f_a2b4_70f855b9f2c2-process_discovery_get_wmiobject|Process Discovery - get-wmiObject (powershell; windows)]]
+- [[kb/atomic/tests/c5806a4f_62b8_4900_980b_c7ec004e9908-process_discovery_tasklist|Process Discovery - tasklist (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

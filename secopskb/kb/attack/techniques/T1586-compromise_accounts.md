@@ -43,6 +43,17 @@ Adversaries may directly leverage compromised email accounts for [[T1598-phishin
 
 ![[workspaces/attack/techniques/T1586-compromise_accounts-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/07e97cc6_aed1_43ae_9081_b3470d2367f1-okta_suspicious_activity_reported_by_end_user|Okta Suspicious Activity Reported by End-user (high; okta / okta)]]
+- [[kb/sigma/rules/34d81081_03c9_4a7f_91c9_5e46af625cde-bitbucket_unauthorized_full_data_export_triggered|Bitbucket Unauthorized Full Data Export Triggered (critical; bitbucket / audit)]]
+- [[kb/sigma/rules/7215374a_de4f_4b33_8ba5_70804c9251d3-bitbucket_unauthorized_access_to_a_resource|Bitbucket Unauthorized Access To A Resource (critical; bitbucket / audit)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0042-resource_development|TA0042: Resource Development]]

@@ -62,6 +62,20 @@ Adversaries may overwrite data in boot drivers or firmware such as BIOS (Basic I
 
 ![[workspaces/attack/techniques/T1542-pre-os_boot-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/4abc0ec4_db5a_412f_9632_26659cddf145-uefi_persistence_via_wpbbin_processcreation|UEFI Persistence Via Wpbbin - ProcessCreation (high; windows / process_creation)]]
+- [[kb/sigma/rules/e94b9ddc_eec5_4bb8_8a58_b9dc5f4e185f-uefi_persistence_via_wpbbin_filecreation|UEFI Persistence Via Wpbbin - FileCreation (high; windows / file_event)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/b8a49f03_e3c4_40f2_b7bb_9e8f8fdddbf1-uefi_persistence_via_wpbbin_exe_file_creation|UEFI Persistence via Wpbbin.exe File Creation (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

@@ -63,6 +63,39 @@ Adversaries may also abuse [[T1027-obfuscated_files_or_information#^t1027010-com
 
 ![[workspaces/attack/techniques/T1027-obfuscated_files_or_information-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/07ad2ea8_6a55_4ac6_bf3e_91b8e59676eb-invoke_obfuscation_via_use_mshta_powershell_module|Invoke-Obfuscation Via Use MSHTA - PowerShell Module (high; windows / ps_module)]]
+- [[kb/sigma/rules/0adfbc14_0ed1_11eb_adc1_0242ac120002-invoke_obfuscation_var_launcher_powershell|Invoke-Obfuscation VAR+ Launcher - PowerShell (high; windows / ps_script)]]
+- [[kb/sigma/rules/0c3fac91_5627_46e8_a6a8_a0d7b9b8ae1b-suspicious_get_variable_exe_creation|Suspicious Get-Variable.exe Creation (high; windows / file_event)]]
+- [[kb/sigma/rules/0c718a5e_4284_4fb9_b4d9_b9a50b3a1974-invoke_obfuscation_stdin_launcher_security|Invoke-Obfuscation STDIN+ Launcher - Security (high; windows / security)]]
+- [[kb/sigma/rules/130c9e58_28ac_4f83_8574_0a4cc913b97e-potential_winnti_dropper_activity|Potential Winnti Dropper Activity (high; windows / file_event)]]
+- [[kb/sigma/rules/13e6fe51_d478_4c7e_b0f2_6da9b400a829-suspicious_file_downloaded_from_direct_ip_via_certutil_exe|Suspicious File Downloaded From Direct IP Via Certutil.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/14bcba49_a428_42d9_b943_e2ce0f0f7ae6-invoke_obfuscation_var_launcher_obfuscation_system|Invoke-Obfuscation VAR++ LAUNCHER OBFUSCATION - System (high; windows / system)]]
+- [[kb/sigma/rules/179b3686_6271_4d87_807d_17d843a8af73-suspicious_filename_with_embedded_base64_commands|Suspicious Filename with Embedded Base64 Commands (high; linux / file_event)]]
+- [[kb/sigma/rules/1816994b_42e1_4fb1_afd2_134d88184f71-powershell_base64_encoded_wmi_classes|PowerShell Base64 Encoded WMI Classes (high; windows / process_creation)]]
+- [[kb/sigma/rules/1a0a2ff1_611b_4dac_8216_8a7b47c618a6-invoke_obfuscation_via_use_clip_security|Invoke-Obfuscation Via Use Clip - Security (high; windows / security)]]
+- 69 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/11c46cd8_e471_450e_acb8_52a1216ae6a4-binary_simply_packed_by_upx_linux|Binary simply packed by UPX (linux) (sh; linux)]]
+- [[kb/atomic/tests/129edb75_d7b8_42cd_a8ba_1f3db64ec4ad-dlp_evasion_via_sensitive_data_in_vba_macro_over_email|DLP Evasion via Sensitive Data in VBA Macro over email (powershell; windows)]]
+- [[kb/atomic/tests/30cbeda4_08d9_42f1_8685_197fad677734-html_smuggling_remote_payload|HTML Smuggling Remote Payload (powershell; windows)]]
+- [[kb/atomic/tests/450e7218_7915_4be4_8b9b_464a49eafcec-execute_base64_encoded_powershell_from_windows_registry|Execute base64-encoded PowerShell from Windows Registry (powershell; windows)]]
+- [[kb/atomic/tests/453614d8_3ba6_4147_acc0_7ec4b3e1faef-dynamic_c_compile|Dynamic C# Compile (powershell; windows)]]
+- [[kb/atomic/tests/4d46e16b_5765_4046_9f25_a600d3e65e4d-binary_packed_by_upx_with_modified_headers|Binary packed by UPX, with modified headers (sh; macos)]]
+- [[kb/atomic/tests/578025d5_faa9_4f6d_8390_aae739d507e1-dynamic_api_resolution_ninja_syscall|Dynamic API Resolution-Ninja-syscall (powershell; windows)]]
+- [[kb/atomic/tests/6683baf0_6e77_4f58_b114_814184ea8150-obfuscated_powershell_command_via_character_array|Obfuscated PowerShell Command via Character Array (powershell; windows)]]
+- [[kb/atomic/tests/7693ccaa_8d64_4043_92a5_a2eb70359535-decode_eicar_file_and_write_to_file|Decode Eicar File and Write to File (powershell; windows, macos, linux)]]
+- [[kb/atomic/tests/78bd3fa7_773c_449e_a978_dc1f1500bc52-go_compile|Go compile (sh; linux, macos)]]
+- 17 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

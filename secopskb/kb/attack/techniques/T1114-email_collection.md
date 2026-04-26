@@ -70,6 +70,23 @@ Adversaries may target user email to collect sensitive information. Emails may c
 
 ![[workspaces/attack/techniques/T1114-email_collection-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/24549159_ac1b_479c_8175_d42aea947cae-hacktool_ruler|Hacktool Ruler (high; windows / security)]]
+- [[kb/sigma/rules/25676e10_2121_446e_80a4_71ff8506af47-exchange_powershell_snap_ins_usage|Exchange PowerShell Snap-Ins Usage (high; windows / process_creation)]]
+- [[kb/sigma/rules/27e4f1d6_ae72_4ea0_8a67_77a73a289c3d-suspicious_inbox_forwarding_identity_protection|Suspicious Inbox Forwarding Identity Protection (high; azure / riskdetection)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/3234117e_151d_4254_9150_3d0bac41e38c-office365_email_forwarding|Office365 - Email Forwarding (powershell; office-365)]]
+- [[kb/atomic/tests/36657d95_d9d6_4fbf_8a31_f4085607bafd-office365_remote_mail_collected|Office365 - Remote Mail Collected (powershell; office-365)]]
+- [[kb/atomic/tests/3f1b5096_0139_4736_9b78_19bcb02bb1cb-email_collection_with_powershell_get_inbox|Email Collection with PowerShell Get-Inbox (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

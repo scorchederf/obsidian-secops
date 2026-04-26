@@ -98,6 +98,48 @@ Since the execution can be proxied by an account with higher permissions, such a
 
 ![[workspaces/attack/techniques/T1546-event_triggered_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-002-autorun_differences|CAR-2013-01-002: Autorun Differences]]
+- [[kb/car/analytics/CAR-2014-11-003-debuggers_for_accessibility_applications|CAR-2014-11-003: Debuggers for Accessibility Applications]]
+- [[kb/car/analytics/CAR-2014-11-008-command_launched_from_winlogon|CAR-2014-11-008: Command Launched from WinLogon]]
+- [[kb/car/analytics/CAR-2020-09-002-component_object_model_hijacking|CAR-2020-09-002: Component Object Model Hijacking]]
+- [[kb/car/analytics/CAR-2020-09-005-appinit_dlls|CAR-2020-09-005: AppInit DLLs]]
+- [[kb/car/analytics/CAR-2020-11-011-registry_edit_from_screensaver|CAR-2020-11-011: Registry Edit from Screensaver]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/05936ce2_ee05_4dae_9d03_9a391cf2d2c6-wmi_persistence_command_line_event_consumer|WMI Persistence - Command Line Event Consumer (high; windows / image_load)]]
+- [[kb/sigma/rules/07743f65_7ec9_404a_a519_913db7118a8d-com_hijack_via_sdclt|COM Hijack via Sdclt (high; windows / registry_set)]]
+- [[kb/sigma/rules/0ba863e6_def5_4e50_9cea_4dd8c7dc46a4-control_panel_items|Control Panel Items (high; windows / process_creation)]]
+- [[kb/sigma/rules/0c3fac91_5627_46e8_a6a8_a0d7b9b8ae1b-suspicious_get_variable_exe_creation|Suspicious Get-Variable.exe Creation (high; windows / file_event)]]
+- [[kb/sigma/rules/1070db9a_3e5d_412e_8e7b_7183b616e1b3-persistence_via_sticky_key_backdoor|Persistence Via Sticky Key Backdoor (critical; windows / process_creation)]]
+- [[kb/sigma/rules/117d3d3a_755c_4a61_b23e_9171146d094c-suspicious_outlook_macro_created|Suspicious Outlook Macro Created (high; windows / file_event)]]
+- [[kb/sigma/rules/152f3630_77c1_4284_bcc0_4cc68ab2f6e7-shell_open_registry_keys_manipulation|Shell Open Registry Keys Manipulation (high; windows / registry_event)]]
+- [[kb/sigma/rules/243380fa_11eb_4141_af92_e14925e77c1b-potential_psfactorybuffer_com_hijacking|Potential PSFactoryBuffer COM Hijacking (high; windows / registry_set)]]
+- [[kb/sigma/rules/2fdefcb3_dbda_401e_ae23_f0db027628bc-sticky_key_like_backdoor_execution|Sticky Key Like Backdoor Execution (critical; windows / process_creation)]]
+- [[kb/sigma/rules/33f41cdd_35ac_4ba8_814b_c6a4244a1ad4-wmi_persistence_script_event_consumer_file_write|WMI Persistence - Script Event Consumer File Write (high; windows / file_event)]]
+- 16 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/05cc7a2c_ce32_46f2_a358_f27f76718c39-python_startup_hook_usercustomize_py_windows|Python Startup Hook - usercustomize.py (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/090e5aa5_32b6_473b_a49b_21e843a56896-append_malicious_start_process_cmdlet|Append malicious start-process cmdlet (powershell; windows)]]
+- [[kb/atomic/tests/0a898315_4cfa_4007_bafe_33a4646d115f-add_command_to_bashrc|Add command to .bashrc (sh; macos, linux)]]
+- [[kb/atomic/tests/10a08978_2045_4d62_8c42_1957bbbea102-change_default_file_association|Change Default File Association (command_prompt; windows)]]
+- [[kb/atomic/tests/123520cc_e998_471b_a920_bd28e3feafa0-com_hijacking_with_rundll32_local_server_switch|COM Hijacking with RunDLL32 (Local Server Switch) (powershell; windows)]]
+- [[kb/atomic/tests/13117939_c9b2_4a43_999e_0a543df92f0d-globalflags_in_image_file_execution_options|GlobalFlags in Image File Execution Options (powershell; windows)]]
+- [[kb/atomic/tests/17d1a3cc_3373_495a_857a_e5dd005fb302-adding_custom_debugger_for_windows_error_reporting|Adding custom debugger for Windows Error Reporting (command_prompt; windows)]]
+- [[kb/atomic/tests/1db380da_3422_481d_a3c8_6d5770dba580-replace_utilman_exe_ease_of_access_binary_with_cmd_exe|Replace utilman.exe (Ease of Access Binary) with cmd.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/2002f5ea_cd13_4c82_bf73_e46722e5dc5e-replace_narrator_exe_narrator_binary_with_cmd_exe|Replace Narrator.exe (Narrator binary) with cmd.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/210be7ea_d841_40ec_b3e1_ff610bb62744-replace_atbroker_exe_app_switcher_binary_with_cmd_exe|Replace AtBroker.exe (App Switcher binary) with cmd.exe (command_prompt; windows)]]
+- 45 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0004-privilege_escalation|TA0004: Privilege Escalation]]

@@ -27,6 +27,7 @@ from utils.logging_utils import log
 
 TOOL_PATCH_MARKER = "# stage1_tool_name_first_patch_applied_v6"
 WORKSPACE_PATCH_MARKER = "# stage1_workspaces_patch_applied_v6"
+TOOLS_LABEL_PATCH_MARKER = "# stage1_tools_label_patch_applied_v2"
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEGACY_BUILD_PATH = os.path.join(PROJECT_ROOT, LEGACY_BUILD_FILE)
 
@@ -296,6 +297,24 @@ def apply_workspaces_patch():
     validate_legacy_build_workspaces_patch()
     log("Applied and validated workspaces patch", "INFO")
 
+
+def apply_tools_label_patch():
+    """Keep displayed tool labels as Tools without moving files."""
+
+    text = read_text_file(LEGACY_BUILD_PATH)
+    text = text.replace("[[kb/tools/index|ATT&CK Software]]", "[[kb/tools/index|Tools]]")
+    text = text.replace("[[kb/tools/index|MITRE Tools]]", "[[kb/tools/index|Tools]]")
+    text = text.replace("ATT&CK Software", "Tools")
+    text = text.replace("MITRE Tools", "Tools")
+
+    if TOOLS_LABEL_PATCH_MARKER not in text:
+        text = TOOLS_LABEL_PATCH_MARKER + "\n" + text
+
+    write_text_file(LEGACY_BUILD_PATH, text)
+    validate_legacy_build_tools_label_patch()
+    log("Applied and validated Tools label patch", "INFO")
+
+
 def validate_legacy_build_tool_patch():
     text = read_text_file(LEGACY_BUILD_PATH)
 
@@ -333,6 +352,26 @@ def validate_legacy_build_workspaces_patch():
         raise RuntimeError("legacy_build.py workspace patch validation failed: NOTES_DIR does not point to workspaces")
 
     log("Workspaces patch validation passed", "DEBUG")
+
+
+def validate_legacy_build_tools_label_patch():
+    text = read_text_file(LEGACY_BUILD_PATH)
+
+    failures = []
+    if "[[kb/tools/index|ATT&CK Software]]" in text:
+        failures.append("navigation still labels kb/tools as ATT&CK Software")
+    if "[[kb/tools/index|MITRE Tools]]" in text:
+        failures.append("index links still label kb/tools as MITRE Tools")
+    if "MITRE Tools" in text:
+        failures.append("MITRE Tools title text still exists")
+    if "ATT&CK Software" in text:
+        failures.append("ATT&CK Software title text still exists")
+
+    if failures:
+        message = "legacy_build.py tools label patch validation failed:\n- " + "\n- ".join(failures)
+        raise RuntimeError(message)
+
+    log("Tools label patch validation passed", "DEBUG")
 
 
 def is_tool_link_line(line):
@@ -446,6 +485,7 @@ def build_attack():
     download_legacy_build_if_missing()
     apply_tool_name_first_patch()
     apply_workspaces_patch()
+    apply_tools_label_patch()
     #legacy_build_path = os.path.join(PROJECT_ROOT, LEGACY_BUILD_FILE)
     current_folder = os.getcwd()
     try:

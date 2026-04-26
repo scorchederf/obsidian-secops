@@ -49,6 +49,22 @@ The modular nature of extensions and their integration with host applications ma
 
 ![[workspaces/attack/techniques/T1176-software_extensions-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/27ba3207_dd30_4812_abbf_5d20c57d474e-suspicious_chromium_browser_instance_executed_with_custom_extension|Suspicious Chromium Browser Instance Executed With Custom Extension (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/3d456e2b_a7db_4af8_b5b3_720e7c4d9da5-edge_chromium_addon_vpn|Edge Chromium Addon - VPN (manual; windows, macos)]]
+- [[kb/atomic/tests/3ecd790d_2617_4abf_9a8c_4e8d47da9ee1-chrome_chromium_developer_mode|Chrome/Chromium (Developer Mode) (manual; linux, windows, macos)]]
+- [[kb/atomic/tests/7a714703_9f6b_461c_b06d_e6aeac650f27-google_chrome_load_unpacked_extension_with_command_line|Google Chrome Load Unpacked Extension With Command Line (powershell; windows)]]
+- [[kb/atomic/tests/cb790029_17e6_4c43_b96f_002ce5f10938-firefox|Firefox (manual; linux, windows, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

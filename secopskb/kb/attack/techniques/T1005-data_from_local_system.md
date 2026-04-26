@@ -56,6 +56,26 @@ Adversaries may do this using a [[T1059-command_and_scripting_interpreter|T1059:
 
 ![[workspaces/attack/techniques/T1005-data_from_local_system-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0f60b28c_64dd_4e2c_9a63_5334d3e3a6e6-script_interpreter_spawning_credential_scanner_windows|Script Interpreter Spawning Credential Scanner - Windows (high; windows / process_creation)]]
+- [[kb/sigma/rules/22777c9e_873a_4b49_855f_6072ab861a52-opencanary_smb_file_open_request|OpenCanary - SMB File Open Request (high; opencanary / application)]]
+- [[kb/sigma/rules/24c77512_782b_448a_8950_eddb0785fc71-sqlite_chromium_profile_data_db_access|SQLite Chromium Profile Data DB Access (high; windows / process_creation)]]
+- [[kb/sigma/rules/4833155a_4053_4c9c_a997_777fcea0baa7-sqlite_firefox_profile_data_db_access|SQLite Firefox Profile Data DB Access (high; windows / process_creation)]]
+- [[kb/sigma/rules/b57ba453_b384_4ab9_9f40_1038086b4e53-veeambackup_database_credentials_dump_via_sqlcmd_exe|VeeamBackup Database Credentials Dump Via Sqlcmd.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/f0025a69_e1b7_4dda_a53c_db21fa2d4071-script_interpreter_spawning_credential_scanner_linux|Script Interpreter Spawning Credential Scanner - Linux (high; linux / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/00cbb875_7ae4_4cf1_b638_e543fd825300-find_and_dump_sqlite_databases_linux|Find and dump sqlite databases (Linux) (bash; linux)]]
+- [[kb/atomic/tests/cfb6d400_a269_4c06_a347_6d88d584d5f7-copy_apple_notes_database_files_using_applescript|Copy Apple Notes database files using AppleScript (sh; macos)]]
+- [[kb/atomic/tests/d3d9af44_b8ad_4375_8b0a_4bff4b7e419c-search_files_of_interest_and_save_them_to_a_single_zip_file_windows|Search files of interest and save them to a single zip file (Windows) (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

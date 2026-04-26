@@ -50,6 +50,16 @@ An adversary may exfiltrate data in fixed size chunks instead of whole files or 
 
 ![[workspaces/attack/techniques/T1030-data_transfer_size_limits-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/ab936c51_10f4_46ce_9144_e02137b2016a-data_transfer_size_limits|Data Transfer Size Limits (sh; macos, linux)]]
+- [[kb/atomic/tests/f0287b58_f4bc_40f6_87eb_692e126e7f8f-network_based_data_transfer_in_small_chunks|Network-Based Data Transfer in Small Chunks (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0010-exfiltration|TA0010: Exfiltration]]

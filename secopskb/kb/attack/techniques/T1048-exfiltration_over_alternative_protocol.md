@@ -74,6 +74,33 @@ Many IaaS and SaaS platforms (such as Microsoft Exchange, Microsoft SharePoint, 
 
 ![[workspaces/attack/techniques/T1048-exfiltration_over_alternative_protocol-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/6ddff2e8_ea1a_45d0_8938_93dfc1d67ae7-pua_restic_backup_tool_execution|PUA - Restic Backup Tool Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/982e9f2d_1a85_4d5b_aea4_31f5e97c6555-suspicious_webdav_client_execution_via_rundll32_exe|Suspicious WebDav Client Execution Via Rundll32.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/98a96a5a_64a0_4c42_92c5_489da3866cb0-dns_exfiltration_and_tunneling_tools_execution|DNS Exfiltration and Tunneling Tools Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/ab9e3b40_0c85_4ba1_aede_455d226fd124-suspicious_redirection_to_local_admin_share|Suspicious Redirection to Local Admin Share (high; windows / process_creation)]]
+- [[kb/sigma/rules/d59d7842_9a21_4bc6_ba98_64bfe0091355-powershell_dnsexfiltration|Powershell DNSExfiltration (high; windows / ps_script)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1cdf2fb0_51b6_4fd8_96af_77020d5f1bf0-exfiltrate_data_https_using_curl_windows|Exfiltrate data HTTPS using curl windows (command_prompt; windows)]]
+- [[kb/atomic/tests/1d1abbd6_a3d3_4b2e_bef5_c59293f46eff-exfiltration_over_alternative_protocol_http|Exfiltration Over Alternative Protocol - HTTP (manual; macos, linux)]]
+- [[kb/atomic/tests/3ea1f938_f80a_4305_9aa8_431bc4867313-python3_http_server|Python3 http.server (sh; linux)]]
+- [[kb/atomic/tests/4a4f31e2_46ea_4c26_ad89_f09ad1d5fe01-exfiltrate_data_https_using_curl_freebsd_linux_or_macos|Exfiltrate data HTTPS using curl freebsd,linux or macos (bash; macos, linux)]]
+- [[kb/atomic/tests/57799bc2_ad1e_4130_a793_fb0c385130ba-maze_ftp_upload|MAZE FTP Upload (powershell; windows)]]
+- [[kb/atomic/tests/6aa58451_1121_4490_a8e9_1dada3f1c68c-exfiltration_over_alternative_protocol_http|Exfiltration Over Alternative Protocol - HTTP (powershell; windows)]]
+- [[kb/atomic/tests/7c3cb337_35ae_4d06_bf03_3032ed2ec268-exfiltration_over_alternative_protocol_ssh|Exfiltration Over Alternative Protocol - SSH (sh; macos, linux)]]
+- [[kb/atomic/tests/7ccdfcfa_6707_46bc_b812_007ab6ff951c-exfiltrate_data_in_a_file_over_https_using_wget|Exfiltrate data in a file over HTTPS using wget (sh; linux)]]
+- [[kb/atomic/tests/8bec51da_7a6d_4346_b941_51eca448c4b0-exfiltrate_data_as_text_over_https_using_wget|Exfiltrate data as text over HTTPS using wget (sh; linux)]]
+- [[kb/atomic/tests/a27916da_05f2_4316_a3ee_feec67a437be-exfiltrate_data_using_dns_queries_via_dig|Exfiltrate Data using DNS Queries via dig (bash; macos, linux)]]
+- 6 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0010-exfiltration|TA0010: Exfiltration]]

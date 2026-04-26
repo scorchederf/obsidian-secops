@@ -41,6 +41,30 @@ Adversaries may abuse IPC to execute arbitrary code or commands. IPC mechanisms 
 
 ![[workspaces/attack/techniques/T1559-inter-process_communication-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-01-006-unusual_child_process_spawned_using_dde_exploit|CAR-2021-01-006: Unusual Child Process spawned using DDE exploit]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/3b4b232a_af90_427c_a22f_30b0c0837b95-cmstp_execution_process_access|CMSTP Execution Process Access (high; windows / process_access)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/47c21fb6_085e_4b0d_b4d2_26d72c3830b3-execute_powershell_script_via_word_dde|Execute PowerShell script via Word DDE (command_prompt; windows)]]
+- [[kb/atomic/tests/7a48f482_246f_4aeb_9837_21c271ebf244-cobalt_strike_post_exploitation_pipe_4_2_and_later|Cobalt Strike post-exploitation pipe (4.2 and later) (command_prompt; windows)]]
+- [[kb/atomic/tests/830c8b6c_7a70_4f40_b975_8bbe74558acd-cobalt_strike_lateral_movement_psexec_psh_pipe|Cobalt Strike Lateral Movement (psexec_psh) pipe (command_prompt; windows)]]
+- [[kb/atomic/tests/8dbfc15c_527b_4ab0_a272_019f469d367f-cobalt_strike_post_exploitation_pipe_before_4_2|Cobalt Strike post-exploitation pipe (before 4.2) (command_prompt; windows)]]
+- [[kb/atomic/tests/bd13b9fc_b758_496a_b81a_397462f82c72-cobalt_strike_artifact_kit_pipe|Cobalt Strike Artifact Kit pipe (command_prompt; windows)]]
+- [[kb/atomic/tests/cf91174c_4e74_414e_bec0_8d60a104d181-ddeauto|DDEAUTO (manual; windows)]]
+- [[kb/atomic/tests/d1f72fa0_5bc2_4b4b_bd1e_43b6e8cfb2e6-cobalt_strike_ssh_postex_ssh_pipe|Cobalt Strike SSH (postex_ssh) pipe (command_prompt; windows)]]
+- [[kb/atomic/tests/f592ba2a_e9e8_4d62_a459_ef63abd819fd-execute_commands|Execute Commands (manual; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

@@ -39,6 +39,15 @@ An adversary may take advantage of that `build` API to build a custom image on t
 
 ![[workspaces/attack/techniques/T1612-build_image_on_host-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/2db30061_589d_409b_b125_7b473944f9b3-build_image_on_host|Build Image On Host (sh; containers)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

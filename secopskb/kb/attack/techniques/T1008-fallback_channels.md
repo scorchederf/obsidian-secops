@@ -52,6 +52,17 @@ Adversaries may use fallback or alternate communication channels if the primary 
 
 ![[workspaces/attack/techniques/T1008-fallback_channels-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/117d3d3a_755c_4a61_b23e_9171146d094c-suspicious_outlook_macro_created|Suspicious Outlook Macro Created (high; windows / file_event)]]
+- [[kb/sigma/rules/396ae3eb_4174_4b9b_880e_dc0364d78a19-potential_persistence_via_outlook_loadmacroprovideronboot_setting|Potential Persistence Via Outlook LoadMacroProviderOnBoot Setting (high; windows / registry_set)]]
+- [[kb/sigma/rules/e3b50fa5_3c3f_444e_937b_0a99d33731cd-outlook_macro_execution_without_warning_setting_enabled|Outlook Macro Execution Without Warning Setting Enabled (high; windows / registry_set)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

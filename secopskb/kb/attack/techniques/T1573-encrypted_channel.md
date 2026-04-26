@@ -65,6 +65,15 @@ Adversaries may employ an encryption algorithm to conceal command and control tr
 
 ![[workspaces/attack/techniques/T1573-encrypted_channel-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/21caf58e_87ad_440c_a6b8_3ac259964003-openssl_c2|OpenSSL C2 (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

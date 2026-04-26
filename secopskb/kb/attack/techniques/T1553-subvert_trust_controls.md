@@ -45,6 +45,34 @@ Adversaries may attempt to subvert these trust mechanisms. The method adversarie
 
 ![[workspaces/attack/techniques/T1553-subvert_trust_controls-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-05-001-attempt_to_add_certificate_to_untrusted_store|CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/1f978c6a_4415_47fb_aca5_736a44d7ca3d-cisco_crypto_commands|Cisco Crypto Commands (high; cisco / aaa)]]
+- [[kb/sigma/rules/5f6a601c_2ecb_498b_9c33_660362323afa-root_certificate_installed_from_susp_locations|Root Certificate Installed From Susp Locations (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/002cca30_4778_4891_878a_aaffcfa502fa-mount_iso_image|Mount ISO image (powershell; windows)]]
+- [[kb/atomic/tests/42f22b00_0242_4afc_a61b_0da05041f9cc-mount_an_iso_image_and_run_executable_from_the_iso|Mount an ISO image and run executable from the ISO (powershell; windows)]]
+- [[kb/atomic/tests/53bcf8a0_1549_4b85_b919_010c56d724ff-install_root_ca_on_debian_ubuntu|Install root CA on Debian/Ubuntu (sh; linux)]]
+- [[kb/atomic/tests/5fdb1a7a_a93c_4fbe_aa29_ddd9ef94ed1f-install_root_ca_on_windows_with_certutil|Install root CA on Windows with certutil (powershell; windows)]]
+- [[kb/atomic/tests/64b12afc_18b8_4d3f_9eab_7f6cae7c73f9-remove_the_zone_identifier_alternate_data_stream|Remove the Zone.Identifier alternate data stream (powershell; windows)]]
+- [[kb/atomic/tests/76f49d86_5eb1_461a_a032_a480f86652f1-install_root_ca_on_windows|Install root CA on Windows (powershell; windows)]]
+- [[kb/atomic/tests/9c096ec4_fd42_419d_a762_d64cc950627e-install_root_ca_on_centos_rhel|Install root CA on CentOS/RHEL (sh; linux)]]
+- [[kb/atomic/tests/bb6b51e1_ab92_45b5_aeea_e410d06405f8-code_signing_policy_modification|Code Signing Policy Modification (command_prompt; windows)]]
+- [[kb/atomic/tests/c2587b8d_743d_4985_aa50_c83394eaeb68-execute_lnk_file_from_iso|Execute LNK file from ISO (powershell; windows)]]
+- [[kb/atomic/tests/ca20a3f1_42b5_4e21_ad3f_1049199ec2e0-add_root_certificate_to_currentuser_certificate_store|Add Root Certificate to CurrentUser Certificate Store (powershell; windows)]]
+- 4 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

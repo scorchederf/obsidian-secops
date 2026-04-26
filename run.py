@@ -3,6 +3,7 @@ from builds.atomic import build_atomic
 from builds.car import build_car
 from builds.indexes import build_indexes
 from builds.sigma import build_sigma
+from builds.technique_enrichment import build_technique_enrichment
 from utils.compare_vaults import compare_vaults
 from utils.config import (
     BUILD_ATOMIC,
@@ -25,6 +26,7 @@ def main():
         build_atomic()
     if BUILD_SIGMA:
         build_sigma()
+    build_technique_enrichment()
     build_indexes()
     log("Starting vault verification", "INFO")
     result = compare_vaults(OLD_VAULT, NEW_VAULT, COMPARE_REPORT_FILE, COMPARE_DIFF_FOLDER)

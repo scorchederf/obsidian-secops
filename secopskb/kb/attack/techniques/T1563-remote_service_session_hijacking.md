@@ -52,6 +52,20 @@ Adversaries may commandeer these sessions to carry out actions on remote systems
 
 ![[workspaces/attack/techniques/T1563-remote_service_session_hijacking-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/6ba5a05f_b095_4f0a_8654_b825f4f16334-potential_mstsc_shadowing_activity|Potential MSTSC Shadowing Activity (high; windows / process_creation)]]
+- [[kb/sigma/rules/f72aa3e8_49f9_4c7d_bd74_f8ab84ff9bbb-suspicious_rdp_redirect_using_tscon|Suspicious RDP Redirect Using TSCON (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/a37ac520_b911_458e_8aed_c5f1576d9f46-rdp_hijacking|RDP hijacking (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0008-lateral_movement|TA0008: Lateral Movement]]

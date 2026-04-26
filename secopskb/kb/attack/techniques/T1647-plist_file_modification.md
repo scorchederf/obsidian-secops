@@ -41,6 +41,15 @@ For example, adversaries can add a malicious application path to the `~/Library/
 
 ![[workspaces/attack/techniques/T1647-plist_file_modification-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/394a538e_09bb_4a4a_95d1_b93cf12682a8-plist_modification|Plist Modification (manual; macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

@@ -18,6 +18,7 @@ The vault should keep ATT&CK as the primary behavior spine. Other sources should
 
 ## Target Vault Areas
 
+- `kb/tools/`: Tools. Keep this top-level folder stable even though the records are ATT&CK software objects, because Sigma, LOLBAS, GTFOBins, and future sources need to reference it as a shared entity index.
 - `kb/sigma/`: Sigma rules, indexes by ATT&CK technique and logsource.
 - `kb/atomic/`: Atomic Red Team tests, indexes by ATT&CK technique, executor, platform, and dependency.
 - `kb/lolbas/`: Windows living-off-the-land binaries, scripts, and libraries.
@@ -33,7 +34,7 @@ The vault should keep ATT&CK as the primary behavior spine. Other sources should
 ## Cross-Link Rules
 
 - Any source with an ATT&CK technique ID links to `kb/attack/techniques`.
-- Any source with an ATT&CK software/tool ID links to `kb/tools` where available.
+- Any source with an ATT&CK software/tool ID links to `kb/tools` where available. Do not merge LOLBAS/GTFOBins into `kb/tools`; cross-link overlapping binaries instead.
 - Any source with a D3FEND ID links to `kb/defend/techniques`.
 - Detection sources link to relevant data sources and logsource indexes.
 - Validation sources link back to the detections they can exercise.
@@ -51,6 +52,7 @@ The vault should keep ATT&CK as the primary behavior spine. Other sources should
    - Generate test pages and technique indexes.
    - Link tests to Sigma simulation blocks where `atomic_guid` matches.
    - Status: implemented in `kb/atomic/`, with Sigma simulation links resolved to Atomic test pages when GUIDs match.
+   - Next build note: map Atomic executor names to markdown code fence languages for commands and cleanup blocks. For example, `powershell` should render as ```powershell, `command_prompt` as ```batch or ```cmd, and `bash`/`sh` as ```bash.
 
 3. LOLBAS and GTFOBins
    - Parse project YAML/Markdown data.

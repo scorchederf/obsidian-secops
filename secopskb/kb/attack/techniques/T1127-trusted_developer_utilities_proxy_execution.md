@@ -55,6 +55,33 @@ Smart App Control is a feature of Windows that blocks applications it considers 
 
 ![[workspaces/attack/techniques/T1127-trusted_developer_utilities_proxy_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2020-11-008-msbuild_and_msxsl|CAR-2020-11-008: MSBuild and msxsl]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/50e54b8d_ad73_43f8_96a1_5191685b17a4-silenttrinity_stager_msbuild_activity|Silenttrinity Stager Msbuild Activity (high; windows / network_connection)]]
+- [[kb/sigma/rules/6640f31c_01ad_49b5_beb5_83498a5cd8bd-potential_arbitrary_code_execution_via_node_exe|Potential Arbitrary Code Execution Via Node.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/9ccba514_7cb6_4c5c_b377_700758f2f120-suspicious_child_process_of_aspnetcompiler|Suspicious Child Process of AspNetCompiler (high; windows / process_creation)]]
+- [[kb/sigma/rules/9f50fe98_fe5c_4a2d_86c7_fad7f63ed622-potentially_suspicious_asp_net_compilation_via_aspnetcompiler|Potentially Suspicious ASP.NET Compilation Via AspNetCompiler (high; windows / process_creation)]]
+- [[kb/sigma/rules/a9e416a8_e613_4f8b_88b8_a7d1d1af2f61-suspicious_use_of_csharp_interactive_console|Suspicious Use of CSharp Interactive Console (high; windows / process_creation)]]
+- [[kb/sigma/rules/c15e99a3_c474_48ab_b9a7_84549a7a9d16-remote_thread_creation_ttdinject_exe_proxy|Remote Thread Creation Ttdinject.exe Proxy (high; windows / create_remote_thread)]]
+- [[kb/sigma/rules/d047726b_c71c_4048_a99b_2e2f50dc107d-kavremover_dropped_binary_lolbin_usage|Kavremover Dropped Binary LOLBIN Usage (high; windows / process_creation)]]
+- [[kb/sigma/rules/e890acee_d488_420e_8f20_d9b19b3c3d43-suspicious_file_created_by_arcsoc_exe|Suspicious File Created by ArcSOC.exe (high; windows / file_event)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1ec1c269_d6bd_49e7_b71b_a461f7fa7bc8-lolbin_jsc_exe_compile_javascript_to_exe|Lolbin Jsc.exe compile javascript to exe (command_prompt; windows)]]
+- [[kb/atomic/tests/3fc9fea2_871d_414d_8ef6_02e85e322b80-lolbin_jsc_exe_compile_javascript_to_dll|Lolbin Jsc.exe compile javascript to dll (command_prompt; windows)]]
+- [[kb/atomic/tests/58742c0f_cb01_44cd_a60b_fb26e8871c93-msbuild_bypass_using_inline_tasks_c|MSBuild Bypass Using Inline Tasks (C#) (command_prompt; windows)]]
+- [[kb/atomic/tests/ab042179_c0c5_402f_9bc8_42741f5ce359-msbuild_bypass_using_inline_tasks_vb|MSBuild Bypass Using Inline Tasks (VB) (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

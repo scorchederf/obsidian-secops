@@ -67,6 +67,44 @@ Adversaries may also delete “online” backups that are connected to their net
 
 ![[workspaces/attack/techniques/T1490-inhibit_system_recovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-01-009-detecting_shadow_copy_deletion_or_resize|CAR-2021-01-009: Detecting Shadow Copy Deletion or Resize]]
+- [[kb/car/analytics/CAR-2021-05-003-bcdedit_failure_recovery_modification|CAR-2021-05-003: BCDEdit Failure Recovery Modification]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/1444443e_6757_43e4_9ea4_c8fc705f79a2-boot_configuration_tampering_via_bcdedit_exe|Boot Configuration Tampering Via Bcdedit.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/21ff4ca9_f13a_41ad_b828_0077b2af2e40-deletion_of_volume_shadow_copies_via_wmi_with_powershell|Deletion of Volume Shadow Copies via WMI with PowerShell (high; windows / process_creation)]]
+- [[kb/sigma/rules/333cdbe8_27bb_4246_bf82_b41a0dca4b70-suspicious_volume_shadow_copy_vss_ps_dll_load|Suspicious Volume Shadow Copy VSS_PS.dll Load (high; windows / image_load)]]
+- [[kb/sigma/rules/37774c23_25a1_4adb_bb6d_8bb9fd59c0f8-suspicious_volume_shadow_copy_vssapi_dll_load|Suspicious Volume Shadow Copy Vssapi.dll Load (high; windows / image_load)]]
+- [[kb/sigma/rules/5de03871_5d46_4539_a82d_3aa992a69a83-registry_disable_system_restore|Registry Disable System Restore (high; windows / registry_set)]]
+- [[kb/sigma/rules/639c9081_f482_47d3_a0bd_ddee3d4ecd76-all_backups_deleted_via_wbadmin_exe|All Backups Deleted Via Wbadmin.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/87df9ee1_5416_453a_8a08_e8d4a51e9ce1-delete_volume_shadow_copies_via_wmi_with_powershell|Delete Volume Shadow Copies Via WMI With PowerShell (high; windows / ps_classic_start)]]
+- [[kb/sigma/rules/c1337eb8_921a_4b59_855b_4ba188ddcc42-deletion_of_volume_shadow_copies_via_wmi_with_powershell_ps_script|Deletion of Volume Shadow Copies via WMI with PowerShell - PS Script (high; windows / ps_script)]]
+- [[kb/sigma/rules/c73124a7_3e89_44a3_bdc1_25fe4df754b1-copy_from_volumeshadowcopy_via_cmd_exe|Copy From VolumeShadowCopy Via Cmd.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/c947b146_0abc_4c87_9c64_b17e9d7274a2-shadow_copies_deletion_using_operating_systems_utilities|Shadow Copies Deletion Using Operating Systems Utilities (high; windows / process_creation)]]
+- 1 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1c68c68d_83a4_4981_974e_8993055fa034-windows_disable_the_sr_scheduled_task|Windows - Disable the SR scheduled task (command_prompt; windows)]]
+- [[kb/atomic/tests/263ba6cb_ea2b_41c9_9d4e_b652dadd002c-windows_wbadmin_delete_windows_backup_catalog|Windows - wbadmin Delete Windows Backup Catalog (command_prompt; windows)]]
+- [[kb/atomic/tests/39a295ca_7059_4a88_86f6_09556c1211e7-windows_delete_volume_shadow_copies_via_wmi_with_powershell|Windows - Delete Volume Shadow Copies via WMI with PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/42111a6f_7e7f_482c_9b1b_3cfd090b999c-windows_delete_volume_shadow_copies_via_diskshadow|Windows - Delete Volume Shadow Copies via Diskshadow (powershell; windows)]]
+- [[kb/atomic/tests/43819286_91a9_4369_90ed_d31fb4da2c01-windows_delete_volume_shadow_copies|Windows - Delete Volume Shadow Copies (command_prompt; windows)]]
+- [[kb/atomic/tests/584331dd_75bc_4c02_9e0b_17f5fd81c748-windows_wbadmin_delete_systemstatebackup|Windows - wbadmin Delete systemstatebackup (command_prompt; windows)]]
+- [[kb/atomic/tests/66e647d1_8741_4e43_b7c1_334760c2047f-disable_system_restore_through_registry|Disable System Restore Through Registry (command_prompt; windows)]]
+- [[kb/atomic/tests/6a3ff8dd_f49c_4272_a658_11c2fe58bd88-windows_delete_volume_shadow_copies_via_wmi|Windows - Delete Volume Shadow Copies via WMI (command_prompt; windows)]]
+- [[kb/atomic/tests/6b1dbaf6_cc8a_4ea6_891f_6058569653bf-windows_delete_backup_files|Windows - Delete Backup Files (command_prompt; windows)]]
+- [[kb/atomic/tests/a4420f93_5386_4290_b780_f4f66abc7070-modify_vss_service_permissions|Modify VSS Service Permissions (command_prompt; windows)]]
+- 3 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

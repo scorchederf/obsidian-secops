@@ -57,6 +57,22 @@ In ESXi environments, adversaries may leverage the Virtual Machine Communication
 
 ![[workspaces/attack/techniques/T1095-non-application_layer_protocol-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/e31033fc_33f0_4020_9a16_faf9b31cbf08-pua_netcat_suspicious_execution|PUA - Netcat Suspicious Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0268e63c_e244_42db_bef7_72a9e59fc1fc-icmp_c2|ICMP C2 (powershell; windows)]]
+- [[kb/atomic/tests/3e0e0e7f_6aa2_4a61_b61d_526c2cc9330e-powercat_c2|Powercat C2 (powershell; windows)]]
+- [[kb/atomic/tests/8e139e1f_1f3a_4be7_901d_afae9738c064-linux_icmp_reverse_shell_using_icmp_cnc|Linux ICMP Reverse Shell using icmp-cnc (manual; linux)]]
+- [[kb/atomic/tests/bcf0d1c1_3f6a_4847_b1c9_7ed4ea321f37-netcat_c2|Netcat C2 (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

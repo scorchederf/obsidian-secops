@@ -58,6 +58,35 @@ Adversaries may also leverage [[T1572-protocol_tunneling|T1572: Protocol Tunneli
 
 ![[workspaces/attack/techniques/T1572-protocol_tunneling-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/18249279_932f_45e2_b37a_8925f2597670-process_initiated_network_connection_to_ngrok_domain|Process Initiated Network Connection To Ngrok Domain (high; windows / network_connection)]]
+- [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/3ab65069_d82a_4d44_a759_466661a082d1-communication_to_localtonet_tunneling_service_initiated|Communication To LocaltoNet Tunneling Service Initiated (high; windows / network_connection)]]
+- [[kb/sigma/rules/3ceb2083_a27f_449a_be33_14ec1b7cc973-silence_eda_detection|Silence.EDA Detection (critical; windows / ps_script)]]
+- [[kb/sigma/rules/48a61b29_389f_4032_b317_b30de6b95314-suspicious_plink_port_forwarding|Suspicious Plink Port Forwarding (high; windows / process_creation)]]
+- [[kb/sigma/rules/5f699bc5_5446_4a4a_a0b7_5ef2885a3eb4-rdp_over_reverse_ssh_tunnel|RDP Over Reverse SSH Tunnel (high; windows / network_connection)]]
+- [[kb/sigma/rules/b1e5da3b_ca8e_4adf_915c_9921f3d85481-rdp_to_http_or_https_target_ports|RDP to HTTP or HTTPS Target Ports (high; windows / network_connection)]]
+- [[kb/sigma/rules/c4568f5d_131f_4e78_83d4_45b2da0ec4f1-communication_to_localtonet_tunneling_service_initiated_linux|Communication To LocaltoNet Tunneling Service Initiated - Linux (high; linux / network_connection)]]
+- [[kb/sigma/rules/ee37eb7c_a4e7_4cd5_8fa4_efa27f1c3f31-pua_ngrok_execution|PUA - Ngrok Execution (high; windows / process_creation)]]
+- 3 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0c5f9705_c575_42a6_9609_cbbff4b2fc9b-dns_over_https_regular_beaconing|DNS over HTTPS Regular Beaconing (powershell; windows)]]
+- [[kb/atomic/tests/228c336a_2f79_4043_8aef_bfa453a611d5-cloudflare_tunnels_linux_macos|Cloudflare tunnels (Linux/macOS) (sh; linux, macos)]]
+- [[kb/atomic/tests/4cdc9fc7_53fb_4894_9f0c_64836943ea60-run_ngrok|run ngrok (powershell; windows)]]
+- [[kb/atomic/tests/748a73d5_cea4_4f34_84d8_839da5baa99c-dns_over_https_long_domain_query|DNS over HTTPS Long Domain Query (powershell; windows)]]
+- [[kb/atomic/tests/9f94a112_1ce2_464d_a63b_83c1f465f801-microsoft_dev_tunnels_linux_macos|Microsoft Dev tunnels (Linux/macOS) (bash; linux, macos)]]
+- [[kb/atomic/tests/ae9ef4b0_d8c1_49d4_8758_06206f19af0a-dns_over_https_large_query_volume|DNS over HTTPS Large Query Volume (powershell; windows)]]
+- [[kb/atomic/tests/b877943f_0377_44f4_8477_f79db7f07c4d-vscode_tunnels_linux_macos|VSCode tunnels (Linux/macOS) (sh; linux, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

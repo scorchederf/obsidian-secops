@@ -72,6 +72,23 @@ Command-line examples:(Citation: XSL Bypass Mar 2019)(Citation: LOLBAS Wmic)
 
 ![[workspaces/attack/techniques/T1220-xsl_script_processing-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/75d0a94e_6252_448d_a7be_d953dff527bb-remote_xsl_execution_via_msxsl_exe|Remote XSL Execution Via Msxsl.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/8d63dadf_b91b_4187_87b6_34a1114577ea-potential_remote_squiblytwo_technique_execution|Potential Remote SquiblyTwo Technique Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1b237334_3e21_4a0c_8178_b8c996124988-wmic_bypass_using_local_xsl_file|WMIC bypass using local XSL file (command_prompt; windows)]]
+- [[kb/atomic/tests/7f5be499_33be_4129_a560_66021f379b9b-wmic_bypass_using_remote_xsl_file|WMIC bypass using remote XSL file (command_prompt; windows)]]
+- [[kb/atomic/tests/a7c3ab07_52fb_49c8_ab6d_e9c6d4a0a985-msxsl_bypass_using_remote_files|MSXSL Bypass using remote files (command_prompt; windows)]]
+- [[kb/atomic/tests/ca23bfb2_023f_49c5_8802_e66997de462d-msxsl_bypass_using_local_files|MSXSL Bypass using local files (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

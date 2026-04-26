@@ -76,6 +76,40 @@ On network devices, [[T1059-command_and_scripting_interpreter#^t1059008-network-
 
 ![[workspaces/attack/techniques/T1033-system_owner_user_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2016-03-001-host_discovery_commands|CAR-2016-03-001: Host Discovery Commands]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/4ebc877f_4612_45cb_b3a5_8e3834db36c9-webshell_hacking_activity_patterns|Webshell Hacking Activity Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/56fda488_113e_4ce9_8076_afc2457922c3-possible_dcsync_attack|Possible DCSync Attack (high; rpc_firewall / application)]]
+- [[kb/sigma/rules/6d580420_ff3f_4e0e_b6b0_41b90c787e28-sharphound_recon_sessions|SharpHound Recon Sessions (high; rpc_firewall / application)]]
+- [[kb/sigma/rules/79ce34ca_af29_4d0e_b832_fc1b377020db-whoami_exe_execution_from_privileged_process|Whoami.EXE Execution From Privileged Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/97a80ec7_0e2f_4d05_9ef4_65760e634f6b-security_privileges_enumeration_via_whoami_exe|Security Privileges Enumeration Via Whoami.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/b2317cfa_4a47_4ead_b3ff_297438c0bc2d-hacktool_sharpview_execution|HackTool - SharpView Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/bed2a484_9348_4143_8a8a_b801c979301c-webshell_detection_with_command_line_keywords|Webshell Detection With Command Line Keywords (high; windows / process_creation)]]
+- [[kb/sigma/rules/d9367cbb_c2e0_47ce_bdc0_128cb6da898d-hacktool_sharpldapwhoami_execution|HackTool - SharpLdapWhoami Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/e9142d84_fbe0_401d_ac50_3e519fb00c89-whoami_as_parameter|WhoAmI as Parameter (high; windows / process_creation)]]
+- [[kb/sigma/rules/f1086bf7_a0c4_4a37_9102_01e573caf4a0-renamed_whoami_execution|Renamed Whoami Execution (critical; windows / process_creation)]]
+- 1 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1392bd0f_5d5a_429e_81d9_eb9d4d4d5b3b-getcurrent_user_with_powershell_script|GetCurrent User with PowerShell Script (powershell; windows)]]
+- [[kb/atomic/tests/29857f27_a36f_4f7e_8084_4557cd6207ca-find_computers_where_user_has_session_stealth_mode_powerview|Find computers where user has session - Stealth mode (PowerView) (powershell; windows)]]
+- [[kb/atomic/tests/2a9b677d_a230_44f4_ad86_782df1ef108c-system_owner_user_discovery|System Owner/User Discovery (sh; linux, macos)]]
+- [[kb/atomic/tests/3d257a03_eb80_41c5_b744_bb37ac7f65c7-system_discovery_socgholish_whoami|System Discovery - SocGholish whoami (powershell; windows)]]
+- [[kb/atomic/tests/4c4959bf_addf_4b4a_be86_8d09cc1857aa-system_owner_user_discovery|System Owner/User Discovery (command_prompt; windows)]]
+- [[kb/atomic/tests/ba38e193_37a6_4c41_b214_61b33277fe36-system_owner_user_discovery_using_command_prompt|System Owner/User Discovery Using Command Prompt (command_prompt; windows)]]
+- [[kb/atomic/tests/dcb6cdee_1fb0_4087_8bf8_88cfd136ba51-user_discovery_with_env_vars_powershell_script|User Discovery With Env Vars PowerShell Script (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

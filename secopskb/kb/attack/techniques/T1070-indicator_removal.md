@@ -62,6 +62,46 @@ Removal of these indicators may interfere with event collection, reporting, or o
 
 ![[workspaces/attack/techniques/T1070-indicator_removal-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2016-04-002-user_activity_from_clearing_event_logs|CAR-2016-04-002: User Activity from Clearing Event Logs]]
+- [[kb/car/analytics/CAR-2020-11-005-clear_powershell_console_command_history|CAR-2020-11-005: Clear Powershell Console Command History]]
+- [[kb/car/analytics/CAR-2020-11-007-network_share_connection_removal|CAR-2020-11-007: Network Share Connection Removal]]
+- [[kb/car/analytics/CAR-2021-01-003-clearing_windows_logs_with_wevtutil|CAR-2021-01-003: Clearing Windows Logs with Wevtutil]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/07bdd2f5_9c58_4f38_aec8_e101bb79ef8d-terminal_server_client_connection_history_cleared_registry|Terminal Server Client Connection History Cleared - Registry (high; windows / registry_delete)]]
+- [[kb/sigma/rules/09570ae5_889e_43ea_aac0_0e1221fb3d95-remove_exported_mailbox_from_exchange_webserver|Remove Exported Mailbox from Exchange Webserver (high; windows / msexchange-management)]]
+- [[kb/sigma/rules/0a1f9d29_6465_4776_b091_7f43b26e4c89-prefetch_file_deleted|Prefetch File Deleted (high; windows / file_delete)]]
+- [[kb/sigma/rules/100ef69e_3327_481c_8e5c_6d80d9507556-important_windows_eventlog_cleared|Important Windows Eventlog Cleared (high; windows / system)]]
+- [[kb/sigma/rules/115fdba9_f017_42e6_84cf_d5573bf2ddf8-disable_of_etw_trace_powershell|Disable of ETW Trace - Powershell (high; windows / ps_script)]]
+- [[kb/sigma/rules/3a9b8c1e_5b2e_4f7a_9d1c_2a7f3b6e1c55-runmru_registry_key_deletion_registry|RunMRU Registry Key Deletion - Registry (high; windows / registry_delete)]]
+- [[kb/sigma/rules/3fcc9b35_39e4_44c0_a2ad_9e82b6902b31-syslog_clearing_or_removal_via_system_utilities|Syslog Clearing or Removal Via System Utilities (high; linux / process_creation)]]
+- [[kb/sigma/rules/4d7cda18_1b12_4e52_b45c_d28653210df8-sysmon_driver_unloaded_via_fltmc_exe|Sysmon Driver Unloaded Via Fltmc.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/54786ddc_5b8a_11ed_9b6a_0242ac120002-suspicious_ping_del_command_combination|Suspicious Ping/Del Command Combination (high; windows / process_creation)]]
+- [[kb/sigma/rules/602f5669_6927_4688_84db_0d4b7afb2150-disable_powershell_command_history|Disable Powershell Command History (high; windows / ps_script)]]
+- 11 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0208ea60_98f1_4e8c_8052_930dce8f742c-overwrite_macos_system_log_via_echo_utility|Overwrite macOS system log via echo utility (sh; macos)]]
+- [[kb/atomic/tests/03013b4b_01db_437d_909b_1fdaa5010ee8-delete_system_log_files_via_unlink_utility|Delete system log files via unlink utility (sh; macos)]]
+- [[kb/atomic/tests/039b4b10_2900_404b_b67f_4b6d49aa6499-overwrite_and_delete_a_file_with_shred|Overwrite and delete a file with shred (sh; linux)]]
+- [[kb/atomic/tests/0512d214_9512_4d22_bde7_f37e058259b3-remove_network_share_powershell|Remove Network Share PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/09210ad5_1ef2_4077_9ad3_7351e13e9222-remove_network_share|Remove Network Share (command_prompt; windows)]]
+- [[kb/atomic/tests/11cb8ee1_97fb_4960_8587_69b8388ee9d9-overwrite_freebsd_system_log_via_echo_utility|Overwrite FreeBSD system log via echo utility (sh; linux)]]
+- [[kb/atomic/tests/14033063_ee04_4eaf_8f5d_ba07ca7a097c-truncate_system_log_files_via_truncate_utility_freebsd|Truncate system log files via truncate utility (freebsd) (sh; linux)]]
+- [[kb/atomic/tests/14c38f32_6509_46d8_ab43_d53e32d2b131-add_network_share|Add Network Share (command_prompt; windows)]]
+- [[kb/atomic/tests/1602ff76_ed7f_4c94_b550_2f727b4782d4-overwrite_linux_mail_spool|Overwrite Linux Mail Spool (bash; linux)]]
+- [[kb/atomic/tests/1b682d84_f075_4f93_9a89_8a8de19ffd6e-clear_event_logs_via_vba|Clear Event Logs via VBA (powershell; windows)]]
+- 61 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

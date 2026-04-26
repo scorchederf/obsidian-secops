@@ -61,6 +61,48 @@ Services, daemons, or agents may be created with administrator privileges but ex
 
 ![[workspaces/attack/techniques/T1543-create_or_modify_system_process-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-002-autorun_differences|CAR-2013-01-002: Autorun Differences]]
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2013-09-005-service_outlier_executables|CAR-2013-09-005: Service Outlier Executables]]
+- [[kb/car/analytics/CAR-2014-02-001-service_binary_modifications|CAR-2014-02-001: Service Binary Modifications]]
+- [[kb/car/analytics/CAR-2014-03-005-remotely_launched_executables_via_services|CAR-2014-03-005: Remotely Launched Executables via Services]]
+- [[kb/car/analytics/CAR-2014-05-002-services_launching_cmd|CAR-2014-05-002: Services launching Cmd]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/05296024_fe8a_4baf_8f3d_9a5f5624ceb2-malicious_driver_load|Malicious Driver Load (high; windows / driver_load)]]
+- [[kb/sigma/rules/138d3531_8793_4f50_a2cd_f291b2863d78-suspicious_service_path_modification|Suspicious Service Path Modification (high; windows / process_creation)]]
+- [[kb/sigma/rules/17a1be64_8d88_40bf_b5ff_a4f7a50ebcc8-suspicious_new_service_creation|Suspicious New Service Creation (high; windows / process_creation)]]
+- [[kb/sigma/rules/1a42dfa6_6cb2_4df9_9b48_295be477e835-vulnerable_winring0_driver_load|Vulnerable WinRing0 Driver Load (high; windows / driver_load)]]
+- [[kb/sigma/rules/1b2ae822_6fe1_43ba_aa7c_d1a3b3d1d5f2-service_installation_with_suspicious_folder_pattern|Service Installation with Suspicious Folder Pattern (high; windows / system)]]
+- [[kb/sigma/rules/1d61f71d_59d2_479e_9562_4ff5f4ead16b-suspicious_service_installation|Suspicious Service Installation (high; windows / system)]]
+- [[kb/sigma/rules/25b9c01c_350d_4b95_bed1_836d04a4f324-moriya_rootkit_system|Moriya Rootkit - System (critical; windows / system)]]
+- [[kb/sigma/rules/295c9289_acee_4503_a571_8eacaef36b28-vulnerable_hacksys_extreme_vulnerable_driver_load|Vulnerable HackSys Extreme Vulnerable Driver Load (high; windows / driver_load)]]
+- [[kb/sigma/rules/2c4523d5_d481_4ed0_8ec3_7fbf0cb41a75-driver_load_from_a_temporary_directory|Driver Load From A Temporary Directory (high; windows / driver_load)]]
+- [[kb/sigma/rules/304afd73_55a5_4bb9_8c21_0b1fc84ea9e4-psexec_remote_execution_file_artefact|PSEXEC Remote Execution File Artefact (high; windows / file_event)]]
+- 19 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/03ab8df5_3a6b_4417_b6bd_bb7a5cfd74cf-launch_daemon|Launch Daemon (bash; macos)]]
+- [[kb/atomic/tests/11979f23_9b9d_482a_9935_6fc9cd022c3e-event_monitor_daemon_persistence|Event Monitor Daemon Persistence (bash; macos)]]
+- [[kb/atomic/tests/1f896ce4_8070_4959_8a25_2658856a70c9-modify_service_to_run_arbitrary_binary_powershell|Modify Service to Run Arbitrary Binary (Powershell) (powershell; windows)]]
+- [[kb/atomic/tests/491a4af6_a521_4b74_b23b_f7b3f1ee9e77-service_installation_powershell|Service Installation PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/66774fa8_c562_4bae_a58d_5264a0dd9dd7-launch_agent_root_directory|Launch Agent - Root Directory (bash; macos)]]
+- [[kb/atomic/tests/760fe8d2_79d9_494f_905e_a239a3df86f6-create_sysv_service|Create SysV Service (sh; linux)]]
+- [[kb/atomic/tests/981e2942_e433_44e9_afc1_8c957a1496b6-service_installation_cmd|Service Installation CMD (command_prompt; windows)]]
+- [[kb/atomic/tests/a5983dee_bf6c_4eaf_951c_dbc1a7b90900-launch_agent|Launch Agent (bash; macos)]]
+- [[kb/atomic/tests/c35ac4a8_19de_43af_b9f8_755da7e89c89-create_systemd_service_file_enable_the_service_modify_and_reload_the_service|Create Systemd Service file,  Enable the service , Modify and Reload the service. (bash; linux)]]
+- [[kb/atomic/tests/d9e4f24f_aa67_4c6e_bcbf_85622b697a7c-create_systemd_service|Create Systemd Service (bash; linux)]]
+- 3 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

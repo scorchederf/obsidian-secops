@@ -82,6 +82,47 @@ Similarly, on Linux systems adversaries may abuse trusted binaries such as `spli
 
 ![[workspaces/attack/techniques/T1218-system_binary_proxy_execution-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2014-03-006-rundll32_exe_monitoring|CAR-2014-03-006: RunDLL32.exe monitoring]]
+- [[kb/car/analytics/CAR-2019-04-002-generic_regsvr32|CAR-2019-04-002: Generic Regsvr32]]
+- [[kb/car/analytics/CAR-2019-04-003-squiblydoo|CAR-2019-04-003: Squiblydoo]]
+- [[kb/car/analytics/CAR-2020-11-009-compiled_html_access|CAR-2020-11-009: Compiled HTML Access]]
+- [[kb/car/analytics/CAR-2020-11-010-cmstp|CAR-2020-11-010: CMSTP]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/03cc0c25_389f_4bf8_b48d_11878079f1ca-suspicious_mshta_child_process|Suspicious MSHTA Child Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/089fc3d2_71e8_4763_a8a5_c97fbb0a403e-regsvr32_dll_execution_with_suspicious_file_extension|Regsvr32 DLL Execution With Suspicious File Extension (high; windows / process_creation)]]
+- [[kb/sigma/rules/0b4ae027_2a2d_4b93_8c7e_962caaba5b2a-time_travel_debugging_utility_usage|Time Travel Debugging Utility Usage (high; windows / process_creation)]]
+- [[kb/sigma/rules/0ba863e6_def5_4e50_9cea_4dd8c7dc46a4-control_panel_items|Control Panel Items (high; windows / process_creation)]]
+- [[kb/sigma/rules/0bbc6369_43e3_453d_9944_cae58821c173-execution_via_workfolders_exe|Execution via WorkFolders.exe (high; windows / process_creation)]]
+- [[kb/sigma/rules/1cf465a1_2609_4c15_9b66_c32dbe4bfd67-legitimate_application_writing_files_in_uncommon_location|Legitimate Application Writing Files In Uncommon Location (high; windows / file_event)]]
+- [[kb/sigma/rules/1dd05363_104e_4b4a_b963_196a534b03a1-potential_suspicious_mofcomp_execution|Potential Suspicious Mofcomp Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/21dd6d38_2b18_4453_9404_a0fe4a0cc288-curl_download_and_execute_combination|Curl Download And Execute Combination (high; windows / process_creation)]]
+- [[kb/sigma/rules/2a4b3e61_9d22_4e4a_b60f_6e8f0cde6f25-potential_provisioning_registry_key_abuse_for_binary_proxy_execution|Potential Provisioning Registry Key Abuse For Binary Proxy Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/2d32dd6f_3196_4093_b9eb_1ad8ab088ca5-suspicious_response_file_execution_via_odbcconf_exe|Suspicious Response File Execution Via Odbcconf.EXE (high; windows / process_creation)]]
+- 83 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/007e5672_2088_4853_a562_7490ddc19447-invoke_html_application_jscript_engine_over_local_unc_simulating_lateral_movement|Invoke HTML Application - Jscript Engine over Local UNC Simulating Lateral Movement (powershell; windows)]]
+- [[kb/atomic/tests/0106ffa5_fab6_4c7d_82e3_e6b8867d5e5d-msiexec_exe_execute_the_dllregisterserver_function_of_a_dll|Msiexec.exe - Execute the DllRegisterServer function of a DLL (command_prompt; windows)]]
+- [[kb/atomic/tests/037e9d8a_9e46_4255_8b33_2ae3b545ca6f-control_panel_items|Control Panel Items (command_prompt; windows)]]
+- [[kb/atomic/tests/06d9deba_f732_48a8_af8e_bdd6e4d98c1d-installutil_uninstall_method_call_installtype_notransaction_action_uninstall_variant|InstallUtil Uninstall method call - '/installtype=notransaction /action=uninstall' variant (powershell; windows)]]
+- [[kb/atomic/tests/08ffca73_9a3d_471a_aeb0_68b4aa3ab37b-regsvr32_local_dll_execution|Regsvr32 local DLL execution (command_prompt; windows)]]
+- [[kb/atomic/tests/0e1483ba_8f0c_425d_b8c6_42736e058eaa-diskshadow_command_execution|DiskShadow Command Execution (powershell; windows)]]
+- [[kb/atomic/tests/0f8af516_9818_4172_922b_42986ef1e81d-compiled_html_help_remote_payload|Compiled HTML Help Remote Payload (command_prompt; windows)]]
+- [[kb/atomic/tests/13c0804e_615e_43ad_b223_2dfbacd0b0b3-lolbas_ie4uinit_exe_use_as_proxy|Lolbas ie4uinit.exe use as proxy (command_prompt; windows)]]
+- [[kb/atomic/tests/1483fab9_4f52_4217_a9ce_daa9d7747cae-mshta_executes_javascript_scheme_fetch_remote_payload_with_getobject|Mshta executes JavaScript Scheme Fetch Remote Payload With GetObject (command_prompt; windows)]]
+- [[kb/atomic/tests/15756147_7470_4a83_87fb_bb5662526247-invoke_chm_shortcut_command_with_its_and_help_topic|Invoke CHM Shortcut Command with ITS and Help Topic (powershell; windows)]]
+- 71 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

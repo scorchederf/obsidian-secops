@@ -45,6 +45,33 @@ The Registry contains a significant amount of information about the operating sy
 
 ![[workspaces/attack/techniques/T1012-query_registry-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-03-001-reg_exe_called_from_command_shell|CAR-2013-03-001: Reg.exe called from Command Shell]]
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2020-05-003-rare_lolbas_command_lines|CAR-2020-05-003: Rare LolBAS Command Lines]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/82880171_b475_4201_b811_e9c826cd5eaa-exports_critical_registry_keys_to_a_file|Exports Critical Registry Keys To a File (high; windows / process_creation)]]
+- [[kb/sigma/rules/9a4ff3b8_6187_4fd2_8e8b_e0eae1129495-syskey_registry_keys_access|SysKey Registry Keys Access (high; windows / security)]]
+- [[kb/sigma/rules/f8748f2c_89dc_4d95_afb0_5a2dfdbad332-sam_registry_hive_handle_request|SAM Registry Hive Handle Request (high; windows / security)]]
+- [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0434d081_bb32_42ce_bcbb_3548e4f2628f-query_registry_with_powershell_cmdlets|Query Registry with Powershell cmdlets (powershell; windows)]]
+- [[kb/atomic/tests/0d80d088_a84c_4353_af1a_fc8b439f1564-enumerate_com_objects_in_registry_with_powershell|Enumerate COM Objects in Registry with Powershell (powershell; windows)]]
+- [[kb/atomic/tests/5c784969_1d43_4ac7_8c3d_ed6d025ed10d-check_software_inventory_logging_sil_status_via_registry|Check Software Inventory Logging (SIL) status via Registry (command_prompt; windows)]]
+- [[kb/atomic/tests/6fb4c4c5_f949_4fd2_8af5_ddbc61595223-reg_query_for_alwaysinstallelevated_status|Reg query for AlwaysInstallElevated status (command_prompt; windows)]]
+- [[kb/atomic/tests/8f7578c4_9863_4d83_875c_a565573bbdf0-query_registry|Query Registry (command_prompt; windows)]]
+- [[kb/atomic/tests/96257079_cdc1_4aba_8705_3146e94b6dce-inspect_systemstartoptions_value_in_registry|Inspect SystemStartOptions Value in Registry (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

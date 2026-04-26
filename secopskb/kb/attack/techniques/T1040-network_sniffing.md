@@ -52,6 +52,29 @@ On network devices, adversaries may perform network captures using [[T1059-comma
 
 ![[workspaces/attack/techniques/T1040-network_sniffing-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2020-11-002-local_network_sniffing|CAR-2020-11-002: Local Network Sniffing]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/10c710c9_9104_4d5f_8829_5b65391e2a29-packet_capture_linux_socket_af_packet_sock_raw_with_sudo|Packet Capture Linux socket AF_PACKET,SOCK_RAW with sudo (bash; linux)]]
+- [[kb/atomic/tests/515575ab_d213_42b1_aa64_ef6a2dd4641b-packet_capture_linux_socket_af_inet_sock_packet_udp_with_sudo|Packet Capture Linux socket AF_INET,SOCK_PACKET,UDP with sudo (bash; linux)]]
+- [[kb/atomic/tests/7a0895f0_84c1_4adf_8491_a21510b1d4c1-packet_capture_linux_socket_af_inet_sock_raw_tcp_with_sudo|Packet Capture Linux socket AF_INET,SOCK_RAW,TCP with sudo (bash; linux)]]
+- [[kb/atomic/tests/7fe741f7_b265_4951_a7c7_320889083b3e-packet_capture_linux_using_tshark_or_tcpdump|Packet Capture Linux using tshark or tcpdump (bash; linux)]]
+- [[kb/atomic/tests/855fb8b4_b8ab_4785_ae77_09f5df7bff55-windows_internal_pktmon_set_filter|Windows Internal pktmon set filter (command_prompt; windows)]]
+- [[kb/atomic/tests/9c15a7de_de14_46c3_bc2a_6d94130986ae-powershell_network_sniffing|PowerShell Network Sniffing (powershell; windows)]]
+- [[kb/atomic/tests/9d04efee_eff5_4240_b8d2_07792b873608-packet_capture_macos_using_tcpdump_or_tshark|Packet Capture macOS using tcpdump or tshark (bash; macos)]]
+- [[kb/atomic/tests/a3a0d4c9_c068_4563_a08d_583bd05b884c-filtered_packet_capture_freebsd_using_dev_bpfn_with_sudo|Filtered Packet Capture FreeBSD using /dev/bpfN with sudo (sh; linux)]]
+- [[kb/atomic/tests/a5b2f6a0_24b4_493e_9590_c699f75723ca-packet_capture_windows_command_prompt|Packet Capture Windows Command Prompt (command_prompt; windows)]]
+- [[kb/atomic/tests/b1cbdf8b_6078_48f5_a890_11ea19d7f8e9-packet_capture_linux_socket_af_packet_sock_raw_with_bpf_filter_for_udp_with_sudo|Packet Capture Linux socket AF_PACKET,SOCK_RAW with BPF filter for UDP with sudo (bash; linux)]]
+- 6 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

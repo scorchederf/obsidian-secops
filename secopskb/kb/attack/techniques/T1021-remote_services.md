@@ -57,6 +57,53 @@ Legitimate applications (such as [[T1072-software_deployment_tools|T1072: Softwa
 
 ![[workspaces/attack/techniques/T1021-remote_services-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-003-smb_events_monitoring|CAR-2013-01-003: SMB Events Monitoring]]
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2013-05-003-smb_write_request|CAR-2013-05-003: SMB Write Request]]
+- [[kb/car/analytics/CAR-2013-05-005-smb_copy_and_execution|CAR-2013-05-005: SMB Copy and Execution]]
+- [[kb/car/analytics/CAR-2013-07-001-suspicious_arguments|CAR-2013-07-001: Suspicious Arguments]]
+- [[kb/car/analytics/CAR-2013-07-002-rdp_connection_detection|CAR-2013-07-002: RDP Connection Detection]]
+- [[kb/car/analytics/CAR-2013-10-001-user_login_activity_monitoring|CAR-2013-10-001: User Login Activity Monitoring]]
+- [[kb/car/analytics/CAR-2014-05-001-rpc_activity|CAR-2014-05-001: RPC Activity]]
+- [[kb/car/analytics/CAR-2014-11-004-remote_powershell_sessions|CAR-2014-11-004: Remote PowerShell Sessions]]
+- [[kb/car/analytics/CAR-2014-11-006-windows_remote_management_winrm|CAR-2014-11-006: Windows Remote Management (WinRM)]]
+- [[kb/car/analytics/CAR-2016-04-005-remote_desktop_logon|CAR-2016-04-005: Remote Desktop Logon]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/021310d9_30a6_480a_84b7_eaa69aeb92bb-first_time_seen_remote_named_pipe_zeek|First Time Seen Remote Named Pipe - Zeek (high; zeek / smb_files)]]
+- [[kb/sigma/rules/055fb54c_a8f4_4aee_bd44_f74cf30a0d9d-hacktool_sharpmove_tool_execution|HackTool - SharpMove Tool Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/05a2ab7e_ce11_4b63_86db_ab32e763e11d-mmc_spawning_windows_shell|MMC Spawning Windows Shell (high; windows / process_creation)]]
+- [[kb/sigma/rules/0d5675be_bc88_4172_86d3_1e96a4476536-potential_tampering_with_rdp_related_registry_keys_via_reg_exe|Potential Tampering With RDP Related Registry Keys Via Reg.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/10c14723_61c7_4c75_92ca_9af245723ad2-hacktool_potential_impacket_lateral_movement_activity|HackTool - Potential Impacket Lateral Movement Activity (high; windows / process_creation)]]
+- [[kb/sigma/rules/1fc0809e_06bf_4de3_ad52_25e5263b7623-publicly_accessible_rdp_service|Publicly Accessible RDP Service (high; zeek / rdp)]]
+- [[kb/sigma/rules/22777c9e_873a_4b49_855f_6072ab861a52-opencanary_smb_file_open_request|OpenCanary - SMB File Open Request (high; opencanary / application)]]
+- [[kb/sigma/rules/2f7979ae_f82b_45af_ac1d_2b10e93b0baa-potential_dcom_internetexplorer_application_dll_hijack|Potential DCOM InternetExplorer.Application DLL Hijack (critical; windows / file_event)]]
+- [[kb/sigma/rules/32d56ea1_417f_44ff_822b_882873f5f43b-impacket_psexec_execution|Impacket PsExec Execution (high; windows / security)]]
+- [[kb/sigma/rules/45545954_4016_43c6_855e_eae8f1c369dc-protected_storage_service_access|Protected Storage Service Access (high; windows / security)]]
+- 46 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/01d1c6c0_faf0_408e_b368_752a02285cb2-disable_nla_for_rdp_via_command_prompt|Disable NLA for RDP via Command Prompt (command_prompt; windows)]]
+- [[kb/atomic/tests/0eb03d41_79e4_4393_8e57_6344856be1cf-copy_and_execute_file_with_psexec|Copy and Execute File with PsExec (command_prompt; windows)]]
+- [[kb/atomic/tests/280812c8_4dae_43e9_a74e_1d08ab997c0e-esxi_enable_ssh_via_vim_cmd|ESXi - Enable SSH via VIM-CMD (command_prompt; windows)]]
+- [[kb/atomic/tests/2f840dd4_8a2e_4f44_beb3_6b2399ea3771-changing_rdp_port_to_non_standard_port_via_powershell|Changing RDP Port to Non Standard Port via Powershell (powershell; windows)]]
+- [[kb/atomic/tests/3386975b_367a_4fbb_9d77_4dcf3639ffd3-map_admin_share|Map admin share (command_prompt; windows)]]
+- [[kb/atomic/tests/355d4632_8cb9_449d_91ce_b566d0253d3e-rdp_to_domaincontroller|RDP to DomainController (powershell; windows)]]
+- [[kb/atomic/tests/505f24be_1c11_4694_b614_e01ae1cd2570-powershell_lateral_movement_using_excel_application_object|PowerShell Lateral Movement Using Excel Application Object (powershell; windows)]]
+- [[kb/atomic/tests/514e9cd7_9207_4882_98b1_c8f791bae3c5-map_admin_share_powershell|Map Admin Share PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/5295bd61_bd7e_4744_9d52_85962a4cf2d6-remote_code_execution_with_ps_credentials_using_invoke_command|Remote Code Execution with PS Credentials Using Invoke-Command (powershell; windows)]]
+- [[kb/atomic/tests/6dc74eb1_c9d6_4c53_b3b5_6f50ae339673-powershell_lateral_movement_using_mmc20|PowerShell Lateral Movement using MMC20 (powershell; windows)]]
+- 6 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0008-lateral_movement|TA0008: Lateral Movement]]

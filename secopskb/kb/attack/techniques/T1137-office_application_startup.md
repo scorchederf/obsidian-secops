@@ -65,6 +65,37 @@ A variety of features have been discovered in Outlook that can be abused to obta
 
 ![[workspaces/attack/techniques/T1137-office_application_startup-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0e20c89d_2264_44ae_8238_aeeaba609ece-potential_persistence_via_microsoft_office_startup_folder|Potential Persistence Via Microsoft Office Startup Folder (high; windows / file_event)]]
+- [[kb/sigma/rules/117d3d3a_755c_4a61_b23e_9171146d094c-suspicious_outlook_macro_created|Suspicious Outlook Macro Created (high; windows / file_event)]]
+- [[kb/sigma/rules/36fbec91_fa1b_4d5d_8df1_8d8edcb632ad-code_executed_via_office_add_in_xll_file|Code Executed Via Office Add-in XLL File (high; windows / ps_script)]]
+- [[kb/sigma/rules/396ae3eb_4174_4b9b_880e_dc0364d78a19-potential_persistence_via_outlook_loadmacroprovideronboot_setting|Potential Persistence Via Outlook LoadMacroProviderOnBoot Setting (high; windows / registry_set)]]
+- [[kb/sigma/rules/69483748_1525_4a6c_95ca_90dc8d431b68-suspicious_microsoft_office_child_process_macos|Suspicious Microsoft Office Child Process - MacOS (high; macos / process_creation)]]
+- [[kb/sigma/rules/8e1cb247_6cf6_42fa_b440_3f27d57e9936-potential_persistence_via_microsoft_office_add_in|Potential Persistence Via Microsoft Office Add-In (high; windows / file_event)]]
+- [[kb/sigma/rules/961e33d1_4f86_4fcf_80ab_930a708b2f82-potential_persistence_via_excel_add_in_registry|Potential Persistence Via Excel Add-in - Registry (high; windows / registry_set)]]
+- [[kb/sigma/rules/c3edc6a5_d9d4_48d8_930e_aab518390917-potential_persistence_via_outlook_form|Potential Persistence Via Outlook Form (high; windows / file_event)]]
+- [[kb/sigma/rules/e3b50fa5_3c3f_444e_937b_0a99d33731cd-outlook_macro_execution_without_warning_setting_enabled|Outlook Macro Execution Without Warning Setting Enabled (high; windows / registry_set)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/082141ed_b048_4c86_99c7_2b8da5b5bf48-persistent_code_execution_via_excel_vba_add_in_file_xlam|Persistent Code Execution Via Excel VBA Add-in File (XLAM) (powershell; windows)]]
+- [[kb/atomic/tests/441b1a0f_a771_428a_8af0_e99e4698cda3-code_executed_via_excel_add_in_file_xll|Code Executed Via Excel Add-in File (XLL) (powershell; windows)]]
+- [[kb/atomic/tests/5ff5249a_5807_480e_ab52_c430497a8a25-outlook_rules_enumerate_existing_rules_via_powershell_com_object|Outlook Rules - Enumerate Existing Rules via PowerShell COM Object (powershell; windows)]]
+- [[kb/atomic/tests/7a91ad51_e6d2_4d43_9471_f26362f5738e-install_outlook_home_page_persistence|Install Outlook Home Page Persistence (command_prompt; windows)]]
+- [[kb/atomic/tests/940db09e_80b6_4dd0_8d4d_7764f89b47a8-injecting_a_macro_into_the_word_normal_dotm_template_for_persistence_via_powershell|Injecting a Macro into the Word Normal.dotm Template for Persistence via PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/95408a99_4fa7_4cd6_a7ef_cb65f86351cf-persistent_code_execution_via_word_add_in_file_wll|Persistent Code Execution Via Word Add-in File (WLL) (powershell; windows)]]
+- [[kb/atomic/tests/9c307886_9fef_41d5_b344_073a0f5b2f5f-persistent_code_execution_via_excel_add_in_file_xll|Persistent Code Execution Via Excel Add-in File (XLL) (powershell; windows)]]
+- [[kb/atomic/tests/b0bd3d76_a57c_4699_83f4_8cd798dd09bd-outlook_rule_auto_forward_emails_to_external_address_via_com_object|Outlook Rule - Auto-Forward Emails to External Address via COM Object (powershell; windows)]]
+- [[kb/atomic/tests/bddfd8d4_7687_4971_b611_50a537ab3ab4-outlook_rule_sender_address_trigger_with_deletepermanently_action_via_com_object|Outlook Rule - Sender Address Trigger with DeletePermanently Action via COM Object (powershell; windows)]]
+- [[kb/atomic/tests/bfe6ac15_c50b_4c4f_a186_0fc6b8ba936c-office_application_startup_outlook_as_a_c2|Office Application Startup - Outlook as a C2 (command_prompt; windows)]]
+- 4 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

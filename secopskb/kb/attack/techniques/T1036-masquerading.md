@@ -63,6 +63,45 @@ Renaming abusable system utilities to evade security monitoring is also a form o
 
 ![[workspaces/attack/techniques/T1036-masquerading-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-05-002-suspicious_run_locations|CAR-2013-05-002: Suspicious Run Locations]]
+- [[kb/car/analytics/CAR-2013-05-009-running_executables_with_same_hash_and_different_names|CAR-2013-05-009: Running executables with same hash and different names]]
+- [[kb/car/analytics/CAR-2021-04-001-common_windows_process_masquerading|CAR-2021-04-001: Common Windows Process Masquerading]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0b0cd537_fc77_4e6e_a973_e53495c1083d-renamed_office_binary_execution|Renamed Office Binary Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/0ba1da6d_b6ce_4366_828c_18826c9de23e-potential_defense_evasion_via_rename_of_highly_relevant_binaries|Potential Defense Evasion Via Rename Of Highly Relevant Binaries (high; windows / process_creation)]]
+- [[kb/sigma/rules/0cf2e1c6_8d10_4273_8059_738778f981ad-potential_werfault_reflectdebugger_registry_value_abuse|Potential WerFault ReflectDebugger Registry Value Abuse (high; windows / registry_set)]]
+- [[kb/sigma/rules/1a1ed54a_2ba4_4221_94d5_01dee560d71e-renamed_createdump_utility_execution|Renamed CreateDump Utility Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/1c12727d_02bf_45ff_a9f3_d49806a3cf43-renamed_plink_execution|Renamed Plink Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/2ddef153_167b_4e89_86b6_757a9e65dcac-file_download_via_bitsadmin_to_a_suspicious_target_folder|File Download Via Bitsadmin To A Suspicious Target Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/340a090b_c4e9_412e_bb36_b4b16fe96f9b-renamed_zoho_dctask64_execution|Renamed ZOHO Dctask64 Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/396f6630_f3ac_44e3_bfc8_1b161bc00c4e-suspicious_child_process_of_wermgr_exe|Suspicious Child Process Of Wermgr.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/3dfd06d2_eaf4_4532_9555_68aca59f57c4-process_execution_from_a_potentially_suspicious_folder|Process Execution From A Potentially Suspicious Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/4922a5dd_6743_4fc2_8e81_144374280997-flash_player_update_from_suspicious_location|Flash Player Update from Suspicious Location (high; proxy)]]
+- 36 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/03ae82a6_9fa0_465b_91df_124d8ca5c4e8-masquerading_cmd_exe_as_vedetector_exe|Masquerading cmd.exe as VEDetector.exe (powershell; windows)]]
+- [[kb/atomic/tests/24136435_c91a_4ede_9da1_8b284a1c1a23-masquerading_wscript_exe_running_as_svchost_exe|Masquerading - wscript.exe running as svchost.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/35eb8d16_9820_4423_a2a1_90c4f5edd9ca-masquerade_as_a_built_in_system_executable|Masquerade as a built-in system executable (powershell; windows)]]
+- [[kb/atomic/tests/3a2a578b_0a01_46e4_92e3_62e2859b42f0-masquerading_cscript_exe_running_as_notepad_exe|Masquerading - cscript.exe running as notepad.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/4449c89b_ec82_43a4_89c1_91e2f1abeecc-malware_masquerading_and_execution_from_zip_file|Malware Masquerading and Execution from Zip File (powershell; windows)]]
+- [[kb/atomic/tests/51005ac7_52e2_45e0_bdab_d17c6d4916cd-system_file_copied_to_unusual_location|System File Copied to Unusual Location (powershell; windows)]]
+- [[kb/atomic/tests/5ba5a3d1_cf3c_4499_968a_a93155d1f717-masquerading_as_windows_lsass_process|Masquerading as Windows LSASS process (command_prompt; windows)]]
+- [[kb/atomic/tests/812c3ab8_94b0_4698_a9bf_9420af23ce24-execute_a_process_from_a_directory_masquerading_as_the_current_parent_directory|Execute a process from a directory masquerading as the current parent directory (sh; macos, linux)]]
+- [[kb/atomic/tests/83810c46_f45e_4485_9ab6_8ed0e9e6ed7f-malicious_process_masquerading_as_lsm_exe|Malicious process Masquerading as LSM.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/89a7dd26_e510_4c9f_9b15_f3bae333360f-space_after_filename_manual|Space After Filename (Manual) (manual; macos)]]
+- 10 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

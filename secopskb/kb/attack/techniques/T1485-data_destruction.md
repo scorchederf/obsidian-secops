@@ -48,6 +48,25 @@ In cloud environments, adversaries may leverage access to delete cloud storage o
 
 ![[workspaces/attack/techniques/T1485-data_destruction-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/a4824fca_976f_4964_b334_0621379e84c4-potential_file_overwrite_via_sysinternals_sdelete|Potential File Overwrite Via Sysinternals SDelete (high; windows / process_creation)]]
+- [[kb/sigma/rules/add64136_62e5_48ea_807e_88638d02df1e-fsutil_suspicious_invocation|Fsutil Suspicious Invocation (high; windows / process_creation)]]
+- [[kb/sigma/rules/c1d867fe_8d95_4487_aab4_e53f2d339f90-renamed_sysinternals_sdelete_execution|Renamed Sysinternals Sdelete Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1207ddff_f25b_41b3_aa0e_7c26d2b546d1-esxi_delete_vm_snapshots|ESXi - Delete VM Snapshots (command_prompt; windows)]]
+- [[kb/atomic/tests/321fd25e_0007_417f_adec_33232252be19-overwrite_deleted_data_on_c_drive|Overwrite deleted data on C drive (command_prompt; windows)]]
+- [[kb/atomic/tests/38deee99_fd65_4031_bec8_bfa4f9f26146-freebsd_macos_linux_overwrite_file_with_dd|FreeBSD/macOS/Linux - Overwrite file with DD (sh; linux, macos)]]
+- [[kb/atomic/tests/476419b5_aebf_4366_a131_ae3e8dae5fc2-windows_overwrite_file_with_sysinternals_sdelete|Windows - Overwrite file with SysInternals SDelete (powershell; windows)]]
+- [[kb/atomic/tests/4ac71389_40f4_448a_b73f_754346b3f928-gcp_delete_bucket|GCP - Delete Bucket (sh; iaas:gcp)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

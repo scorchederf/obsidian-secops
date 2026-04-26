@@ -54,6 +54,21 @@ Adversaries may also make changes to victim systems to abuse non-standard ports.
 
 ![[workspaces/attack/techniques/T1571-non-standard_port-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/4b89abaa_99fe_4232_afdd_8f9aa4d20382-potentially_suspicious_malware_callback_communication|Potentially Suspicious Malware Callback Communication (high; windows / network_connection)]]
+- [[kb/sigma/rules/dbfc7c98_04ab_4ab7_aa94_c74d22aa7376-potentially_suspicious_malware_callback_communication_linux|Potentially Suspicious Malware Callback Communication - Linux (high; linux / network_connection)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/21fe622f_8e53_4b31_ba83_6d333c2583f4-testing_usage_of_uncommonly_used_port_with_powershell|Testing usage of uncommonly used port with PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/5db21e1d_dd9c_4a50_b885_b1e748912767-testing_usage_of_uncommonly_used_port|Testing usage of uncommonly used port (sh; linux, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0011-command_and_control|TA0011: Command and Control]]

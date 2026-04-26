@@ -49,6 +49,22 @@ Adversaries may use the information gained to shape follow-on behaviors, such as
 
 ![[workspaces/attack/techniques/T1526-cloud_service_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/35b781cc_1a08_4a5a_80af_42fd7c315c6b-discovery_using_azurehound|Discovery Using AzureHound (high; azure / signinlogs)]]
+- [[kb/sigma/rules/38646daa_e78f_4ace_9de0_55547b2d30da-pua_seatbelt_execution|PUA - Seatbelt Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1e40bb1d_195e_401e_a86b_c192f55e005c-azure_dump_subscription_data_with_microburst|Azure - Dump Subscription Data with MicroBurst (powershell; iaas:azure)]]
+- [[kb/atomic/tests/58f57c8f_db14_4e62_a4d3_5aaf556755d7-azure_enumerate_common_cloud_services|Azure - Enumerate common cloud services (powershell; iaas:azure)]]
+- [[kb/atomic/tests/aa8b9bcc_46fa_4a59_9237_73c7b93a980c-aws_enumerate_common_cloud_services|AWS - Enumerate common cloud services (powershell; iaas:aws)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

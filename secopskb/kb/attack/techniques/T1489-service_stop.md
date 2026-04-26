@@ -45,6 +45,30 @@ Threat actors may also disable or stop service in cloud environments. For exampl
 
 ![[workspaces/attack/techniques/T1489-service_stop-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/220457c1_1c9f_4c2e_afe6_9598926222c1-delete_all_scheduled_tasks|Delete All Scheduled Tasks (high; windows / process_creation)]]
+- [[kb/sigma/rules/9ac94dc8_9042_493c_ba45_3b5e7c86b980-disable_important_scheduled_task|Disable Important Scheduled Task (high; windows / process_creation)]]
+- [[kb/sigma/rules/9e3cb244_bdb8_4632_8c90_6079c8f4f16d-important_scheduled_task_deleted|Important Scheduled Task Deleted (high; windows / taskscheduler)]]
+- [[kb/sigma/rules/ce72ef99_22f1_43d4_8695_419dcb5d9330-suspicious_windows_service_tampering|Suspicious Windows Service Tampering (high; windows / process_creation)]]
+- [[kb/sigma/rules/dbc1f800_0fe0_4bc0_9c66_292c2abe3f78-delete_important_scheduled_task|Delete Important Scheduled Task (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/08b4718f_a8bf_4bb5_a552_294fc5178fea-linux_stop_service_by_killing_process_using_pkill|Linux - Stop service by killing process using pkill (sh; linux)]]
+- [[kb/atomic/tests/21dfb440_830d_4c86_a3e5_2a491d5a8d04-windows_stop_service_using_service_controller|Windows - Stop service using Service Controller (command_prompt; windows)]]
+- [[kb/atomic/tests/332f4c76_7e96_41a6_8cc2_7361c49db8be-linux_stop_service_by_killing_process_using_kill|Linux - Stop service by killing process using kill (sh; linux)]]
+- [[kb/atomic/tests/41274289_ec9c_4213_bea4_e43c4aa57954-windows_stop_service_using_net_exe|Windows - Stop service using net.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/42e3a5bd_1e45_427f_aa08_2a65fa29a820-linux_stop_service_using_systemctl|Linux - Stop service using systemctl (sh; linux)]]
+- [[kb/atomic/tests/6e76f56f_2373_4a6c_a63f_98b7b72761f1-abuse_of_linux_magic_system_request_key_for_send_a_sigterm_to_all_processes|Abuse of linux magic system request key for Send a SIGTERM to all processes (bash; linux)]]
+- [[kb/atomic/tests/e5d95be6_02ee_4ff1_aebe_cf86013b6189-linux_stop_service_by_killing_process_using_killall|Linux - Stop service by killing process using killall (sh; linux)]]
+- [[kb/atomic/tests/f3191b84_c38b_400b_867e_3a217a27795f-windows_stop_service_by_killing_process|Windows - Stop service by killing process (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

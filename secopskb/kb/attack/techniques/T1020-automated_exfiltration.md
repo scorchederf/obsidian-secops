@@ -52,6 +52,21 @@ When automated exfiltration is used, other exfiltration techniques likely apply 
 
 ![[workspaces/attack/techniques/T1020-automated_exfiltration-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/457cc9ac_d8e6_4d1d_8c0e_251d0f11a74c-modification_or_deletion_of_an_aws_rds_cluster|Modification or Deletion of an AWS RDS Cluster (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/c3f265c7_ff03_4056_8ab2_d486227b4599-restore_public_aws_rds_instance|Restore Public AWS RDS Instance (high; aws / cloudtrail)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/5b380e96_b0ef_4072_8a8e_f194cb9eb9ac-exfiltration_via_encrypted_ftp|Exfiltration via Encrypted FTP (powershell; windows)]]
+- [[kb/atomic/tests/9c780d3d_3a14_4278_8ee5_faaeb2ccfbe0-icedid_botnet_http_put|IcedID Botnet HTTP PUT (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0010-exfiltration|TA0010: Exfiltration]]

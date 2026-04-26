@@ -45,6 +45,19 @@ This technique may also enable [[T1187-forced_authentication|T1187: Forced Authe
 
 ![[workspaces/attack/techniques/T1221-template_injection-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/ada3bc4f_f0fd_42b9_ba91_e105e8af7342-server_side_template_injection_strings|Server Side Template Injection Strings (high; webserver)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/1489e08a_82c7_44ee_b769_51b72d03521d-winword_remote_template_injection|WINWORD Remote Template Injection (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

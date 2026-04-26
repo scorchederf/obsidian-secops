@@ -66,6 +66,38 @@ Sometimes a user's action may be required to open it for deobfuscation or decryp
 
 ![[workspaces/attack/techniques/T1140-deobfuscate_decode_files_or_information-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2021-05-009-certutil_with_decode_argument|CAR-2021-05-009: CertUtil With Decode Argument]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/09a910bf_f71f_4737_9c40_88880ba5913d-potential_base64_decoded_from_images|Potential Base64 Decoded From Images (high; macos / process_creation)]]
+- [[kb/sigma/rules/1a0d4aba_7668_4365_9ce4_6d79ab088dfd-ping_hex_ip|Ping Hex IP (high; windows / process_creation)]]
+- [[kb/sigma/rules/cc7abbd0_762b_41e3_8a26_57ad50d2eea3-mshta_execution_with_suspicious_file_extensions|MSHTA Execution with Suspicious File Extensions (high; windows / process_creation)]]
+- [[kb/sigma/rules/ceb55fd0_726e_4656_bf4e_b585b7f7d572-suspicious_inbox_manipulation_rules|Suspicious Inbox Manipulation Rules (high; azure / riskdetection)]]
+- [[kb/sigma/rules/e32d4572_9826_4738_b651_95fa63747e8a-base64_encoded_powershell_command_detected|Base64 Encoded PowerShell Command Detected (high; windows / process_creation)]]
+- [[kb/sigma/rules/fdb62a13_9a81_4e5c_a38f_ea93a16f6d7c-powershell_base64_encoded_frombase64string_cmdlet|PowerShell Base64 Encoded FromBase64String Cmdlet (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/005943f9_8dd5_4349_8b46_0313c0a9f973-hex_decoding_with_shell_utilities|Hex decoding with shell utilities (sh; linux, macos)]]
+- [[kb/atomic/tests/18ee2002_66e8_4518_87c5_c0ec9c8299ac-freebsd_b64encode_shebang_in_cli|FreeBSD b64encode Shebang in CLI (sh; linux)]]
+- [[kb/atomic/tests/356dc0e8_684f_4428_bb94_9313998ad608-base64_decoding_with_python|Base64 decoding with Python (sh; linux, macos)]]
+- [[kb/atomic/tests/3a15c372_67c1_4430_ac8e_ec06d641ce4d-linux_base64_encoded_shebang_in_cli|Linux Base64 Encoded Shebang in CLI (sh; linux, macos)]]
+- [[kb/atomic/tests/6604d964_b9f6_4d4b_8ce8_499829a14d0a-base64_decoding_with_perl|Base64 decoding with Perl (sh; linux, macos)]]
+- [[kb/atomic/tests/71abc534_3c05_4d0c_80f7_cbe93cb2aa94-certutil_rename_and_decode|Certutil Rename and Decode (command_prompt; windows)]]
+- [[kb/atomic/tests/9f8b1c54_cb76_4d5e_bb1f_2f5c0e8f5a11-expand_cab_with_expand_exe|Expand CAB with expand.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/b4f6a567_a27a_41e5_b8ef_ac4b4008bb7e-base64_decoding_with_shell_utilities|Base64 decoding with shell utilities (sh; linux, macos)]]
+- [[kb/atomic/tests/b6097712_c42e_4174_b8f2_4b1e1a5bbb3d-base64_decoding_with_shell_utilities_freebsd|Base64 decoding with shell utilities (freebsd) (sh; linux)]]
+- [[kb/atomic/tests/c3b65cd5_ee51_4e98_b6a3_6cbdec138efc-xor_decoding_and_command_execution_using_python|XOR decoding and command execution using Python (bash; linux, macos)]]
+- 1 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

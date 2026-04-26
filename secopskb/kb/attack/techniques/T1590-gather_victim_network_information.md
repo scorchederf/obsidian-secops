@@ -39,6 +39,15 @@ Adversaries may gather this information in various ways, such as direct collecti
 
 ![[workspaces/attack/techniques/T1590-gather_victim_network_information-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/2c32b543_1058_4808_91c6_5b31b8bed6c5-pua_crassus_execution|PUA - Crassus Execution (high; windows / process_creation)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0043-reconnaissance|TA0043: Reconnaissance]]

@@ -73,6 +73,50 @@ Adversaries may use task scheduling to execute programs at system startup or on 
 
 ![[workspaces/attack/techniques/T1053-scheduled_task_job-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-01-002-autorun_differences|CAR-2013-01-002: Autorun Differences]]
+- [[kb/car/analytics/CAR-2013-04-002-quick_execution_of_a_series_of_suspicious_commands|CAR-2013-04-002: Quick execution of a series of suspicious commands]]
+- [[kb/car/analytics/CAR-2013-05-004-execution_with_at|CAR-2013-05-004: Execution with AT]]
+- [[kb/car/analytics/CAR-2013-08-001-execution_with_schtasks|CAR-2013-08-001: Execution with schtasks]]
+- [[kb/car/analytics/CAR-2015-04-001-remotely_scheduled_tasks_via_at|CAR-2015-04-001: Remotely Scheduled Tasks via AT]]
+- [[kb/car/analytics/CAR-2015-04-002-remotely_scheduled_tasks_via_schtasks|CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks]]
+- [[kb/car/analytics/CAR-2020-09-001-scheduled_task_fileaccess|CAR-2020-09-001: Scheduled Task - FileAccess]]
+- [[kb/car/analytics/CAR-2021-12-001-scheduled_task_creation_or_modification_containing_suspicious_scripts_extensions_or_user_writable_paths|CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/058f4380_962d_40a5_afce_50207d36d7e2-hacktool_crackmapexec_execution_patterns|HackTool - CrackMapExec Execution Patterns (high; windows / process_creation)]]
+- [[kb/sigma/rules/0fcd1c79_4eeb_4746_aba9_1b458f7a79cb-remote_schedule_task_lateral_movement_via_atsvc|Remote Schedule Task Lateral Movement via ATSvc (high; rpc_firewall / application)]]
+- [[kb/sigma/rules/1a2ea919_d11d_4d1e_8535_06cda13be20f-triple_cross_ebpf_rootkit_default_persistence|Triple Cross eBPF Rootkit Default Persistence (high; linux / file_event)]]
+- [[kb/sigma/rules/1c0e41cd_21bb_4433_9acc_4a2cd6367b9b-suspicious_modification_of_scheduled_tasks|Suspicious Modification Of Scheduled Tasks (high; windows / process_creation)]]
+- [[kb/sigma/rules/24c8392b_aa3c_46b7_a545_43f71657fe98-suspicious_schtasks_schedule_types|Suspicious Schtasks Schedule Types (high; windows / process_creation)]]
+- [[kb/sigma/rules/26488ad0_f9fd_4536_876f_52fea846a2e4-hacktool_sharpersist_execution|HackTool - SharPersist Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/2daa93a0_a5fb_41c5_8cd8_3c11294bfd1f-potential_ssh_tunnel_persistence_install_using_a_scheduled_task|Potential SSH Tunnel Persistence Install Using A Scheduled Task (high; windows / process_creation)]]
+- [[kb/sigma/rules/39019a4e_317f_4ce3_ae63_309a8c6b53c5-suspicious_scheduled_task_creation_involving_temp_folder|Suspicious Scheduled Task Creation Involving Temp Folder (high; windows / process_creation)]]
+- [[kb/sigma/rules/3a734d25_df5c_4b99_8034_af1ddb5883a4-suspicious_scheduled_task_creation|Suspicious Scheduled Task Creation (high; windows / security)]]
+- [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution (high; windows / process_creation)]]
+- 19 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/02124c37_767e_4b76_9383_c9fc366d9d4c-scheduled_task_persistence_via_eventviewer_msc|Scheduled Task Persistence via Eventviewer.msc (command_prompt; windows)]]
+- [[kb/atomic/tests/078e69eb_d9fb_450e_b9d0_2e118217c846-cron_add_script_to_etc_cron_d_folder|Cron - Add script to /etc/cron.d folder (sh; linux)]]
+- [[kb/atomic/tests/2d943c18_e74a_44bf_936f_25ade6cccab4-cron_add_script_to_var_spool_cron_crontabs_folder|Cron - Add script to /var/spool/cron/crontabs/ folder (bash; linux)]]
+- [[kb/atomic/tests/2e5eac3e_327b_4a88_a0c0_c4057039a8dd-scheduled_task_remote|Scheduled task Remote (command_prompt; windows)]]
+- [[kb/atomic/tests/3de33f5b_62e5_4e63_a2a0_6fd8808c80ec-create_a_user_level_transient_systemd_service_and_timer|Create a user level transient systemd service and timer (sh; linux)]]
+- [[kb/atomic/tests/42f53695_ad4a_4546_abb6_7d837f644a71-scheduled_task_local|Scheduled task Local (command_prompt; windows)]]
+- [[kb/atomic/tests/435057fb_74b1_410e_9403_d81baf194f75-cron_replace_crontab_with_referenced_file|Cron - Replace crontab with referenced file (sh; linux, macos)]]
+- [[kb/atomic/tests/4a6c0dc4_0f2a_4203_9298_a5a9bdc21ed8-at_exe_scheduled_task|At.exe Scheduled task (command_prompt; windows)]]
+- [[kb/atomic/tests/704333ca_cc12_4bcf_9916_101844881f54-scheduled_task_ghost_task_via_registry_key_manipulation|Scheduled Task ("Ghost Task") via Registry Key Manipulation (command_prompt; windows)]]
+- [[kb/atomic/tests/7266d898_ac82_4ec0_97c7_436075d0d08e-at_schedule_a_job|At - Schedule a job (sh; linux)]]
+- 14 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0002-execution|TA0002: Execution]]

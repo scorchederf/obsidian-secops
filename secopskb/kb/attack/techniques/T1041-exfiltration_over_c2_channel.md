@@ -62,6 +62,20 @@ Adversaries may steal data by exfiltrating it over an existing command and contr
 
 ![[workspaces/attack/techniques/T1041-exfiltration_over_c2_channel-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/b4e6b016_a2ac_4759_ad85_8000b300d61e-opencanary_tftp_request|OpenCanary - TFTP Request (high; opencanary / application)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/c9207f3e_213d_4cc7_ad2a_7697a7237df9-text_based_data_exfiltration_using_dns_subdomains|Text Based Data Exfiltration using DNS subdomains (powershell; windows)]]
+- [[kb/atomic/tests/d1253f6e_c29b_49dc_b466_2147a6191932-c2_data_exfiltration|C2 Data Exfiltration (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0010-exfiltration|TA0010: Exfiltration]]

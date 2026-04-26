@@ -63,6 +63,23 @@ In some cases, adversaries may conduct “second-order” supply chain compromis
 
 ![[workspaces/attack/techniques/T1195-supply_chain_compromise-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/34e1c7d4_0cd5_419d_9f1b_1dad3f61018d-outdated_dependency_or_vulnerability_alert_disabled|Outdated Dependency Or Vulnerability Alert Disabled (high; github / audit)]]
+- [[kb/sigma/rules/3b8f4c92_6a51_4d7e_9c3a_8e2d1f5a7b09-uncommon_file_created_by_notepad_updater_gup_exe|Uncommon File Created by Notepad++ Updater Gup.EXE (high; windows / file_event)]]
+- [[kb/sigma/rules/805c55d9_31e6_4846_9878_c34c75054fe9-octopus_scanner_malware|Octopus Scanner Malware (high; windows / file_event)]]
+- [[kb/sigma/rules/bb0e87ce_c89f_4857_84fa_095e4483e9cb-suspicious_child_process_of_notepad_updater_gup_exe|Suspicious Child Process of Notepad++ Updater - GUP.Exe (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/82a9f001_94c5_495e_9ed5_f530dbded5e2-octopus_scanner_malware_open_source_supply_chain|Octopus Scanner Malware Open Source Supply Chain (command_prompt; windows)]]
+- [[kb/atomic/tests/a9604672_cd46_493b_b58f_fd4124c22dd3-simulate_npm_package_installation_on_a_linux_system|Simulate npm package installation on a Linux system (bash; containers, linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0001-initial_access|TA0001: Initial Access]]

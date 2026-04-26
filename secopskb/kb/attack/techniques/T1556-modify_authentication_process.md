@@ -77,6 +77,29 @@ Adversaries may maliciously modify a part of this process to either reveal crede
 
 ![[workspaces/attack/techniques/T1556-modify_authentication_process-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/60de9b57_dc4d_48b9_a6a0_b39e0469f876-disabling_multi_factor_authentication|Disabling Multi Factor Authentication (high; m365 / audit)]]
+- [[kb/sigma/rules/63bf8794_9917_45bc_88dd_e1b5abc0ecfd-powershell_install_a_dll_in_system_directory|Powershell Install a DLL in System Directory (high; windows / ps_script)]]
+- [[kb/sigma/rules/8622c92d_c00e_463c_b09d_fd06166f6794-github_high_risk_configuration_disabled|Github High Risk Configuration Disabled (high; github / audit)]]
+- [[kb/sigma/rules/b61e87c0_50db_4b2e_8986_6a2be94b33b0-directory_service_restore_mode_dsrm_registry_value_tampering|Directory Service Restore Mode(DSRM) Registry Value Tampering (high; windows / registry_set)]]
+- [[kb/sigma/rules/d3adb3ef_b7e7_4003_9092_1924c797db35-aws_identity_center_identity_provider_change|AWS Identity Center Identity Provider Change (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/f598ea0c_c25a_4f72_a219_50c44411c791-possible_shadow_credentials_added|Possible Shadow Credentials Added (high; windows / security)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0ee8081f_e9a7_4a2e_a23f_68473023184f-skeleton_key_via_mimikatz|Skeleton Key via Mimikatz (powershell; windows)]]
+- [[kb/atomic/tests/4b9dde80_ae22_44b1_a82a_644bf009eb9c-malicious_pam_rule|Malicious PAM rule (sh; linux)]]
+- [[kb/atomic/tests/65208808_3125_4a2e_8389_a0a00e9ab326-malicious_pam_module|Malicious PAM module (sh; linux)]]
+- [[kb/atomic/tests/91580da6_bc6e_431b_8b88_ac77180005f2-install_additional_authentication_packages|Install Additional Authentication Packages (powershell; windows)]]
+- [[kb/atomic/tests/a7961770_beb5_4134_9674_83d7e1fa865c-install_and_register_password_filter_dll|Install and Register Password Filter DLL (powershell; windows)]]
+- [[kb/atomic/tests/b17eacac_282d_4ca8_a240_46602cf863e3-malicious_pam_rule_freebsd|Malicious PAM rule (freebsd) (sh; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

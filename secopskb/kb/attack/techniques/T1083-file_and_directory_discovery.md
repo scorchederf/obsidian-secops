@@ -57,6 +57,33 @@ Some files and directories may require elevated or specific user permissions to 
 
 ![[workspaces/attack/techniques/T1083-file_and_directory_discovery-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/093d68c7_762a_42f4_9f46_95e79142571a-shell_execution_via_nice_linux|Shell Execution via Nice - Linux (high; linux / process_creation)]]
+- [[kb/sigma/rules/38646daa_e78f_4ace_9de0_55547b2d30da-pua_seatbelt_execution|PUA - Seatbelt Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/4b09c71e_4269_4111_9cdd_107d8867f0cc-shell_execution_via_flock_linux|Shell Execution via Flock - Linux (high; linux / process_creation)]]
+- [[kb/sigma/rules/6adfbf8f_52be_4444_9bac_81b539624146-shell_execution_via_find_linux|Shell Execution via Find - Linux (high; linux / process_creation)]]
+- [[kb/sigma/rules/7ab8f73a_fcff_428b_84aa_6a5ff7877dea-vim_gtfobin_abuse_linux|Vim GTFOBin Abuse - Linux (high; linux / process_creation)]]
+- [[kb/sigma/rules/9b5de532_a757_4d70_946c_1f3e44f48b4d-shell_execution_gcc_linux|Shell Execution GCC  - Linux (high; linux / process_creation)]]
+- [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0e36303b_6762_4500_b003_127743b80ba6-file_and_directory_discovery_cmd_exe|File and Directory Discovery (cmd.exe) (command_prompt; windows)]]
+- [[kb/atomic/tests/13c5e1ae_605b_46c4_a79f_db28c77ff24e-nix_file_and_directory_discovery_2|Nix File and Directory Discovery 2 (sh; linux, macos)]]
+- [[kb/atomic/tests/2158908e_b7ef_4c21_8a83_3ce4dd05a924-file_and_directory_discovery_powershell|File and Directory Discovery (PowerShell) (powershell; windows)]]
+- [[kb/atomic/tests/361fe49d_0c19_46ec_a483_ccb92d38e88e-identifying_network_shares_linux|Identifying Network Shares - Linux (sh; linux)]]
+- [[kb/atomic/tests/4a233a40_caf7_4cf1_890a_c6331bbc72cf-esxi_enumerate_vmdks_available_on_an_esxi_host|ESXi - Enumerate VMDKs available on an ESXi Host (command_prompt; windows)]]
+- [[kb/atomic/tests/95a21323_770d_434c_80cd_6f6fbf7af432-recursive_enumerate_files_and_directories_by_powershell|Recursive Enumerate Files And Directories By Powershell (powershell; windows)]]
+- [[kb/atomic/tests/c5bec457_43c9_4a18_9a24_fe151d8971b7-launch_dirlister_executable|Launch DirLister Executable (powershell; windows)]]
+- [[kb/atomic/tests/c6c34f61_1c3e_40fb_8a58_d017d88286d8-simulating_maze_directory_enumeration|Simulating MAZE Directory Enumeration (powershell; windows)]]
+- [[kb/atomic/tests/ffc8b249_372a_4b74_adcd_e4c0430842de-nix_file_and_directory_discovery|Nix File and Directory Discovery (sh; linux, macos)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0007-discovery|TA0007: Discovery]]

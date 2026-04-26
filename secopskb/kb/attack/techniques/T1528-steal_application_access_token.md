@@ -67,6 +67,28 @@ Application access tokens may function within a limited lifetime, limiting how l
 
 ![[workspaces/attack/techniques/T1528-steal_application_access_token-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0055ad1f_be85_4798_83cf_a6da17c993b3-application_uri_configuration_changes|Application URI Configuration Changes (high; azure / auditlogs)]]
+- [[kb/sigma/rules/0adc67e0_a68f_4ffd_9c43_28905aad5d6a-hacktool_koh_default_named_pipe|HackTool - Koh Default Named Pipe (critical; windows / pipe_created)]]
+- [[kb/sigma/rules/25cde13e_8e20_4c29_b949_4e795b76f16f-suspicious_teams_application_related_objectacess_event|Suspicious Teams Application Related ObjectAcess Event (high; windows / security)]]
+- [[kb/sigma/rules/53acd925_2003_440d_a1f3_71a5253fe237-anonymous_ip_address|Anonymous IP Address (high; azure / riskdetection)]]
+- [[kb/sigma/rules/6555754e_5e7f_4a67_ad1c_4041c413a007-anomalous_token|Anomalous Token (high; azure / riskdetection)]]
+- [[kb/sigma/rules/8a4519e8_e64a_40b6_ae85_ba8ad2177559-renamed_browsercore_exe_execution|Renamed BrowserCore.EXE Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/a6355fbe_f36f_45d8_8efc_ab42465cbc52-delegated_permissions_granted_for_all_users|Delegated Permissions Granted For All Users (high; azure / auditlogs)]]
+- [[kb/sigma/rules/a84fc3b1_c9ce_4125_8e74_bdcdb24021f1-primary_refresh_token_access_attempt|Primary Refresh Token Access Attempt (high; azure / riskdetection)]]
+- [[kb/sigma/rules/c1d147ae_a951_48e5_8b41_dcd0170c7213-app_granted_microsoft_permissions|App Granted Microsoft Permissions (high; azure / auditlogs)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/67aaf4cb_54ce_42e2_ab56_e0a9bcc089b1-azure_functions_code_upload_functions_code_injection_via_file_share_modification_to_retrieve_the_functions_identity_access_token|Azure - Functions code upload - Functions code injection via File Share modification to retrieve the Functions identity access token (powershell; iaas:azure)]]
+- [[kb/atomic/tests/9a5352e4_56e5_45c2_9b3f_41a46d3b3a43-azure_functions_code_upload_functions_code_injection_via_blob_upload|Azure - Functions code upload - Functions code injection via Blob upload (powershell; iaas:azure)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0006-credential_access|TA0006: Credential Access]]

@@ -62,6 +62,22 @@ Rootkits that reside or modify boot sectors are known as [[T1542-pre-os_boot#^t1
 
 ![[workspaces/attack/techniques/T1014-rootkit-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/22236d75_d5a0_4287_bf06_c93b1770860f-triple_cross_ebpf_rootkit_install_commands|Triple Cross eBPF Rootkit Install Commands (high; linux / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0b996469_48c6_46e2_8155_a17f8b6c2247-loadable_kernel_module_based_rootkit_diamorphine|Loadable Kernel Module based Rootkit (Diamorphine) (sh; linux)]]
+- [[kb/atomic/tests/1338bf0c_fd0c_48c0_9e65_329f18e2c0d3-dynamic_linker_based_rootkit_libprocesshider|dynamic-linker based rootkit (libprocesshider) (sh; linux)]]
+- [[kb/atomic/tests/75483ef8_f10f_444a_bf02_62eb0e48db6f-loadable_kernel_module_based_rootkit|Loadable Kernel Module based Rootkit (sh; linux)]]
+- [[kb/atomic/tests/dfb50072_e45a_4c75_a17e_a484809c8553-loadable_kernel_module_based_rootkit|Loadable Kernel Module based Rootkit (sh; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

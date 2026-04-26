@@ -66,6 +66,18 @@ For attacks attempting to saturate the providing network, see [[T1498-network_de
 
 ![[workspaces/attack/techniques/T1499-endpoint_denial_of_service-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/1da8ce0b_855d_4004_8860_7d64d42063b1-apache_segmentation_fault|Apache Segmentation Fault (high; apache)]]
+- [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event (critical; windows / application)]]
+- [[kb/sigma/rules/59ec40bb_322e_40ab_808d_84fa690d7e56-nginx_core_dump|Nginx Core Dump (high; nginx)]]
+- [[kb/sigma/rules/f14719ce_d3ab_4e25_9ce6_2899092260b0-ntfs_vulnerability_exploitation|NTFS Vulnerability Exploitation (high; windows / system)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

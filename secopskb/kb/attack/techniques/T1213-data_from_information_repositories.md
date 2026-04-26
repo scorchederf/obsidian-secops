@@ -67,6 +67,21 @@ In some cases, information repositories have been improperly secured, typically 
 
 ![[workspaces/attack/techniques/T1213-data_from_information_repositories-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/195e1b9d_bfc2_4ffa_ab4e_35aef69815f8-bitbucket_full_data_export_triggered|Bitbucket Full Data Export Triggered (high; bitbucket / audit)]]
+- [[kb/sigma/rules/34d81081_03c9_4a7f_91c9_5e46af625cde-bitbucket_unauthorized_full_data_export_triggered|Bitbucket Unauthorized Full Data Export Triggered (critical; bitbucket / audit)]]
+- [[kb/sigma/rules/3ec9a16d_0b4f_4967_9542_ebf38ceac7dd-opencanary_mssql_login_attempt_via_sqlauth|OpenCanary - MSSQL Login Attempt Via SQLAuth (high; opencanary / application)]]
+- [[kb/sigma/rules/4fe17521_aef3_4e6a_9d6b_4a7c8de155a8-opencanary_git_clone_request|OpenCanary - GIT Clone Request (high; opencanary / application)]]
+- [[kb/sigma/rules/547dfc53_ebf6_4afe_8d2e_793d9574975d-opencanary_redis_action_command_attempt|OpenCanary - REDIS Action Command Attempt (high; opencanary / application)]]
+- [[kb/sigma/rules/6e78f90f_0043_4a01_ac41_f97681613a66-opencanary_mssql_login_attempt_via_windows_authentication|OpenCanary - MSSQL Login Attempt Via Windows Authentication (high; opencanary / application)]]
+- [[kb/sigma/rules/e7d79a1b_25ed_4956_bd56_bd344fa8fd06-opencanary_mysql_login_attempt|OpenCanary - MySQL Login Attempt (high; opencanary / application)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]

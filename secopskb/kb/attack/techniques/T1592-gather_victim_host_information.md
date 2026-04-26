@@ -41,6 +41,19 @@ Adversaries may also gather victim host information via User-Agent HTTP headers,
 
 ![[workspaces/attack/techniques/T1592-gather_victim_host_information-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0cf7a157_8879_41a2_8f55_388dd23746b7-linux_recon_indicators|Linux Recon Indicators (high; linux / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/d430bf85_b656_40e7_b238_42db01df0183-enumerate_plugnplay_camera|Enumerate PlugNPlay Camera (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0043-reconnaissance|TA0043: Reconnaissance]]

@@ -3013,7 +3013,7 @@ def write_root_index_note():
                 "rows": [
                     "[[kb/index|Knowledge Base]]",
                     "[[kb/attack/index|ATT&CK]]",
-                    "[[kb/tools/index|MITRE Tools]]",
+                    "[[kb/tools/index|Tools]]",
                     "[[kb/defend/index|D3FEND]]",
                     "[[workspaces/index|Analyst Workspace]]",
                 ],
@@ -3048,7 +3048,7 @@ def write_generated_index_notes(groups, d3fend_groups, parent_to_subs, counts):
                 "title": "Generated Reference Areas",
                 "rows": [
                     f"[[kb/attack/index|ATT&CK]] ({counts['tactics']} tactics, {counts['techniques']} techniques)",
-                    f"[[kb/tools/index|MITRE Tools]] ({counts['tools']} tools)",
+                    f"[[kb/tools/index|Tools]] ({counts['tools']} tools)",
                     f"[[kb/defend/index|D3FEND]] ({counts['d3fend_techniques']} techniques)",
                 ],
             }
@@ -3072,7 +3072,7 @@ def write_generated_index_notes(groups, d3fend_groups, parent_to_subs, counts):
         ],
     )
 
-    write_index_note(TOOLS_DIR, "MITRE Tools", [{"title": "Tools", "rows": tool_rows}])
+    write_index_note(TOOLS_DIR, "Tools", [{"title": "Tools", "rows": tool_rows}])
     write_index_note(D3FEND_DIR, "D3FEND", [{"title": "Areas", "rows": [f"[[kb/defend/techniques/index|Techniques]] ({counts['d3fend_techniques']})"]}])
     write_index_note(TACTICS_DIR, "ATT&CK Tactics", [{"title": "Tactics", "rows": tactic_rows}])
     write_index_note(TECHNIQUES_DIR, "ATT&CK Techniques", [{"title": "Techniques", "rows": technique_rows}])

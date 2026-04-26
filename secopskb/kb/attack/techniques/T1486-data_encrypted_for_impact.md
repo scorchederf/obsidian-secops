@@ -59,6 +59,33 @@ In cloud environments, storage objects within compromised accounts may also be e
 
 ![[workspaces/attack/techniques/T1486-data_encrypted_for_impact-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0e0255bf_2548_47b8_9582_c0955c9283f5-suspicious_reg_add_bitlocker|Suspicious Reg Add BitLocker (high; windows / process_creation)]]
+- [[kb/sigma/rules/1279262f_1464_422f_ac0d_5b545320c526-aws_kms_imported_key_material_usage|AWS KMS Imported Key Material Usage (high; aws / cloudtrail)]]
+- [[kb/sigma/rules/4c6ca276_d4d0_4a8c_9e4c_d69832f8671f-antivirus_ransomware_detection|Antivirus Ransomware Detection (critical; antivirus)]]
+- [[kb/sigma/rules/b48492dc_c5ef_4572_8dff_32bc241c15c8-load_of_rstrtmgr_dll_by_a_suspicious_process|Load Of RstrtMgr.DLL By A Suspicious Process (high; windows / image_load)]]
+- [[kb/sigma/rules/caf02a0a_1e1c_4552_9b48_5e070bd88d11-suspicious_creation_txt_file_in_user_desktop|Suspicious Creation TXT File in User Desktop (high; windows / file_event)]]
+- [[kb/sigma/rules/ec0722a3_eb5c_4a56_8ab2_bf6f20708592-renamed_gpg_exe_execution|Renamed Gpg.EXE Execution (high; windows / process_creation)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/08cbf59f_85da_4369_a5f4_049cffd7709f-encrypt_files_using_ccrypt_freebsd_linux|Encrypt files using ccrypt (FreeBSD/Linux) (sh; linux)]]
+- [[kb/atomic/tests/142752dc_ca71_443b_9359_cf6f497315f1-encrypt_files_using_openssl_freebsd_linux|Encrypt files using openssl (FreeBSD/Linux) (sh; linux)]]
+- [[kb/atomic/tests/1a01f6b8_b1e8_418e_bbe3_78a6f822759e-encrypt_files_using_openssl_utility_macos|Encrypt files using openssl utility - macOS (sh; macos)]]
+- [[kb/atomic/tests/44b68e11_9da2_4d45_a0d9_893dabd60f30-data_encrypt_using_diskcryptor|Data Encrypt Using DiskCryptor (command_prompt; windows)]]
+- [[kb/atomic/tests/4541e2c2_33c8_44b1_be79_9161440f1718-data_encrypted_with_gpg4win|Data Encrypted with GPG4Win (powershell; windows)]]
+- [[kb/atomic/tests/53e6735a_4727_44cc_b35b_237682a151ad-encrypt_files_using_7z_freebsd_linux|Encrypt files using 7z (FreeBSD/Linux) (sh; linux)]]
+- [[kb/atomic/tests/645f0f5a_ef09_48d8_b9bc_f0e24c642d72-encrypt_files_using_7z_utility_macos|Encrypt files using 7z utility - macOS (sh; macos)]]
+- [[kb/atomic/tests/649349c7_9abf_493b_a7a2_b1aa4d141528-purelocker_ransom_note|PureLocker Ransom Note (command_prompt; windows)]]
+- [[kb/atomic/tests/7b8ce084_3922_4618_8d22_95f996173765-encrypt_files_using_gpg_freebsd_linux|Encrypt files using gpg (FreeBSD/Linux) (sh; linux)]]
+- [[kb/atomic/tests/ab3f793f_2dcc_4da5_9c71_34988307263f-akira_ransomware_drop_files_with_akira_extension_and_ransomnote|Akira Ransomware drop Files with .akira Extension and Ransomnote (powershell; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0040-impact|TA0040: Impact]]

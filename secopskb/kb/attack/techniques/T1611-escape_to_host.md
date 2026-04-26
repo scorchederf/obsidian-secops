@@ -48,6 +48,17 @@ Gaining access to the host may provide the adversary with the opportunity to ach
 
 ![[workspaces/attack/techniques/T1611-escape_to_host-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0b2f9520_a17a_4671_9dba_3bd034099fff-deploy_container_using_nsenter_container_escape|Deploy container using nsenter container escape (sh; containers)]]
+- [[kb/atomic/tests/39fab1bc_fcb9_406f_bc2e_fe03e42ff0e4-privilege_escalation_via_docker_volume_mapping|Privilege Escalation via Docker Volume Mapping (sh; containers)]]
+- [[kb/atomic/tests/6c499943_b098_4bc6_8d38_0956fc182984-mount_host_filesystem_to_escape_privileged_docker_container|Mount host filesystem to escape privileged Docker container (sh; containers)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0004-privilege_escalation|TA0004: Privilege Escalation]]

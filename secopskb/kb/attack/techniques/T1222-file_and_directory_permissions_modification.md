@@ -49,6 +49,34 @@ Adversaries may also change permissions of symbolic links. For example, malware 
 
 ![[workspaces/attack/techniques/T1222-file_and_directory_permissions_modification-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2019-07-001-access_permission_modification|CAR-2019-07-001: Access Permission Modification]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/028c7842_4243_41cd_be6f_12f3cf1a26c7-ad_object_writedac_access|AD Object WriteDAC Access (critical; windows / security)]]
+- [[kb/sigma/rules/3bf1d859_3a7e_44cb_8809_a99e066d3478-powershell_set_acl_on_windows_folder_psscript|PowerShell Set-Acl On Windows Folder - PsScript (high; windows / ps_script)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0451125c_b5f6_488f_993b_5a32b09f7d8f-chmod_change_file_or_folder_mode_symbolic_mode_recursively|chmod - Change file or folder mode (symbolic mode) recursively (bash; linux, macos)]]
+- [[kb/atomic/tests/18592ba1_5f88_4e3c_abc8_ab1c6042e389-chown_through_c_script|Chown through c script (sh; macos, linux)]]
+- [[kb/atomic/tests/32b979da_7b68_42c9_9a99_0e39900fc36c-attrib_hide_file|attrib - hide file (command_prompt; windows)]]
+- [[kb/atomic/tests/34ca1464_de9d_40c6_8c77_690adf36a135-chmod_change_file_or_folder_mode_numeric_mode|chmod - Change file or folder mode (numeric mode) (sh; linux, macos)]]
+- [[kb/atomic/tests/3b015515_b3d8_44e9_b8cd_6fa84faf30b2-chown_change_file_or_folder_ownership_recursively|chown - Change file or folder ownership recursively (bash; macos, linux)]]
+- [[kb/atomic/tests/60eee3ea_2ebd_453b_a666_c52ce08d2709-chflags_remove_immutable_file_attribute|chflags - Remove immutable file attribute (sh; linux)]]
+- [[kb/atomic/tests/6c4ac96f_d4fa_44f4_83ca_56d8f4a55c02-enable_local_and_remote_symbolic_links_via_fsutil|Enable Local and Remote Symbolic Links via fsutil (command_prompt; windows)]]
+- [[kb/atomic/tests/6cd715aa_20ac_4be1_a8f1_dda7bae160bd-enable_local_and_remote_symbolic_links_via_powershell|Enable Local and Remote Symbolic Links via Powershell (powershell; windows)]]
+- [[kb/atomic/tests/78bef0d4_57fb_417d_a67a_b75ae02ea3ab-enable_local_and_remote_symbolic_links_via_reg_exe|Enable Local and Remote Symbolic Links via reg.exe (command_prompt; windows)]]
+- [[kb/atomic/tests/967ba79d_f184_4e0e_8d09_6362b3162e99-chown_change_file_or_folder_mode_ownership_only|chown - Change file or folder mode ownership only (sh; linux, macos)]]
+- 13 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

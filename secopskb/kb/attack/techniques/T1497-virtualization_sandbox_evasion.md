@@ -51,6 +51,23 @@ Adversaries may use several methods to accomplish [[T1497-virtualization_sandbox
 
 ![[workspaces/attack/techniques/T1497-virtualization_sandbox_evasion-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Atomic Tests
+
+- [[kb/atomic/tests/2b73cd9b_b2fb_4357_b9d7_c73c41d9e945-check_if_system_integrity_protection_is_enabled|Check if System Integrity Protection is enabled (sh; macos)]]
+- [[kb/atomic/tests/4a41089a_48e0_47aa_82cb_5b81a463bc78-detect_virtualization_environment_via_wmi_manufacturer_model_listing_windows|Detect Virtualization Environment via WMI Manufacturer/Model Listing (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/502a7dc4_9d6f_4d28_abf2_f0e84692562d-detect_virtualization_environment_windows|Detect Virtualization Environment (Windows) (powershell; windows)]]
+- [[kb/atomic/tests/6beae646_eb4c_4730_95be_691a4094408c-detect_virtualization_environment_using_sysctl_hw_model|Detect Virtualization Environment using sysctl (hw.model) (sh; macos)]]
+- [[kb/atomic/tests/8b87dd03_8204_478c_bac3_3959f6528de3-delay_execution_with_ping|Delay execution with ping (sh; linux, macos)]]
+- [[kb/atomic/tests/a960185f_aef6_4547_8350_d1ce16680d09-detect_virtualization_environment_via_ioreg|Detect Virtualization Environment via ioreg (sh; macos)]]
+- [[kb/atomic/tests/dfbd1a21_540d_4574_9731_e852bd6fe840-detect_virtualization_environment_linux|Detect Virtualization Environment (Linux) (sh; linux)]]
+- [[kb/atomic/tests/e04d2e89_de15_4d90_92f9_a335c7337f0f-detect_virtualization_environment_using_system_profiler|Detect Virtualization Environment using system_profiler (sh; macos)]]
+- [[kb/atomic/tests/e129d73b_3e03_4ae9_bf1e_67fc8921e0fd-detect_virtualization_environment_freebsd|Detect Virtualization Environment (FreeBSD) (sh; linux)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

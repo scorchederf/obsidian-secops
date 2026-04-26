@@ -51,6 +51,17 @@ After modifying a binary, an adversary may attempt to [[T1562-impair_defenses|T1
 
 ![[workspaces/attack/techniques/T1554-compromise_host_software_binary-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0ee4d8a5_4e67_4faf_acfa_62a78457d1f2-hybridconnectionmanager_service_installation|HybridConnectionManager Service Installation (high; windows / security)]]
+- [[kb/sigma/rules/7bd3902d_8b8b_4dd4_838a_c6862d40150d-dns_hybridconnectionmanager_service_bus|DNS HybridConnectionManager Service Bus (high; windows / dns_query)]]
+- [[kb/sigma/rules/b55d23e5_6821_44ff_8a6e_67218891e49f-hybridconnectionmanager_service_running|HybridConnectionManager Service Running (high; windows / microsoft-servicebus-client)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0003-persistence|TA0003: Persistence]]

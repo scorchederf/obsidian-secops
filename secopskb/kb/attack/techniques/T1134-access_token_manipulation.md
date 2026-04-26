@@ -67,6 +67,39 @@ Any standard user can use the `runas` command, and the Windows API functions, to
 
 ![[workspaces/attack/techniques/T1134-access_token_manipulation-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0adc67e0_a68f_4ffd_9c43_28905aad5d6a-hacktool_koh_default_named_pipe|HackTool - Koh Default Named Pipe (critical; windows / pipe_created)]]
+- [[kb/sigma/rules/15619216_e993_4721_b590_4c520615a67d-potential_meterpreter_cobaltstrike_activity|Potential Meterpreter/CobaltStrike Activity (high; windows / process_creation)]]
+- [[kb/sigma/rules/2617e7ed_adb7_40ba_b0f3_8f9945fe6c09-suspicious_system_user_process_creation|Suspicious SYSTEM User Process Creation (high; windows / process_creation)]]
+- [[kb/sigma/rules/52ff7941_8211_46f9_84f8_9903efb7077d-hacktool_ppid_spoofing_selectmyparent_tool_execution|HackTool - PPID Spoofing SelectMyParent Tool Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/590a5f4c_6c8c_4f10_8307_89afe9453a9d-suspicious_child_process_created_as_system|Suspicious Child Process Created as System (high; windows / process_creation)]]
+- [[kb/sigma/rules/7b14c76a_c602_4ae6_9717_eff868153fc0-hacktool_nofilter_execution|HackTool - NoFilter Execution (high; windows / security)]]
+- [[kb/sigma/rules/843544a7_56e0_4dcc_a44f_5cc266dd97d6-meterpreter_or_cobalt_strike_getsystem_service_installation_system|Meterpreter or Cobalt Strike Getsystem Service Installation - System (high; windows / system)]]
+- [[kb/sigma/rules/c7d33b50_f690_4b51_8cfb_0fb912a31e57-hacktool_sharpdpapi_execution|HackTool - SharpDPAPI Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/ecbc5e16_58e0_4521_9c60_eb9a7ea4ad34-meterpreter_or_cobalt_strike_getsystem_service_installation_security|Meterpreter or Cobalt Strike Getsystem Service Installation - Security (high; windows / security)]]
+- [[kb/sigma/rules/f89b08d0_77ad_4728_817b_9b16c5a69c7a-hacktool_sharpimpersonation_execution|HackTool - SharpImpersonation Execution (high; windows / process_creation)]]
+- 1 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/069258f4_2162_46e9_9a25_c9c6c56150d2-parent_pid_spoofing_using_powershell|Parent PID Spoofing using PowerShell (powershell; windows)]]
+- [[kb/atomic/tests/14920ebd_1d61_491a_85e0_fe98efe37f25-parent_pid_spoofing_spawn_from_current_process|Parent PID Spoofing - Spawn from Current Process (powershell; windows)]]
+- [[kb/atomic/tests/2988133e_561c_4e42_a15f_6281e6a9b2db-parent_pid_spoofing_spawn_from_new_process|Parent PID Spoofing - Spawn from New Process (powershell; windows)]]
+- [[kb/atomic/tests/34f0a430_9d04_4d98_bcb5_1989f14719f0-sedebugprivilege_token_duplication|`SeDebugPrivilege` token duplication (powershell; windows)]]
+- [[kb/atomic/tests/6bef32e5_9456_4072_8f14_35566fb85401-injection_sid_history_with_mimikatz|Injection SID-History with mimikatz (command_prompt; windows)]]
+- [[kb/atomic/tests/7be1bc0f_d8e5_4345_9333_f5f67d742cb9-launch_nsudo_executable|Launch NSudo Executable (powershell; windows)]]
+- [[kb/atomic/tests/90db9e27_8e7c_4c04_b602_a45927884966-named_pipe_client_impersonation|Named pipe client impersonation (powershell; windows)]]
+- [[kb/atomic/tests/9c6d799b_c111_4749_a42f_ec2f8cb51448-bad_potato|Bad Potato (powershell; windows)]]
+- [[kb/atomic/tests/cbbff285_9051_444a_9d17_c07cd2d230eb-parent_pid_spoofing_spawn_from_specified_process|Parent PID Spoofing - Spawn from Specified Process (powershell; windows)]]
+- [[kb/atomic/tests/ccf4ac39_ec93_42be_9035_90e2f26bcd92-winpwn_get_system_shell_pop_system_shell_using_token_manipulation_technique|WinPwn - Get SYSTEM shell - Pop System Shell using Token Manipulation technique (powershell; windows)]]
+- 3 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

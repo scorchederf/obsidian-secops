@@ -69,6 +69,45 @@ More sophisticated samples may perform multiple process injections to segment mo
 
 ![[workspaces/attack/techniques/T1055-process_injection-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-10-002-dll_injection_via_load_library|CAR-2013-10-002: DLL Injection via Load Library]]
+- [[kb/car/analytics/CAR-2020-11-003-dll_injection_with_mavinject|CAR-2020-11-003: DLL Injection with Mavinject]]
+- [[kb/car/analytics/CAR-2020-11-004-processes_started_from_irregular_parent|CAR-2020-11-004: Processes Started From Irregular Parent]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/02d1d718_dd13_41af_989d_ea85c7fab93f-rare_remote_thread_creation_by_uncommon_source_image|Rare Remote Thread Creation By Uncommon Source Image (high; windows / create_remote_thread)]]
+- [[kb/sigma/rules/0e7163d4_9e19_4fa7_9be6_000c61aad77a-cobaltstrike_named_pipe_pattern_regex|CobaltStrike Named Pipe Pattern Regex (critical; windows / pipe_created)]]
+- [[kb/sigma/rules/16b37b70_6fcf_4814_a092_c36bd3aafcbd-powershell_shellcode|PowerShell ShellCode (high; windows / ps_script)]]
+- [[kb/sigma/rules/16c37b52_b141_42a5_a3ea_bbe098444397-suspect_svchost_activity|Suspect Svchost Activity (high; windows / process_creation)]]
+- [[kb/sigma/rules/1cc50f3f_1fc8_4acf_b2e9_6f172e1fdebd-suspicious_rundll32_invoking_inline_vbscript|Suspicious Rundll32 Invoking Inline VBScript (high; windows / process_creation)]]
+- [[kb/sigma/rules/2e4e488a_6164_4811_9ea1_f960c7359c40-hacktool_cactustorch_remote_thread_creation|HackTool - CACTUSTORCH Remote Thread Creation (high; windows / create_remote_thread)]]
+- [[kb/sigma/rules/340a090b_c4e9_412e_bb36_b4b16fe96f9b-renamed_zoho_dctask64_execution|Renamed ZOHO Dctask64 Execution (high; windows / process_creation)]]
+- [[kb/sigma/rules/396f6630_f3ac_44e3_bfc8_1b161bc00c4e-suspicious_child_process_of_wermgr_exe|Suspicious Child Process Of Wermgr.EXE (high; windows / process_creation)]]
+- [[kb/sigma/rules/4508a70e_97ef_4300_b62b_ff27992990ea-dotnet_clr_dll_loaded_by_scripting_applications|DotNet CLR DLL Loaded By Scripting Applications (high; windows / image_load)]]
+- [[kb/sigma/rules/4d0083b3_580b_40da_9bba_626c19fe4033-hacktool_coercedpotato_named_pipe_creation|HackTool - CoercedPotato Named Pipe Creation (high; windows / pipe_created)]]
+- 17 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/0128e48e_8c1a_433a_a11a_a5304734f1e1-uuid_custom_process_injection|UUID custom process Injection (powershell; windows)]]
+- [[kb/atomic/tests/0128e48e_8c1a_433a_a11a_a5387384f1e1-read_write_execute_process_injection|Read-Write-Execute process Injection (powershell; windows)]]
+- [[kb/atomic/tests/1c91e740_1729_4329_b779_feba6e71d048-shellcode_execution_via_vba|Shellcode execution via VBA (powershell; windows)]]
+- [[kb/atomic/tests/2315ce15_38b6_46ac_a3eb_5e21abef2545-process_injection_with_go_using_uuidfromstringa_winapi|Process Injection with Go using UuidFromStringA WinAPI (powershell; windows)]]
+- [[kb/atomic/tests/2871ed59_3837_4a52_9107_99500ebc87cb-process_injection_with_go_using_createthread_winapi|Process Injection with Go using CreateThread WinAPI (powershell; windows)]]
+- [[kb/atomic/tests/2a3c7035_d14f_467a_af94_933e49fe6786-process_injection_with_go_using_createthread_winapi_natively|Process Injection with Go using CreateThread WinAPI (Natively) (powershell; windows)]]
+- [[kb/atomic/tests/2a4ab5c1_97ad_4d6d_b5d3_13f3a6c94e39-remote_process_injection_with_go_using_createremotethread_winapi_natively|Remote Process Injection with Go using CreateRemoteThread WinAPI (Natively) (powershell; windows)]]
+- [[kb/atomic/tests/3203ad24_168e_4bec_be36_f79b13ef8a83-remote_process_injection_in_lsass_via_mimikatz|Remote Process Injection in LSASS via mimikatz (command_prompt; windows)]]
+- [[kb/atomic/tests/3ad4a037_1598_4136_837c_4027e4fa319b-runpe_via_vba|RunPE via VBA (powershell; windows)]]
+- [[kb/atomic/tests/49543237_25db_497b_90df_d0a0a6e8fe2c-dirty_vanity_process_injection|Dirty Vanity process Injection (powershell; windows)]]
+- 16 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0005-defense_evasion|TA0005: Defense Evasion]]

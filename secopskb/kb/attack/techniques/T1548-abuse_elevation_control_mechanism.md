@@ -79,6 +79,46 @@ Adversaries may circumvent mechanisms designed to control elevate privileges to 
 
 ![[workspaces/attack/techniques/T1548-abuse_elevation_control_mechanism-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### CAR Analytics
+
+- [[kb/car/analytics/CAR-2013-10-002-dll_injection_via_load_library|CAR-2013-10-002: DLL Injection via Load Library]]
+- [[kb/car/analytics/CAR-2019-04-001-uac_bypass|CAR-2019-04-001: UAC Bypass]]
+- [[kb/car/analytics/CAR-2021-01-008-disable_uac|CAR-2021-01-008: Disable UAC]]
+- [[kb/car/analytics/CAR-2021-02-002-get_system_elevation|CAR-2021-02-002: Get System Elevation]]
+
+### Sigma Rules
+
+- [[kb/sigma/rules/0058b9e5_bcd7_40d4_9205_95ca5a16d7b2-uac_bypass_using_windows_media_player_process|UAC Bypass Using Windows Media Player - Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/07743f65_7ec9_404a_a519_913db7118a8d-com_hijack_via_sdclt|COM Hijack via Sdclt (high; windows / registry_set)]]
+- [[kb/sigma/rules/0cbe38c0_270c_41d9_ab79_6e5a9a669290-trusted_path_bypass_via_windows_directory_spoofing|Trusted Path Bypass via Windows Directory Spoofing (high; windows / image_load)]]
+- [[kb/sigma/rules/152f3630_77c1_4284_bcc0_4cc68ab2f6e7-shell_open_registry_keys_manipulation|Shell Open Registry Keys Manipulation (high; windows / registry_event)]]
+- [[kb/sigma/rules/155dbf56_e0a4_4dd0_8905_8a98705045e8-uac_bypass_abusing_winsat_path_parsing_file|UAC Bypass Abusing Winsat Path Parsing - File (high; windows / file_event)]]
+- [[kb/sigma/rules/174afcfa_6e40_4ae9_af64_496546389294-credential_dumping_attempt_via_svchost|Credential Dumping Attempt Via Svchost (high; windows / process_access)]]
+- [[kb/sigma/rules/1ca6bd18_0ba0_44ca_851c_92ed89a61085-uac_bypass_using_consent_and_comctl32_process|UAC Bypass Using Consent and Comctl32 - Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/3268b746_88d8_4cd3_bffc_30077d02c787-hacktool_empire_powershell_uac_bypass|HackTool - Empire PowerShell UAC Bypass (critical; windows / process_creation)]]
+- [[kb/sigma/rules/39ed3c80_e6a1_431b_9df3_911ac53d08a7-uac_bypass_using_ntfs_reparse_point_process|UAC Bypass Using NTFS Reparse Point - Process (high; windows / process_creation)]]
+- [[kb/sigma/rules/3c05e90d_7eba_4324_9972_5d7f711a60a8-uac_bypass_tools_using_computerdefaults|UAC Bypass Tools Using ComputerDefaults (high; windows / process_creation)]]
+- 42 more in the generated source index
+
+### Atomic Tests
+
+- [[kb/atomic/tests/150c3a08_ee6e_48a6_aeaf_3659d24ceb4e-sudo_usage|Sudo usage (sh; macos, linux)]]
+- [[kb/atomic/tests/160a7c77_b00e_4111_9e45_7c2a44eda3fd-disable_uac_notification_via_registry_keys|Disable UAC notification via registry keys (command_prompt; windows)]]
+- [[kb/atomic/tests/1ac3272f_9bcf_443a_9888_4b1d3de785c1-provide_the_setuid_capability_to_a_file|Provide the SetUID capability to a file (sh; linux)]]
+- [[kb/atomic/tests/1ed67900_66cd_4b09_b546_2a0ef4431a0c-winpwn_uac_bypass_diskcleanup_technique|WinPwn - UAC Bypass DiskCleanup technique (powershell; windows)]]
+- [[kb/atomic/tests/1f73af33_62a8_4bf1_bd10_3bea931f2c0d-set_a_setgid_flag_on_file_freebsd|Set a SetGID flag on file (freebsd) (sh; linux)]]
+- [[kb/atomic/tests/235ec031_cd2d_465d_a7ae_68bab281e80e-uacme_bypass_method_56|UACME Bypass Method 56 (command_prompt; windows)]]
+- [[kb/atomic/tests/251c5936_569f_42f4_9ac2_87a173b9e9b8-disable_uac_admin_consent_prompt_via_consentpromptbehavioradmin_registry_key|Disable UAC admin consent prompt via ConsentPromptBehaviorAdmin registry key (powershell; windows)]]
+- [[kb/atomic/tests/28104f8a_4ff1_4582_bcf6_699dce156608-bypass_uac_using_silentcleanup_task|Bypass UAC using SilentCleanup task (command_prompt; windows)]]
+- [[kb/atomic/tests/2b61977b_ae2d_4ae4_89cb_5c36c89586be-winpwn_uac_bypass_dccwbypassuac_technique|WinPwn - UAC Bypass DccwBypassUAC technique (powershell; windows)]]
+- [[kb/atomic/tests/2bf9a018_4664_438a_b435_cc6f8c6f71b1-sudo_usage_freebsd|Sudo usage (freebsd) (sh; linux)]]
+- 33 more in the generated source index
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0004-privilege_escalation|TA0004: Privilege Escalation]]

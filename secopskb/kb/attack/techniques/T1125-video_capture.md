@@ -49,6 +49,19 @@ In macOS, there are a few different malware samples that record the user's webca
 
 ![[workspaces/attack/techniques/T1125-video_capture-note]]
 
+<!-- generated-detection-validation-start -->
+## Detection & Validation
+
+### Sigma Rules
+
+- [[kb/sigma/rules/62120148_6b7a_42be_8b91_271c04e281a3-suspicious_camera_and_microphone_access|Suspicious Camera and Microphone Access (high; windows / registry_event)]]
+
+### Atomic Tests
+
+- [[kb/atomic/tests/6581e4a7_42e3_43c5_a0d2_5a0d62f9702a-registry_artefact_when_application_use_webcam|Registry artefact when application use webcam (command_prompt; windows)]]
+
+<!-- generated-detection-validation-end -->
+
 ## Tactics
 
 - [[TA0009-collection|TA0009: Collection]]
