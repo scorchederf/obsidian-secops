@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1531"
 attack_technique_name: "Account Access Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1531/T1531.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "43f71395-6c37-498e-ab17-897d814a0947"
@@ -64,13 +64,13 @@ Requires the Active Directory module for powershell to be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Get-Module -ListAvailable -Name ActiveDirectory) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Add-WindowsCapability -Online -Name "Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0"
 ```
 

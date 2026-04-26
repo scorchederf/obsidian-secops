@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1072"
 attack_technique_name: "Software Deployment Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1072/T1072.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "e447b83b-a698-4feb-bed1-a7aaf45c3443"
@@ -58,13 +58,13 @@ PDQ Deploy will be installed at specified location (#{PDQ_Deploy_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "${env:ProgramFiles(x86)}/#{PDQ_Deploy_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading PDQ Deploy installer
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.pdq.com/release/19/Deploy_19.3.350.0.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\#{PDQ_Deploy_installer}"
@@ -79,7 +79,7 @@ Start-Process "PathToAtomicsFolder\..\ExternalPayloads\#{PDQ_Deploy_installer}" 
 
 ### Command
 
-```commandprompt
+```cmd
 "%PROGRAMFILES(x86)%/#{PDQ_Deploy_exe}"
 ```
 

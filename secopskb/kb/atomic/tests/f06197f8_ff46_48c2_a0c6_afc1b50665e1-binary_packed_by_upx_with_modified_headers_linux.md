@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.002"
 attack_technique_name: "Obfuscated Files or Information: Software Packing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.002/T1027.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f06197f8-ff46-48c2-a0c6-afc1b50665e1"
@@ -53,13 +53,13 @@ by some methods, and especially UPX is not able to uncompress it any more.
 
 ### Command
 
-```sh
+```bash
 cp #{bin_path} /tmp/packed_bin && /tmp/packed_bin
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm /tmp/packed_bin
 ```
 

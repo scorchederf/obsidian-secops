@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1518.001"
 attack_technique_name: "Software Discovery: Security Software Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1518.001/T1518.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f92a380f-ced9-491f-b338-95a991418ce2"
@@ -45,7 +45,7 @@ and specific security software.
 
 ### Command
 
-```commandprompt
+```cmd
 netsh.exe advfirewall  show allprofiles 
 netsh.exe advfirewall firewall dump
 netsh.exe advfirewall show currentprofile

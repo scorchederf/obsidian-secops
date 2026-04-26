@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "3fb46e17-f337-4c14-9f9a-a471946533e2"
@@ -42,7 +42,7 @@ This test simulates a command that can be run to enumerate files that have the s
 
 ### Command
 
-```sh
+```bash
 find /usr/bin -perm -2000
 ```
 

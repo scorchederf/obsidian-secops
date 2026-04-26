@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "cccb070c-df86-4216-a5bc-9fb60c74e27c"
@@ -51,7 +51,7 @@ Identify System Info
 
 ### Command
 
-```sh
+```bash
 uname -a >> #{output_file}
 if [ -f /etc/lsb-release ]; then cat /etc/lsb-release >> #{output_file}; fi
 if [ -f /etc/redhat-release ]; then cat /etc/redhat-release >> #{output_file}; fi   
@@ -63,7 +63,7 @@ cat #{output_file} 2>/dev/null
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file} 2>/dev/null
 ```
 

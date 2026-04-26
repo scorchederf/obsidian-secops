@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.003"
 attack_technique_name: "Scheduled Task/Job: Cron"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.003/T1053.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "b7d42afa-9086-4c8a-b7b0-8ea3faa6ebb0"

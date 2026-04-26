@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "4469192c-2d2d-4a3a-9758-1f31d937a92b"
@@ -59,13 +59,13 @@ It will run any arbitrary command without restriction of location or type. Blog 
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\TelemetryController\#{new_key}" /t REG_SZ /v Command /d #{new_executable} /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\TelemetryController\#{new_key}" /f
 ```
 

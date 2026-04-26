@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1654"
 attack_technique_name: "Log Enumeration"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1654/T1654.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "fef0ace1-3550-4bf1-a075-9fea55a778dd"
@@ -47,7 +47,7 @@ This information provides valuable insight into the system's logging mechanisms,
 
 ### Command
 
-```commandprompt
+```cmd
 wevtutil enum-logs
 ```
 

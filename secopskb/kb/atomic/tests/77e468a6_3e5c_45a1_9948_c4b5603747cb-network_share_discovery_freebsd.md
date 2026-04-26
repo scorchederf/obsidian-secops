@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1135"
 attack_technique_name: "Network Share Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "77e468a6-3e5c-45a1-9948-c4b5603747cb"
@@ -58,13 +58,13 @@ Package with smbstatus (samba) must exist on device
 
 ### Prerequisite Check
 
-```text
+```bash
 if #{package_checker} > /dev/null; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 #{package_installer}
 ```
 
@@ -75,7 +75,7 @@ if #{package_checker} > /dev/null; then exit 0; else exit 1; fi
 
 ### Command
 
-```sh
+```bash
 smbstatus --shares
 ```
 

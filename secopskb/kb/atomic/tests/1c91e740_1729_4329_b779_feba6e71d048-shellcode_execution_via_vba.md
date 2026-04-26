@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055"
 attack_technique_name: "Process Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055/T1055.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "1c91e740-1729-4329-b779-feba6e71d048"
@@ -55,7 +55,7 @@ The 64-bit version of Microsoft Office must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   $wdApp = New-Object -COMObject "Word.Application"
   $path = $wdApp.Path
@@ -66,7 +66,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft Word (64-bit) manually to meet this requirement"
 ```
 
@@ -74,13 +74,13 @@ Write-Host "You will need to install Microsoft Word (64-bit) manually to meet th
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{txt_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{txt_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055/src/x64/T1055-macrocode.txt" -OutFile "#{txt_path}" -UseBasicParsing
 ```

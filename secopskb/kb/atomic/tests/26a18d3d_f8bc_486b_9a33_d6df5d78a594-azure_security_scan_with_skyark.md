@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "26a18d3d-f8bc-486b-9a33-d6df5d78a594"
@@ -59,13 +59,13 @@ The SkyArk AzureStealth module must exist in PathToAtomicsFolder\..\ExternalPayl
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\AzureStealth.ps1"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://raw.githubusercontent.com/cyberark/SkyArk/3293ee145e95061a8980dd7b5da0030edc4da5c0/AzureStealth/AzureStealth.ps1" -outfile "PathToAtomicsFolder\..\ExternalPayloads\AzureStealth.ps1"
 ```
@@ -74,13 +74,13 @@ The AzureAD module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AzureAD -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AzureAD -Force
 ```
 
@@ -88,13 +88,13 @@ The Az module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name Az -Force
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a70faea1-e206-4f6f-8d9a-67379be8f6f1"

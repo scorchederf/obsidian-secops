@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1001.002"
 attack_technique_name: "Data Obfuscation via Steganography"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1001.002/T1001.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "c7921449-8b62-4c4d-8a83-d9281ac0190b"
@@ -79,7 +79,7 @@ Image file must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (!(Test-Path "#{image_file}")) {exit 1} else {
 {exit 0}
 }
@@ -87,7 +87,7 @@ if (!(Test-Path "#{image_file}")) {exit 1} else {
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{image_file}") -ErrorAction ignore | Out-Null
 Write-Output "Downloading image file..."
 $imageUrl = "https://github.com/raghavsingh7/Pictures/raw/a9617d9fce289909441120a1e0366315c2c5e19d/lime.jpg"
@@ -98,7 +98,7 @@ File to hide within tarz file must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (!(Test-Path "#{passwords_file}")) {exit 1} else {
 {exit 0}
 }
@@ -106,7 +106,7 @@ if (!(Test-Path "#{passwords_file}")) {exit 1} else {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Output "Generating random passwords and saving to file..."
 $passwords = 1..10 | ForEach-Object { -join ((1..12) | ForEach-Object { @('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z') + @('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z') + @('0','1','2','3','4','5','6','7','8','9') + @('!','@','#','$','%','^','&','*','(','(',')','-','=','+','_','[',']','{','}','|',';',';',':',',','<','>','?') | Get-Random }) }
 $passwords | Out-File -FilePath "#{passwords_file}"
@@ -116,7 +116,7 @@ Tarz file to embed in image must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (!(Test-Path "#{tar_file}")) {exit 1} else {
 {exit 0}
 }
@@ -124,7 +124,7 @@ if (!(Test-Path "#{tar_file}")) {exit 1} else {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Output "Generating tarz file..."
 tar -cvf "#{tar_file}" "#{passwords_file}"
 ```

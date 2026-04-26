@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "114dd4e3-8d1c-4ea7-bb8d-8d8f6aca21f0"

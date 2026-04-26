@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.005"
 attack_technique_name: "Masquerading: Match Legitimate Name or Location"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.005/T1036.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "812c3ab8-94b0-4698-a9bf-9420af23ce24"
@@ -53,7 +53,7 @@ Create and execute a process from a directory masquerading as the current parent
 
 ### Command
 
-```sh
+```bash
 mkdir $HOME/...
 cp $(which sh) $HOME/...
 $HOME/.../sh -c "echo #{test_message}"
@@ -61,7 +61,7 @@ $HOME/.../sh -c "echo #{test_message}"
 
 ### Cleanup
 
-```sh
+```bash
 rm -f $HOME/.../sh
 rmdir $HOME/.../
 ```

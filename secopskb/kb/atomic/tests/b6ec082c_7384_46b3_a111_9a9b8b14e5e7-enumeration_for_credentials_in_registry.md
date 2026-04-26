@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.002"
 attack_technique_name: "Unsecured Credentials: Credentials in Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.002/T1552.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "b6ec082c-7384-46b3-a111-9a9b8b14e5e7"
@@ -42,7 +42,7 @@ Queries to enumerate for credentials in the Registry. Upon execution, any regist
 
 ### Command
 
-```commandprompt
+```cmd
 reg query HKLM /f password /t REG_SZ /s
 reg query HKCU /f password /t REG_SZ /s
 ```

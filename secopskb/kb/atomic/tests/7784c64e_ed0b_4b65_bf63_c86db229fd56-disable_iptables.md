@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "7784c64e-ed0b-4b65-bf63-c86db229fd56"
@@ -46,13 +46,13 @@ Check if iptables is installed on the machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v iptables)" ]; then echo -e "\n***** iptables NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get install iptables
 ```
 
@@ -63,14 +63,14 @@ sudo apt-get install iptables
 
 ### Command
 
-```sh
+```bash
 iptables-save > /tmp/iptables.rules
 iptables -F
 ```
 
 ### Cleanup
 
-```sh
+```bash
 iptables-restore < /tmp/iptables.rules
 ```
 

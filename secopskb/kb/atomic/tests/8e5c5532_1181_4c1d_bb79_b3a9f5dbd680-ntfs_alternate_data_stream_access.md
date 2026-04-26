@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "8e5c5532-1181-4c1d-bb79-b3a9f5dbd680"
@@ -50,13 +50,13 @@ Homedrive must be an NTFS drive
 
 ### Prerequisite Check
 
-```text
+```untitled
 if((Get-Volume -DriveLetter $env:HOMEDRIVE[0]).FileSystem -contains "NTFS") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host Prereq's for this test cannot be met automatically
 ```
 

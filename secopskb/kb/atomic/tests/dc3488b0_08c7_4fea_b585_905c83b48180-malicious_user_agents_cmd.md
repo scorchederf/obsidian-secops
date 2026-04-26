@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1071.001"
 attack_technique_name: "Application Layer Protocol: Web Protocols"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1071.001/T1071.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "dc3488b0-08c7-4fea-b585-905c83b48180"
@@ -60,13 +60,13 @@ Curl must be installed on system
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{curl_path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://curl.se/windows/dl-8.6.0_2/curl-8.6.0_2-win32-mingw.zip" -Outfile "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\curl.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\curl"
@@ -81,7 +81,7 @@ Remove-Item "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 
 ### Command
 
-```commandprompt
+```cmd
 #{curl_path} -s -A "HttpBrowser/1.0" -m3 #{domain} >nul 2>&1
 #{curl_path} -s -A "Wget/1.9+cvs-stable (Red Hat modified)" -m3 #{domain} >nul 2>&1
 #{curl_path} -s -A "Opera/8.81 (Windows NT 6.0; U; en)" -m3 #{domain} >nul 2>&1

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "1ac3272f-9bcf-443a-9888-4b1d3de785c1"
@@ -52,14 +52,14 @@ This test gives a file the capability to set UID without using flags.
 
 ### Command
 
-```sh
+```bash
 touch #{file_to_setcap}
 sudo setcap cap_setuid=ep #{file_to_setcap}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{file_to_setcap}
 ```
 

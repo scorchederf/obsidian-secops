@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1484.001"
 attack_technique_name: "Domain Policy Modification: Group Policy Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1484.001/T1484.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b51eae65-5441-4789-b8e8-64783c26c1d1"

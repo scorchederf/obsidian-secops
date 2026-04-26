@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "640cbf6d-659b-498b-ba53-f6dd1a1cc02c"
@@ -44,7 +44,7 @@ Upon successful execution, WMIC will execute process to list processes. Output w
 
 ### Command
 
-```commandprompt
+```cmd
 wmic process get /format:list
 ```
 

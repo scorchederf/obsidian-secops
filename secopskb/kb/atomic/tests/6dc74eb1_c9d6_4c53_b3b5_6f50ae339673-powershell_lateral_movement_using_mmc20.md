@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.003"
 attack_technique_name: "Remote Services: Distributed Component Object Model"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.003/T1021.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "6dc74eb1-c9d6-4c53-b3b5-6f50ae339673"

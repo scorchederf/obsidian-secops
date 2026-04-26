@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.004"
 attack_technique_name: "Obfuscated Files or Information: Compile After Delivery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.004/T1027.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ffcdbd6a-b0e8-487d-927a-09127fe9a206"
@@ -58,13 +58,13 @@ C# file must exist on disk at specified location (#{input_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{input_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{input_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1027.004/src/calc.cs" -OutFile "#{input_file}"
 ```
@@ -75,13 +75,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /out:#{output_file} "#{input_file}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{output_file} >nul 2>&1
 ```
 

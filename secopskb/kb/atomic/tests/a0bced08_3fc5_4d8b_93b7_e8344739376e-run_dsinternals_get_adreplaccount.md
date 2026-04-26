@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.006"
 attack_technique_name: "OS Credential Dumping: DCSync"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.006/T1003.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "a0bced08-3fc5-4d8b-93b7-e8344739376e"
@@ -55,14 +55,14 @@ DSInternals must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule = Get-Module -Name DSInternals -ListAvailable
 if (-not $RequiredModule) {exit 1} else {exit 0}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name DSInternals -Scope CurrentUser -Force
 ```
 

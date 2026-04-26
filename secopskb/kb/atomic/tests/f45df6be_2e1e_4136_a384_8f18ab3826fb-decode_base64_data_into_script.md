@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027"
 attack_technique_name: "Obfuscated Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027/T1027.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f45df6be-2e1e-4136-a384-8f18ab3826fb"
@@ -55,13 +55,13 @@ encode the command into base64 file
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -e "/tmp/encoded.dat" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "$(uname)" = 'FreeBSD' ]; then cmd="b64encode -r -"; else cmd="base64"; fi;
 echo "#{shell_command}" | $cmd > /tmp/encoded.dat
 ```
@@ -72,7 +72,7 @@ echo "#{shell_command}" | $cmd > /tmp/encoded.dat
 
 ### Command
 
-```sh
+```bash
 if [ "$(uname)" = 'FreeBSD' ]; then cmd="b64decode -r"; else cmd="base64 -d"; fi;
 cat /tmp/encoded.dat | $cmd > /tmp/art.sh
 chmod +x /tmp/art.sh
@@ -81,7 +81,7 @@ chmod +x /tmp/art.sh
 
 ### Cleanup
 
-```sh
+```bash
 rm /tmp/encoded.dat 
 rm /tmp/art.sh
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "a19ee671-ed98-4e9d-b19c-d1954a51585a"
@@ -45,7 +45,7 @@ Microsoft Word must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   $wdApp = New-Object -COMObject "Word.Application"
   Stop-Process -Name "winword"
@@ -54,7 +54,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft Word manually to meet this requirement"
 ```
 
@@ -62,7 +62,7 @@ Google Chrome must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   $chromeInstalled = (Get-Item (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe').'(Default)').VersionInfo.FileName
   exit 0
@@ -71,7 +71,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Google Chrome manually to meet this requirement"
 ```
 

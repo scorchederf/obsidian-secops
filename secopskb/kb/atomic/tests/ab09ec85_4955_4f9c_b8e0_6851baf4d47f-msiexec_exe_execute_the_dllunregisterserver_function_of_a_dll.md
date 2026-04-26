@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.007"
 attack_technique_name: "Signed Binary Proxy Execution: Msiexec"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.007/T1218.007.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ab09ec85-4955-4f9c-b8e0-6851baf4d47f"
@@ -57,13 +57,13 @@ The DLL must exist on disk at specified location (#{dll_payload})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_payload}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{dll_payload}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.007/bin/MSIRunner.dll -OutFile "#{dll_payload}"
 ```
@@ -74,7 +74,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 #{msi_exe} /z "#{dll_payload}"
 ```
 

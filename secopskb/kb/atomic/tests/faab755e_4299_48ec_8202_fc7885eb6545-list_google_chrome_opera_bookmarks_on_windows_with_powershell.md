@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1217"
 attack_technique_name: "Browser Bookmark Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "faab755e-4299-48ec-8202-fc7885eb6545"

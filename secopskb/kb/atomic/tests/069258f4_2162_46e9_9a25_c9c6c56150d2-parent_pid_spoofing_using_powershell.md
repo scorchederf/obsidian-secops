@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.004"
 attack_technique_name: "Access Token Manipulation: Parent PID Spoofing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.004/T1134.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "069258f4-2162-46e9-9a25-c9c6c56150d2"
@@ -79,13 +79,13 @@ DLL to inject must exist on disk at specified location (#{dll_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{dll_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1134.004/bin/calc.dll" -OutFile "#{dll_path}"
 ```
@@ -94,13 +94,13 @@ PPID.ps1 must exist on disk at $PathToAtomicsFolder\T1134.004\src\PPID-Spoof.ps1
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "$PathToAtomicsFolder\T1134.004\src\PPID-Spoof.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "$PathToAtomicsFolder\T1134.004\src\PPID-Spoof.ps1") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1134.004/src/PPID-Spoof.ps1" -OutFile "$PathToAtomicsFolder\T1134.004\src\PPID-Spoof.ps1"
 ```

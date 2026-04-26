@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.003"
 attack_technique_name: "Scheduled Task/Job: Cron"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.003/T1053.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "078e69eb-d9fb-450e-b9d0-2e118217c846"
@@ -58,13 +58,13 @@ This test adds a script to /etc/cron.d folder configured to execute on a schedul
 
 ### Command
 
-```sh
+```bash
 echo "#{command}" > /etc/cron.d/#{cron_script_name}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm /etc/cron.d/#{cron_script_name} -f
 ```
 

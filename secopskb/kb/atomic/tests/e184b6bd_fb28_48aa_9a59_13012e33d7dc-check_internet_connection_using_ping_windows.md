@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016.001"
 attack_technique_name: "System Network Configuration Discovery: Internet Connection Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016.001/T1016.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "e184b6bd-fb28-48aa-9a59-13012e33d7dc"
@@ -52,7 +52,7 @@ Check internet connection using ping on Windows. The default target of the ping 
 
 ### Command
 
-```commandprompt
+```cmd
 ping -n 4 #{ping_target}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.007"
 attack_technique_name: "Kubernetes Cronjob"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.007/T1053.007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "f2fa019e-fb2a-4d28-9dc6-fd1a9b7f68c3"
@@ -51,13 +51,13 @@ kubectl must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 which kubectl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "kubectl must be installed manually"
 ```
 

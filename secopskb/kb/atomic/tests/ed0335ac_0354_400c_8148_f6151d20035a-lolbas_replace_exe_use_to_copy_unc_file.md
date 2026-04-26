@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ed0335ac-0354-400c-8148-f6151d20035a"
@@ -57,14 +57,14 @@ Reference: https://lolbas-project.github.io/lolbas/Binaries/Replace/
 
 ### Command
 
-```commandprompt
+```cmd
 del %TEMP%\redcanary.cab >nul 2>&1
 #{Path_replace} #{replace_cab} %TEMP% /A
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\redcanary.cab >nul 2>&1
 ```
 

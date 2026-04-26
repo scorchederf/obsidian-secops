@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "aa875ed4-8935-47e2-b2c5-6ec00ab220d2"
@@ -46,7 +46,7 @@ will be displayed twice and the WinDefend service status will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 sc stop WinDefend
 sc config WinDefend start=disabled
 sc query WinDefend
@@ -54,7 +54,7 @@ sc query WinDefend
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc start WinDefend >nul 2>&1
 sc config WinDefend start=enabled >nul 2>&1
 ```

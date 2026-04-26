@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9dee89bd-9a98-4c4f-9e2d-4256690b0e72"
@@ -51,13 +51,13 @@ The file to delete must exist on disk at specified location (#{file_to_delete})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{file_to_delete}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path #{file_to_delete} | Out-Null
 ```
 

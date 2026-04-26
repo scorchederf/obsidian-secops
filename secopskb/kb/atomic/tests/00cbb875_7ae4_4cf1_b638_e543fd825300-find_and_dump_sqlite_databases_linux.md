@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1005"
 attack_technique_name: "Data from Local System"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1005/T1005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "00cbb875-7ae4-4cf1-b638-e543fd825300"
@@ -51,7 +51,7 @@ Check if running on a Debian based machine.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ -x "$(command -v sqlite3)" ]; then echo "sqlite3 is installed"; else echo "sqlite3 is NOT installed"; exit 1; fi
 if [ -x "$(command -v curl)" ]; then echo "curl is installed"; else echo "curl is NOT installed"; exit 1; fi
 if [ -x "$(command -v strings)" ]; then echo "strings is installed"; else echo "strings is NOT installed"; exit 1; fi
@@ -59,7 +59,7 @@ if [ -x "$(command -v strings)" ]; then echo "strings is installed"; else echo "
 
 ### Get Prerequisite
 
-```text
+```untitled
 if grep -iq "debian\|ubuntu\|kali\|mint" /usr/lib/os-release; then apt update && apt install -y binutils curl sqlite3; fi
 if grep -iq "rhel\|fedora\|centos" /usr/lib/os-release; then yum update -y && yum install -y binutils curl sqlite-devel; fi
 ```

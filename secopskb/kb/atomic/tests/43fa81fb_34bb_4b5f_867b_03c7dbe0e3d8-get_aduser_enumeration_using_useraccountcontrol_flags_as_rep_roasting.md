@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "43fa81fb-34bb-4b5f-867b-03c7dbe0e3d8"
@@ -45,13 +45,13 @@ Computer must be domain joined.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if((Get-CIMInstance -Class Win32_ComputerSystem).PartOfDomain) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Joining this computer to a domain must be done manually.
 ```
 
@@ -59,13 +59,13 @@ Requires the Active Directory module for powershell to be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Get-Module -ListAvailable -Name ActiveDirectory) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Add-WindowsCapability -Online -Name "Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0"
 ```
 

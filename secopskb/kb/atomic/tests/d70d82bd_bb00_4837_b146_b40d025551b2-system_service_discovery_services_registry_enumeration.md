@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1007"
 attack_technique_name: "System Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1007/T1007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d70d82bd-bb00-4837-b146-b40d025551b2"

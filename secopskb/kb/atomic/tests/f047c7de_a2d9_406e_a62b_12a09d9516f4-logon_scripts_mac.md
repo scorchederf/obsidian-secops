@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1037.002"
 attack_technique_name: "Boot or Logon Initialization Scripts: Logon Script (Mac)"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1037.002/T1037.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "manual"
 aliases:
   - "f047c7de-a2d9-406e-a62b-12a09d9516f4"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d4a6da40-618f-454d-9a9e-26af552aaeb0"
@@ -45,13 +45,13 @@ See how ransomware abuses this technique- https://www.trendmicro.com/vinfo/us/th
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableChangePassword /t REG_DWORD /d 1 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableChangePassword /f >nul 2>&1
 ```
 

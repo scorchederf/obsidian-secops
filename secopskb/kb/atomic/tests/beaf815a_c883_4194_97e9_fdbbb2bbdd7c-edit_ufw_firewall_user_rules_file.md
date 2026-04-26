@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "beaf815a-c883-4194-97e9-fdbbb2bbdd7c"
@@ -44,13 +44,13 @@ Check if /etc/ufw/user.rules exists.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -f "/etc/ufw/user.rules" ]; then echo -e "\n***** ufw NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -61,14 +61,14 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 echo "# THIS IS A COMMENT" >> /etc/ufw/user.rules
 grep "# THIS IS A COMMENT" /etc/ufw/user.rules
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sed -i 's/# THIS IS A COMMENT//g' /etc/ufw/user.rules
 ```
 

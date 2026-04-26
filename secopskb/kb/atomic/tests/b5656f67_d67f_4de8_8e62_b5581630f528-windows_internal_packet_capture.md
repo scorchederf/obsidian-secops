@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "b5656f67-d67f-4de8-8e62-b5581630f528"
@@ -45,13 +45,13 @@ After execution you should find a file named trace.etl and trace.cab in the temp
 
 ### Command
 
-```commandprompt
+```cmd
 netsh trace start capture=yes tracefile=%temp%\trace.etl maxsize=10
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 netsh trace stop >nul 2>&1
 TIMEOUT /T 5 >nul 2>&1
 del %temp%\trace.etl >nul 2>&1

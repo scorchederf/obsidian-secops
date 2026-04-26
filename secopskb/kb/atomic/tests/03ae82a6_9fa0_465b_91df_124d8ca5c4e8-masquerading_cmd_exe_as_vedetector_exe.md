@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.005"
 attack_technique_name: "Masquerading: Match Legitimate Name or Location"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.005/T1036.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "03ae82a6-9fa0-465b-91df-124d8ca5c4e8"
@@ -69,13 +69,13 @@ The source cmd.exe file must exist on the system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{source_file}") { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "[-] Source file not found: #{source_file}. Ensure cmd.exe exists in the specified path."
 exit 1
 ```

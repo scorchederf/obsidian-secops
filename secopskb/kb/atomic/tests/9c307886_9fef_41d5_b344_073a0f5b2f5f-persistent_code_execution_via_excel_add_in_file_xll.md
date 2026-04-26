@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.006"
 attack_technique_name: "Office Application Startup: Add-ins"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.006/T1137.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9c307886-9fef-41d5-b344-073a0f5b2f5f"
@@ -43,7 +43,7 @@ Microsoft Excel must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 try {
   New-Object -COMObject "Excel.Application" | Out-Null
   Stop-Process -Name "Excel"
@@ -53,7 +53,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host "You will need to install Microsoft Excel manually to meet this requirement"
 ```
 
@@ -61,13 +61,13 @@ XLL files must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```untitled
 if ((Test-Path "PathToAtomicsFolder\T1137.006\bin\Addins\excelxll_x64.xll") -and (Test-Path "PathToAtomicsFolder\T1137.006\bin\Addins\excelxll_x86.xll")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\T1137.006\bin\Addins\" -Force | Out-Null
 Invoke-Webrequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1137.006/bin/Addins/excelxll_x64.xll" -UseBasicParsing -OutFile "PathToAtomicsFolder\T1137.006\bin\Addins\excelxll_x64.xll"
 Invoke-Webrequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1137.006/bin/Addins/excelxll_x86.xll" -UseBasicParsing -OutFile "PathToAtomicsFolder\T1137.006\bin\Addins\excelxll_x86.xll"

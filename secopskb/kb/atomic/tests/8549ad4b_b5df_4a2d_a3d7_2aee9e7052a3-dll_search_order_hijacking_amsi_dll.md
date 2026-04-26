@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.001"
 attack_technique_name: "Hijack Execution Flow: DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "8549ad4b-b5df-4a2d-a3d7-2aee9e7052a3"
@@ -47,7 +47,7 @@ Upon successful execution, powershell.exe will be copied and renamed to updater.
 
 ### Command
 
-```commandprompt
+```cmd
 copy %windir%\System32\windowspowershell\v1.0\powershell.exe %APPDATA%\updater.exe
 copy %windir%\System32\amsi.dll %APPDATA%\amsi.dll
 %APPDATA%\updater.exe -Command exit
@@ -55,7 +55,7 @@ copy %windir%\System32\amsi.dll %APPDATA%\amsi.dll
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %APPDATA%\updater.exe >nul 2>&1
 del %APPDATA%\amsi.dll >nul 2>&1
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.001"
 attack_technique_name: "Account Manipulation: Additional Cloud Credentials"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.001/T1098.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8822c3b0-d9f9-4daf-a043-491160a31122"
@@ -50,13 +50,13 @@ Check if the user exists.
 
 ### Prerequisite Check
 
-```text
+```untitled
 aws iam list-users | grep #{username}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please run atomic test T1136.003, before running this atomic
 ```
 
@@ -66,7 +66,7 @@ echo Please run atomic test T1136.003, before running this atomic
 
 ### Command
 
-```sh
+```bash
 aws iam create-access-key --user-name #{username} > "$PathToAtomicsFolder/T1098.001/bin/aws_secret.creds"
 cd "$PathToAtomicsFolder/T1098.001/bin/"
 ./aws_secret.sh
@@ -74,7 +74,7 @@ cd "$PathToAtomicsFolder/T1098.001/bin/"
 
 ### Cleanup
 
-```sh
+```bash
 access_key=`cat "$PathToAtomicsFolder/T1098.001/bin/aws_secret.creds" | jq -r '.AccessKey.AccessKeyId'`
 aws iam delete-access-key --access-key-id $access_key --user-name #{username}
 rm "$PathToAtomicsFolder/T1098.001/bin/aws_secret.creds"

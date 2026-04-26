@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "6934c16e-0b3a-4e7f-ab8c-c414acd32181"
@@ -59,13 +59,13 @@ Windows package 'Sqlcmd' need to be available in the machine to execute this ato
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command sqlcmd 2>$null) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 winget install Microsoft.Sqlcmd --silent 2>$null | Out-Null
 ```
 

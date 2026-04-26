@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "649349c7-9abf-493b-a7a2-b1aa4d141528"
@@ -45,13 +45,13 @@ https://www.bleepingcomputer.com/news/security/purelocker-ransomware-can-lock-fi
 
 ### Command
 
-```commandprompt
+```cmd
 echo T1486 - Purelocker Ransom Note > %USERPROFILE%\Desktop\YOUR_FILES.txt
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %USERPROFILE%\Desktop\YOUR_FILES.txt >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "a316fb2e-5344-470d-91c1-23e15c374edc"
@@ -52,13 +52,13 @@ Sysmon executable must be available
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(cmd /c where sysmon) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $parentpath = Split-Path "#{sysmon_exe}"; $zippath = "$parentpath\Sysmon.zip"
 New-Item -ItemType Directory $parentpath -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/Sysmon.zip" -OutFile "$zippath"
@@ -70,13 +70,13 @@ Sysmon must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(cmd /c sc query sysmon) { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 cmd /c sysmon -i -accepteula
 ```
 
@@ -87,13 +87,13 @@ cmd /c sysmon -i -accepteula
 
 ### Command
 
-```commandprompt
+```cmd
 sysmon -u
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sysmon -i -accepteula >nul 2>&1
 ```
 

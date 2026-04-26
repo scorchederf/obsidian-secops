@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "ecd3fa21-7792-41a2-8726-2c5c673414d3"
@@ -52,7 +52,7 @@ Microsoft #{ms_product} must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "#{ms_product}.Application" | Out-Null
   $process = "#{ms_product}"; if ( $process -eq "Word") {$process = "winword"}
@@ -63,7 +63,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft #{ms_product} manually to meet this requirement"
 ```
 

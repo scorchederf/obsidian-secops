@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1529"
 attack_technique_name: "System Shutdown/Reboot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1529/T1529.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "3d8c25b5-7ff5-4c9d-b21f-85ebd06654a4"
@@ -44,7 +44,7 @@ This test performs a Windows system logoff as seen in [dcrat backdoor capabiliti
 
 ### Command
 
-```commandprompt
+```cmd
 shutdown /l
 ```
 

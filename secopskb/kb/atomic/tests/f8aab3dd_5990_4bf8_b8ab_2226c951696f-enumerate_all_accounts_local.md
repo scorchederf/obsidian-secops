@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f8aab3dd-5990-4bf8-b8ab-2226c951696f"
@@ -50,14 +50,14 @@ Enumerate all accounts by copying /etc/passwd to another file
 
 ### Command
 
-```sh
+```bash
 cat /etc/passwd > #{output_file}
 cat #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

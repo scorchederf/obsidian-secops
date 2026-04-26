@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1123"
 attack_technique_name: "Audio Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1123/T1123.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9c3ad250-b185-4444-b5a9-d69218a10c95"
@@ -43,13 +43,13 @@ AudioDeviceCmdlets module must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Get-Module -ListAvailable -Name AudioDeviceCmdlets) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Install with: Install-Module -Name AudioDeviceCmdlets -Force"
 ```
 

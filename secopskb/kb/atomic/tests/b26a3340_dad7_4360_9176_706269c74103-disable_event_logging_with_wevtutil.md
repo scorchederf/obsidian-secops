@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.002"
 attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "b26a3340-dad7-4360-9176-706269c74103"
@@ -51,13 +51,13 @@ NOTE: RansomEXX ransomware uses this to disable Security logs post-encryption.
 
 ### Command
 
-```commandprompt
+```cmd
 wevtutil sl "#{log_name}" /e:false
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 wevtutil sl "#{log_name}" /e:true
 ```
 

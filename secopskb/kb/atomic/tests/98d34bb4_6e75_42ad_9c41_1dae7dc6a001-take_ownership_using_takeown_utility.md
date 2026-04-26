@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "98d34bb4-6e75-42ad-9c41-1dae7dc6a001"
@@ -52,13 +52,13 @@ Test requrires a file to take ownership of to be located at (#{file_folder_to_ow
 
 ### Prerequisite Check
 
-```text
+```cmd
 IF EXIST #{file_folder_to_own} ( EXIT 0 ) ELSE ( EXIT 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 mkdir #{file_folder_to_own}
 echo T1222.001_takeown1 >> #{file_folder_to_own}\T1222.001_takeown1.txt
 echo T1222.001_takeown2 >> #{file_folder_to_own}\T1222.001_takeown2.txt
@@ -70,7 +70,7 @@ echo T1222.001_takeown2 >> #{file_folder_to_own}\T1222.001_takeown2.txt
 
 ### Command
 
-```commandprompt
+```cmd
 takeown.exe /f #{file_folder_to_own} /r
 ```
 

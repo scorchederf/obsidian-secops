@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.002"
 attack_technique_name: "Account Discovery: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.002/T1087.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "096b6d2a-b63f-4100-8fa0-525da4cd25ca"
@@ -70,13 +70,13 @@ Packages sssd-ad sssd-tools realmd adcli installed and realm available, ldapsear
 
 ### Prerequisite Check
 
-```text
+```bash
 which ldapsearch
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ldapsearch not found
 ```
 
@@ -87,7 +87,7 @@ echo ldapsearch not found
 
 ### Command
 
-```sh
+```bash
 ldapsearch -H ldap://#{domain}.#{top_level_domain}:389 -x -D #{user} -w #{password} -b "CN=Users,DC=#{domain},DC=#{top_level_domain}" -s sub -a always -z 1000 dn
 ```
 

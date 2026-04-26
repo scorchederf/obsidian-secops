@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059"
 attack_technique_name: "Command and Scripting Interpreter"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059/T1059.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "a9b93f17-31cb-435d-a462-5e838a2a6026"
@@ -57,7 +57,7 @@ AutoIt executable file must exist on disk at the specified location (#{autoit_pa
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path "#{autoit_path}") {
     exit 0
 } else {
@@ -67,7 +67,7 @@ if(Test-Path "#{autoit_path}") {
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 $AutoItURL = "https://www.autoitscript.com/cgi-bin/getfile.pl?autoit3/autoit-v3-setup.exe"
 $InstallerPath = "$PathToAtomicsFolder\..\ExternalPayloads\autoit-v3-setup.exe"

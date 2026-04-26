@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.004"
 attack_technique_name: "Event Triggered Execution: .bash_profile .bashrc and .shrc"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.004/T1546.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "bbdb06bc-bab6-4f5b-8232-ba3fbed51d77"
@@ -52,13 +52,13 @@ An adversary may wish to establish persistence by executing malicious commands f
 
 ### Command
 
-```sh
+```bash
 echo '#{text_to_append}' >> ~/.profile
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sed -i "s/# Atomic Red Team was here... T1546.004//" ~/.profile
 ```
 

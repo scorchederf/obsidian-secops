@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.012"
 attack_technique_name: "Impair Defenses: Disable or Modify Linux Audit System"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.012/T1562.012.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "33a29ab1-cabb-407f-9448-269041bf2856"
@@ -44,13 +44,13 @@ Check if auditd is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ $(command -v auditctl) ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (yum install auditd -y) || (apt-get install auditd -y) || (dnf install auditd -y)
 ```
 
@@ -61,13 +61,13 @@ if [ $(command -v auditctl) ]; then exit 0; else exit 1; fi
 
 ### Command
 
-```sh
+```bash
 auditctl -D
 ```
 
 ### Cleanup
 
-```sh
+```bash
 service auditd restart
 ```
 

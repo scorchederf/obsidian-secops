@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "c9a2f6fe-7197-488c-af6d-10c782121ca6"
@@ -65,7 +65,7 @@ ExchangeOnlineManagement PowerShell module must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule = Get-Module -Name ExchangeOnlineManagement -ListAvailable
 if (-not $RequiredModule) {exit 1}
 if (-not $RequiredModule.ExportedCommands['Connect-ExchangeOnline']) {exit 1} else {exit 0}
@@ -73,7 +73,7 @@ if (-not $RequiredModule.ExportedCommands['Connect-ExchangeOnline']) {exit 1} el
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name ExchangeOnlineManagement         
 Import-Module ExchangeOnlineManagement
 ```

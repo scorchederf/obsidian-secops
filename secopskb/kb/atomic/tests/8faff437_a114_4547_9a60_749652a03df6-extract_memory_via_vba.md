@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.005"
 attack_technique_name: "Command and Scripting Interpreter: Visual Basic"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.005/T1059.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "8faff437-a114-4547-9a60-749652a03df6"
@@ -53,7 +53,7 @@ Microsoft #{ms_product} must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "#{ms_product}.Application" | Out-Null
   $process = "#{ms_product}"; if ( $process -eq "Word") {$process = "winword"}
@@ -64,7 +64,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft #{ms_product} manually to meet this requirement"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.002"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Hash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.002/T1550.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "eb05b028-16c8-4ad8-adea-6f5b219da9a9"
@@ -75,13 +75,13 @@ CrackMapExec executor must exist on disk at specified location (#{crackmapexec_e
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path #{crackmapexec_exe}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Automated installer not implemented yet, please install crackmapexec manually at this location: #{crackmapexec_exe}
 ```
 
@@ -91,7 +91,7 @@ Write-Host Automated installer not implemented yet, please install crackmapexec 
 
 ### Command
 
-```commandprompt
+```cmd
 #{crackmapexec_exe} #{domain} -u #{user_name} -H #{ntlm} -x #{command}
 ```
 

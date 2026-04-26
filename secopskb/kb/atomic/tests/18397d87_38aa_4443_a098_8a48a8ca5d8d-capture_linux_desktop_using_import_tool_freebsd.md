@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1113"
 attack_technique_name: "Screen Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1113/T1113.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "18397d87-38aa-4443-a098-8a48a8ca5d8d"
@@ -50,13 +50,13 @@ ImageMagick must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 if import -help > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 pkg install -y ImageMagick7
 ```
 
@@ -66,13 +66,13 @@ pkg install -y ImageMagick7
 
 ### Command
 
-```sh
+```bash
 import -window root #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file}
 ```
 

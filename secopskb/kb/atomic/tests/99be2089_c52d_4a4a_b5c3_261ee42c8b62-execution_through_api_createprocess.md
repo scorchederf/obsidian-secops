@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1106"
 attack_technique_name: "Native API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1106/T1106.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "99be2089-c52d-4a4a-b5c3-261ee42c8b62"
@@ -57,13 +57,13 @@ Execute program by leveraging Win32 API's. By default, this will launch calc.exe
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{source_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{source_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1106/src/CreateProcess.cs" -OutFile "#{source_file}"
 ```
@@ -74,7 +74,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /out:"#{output_file}" /target:exe "#{source_file}"
 %tmp%/T1106.exe
 ```

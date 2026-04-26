@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.001"
 attack_technique_name: "Hide Artifacts: Hidden Files and Directories"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.001/T1564.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f650456b-bd49-4bc1-ae9d-271b5b9581e7"
@@ -45,14 +45,14 @@ See how this trojan abuses this technique - https://www.sophos.com/en-us/threat-
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowSuperHidden /t REG_DWORD /d 0 /f
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Hidden /t REG_DWORD /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSuperHidden /f >nul 2>&1
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /f >nul 2>&1
 ```

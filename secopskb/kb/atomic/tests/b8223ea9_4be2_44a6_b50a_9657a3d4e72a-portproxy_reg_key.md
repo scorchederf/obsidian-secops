@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1090.001"
 attack_technique_name: "Proxy: Internal Proxy"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1090.001/T1090.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b8223ea9-4be2-44a6-b50a-9657a3d4e72a"

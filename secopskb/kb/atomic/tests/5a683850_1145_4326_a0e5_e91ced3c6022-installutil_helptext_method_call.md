@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.004"
 attack_technique_name: "Signed Binary Proxy Execution: InstallUtil"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.004/T1218.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "5a683850-1145-4326-a0e5-e91ced3c6022"
@@ -68,13 +68,13 @@ InstallUtil test harness script must be installed at specified location (#{test_
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path "#{test_harness}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory (split-path "#{test_harness}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest 'https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.004/src/InstallUtilTestHarness.ps1' -OutFile "#{test_harness}"
 ```

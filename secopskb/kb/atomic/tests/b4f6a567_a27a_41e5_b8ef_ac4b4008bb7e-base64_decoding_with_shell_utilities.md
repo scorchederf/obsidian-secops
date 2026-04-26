@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "b4f6a567-a27a-41e5-b8ef-ac4b4008bb7e"
@@ -59,7 +59,7 @@ Use common shell utilities to decode a base64-encoded text string and echo it to
 
 ### Command
 
-```sh
+```bash
 ENCODED=$(echo '#{message}' | base64)
 printf $ENCODED | base64 -d
 echo $ENCODED | base64 -d

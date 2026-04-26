@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.018"
 attack_technique_name: "Event Triggered Execution: Python Startup Hooks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.018/T1546.018.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "6e78084a-a433-4702-a838-cc7b765d87e8"
@@ -54,7 +54,7 @@ Python must be installed and the specified binary (#{python_exe}) must be in the
 
 ### Prerequisite Check
 
-```text
+```bash
 PYTHON_CMD=$(command -v #{python_exe} || command -v python)
 if [ -z "$PYTHON_CMD" ]; then exit 1; fi
 $PYTHON_CMD -m venv --help >/dev/null 2>&1
@@ -62,7 +62,7 @@ $PYTHON_CMD -m venv --help >/dev/null 2>&1
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Python not found. Please install Python using your package manager (e.g., Debian Based 'sudo apt-get update && sudo apt-get install -y python3 python3-venv', RedHat / CentOS Based 'sudo yum install -y python3 python3-venv || sudo dnf install -y python3 python3-venv', MacOS brew install python3 or brew install python@3.x or the macOS developer tools ('xcode-select --install'))."
 ```
 
@@ -73,7 +73,7 @@ echo "Python not found. Please install Python using your package manager (e.g., 
 
 ### Command
 
-```sh
+```bash
 PYTHON_EXE=$(command -v #{python_exe} || command -v python)
 USER_PACKAGES=$($PYTHON_EXE -c "import site; print(site.getusersitepackages())")
 mkdir -p "$USER_PACKAGES"
@@ -85,7 +85,7 @@ if [ -f /tmp/poc.txt ]; then echo "Success: poc.txt created under /tmp\n" $(ls -
 
 ### Cleanup
 
-```sh
+```bash
 PYTHON_CMD=$(command -v #{python_exe} || command -v python)
 USER_PACKAGES=$($PYTHON_CMD -S -c "import site; print(site.getusersitepackages())")
 if [ ! -f /tmp/poc.txt ] || [ ! -f $USER_PACKAGES/usercustomize.py ]; then echo "[!] Artifact missing: /tmp/poc.txt and $USER_PACKAGES/usercustomize.py — [-] Please Run : Invoke-AtomicTest T1546.018"; exit 0; fi

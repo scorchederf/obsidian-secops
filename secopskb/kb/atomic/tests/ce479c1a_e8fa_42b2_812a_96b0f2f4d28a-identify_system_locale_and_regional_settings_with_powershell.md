@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ce479c1a-e8fa-42b2-812a-96b0f2f4d28a"
@@ -43,13 +43,13 @@ the machine's location and user language preferences. The command outputs system
 
 ### Command
 
-```commandprompt
+```cmd
 powershell.exe -c "Get-Culture | Format-List | Out-File -FilePath %TMP%\a.txt"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 cmd.exe /c del "%TMP%\a.txt"
 ```
 

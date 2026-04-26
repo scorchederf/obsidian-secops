@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1007"
 attack_technique_name: "System Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1007/T1007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "51f17016-d8fa-4360-888a-df4bf92c4a04"
@@ -42,7 +42,7 @@ Executes the Get-Service cmdlet to gather objects representing all services on t
 
 ### Command
 
-```commandprompt
+```cmd
 powershell.exe Get-Service
 ```
 

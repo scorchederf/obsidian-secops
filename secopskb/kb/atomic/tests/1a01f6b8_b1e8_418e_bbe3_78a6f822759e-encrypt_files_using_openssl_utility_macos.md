@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "1a01f6b8-b1e8-418e-bbe3-78a6f822759e"
@@ -64,13 +64,13 @@ This test encrypts the file(s) using the openssl utility
 
 ### Command
 
-```sh
+```bash
 openssl enc #{encryption_option} -in #{input_file_path} -out #{output_file_name}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file_name}
 ```
 

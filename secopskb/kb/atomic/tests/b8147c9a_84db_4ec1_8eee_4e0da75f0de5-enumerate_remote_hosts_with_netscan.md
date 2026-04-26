@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b8147c9a-84db-4ec1-8eee-4e0da75f0de5"
@@ -58,13 +58,13 @@ Netscan must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{netscan_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\netscan.zip" "https://www.softperfect.com/download/files/netscan_portable.zip"
 Expand-Archive -LiteralPath "PathToAtomicsFolder\..\ExternalPayloads\netscan.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\netscan"

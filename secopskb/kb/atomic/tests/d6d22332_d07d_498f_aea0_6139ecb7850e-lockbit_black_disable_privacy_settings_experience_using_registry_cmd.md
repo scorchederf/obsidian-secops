@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "d6d22332-d07d-498f-aea0-6139ecb7850e"
@@ -44,13 +44,13 @@ LockBit Black - Disable Privacy Settings Experience Using Registry
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKCU\Software\Policies\Microsoft\Windows\OOBE" /v DisablePrivacyExperience /t REG_DWORD /d 1 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKCU\Software\Policies\Microsoft\Windows\OOBE" /v DisablePrivacyExperience /f >nul 2>&1
 ```
 

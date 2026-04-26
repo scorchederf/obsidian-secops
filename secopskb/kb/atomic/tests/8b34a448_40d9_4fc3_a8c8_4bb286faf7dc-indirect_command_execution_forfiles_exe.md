@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1202"
 attack_technique_name: "Indirect Command Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1202/T1202.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "8b34a448-40d9-4fc3-a8c8-4bb286faf7dc"
@@ -53,7 +53,7 @@ Upon execution calc.exe will be opened.
 
 ### Command
 
-```commandprompt
+```cmd
 forfiles /p c:\windows\system32 /m notepad.exe /c #{process}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.004"
 attack_technique_name: "SSH Authorized Keys"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.004/T1098.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "342cc723-127c-4d3a-8292-9c0c6b4ecadc"
@@ -46,13 +46,13 @@ If the user is able to save the same contents in the authorized_keys file, it sh
 
 ### Command
 
-```sh
+```bash
 if [ -f ~/.ssh/authorized_keys ]; then ssh_authorized_keys=$(cat ~/.ssh/authorized_keys); echo "$ssh_authorized_keys" > ~/.ssh/authorized_keys; fi;
 ```
 
 ### Cleanup
 
-```sh
+```bash
 unset ssh_authorized_keys
 ```
 

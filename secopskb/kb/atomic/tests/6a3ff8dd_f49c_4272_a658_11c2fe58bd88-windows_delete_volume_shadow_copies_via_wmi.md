@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1490"
 attack_technique_name: "Inhibit System Recovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1490/T1490.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "6a3ff8dd-f49c-4272-a658-11c2fe58bd88"
@@ -44,13 +44,13 @@ Create volume shadow copy of C:\ .
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(!(vssadmin.exe list shadows | findstr "No items found that satisfy the query.")) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 wmic shadowcopy call create Volume='C:\'
 ```
 
@@ -61,7 +61,7 @@ wmic shadowcopy call create Volume='C:\'
 
 ### Command
 
-```commandprompt
+```cmd
 wmic.exe shadowcopy delete
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.010"
 attack_technique_name: "Command and Scripting Interpreter: AutoHotKey & AutoIT"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.010/T1059.010.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "7b5d350e-f758-43cc-a761-8e3f6b052a03"
@@ -57,7 +57,7 @@ AutoHotKey executable file must exist on disk at the specified location (#{autoh
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path "#{autohotkey_path}") {
     exit 0
 } else {
@@ -67,7 +67,7 @@ if(Test-Path "#{autohotkey_path}") {
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 $AutoHotKeyURL = "https://www.autohotkey.com/download/ahk.zip"
 $InstallerPath = "$PathToAtomicsFolder\..\ExternalPayloads"

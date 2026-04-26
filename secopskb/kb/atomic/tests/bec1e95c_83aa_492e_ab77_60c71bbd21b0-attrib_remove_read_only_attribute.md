@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "bec1e95c-83aa-492e-ab77-60c71bbd21b0"
@@ -52,13 +52,13 @@ Test requrires a file to modify to be located at (#{file_or_folder})
 
 ### Prerequisite Check
 
-```text
+```cmd
 IF EXIST #{file_or_folder} ( EXIT 0 ) ELSE ( EXIT 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 mkdir #{file_or_folder}
 echo T1222.001_attrib1 >> #{file_or_folder}\T1222.001_attrib1.txt
 echo T1222.001_attrib2 >> #{file_or_folder}\T1222.001_attrib2.txt
@@ -72,7 +72,7 @@ attrib.exe +r #{file_or_folder}\T1222.001_attrib2.txt
 
 ### Command
 
-```commandprompt
+```cmd
 attrib.exe -r #{file_or_folder}\*.* /s
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "22cfde89-befe-4e15-9753-47306b37a6e3"
@@ -47,7 +47,7 @@ In this atomic, the sample hta file opens the calculator and the vbs file shows 
 
 ### Command
 
-```commandprompt
+```cmd
 rundll32.exe url.dll,OpenURL "PathToAtomicsFolder\T1218.011\src\index.hta"
 rundll32.exe URL.dll,FileProtocolHandler "PathToAtomicsFolder\T1218.011\src\akteullen.vbs"
 ```

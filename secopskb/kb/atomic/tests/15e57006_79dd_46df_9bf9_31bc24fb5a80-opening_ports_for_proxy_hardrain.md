@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "15e57006-79dd-46df-9bf9-31bc24fb5a80"
@@ -46,13 +46,13 @@ reference: https://www.us-cert.gov/sites/default/files/publications/MAR-10135536
 
 ### Command
 
-```commandprompt
+```cmd
 netsh advfirewall firewall add rule name="atomic testing" action=allow dir=in protocol=TCP localport=450
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 netsh advfirewall firewall delete rule name="atomic testing" protocol=TCP localport=450 >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "0e65ae27-5385-46b4-98ac-607a8ee82261"
@@ -76,13 +76,13 @@ AzureAD module must be installed.
 
 ### Prerequisite Check
 
-```text
+```untitled
 try {if (Get-InstalledModule -Name AzureAD -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Install-Module -Name AzureAD -Force
 ```
 

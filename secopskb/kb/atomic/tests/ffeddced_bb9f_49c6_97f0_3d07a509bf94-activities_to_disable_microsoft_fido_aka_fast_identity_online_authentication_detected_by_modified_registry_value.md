@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ffeddced-bb9f-49c6-97f0-3d07a509bf94"
@@ -43,13 +43,13 @@ See the related article (https://admx.help/?Category=Windows_10_2016&Policy=Micr
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FIDO" /v "AllowExternalDeviceSignon" /t REG_DWORD /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Policies\Microsoft\FIDO" /v "AllowExternalDeviceSignon" /t REG_DWORD /d 1 /f
 ```
 

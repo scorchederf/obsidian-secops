@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1012"
 attack_technique_name: "Query Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1012/T1012.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6fb4c4c5-f949-4fd2-8af5-ddbc61595223"
@@ -44,7 +44,7 @@ The reg query commands allows to check the status of the AlwaysInstallElevated r
 
 ### Command
 
-```commandprompt
+```cmd
 reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
 reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
 ```

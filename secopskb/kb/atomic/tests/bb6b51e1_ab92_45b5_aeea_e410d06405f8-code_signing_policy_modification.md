@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.006"
 attack_technique_name: "Subvert Trust Controls: Code Signing Policy Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.006/T1553.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "bb6b51e1-ab92-45b5-aeea-e410d06405f8"
@@ -44,13 +44,13 @@ Allows adversaries to subvert trust controls by modifying the code signing polic
 
 ### Command
 
-```commandprompt
+```cmd
 bcdedit /set testsigning on
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 bcdedit /set testsigning off
 ```
 

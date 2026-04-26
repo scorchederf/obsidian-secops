@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.002"
 attack_technique_name: "Scheduled Task/Job: At"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.002/T1053.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "9ddf2e5e-7e2c-46c2-9940-3c2ff29c7213"
@@ -70,13 +70,13 @@ kubectl must be installed and configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 which kubectl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "kubectl must be installed manually"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1484.002"
 attack_technique_name: "Domain Trust Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1484.002/T1484.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "8906c5d0-3ee5-4f63-897a-f6cafd3fdbb7"
@@ -67,13 +67,13 @@ AzureAD and AADInternals Powershell modules must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Get-Module -ListAvailable -Name AzureAD) -And (Get-Module -ListAvailable -Name AADInternals)) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AzureAD -Force
 Install-Module -Name AADInternals -Force
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1485"
 attack_technique_name: "Data Destruction"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "38deee99-fd65-4031-bec8-bfa4f9f26146"
@@ -58,7 +58,7 @@ To stop the test, break the command with CTRL/CMD+C.
 
 ### Command
 
-```sh
+```bash
 dd of=#{file_to_overwrite} if=#{overwrite_source} count=$(ls -l #{file_to_overwrite} | awk '{print $5}') iflag=count_bytes
 ```
 

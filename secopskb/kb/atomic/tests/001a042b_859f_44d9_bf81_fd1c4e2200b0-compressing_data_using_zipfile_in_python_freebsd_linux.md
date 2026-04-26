@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.002"
 attack_technique_name: "Archive Collected Data: Archive via Library"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.002/T1560.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "001a042b-859f-44d9-bf81-fd1c4e2200b0"
@@ -58,13 +58,13 @@ Requires Python
 
 ### Prerequisite Check
 
-```text
+```bash
 which python || which python3
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "please install python to run this test"; exit 1
 ```
 
@@ -75,14 +75,14 @@ echo "please install python to run this test"; exit 1
 
 ### Command
 
-```sh
+```bash
 which_python=`which python || which python3`
 $which_python -c "from zipfile import ZipFile; ZipFile('#{path_to_output_file}', mode='w').write('#{path_to_input_file}')"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{path_to_output_file}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "7161b085-816a-491f-bab4-d68e974b7995"
@@ -44,7 +44,7 @@ The command shows all available volume shadow copies, along with their creation 
 
 ### Command
 
-```commandprompt
+```cmd
 vssadmin.exe list shadows
 ```
 

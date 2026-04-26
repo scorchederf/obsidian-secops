@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.002"
 attack_technique_name: "Remote Services: SMB/Windows Admin Shares"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.002/T1021.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "3386975b-367a-4fbb-9d77-4dcf3639ffd3"
@@ -68,7 +68,7 @@ Connecting To Remote Shares
 
 ### Command
 
-```commandprompt
+```cmd
 cmd.exe /c "net use \\#{computer_name}\#{share_name} #{password} /u:#{user_name}"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0fd48ef7-d890-4e93-a533-f7dedd5191d3"
@@ -60,7 +60,7 @@ if the provided remote host is unreachable
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /node:"#{node}" service where (caption like "%#{service_search_string}%")
 ```
 

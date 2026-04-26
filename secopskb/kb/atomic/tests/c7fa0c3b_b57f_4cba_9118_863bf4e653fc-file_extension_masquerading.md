@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.007"
 attack_technique_name: "Masquerading: Double File Extension"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.007/T1036.007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c7fa0c3b-b57f-4cba-9118-863bf4e653fc"
@@ -65,13 +65,13 @@ File to copy must exist on disk at specified location (#{vbs_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{vbs_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{vbs_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1036.007/src/T1036.007_masquerading.vbs" -OutFile "#{vbs_path}"
 ```
@@ -80,13 +80,13 @@ File to copy must exist on disk at specified location (#{ps1_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{ps1_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{ps1_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1036.007/src/T1036.007_masquerading.ps1" -OutFile "#{ps1_path}"
 ```
@@ -97,7 +97,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 copy "#{exe_path}" %temp%\T1036.007_masquerading.docx.exe /Y
 copy "#{exe_path}" %temp%\T1036.007_masquerading.pdf.exe /Y
 copy "#{exe_path}" %temp%\T1036.007_masquerading.ps1.exe /Y
@@ -120,7 +120,7 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File %temp%\T1036.007
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /f %temp%\T1036.007_masquerading.docx.exe > nul 2>&1
 del /f %temp%\T1036.007_masquerading.pdf.exe > nul 2>&1
 del /f %temp%\T1036.007_masquerading.ps1.exe > nul 2>&1

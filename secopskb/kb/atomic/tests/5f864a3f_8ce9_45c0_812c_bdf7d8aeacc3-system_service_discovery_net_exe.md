@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1007"
 attack_technique_name: "System Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1007/T1007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "5f864a3f-8ce9-45c0-812c-bdf7d8aeacc3"
@@ -52,13 +52,13 @@ Upon successful execution, net.exe will run from cmd.exe that queries services. 
 
 ### Command
 
-```commandprompt
+```cmd
 net.exe start >> #{output_file}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /f /q /s #{output_file} >nul 2>&1
 ```
 

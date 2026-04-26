@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "3b3809b6-a54b-4f5b-8aff-cb51f2e97b34"

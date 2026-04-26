@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.001"
 attack_technique_name: "Brute Force: Password Guessing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.001/T1110.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "abcde488-e083-4ee7-bc85-a5684edd7541"
@@ -54,7 +54,7 @@ Check if running on a FreeBSD based machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if grep -iq "FreeBSD" /etc/os-release; then echo "FreeBSD"; else echo "NOT FreeBSD"; exit 1; fi
 if [ -x "$(command -v openssl)" ]; then echo "openssl is installed"; else echo "openssl is NOT installed"; exit 1; fi
 if [ -x "$(command -v sudo)" ]; then echo "sudo is installed"; else echo "sudo is NOT installed"; exit 1; fi
@@ -64,7 +64,7 @@ if [ -x "$(command -v bash)" ]; then echo "bash is installed"; else echo "bash i
 
 ### Get Prerequisite
 
-```text
+```bash
 pkg update && pkg install -y sudo curl bash
 ```
 

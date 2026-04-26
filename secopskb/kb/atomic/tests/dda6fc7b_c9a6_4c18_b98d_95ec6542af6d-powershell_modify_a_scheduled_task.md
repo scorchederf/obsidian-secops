@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "dda6fc7b-c9a6-4c18-b98d-95ec6542af6d"

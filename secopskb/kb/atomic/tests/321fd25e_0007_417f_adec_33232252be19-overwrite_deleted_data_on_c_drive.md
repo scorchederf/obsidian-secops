@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1485"
 attack_technique_name: "Data Destruction"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "321fd25e-0007-417f-adec-33232252be19"
@@ -45,7 +45,7 @@ https://support.microsoft.com/en-us/topic/cipher-exe-security-tool-for-the-encry
 
 ### Command
 
-```commandprompt
+```cmd
 cipher.exe /w:C:
 ```
 

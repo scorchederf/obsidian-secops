@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "bda6a3d6-7aa7-4e89-908b-306772e9662f"
@@ -43,13 +43,13 @@ User have to clic on the recycle bin to lauch the payload (here calc)
 
 ### Command
 
-```commandprompt
+```cmd
 reg ADD "HKCR\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\open\command" /ve /d "calc.exe" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg DELETE "HKCR\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\shell\open" /f
 ```
 

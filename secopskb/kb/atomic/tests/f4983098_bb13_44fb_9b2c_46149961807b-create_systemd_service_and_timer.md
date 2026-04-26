@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.006"
 attack_technique_name: "Scheduled Task/Job: Systemd Timers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.006/T1053.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "f4983098-bb13-44fb-9b2c-46149961807b"

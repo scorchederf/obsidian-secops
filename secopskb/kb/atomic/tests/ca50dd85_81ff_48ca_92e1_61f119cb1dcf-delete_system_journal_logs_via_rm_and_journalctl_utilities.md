@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "ca50dd85-81ff-48ca-92e1-61f119cb1dcf"
@@ -52,13 +52,13 @@ target files must exist
 
 ### Prerequisite Check
 
-```text
+```bash
 stat #{journal_folder}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 mkdir -p #{journal_folder} && touch #{journal_folder}/T1070_002.journal
 ```
 
@@ -69,7 +69,7 @@ mkdir -p #{journal_folder} && touch #{journal_folder}/T1070_002.journal
 
 ### Command
 
-```sh
+```bash
 sudo rm #{journal_folder}/* #physically deletes the journal files, and not just their content
 sudo journalctl --vacuum-time=0 #clears the journal while still keeping the journal files in place
 ```

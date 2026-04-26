@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.001"
 attack_technique_name: "Hide Artifacts: Hidden Files and Directories"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.001/T1564.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "cddb9098-3b47-4e01-9d3b-6f5f323288a9"
@@ -42,7 +42,7 @@ Hide a file on MacOS
 
 ### Command
 
-```sh
+```bash
 xattr -lr * / 2>&1 /dev/null | grep -C 2 "00 00 00 00 00 00 00 00 40 00 FF FF FF FF 00 00"
 ```
 

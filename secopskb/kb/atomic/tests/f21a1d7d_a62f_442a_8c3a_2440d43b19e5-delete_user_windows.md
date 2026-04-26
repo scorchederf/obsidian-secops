@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1531"
 attack_technique_name: "Account Access Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1531/T1531.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f21a1d7d-a62f-442a-8c3a-2440d43b19e5"
@@ -58,7 +58,7 @@ Deletes a user account to prevent access. Upon execution, run the command "net u
 
 ### Command
 
-```commandprompt
+```cmd
 net user #{user_account} #{new_user_password} /add
 net.exe user #{user_account} /delete
 ```

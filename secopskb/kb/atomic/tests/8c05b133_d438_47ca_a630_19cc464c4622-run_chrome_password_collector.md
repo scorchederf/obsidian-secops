@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "8c05b133-d438-47ca-a630-19cc464c4622"
@@ -55,13 +55,13 @@ Modified Sysinternals must be located at #{file_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_path}\SysInternals") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest "https://github.com/mitre-attack/attack-arsenal/raw/66650cebd33b9a1e180f7b31261da1789cdceb66/adversary_emulation/APT29/CALDERA_DIY/evals/payloads/Modified-SysInternalsSuite.zip" -OutFile "#{file_path}\Modified-SysInternalsSuite.zip"

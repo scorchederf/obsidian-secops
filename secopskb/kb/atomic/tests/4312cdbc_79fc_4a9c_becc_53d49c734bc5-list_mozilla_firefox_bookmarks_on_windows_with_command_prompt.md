@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1217"
 attack_technique_name: "Browser Bookmark Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "4312cdbc-79fc-4a9c-becc-53d49c734bc5"
@@ -43,7 +43,7 @@ Upon execution, paths that contain bookmark files will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 where /R C:\Users\ places.sqlite
 ```
 

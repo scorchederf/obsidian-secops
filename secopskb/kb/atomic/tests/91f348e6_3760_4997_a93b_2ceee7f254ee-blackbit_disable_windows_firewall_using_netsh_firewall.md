@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "91f348e6-3760-4997-a93b-2ceee7f254ee"
@@ -44,13 +44,13 @@ An adversary tries to modify the windows firewall configuration using the deprec
 
 ### Command
 
-```commandprompt
+```cmd
 netsh firewall set opmode mode=disable
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 netsh firewall set opmode mode=enable >nul 2>&1
 ```
 

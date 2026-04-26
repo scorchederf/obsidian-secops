@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1201"
 attack_technique_name: "Password Policy Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1201/T1201.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "78a12e65-efff-4617-bc01-88f17d71315d"
@@ -42,13 +42,13 @@ System must be CentOS or RHEL v7
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ $(uname -a | grep -ioP 'el[0-9]' | grep -oP '[0-9]') -eq "7" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please run from CentOS or RHEL v7
 ```
 

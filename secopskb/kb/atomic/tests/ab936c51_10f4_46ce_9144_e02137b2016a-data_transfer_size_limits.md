@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1030"
 attack_technique_name: "Data Transfer Size Limits"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1030/T1030.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "ab936c51-10f4-46ce-9144-e02137b2016a"
@@ -58,13 +58,13 @@ The file must exist for the test to run.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -f #{folder_path}/#{file_name} ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ ! -d #{folder_path} ]; then mkdir -p #{folder_path}; touch #{folder_path}/safe_to_delete; fi; dd if=/dev/urandom of=#{folder_path}/#{file_name} bs=25000000 count=1
 ```
 
@@ -74,14 +74,14 @@ if [ ! -d #{folder_path} ]; then mkdir -p #{folder_path}; touch #{folder_path}/s
 
 ### Command
 
-```sh
+```bash
 cd #{folder_path}; split -b 5000000 #{file_name}
 ls -l #{folder_path}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 if [ -f #{folder_path}/safe_to_delete ]; then rm -rf #{folder_path}; fi;
 ```
 

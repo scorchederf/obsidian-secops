@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "54782d65-12f0-47a5-b4c1-b70ee23de6df"
@@ -58,13 +58,13 @@ Reference: https://lolbas-project.github.io/lolbas/Binaries/Replace/
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{replace_cab}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{replace_cab}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1105/src/redcanary.cab" -OutFile "#{replace_cab}"
 ```
@@ -75,14 +75,14 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 del %TEMP%\redcanary.cab >nul 2>&1
 #{Path_replace} "#{replace_cab}" %TEMP% /A
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\redcanary.cab >nul 2>&1
 ```
 

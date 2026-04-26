@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "962a6017-1c09-45a6-880b-adc9c57cb22e"
@@ -47,13 +47,13 @@ This PC must be joined to a domain.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Get-WmiObject -Class Win32_ComputerSystem).partofdomain -eq $true) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 write-host "This PC must be manually added to a domain."
 ```
 

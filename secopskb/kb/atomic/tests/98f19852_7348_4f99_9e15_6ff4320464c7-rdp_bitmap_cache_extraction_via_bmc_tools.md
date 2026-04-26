@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1113"
 attack_technique_name: "Screen Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1113/T1113.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "98f19852-7348-4f99-9e15-6ff4320464c7"
@@ -59,13 +59,13 @@ Python must be installed and in the PATH to run bmc-tools.py
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command python -ErrorAction SilentlyContinue) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "Please install Python manually."
 ```
 

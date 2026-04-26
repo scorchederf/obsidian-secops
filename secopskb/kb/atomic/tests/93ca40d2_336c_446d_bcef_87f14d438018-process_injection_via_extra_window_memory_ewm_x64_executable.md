@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.011"
 attack_technique_name: "Process Injection: Extra Window Memory Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.011/T1055.011.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "93ca40d2-336c-446d-bcef-87f14d438018"
@@ -64,13 +64,13 @@ T1055.011x64.exe and payload must exist on disk at specified location (#{exe_bin
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{exe_binary}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path #{exe_binary}) -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.011/bin/T1055.011_#{arch}.exe" -OutFile "#{exe_binary}" -UseBasicParsing
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.011/bin/payload.exe_#{arch}.bin" -OutFile "#{payload_file}" -UseBasicParsing

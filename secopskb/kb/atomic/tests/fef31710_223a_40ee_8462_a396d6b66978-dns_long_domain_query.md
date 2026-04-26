@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1071.004"
 attack_technique_name: "Application Layer Protocol: DNS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1071.004/T1071.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "fef31710-223a-40ee-8462-a396d6b66978"

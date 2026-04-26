@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "861ea0b4-708a-4d17-848d-186c9c7f17e3"
@@ -52,13 +52,13 @@ The file to delete must exist on disk at specified location (#{file_to_delete})
 
 ### Prerequisite Check
 
-```text
+```cmd
 IF EXIST "#{file_to_delete}" ( EXIT 0 ) ELSE ( EXIT 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 echo deleteme_T1551.004 >> #{file_to_delete}
 ```
 
@@ -68,7 +68,7 @@ echo deleteme_T1551.004 >> #{file_to_delete}
 
 ### Command
 
-```commandprompt
+```cmd
 del /f #{file_to_delete}
 ```
 

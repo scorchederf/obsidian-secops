@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564"
 attack_technique_name: "Hide Artifacts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564/T1564.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "333c7de0-6fbe-42aa-ac2b-c7e40b18246a"
@@ -63,14 +63,14 @@ https://learn.microsoft.com/en-us/windows/win32/secauthz/security-descriptor-str
 
 ### Command
 
-```commandprompt
+```cmd
 sc.exe create #{service_name} binPath= "#{executable_command}"
 sc sdset #{service_name} "D:(D;;DCLCWPDTSD;;;IU)(D;;DCLCWPDTSD;;;SU)(D;;DCLCWPDTSD;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc sdset #{service_name} "D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
 sc.exe delete #{service_name}
 ```

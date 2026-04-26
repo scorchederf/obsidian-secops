@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "00682c9f-7df4-4df8-950b-6dcaaa3ad9af"
@@ -59,13 +59,13 @@ Simulate DarkGate malware's second stage by writing a VBscript to disk directly 
 
 ### Command
 
-```commandprompt
+```cmd
  c:\windows\system32\cmd.exe /c cd /d #{script_path} & echo Set objShell = CreateObject("WScript.Shell"):Set objExec = objShell.Exec("whoami"):Set objExec = Nothing:Set objShell = Nothing > #{script_name}.vbs & #{script_name}.vbs
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "#{script_name}.vbs" >nul 2>&1
 ```
 

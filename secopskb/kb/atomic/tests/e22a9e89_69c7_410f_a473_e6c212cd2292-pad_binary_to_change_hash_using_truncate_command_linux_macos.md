@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.001"
 attack_technique_name: "Obfuscated Files or Information: Binary Padding"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.001/T1027.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "e22a9e89-69c7-410f-a473-e6c212cd2292"
@@ -54,13 +54,13 @@ The binary must exist on disk at specified location (#{file_to_pad})
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{file_to_pad} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 cp /bin/ls #{file_to_pad}
 ```
 
@@ -70,13 +70,13 @@ cp /bin/ls #{file_to_pad}
 
 ### Command
 
-```sh
+```bash
 truncate -s +1 #{file_to_pad} #adds a byte to the file size
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{file_to_pad}
 ```
 

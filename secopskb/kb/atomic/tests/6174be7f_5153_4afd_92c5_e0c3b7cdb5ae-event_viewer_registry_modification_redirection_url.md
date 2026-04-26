@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6174be7f-5153-4afd-92c5-e0c3b7cdb5ae"
@@ -52,13 +52,13 @@ Modify event viewer registry values to alter the behavior of the online help red
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Event Viewer" /v MicrosoftRedirectionURL /t REG_SZ /d "#{redirection_url}" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Event Viewer" /v MicrosoftRedirectionURL /t REG_SZ /d "http://go.microsoft.com/fwlink/events.asp" /f
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "3d47daaa-2f56-43e0-94cc-caf5d8d52a68"
@@ -48,7 +48,7 @@ https://unit42.paloaltonetworks.com/unit42-gorgon-group-slithering-nation-state-
 
 ### Command
 
-```commandprompt
+```cmd
 "C:\Program Files\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All
 ```
 

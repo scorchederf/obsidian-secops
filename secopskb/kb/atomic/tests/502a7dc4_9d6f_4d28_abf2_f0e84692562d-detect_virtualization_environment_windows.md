@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1497.001"
 attack_technique_name: "Virtualization/Sandbox Evasion: System Checks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1497.001/T1497.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "502a7dc4-9d6f-4d28-abf2-f0e84692562d"

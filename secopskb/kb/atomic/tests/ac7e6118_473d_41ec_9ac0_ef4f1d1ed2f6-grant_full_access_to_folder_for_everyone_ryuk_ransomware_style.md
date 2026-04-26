@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ac7e6118-473d-41ec-9ac0-ef4f1d1ed2f6"
@@ -61,13 +61,13 @@ Backup of original folder permissions should exist (for use in cleanup commands)
 
 ### Prerequisite Check
 
-```text
+```cmd
 IF EXIST #{file_path} ( EXIT 0 ) ELSE ( EXIT 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 icacls #{path} /save #{file_path} /t /q >nul 2>&1
 ```
 
@@ -78,13 +78,13 @@ icacls #{path} /save #{file_path} /t /q >nul 2>&1
 
 ### Command
 
-```commandprompt
+```cmd
 icacls "#{path}" /grant Everyone:F /T /C /Q
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 icacls '#{path}' /restore #{file_path} /q >nul 2>&1
 ```
 

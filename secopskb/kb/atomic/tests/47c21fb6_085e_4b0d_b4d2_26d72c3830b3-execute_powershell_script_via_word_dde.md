@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1559.002"
 attack_technique_name: "Inter-Process Communication: Dynamic Data Exchange"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1559.002/T1559.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "47c21fb6-085e-4b0d-b4d2-26d72c3830b3"
@@ -42,7 +42,7 @@ When the word document opens it will prompt the user to click ok on a dialogue b
 
 ### Command
 
-```commandprompt
+```cmd
 start "$PathToAtomicsFolder\T1559.002\bin\DDE_Document.docx"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.001"
 attack_technique_name: "Create or Modify System Process: Launch Agent"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.001/T1543.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "11979f23-9b9d-482a-9935-6fc9cd022c3e"

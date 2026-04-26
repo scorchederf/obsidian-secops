@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "0ae9e327-3251-465a-a53b-485d4e3f58fa"
@@ -53,13 +53,13 @@ Ammyy Admin must exist on disk at the specified location (#{Ammyy_Admin_Path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{Ammyy_Admin_Path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://web.archive.org/web/20140625232737/http://www.ammyy.com/AA_v3.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\ammyy.exe" -UseBasicParsing
 ```

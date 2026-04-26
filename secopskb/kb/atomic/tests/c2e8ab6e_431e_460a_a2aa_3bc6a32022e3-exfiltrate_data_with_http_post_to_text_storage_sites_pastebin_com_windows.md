@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1567.003"
 attack_technique_name: "Exfiltration Over Web Service: Exfiltration to Text Storage Sites"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1567.003/T1567.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "c2e8ab6e-431e-460a-a2aa-3bc6a32022e3"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1120"
 attack_technique_name: "Peripheral Device Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1120/T1120.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "424e18fd-48b8-4201-8d3a-bf591523a686"
@@ -42,7 +42,7 @@ Performs pheripheral device discovery utilizing fsutil to list all drives.
 
 ### Command
 
-```commandprompt
+```cmd
 fsutil fsinfo drives
 ```
 

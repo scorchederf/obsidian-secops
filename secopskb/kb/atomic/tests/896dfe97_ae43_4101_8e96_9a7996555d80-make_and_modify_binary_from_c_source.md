@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "896dfe97-ae43-4101-8e96-9a7996555d80"
@@ -53,7 +53,7 @@ Make, change owner, and change file attributes on a C source code file
 
 ### Command
 
-```sh
+```bash
 cp #{payload} /tmp/hello.c
 sudo chown root /tmp/hello.c
 sudo make /tmp/hello
@@ -64,7 +64,7 @@ sudo chmod u+s /tmp/hello
 
 ### Cleanup
 
-```sh
+```bash
 sudo rm /tmp/hello
 sudo rm /tmp/hello.c
 ```

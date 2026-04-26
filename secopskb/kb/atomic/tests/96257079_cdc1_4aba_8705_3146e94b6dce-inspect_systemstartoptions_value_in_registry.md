@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1012"
 attack_technique_name: "Query Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1012/T1012.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "96257079-cdc1-4aba-8705-3146e94b6dce"
@@ -42,7 +42,7 @@ The objective of this test is to query the SystemStartOptions key under HKLM\SYS
 
 ### Command
 
-```commandprompt
+```cmd
 reg.exe query HKLM\SYSTEM\CurrentControlSet\Control /v SystemStartOptions
 ```
 

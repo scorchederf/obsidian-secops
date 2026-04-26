@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.001"
 attack_technique_name: "Signed Binary Proxy Execution: Compiled HTML File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.001/T1218.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "5decef42-92b8-4a93-9eb2-877ddcb9401a"
@@ -50,7 +50,7 @@ The AtomicTestHarnesses module must be installed and Invoke-ATHCompiledHelp must
 
 ### Prerequisite Check
 
-```text
+```untitled
 $RequiredModule = Get-Module -Name AtomicTestHarnesses -ListAvailable
 if (-not $RequiredModule) {exit 1}
 if (-not $RequiredModule.ExportedCommands['Invoke-ATHCompiledHelp']) {exit 1} else {exit 0}
@@ -58,7 +58,7 @@ if (-not $RequiredModule.ExportedCommands['Invoke-ATHCompiledHelp']) {exit 1} el
 
 ### Get Prerequisite
 
-```text
+```untitled
 Install-Module -Name AtomicTestHarnesses -Scope CurrentUser -Force
 ```
 

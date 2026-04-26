@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "224b4daf-db44-404e-b6b2-f4d1f0126ef8"
@@ -42,7 +42,7 @@ Identify the Windows MachineGUID value for a system. Upon execution, the machine
 
 ### Command
 
-```commandprompt
+```cmd
 REG QUERY HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography /v MachineGuid
 ```
 

@@ -50,6 +50,8 @@ def normalize_line(line):
         line = line.replace(" • [[kb/sigma/index|Sigma]]", "")
     if "[[kb/atomic/index|Atomic]]" in line:
         line = line.replace(" • [[kb/atomic/index|Atomic]]", "")
+    line = line.replace("[[kb/tools/index|MITRE Tools]]", "[[kb/tools/index|Tools]]")
+    line = line.replace("# MITRE Tools", "# Tools")
     for prefix in IGNORED_COMPARE_LINE_PREFIXES:
         if stripped.startswith(prefix):
             return prefix + " <ignored>"
@@ -59,14 +61,51 @@ def normalize_line(line):
     return normalized
 
 
+def strip_generated_enrichment(text):
+    pattern = re.compile(
+        r"\n?<!-- generated-detection-validation-start -->.*?<!-- generated-detection-validation-end -->\n*",
+        flags=re.DOTALL,
+    )
+    return re.sub(pattern, "\n", text)
+
+
+def normalize_tool_sections(lines):
+    normalized_lines = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if line == "## Tools":
+            normalized_lines.append(line)
+            index += 1
+            section_lines = []
+            while index < len(lines) and not lines[index].startswith("## "):
+                section_lines.append(lines[index])
+                index += 1
+
+            bullet_lines = [item for item in section_lines if item.startswith("- [[")]
+            if bullet_lines and len(bullet_lines) == len([item for item in section_lines if item.strip()]):
+                blank_count = len([item for item in section_lines if not item.strip()])
+                normalized_lines.extend([""] * min(blank_count, 1))
+                normalized_lines.extend(sorted(bullet_lines))
+                if blank_count:
+                    normalized_lines.append("")
+            else:
+                normalized_lines.extend(section_lines)
+            continue
+        normalized_lines.append(line)
+        index += 1
+    return normalized_lines
+
+
 def read_normalized_lines(filepath):
     with open(filepath, "r", encoding="utf-8") as file:
+        raw_text = strip_generated_enrichment(file.read())
         lines = []
-        for line in file.read().splitlines():
+        for line in raw_text.splitlines():
             normalized = normalize_line(line)
             if normalized is not None:
                 lines.append(normalized)
-        return lines
+        return normalize_tool_sections(lines)
 
 
 def make_diff_filename(relative_path):
@@ -79,6 +118,10 @@ def make_diff_filename(relative_path):
 def compare_single_file(old_file, new_file, relative_path, diff_folder):
     old_lines = read_normalized_lines(old_file)
     new_lines = read_normalized_lines(new_file)
+    while old_lines and old_lines[-1] == "":
+        old_lines.pop()
+    while new_lines and new_lines[-1] == "":
+        new_lines.pop()
     old_text = "\n".join(old_lines)
     new_text = "\n".join(new_lines)
     result = {

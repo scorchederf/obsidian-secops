@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.005"
 attack_technique_name: "Indicator Removal on Host: Network Share Connection Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.005/T1070.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "09210ad5-1ef2-4077-9ad3-7351e13e9222"
@@ -50,7 +50,7 @@ Removes a Network Share utilizing the command_prompt
 
 ### Command
 
-```commandprompt
+```cmd
 net share #{share_name} /delete
 ```
 

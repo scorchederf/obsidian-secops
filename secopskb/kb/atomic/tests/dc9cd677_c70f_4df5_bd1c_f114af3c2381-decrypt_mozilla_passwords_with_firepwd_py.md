@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "dc9cd677-c70f-4df5-bd1c-f114af3c2381"
@@ -78,13 +78,13 @@ Firefox profile directory must be present
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (get-childitem -path "$env:appdata\Mozilla\Firefox\Profiles\*.default-release\" -erroraction silentlycontinue) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://ftp.mozilla.org/pub/firefox/releases/98.0/win64/en-US/Firefox%20Setup%2098.0.msi" -outfile "PathToAtomicsFolder\..\ExternalPayloads\firefox.msi"
 msiexec.exe /i "PathToAtomicsFolder\..\ExternalPayloads\firefox.msi" /quiet
@@ -98,13 +98,13 @@ Visual Studio Build Tools command prompt must exist at #{VS_CMD_Path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{VS_CMD_Path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 invoke-webrequest "https://aka.ms/vs/17/release/vs_BuildTools.exe" -outfile "PathToAtomicsFolder\..\ExternalPayloads\VS_BuildTools.exe"
 write-host "Visual Studio Build Tools (Desktop Development with C++) must be installed manually. Please run the installer from PathToAtomicsFolder\..\ExternalPayloads\VS_BuildTools.exe."
@@ -114,13 +114,13 @@ Python must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{Python_Path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 invoke-webrequest "https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe" -outfile "PathToAtomicsFolder\..\ExternalPayloads\python_setup.exe"
 Start-Process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\python_setup.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0" -Wait
@@ -130,13 +130,13 @@ Computer must have venv configured at #{venv_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path -Path "#{venv_path}") { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 py -m venv "#{venv_path}"
 ```
 
@@ -144,13 +144,13 @@ Firepwd must exist at #{Firepwd_Path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{Firepwd_Path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 Invoke-WebRequest "https://raw.githubusercontent.com/lclevy/firepwd/167eabf3b88d5a7ba8b8bc427283f827b6885982/firepwd.py" -outfile "#{Firepwd_Path}"
 ```
@@ -159,13 +159,13 @@ Pycryptodome library must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (#{venv_path}\Scripts\pip.exe show pycryptodome) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 if (test-path "#{VS_CMD_Path}"){#{venv_path}\Scripts\pip.exe install pycryptodome | out-null | cmd /c %comspec% /k "#{VS_CMD_Path}" | out-null} else {write-host "Visual Studio Build Tools (C++ Support) must be installed to continue gathering this prereq"}
 ```
 
@@ -173,13 +173,13 @@ Pyasn1 library must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (#{venv_path}\Scripts\pip.exe show pyasn1) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 if (test-path "#{VS_CMD_Path}") & {#{venv_path}\Scripts\pip.exe install pyasn1 | out-null | cmd /c %comspec% /k "#{VS_CMD_Path}" | out-null} else {write-host "Visual Studio Build Tools (C++ Support) must be installed to continue gathering this prereq."}
 ```
 

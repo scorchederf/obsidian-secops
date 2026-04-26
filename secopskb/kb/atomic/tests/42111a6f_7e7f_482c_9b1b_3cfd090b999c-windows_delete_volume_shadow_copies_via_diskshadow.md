@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1490"
 attack_technique_name: "Inhibit System Recovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1490/T1490.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "42111a6f-7e7f-482c-9b1b-3cfd090b999c"
@@ -44,13 +44,13 @@ Create volume shadow copy of C:\ . This prereq command only works on Windows Ser
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(!(vssadmin.exe list shadows | findstr "No items found that satisfy the query.")) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 vssadmin.exe create shadow /for=c:
 ```
 

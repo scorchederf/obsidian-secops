@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.001"
 attack_technique_name: "Create Account: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "d141afeb-d2bc-4934-8dd5-b7dba0f9f67a"
@@ -58,14 +58,14 @@ Creates a new user in FreeBSD and adds the user to the `root` group. This techni
 
 ### Command
 
-```sh
+```bash
 pw useradd #{username} -g 0 -d /root -s /bin/sh
 echo "#{password}" | pw usermod #{username} -h 0
 ```
 
 ### Cleanup
 
-```sh
+```bash
 pw userdel #{username}
 ```
 

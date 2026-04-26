@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.004"
 attack_technique_name: "Create or Modify System Process: Launch Daemon"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.004/T1543.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "03ab8df5-3a6b-4417-b6bd-bb7a5cfd74cf"
@@ -58,13 +58,13 @@ The shared library must exist on disk at specified location (#{path_malicious_pl
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{path_malicious_plist} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "The plist file doesn't exist. Check the path and try again."; exit 1;
 ```
 

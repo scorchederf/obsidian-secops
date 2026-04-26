@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "9d9c22c9-fa97-4008-a204-478cf68c40af"
@@ -51,7 +51,7 @@ Find local Oracle cloud credentials from file, defaults to using / as the look p
 
 ### Command
 
-```sh
+```bash
 find #{file_path}/.oci/sessions -name "token" -type f 2>/dev/null
 ```
 

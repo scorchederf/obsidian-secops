@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.003"
 attack_technique_name: "Indicator Removal on Host: Clear Command History"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.003/T1070.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "2f898b81-3e97-4abb-bc3f-a95138988370"

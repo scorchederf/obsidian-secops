@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.005"
 attack_technique_name: "Indicator Removal on Host: Network Share Connection Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.005/T1070.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "99c657aa-ebeb-4179-a665-69288fdd12b8"
@@ -48,14 +48,14 @@ https://threatpost.com/conti-ransomware-gang-has-full-log4shell-attack-chain/177
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v AutoShareServer /t REG_DWORD /d 0 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v AutoShareWks /t REG_DWORD /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v AutoShareServer /f
 reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v AutoShareWks /f
 ```

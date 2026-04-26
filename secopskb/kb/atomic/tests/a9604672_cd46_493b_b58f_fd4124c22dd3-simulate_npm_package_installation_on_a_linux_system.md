@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1195.002"
 attack_technique_name: "Compromise Software Supply Chain"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1195.002/T1195.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "a9604672-cd46-493b-b58f-fd4124c22dd3"
@@ -64,13 +64,13 @@ kubectl must be installed and configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 which kubectl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "kubectl must be installed"
 ```
 

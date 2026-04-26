@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1526"
 attack_technique_name: "Cloud Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1526/T1526.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "1e40bb1d-195e-401e-a86b-c192f55e005c"
@@ -69,13 +69,13 @@ The Get-AzDomainInfo script must exist in PathToAtomicsFolder\..\ExternalPayload
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\Get-AzDomainInfo.ps1"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://raw.githubusercontent.com/NetSPI/MicroBurst/c771c665a2c71f9c5ba474869cd1c211ebee68fd/Az/Get-AzDomainInfo.ps1" -outfile "PathToAtomicsFolder\..\ExternalPayloads\Get-AzDomainInfo.ps1"
 ```
@@ -84,13 +84,13 @@ The Az module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name Az -Force
 ```
 

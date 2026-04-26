@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.006"
 attack_technique_name: "Masquerading: Space after Filename"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.006/T1036.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "b95ce2eb-a093-4cd8-938d-5258cef656ea"
@@ -43,7 +43,7 @@ Space after filename.
 
 ### Command
 
-```sh
+```bash
 mkdir -p /tmp/atomic-test-T1036.006
 cd /tmp/atomic-test-T1036.006
 mkdir -p 'testdirwithspaceend '
@@ -54,7 +54,7 @@ chmod +x 'testdirwithspaceend /init '
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf /tmp/atomic-test-T1036.006
 ```
 

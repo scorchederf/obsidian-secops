@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "45914594-8df6-4ea9-b3cc-7eb9321a807e"
@@ -45,13 +45,13 @@ See how azorult malware abuses this technique- https://app.any.run/tasks/a6f2ffe
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\ImmersiveShell /v UseActionCenterExperience /t REG_DWORD /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\ImmersiveShell /v UseActionCenterExperience /f >nul 2>&1
 ```
 

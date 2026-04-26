@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.013"
 attack_technique_name: "Obfuscated Files or Information: Encrypted/Encoded File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.013/T1027.013.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "c2ca068a-eb1e-498f-9f93-3d554c455916"
@@ -56,13 +56,13 @@ zip and unzip must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 which zip && which unzip
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Install zip and unzip using your package manager (apt-get, yum, or brew)"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "70f4d07c-5c3e-4d53-bb0a-cdf3ada14baf"
@@ -65,13 +65,13 @@ Binary file must exist at specified location (#{binary_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{binary_file}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 write-host "The binary_file input parameter must be set to a binary that exists on this computer."
 ```
 
@@ -79,13 +79,13 @@ Machine list must exist at specified location ("PathToAtomicsFolder\..\ExternalP
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\T1105MachineList.txt") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 new-item -path "PathToAtomicsFolder\..\ExternalPayloads\T1105MachineList.txt" | Out-Null
 echo "A machine list file has been generated at "PathToAtomicsFolder\..\ExternalPayloads\T1105MachineList.txt". Please enter the machines to target there, one machine per line."

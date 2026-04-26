@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.001"
 attack_technique_name: "Indicator Removal on Host: Clear Windows Event Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.001/T1070.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "e6abb60e-26b8-41da-8aae-0c35174b0967"
@@ -52,7 +52,7 @@ Upon execution this test will clear Windows Event Logs. Open the System.evtx log
 
 ### Command
 
-```commandprompt
+```cmd
 wevtutil cl #{log_name}
 ```
 

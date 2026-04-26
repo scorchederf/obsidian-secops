@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1135"
 attack_technique_name: "Network Share Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "987901d1-5b87-4558-a6d9-cffcabc638b8"

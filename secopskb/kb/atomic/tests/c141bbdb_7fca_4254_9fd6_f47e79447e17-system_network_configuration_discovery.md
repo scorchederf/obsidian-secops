@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016"
 attack_technique_name: "System Network Configuration Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016/T1016.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c141bbdb-7fca-4254-9fd6-f47e79447e17"
@@ -45,13 +45,13 @@ Check if arp command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v arp)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install net-tools)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y net-tools)
 ```
 
@@ -61,7 +61,7 @@ if [ -x "$(command -v arp)" ]; then exit 0; else exit 1; fi;
 
 ### Command
 
-```sh
+```bash
 if [ "$(uname)" = 'FreeBSD' ]; then cmd="netstat -Sp tcp"; else cmd="netstat -ant"; fi;
 if [ -x "$(command -v arp)" ]; then arp -a; else echo "arp is missing from the machine. skipping..."; fi;
 if [ -x "$(command -v ifconfig)" ]; then ifconfig; else echo "ifconfig is missing from the machine. skipping..."; fi;

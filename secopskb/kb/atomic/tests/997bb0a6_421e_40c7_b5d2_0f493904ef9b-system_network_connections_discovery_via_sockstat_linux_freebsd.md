@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1049"
 attack_technique_name: "System Network Connections Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1049/T1049.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "997bb0a6-421e-40c7-b5d2-0f493904ef9b"
@@ -42,7 +42,7 @@ Enumerate IPv4/IPv6 network endpoints on FreeBSD using sockstat.
 
 ### Command
 
-```sh
+```bash
 sockstat -4
 sockstat -6 2>/dev/null || true
 sockstat -l 2>/dev/null || true

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1001.002"
 attack_technique_name: "Data Obfuscation via Steganography"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1001.002/T1001.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "4ff61684-ad91-405c-9fbc-048354ff1d07"
@@ -64,13 +64,13 @@ This atomic test demonstrates the execution of an embedded script in an image fi
 
 ### Command
 
-```sh
+```bash
 cat "#{script}" | base64 | xxd -p | sed 's/../& /g' | xargs -n1 | xxd -r -p | cat "#{image}" - > "#{evil_image}"; strings "#{evil_image}" | tail -n 1 | base64 -d | sh
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm "#{evil_image}"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.009"
 attack_technique_name: "Impair Defenses: Safe Boot Mode"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.009/T1562.009.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "2a78362e-b79a-4482-8e24-be397bce4d85"
@@ -44,13 +44,13 @@ Allows adversaries to abuse safe mode to disable endpoint defenses that may not 
 
 ### Command
 
-```commandprompt
+```cmd
 bcdedit /set safeboot network
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 bcdedit /deletevalue {current} safeboot
 ```
 

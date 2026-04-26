@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.003"
 attack_technique_name: "Valid Accounts: Local Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "09e3380a-fae5-4255-8b19-9950be0252cf"
@@ -46,7 +46,7 @@ In this test we create a "art" user with the password art, lock and expire the a
 
 ### Command
 
-```sh
+```bash
 pw useradd art -g wheel -s /bin/sh
 echo $(openssl passwd -1 art) | pw mod user testuser1 -h 0
 pw lock art
@@ -60,7 +60,7 @@ exit
 
 ### Cleanup
 
-```sh
+```bash
 rmuser -y art
 ```
 

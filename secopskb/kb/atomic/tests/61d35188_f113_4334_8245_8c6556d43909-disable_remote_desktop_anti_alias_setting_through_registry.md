@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "61d35188-f113-4334-8245-8c6556d43909"
@@ -42,13 +42,13 @@ A modification registry to disable RDP anti-alias settings. This technique was s
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\Terminal Services" /v "DisableRemoteDesktopAntiAlias" /t REG_DWORD /d 1 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\Terminal Services" /v "DisableRemoteDesktopAntiAlias" /t REG_DWORD /d 0 /f
 ```
 

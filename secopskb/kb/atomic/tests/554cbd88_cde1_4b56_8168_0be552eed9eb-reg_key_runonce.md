@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "554cbd88-cde1-4b56-8168-0be552eed9eb"
@@ -54,13 +54,13 @@ Upon successful execution, cmd.exe will modify the registry to load AtomicRedTea
 
 ### Command
 
-```commandprompt
+```cmd
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /d "#{thing_to_execute}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx\0001\Depend /v 1 /f >nul 2>&1
 ```
 

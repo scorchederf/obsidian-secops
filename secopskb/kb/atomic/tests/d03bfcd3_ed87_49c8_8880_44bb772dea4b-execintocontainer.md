@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1609"
 attack_technique_name: "Kubernetes Exec Into Container"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1609/T1609.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "d03bfcd3-ed87-49c8-8880-44bb772dea4b"
@@ -63,13 +63,13 @@ kubectl must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 which kubectl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "kubectl must be installed manually"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.002"
 attack_technique_name: "Create Account: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.002/T1136.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fcec2963-9951-4173-9bfa-98d8b7834e62"
@@ -64,14 +64,14 @@ Creates a new domain admin user in a command prompt.
 
 ### Command
 
-```commandprompt
+```cmd
 net user "#{username}" "#{password}" /add /domain
 net group "#{group}" "#{username}" /add /domain
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net user "#{username}" >nul 2>&1 /del /domain
 ```
 

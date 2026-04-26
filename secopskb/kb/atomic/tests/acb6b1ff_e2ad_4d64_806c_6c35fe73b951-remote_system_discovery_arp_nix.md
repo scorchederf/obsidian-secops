@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "acb6b1ff-e2ad-4d64-806c-6c35fe73b951"
@@ -46,13 +46,13 @@ Check if arp command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v arp)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install net-tools)||(which apt-get && apt-get install -y net-tools)
 ```
 
@@ -62,7 +62,7 @@ if [ -x "$(command -v arp)" ]; then exit 0; else exit 1; fi;
 
 ### Command
 
-```sh
+```bash
 arp -a | grep -v '^?'
 ```
 

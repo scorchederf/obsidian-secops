@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1041"
 attack_technique_name: "Exfiltration Over C2 Channel"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1041/T1041.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d1253f6e-c29b-49dc-b466-2147a6191932"

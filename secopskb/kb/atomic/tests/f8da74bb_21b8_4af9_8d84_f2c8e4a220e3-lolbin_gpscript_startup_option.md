@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218"
 attack_technique_name: "Signed Binary Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "f8da74bb-21b8-4af9-8d84-f2c8e4a220e3"
@@ -44,7 +44,7 @@ https://oddvar.moe/2018/04/27/gpscript-exe-another-lolbin-to-the-list/
 
 ### Command
 
-```commandprompt
+```cmd
 Gpscript /startup
 ```
 

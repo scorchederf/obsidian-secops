@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.001"
 attack_technique_name: "Process Injection: Dynamic-link Library Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.001/T1055.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "74496461-11a1-4982-b439-4d87a550d254"
@@ -61,13 +61,13 @@ Utility to inject must exist on disk at specified location (#{dll_payload})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_payload}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{dll_payload}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.001/src/x64/T1055.001.dll" -OutFile "#{dll_payload}"
 ```

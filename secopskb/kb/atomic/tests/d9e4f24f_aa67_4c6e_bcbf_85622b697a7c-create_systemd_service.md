@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.002"
 attack_technique_name: "Create or Modify System Process: SysV/Systemd Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.002/T1543.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "d9e4f24f-aa67-4c6e-bcbf-85622b697a7c"

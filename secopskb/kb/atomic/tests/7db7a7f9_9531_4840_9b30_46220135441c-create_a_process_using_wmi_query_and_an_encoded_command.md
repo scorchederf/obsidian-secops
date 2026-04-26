@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "7db7a7f9-9531-4840-9b30-46220135441c"
@@ -48,7 +48,7 @@ You should expect to see notepad.exe running after execution of this test.
 
 ### Command
 
-```commandprompt
+```cmd
 powershell -exec bypass -e SQBuAHYAbwBrAGUALQBXAG0AaQBNAGUAdABoAG8AZAAgAC0AUABhAHQAaAAgAHcAaQBuADMAMgBfAHAAcgBvAGMAZQBzAHMAIAAtAE4AYQBtAGUAIABjAHIAZQBhAHQAZQAgAC0AQQByAGcAdQBtAGUAbgB0AEwAaQBzAHQAIABuAG8AdABlAHAAYQBkAC4AZQB4AGUA
 ```
 

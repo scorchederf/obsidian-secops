@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "369878c6-fb04-48d6-8fc2-da9d97b3e054"
@@ -44,7 +44,7 @@ The first sub-test truncates the log file to zero bytes via /dev/null and the se
 
 ### Command
 
-```sh
+```bash
 cat /dev/null > /var/log/messages #truncating the file to zero bytes
 cat /dev/zero > /var/log/messages #log file filled with null bytes(zeros)
 ```

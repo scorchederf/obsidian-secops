@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.003"
 attack_technique_name: "OS Credential Dumping: NTDS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.003/T1003.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "224f7de0-8f0a-4a94-b5d8-989b036c86da"
@@ -53,13 +53,13 @@ Target must be a Domain Controller
 
 ### Prerequisite Check
 
-```text
+```untitled
 reg query HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ProductOptions  /v ProductType | findstr LanmanNT
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Sorry, Promoting this machine to a Domain Controller must be done manually
 ```
 
@@ -70,7 +70,7 @@ echo Sorry, Promoting this machine to a Domain Controller must be done manually
 
 ### Command
 
-```commandprompt
+```cmd
 wmic shadowcopy call create Volume=#{drive_letter}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "005943f9-8dd5-4349-8b46-0313c0a9f973"
@@ -58,13 +58,13 @@ xxd must be present
 
 ### Prerequisite Check
 
-```text
+```untitled
 which xxd
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Please install xxd"
 ```
 
@@ -75,7 +75,7 @@ echo "Please install xxd"
 
 ### Command
 
-```sh
+```bash
 ENCODED=$(echo '#{message}' | xxd -ps -c 256)
 printf $ENCODED | xxd -r -p
 echo $ENCODED | xxd -r -p

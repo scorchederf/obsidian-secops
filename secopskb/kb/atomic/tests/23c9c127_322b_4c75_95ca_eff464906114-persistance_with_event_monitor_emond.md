@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.014"
 attack_technique_name: "Event Triggered Execution: Emond"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.014/T1546.014.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "23c9c127-322b-4c75-95ca-eff464906114"
@@ -52,14 +52,14 @@ Establish persistence via a rule run by OSX's emond (Event Monitor) daemon at st
 
 ### Command
 
-```sh
+```bash
 sudo cp "#{plist}" /etc/emond.d/rules/T1546.014_emond.plist
 sudo touch /private/var/db/emondClients/T1546.014
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo rm /etc/emond.d/rules/T1546.014_emond.plist
 sudo rm /private/var/db/emondClients/T1546.014
 ```

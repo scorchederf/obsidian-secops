@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1482"
 attack_technique_name: "Domain Trust Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ea1b4f2d-5b82-4006-b64f-f2845608a3bf"
@@ -57,13 +57,13 @@ TruffleSnout.exe must exist on disk at specified location (#{trufflesnout_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{trufflesnout_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -ItemType Directory (Split-Path "#{trufflesnout_path}") -Force | Out-Null
 Invoke-WebRequest -Uri "https://github.com/dsnezhkov/TruffleSnout/releases/download/0.5/TruffleSnout.exe" -OutFile "#{trufflesnout_path}"
 ```
@@ -74,7 +74,7 @@ Invoke-WebRequest -Uri "https://github.com/dsnezhkov/TruffleSnout/releases/downl
 
 ### Command
 
-```commandprompt
+```cmd
 "#{trufflesnout_path}" forest -n #{domain}
 "#{trufflesnout_path}" domain -n #{domain}
 ```

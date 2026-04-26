@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.001"
 attack_technique_name: "Process Injection: Dynamic-link Library Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.001/T1055.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "8b56f787-73d9-4f1d-87e8-d07e89cbc7f5"

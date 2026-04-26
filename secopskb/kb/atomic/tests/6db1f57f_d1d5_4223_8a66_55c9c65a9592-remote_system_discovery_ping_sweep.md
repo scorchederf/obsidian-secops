@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6db1f57f-d1d5-4223-8a66-55c9c65a9592"
@@ -64,7 +64,7 @@ Upon successful execution, cmd.exe will perform a for loop against the 192.168.1
 
 ### Command
 
-```commandprompt
+```cmd
 for /l %i in (#{start_host},1,#{stop_host}) do ping -n 1 -w 100 #{subnet}.%i
 ```
 

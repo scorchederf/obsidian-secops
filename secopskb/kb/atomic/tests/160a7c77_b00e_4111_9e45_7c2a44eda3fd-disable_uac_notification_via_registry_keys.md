@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "160a7c77-b00e-4111-9e45-7c2a44eda3fd"
@@ -42,13 +42,13 @@ This atomic regarding UACDisableNotify pertains to the notification behavior of 
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Security Center" /v UACDisableNotify /t REG_DWORD /d 1 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Security Center" /v UACDisableNotify /t REG_DWORD /d 0 /f
 ```
 

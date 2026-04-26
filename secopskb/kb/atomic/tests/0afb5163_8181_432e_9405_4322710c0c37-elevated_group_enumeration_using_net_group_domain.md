@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0afb5163-8181-432e-9405-4322710c0c37"
@@ -43,7 +43,7 @@ test will display some errors if run on a computer not connected to a domain. Up
 
 ### Command
 
-```commandprompt
+```cmd
 net groups "Account Operators" /domain
 net groups "Exchange Organization Management" /domain
 net group "BUILTIN\Backup Operators" /domain

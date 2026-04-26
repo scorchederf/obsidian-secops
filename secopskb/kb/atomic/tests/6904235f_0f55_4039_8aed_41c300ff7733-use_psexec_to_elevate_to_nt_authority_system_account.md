@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.003"
 attack_technique_name: "Valid Accounts: Local Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6904235f-0f55-4039-8aed-41c300ff7733"
@@ -48,13 +48,13 @@ PsExec tool from Sysinternals must exist in the ExternalPayloads directory
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe") { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip" "PathToAtomicsFolder\..\ExternalPayloads\PsTools" -Force
@@ -68,7 +68,7 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\PsTools\PsExec.exe" "PathToAt
 
 ### Command
 
-```commandprompt
+```cmd
 "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe" -accepteula -s %COMSPEC% /c whoami
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b15bc9a5-a4f3-4879-9304-ea0011ace63a"
@@ -60,13 +60,13 @@ Username file must exist at $env:Temp\usersdpsLight.txt
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path  $env:Temp\usersdpsLight.txt) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host -NoNewLine "Reading Users." # this code modifed from https://github.com/ZoomerHulkHogan/Powershell-Domain-User-Enumeration
 $netOutput = net users /domain
 $netOutput = [System.Collections.ArrayList]($netOutput[6..($netOutput.length-3)])

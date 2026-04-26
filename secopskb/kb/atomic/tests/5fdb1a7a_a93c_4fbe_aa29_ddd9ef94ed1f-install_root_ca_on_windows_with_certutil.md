@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.004"
 attack_technique_name: "Subvert Trust Controls: Install Root Certificate"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.004/T1553.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "5fdb1a7a-a93c-4fbe-aa29-ddd9ef94ed1f"
@@ -52,13 +52,13 @@ Certificate must exist at specified location (#{pfx_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{pfx_path}) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $cert = New-SelfSignedCertificate -DnsName atomicredteam.com -CertStoreLocation cert:\LocalMachine\My
 Export-Certificate -Type CERT -Cert  Cert:\LocalMachine\My\$($cert.Thumbprint) -FilePath #{pfx_path}
 Get-ChildItem Cert:\LocalMachine\My\$($cert.Thumbprint) | Remove-Item

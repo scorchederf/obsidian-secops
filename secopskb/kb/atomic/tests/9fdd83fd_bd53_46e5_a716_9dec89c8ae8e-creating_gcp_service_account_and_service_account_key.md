@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.004"
 attack_technique_name: "Valid Accounts: Cloud Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.004/T1078.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "9fdd83fd-bd53-46e5-a716-9dec89c8ae8e"
@@ -71,13 +71,13 @@ Requires gcloud
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v gcloud)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Please Install Google Cloud SDK before running this atomic test : https://cloud.google.com/sdk/docs/install"
 ```
 
@@ -85,13 +85,13 @@ Check if user is logged in
 
 ### Prerequisite Check
 
-```text
+```bash
 gcloud config get-value account
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 gcloud auth login --no-launch-browser
 ```
 
@@ -102,7 +102,7 @@ gcloud auth login --no-launch-browser
 
 ### Command
 
-```sh
+```bash
 gcloud config set project #{project-id}
 gcloud iam service-accounts create #{service-account-name}
 gcloud iam service-accounts keys create #{output-key-file} --iam-account=#{service-account-email}
@@ -110,7 +110,7 @@ gcloud iam service-accounts keys create #{output-key-file} --iam-account=#{servi
 
 ### Cleanup
 
-```sh
+```bash
 gcloud iam service-accounts delete #{service-account-email} --quiet
 ```
 

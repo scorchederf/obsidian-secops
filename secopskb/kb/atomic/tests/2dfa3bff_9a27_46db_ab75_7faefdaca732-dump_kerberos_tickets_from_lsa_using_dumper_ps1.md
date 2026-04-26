@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.004"
 attack_technique_name: "OS Credential Dumping: LSA Secrets"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.004/T1003.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "2dfa3bff-9a27-46db-ab75-7faefdaca732"

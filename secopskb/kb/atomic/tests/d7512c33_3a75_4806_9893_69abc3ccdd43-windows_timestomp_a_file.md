@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.006"
 attack_technique_name: "Indicator Removal on Host: Timestomp"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.006/T1070.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d7512c33-3a75-4806-9893-69abc3ccdd43"
@@ -55,13 +55,13 @@ timestomp.ps1 must be present in #{file_path}.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_path}\timestomp.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://raw.githubusercontent.com/mitre-attack/attack-arsenal/bc0ba1d88d026396939b6816de608cb279bfd489/adversary_emulation/APT29/CALDERA_DIY/evals/payloads/timestomp.ps1" -OutFile "#{file_path}\timestomp.ps1"
 ```
 
@@ -69,13 +69,13 @@ kxwn.lock must be present in #{file_path}.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path -path "#{file_path}\kxwn.lock") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path "#{file_path}\kxwn.lock" -ItemType File
 ```
 

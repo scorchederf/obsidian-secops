@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1647"
 attack_technique_name: "Plist File Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1647/T1647.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "manual"
 aliases:
   - "394a538e-09bb-4a4a-95d1-b93cf12682a8"

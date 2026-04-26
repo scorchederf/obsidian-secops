@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "fed9be70-0186-4bde-9f8a-20945f9370c2"
@@ -53,7 +53,7 @@ tags:
 
 ### Command
 
-```sh
+```bash
 if [ -f /etc/sudoers ]; then sudo cat /etc/sudoers > #{output_file}; fi;
 if [ -f /usr/local/etc/sudoers ]; then sudo cat /usr/local/etc/sudoers > #{output_file}; fi;
 cat #{output_file}
@@ -61,7 +61,7 @@ cat #{output_file}
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "5f507e45-8411-4f99-84e7-e38530c45d01"
@@ -53,7 +53,7 @@ https://www.bleepingcomputer.com/news/security/windows-10-finger-command-can-be-
 
 ### Command
 
-```commandprompt
+```cmd
 finger base64_filedata@#{remote_host}
 ```
 

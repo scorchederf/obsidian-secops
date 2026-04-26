@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1049"
 attack_technique_name: "System Network Connections Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1049/T1049.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "96f974bb-a0da-4d87-a744-ff33e73367e9"
@@ -67,13 +67,13 @@ Sharpview.exe must exist on disk at specified location (#{SharpView})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{SharpView}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{SharpView}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest #{SharpView_url} -OutFile "#{SharpView}"
 ```

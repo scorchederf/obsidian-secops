@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.003"
 attack_technique_name: "Event Triggered Execution: Windows Management Instrumentation Event Subscription"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.003/T1546.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "29786d7e-8916-4de6-9c55-be7b093b2706"
@@ -61,13 +61,13 @@ MofComp.exe must exist on disk at specified location (#{mofcomp_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{mofcomp_path}") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Validate MOFComp.exe is on disk somewhere and update input argument.
 ```
 
@@ -75,13 +75,13 @@ MofComp.exe must exist on disk at specified location (#{mof_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{mof_file}") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{mof_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546.003/src/T1546.003.mof" -OutFile "#{mof_file}"
 ```

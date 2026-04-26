@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "6604d964-b9f6-4d4b-8ce8-499829a14d0a"
@@ -58,13 +58,13 @@ Perl must be present
 
 ### Prerequisite Check
 
-```text
+```untitled
 which perl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Please install Perl"
 ```
 
@@ -75,7 +75,7 @@ echo "Please install Perl"
 
 ### Command
 
-```sh
+```bash
 ENCODED=$(perl -e "use MIME::Base64;print(encode_base64('#{message}'));")
 perl -le "use MIME::Base64;print(decode_base64('$ENCODED'));"
 echo $ENCODED | perl -le 'use MIME::Base64;print(decode_base64(<STDIN>));'

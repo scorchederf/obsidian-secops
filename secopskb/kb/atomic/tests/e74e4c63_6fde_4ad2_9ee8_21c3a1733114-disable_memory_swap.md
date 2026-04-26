@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "e74e4c63-6fde-4ad2-9ee8-21c3a1733114"
@@ -45,7 +45,7 @@ payload to the compromised host and to make sure that there will be no recoverab
 
 ### Command
 
-```sh
+```bash
 swapon -a 
 sleep 2
 swapoff -a
@@ -54,7 +54,7 @@ sync
 
 ### Cleanup
 
-```sh
+```bash
 swapon -a
 sleep 2
 sync

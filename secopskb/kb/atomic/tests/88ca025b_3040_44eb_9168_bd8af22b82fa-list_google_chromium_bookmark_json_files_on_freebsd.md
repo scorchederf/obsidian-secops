@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1217"
 attack_technique_name: "Browser Bookmark Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "88ca025b-3040-44eb-9168-bd8af22b82fa"
@@ -50,14 +50,14 @@ Searches for Google Chromium's Bookmark file (on FreeBSD) that contains bookmark
 
 ### Command
 
-```sh
+```bash
 find / -path "*/.config/chromium/*/Bookmarks" -exec echo {} >> #{output_file} \;
 cat #{output_file} 2>/dev/null
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file} 2>/dev/null
 ```
 

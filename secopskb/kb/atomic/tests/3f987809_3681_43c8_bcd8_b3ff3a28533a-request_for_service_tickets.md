@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.003"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Kerberoasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.003/T1558.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "3f987809-3681-43c8-bcd8-b3ff3a28533a"
@@ -47,13 +47,13 @@ Computer must be domain joined
 
 ### Prerequisite Check
 
-```text
+```untitled
 if((Get-CIMInstance -Class Win32_ComputerSystem).PartOfDomain) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host Joining this computer to a domain must be done manually
 ```
 

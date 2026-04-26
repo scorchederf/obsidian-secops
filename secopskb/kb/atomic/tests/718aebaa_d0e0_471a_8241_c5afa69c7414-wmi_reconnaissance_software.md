@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "718aebaa-d0e0-471a-8241-c5afa69c7414"
@@ -43,7 +43,7 @@ When the test completes, there should be a list of installed patches and when th
 
 ### Command
 
-```commandprompt
+```cmd
 wmic qfe get description,installedOn /format:csv
 ```
 

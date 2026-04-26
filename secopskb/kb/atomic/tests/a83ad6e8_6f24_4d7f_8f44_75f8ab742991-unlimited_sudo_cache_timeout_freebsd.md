@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.003"
 attack_technique_name: "Abuse Elevation Control Mechanism: Sudo and Sudo Caching"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.003/T1548.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a83ad6e8-6f24-4d7f-8f44-75f8ab742991"
@@ -44,13 +44,13 @@ Check if sudo is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v sudo)" ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y sudo)
 ```
 
@@ -61,7 +61,7 @@ if [ ! -x "$(command -v sudo)" ]; then exit 1; else exit 0; fi;
 
 ### Command
 
-```sh
+```bash
 sudo sed -i 's/env_reset.*$/env_reset,timestamp_timeout=-1/' /usr/local/etc/sudoers
 sudo visudo -c -f /usr/local/etc/sudoers
 ```

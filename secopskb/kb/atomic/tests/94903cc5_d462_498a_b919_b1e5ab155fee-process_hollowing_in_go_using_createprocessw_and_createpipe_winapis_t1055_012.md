@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.012"
 attack_technique_name: "Process Injection: Process Hollowing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.012/T1055.012.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "94903cc5-d462-498a-b919-b1e5ab155fee"

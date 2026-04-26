@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "1b72b3bd-72f8-4b63-a30b-84e91b9c3578"

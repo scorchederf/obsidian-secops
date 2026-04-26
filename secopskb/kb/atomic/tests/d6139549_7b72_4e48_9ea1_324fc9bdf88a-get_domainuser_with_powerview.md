@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.004"
 attack_technique_name: "Steal or Forge Kerberos Tickets: AS-REP Roasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.004/T1558.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "d6139549-7b72-4e48-9ea1-324fc9bdf88a"

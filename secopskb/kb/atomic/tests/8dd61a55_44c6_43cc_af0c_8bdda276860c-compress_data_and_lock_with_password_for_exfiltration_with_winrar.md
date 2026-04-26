@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "8dd61a55-44c6-43cc-af0c-8bdda276860c"
@@ -58,13 +58,13 @@ Rar tool must be installed at specified location (#{rar_exe})
 
 ### Prerequisite Check
 
-```text
+```untitled
 if not exist "#{rar_exe}" (exit /b 1)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Downloading Winrar installer
 bitsadmin /transfer myDownloadJob /download /priority normal "https://www.win-rar.com/fileadmin/winrar-versions/winrar/th/winrar-x64-580.exe" #{rar_installer}
 #{rar_installer} /S
@@ -77,7 +77,7 @@ bitsadmin /transfer myDownloadJob /download /priority normal "https://www.win-ra
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir .\tmp\victim-files
 cd .\tmp\victim-files
 echo "This file will be encrypted" > .\encrypted_file.txt

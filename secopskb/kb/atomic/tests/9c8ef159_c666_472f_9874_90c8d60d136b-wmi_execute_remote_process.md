@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "9c8ef159-c666-472f-9874-90c8d60d136b"
@@ -70,13 +70,13 @@ A common error message is "Node - (provided IP or default)  ERROR Description =T
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /user:#{user_name} /password:#{password} /node:"#{node}" process call create #{process_to_execute}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 wmic /user:#{user_name} /password:#{password} /node:"#{node}" process where name='#{process_to_execute}' delete >nul 2>&1
 ```
 

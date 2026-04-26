@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ecbd533e-b45d-4239-aeff-b857c6f6d68b"
@@ -44,7 +44,7 @@ The ShimCache is a component in Windows operating systems that stores informatio
 
 ### Command
 
-```commandprompt
+```cmd
 Rundll32.exe apphelp.dll,ShimFlushCache
 ```
 

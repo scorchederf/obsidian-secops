@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1033"
 attack_technique_name: "System Owner/User Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1033/T1033.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "29857f27-a36f-4f7e-8084-4557cd6207ca"

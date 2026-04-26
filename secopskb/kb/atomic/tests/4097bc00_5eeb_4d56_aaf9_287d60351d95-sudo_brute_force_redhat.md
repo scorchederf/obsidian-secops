@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.001"
 attack_technique_name: "Brute Force: Password Guessing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.001/T1110.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "4097bc00-5eeb-4d56-aaf9-287d60351d95"
@@ -54,7 +54,7 @@ Check if running on a Redhat based machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if grep -iq "rhel\|fedora\|centos" /usr/lib/os-release; then echo "RedHat"; else echo "NOT RedHat"; exit 1; fi
 if grep -Rq "pam_faillock" /etc/pam.d/*; then echo "pam_faillock configured"; exit 1; fi
 if [ -x "$(command -v openssl)" ]; then echo "openssl is installed"; else echo "openssl is NOT installed"; exit 1; fi
@@ -64,7 +64,7 @@ if [ -x "$(command -v curl)" ]; then echo "curl is installed"; else echo "curl i
 
 ### Get Prerequisite
 
-```text
+```bash
 yum update && yum install -y openssl sudo curl
 ```
 

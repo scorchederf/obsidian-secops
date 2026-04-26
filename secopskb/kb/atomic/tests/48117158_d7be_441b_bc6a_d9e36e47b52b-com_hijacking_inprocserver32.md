@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.015"
 attack_technique_name: "Event Triggered Execution: Component Object Model Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.015/T1546.015.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "48117158-d7be-441b-bc6a-d9e36e47b52b"
@@ -71,13 +71,13 @@ DLL For testing
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dllpath}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546.015/bin/AtomicTest.dll" -OutFile "#{dllpath}"
 ```

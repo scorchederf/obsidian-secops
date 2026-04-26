@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "9f94a112-1ce2-464d-a63b-83c1f465f801"
@@ -68,13 +68,13 @@ Download devtunnel
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -f #{binary_path}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 mkdir -p $(dirname #{binary_path})
 curl -L "#{download_url}" -o "#{binary_path}"
 chmod +x #{binary_path}
@@ -84,13 +84,13 @@ Login to Microsoft Dev tunnels
 
 ### Prerequisite Check
 
-```text
+```untitled
 #{binary_path} user show | grep -q "Not logged in" && exit 1 || exit 0
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Login to devtunnel using the following command: #{binary_path} user login"
 ```
 

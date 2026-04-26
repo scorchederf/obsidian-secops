@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.004"
 attack_technique_name: "Unsecured Credentials: Private Keys"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.004/T1552.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "46959285-906d-40fa-9437-5a439accd878"
@@ -57,14 +57,14 @@ Discover private SSH keys on a FreeBSD, macOS or Linux system.
 
 ### Command
 
-```sh
+```bash
 find #{search_path} -name id_rsa 2>/dev/null >> #{output_file}
 exit 0
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file}
 ```
 

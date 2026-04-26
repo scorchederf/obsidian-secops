@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1119"
 attack_technique_name: "Automated Collection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1119/T1119.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "aa1180e2-f329-4e1e-8625-2472ec0bfaf3"
@@ -43,7 +43,7 @@ to see what was collected.
 
 ### Command
 
-```commandprompt
+```cmd
 sc query type=service > %TEMP%\T1119_1.txt
 doskey /history > %TEMP%\T1119_2.txt
 wmic process list > %TEMP%\T1119_3.txt
@@ -52,7 +52,7 @@ tree C:\AtomicRedTeam\atomics > %TEMP%\T1119_4.txt
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\T1119_1.txt >nul 2>&1
 del %TEMP%\T1119_2.txt >nul 2>&1
 del %TEMP%\T1119_3.txt >nul 2>&1

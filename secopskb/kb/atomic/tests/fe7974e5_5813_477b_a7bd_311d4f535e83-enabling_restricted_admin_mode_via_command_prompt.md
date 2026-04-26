@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fe7974e5-5813-477b-a7bd-311d4f535e83"
@@ -46,13 +46,13 @@ See [Passing the Hash with Remote Desktop](https://www.kali.org/blog/passing-has
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "hklm\system\currentcontrolset\control\lsa" /f /v DisableRestrictedAdmin /t REG_DWORD /d 0
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "hklm\system\currentcontrolset\control\lsa" /f /v DisableRestrictedAdmin >nul 2>&1
 ```
 

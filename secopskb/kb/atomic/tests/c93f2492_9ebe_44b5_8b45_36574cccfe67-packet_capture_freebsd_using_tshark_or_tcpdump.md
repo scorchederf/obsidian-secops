@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c93f2492-9ebe-44b5-8b45-36574cccfe67"
@@ -54,13 +54,13 @@ Check if at least one of tcpdump or tshark is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v tcpdump)" ] && [ ! -x "$(command -v tshark)" ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y wireshark-nox11)
 ```
 
@@ -71,7 +71,7 @@ if [ ! -x "$(command -v tcpdump)" ] && [ ! -x "$(command -v tshark)" ]; then exi
 
 ### Command
 
-```sh
+```bash
 tcpdump -c 5 -nnni #{interface}
 tshark -c 5 -i #{interface}
 ```

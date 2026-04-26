@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1531"
 attack_technique_name: "Account Access Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1531/T1531.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "c955c1c7-3145-4a22-af2d-63eea0d967f0"
@@ -51,13 +51,13 @@ Check if Azure CLI is installed and install manually
 
 ### Prerequisite Check
 
-```text
+```powershell
 az account list
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "use the following to install the Azure CLI manually https://aka.ms/installazurecliwindows"
 ```
 
@@ -65,13 +65,13 @@ Check if Azure CLI is installed and install via PowerShell
 
 ### Prerequisite Check
 
-```text
+```powershell
 az account list
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "use the following to install the Azure CLI $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi"
 ```
 
@@ -79,13 +79,13 @@ Update the userprincipalname to meet your requirements
 
 ### Prerequisite Check
 
-```text
+```powershell
 Update the input arguments so the userprincipalname value is accurate for your environment
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "Update the input arguments in the .yaml file so that the userprincipalname value is accurate for your environment"
 ```
 

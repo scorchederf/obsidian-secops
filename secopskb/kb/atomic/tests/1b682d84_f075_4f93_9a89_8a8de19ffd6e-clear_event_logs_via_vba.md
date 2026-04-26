@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.001"
 attack_technique_name: "Indicator Removal on Host: Clear Windows Event Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.001/T1070.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "1b682d84-f075-4f93-9a89-8a8de19ffd6e"
@@ -46,7 +46,7 @@ Microsoft Word must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "Word.Application" | Out-Null
   Stop-Process -Name "winword"
@@ -56,7 +56,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft Word manually to meet this requirement"
 ```
 

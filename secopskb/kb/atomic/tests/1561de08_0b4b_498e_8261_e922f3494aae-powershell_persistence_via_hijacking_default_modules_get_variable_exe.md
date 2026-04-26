@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.008"
 attack_technique_name: "Hijack Execution Flow: Path Interception by Search Order Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.008/T1574.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "1561de08-0b4b-498e-8261-e922f3494aae"

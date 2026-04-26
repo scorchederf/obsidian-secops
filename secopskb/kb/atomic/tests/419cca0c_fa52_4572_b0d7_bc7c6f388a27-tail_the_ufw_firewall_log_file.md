@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "419cca0c-fa52-4572-b0d7-bc7c6f388a27"
@@ -45,13 +45,13 @@ Check if /var/log/ufw.log exists.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -f "/var/log/ufw.log" ]; then echo -e "\n***** ufw NOT logging *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -62,7 +62,7 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 tail /var/log/ufw.log
 ```
 

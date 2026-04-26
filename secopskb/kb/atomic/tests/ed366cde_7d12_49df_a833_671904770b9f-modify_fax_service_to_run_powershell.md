@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.003"
 attack_technique_name: "Create or Modify System Process: Windows Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "ed366cde-7d12-49df-a833-671904770b9f"
@@ -60,14 +60,14 @@ Upon successful execution, cmd will modify the binpath for `Fax` to spawn powers
 
 ### Command
 
-```commandprompt
+```cmd
 sc config #{service_name} binPath= "C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe -noexit -c \"write-host 'T1543.003 Test'\""
 sc start #{service_name}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc config #{service_name} binPath= "#{service_binpath}" >nul 2>&1
 ```
 

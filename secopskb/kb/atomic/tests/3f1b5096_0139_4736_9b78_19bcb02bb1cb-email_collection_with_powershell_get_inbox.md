@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1114.001"
 attack_technique_name: "Email Collection: Local Email Collection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1114.001/T1114.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "3f1b5096-0139-4736-9b78-19bcb02bb1cb"
@@ -60,13 +60,13 @@ Get-Inbox.ps1 must be located at #{file_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_path}\Get-Inbox.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1114.001/src/Get-Inbox.ps1" -OutFile "#{file_path}\Get-Inbox.ps1"
 ```
 

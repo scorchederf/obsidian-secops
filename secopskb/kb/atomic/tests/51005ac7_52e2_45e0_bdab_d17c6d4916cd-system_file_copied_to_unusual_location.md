@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036"
 attack_technique_name: "Masquerading"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036/T1036.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "51005ac7-52e2-45e0-bdab-d17c6d4916cd"

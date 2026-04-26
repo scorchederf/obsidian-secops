@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a5b2f6a0-24b4-493e-9590-c699f75723ca"
@@ -79,13 +79,13 @@ tshark must be installed and in the default path of "c:\Program Files\Wireshark\
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "#{tshark_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\wireshark_installer.exe" #{wireshark_url}
 Start-Process "PathToAtomicsFolder\..\ExternalPayloads\wireshark_installer.exe" /S
@@ -95,13 +95,13 @@ npcap must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "#{npcap_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\npcap_installer.exe" #{npcap_url}
 Start-Process "PathToAtomicsFolder\..\ExternalPayloads\npcap_installer.exe"
@@ -114,7 +114,7 @@ Start-Process "PathToAtomicsFolder\..\ExternalPayloads\npcap_installer.exe"
 
 ### Command
 
-```commandprompt
+```cmd
 "c:\Program Files\Wireshark\tshark.exe" -i #{interface} -c 5
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.018"
 attack_technique_name: "Event Triggered Execution: Python Startup Hooks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.018/T1546.018.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "28ca4f81-fa96-47ff-8555-dde98017e89b"
@@ -58,7 +58,7 @@ Python must be installed and the specified binary (#{python_exe}) must be in the
 
 ### Prerequisite Check
 
-```text
+```bash
 PYTHON_CMD=$(command -v python || command -v #{python_exe})
 if [ -z "$PYTHON_CMD" ]; then exit 1; fi
 $PYTHON_CMD -m venv --help >/dev/null 2>&1
@@ -66,7 +66,7 @@ $PYTHON_CMD -m venv --help >/dev/null 2>&1
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Python3 not found. Please install it using Homebrew ('brew install python' or 'brew install python3 or brew install python@3.X') or the macOS developer tools ('xcode-select --install')."
 ```
 
@@ -77,7 +77,7 @@ echo "Python3 not found. Please install it using Homebrew ('brew install python'
 
 ### Command
 
-```sh
+```bash
 PYTHON_EXE=$(command -v #{python_exe} || command -v python)
 TEMPDIR=$(mktemp -d /tmp/atomic_python_hook_XX)
 echo "$TEMPDIR" > /tmp/atomic_python_hook_path.txt
@@ -89,7 +89,7 @@ echo "import subprocess; subprocess.Popen(['open', '-a', '#{exe_name}'])" > "$SI
 
 ### Cleanup
 
-```sh
+```bash
 if [ ! -f /tmp/atomic_python_hook_path.txt ] || [ ! -d $(cat /tmp/atomic_python_hook_path.txt) ]; then echo "[!] Artifact missing: /tmp/atomic_python_hook_path.txt — [-] Please Run : Invoke-AtomicTest T1546.018"; exit 0; fi
 pkill "#{exe_name}" || true
 [ -f /tmp/atomic_python_hook_path.txt ] && rm -rf $(cat /tmp/atomic_python_hook_path.txt) && rm -f /tmp/atomic_python_hook_path.txt

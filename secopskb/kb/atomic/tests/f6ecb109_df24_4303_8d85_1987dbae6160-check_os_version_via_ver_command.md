@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "f6ecb109-df24-4303-8d85-1987dbae6160"
@@ -42,7 +42,7 @@ Ver command shows information about os version.
 
 ### Command
 
-```commandprompt
+```cmd
 ver
 ```
 

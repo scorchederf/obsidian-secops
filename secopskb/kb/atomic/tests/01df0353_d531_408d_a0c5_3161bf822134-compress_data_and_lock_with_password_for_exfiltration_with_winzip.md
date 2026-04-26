@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "01df0353-d531-408d-a0c5-3161bf822134"
@@ -65,13 +65,13 @@ Winzip must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 cmd /c 'if not exist "#{winzip_exe}" (echo 1) else (echo 0)'
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 IEX(IWR "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-WebRequestVerifyHash.ps1" -UseBasicParsing)
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 if(Invoke-WebRequestVerifyHash "#{winzip_url}" "PathToAtomicsFolder\..\ExternalPayloads\winzip.exe" #{winzip_hash}){
@@ -87,7 +87,7 @@ if(Invoke-WebRequestVerifyHash "#{winzip_url}" "PathToAtomicsFolder\..\ExternalP
 
 ### Command
 
-```commandprompt
+```cmd
 path=%path%;"C:\Program Files (x86)\winzip"
 mkdir .\tmp\victim-files
 cd .\tmp\victim-files

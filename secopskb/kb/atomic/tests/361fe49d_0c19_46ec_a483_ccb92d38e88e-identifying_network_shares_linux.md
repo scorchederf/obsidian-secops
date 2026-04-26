@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1083"
 attack_technique_name: "File and Directory Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "361fe49d-0c19-46ec-a483-ccb92d38e88e"
@@ -43,7 +43,7 @@ Attackers may then attempt to access these shares for lateral movement or data e
 
 ### Command
 
-```sh
+```bash
 findmnt -t nfs
 ```
 

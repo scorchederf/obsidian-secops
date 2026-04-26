@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "b3bdfc91-b33e-4c6d-a5c8-d64bee0276b3"
@@ -51,13 +51,13 @@ When the test completes , a new process will be started locally .A notepad appli
 
 ### Command
 
-```commandprompt
+```cmd
 wmic process call create #{process_to_execute}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 wmic process where name='#{process_to_execute}' delete >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1610"
 attack_technique_name: "Deploy a container"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1610/T1610.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "59aa6f26-7620-417e-9318-589e0fb7a372"
@@ -43,13 +43,13 @@ Verify docker is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which docker
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which docker`" ]; then echo "Docker Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install docker ; elif [ -n "`which yum`" ]; then sudo yum -y install docker ; fi ; else echo "Docker installed"; fi
 ```
 
@@ -57,13 +57,13 @@ Verify docker service is running.
 
 ### Prerequisite Check
 
-```text
+```bash
 sudo systemctl status docker  --no-pager
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo systemctl start docker
 ```
 

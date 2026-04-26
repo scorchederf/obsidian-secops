@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "9f8b1c54-cb76-4d5e-bb1f-2f5c0e8f5a11"
@@ -59,7 +59,7 @@ Upon success, art-expand-source.txt is extracted next to the CAB.
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir "#{output_dir}" >nul 2>&1
 echo hello from atomic red team > "PathToAtomicsFolder\T1140\src\art-expand-source.txt"
 makecab "PathToAtomicsFolder\T1140\src\art-expand-source.txt" "#{cab_path}"
@@ -70,7 +70,7 @@ popd
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "PathToAtomicsFolder\T1140\src\art-expand-source.txt" >nul 2>&1
 del "#{cab_path}" >nul 2>&1
 rmdir "#{output_dir}" /s /q >nul 2>&1

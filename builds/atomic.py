@@ -237,11 +237,25 @@ def write_dependencies_section(test):
             continue
         if dependency.get("description"):
             text += str(dependency["description"]).strip() + "\n\n"
+        fence_language = get_executor_fence_language(test.get("dependency_executor_name", ""))
         if dependency.get("prereq_command"):
-            text += "### Prerequisite Check\n\n```text\n" + str(dependency["prereq_command"]).rstrip() + "\n```\n\n"
+            text += "### Prerequisite Check\n\n```" + fence_language + "\n" + str(dependency["prereq_command"]).rstrip() + "\n```\n\n"
         if dependency.get("get_prereq_command"):
-            text += "### Get Prerequisite\n\n```text\n" + str(dependency["get_prereq_command"]).rstrip() + "\n```\n\n"
+            text += "### Get Prerequisite\n\n```" + fence_language + "\n" + str(dependency["get_prereq_command"]).rstrip() + "\n```\n\n"
     return text
+
+
+def get_executor_fence_language(executor_name):
+    normalized = make_safe_name(executor_name).replace("_", "")
+    language_map = {
+        "bash": "bash",
+        "sh": "bash",
+        "powershell": "powershell",
+        "commandprompt": "cmd",
+        "cmd": "cmd",
+        "manual": "text",
+    }
+    return language_map.get(normalized, normalized or "text")
 
 
 def write_executor_section(test):
@@ -257,10 +271,10 @@ def write_executor_section(test):
         text += f"- {key}: {executor[key]}\n"
     text += "\n"
     if executor.get("command"):
-        text += "### Command\n\n```" + make_safe_name(executor_name).replace("_", "") + "\n"
+        text += "### Command\n\n```" + get_executor_fence_language(executor_name) + "\n"
         text += str(executor["command"]).rstrip() + "\n```\n\n"
     if executor.get("cleanup_command"):
-        text += "### Cleanup\n\n```" + make_safe_name(executor_name).replace("_", "") + "\n"
+        text += "### Cleanup\n\n```" + get_executor_fence_language(executor_name) + "\n"
         text += str(executor["cleanup_command"]).rstrip() + "\n```\n\n"
     return text
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1482"
 attack_technique_name: "Domain Trust Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "f974894c-5991-4b19-aaf5-7cc2fe298c5d"

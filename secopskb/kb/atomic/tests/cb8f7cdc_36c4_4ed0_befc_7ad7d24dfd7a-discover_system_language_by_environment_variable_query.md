@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614.001"
 attack_technique_name: "System Location Discovery: System Language Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614.001/T1614.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "cb8f7cdc-36c4-4ed0-befc-7ad7d24dfd7a"
@@ -51,13 +51,13 @@ Check if printenv command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 [ -x "$(command -v printenv)" ] && exit 0 || exit 1
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "printenv command does not exist"
 exit 1
 ```
@@ -68,7 +68,7 @@ exit 1
 
 ### Command
 
-```sh
+```bash
 env | grep LANG
 printenv LANG
 set | grep LANG

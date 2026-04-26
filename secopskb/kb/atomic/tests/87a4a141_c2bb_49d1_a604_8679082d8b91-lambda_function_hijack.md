@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1648"
 attack_technique_name: "Serverless Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1648/T1648.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "87a4a141-c2bb-49d1-a604-8679082d8b91"
@@ -71,13 +71,13 @@ The AWS PowerShell module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AWSPowerShell -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AWSPowerShell -Force
 ```
 
@@ -85,13 +85,13 @@ Terraform must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 terraform --version
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "Terraform is required. Download it from https://www.terraform.io/downloads.html"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1539"
 attack_technique_name: "Steal Web Session Cookie"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1539/T1539.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "4b437357-f4e9-4c84-9fa6-9bcee6f826aa"
@@ -60,13 +60,13 @@ Sqlite3 must exist at (#{sqlite3_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{sqlite3_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://www.sqlite.org/2022/sqlite-tools-win32-x86-3380200.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\sqlite.zip"
 Expand-Archive -path "PathToAtomicsFolder\..\ExternalPayloads\sqlite.zip" -destinationpath "PathToAtomicsFolder\..\ExternalPayloads\" -force

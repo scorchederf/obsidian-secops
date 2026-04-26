@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1497.001"
 attack_technique_name: "Virtualization/Sandbox Evasion: System Checks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1497.001/T1497.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "e04d2e89-de15-4d90-92f9-a335c7337f0f"
@@ -43,7 +43,7 @@ We should be able to find whether virtualization is enabled by checking whether 
 
 ### Command
 
-```sh
+```bash
 if [ "$(system_profiler SPHardwareDataType | grep "Model Identifier" | grep -v 'Mac')" != "" ]; then echo 'Virtualization Environment detected'; fi;
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1001.002"
 attack_technique_name: "Data Obfuscation via Steganography"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1001.002/T1001.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "04bb8e3d-1670-46ab-a3f1-5cee64da29b6"
@@ -67,7 +67,7 @@ Image file must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (!(Test-Path "#{image_file}")) {exit 1} else {
 {exit 0}
 }
@@ -75,7 +75,7 @@ if (!(Test-Path "#{image_file}")) {exit 1} else {
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{image_file}") -ErrorAction Ignore | Out-Null
 Write-Output "Downloading image file..."
 $imageUrl = "https://github.com/raghavsingh7/Pictures/raw/f73e7686cdd848ed06e63af07f6f1a5e72de6320/evil_kitten.jpg"
@@ -86,7 +86,7 @@ Extract-Invoke-PSImage must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (!(Test-Path "#{psimage_script}")) {exit 1} else {
 {exit 0}
 }
@@ -94,7 +94,7 @@ if (!(Test-Path "#{psimage_script}")) {exit 1} else {
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path "PathToAtomicsFolder\ExternalPayloads\" -ItemType Directory -Force | Out-Null
 Write-Output "Downloading Extract-Invoke-PSImage.ps1 script..."
 $scriptUrl = "https://github.com/raghavsingh7/Extract-Invoke-PSImage/raw/7d8c165d2f9bfe9c3965181079b7c82e03168ce1/Extract-Invoke-PSImage.ps1"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.003"
 attack_technique_name: "Create or Modify System Process: Windows Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "981e2942-e433-44e9-afc1-8c957a1496b6"
@@ -71,13 +71,13 @@ Service binary must exist on disk at specified location (#{binary_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{binary_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{binary_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1543.003/bin/AtomicService.exe" -OutFile "#{binary_path}"
 ```
@@ -89,14 +89,14 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 sc.exe create #{service_name} binPath= "#{binary_path}" start=#{startup_type}  type=#{service_type}
 sc.exe start #{service_name}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc.exe stop #{service_name} >nul 2>&1
 sc.exe delete #{service_name} >nul 2>&1
 ```

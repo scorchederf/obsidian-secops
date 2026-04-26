@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.002"
 attack_technique_name: "Brute Force: Password Cracking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.002/T1110.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6d27df5d-69d4-4c91-bc33-5983ffe91692"
@@ -64,13 +64,13 @@ Hashcat must exist on disk at specified location (#{hashcat_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path  $(cmd /c echo "#{hashcat_exe}")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://www.7-zip.org/a/7z1900.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\7z1900.exe"
 Start-Process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\7z1900.exe" -ArgumentList "/S /D=PathToAtomicsFolder\..\ExternalPayloads\7zi" -NoNewWindow
@@ -87,14 +87,14 @@ Move-Item "PathToAtomicsFolder\..\ExternalPayloads\hashcat-unzip\hashcat-6.1.1\*
 
 ### Command
 
-```commandprompt
+```cmd
 cd #{hashcat_exe}\..
 #{hashcat_exe} -a 0 -m 1000 -r .\rules\Incisive-leetspeak.rule #{input_file_sam} #{input_file_passwords}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "PathToAtomicsFolder\..\ExternalPayloads\hashcat6.7z" >nul 2>&1
 del "PathToAtomicsFolder\..\ExternalPayloads\7z1900.exe" >nul 2>&1
 del "PathToAtomicsFolder\..\ExternalPayloads\7z" /Q /S >nul 2>&1

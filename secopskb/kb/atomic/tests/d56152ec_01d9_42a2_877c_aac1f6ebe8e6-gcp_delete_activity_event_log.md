@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "d56152ec-01d9-42a2-877c-aac1f6ebe8e6"
@@ -55,13 +55,13 @@ Requires gcloud
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v gcloud)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Please Install Google Cloud SDK before running this atomic test : https://cloud.google.com/sdk/docs/install"
 ```
 
@@ -69,13 +69,13 @@ Check if user is logged in
 
 ### Prerequisite Check
 
-```text
+```bash
 gcloud config get-value account
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 gcloud auth login --no-launch-browser
 ```
 
@@ -86,7 +86,7 @@ gcloud auth login --no-launch-browser
 
 ### Command
 
-```sh
+```bash
 gcloud config set project #{project-id}
 gcloud logging logs delete projects/#{project-id}/logs/cloudaudit.googleapis.com%2Factivity --quiet
 ```

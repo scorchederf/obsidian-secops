@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "573d15da-c34e-4c59-a7d2-18f20d92dfa3"
@@ -60,13 +60,13 @@ Post the registry changes of this test, when someone tries to manually run msedg
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\#{app_name}" /t REG_SZ /d #{new_path} /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\#{app_name}" /v (Default) /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\#{app_name}" /t REG_SZ /d "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" /f
 ```

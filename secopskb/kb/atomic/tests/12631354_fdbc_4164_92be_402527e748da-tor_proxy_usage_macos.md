@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1090.003"
 attack_technique_name: "Proxy: Multi-hop Proxy"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1090.003/T1090.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "12631354-fdbc-4164-92be-402527e748da"
@@ -44,13 +44,13 @@ Tor must be installed on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v tor --version)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ ! -x "$(command -v brew --version)" ]; then /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh keystroke return)"; fi
 brew install tor
 ```
@@ -61,13 +61,13 @@ brew install tor
 
 ### Command
 
-```sh
+```bash
 osascript -e 'tell application "Terminal" to do script "tor"'
 ```
 
 ### Cleanup
 
-```sh
+```bash
 killall tor > /dev/null 2>&1
 ```
 

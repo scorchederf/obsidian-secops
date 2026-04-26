@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.004"
 attack_technique_name: "IIS Components"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.004/T1505.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "cc3381fb-4bd0-405c-a8e4-6cacfac3b06c"
@@ -61,14 +61,14 @@ IIS must be installed in order to add a module to IIS.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $service = get-service w3svc -ErrorAction SilentlyContinue
 if($service){ Write-Host "IIS installed on $env:computername" } else { Write-Host "IIS is not installed on $env:computername" }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install IIS to continue.
 ```
 

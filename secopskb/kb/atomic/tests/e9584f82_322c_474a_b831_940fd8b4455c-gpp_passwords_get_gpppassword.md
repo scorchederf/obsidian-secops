@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.006"
 attack_technique_name: "Unsecured Credentials: Group Policy Preferences"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.006/T1552.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "e9584f82-322c-474a-b831-940fd8b4455c"
@@ -61,13 +61,13 @@ Get-GPPPassword PowerShell Script must exist at #{gpp_script_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path "#{gpp_script_path}") {exit 0 } else {exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -ItemType Directory (Split-Path "#{gpp_script_path}") -Force | Out-Null
 Invoke-WebRequest #{gpp_script_url} -OutFile "#{gpp_script_path}"
 ```
@@ -76,13 +76,13 @@ Computer must be domain joined
 
 ### Prerequisite Check
 
-```text
+```powershell
 if((Get-CIMInstance -Class Win32_ComputerSystem).PartOfDomain) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Joining this computer to a domain must be done manually
 ```
 

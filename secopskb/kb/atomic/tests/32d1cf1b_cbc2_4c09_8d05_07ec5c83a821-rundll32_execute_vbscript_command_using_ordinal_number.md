@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "32d1cf1b-cbc2-4c09-8d05-07ec5c83a821"
@@ -52,7 +52,7 @@ Upon execution calc.exe will be launched
 
 ### Command
 
-```commandprompt
+```cmd
 rundll32 vbscript:"\..\mshtml,#135 "+String(CreateObject("WScript.Shell").Run("#{command_to_execute}"),0)
 ```
 

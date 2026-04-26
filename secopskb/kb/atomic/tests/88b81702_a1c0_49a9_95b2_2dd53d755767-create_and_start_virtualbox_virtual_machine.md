@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.006"
 attack_technique_name: "Run Virtual Instance"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "88b81702-a1c0-49a9-95b2-2dd53d755767"
@@ -80,13 +80,13 @@ VirtualBox must exist on disk at specified locations (#{virtualbox_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{virtualbox_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 $wc = New-Object System.Net.WebClient
 $wc.DownloadFile("#{virtualbox_download}","PathToAtomicsFolder\..\ExternalPayloads\#{virtualbox_installer}")
@@ -97,13 +97,13 @@ VBoxManage must exist on disk at specified locations (#{vboxmanage_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{vboxmanage_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $wc = New-Object System.Net.WebClient
 $wc.DownloadFile("#{virtualbox_download}","PathToAtomicsFolder\..\ExternalPayloads\#{virtualbox_installer}")
 start-process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\#{virtualbox_installer}" -ArgumentList "--silent" -Wait
@@ -116,7 +116,7 @@ start-process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\#{virtualbox_in
 
 ### Command
 
-```commandprompt
+```cmd
 "#{vboxmanage_exe}" createvm --name "#{vm_name}" --register
 "#{vboxmanage_exe}" modifyvm "#{vm_name}" --firmware efi
 "#{vboxmanage_exe}" startvm "#{vm_name}"
@@ -124,7 +124,7 @@ start-process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\#{virtualbox_in
 
 ### Cleanup
 
-```commandprompt
+```cmd
 "#{vboxmanage_exe}" controlvm "#{vm_name}" poweroff
 "#{vboxmanage_exe}" unregistervm "#{vm_name}" --delete
 ```

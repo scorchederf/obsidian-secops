@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.003"
 attack_technique_name: "Impair Defenses: Impair Command History Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "f7308845-6da8-468e-99f2-4271f2f5bb67"
@@ -46,7 +46,7 @@ Note: we don't wish to log out, so we are just confirming the value of HISTFILE.
 
 ### Command
 
-```sh
+```bash
 echo $HISTFILE
 export HISTFILE="/dev/null"
 if [ $(echo $HISTFILE) == "/dev/null" ]; then echo "\$HISTFILE is /dev/null"; fi
@@ -54,7 +54,7 @@ if [ $(echo $HISTFILE) == "/dev/null" ]; then echo "\$HISTFILE is /dev/null"; fi
 
 ### Cleanup
 
-```sh
+```bash
 export HISTFILE=~/.sh_history
 ```
 

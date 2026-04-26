@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.004"
 attack_technique_name: "Access Token Manipulation: Parent PID Spoofing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.004/T1134.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "14920ebd-1d61-491a-85e0-fe98efe37f25"
@@ -62,7 +62,7 @@ The AtomicTestHarnesses module must be installed and Start-ATHProcessUnderSpecif
 
 ### Prerequisite Check
 
-```text
+```untitled
 $RequiredModule = Get-Module -Name AtomicTestHarnesses -ListAvailable
 if (-not $RequiredModule) {exit 1}
 if (-not $RequiredModule.ExportedCommands['Start-ATHProcessUnderSpecificParent']) {exit 1} else {exit 0}
@@ -70,7 +70,7 @@ if (-not $RequiredModule.ExportedCommands['Start-ATHProcessUnderSpecificParent']
 
 ### Get Prerequisite
 
-```text
+```untitled
 Install-Module -Name AtomicTestHarnesses -Scope CurrentUser -Force
 ```
 

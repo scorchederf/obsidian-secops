@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "65704cd4-6e36-4b90-b6c1-dc29a82c8e56"
@@ -43,7 +43,7 @@ See how NetWire malware - https://app.any.run/tasks/41ecdbde-4997-4301-a350-0270
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v NetWire /t REG_SZ  /d "C:\Users\admin\AppData\Roaming\Install\Host.exe" /f
 reg add HKCU\SOFTWARE\NetWire /v HostId /t REG_SZ /d HostId-kai6Ci /f
 reg add HKCU\SOFTWARE\NetWire /v "Install Date" /t REG_SZ /d "2021-08-30 07:17:27" /f
@@ -51,7 +51,7 @@ reg add HKCU\SOFTWARE\NetWire /v "Install Date" /t REG_SZ /d "2021-08-30 07:17:2
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v NetWire /f >nul 2>&1
 reg delete HKCU\SOFTWARE\NetWire /va /f >nul 2>&1
 reg delete HKCU\SOFTWARE\NetWire /f >nul 2>&1

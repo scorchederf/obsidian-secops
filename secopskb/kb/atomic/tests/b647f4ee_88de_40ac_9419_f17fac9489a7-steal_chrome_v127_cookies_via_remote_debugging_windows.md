@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1539"
 attack_technique_name: "Steal Web Session Cookie"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1539/T1539.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "b647f4ee-88de-40ac-9419-f17fac9489a7"

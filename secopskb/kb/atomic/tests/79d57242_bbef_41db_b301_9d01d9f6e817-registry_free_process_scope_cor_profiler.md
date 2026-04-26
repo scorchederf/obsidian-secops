@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.012"
 attack_technique_name: "Hijack Execution Flow: COR_PROFILER"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.012/T1574.012.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "79d57242-bbef-41db-b301-9d01d9f6e817"
@@ -59,13 +59,13 @@ Reference: https://redcanary.com/blog/cor_profiler-for-persistence/
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_name}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{file_name}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1574.012/bin/T1574.012x64.dll" -OutFile "#{file_name}"
 ```

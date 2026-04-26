@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1559.002"
 attack_technique_name: "Inter-Process Communication: Dynamic Data Exchange"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1559.002/T1559.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "manual"
 aliases:
   - "f592ba2a-e9e8-4d62-a459-ef63abd819fd"

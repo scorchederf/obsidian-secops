@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c99a829f-0bb8-4187-b2c6-d47d1df74cab"
@@ -76,13 +76,13 @@ The whois and timeout commands must be present
 
 ### Prerequisite Check
 
-```text
+```untitled
 which whois && which timeout
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Please install timeout and the whois package"
 ```
 
@@ -93,13 +93,13 @@ echo "Please install timeout and the whois package"
 
 ### Command
 
-```sh
+```bash
 timeout --preserve-status #{timeout} whois -h #{remote_host} -p #{remote_port} "#{query}" > #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

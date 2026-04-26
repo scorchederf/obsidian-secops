@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.001"
 attack_technique_name: "Permission Groups Discovery: Local Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.001/T1069.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "952931a4-af0b-4335-bbbe-73c8c5b327ae"
@@ -43,7 +43,7 @@ Permission Groups Discovery
 
 ### Command
 
-```sh
+```bash
 if [ -x "$(command -v dscacheutil)" ]; then dscacheutil -q group; else echo "dscacheutil is missing from the machine. skipping..."; fi;
 if [ -x "$(command -v dscl)" ]; then dscl . -list /Groups; else echo "dscl is missing from the machine. skipping..."; fi;
 if [ -x "$(command -v groups)" ]; then groups; else echo "groups is missing from the machine. skipping..."; fi;

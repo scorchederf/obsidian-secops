@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "40074085-dbc8-492b-90a3-11bcfc52fda8"
@@ -45,13 +45,13 @@ With root privileges, an adversary can disable real time protection. Note, this 
 
 ### Command
 
-```sh
+```bash
 sudo mdatp config real-time-protection --value disabled
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo mdatp config real-time-protection --value enabled
 ```
 

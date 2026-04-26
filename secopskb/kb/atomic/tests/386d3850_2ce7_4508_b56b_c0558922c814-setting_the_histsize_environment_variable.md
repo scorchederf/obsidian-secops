@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.003"
 attack_technique_name: "Impair Defenses: Impair Command History Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "386d3850-2ce7-4508-b56b-c0558922c814"
@@ -46,7 +46,7 @@ Note: we don't wish to log out, so we are just confirming the value of HISTSIZE.
 
 ### Command
 
-```sh
+```bash
 echo $HISTSIZE
 export HISTSIZE=0
 echo "runnning some commands to populate the history"
@@ -57,7 +57,7 @@ if [ $(echo $HISTSIZE) -eq 0 ]; then echo "\$HISTSIZE is zero"; else HIST_LENGTH
 
 ### Cleanup
 
-```sh
+```bash
 export HISTSIZE=100
 ```
 

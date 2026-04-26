@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1619"
 attack_technique_name: "Cloud Storage Object Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1619/T1619.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "070322a4-2c60-4c50-8ffb-c450a34fe7bf"
@@ -60,13 +60,13 @@ Azure CLI must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
  Install-Module -Name Az -Force
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.004"
 attack_technique_name: "Remote Services: SSH"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.004/T1021.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "8f6c14d1-f13d-4616-b7fc-98cc69fe56ec"
@@ -64,14 +64,14 @@ Check if VMWARE PowerCLI PowerShell Module is installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule = Get-Module -Name VMware.PowerCLI -ListAvailable
 if (-not $RequiredModule) {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name VMware.PowerCLI
 ```
 

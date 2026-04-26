@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1490"
 attack_technique_name: "Inhibit System Recovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1490/T1490.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "1c68c68d-83a4-4981-974e-8993055fa034"
@@ -44,13 +44,13 @@ Use schtasks.exe to disable the System Restore (SR) scheduled task
 
 ### Command
 
-```commandprompt
+```cmd
 schtasks.exe /Change /TN "\Microsoft\Windows\SystemRestore\SR" /disable
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 schtasks.exe /Change /TN "\Microsoft\Windows\SystemRestore\SR" /enable >nul 2>&1
 ```
 

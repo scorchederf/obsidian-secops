@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1518"
 attack_technique_name: "Software Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1518/T1518.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "0bb64470-582a-4155-bde2-d6003a95ed34"

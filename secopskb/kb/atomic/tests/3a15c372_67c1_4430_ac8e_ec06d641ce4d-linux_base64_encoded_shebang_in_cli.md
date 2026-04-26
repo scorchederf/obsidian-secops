@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "3a15c372-67c1-4430-ac8e-ec06d641ce4d"
@@ -70,13 +70,13 @@ base64 must be present
 
 ### Prerequisite Check
 
-```text
+```untitled
 which base64
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "please install base64"
 ```
 
@@ -87,7 +87,7 @@ echo "please install base64"
 
 ### Command
 
-```sh
+```bash
 echo #{bash_encoded} | base64 -d | bash
 echo #{dash_encoded} | base64 -d | bash
 echo #{fish_encoded} | base64 -d | bash

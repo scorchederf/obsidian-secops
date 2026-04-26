@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003"
 attack_technique_name: "OS Credential Dumping"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003/T1003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "42510244-5019-48fa-a0e5-66c3b76e6049"
@@ -45,13 +45,13 @@ IIS must be installed prior to running the test
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Get-WindowsFeature Web-Server).InstallState -eq "Installed") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-WindowsFeature -name Web-Server -IncludeManagementTools
 ```
 

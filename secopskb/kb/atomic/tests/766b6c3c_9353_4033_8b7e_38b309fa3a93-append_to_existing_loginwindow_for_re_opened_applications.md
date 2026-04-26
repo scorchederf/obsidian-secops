@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.007"
 attack_technique_name: "Boot or Logon Autostart Execution: Re-opened Applications"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.007/T1547.007.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "766b6c3c-9353-4033-8b7e-38b309fa3a93"
@@ -59,13 +59,13 @@ compile C program
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f "#{exe_path}" ]; then exit 0 ; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 cc #{objc_source_path} -o #{exe_path} -framework Cocoa
 ```
 
@@ -75,7 +75,7 @@ cc #{objc_source_path} -o #{exe_path} -framework Cocoa
 
 ### Command
 
-```sh
+```bash
 FILE=`find ~/Library/Preferences/ByHost/com.apple.loginwindow.*.plist -type f | head -1`
 if [ -z "${FILE}" ] ; then echo "No loginwindow plist file found" && exit 1 ; fi
 echo save backup copy to /tmp/
@@ -88,7 +88,7 @@ echo overwriting...
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{exe_path}
 # revert to backup copy
 FILE=`find ~/Library/Preferences/ByHost/com.apple.loginwindow.*.plist -type f | head -1`

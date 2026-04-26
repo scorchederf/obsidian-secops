@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016.002"
 attack_technique_name: "System Network Configuration Discovery: Wi-Fi Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016.002/T1016.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "53cf1903-0fa7-4177-ab14-f358ae809eec"
@@ -44,7 +44,7 @@ Upon successful execution, information about previously connected Wi-Fi networks
 
 ### Command
 
-```commandprompt
+```cmd
 netsh wlan show profile * key=clear
 ```
 

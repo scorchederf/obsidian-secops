@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1654"
 attack_technique_name: "Log Enumeration"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1654/T1654.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a9030b20-dd4b-4405-875e-3462c6078fdc"

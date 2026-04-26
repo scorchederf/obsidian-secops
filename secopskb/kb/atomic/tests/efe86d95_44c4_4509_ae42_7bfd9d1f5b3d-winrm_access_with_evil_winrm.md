@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.006"
 attack_technique_name: "Remote Services: Windows Remote Management"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.006/T1021.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "efe86d95-44c4-4509-ae42-7bfd9d1f5b3d"
@@ -64,13 +64,13 @@ Computer must have Ruby Installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (ruby -v) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest  -OutFile "PathToAtomicsFolder\..\ExternalPayloads\rubyinstaller-2.7.1-1-x64.exe" https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.1-1/rubyinstaller-2.7.1-1-x64.exe
 $file1= "PathToAtomicsFolder\..\ExternalPayloads\rubyinstaller-2.7.1-1-x64.exe"
@@ -81,13 +81,13 @@ Computer must have Evil-WinRM installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (evil-winrm -h) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 gem install evil-winrm
 ```
 

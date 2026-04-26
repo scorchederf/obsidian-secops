@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1135"
 attack_technique_name: "Network Share Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d07e4cc1-98ae-447e-9d31-36cb430d28c4"
@@ -50,13 +50,13 @@ Invoke-ShareFinder module must exist in %TEMP% directory
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\PowerView.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://raw.githubusercontent.com/darkoperator/Veil-PowerView/8784e33f17ee7543ba2f45e27dc5f08ea3a1b856/PowerView/powerview.ps1" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PowerView.ps1"
 ```

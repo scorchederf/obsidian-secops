@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.018"
 attack_technique_name: "Event Triggered Execution: Python Startup Hooks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.018/T1546.018.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a58c066d-f2f0-42a2-ab70-30af73f89e66"
@@ -53,7 +53,7 @@ Python must be installed and the specified binary (#{python_exe}) must be in the
 
 ### Prerequisite Check
 
-```text
+```bash
 PYTHON_CMD=$(command -v #{python_exe} || command -v python)
 if [ -z "$PYTHON_CMD" ]; then exit 1; fi
 $PYTHON_CMD -m venv --help >/dev/null 2>&1
@@ -61,7 +61,7 @@ $PYTHON_CMD -m venv --help >/dev/null 2>&1
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Python not found. Please install Python using your package manager (e.g., Debian Based 'sudo apt-get update && sudo apt-get install -y python3 python3-venv', RedHat / CentOS Based 'sudo yum install -y python3 python3-venv || sudo dnf install -y python3 python3-venv')."
 ```
 
@@ -72,7 +72,7 @@ echo "Python not found. Please install Python using your package manager (e.g., 
 
 ### Command
 
-```sh
+```bash
 TEMPDIR="/tmp/atomic_sitecust_posix"
 mkdir -p "$TEMPDIR"
 "#{python_exe}" -m venv "$TEMPDIR/env"
@@ -85,7 +85,7 @@ if [ -f /tmp/atomic_hook_poc.txt ]; then echo "[+] Success: atomic_hook_poc.txt 
 
 ### Cleanup
 
-```sh
+```bash
 if [ ! -f /tmp/atomic_hook_poc.txt ] || [ ! -d /tmp/atomic_sitecust_posix ]; then echo "[!] Missing artifact or folder: /tmp/atomic_hook_poc.txt or /tmp/atomic_sitecust_posix — [-] Please Run : Invoke-AtomicTest T1546.018"; exit 0; fi
 rm -rf /tmp/atomic_sitecust_posix
 echo "[+] Successful Removed atomic_hook.pth"

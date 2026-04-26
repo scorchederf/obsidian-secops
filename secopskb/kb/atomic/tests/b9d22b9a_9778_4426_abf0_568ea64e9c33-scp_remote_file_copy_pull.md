@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "b9d22b9a-9778-4426-abf0-568ea64e9c33"
@@ -69,7 +69,7 @@ Utilize scp to perform a remote file copy (pull)
 
 ### Command
 
-```sh
+```bash
 scp #{username}@#{remote_host}:#{remote_file} #{local_path}
 ```
 

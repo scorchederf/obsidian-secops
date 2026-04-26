@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1490"
 attack_technique_name: "Inhibit System Recovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1490/T1490.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "39a295ca-7059-4a88-86f6-09556c1211e7"

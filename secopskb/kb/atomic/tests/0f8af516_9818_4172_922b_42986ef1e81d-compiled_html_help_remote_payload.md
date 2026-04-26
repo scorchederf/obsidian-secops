@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.001"
 attack_technique_name: "Signed Binary Proxy Execution: Compiled HTML File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.001/T1218.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0f8af516-9818-4172-922b-42986ef1e81d"
@@ -51,7 +51,7 @@ Upon execution displays an error saying the file cannot be open
 
 ### Command
 
-```commandprompt
+```cmd
 hh.exe #{remote_chm_file}
 ```
 

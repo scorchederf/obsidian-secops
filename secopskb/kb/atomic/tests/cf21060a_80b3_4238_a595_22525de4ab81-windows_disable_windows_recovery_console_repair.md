@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1490"
 attack_technique_name: "Inhibit System Recovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1490/T1490.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "cf21060a-80b3-4238-a595-22525de4ab81"
@@ -45,14 +45,14 @@ Upon execution, "The operation completed successfully." will be displayed in the
 
 ### Command
 
-```commandprompt
+```cmd
 bcdedit.exe /set {default} bootstatuspolicy ignoreallfailures
 bcdedit.exe /set {default} recoveryenabled no
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 bcdedit.exe /set {default} bootstatuspolicy DisplayAllFailures >nul 2>&1
 bcdedit.exe /set {default} recoveryenabled yes >nul 2>&1
 ```

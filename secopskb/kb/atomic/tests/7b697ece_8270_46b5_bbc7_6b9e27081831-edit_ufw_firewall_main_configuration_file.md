@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "7b697ece-8270-46b5-bbc7-6b9e27081831"
@@ -45,13 +45,13 @@ Check if /etc/default/ufw exists.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -f "/etc/default/ufw" ]; then echo -e "\n***** ufw NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -62,14 +62,14 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 echo "# THIS IS A COMMENT" >> /etc/default/ufw
 grep "# THIS IS A COMMENT" /etc/default/ufw
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sed -i 's/# THIS IS A COMMENT//g' /etc/default/ufw
 ```
 

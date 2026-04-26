@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.007"
 attack_technique_name: "OS Credential Dumping: Proc Filesystem"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "a27418de-bdce-4ebd-b655-38f04842bf0c"
@@ -61,13 +61,13 @@ MimiPenguin script must exist on disk at specified location (#{MimiPenguin_Locat
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f "#{MimiPenguin_Location}" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 wget -O "/tmp/mimipenguin.tar.gz" https://github.com/huntergregal/mimipenguin/releases/download/2.0-release/mimipenguin_2.0-release.tar.gz
 mkdir /tmp/mimipenguin
 tar -xzvf "/tmp/mimipenguin.tar.gz" -C /tmp/mimipenguin
@@ -77,13 +77,13 @@ Strings must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v strings --version)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get -y install binutils
 ```
 
@@ -91,13 +91,13 @@ Python2 must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v python2 --version)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get -y install python2
 ```
 
@@ -105,13 +105,13 @@ Libc-bin must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v ldd --version)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get -y install libc-bin
 ```
 

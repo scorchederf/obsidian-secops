@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "59d386fc-3a4b-41b8-850d-9e3eee24dfe4"
@@ -45,13 +45,13 @@ Reference: https://www.bleepingcomputer.com/news/security/gootkit-malware-bypass
 
 ### Command
 
-```commandprompt
+```cmd
 wmic.exe /Namespace:\\root\Microsoft\Windows\Defender class MSFT_MpPreference call Add ExclusionPath=\"ATOMICREDTEAM\"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 wmic.exe /Namespace:\\root\Microsoft\Windows\Defender class MSFT_MpPreference call Remove ExclusionPath=\"ATOMICREDTEAM\"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564"
 attack_technique_name: "Hide Artifacts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564/T1564.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "6afe288a-8a8b-4d33-a629-8d03ba9dad3a"
@@ -53,7 +53,7 @@ Microsoft Word must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "Word.Application" | Out-Null
   Stop-Process -Name "winword"
@@ -63,7 +63,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft Word manually to meet this requirement"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1484.001"
 attack_technique_name: "Domain Policy Modification: Group Policy Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1484.001/T1484.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "9ab80952-74ee-43da-a98c-1e740a985f28"
@@ -44,7 +44,7 @@ An adversary can modify the group policy settings.
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v GroupPolicyRefreshTimeDC /t REG_DWORD /d 0 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v GroupPolicyRefreshTimeOffsetDC /t REG_DWORD /d 0 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v GroupPolicyRefreshTime /t REG_DWORD /d 0 /f
@@ -55,7 +55,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v ShellSmartScreenLev
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v GroupPolicyRefreshTimeDC /f >nul 2>&1
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v GroupPolicyRefreshTimeOffsetDC /f >nul 2>&1
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v GroupPolicyRefreshTime /f >nul 2>&1

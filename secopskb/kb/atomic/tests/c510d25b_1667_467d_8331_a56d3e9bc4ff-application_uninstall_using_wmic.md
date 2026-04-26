@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c510d25b-1667-467d-8331-a56d3e9bc4ff"
@@ -58,13 +58,13 @@ TightVNC must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Test-Path "C:\Program Files\TightVNC\tvnviewer.exe")-Or (Test-Path "C:\Program Files (x86)\TightVNC\tvnviewer.exe")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest 'https://www.tightvnc.com/download/2.8.63/tightvnc-2.8.63-gpl-setup-64bit.msi' -OutFile "PathToAtomicsFolder\..\ExternalPayloads\tightvncinstaller.msi"
 start-sleep -s 10
 msiexec /i "PathToAtomicsFolder\..\ExternalPayloads\tightvncinstaller.msi" /qn /norestart
@@ -78,13 +78,13 @@ start-sleep -s 15
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /node:"#{node}" product where "name like '#{product}%%'" call uninstall
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 msiexec /i "PathToAtomicsFolder\..\ExternalPayloads\tightvncinstaller.msi" /qn /norestart
 ```
 

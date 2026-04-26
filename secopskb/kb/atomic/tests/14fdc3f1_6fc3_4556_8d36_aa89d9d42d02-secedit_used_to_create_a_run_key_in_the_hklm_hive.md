@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "14fdc3f1-6fc3-4556-8d36-aa89d9d42d02"
@@ -59,14 +59,14 @@ secedit allows to manipulate the HKLM hive of the Windows registry. This test cr
 
 ### Command
 
-```commandprompt
+```cmd
 secedit /import /db #{secedit_db} /cfg "#{ini_file}"
 secedit /configure /db #{secedit_db}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 REG DELETE "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "calc" /f >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.004"
 attack_technique_name: "Hide Artifacts: NTFS File Attributes"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.004/T1564.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "3e6791e7-232c-481c-a680-a52f86b83fdf"
@@ -58,14 +58,14 @@ alternate data stream, run "type %temp%\...$.......::$index_allocation\secrets.t
 
 ### Command
 
-```commandprompt
+```cmd
 md #{folder_name}
 echo too many secrets > #{folder_name}\#{hidden_filename}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 rmdir /S /Q #{folder_name} >nul 2>&1
 ```
 

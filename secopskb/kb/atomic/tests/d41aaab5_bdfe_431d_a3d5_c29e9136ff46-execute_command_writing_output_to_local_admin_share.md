@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.002"
 attack_technique_name: "Remote Services: SMB/Windows Admin Shares"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.002/T1021.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d41aaab5-bdfe-431d-a3d5-c29e9136ff46"
@@ -59,7 +59,7 @@ This technique is used by post-exploitation frameworks.
 
 ### Command
 
-```commandprompt
+```cmd
 cmd.exe /Q /c #{command_to_execute} 1> \\127.0.0.1\ADMIN$\#{output_file} 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1115"
 attack_technique_name: "Clipboard Data"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1115/T1115.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9c8d5a72-9c98-48d3-b9bf-da2cc43bdf52"
@@ -51,7 +51,7 @@ Microsoft #{ms_product} must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "#{ms_product}.Application" | Out-Null
   $process = "#{ms_product}"; if ( $process -eq "Word") {$process = "winword"}
@@ -62,7 +62,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft #{ms_product} manually to meet this requirement"
 ```
 

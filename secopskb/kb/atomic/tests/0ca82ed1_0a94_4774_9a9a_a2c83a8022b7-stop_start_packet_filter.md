@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "0ca82ed1-0a94-4774-9a9a-a2c83a8022b7"
@@ -44,14 +44,14 @@ Check if pfctl is installed on the machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v pfctl)" ]; then echo -e "\n***** PF NOT installed *****\n"; exit 1; fi
 if [ "$(kldstat -n pf)" = "" ]; then echo -e "\n***** PF inactive *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -62,14 +62,14 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 service pf stop
 service pf disable
 ```
 
 ### Cleanup
 
-```sh
+```bash
 service pf enable
 service pf start
 service pf status

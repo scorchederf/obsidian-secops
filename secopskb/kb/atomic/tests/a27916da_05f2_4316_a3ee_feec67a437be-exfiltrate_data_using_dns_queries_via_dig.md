@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048"
 attack_technique_name: "Exfiltration Over Alternative Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048/T1048.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "a27916da-05f2-4316-a3ee-feec67a437be"
@@ -66,13 +66,13 @@ dig command
 
 ### Prerequisite Check
 
-```text
+```bash
 which dig
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 which apt && sudo apt update && sudo apt install -y bind9-dnsutils || which yum && sudo yum install -y bind-utils || which dnf && sudo dnf install -y bind-utils || which apk && sudo apk add bind-tools || which pkg && sudo pkg update && sudo pkg install -y bind-tools || which brew && brew update && brew install --quiet bind
 ```
 

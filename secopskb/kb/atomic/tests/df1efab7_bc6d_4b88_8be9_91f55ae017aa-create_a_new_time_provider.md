@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.003"
 attack_technique_name: "Time Providers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.003/T1547.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "df1efab7-bc6d-4b88-8be9-91f55ae017aa"

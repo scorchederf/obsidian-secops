@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1113"
 attack_technique_name: "Screen Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1113/T1113.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "562f3bc2-74e8-46c5-95c7-0e01f9ccc65c"
@@ -51,14 +51,14 @@ Package with XWD and XWUD must exist on device
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v xwd)" ]; then exit 0; else exit 1; fi
 if [ -x "$(command -v xwud)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pkg install -y xwd xwud
 ```
 
@@ -68,14 +68,14 @@ pkg install -y xwd xwud
 
 ### Command
 
-```sh
+```bash
 xwd -root -out #{output_file}
 xwud -in #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file}
 ```
 

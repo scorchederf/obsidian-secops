@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "83810c46-f45e-4485-9ab6-8ed0e9e6ed7f"
@@ -47,14 +47,14 @@ Upon successful execution, cmd.exe will be renamed as lsm.exe and executed from 
 
 ### Command
 
-```commandprompt
+```cmd
 copy C:\Windows\System32\cmd.exe C:\lsm.exe
 C:\lsm.exe /c echo T1036.003 > C:\T1036.003.txt
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del C:\T1036.003.txt >nul 2>&1
 del C:\lsm.exe >nul 2>&1
 ```

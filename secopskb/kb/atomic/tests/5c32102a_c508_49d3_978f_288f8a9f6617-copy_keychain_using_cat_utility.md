@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.001"
 attack_technique_name: "Credentials from Password Stores: Keychain"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.001/T1555.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "5c32102a-c508-49d3-978f-288f8a9f6617"
@@ -52,13 +52,13 @@ This command will copy the keychain using the cat utility in a manner similar to
 
 ### Command
 
-```sh
+```bash
 cat ~/Library/Keychains/login.keychain-db > #{keychain_export}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{keychain_export}
 ```
 

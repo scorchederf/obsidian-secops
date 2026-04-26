@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.002"
 attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "913c0e4e-4b37-4b78-ad0b-90e7b25010f6"
@@ -44,14 +44,14 @@ Clear the Windows audit policy using auditpol utility. This action would stop ce
 
 ### Command
 
-```commandprompt
+```cmd
 auditpol /clear /y
 auditpol /remove /allusers
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 auditpol /set /category:"Account Logon" /success:enable /failure:enable
 auditpol /set /category:"Detailed Tracking" /success:enable
 auditpol /set /category:"Logon/Logoff" /success:enable /failure:enable

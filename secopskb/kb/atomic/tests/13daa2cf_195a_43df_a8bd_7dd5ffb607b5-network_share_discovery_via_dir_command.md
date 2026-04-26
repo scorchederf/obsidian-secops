@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1135"
 attack_technique_name: "Network Share Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "13daa2cf-195a-43df-a8bd-7dd5ffb607b5"
@@ -51,7 +51,7 @@ Upon execution available network shares will be displayed in the commandline ses
 
 ### Command
 
-```commandprompt
+```cmd
 dir \\#{computer_ip}\c$
 dir \\#{computer_ip}\admin$
 dir \\#{computer_ip}\IPC$

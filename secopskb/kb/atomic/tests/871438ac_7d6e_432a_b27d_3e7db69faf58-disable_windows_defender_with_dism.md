@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "871438ac-7d6e-432a-b27d-3e7db69faf58"
@@ -47,7 +47,7 @@ This method will remove Defender and it's package.
 
 ### Command
 
-```commandprompt
+```cmd
 Dism /online /Disable-Feature /FeatureName:Windows-Defender /Remove /NoRestart /quiet
 ```
 

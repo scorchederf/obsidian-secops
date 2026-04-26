@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1613"
 attack_technique_name: "Container and Resource Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1613/T1613.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "fc631702-3f03-4f2b-8d8a-6b3d055580a1"
@@ -43,13 +43,13 @@ Verify Podman is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which podman
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which podman`" ]; then echo "Podman Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install podman ; elif [ -n "`which yum`" ]; then sudo yum -y install podman ; elif [ -n "`which pacman`" ]; then sudo pacman -Sy podman --noconfirm ; elif [ -n "`which brew`" ]; then brew install podman ; else echo "Unsupported package manager"; fi ; else echo "Podman installed"; fi
 ```
 
@@ -57,13 +57,13 @@ Verify Podman service is running.
 
 ### Prerequisite Check
 
-```text
+```bash
 sudo systemctl status podman --no-pager
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo systemctl start podman
 ```
 
@@ -73,7 +73,7 @@ sudo systemctl start podman
 
 ### Command
 
-```sh
+```bash
 podman build -t t1613 $PathtoAtomicsFolder/T1613/src/
 podman run --name t1613_container --rm -d -t t1613
 podman ps
@@ -83,7 +83,7 @@ podman inspect $(podman ps -l -q --filter ancestor=t1613)
 
 ### Cleanup
 
-```sh
+```bash
 podman stop t1613_container
 podman rmi -f t1613
 ```

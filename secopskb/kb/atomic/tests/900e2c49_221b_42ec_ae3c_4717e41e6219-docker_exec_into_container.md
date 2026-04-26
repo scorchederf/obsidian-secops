@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1609"
 attack_technique_name: "Kubernetes Exec Into Container"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1609/T1609.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "900e2c49-221b-42ec-ae3c-4717e41e6219"
@@ -43,13 +43,13 @@ docker must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 which docker
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 if [ "" == "`which docker`" ]; then echo "Docker Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install docker ; elif [ -n "`which yum`" ]; then sudo yum -y install docker ; fi ; else echo "Docker installed"; fi
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.004"
 attack_technique_name: "Process Injection: Asynchronous Procedure Call"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.004/T1055.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "611b39b7-e243-4c81-87a4-7145a90358b1"
@@ -59,13 +59,13 @@ Upon successful execution, cmd.exe will execute T1055.exe, which exercises 5 tec
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{exe_binary}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{exe_binary}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.004/bin/T1055.exe" -OutFile "#{exe_binary}"
 ```
@@ -76,7 +76,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 "#{exe_binary}"
 ```
 

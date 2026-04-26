@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547"
 attack_technique_name: "Boot or Logon Autostart Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547/T1547.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "fdd45306-74f6-4ade-9a97-0a4895961228"
@@ -61,13 +61,13 @@ Blog :https://learn.microsoft.com/en-us/windows/win32/termserv/terminal-services
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default\Addins\#{Subkey_Added}" /v Name /t REG_SZ /d "#{dll_inf}" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default\Addins\#{Subkey_Added}" /f
 ```
 

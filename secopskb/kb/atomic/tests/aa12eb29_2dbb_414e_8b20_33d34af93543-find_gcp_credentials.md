@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "aa12eb29-2dbb-414e-8b20-33d34af93543"
@@ -51,7 +51,7 @@ Find local Google Cloud Platform credentials from file, defaults to using / as t
 
 ### Command
 
-```sh
+```bash
 find #{file_path}/.config/gcloud -name "credentials.db" -o -name "access_tokens.db" -type f 2>/dev/null
 ```
 

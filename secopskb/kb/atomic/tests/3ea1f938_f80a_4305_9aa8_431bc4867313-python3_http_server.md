@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.003"
 attack_technique_name: "Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.003/T1048.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "3ea1f938-f80a-4305-9aa8-431bc4867313"
@@ -44,7 +44,7 @@ An adversary may use the python3 standard library module http.server to exfiltra
 
 ### Command
 
-```sh
+```bash
 [ "$(uname)" = 'FreeBSD' ] && alias python3=python3.9
 if [ $(which python3) ]; then cd /tmp; python3 -m http.server 9090 & PID=$!; sleep 10; kill $PID; unset PID; fi
 ```

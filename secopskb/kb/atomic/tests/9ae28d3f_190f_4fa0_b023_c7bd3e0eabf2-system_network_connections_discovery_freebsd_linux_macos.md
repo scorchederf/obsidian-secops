@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1049"
 attack_technique_name: "System Network Connections Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1049/T1049.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "9ae28d3f-190f-4fa0-b023-c7bd3e0eabf2"
@@ -46,13 +46,13 @@ Check if netstat command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v netstat)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Install netstat on the machine."; exit 1;
 ```
 
@@ -62,7 +62,7 @@ echo "Install netstat on the machine."; exit 1;
 
 ### Command
 
-```sh
+```bash
 netstat
 who -a
 ```

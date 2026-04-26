@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.008"
 attack_technique_name: "Email Collection: Mailbox Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.008/T1070.008.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d29f01ea-ac72-4efc-8a15-bea64b77fabf"

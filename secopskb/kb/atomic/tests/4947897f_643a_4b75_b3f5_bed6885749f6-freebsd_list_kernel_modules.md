@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "4947897f-643a-4b75-b3f5-bed6885749f6"
@@ -42,7 +42,7 @@ Enumerate kernel modules loaded. Upon successful execution stdout will display k
 
 ### Command
 
-```sh
+```bash
 kldstat
 kldstat | grep vmm
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.001"
 attack_technique_name: "Hide Artifacts: Hidden Files and Directories"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.001/T1564.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "9a1ec7da-b892-449f-ad68-67066d04380c"
@@ -42,13 +42,13 @@ Show all hidden files on MacOS
 
 ### Command
 
-```sh
+```bash
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
 ### Cleanup
 
-```sh
+```bash
 defaults write com.apple.finder AppleShowAllFiles NO
 ```
 

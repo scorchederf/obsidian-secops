@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a415f17e-ce8d-4ce2-a8b4-83b674e7017e"
@@ -52,13 +52,13 @@ The folder must exist in order to be deleted
 
 ### Prerequisite Check
 
-```text
+```bash
 test -e #{folder_to_delete} && exit 0 || exit 1
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 mkdir -p #{folder_to_delete}
 ```
 
@@ -68,7 +68,7 @@ mkdir -p #{folder_to_delete}
 
 ### Command
 
-```sh
+```bash
 rm -rf #{folder_to_delete}
 ```
 

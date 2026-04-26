@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "f14d956a-5b6e-4a93-847f-0c415142f07d"

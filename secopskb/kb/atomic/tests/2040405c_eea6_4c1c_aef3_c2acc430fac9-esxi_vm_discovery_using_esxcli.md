@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2040405c-eea6-4c1c-aef3-c2acc430fac9"
@@ -77,13 +77,13 @@ Check if plink is available.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{plink_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -OutFile "#{plink_file}"
 ```
@@ -95,7 +95,7 @@ Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -O
 
 ### Command
 
-```commandprompt
+```cmd
 echo "" | "#{plink_file}" "#{vm_host}" -ssh  -l "#{vm_user}" -pw "#{vm_pass}" -m "#{cli_script}"
 ```
 

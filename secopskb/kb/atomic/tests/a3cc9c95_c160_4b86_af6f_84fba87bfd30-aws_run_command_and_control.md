@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1651"
 attack_technique_name: "Cloud Administration Command"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1651/T1651.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a3cc9c95-c160-4b86-af6f-84fba87bfd30"
@@ -71,13 +71,13 @@ The AWS PowerShell module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AWSPowerShell -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AWSPowerShell -Force
 ```
 
@@ -85,13 +85,13 @@ Terraform must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 terraform --version
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "Terraform is required. Download it from https://www.terraform.io/downloads.html"
 ```
 

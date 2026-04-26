@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "319e9f6c-7a9e-432e-8c62-9385c803b6f2"
@@ -42,7 +42,7 @@ Utilize local utilities to enumerate users and groups
 
 ### Command
 
-```sh
+```bash
 dscl . list /Groups
 dscl . list /Users
 dscl . list /Users | grep -v '_'

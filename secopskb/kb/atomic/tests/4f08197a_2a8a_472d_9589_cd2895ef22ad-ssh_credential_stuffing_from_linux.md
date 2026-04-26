@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.004"
 attack_technique_name: "Brute Force: Credential Stuffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/T1110.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "4f08197a-2a8a-472d-9589-cd2895ef22ad"
@@ -52,13 +52,13 @@ Requires SSHPASS
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v sshpass)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ $(cat /etc/os-release | grep -i ID=ubuntu) ] || [ $(cat /etc/os-release | grep -i ID=kali) ]; then sudo apt update && sudo apt install sshpass -y; else echo "This test requires sshpass" ; fi ;
 ```
 

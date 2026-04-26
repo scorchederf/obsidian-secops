@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1124"
 attack_technique_name: "System Time Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1124/T1124.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "53ead5db-7098-4111-bb3f-563be390e72e"
@@ -45,7 +45,7 @@ https://thedfirreport.com/2023/01/09/unwrapping-ursnifs-gifts/
 
 ### Command
 
-```commandprompt
+```cmd
 time
 ```
 

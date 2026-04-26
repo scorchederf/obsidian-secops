@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.004"
 attack_technique_name: "Masquerading: Masquerade Task or Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.004/T1036.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "f9f2fe59-96f7-4a7d-ba9f-a9783200d4c9"
@@ -44,14 +44,14 @@ Creating W32Time similar named service (win32times) using schtasks just like thr
 
 ### Command
 
-```commandprompt
+```cmd
 schtasks /create /ru system /sc daily /tr "cmd /c powershell.exe -ep bypass -file c:\T1036.004_NonExistingScript.ps1" /tn win32times /f
 schtasks /query /tn win32times
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 schtasks /tn win32times /delete /f
 ```
 

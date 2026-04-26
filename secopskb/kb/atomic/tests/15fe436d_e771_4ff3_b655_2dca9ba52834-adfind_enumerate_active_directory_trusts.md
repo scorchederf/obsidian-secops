@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1482"
 attack_technique_name: "Domain Trust Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "15fe436d-e771-4ff3-b655-2dca9ba52834"
@@ -51,13 +51,13 @@ AdFind.exe must exist on disk at specified location (PathToAtomicsFolder\..\Exte
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\AdFind.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "PathToAtomicsFolder\..\ExternalPayloads\AdFind.exe") -ErrorAction ignore | Out-Null
 Invoke-WebRequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1087.002/bin/AdFind.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\AdFind.exe"
 ```
@@ -68,7 +68,7 @@ Invoke-WebRequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/maste
 
 ### Command
 
-```commandprompt
+```cmd
 "PathToAtomicsFolder\..\ExternalPayloads\AdFind.exe" #{optional_args} -gcb -sc trustdmp
 ```
 

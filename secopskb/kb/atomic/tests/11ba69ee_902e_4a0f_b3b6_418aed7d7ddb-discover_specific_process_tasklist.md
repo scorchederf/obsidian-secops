@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "11ba69ee-902e-4a0f-b3b6-418aed7d7ddb"
@@ -51,7 +51,7 @@ Examples of this could be discovering the PID of lsass.exe to dump its memory or
 
 ### Command
 
-```commandprompt
+```cmd
 tasklist | findstr #{process_to_enumerate}
 ```
 

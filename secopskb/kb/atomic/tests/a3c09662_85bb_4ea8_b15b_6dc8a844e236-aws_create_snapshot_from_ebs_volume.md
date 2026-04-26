@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1578.001"
 attack_technique_name: "Modify Cloud Compute Infrastructure: Create Snapshot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1578.001/T1578.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a3c09662-85bb-4ea8-b15b-6dc8a844e236"
@@ -58,13 +58,13 @@ AWS CLI must be installed.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if command -v aws > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Install AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html"
 ```
 
@@ -72,13 +72,13 @@ AWS CLI must be authenticated.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if aws sts get-caller-identity --region #{aws_region} > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Configure AWS credentials with: aws configure"
 ```
 
@@ -86,13 +86,13 @@ EBS volume must exist.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if aws ec2 describe-volumes --volume-ids #{aws_volume_id} --region #{aws_region} > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Ensure the volume ID exists in the target AWS account and region."
 ```
 
@@ -103,13 +103,13 @@ echo "Ensure the volume ID exists in the target AWS account and region."
 
 ### Command
 
-```sh
+```bash
 aws ec2 create-snapshot --region #{aws_region} --volume-id #{aws_volume_id} --description "Atomic Red Team Test Snapshot" --query "SnapshotId" --output text
 ```
 
 ### Cleanup
 
-```sh
+```bash
 SNAPSHOT_ID=$(aws ec2 describe-snapshots --region #{aws_region} --filters "Name=volume-id,Values=#{aws_volume_id}" --query "Snapshots[0].SnapshotId" --output text)
 if [ "$SNAPSHOT_ID" != "None" ]; then
   aws ec2 delete-snapshot --region #{aws_region} --snapshot-id "$SNAPSHOT_ID"

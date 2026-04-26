@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1556.001"
 attack_technique_name: "Modify Authentication Process: Domain Controller Authentication"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1556.001/T1556.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "0ee8081f-e9a7-4a2e-a23f-68473023184f"
@@ -74,13 +74,13 @@ Mimikatz must be present on the host machine at
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{mimikatz_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "#{directory_path}" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -Uri "#{mimikatz_url}" -OutFile "#{file_path}"
 Expand-Archive -LiteralPath "#{file_path}" -DestinationPath "#{directory_path}" -Force

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "645f0f5a-ef09-48d8-b9bc-f0e24c642d72"
@@ -64,13 +64,13 @@ Check if 7z command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 which 7z
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo Installing 7z, using brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install p7zip
@@ -83,13 +83,13 @@ brew install p7zip
 
 ### Command
 
-```sh
+```bash
 7z a -p #{file_password} -mhe=on #{encrypted_file_name} #{input_file_path}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{encrypted_file_name}
 ```
 

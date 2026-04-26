@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1497.001"
 attack_technique_name: "Virtualization/Sandbox Evasion: System Checks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1497.001/T1497.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a960185f-aef6-4547-8350-d1ce16680d09"
@@ -44,7 +44,7 @@ ioreg contains registry entries for all the device drivers in the system. If it'
 
 ### Command
 
-```sh
+```bash
 if (ioreg -l | grep -e Manufacturer -e 'Vendor Name' | grep -iE 'Oracle|VirtualBox|VMWare|Parallels') then echo 'Virtualization Environment detected'; fi;
 ```
 

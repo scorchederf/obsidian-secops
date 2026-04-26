@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1007"
 attack_technique_name: "System Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1007/T1007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8f2a5d2b-4018-46d4-8f3f-0fea53754690"
@@ -43,7 +43,7 @@ symlinks under /etc/init.d and /etc/rc*.d.
 
 ### Command
 
-```sh
+```bash
 echo "[*] Listing SysV init scripts (/etc/init.d):"
 if [ -d /etc/init.d ]; then ls -l /etc/init.d; else echo "/etc/init.d not present on this system"; fi
 echo

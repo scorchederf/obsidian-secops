@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "fe135572-edcd-49a2-afe6-1d39521c5a9a"
@@ -44,14 +44,14 @@ Check if ufw is installed on the machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v ufw)" ]; then echo -e "\n***** ufw NOT installed *****\n"; exit 1; fi
 if echo "$(ufw status)" |grep -q "inactive"; then echo -e "\n***** ufw inactive *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -62,13 +62,13 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 ufw disable
 ```
 
 ### Cleanup
 
-```sh
+```bash
 ufw enable
 ufw status verbose
 ```

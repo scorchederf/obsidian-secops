@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.002"
 attack_technique_name: "Account Discovery: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.002/T1087.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a54d497e-8dbe-4558-9895-44944baa395f"
@@ -65,13 +65,13 @@ Python3 must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v python3 --version)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get -y install python3
 ```
 
@@ -79,13 +79,13 @@ Pip must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v pip --version)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 wget -O /tmp/get-pip.py https://bootstrap.pypa.io/pip/3.6/get-pip.py
 python3 /tmp/get-pip.py
 ```
@@ -94,13 +94,13 @@ The ldapdomaindump module must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 python3 -c 'import ldapdomaindump' 2>/dev/null
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pip install ldapdomaindump
 ```
 
@@ -108,13 +108,13 @@ The future module must be installed
 
 ### Prerequisite Check
 
-```text
+```bash
 python3 -c 'import future' 2>/dev/null
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pip install future
 ```
 
@@ -125,13 +125,13 @@ pip install future
 
 ### Command
 
-```sh
+```bash
 ldapdomaindump -u #{username} -p #{password} #{target_ip} -o /tmp/T1087
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf /tmp/T1087/ 2>/dev/null
 ```
 

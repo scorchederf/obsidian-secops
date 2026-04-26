@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1571"
 attack_technique_name: "Non-Standard Port"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1571/T1571.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "5db21e1d-dd9c-4a50-b885-b1e748912767"
@@ -58,13 +58,13 @@ Requires telnet
 
 ### Prerequisite Check
 
-```text
+```bash
 which telnet
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "please install telnet to run this test"; exit 1
 ```
 
@@ -74,7 +74,7 @@ echo "please install telnet to run this test"; exit 1
 
 ### Command
 
-```sh
+```bash
 echo quit | telnet #{domain} #{port}
 exit 0
 ```

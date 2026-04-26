@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "795d3248-0394-4d4d-8e86-4e8df2a2693f"
@@ -43,14 +43,14 @@ See how hermeticwiper uses this technique - https://www.splunk.com/en_us/blog/se
 
 ### Command
 
-```commandprompt
+```cmd
 reg  add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowInfoTip /t REG_DWORD /d 0 /f
 reg  add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowCompColor /t REG_DWORD /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowInfoTip /f >nul 2>&1
 reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v ShowCompColor /f >nul 2>&1
 ```

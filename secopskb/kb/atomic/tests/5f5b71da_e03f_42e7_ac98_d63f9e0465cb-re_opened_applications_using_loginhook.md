@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.007"
 attack_technique_name: "Boot or Logon Autostart Execution: Re-opened Applications"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.007/T1547.007.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "5f5b71da-e03f-42e7-ac98-d63f9e0465cb"
@@ -54,13 +54,13 @@ Mac Defaults
 
 ### Command
 
-```sh
+```bash
 sudo defaults write com.apple.loginwindow LoginHook #{script}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo defaults delete com.apple.loginwindow LoginHook
 ```
 

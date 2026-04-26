@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1133"
 attack_technique_name: "External Remote Services"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1133/T1133.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "4c8db261-a58b-42a6-a866-0a294deedde4"
@@ -59,13 +59,13 @@ Chrome must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Test-Path "C:\Program Files\Google\Chrome\Application\chrome.exe") -Or (Test-Path "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\ChromeStandaloneSetup64.exe" #{chrome_url}
 Start-Process "PathToAtomicsFolder\..\ExternalPayloads\ChromeStandaloneSetup64.exe" /S

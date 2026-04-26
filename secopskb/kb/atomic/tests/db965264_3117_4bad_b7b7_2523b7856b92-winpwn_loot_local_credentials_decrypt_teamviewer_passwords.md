@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555"
 attack_technique_name: "Credentials from Password Stores"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555/T1555.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "db965264-3117-4bad-b7b7-2523b7856b92"

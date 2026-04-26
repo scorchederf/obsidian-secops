@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.003"
 attack_technique_name: "Create Account: Cloud Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.003/T1136.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8d1c2368-b503-40c9-9057-8e42f21c58ad"
@@ -51,13 +51,13 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 cat ~/.aws/credentials | grep "default"
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please install the aws-cli and configure your AWS defult profile using: aws configure
 ```
 
@@ -68,13 +68,13 @@ echo Please install the aws-cli and configure your AWS defult profile using: aws
 
 ### Command
 
-```sh
+```bash
 aws iam create-user --user-name #{username}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 aws iam delete-user --user-name #{username}
 ```
 

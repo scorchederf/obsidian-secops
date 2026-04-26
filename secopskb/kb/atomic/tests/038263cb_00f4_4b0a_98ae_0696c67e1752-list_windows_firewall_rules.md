@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016"
 attack_technique_name: "System Network Configuration Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016/T1016.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "038263cb-00f4-4b0a-98ae-0696c67e1752"
@@ -44,7 +44,7 @@ Upon successful execution, cmd.exe will spawn netsh.exe to list firewall rules. 
 
 ### Command
 
-```commandprompt
+```cmd
 netsh advfirewall firewall show rule name=all
 ```
 

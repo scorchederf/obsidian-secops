@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "039b4b10-2900-404b-b67f-4b6d49aa6499"
@@ -50,13 +50,13 @@ Check if file already exists
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ -f "#{file_to_shred}" ]; then echo "File already exists"; else echo "File does NOT exist yet"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 touch #{file_to_shred}
 ```
 
@@ -66,7 +66,7 @@ touch #{file_to_shred}
 
 ### Command
 
-```sh
+```bash
 shred -u #{file_to_shred}
 ```
 

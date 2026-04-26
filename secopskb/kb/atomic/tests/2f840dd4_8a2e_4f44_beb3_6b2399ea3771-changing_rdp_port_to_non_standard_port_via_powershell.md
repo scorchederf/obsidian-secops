@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.001"
 attack_technique_name: "Remote Services: Remote Desktop Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.001/T1021.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "2f840dd4-8a2e-4f44-beb3-6b2399ea3771"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614.001"
 attack_technique_name: "System Location Discovery: System Language Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614.001/T1614.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "1f23bfe8-36d4-49ce-903a-19a1e8c6631b"

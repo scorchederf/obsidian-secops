@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.006"
 attack_technique_name: "Run Virtual Instance"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "fb8d4d7e-f5a4-481c-8867-febf13f8b6d3"
@@ -56,13 +56,13 @@ Checks whether Hyper-V is enabled. If not, enables Hyper-V and forces a required
 
 ### Prerequisite Check
 
-```text
+```untitled
 if ((Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V).State = "Enabled") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -Force
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "784d1349-5a26-4d20-af5e-d6af53bae460"
@@ -58,13 +58,13 @@ Password for current user must be stored in a credential file
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path #{cred_file}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory (split-path "#{cred_file}") -ErrorAction Ignore | Out-Null
 $cred = Get-Credential -UserName  $env:USERNAME -message "Enter password for $env:USERNAME to use during password change attempt"
 $cred.Password | ConvertFrom-SecureString | Out-File "#{cred_file}"

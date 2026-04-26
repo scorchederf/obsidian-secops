@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1039"
 attack_technique_name: "Data from Network Shared Drive"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1039/T1039.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "7762e120-5879-44ff-97f8-008b401b9a98"
@@ -65,13 +65,13 @@ Administrative share must exist on #{remote}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "\\#{remote}\C$") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host 'Please Enable "C$" share on #{remote}'
 ```
 
@@ -79,13 +79,13 @@ Write-Host 'Please Enable "C$" share on #{remote}'
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "\\#{remote}\C$\#{share_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Out-File -FilePath "\\#{remote}\C$\#{share_file}"
 ```
 

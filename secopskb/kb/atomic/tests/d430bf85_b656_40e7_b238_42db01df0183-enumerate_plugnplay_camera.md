@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1592.001"
 attack_technique_name: "Gather Victim Host Information: Hardware"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1592.001/T1592.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "d430bf85-b656-40e7-b238-42db01df0183"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546"
 attack_technique_name: "Event Triggered Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546/T1546.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f0027655-25ef-47b0-acaf-3d83d106156c"
@@ -46,13 +46,13 @@ The registry key can be abused to load malware from the mentioned path. Reboot m
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKCU\Software\Microsoft\Office\16.0\Word\Options" /v STARTUP-PATH /t REG_SZ /d "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Recent" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKCU\Software\Microsoft\Office\16.0\Word\Options /v STARTUP-PATH /f
 ```
 

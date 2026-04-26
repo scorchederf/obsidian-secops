@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.002"
 attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "8e81d090-0cd6-4d46-863c-eec11311298f"

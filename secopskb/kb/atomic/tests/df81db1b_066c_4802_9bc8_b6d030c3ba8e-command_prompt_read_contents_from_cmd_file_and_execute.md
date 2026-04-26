@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "df81db1b-066c-4802-9bc8-b6d030c3ba8e"
@@ -53,13 +53,13 @@ CMD file must exist on disk at specified location (#{input_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{input_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{input_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1059.003/src/t1059.003_cmd.cmd" -OutFile "#{input_file}"
 ```
@@ -71,7 +71,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 cmd /r cmd<"#{input_file}"
 ```
 

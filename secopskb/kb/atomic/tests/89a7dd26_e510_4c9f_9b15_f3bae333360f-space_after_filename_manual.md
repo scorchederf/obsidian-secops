@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.006"
 attack_technique_name: "Masquerading: Space after Filename"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.006/T1036.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "manual"
 aliases:
   - "89a7dd26-e510-4c9f-9b15-f3bae333360f"

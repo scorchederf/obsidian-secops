@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1115"
 attack_technique_name: "Clipboard Data"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1115/T1115.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "ee363e53-b083-4230-aff3-f8d955f2d5bb"
@@ -42,7 +42,7 @@ Utilize Linux Xclip to copy history and place in clipboard then output to a hist
 
 ### Command
 
-```sh
+```bash
 apt install xclip -y
 history | tail -n 30 | xclip -sel clip
 xclip -o > history.txt

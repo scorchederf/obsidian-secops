@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c8d40da9-31bd-47da-a497-11ea55d1ef6c"
@@ -44,7 +44,7 @@ Gets the macOS hardware information, which can be used to determine whether the 
 
 ### Command
 
-```sh
+```bash
 sysctl -n hw.model
 ```
 

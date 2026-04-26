@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "95e19466-469e-4316-86d2-1dc401b5a959"
@@ -72,13 +72,13 @@ Computer must have python 3 installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command py -errorAction SilentlyContinue) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 invoke-webrequest "https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe" -outfile "PathToAtomicsFolder\..\ExternalPayloads\python_setup.exe"
 Start-Process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\python_setup.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0" -Wait
@@ -88,13 +88,13 @@ Computer must have venv configured at #{venv_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path -Path "#{venv_path}" ) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 py -m venv "#{venv_path}"
 ```
 
@@ -102,13 +102,13 @@ adidnsdump must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command "#{venv_path}\Scripts\adidnsdump" -errorAction SilentlyContinue) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 & "#{venv_path}\Scripts\pip.exe" install --no-cache-dir adidnsdump 2>&1 | Out-Null
 ```
 
@@ -119,7 +119,7 @@ if (Get-Command "#{venv_path}\Scripts\adidnsdump" -errorAction SilentlyContinue)
 
 ### Command
 
-```commandprompt
+```cmd
 "#{venv_path}\Scripts\adidnsdump" -u #{user_name} -p #{acct_pass} --print-zones #{host_name}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.005"
 attack_technique_name: "Subvert Trust Controls: Mark-of-the-Web Bypass"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.005/T1553.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "64b12afc-18b8-4d3f-9eab-7f6cae7c73f9"
@@ -58,13 +58,13 @@ A test file with the Zone.Identifier attribute must be present.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{file_path}) { EXIT 0 } else { EXIT 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest #{file_to_download} -OutFile #{file_path}
 Set-Content -Path #{file_path} -Stream Zone.Identifier -Value '[ZoneTransfer]','ZoneId=3'
 ```

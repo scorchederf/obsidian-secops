@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "a5d8cdeb-be90-43a9-8b26-cc618deac1e0"
@@ -65,13 +65,13 @@ RemCom tool must exist on disk in the ExternalPayloads folder
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\remcom.exe") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/kavika13/RemCom/raw/master/bin/Release/RemCom.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\remcom.exe"
 ```
@@ -82,7 +82,7 @@ Invoke-WebRequest "https://github.com/kavika13/RemCom/raw/master/bin/Release/Rem
 
 ### Command
 
-```commandprompt
+```cmd
 "PathToAtomicsFolder\..\ExternalPayloads\remcom.exe" \\#{remote_host} /user:#{user_name} /pwd:#{password} cmd.exe
 ```
 

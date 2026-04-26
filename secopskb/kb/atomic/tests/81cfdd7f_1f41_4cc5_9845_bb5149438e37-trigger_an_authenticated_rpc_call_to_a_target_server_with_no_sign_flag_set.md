@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1187"
 attack_technique_name: "Forced Authentication"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1187/T1187.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "81cfdd7f-1f41-4cc5-9845-bb5149438e37"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "05e8942e-f04f-460a-b560-f7781257feec"
@@ -57,7 +57,7 @@ Requires admin and .NET compression libraries
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (-not ([Security.Principal.WindowsPrincipal] `
     [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
     [Security.Principal.WindowsBuiltInRole]::Administrator)) { exit 1 }
@@ -66,7 +66,7 @@ if (-not (Test-Path "$env:USERPROFILE\AppData")) { exit 1 }
 
 ### Get Prerequisite
 
-```text
+```untitled
 Run PowerShell as Administrator and ensure .NET compression assemblies are available.
 ```
 

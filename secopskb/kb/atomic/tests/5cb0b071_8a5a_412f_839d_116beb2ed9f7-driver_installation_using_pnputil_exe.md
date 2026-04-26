@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547"
 attack_technique_name: "Boot or Logon Autostart Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547/T1547.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "5cb0b071-8a5a-412f-839d-116beb2ed9f7"

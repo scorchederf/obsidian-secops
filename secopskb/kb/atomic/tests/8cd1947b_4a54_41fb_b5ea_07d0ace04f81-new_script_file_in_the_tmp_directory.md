@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8cd1947b-4a54-41fb-b5ea-07d0ace04f81"
@@ -44,7 +44,7 @@ An attacker may create script files in the /tmp directory using the mktemp utili
 
 ### Command
 
-```sh
+```bash
 TMPFILE=$(mktemp)
 echo "id" > $TMPFILE
 bash $TMPFILE
@@ -52,7 +52,7 @@ bash $TMPFILE
 
 ### Cleanup
 
-```sh
+```bash
 rm $TMPFILE
 unset TMPFILE
 ```

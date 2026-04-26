@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1482"
 attack_technique_name: "Domain Trust Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "c58fbc62-8a62-489e-8f2d-3565d7d96f30"
@@ -44,13 +44,13 @@ PowerView PowerShell script must exist on disk
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\PowerView.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/f94a5d298a1b4c5dfb1f30a246d9c73d13b22888/Recon/PowerView.ps1" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PowerView.ps1"
 ```
@@ -59,13 +59,13 @@ RSAT PowerShell AD admin cmdlets must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Get-Command "Get-ADDomain" -ErrorAction Ignore) -And (Get-Command "Get-ADGroupMember" -ErrorAction Ignore)) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "Sorry RSAT must be installed manually"
 ```
 

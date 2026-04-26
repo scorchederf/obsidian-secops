@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "004a5d68-627b-452d-af3d-43bd1fc75a3b"
@@ -44,13 +44,13 @@ PsExec tool from Sysinternals must exist in the '\Users\Public\Temp\' directory
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-ChildItem -Path C:\ -Include *psexec* -File -Recurse -ErrorAction SilentlyContinue) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "C:\Users\Public\Temp\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "C:\Users\Public\Temp\PSTools.zip"
 Expand-Archive "C:\Users\Public\Temp\PsTools.zip" "C:\Users\Public\Temp\" -Force

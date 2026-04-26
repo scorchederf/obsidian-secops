@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.004"
 attack_technique_name: "Hide Artifacts: NTFS File Attributes"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.004/T1564.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "8822c3b0-d9f9-4daf-a043-49f4602364f4"
@@ -56,7 +56,7 @@ Execute from Alternate Streams
 
 ### Command
 
-```commandprompt
+```cmd
 type C:\temp\evil.exe > "C:\Program Files (x86)\TeamViewer\TeamViewer12_Logfile.log:evil.exe"
 extrac32 #{path}\procexp.cab #{path}\file.txt:procexp.exe
 findstr /V /L W3AllLov3DonaldTrump #{path}\procexp.exe > #{path}\file.txt:procexp.exe

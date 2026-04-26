@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a1fa406e-2354-4a24-b6d6-94157e7564d4"
@@ -64,13 +64,13 @@ systemctl must be available on the system
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v systemctl)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "systemctl is not available. Ensure systemd is running on this system."
 ```
 
@@ -78,13 +78,13 @@ echo "systemctl is not available. Ensure systemd is running on this system."
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -d "/tmp" ] && [ -w "/tmp" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "/tmp does not exist or is not writable on this system."
 ```
 
@@ -92,13 +92,13 @@ The test must be run as root or with sudo privileges
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ "$(id -u)" -eq 0 ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "This test requires root privileges. Run as root or use sudo."
 ```
 
@@ -109,7 +109,7 @@ echo "This test requires root privileges. Run as root or use sudo."
 
 ### Command
 
-```sh
+```bash
 echo "[Unit]" > #{service_path}
 echo "Description=Atomic Tmp Service" >> #{service_path}
 echo "" >> #{service_path}
@@ -125,7 +125,7 @@ systemctl status $(basename #{service_path})
 
 ### Cleanup
 
-```sh
+```bash
 systemctl stop $(basename #{service_path}) 2>/dev/null || true
 rm -f #{service_path}
 rm -f /tmp/atomic_tmp_output.txt

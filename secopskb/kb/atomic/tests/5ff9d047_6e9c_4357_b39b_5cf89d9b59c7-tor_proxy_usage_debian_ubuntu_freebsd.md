@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1090.003"
 attack_technique_name: "Proxy: Multi-hop Proxy"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1090.003/T1090.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "5ff9d047-6e9c-4357-b39b-5cf89d9b59c7"
@@ -45,13 +45,13 @@ Tor must be installed on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v tor --version)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which apt && sudo apt-get -y install tor) || (which pkg && pkg install -y tor)
 ```
 
@@ -62,13 +62,13 @@ if [ -x "$(command -v tor --version)" ]; then exit 0; else exit 1; fi
 
 ### Command
 
-```sh
+```bash
 [ "$(uname)" = 'FreeBSD' ] && sysrc tor_enable="YES" && service tor start || sudo systemctl start tor
 ```
 
 ### Cleanup
 
-```sh
+```bash
 [ "$(uname)" = 'FreeBSD' ] && service tor stop && sysrc -x tor_enable || sudo systemctl stop tor
 ```
 

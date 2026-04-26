@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.001"
 attack_technique_name: "Create Account: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "d9efa6c7-6518-42b2-809a-4f2a8e242b9b"
@@ -64,13 +64,13 @@ kubectl must be installed and configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 which kubectl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "kubectl must be installed manually"
 ```
 

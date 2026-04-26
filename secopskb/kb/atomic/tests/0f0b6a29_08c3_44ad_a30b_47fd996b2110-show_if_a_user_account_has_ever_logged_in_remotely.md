@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "0f0b6a29-08c3-44ad-a30b-47fd996b2110"
@@ -51,13 +51,13 @@ Check if lastlog command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v lastlog)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get install login; exit 1;
 ```
 
@@ -67,7 +67,7 @@ sudo apt-get install login; exit 1;
 
 ### Command
 
-```sh
+```bash
 [ "$(uname)" = 'FreeBSD' ] && cmd="lastlogin" || cmd="lastlog" 
 $cmd > #{output_file}
 cat #{output_file}
@@ -75,7 +75,7 @@ cat #{output_file}
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

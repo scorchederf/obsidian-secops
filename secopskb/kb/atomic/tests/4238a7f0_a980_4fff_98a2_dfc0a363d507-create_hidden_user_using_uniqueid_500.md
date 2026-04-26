@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.002"
 attack_technique_name: "Hide Artifacts: Hidden Users"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.002/T1564.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "4238a7f0-a980-4fff-98a2-dfc0a363d507"
@@ -52,13 +52,13 @@ Add a hidden user on macOS using Unique ID < 500 (users with that ID are hidden 
 
 ### Command
 
-```sh
+```bash
 sudo dscl . -create /Users/#{user_name} UniqueID 333
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo dscl . -delete /Users/#{user_name}
 ```
 

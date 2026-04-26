@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.003"
 attack_technique_name: "Valid Accounts: Local Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "433842ba-e796-4fd5-a14f-95d3a1970875"

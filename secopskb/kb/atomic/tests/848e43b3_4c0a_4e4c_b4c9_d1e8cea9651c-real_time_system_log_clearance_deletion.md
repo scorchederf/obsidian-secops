@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "848e43b3-4c0a-4e4c-b4c9-d1e8cea9651c"
@@ -44,7 +44,7 @@ This test reads real-time system log file and writes empty string to it, thus cl
 
 ### Command
 
-```sh
+```bash
 sudo log -f /var/log/system.log | : > /var/log/system.log
 ```
 

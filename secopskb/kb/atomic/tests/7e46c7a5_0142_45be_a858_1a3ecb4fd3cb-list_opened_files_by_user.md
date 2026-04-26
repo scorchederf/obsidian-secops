@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7e46c7a5-0142-45be-a858-1a3ecb4fd3cb"
@@ -44,13 +44,13 @@ check if lsof exists
 
 ### Prerequisite Check
 
-```text
+```bash
 which lsof
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y lsof)||(which yum && yum -y install lsof)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y lsof)
 ```
 
@@ -60,7 +60,7 @@ which lsof
 
 ### Command
 
-```sh
+```bash
 username=$(id -u -n) && lsof -u $username
 ```
 

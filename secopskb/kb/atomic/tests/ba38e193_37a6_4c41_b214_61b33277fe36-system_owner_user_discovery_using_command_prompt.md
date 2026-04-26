@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1033"
 attack_technique_name: "System Owner/User Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1033/T1033.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ba38e193-37a6-4c41-b214-61b33277fe36"
@@ -52,7 +52,7 @@ Identify the system owner or current user using native Windows command prompt ut
 
 ### Command
 
-```commandprompt
+```cmd
 set file=#{output_file_path}\user_info_%random%.tmp
 echo Username: %USERNAME% > %file%
 echo User Domain: %USERDOMAIN% >> %file%
@@ -62,7 +62,7 @@ query user >> %file%
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{output_file_path}\\user_info_*.tmp
 ```
 

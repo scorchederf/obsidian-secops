@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.006"
 attack_technique_name: "Indicator Removal on Host: Timestomp"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.006/T1070.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "f8f6634d-93e1-4238-8510-f8a90a20dcf2"
@@ -58,13 +58,13 @@ A file must exist at the path (#{file_path}) to change the modified time on
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path "#{file_path}" -Force | Out-Null
 Set-Content "#{file_path}" -Value "T1551.006 Timestomp" -Force | Out-Null
 ```

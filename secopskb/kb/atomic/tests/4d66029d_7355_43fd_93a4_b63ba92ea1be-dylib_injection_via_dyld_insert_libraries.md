@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.006"
 attack_technique_name: "Hijack Execution Flow: LD_PRELOAD"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.006/T1574.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "4d66029d-7355-43fd-93a4-b63ba92ea1be"
@@ -64,13 +64,13 @@ Compile the dylib from (#{source_file}). Destination is #{dylib_file}
 
 ### Prerequisite Check
 
-```text
+```bash
 gcc -dynamiclib #{source_file} -o #{dylib_file}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 gcc -dynamiclib #{source_file} -o #{dylib_file}
 ```
 

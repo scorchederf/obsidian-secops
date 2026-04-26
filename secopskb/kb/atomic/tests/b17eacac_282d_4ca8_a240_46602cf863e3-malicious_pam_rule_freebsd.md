@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1556.003"
 attack_technique_name: "Modify Authentication Process: Pluggable Authentication Modules"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1556.003/T1556.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "b17eacac-282d-4ca8-a240-46602cf863e3"
@@ -66,13 +66,13 @@ Upon successful execution, this test will insert a rule that allows every user t
 
 ### Command
 
-```sh
+```bash
 sudo sed -i "" "#{index}s,^,#{pam_rule}\n,g" #{path_to_pam_conf}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo sed -i "" "/#{pam_rule}/d" #{path_to_pam_conf}
 ```
 

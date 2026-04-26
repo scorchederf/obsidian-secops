@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1072"
 attack_technique_name: "Software Deployment Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1072/T1072.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "2169e8b0-2ee7-44cb-8a6e-d816a5db7d8a"
@@ -44,13 +44,13 @@ Chocolatey must be installed to deploy 7-Zip.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "${env:ProgramFiles(x86)}\Chocolatey\choco.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading Chocolatey installer
 Invoke-WebRequest -Uri "https://chocolatey.org/install.ps1" -OutFile "chocolatey-install.ps1"
 Write-Host Installing Chocolatey

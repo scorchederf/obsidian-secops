@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "2fc6c0ab-4f88-4eb8-ab1b-f739fc22bba7"
@@ -65,13 +65,13 @@ systemctl must be available on the system
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v systemctl)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "systemctl is not available. Ensure systemd is running on this system."
 ```
 
@@ -79,13 +79,13 @@ The test must be run as root or with sudo privileges
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ "$(id -u)" -eq 0 ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "This test requires root privileges. Run as root or use sudo."
 ```
 
@@ -93,13 +93,13 @@ echo "This test requires root privileges. Run as root or use sudo."
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -d "/etc/systemd/system" ] && [ -w "/etc/systemd/system" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "/etc/systemd/system/ does not exist or is not writable."
 ```
 
@@ -107,13 +107,13 @@ Payload script must exist at the specified path
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f "#{payload_path}" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo '#!/bin/bash' > #{payload_path}
 echo 'echo persistent >> /tmp/atomic_persist_output.txt' >> #{payload_path}
 chmod +x #{payload_path}
@@ -126,7 +126,7 @@ chmod +x #{payload_path}
 
 ### Command
 
-```sh
+```bash
 echo "[Unit]" > /etc/systemd/system/#{service_name}.service
 echo "Description=Atomic Persistence Service" >> /etc/systemd/system/#{service_name}.service
 echo "After=network.target" >> /etc/systemd/system/#{service_name}.service
@@ -146,7 +146,7 @@ systemctl status #{service_name}.service
 
 ### Cleanup
 
-```sh
+```bash
 systemctl stop #{service_name}.service 2>/dev/null || true
 systemctl disable #{service_name}.service 2>/dev/null || true
 rm -f /etc/systemd/system/#{service_name}.service

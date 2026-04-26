@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.010"
 attack_technique_name: "Impair Defenses: Downgrade Attack"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.010/T1562.010.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "47c96489-2f55-4774-a6df-39faff428f6f"
@@ -51,14 +51,14 @@ Check if Version 2 is installed.
 
 ### Prerequisite Check
 
-```text
+```untitled
 $v2_installed = PowerShell -version 2 -command '$PSVersionTable.PSVersion.Major'
 if (-not $v2_installed) {exit 1} else {exit 0}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Manually install PowerShell Version 2"
 ```
 

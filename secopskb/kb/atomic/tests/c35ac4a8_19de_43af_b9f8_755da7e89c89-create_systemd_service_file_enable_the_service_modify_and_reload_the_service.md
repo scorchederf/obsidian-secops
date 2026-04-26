@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.002"
 attack_technique_name: "Create or Modify System Process: SysV/Systemd Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.002/T1543.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "c35ac4a8-19de-43af-b9f8-755da7e89c89"
@@ -43,13 +43,13 @@ System must be Ubuntu ,Kali OR CentOS.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ $(cat /etc/os-release | grep -i ID=ubuntu) ] || [ $(cat /etc/os-release | grep -i ID=kali) ] || [ $(cat /etc/os-release | grep -i 'ID="centos"') ]; then exit /b 0; else exit /b 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please run from Ubuntu ,Kali OR CentOS.
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "5ba5a3d1-cf3c-4499-968a-a93155d1f717"
@@ -44,14 +44,14 @@ Upon execution, cmd will be launched by powershell. If using Invoke-AtomicTest, 
 
 ### Command
 
-```commandprompt
+```cmd
 copy %SystemRoot%\System32\cmd.exe %SystemRoot%\Temp\lsass.exe
 %SystemRoot%\Temp\lsass.exe /B
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /Q /F %SystemRoot%\Temp\lsass.exe >nul 2>&1
 ```
 

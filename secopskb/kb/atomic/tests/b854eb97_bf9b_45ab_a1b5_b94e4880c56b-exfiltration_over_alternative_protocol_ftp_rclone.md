@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.003"
 attack_technique_name: "Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.003/T1048.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b854eb97-bf9b-45ab-a1b5-b94e4880c56b"
@@ -71,13 +71,13 @@ Check if the exfil package exists
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path C:\Users\Public\Downloads\exfil.zip) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 fsutil file createnew C:\Users\Public\Downloads\exfil.zip 20485760
 ```
 
@@ -85,13 +85,13 @@ Check if rclone zip exists
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path C:\Users\Public\Downloads\rclone-current-windows-amd64.zip) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest -Uri "https://downloads.rclone.org/rclone-current-windows-amd64.zip" -OutFile "C:\Users\Public\Downloads\rclone-current-windows-amd64.zip"
 Expand-Archive C:\Users\Public\Downloads\rclone-current-windows-amd64.zip -DestinationPath C:\Users\Public\Downloads\
 ```

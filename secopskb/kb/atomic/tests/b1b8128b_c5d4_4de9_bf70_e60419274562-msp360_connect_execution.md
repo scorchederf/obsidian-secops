@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b1b8128b-c5d4-4de9-bf70-e60419274562"
@@ -58,13 +58,13 @@ MSP360 must exist at (#{MSP360_Connect_Path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{MSP360_Connect_Path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\msp360connect.exe" "#{MSP360_Download_Url}"
 start-process "PathToAtomicsFolder\..\ExternalPayloads\msp360connect.exe" /S

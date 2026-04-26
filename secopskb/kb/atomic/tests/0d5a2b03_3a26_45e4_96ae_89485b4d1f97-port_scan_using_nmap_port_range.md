@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "0d5a2b03-3a26-45e4-96ae-89485b4d1f97"
@@ -59,13 +59,13 @@ Check if nmap command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v nmap)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install epel-release nmap)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y nmap)||(which pkg && pkg install -y nmap)||(which brew && brew install nmap)
 ```
 
@@ -76,7 +76,7 @@ if [ -x "$(command -v nmap)" ]; then exit 0; else exit 1; fi;
 
 ### Command
 
-```sh
+```bash
 nmap -Pn -sV -p #{port_range} #{host}
 ```
 

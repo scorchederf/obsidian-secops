@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1531"
 attack_technique_name: "Account Access Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1531/T1531.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "4d938c43-2fe8-4d70-a5b3-5bf239aa7846"
@@ -58,13 +58,13 @@ This test deletes the user account using the dscl utility.
 
 ### Command
 
-```sh
+```bash
 dscl . -delete /Users/#{user_account} #enter admin password
 ```
 
 ### Cleanup
 
-```sh
+```bash
 dscl . -create /Users/#{user_account} #enter admin password
 dscl . -create /Users/#{user_account} UserShell /bin/bash
 dscl . -create /Users/#{user_account} UniqueID 503

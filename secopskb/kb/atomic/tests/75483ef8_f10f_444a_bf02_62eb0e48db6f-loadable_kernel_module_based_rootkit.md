@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1014"
 attack_technique_name: "Rootkit"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1014/T1014.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "75483ef8-f10f-444a-bf02-62eb0e48db6f"
@@ -58,13 +58,13 @@ The kernel module must exist on disk at specified location (#{rootkit_source_pat
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f /lib/modules/$(uname -r)/#{rootkit_name}.ko ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt install make
 sudo apt install gcc
 if [ ! -d /tmp/T1014 ]; then mkdir /tmp/T1014; touch /tmp/T1014/safe_to_delete; fi;
@@ -82,13 +82,13 @@ sudo depmod -a
 
 ### Command
 
-```sh
+```bash
 sudo modprobe #{rootkit_name}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo modprobe -r #{rootkit_name}
 sudo rm /lib/modules/$(uname -r)/#{rootkit_name}.ko
 sudo depmod -a

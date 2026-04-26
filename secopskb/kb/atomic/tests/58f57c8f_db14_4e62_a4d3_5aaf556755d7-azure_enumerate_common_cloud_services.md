@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1526"
 attack_technique_name: "Cloud Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1526/T1526.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "58f57c8f-db14-4e62-a4d3-5aaf556755d7"
@@ -72,13 +72,13 @@ The Az module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name Az -Force
 ```
 

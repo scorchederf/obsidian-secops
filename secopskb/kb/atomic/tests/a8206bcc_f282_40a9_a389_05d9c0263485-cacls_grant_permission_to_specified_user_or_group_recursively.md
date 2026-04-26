@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a8206bcc-f282-40a9-a389-05d9c0263485"
@@ -59,13 +59,13 @@ Test requrires a file to modify to be located at (#{file_or_folder})
 
 ### Prerequisite Check
 
-```text
+```cmd
 IF EXIST #{file_or_folder} ( EXIT 0 ) ELSE ( EXIT 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 mkdir #{file_or_folder}
 echo T1222.001_cacls1 >> #{file_or_folder}\T1222.001_cacls1.txt
 echo T1222.001_cacls2 >> #{file_or_folder}\T1222.001_cacls2.txt
@@ -77,7 +77,7 @@ echo T1222.001_cacls2 >> #{file_or_folder}\T1222.001_cacls2.txt
 
 ### Command
 
-```commandprompt
+```cmd
 icacls.exe #{file_or_folder} /grant #{user_or_group}:F
 ```
 

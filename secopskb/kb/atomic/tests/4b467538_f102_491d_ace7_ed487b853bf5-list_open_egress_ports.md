@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016"
 attack_technique_name: "System Network Configuration Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016/T1016.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "4b467538-f102-491d-ace7-ed487b853bf5"
@@ -66,13 +66,13 @@ Test requires #{port_file} to exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{port_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{port_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "#{portfile_url}" -OutFile "#{port_file}"
 ```

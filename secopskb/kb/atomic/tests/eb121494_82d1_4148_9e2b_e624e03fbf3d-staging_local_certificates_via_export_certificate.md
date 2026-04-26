@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1649"
 attack_technique_name: "Steal or Forge Authentication Certificates"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1649/T1649.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "eb121494-82d1-4148-9e2b-e624e03fbf3d"

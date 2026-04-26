@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.003"
 attack_technique_name: "OS Credential Dumping: NTDS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.003/T1003.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d893459f-71f0-484d-9808-ec83b2b64226"
@@ -58,13 +58,13 @@ Target must be a reachable Domain Controller, and current context must be domain
 
 ### Prerequisite Check
 
-```text
+```untitled
 wmic /node:"#{target_host}" shadowcopy list brief
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Sorry, can't connect to target host, check: network, firewall or permissions (must be admin on target)
 ```
 
@@ -75,7 +75,7 @@ echo Sorry, can't connect to target host, check: network, firewall or permission
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /node:"#{target_host}" shadowcopy call create Volume=#{drive_letter}
 ```
 

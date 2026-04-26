@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7ece1dea-49f1-4d62-bdcc-5801e3292510"
@@ -71,13 +71,13 @@ Requires gcloud
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v gcloud)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Please Install Google Cloud SDK before running this atomic test : https://cloud.google.com/sdk/docs/install"
 ```
 
@@ -85,13 +85,13 @@ Check if user is logged in
 
 ### Prerequisite Check
 
-```text
+```bash
 gcloud config get-value account
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 gcloud auth login --no-launch-browser
 ```
 
@@ -99,13 +99,13 @@ Check if terraform is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 terraform version
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo Please install the terraform.
 ```
 
@@ -113,13 +113,13 @@ Create dependency resources using terraform
 
 ### Prerequisite Check
 
-```text
+```bash
 stat "$PathToAtomicsFolder/T1098/src/T1098-17/terraform.tfstate"
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 cd "$PathToAtomicsFolder/T1098/src/T1098-17/"
 terraform init
 terraform apply -auto-approve
@@ -132,7 +132,7 @@ terraform apply -auto-approve
 
 ### Command
 
-```sh
+```bash
 gcloud config set project #{project_id}
 KEY=`gcloud iam service-accounts keys list --iam-account=#{service_name}@#{project_id}.iam.gserviceaccount.com --format="value(KEY_ID)" --limit=1`
 gcloud iam service-accounts keys delete $KEY --iam-account=#{service_name}@#{project_id}.iam.gserviceaccount.com --quiet
@@ -140,7 +140,7 @@ gcloud iam service-accounts keys delete $KEY --iam-account=#{service_name}@#{pro
 
 ### Cleanup
 
-```sh
+```bash
 cd "$PathToAtomicsFolder/T1098/src/T1098-17/"
 terraform state rm google_service_account_key.key
 terraform destroy -auto-approve

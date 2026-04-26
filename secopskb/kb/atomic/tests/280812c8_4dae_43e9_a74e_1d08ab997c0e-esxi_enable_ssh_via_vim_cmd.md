@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.004"
 attack_technique_name: "Remote Services: SSH"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.004/T1021.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "280812c8-4dae-43e9-a74e-1d08ab997c0e"
@@ -71,13 +71,13 @@ Check if we have plink
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{plink_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -OutFile "#{plink_file}"
 ```
@@ -89,13 +89,13 @@ Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -O
 
 ### Command
 
-```commandprompt
+```cmd
 echo "" | "#{plink_file}" -batch "#{vm_host}" -ssh -l #{vm_user} -pw "#{vm_pass}" "vim-cmd hostsvc/enable_ssh"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 echo "" | "#{plink_file}" -batch "#{vm_host}" -ssh -l #{vm_user} -pw "#{vm_pass}" "vim-cmd hostsvc/disable_ssh"
 ```
 

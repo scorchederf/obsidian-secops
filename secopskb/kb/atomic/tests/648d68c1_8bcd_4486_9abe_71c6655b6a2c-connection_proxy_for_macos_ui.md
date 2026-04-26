@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1090.001"
 attack_technique_name: "Proxy: Internal Proxy"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1090.001/T1090.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "648d68c1-8bcd-4486-9abe-71c6655b6a2c"
@@ -65,14 +65,14 @@ Note that this test may conflict with pre-existing system configuration.
 
 ### Command
 
-```sh
+```bash
 networksetup -setwebproxy #{interface} #{proxy_server} #{proxy_port}
 networksetup -setsecurewebproxy #{interface} #{proxy_server} #{proxy_port}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 networksetup -setwebproxystate #{interface} off
 networksetup -setsecurewebproxystate #{interface} off
 ```

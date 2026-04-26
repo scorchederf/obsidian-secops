@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c955a599-3653-4fe5-b631-f11c00eb0397"
@@ -51,7 +51,7 @@ View accounts with UID 0
 
 ### Command
 
-```sh
+```bash
 grep 'x:0:' /etc/passwd > #{output_file}
 grep '*:0:' /etc/passwd >> #{output_file}
 cat #{output_file} 2>/dev/null
@@ -59,7 +59,7 @@ cat #{output_file} 2>/dev/null
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file} 2>/dev/null
 ```
 

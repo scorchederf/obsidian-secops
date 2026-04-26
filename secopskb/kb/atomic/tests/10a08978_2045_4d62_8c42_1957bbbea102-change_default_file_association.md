@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.001"
 attack_technique_name: "Event Triggered Execution: Change Default File Association"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.001/T1546.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "10a08978-2045-4d62-8c42-1957bbbea102"
@@ -66,13 +66,13 @@ Upon successful execution, cmd.exe will change the file association of .hta to n
 
 ### Command
 
-```commandprompt
+```cmd
 assoc #{extension_to_change}=#{target_extension_handler}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 assoc  #{extension_to_change}=#{original_extension_handler}
 ```
 

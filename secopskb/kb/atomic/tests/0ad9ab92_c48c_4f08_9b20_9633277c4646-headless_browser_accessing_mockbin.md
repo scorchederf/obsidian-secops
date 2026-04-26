@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.003"
 attack_technique_name: "Hide Artifacts: Hidden Window"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.003/T1564.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "0ad9ab92-c48c-4f08-9b20-9633277c4646"
@@ -58,13 +58,13 @@ Reference: https://cert.gov.ua/article/5702579
 
 ### Command
 
-```commandprompt
+```cmd
 start "" #{browser} --headless --disable-gpu https://mockbin.org/bin/#{bin_id}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /im #{browser} /f
 ```
 

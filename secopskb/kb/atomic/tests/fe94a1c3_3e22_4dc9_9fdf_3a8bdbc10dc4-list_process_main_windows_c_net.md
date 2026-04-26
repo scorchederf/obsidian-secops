@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1010"
 attack_technique_name: "Application Window Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1010/T1010.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fe94a1c3-3e22-4dc9-9fdf-3a8bdbc10dc4"
@@ -59,13 +59,13 @@ T1010.cs must exist on disk at specified location (#{input_source_code})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{input_source_code}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{input_source_code}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1010/src/T1010.cs -OutFile "#{input_source_code}"
 ```
@@ -76,14 +76,14 @@ Invoke-WebRequest https://raw.githubusercontent.com/redcanaryco/atomic-red-team/
 
 ### Command
 
-```commandprompt
+```cmd
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe -out:#{output_file_name} "#{input_source_code}"
 #{output_file_name}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /f /q /s #{output_file_name} >nul 2>&1
 ```
 

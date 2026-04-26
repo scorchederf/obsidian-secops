@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1528"
 attack_technique_name: "Steal Application Access Token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1528/T1528.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "9a5352e4-56e5-45c2-9b3f-41a46d3b3a43"
@@ -83,13 +83,13 @@ Azure CLI must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name Az -Force
 ```
 

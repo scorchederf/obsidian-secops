@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.014"
 attack_technique_name: "Active Setup"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.014/T1547.014.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "39e417dd-4fed-4d9c-ae3a-ba433b4d0e9a"

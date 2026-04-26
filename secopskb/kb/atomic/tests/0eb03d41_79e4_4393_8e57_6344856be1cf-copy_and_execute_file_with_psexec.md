@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.002"
 attack_technique_name: "Remote Services: SMB/Windows Admin Shares"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.002/T1021.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0eb03d41-79e4-4393-8e57-6344856be1cf"
@@ -64,13 +64,13 @@ PsExec tool from Sysinternals must exist on disk at specified location (#{psexec
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{psexec_exe}") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip" "PathToAtomicsFolder\..\ExternalPayloads\PsTools" -Force
@@ -85,7 +85,7 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\PsTools\PsExec.exe" "#{psexec
 
 ### Command
 
-```commandprompt
+```cmd
 "#{psexec_exe}" #{remote_host} -accepteula -c #{command_path}
 ```
 

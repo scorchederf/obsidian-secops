@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ac9d0fc3-8aa8-4ab5-b11f-682cd63b40aa"
@@ -44,14 +44,14 @@ Upon successful execution, powershell.exe is renamed as taskhostw.exe and execut
 
 ### Command
 
-```commandprompt
+```cmd
 copy %windir%\System32\windowspowershell\v1.0\powershell.exe %APPDATA%\taskhostw.exe /Y
 cmd.exe /K %APPDATA%\taskhostw.exe
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /Q /F %APPDATA%\taskhostw.exe >nul 2>&1
 ```
 

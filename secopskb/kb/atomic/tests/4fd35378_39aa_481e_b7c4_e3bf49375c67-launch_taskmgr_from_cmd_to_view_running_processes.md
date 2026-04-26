@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "4fd35378-39aa-481e-b7c4-e3bf49375c67"
@@ -45,7 +45,7 @@ An adverary may launch taskmgr.exe with the /7 switch via command prompt to view
 
 ### Command
 
-```commandprompt
+```cmd
 taskmgr.exe /7
 ```
 

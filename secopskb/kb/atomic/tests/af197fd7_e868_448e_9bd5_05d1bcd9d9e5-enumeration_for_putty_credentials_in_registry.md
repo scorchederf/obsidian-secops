@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.002"
 attack_technique_name: "Unsecured Credentials: Credentials in Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.002/T1552.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "af197fd7-e868-448e-9bd5-05d1bcd9d9e5"
@@ -43,7 +43,7 @@ entries are found, they will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 reg query HKCU\Software\SimonTatham\PuTTY\Sessions /t REG_SZ /s
 ```
 

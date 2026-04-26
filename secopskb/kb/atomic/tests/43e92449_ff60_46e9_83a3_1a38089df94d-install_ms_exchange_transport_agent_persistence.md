@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.002"
 attack_technique_name: "Server Software Component: Transport Agent"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.002/T1505.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "43e92449-ff60-46e9-83a3-1a38089df94d"
@@ -64,13 +64,13 @@ Microsoft Exchange SnapIn must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 Get-TransportAgent -TransportService FrontEnd
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 ```
 

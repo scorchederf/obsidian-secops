@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "94f6a1c9-aae7-46a4-9083-2bb1f5768ec4"
@@ -44,13 +44,13 @@ suspend Shell History seen in Awfulshred wiper- https://unix.stackexchange.com/q
 
 ### Command
 
-```sh
+```bash
 set +o history
 ```
 
 ### Cleanup
 
-```sh
+```bash
 set -o history
 ```
 

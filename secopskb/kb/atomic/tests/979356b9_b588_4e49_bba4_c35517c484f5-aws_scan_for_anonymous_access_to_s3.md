@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1530"
 attack_technique_name: "Data from Cloud Storage Object"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1530/T1530.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "979356b9-b588-4e49-bba4-c35517c484f5"
@@ -51,7 +51,7 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 cat ~/.aws/credentials | grep "default"
 aws s3api create-bucket --bucket #{s3_bucket_name}
 aws s3api put-bucket-policy --bucket #{s3_bucket_name} --policy file://$PathToAtomicsFolder/T1530/src/policy.json
@@ -61,7 +61,7 @@ aws s3 cp /tmp/T1530.txt s3://#{s3_bucket_name}
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please install the aws-cli and configure your AWS default profile using: aws configure
 ```
 
@@ -72,13 +72,13 @@ echo Please install the aws-cli and configure your AWS default profile using: aw
 
 ### Command
 
-```sh
+```bash
 aws --no-sign-request s3 cp --recursive s3://#{s3_bucket_name} /tmp/#{s3_bucket_name}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 aws s3 rb s3://#{s3_bucket_name} --force 
 rm -rf /tmp/#{s3_bucket_name}
 ```

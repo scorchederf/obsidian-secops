@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1217"
 attack_technique_name: "Browser Bookmark Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "5fc528dd-79de-47f5-8188-25572b7fafe0"
@@ -50,14 +50,14 @@ This test searches for Safari's Bookmarks file (on macOS) and lists any found in
 
 ### Command
 
-```sh
+```bash
 find / -path "*/Safari/Bookmarks.plist" 2>/dev/null >> #{output_file} 
 cat #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file} 2>/dev/null
 ```
 

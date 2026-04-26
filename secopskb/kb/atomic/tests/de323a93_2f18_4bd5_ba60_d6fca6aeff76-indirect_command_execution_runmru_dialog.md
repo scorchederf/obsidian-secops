@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1202"
 attack_technique_name: "Indirect Command Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1202/T1202.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "de323a93-2f18-4bd5-ba60-d6fca6aeff76"

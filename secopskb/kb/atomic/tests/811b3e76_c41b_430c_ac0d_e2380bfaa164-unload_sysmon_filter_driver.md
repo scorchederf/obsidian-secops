@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "811b3e76-c41b-430c-ac0d-e2380bfaa164"
@@ -53,13 +53,13 @@ Sysmon must be downloaded
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((cmd.exe /c "where.exe Sysmon.exe 2> nul | findstr /i Sysmon 2> nul") -or (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe")) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/Sysmon.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\Sysmon.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\Sysmon.zip" "PathToAtomicsFolder\..\ExternalPayloads\Sysmon" -Force
@@ -69,13 +69,13 @@ sysmon must be Installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(sc.exe query sysmon | findstr sysmon) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 if(cmd.exe /c "where.exe Sysmon.exe 2> nul | findstr Sysmon 2> nul") { C:\Windows\Sysmon.exe -accepteula -i } else
 { & "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe" -accepteula -i}
 ```
@@ -84,13 +84,13 @@ sysmon filter must be loaded
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(fltmc.exe filters | findstr #{sysmon_driver}) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 if(Test-Path "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe"){
   & "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe" -u
   & "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe" -accepteula -i
@@ -107,13 +107,13 @@ if(Test-Path "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe"){
 
 ### Command
 
-```commandprompt
+```cmd
 fltmc.exe unload #{sysmon_driver}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sysmon -u -i > nul 2>&1
 sysmon -i -accepteula -i > nul 2>&1
 "PathToAtomicsFolder\..\ExternalPayloads\Sysmon\Sysmon.exe" -u > nul 2>&1

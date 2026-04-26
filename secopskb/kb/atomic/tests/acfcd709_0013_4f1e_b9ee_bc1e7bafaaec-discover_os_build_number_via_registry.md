@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "acfcd709-0013-4f1e-b9ee-bc1e7bafaaec"
@@ -45,7 +45,7 @@ Upon execution, the OS Build Number will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v CurrentBuildNumber
 ```
 

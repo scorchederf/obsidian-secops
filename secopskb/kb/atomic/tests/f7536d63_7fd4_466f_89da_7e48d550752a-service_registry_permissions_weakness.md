@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.011"
 attack_technique_name: "Hijack Execution Flow: Services Registry Permissions Weakness"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.011/T1574.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "f7536d63-7fd4-466f-89da-7e48d550752a"

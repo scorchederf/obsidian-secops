@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1083"
 attack_technique_name: "File and Directory Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0e36303b-6762-4500-b003-127743b80ba6"
@@ -50,7 +50,7 @@ Find or discover files on the file system.  Upon successful execution, this test
 
 ### Command
 
-```commandprompt
+```cmd
 dir /s c:\ >> #{output_file}
 dir /s "c:\Documents and Settings" >> #{output_file}
 dir /s "c:\Program Files\" >> #{output_file}
@@ -62,7 +62,7 @@ tree /F >> #{output_file}
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{output_file}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "edd779e4-a509-4cba-8dfa-a112543dbfb1"
@@ -51,13 +51,13 @@ The folder to delete must exist on disk at specified location (#{folder_to_delet
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{folder_to_delete}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path #{folder_to_delete} -Type Directory | Out-Null
 ```
 

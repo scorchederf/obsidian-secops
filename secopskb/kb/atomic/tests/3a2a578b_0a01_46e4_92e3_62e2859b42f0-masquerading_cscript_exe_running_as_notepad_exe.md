@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "3a2a578b-0a01-46e4-92e3-62e2859b42f0"
@@ -44,14 +44,14 @@ Upon successful execution, cscript.exe is renamed as notepad.exe and executed fr
 
 ### Command
 
-```commandprompt
+```cmd
 copy %SystemRoot%\System32\cscript.exe %APPDATA%\notepad.exe /Y
 cmd.exe /c %APPDATA%\notepad.exe /B
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /Q /F %APPDATA%\notepad.exe >nul 2>&1
 ```
 

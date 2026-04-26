@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222"
 attack_technique_name: "File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222/T1222.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "6cd715aa-20ac-4be1-a8f1-dda7bae160bd"

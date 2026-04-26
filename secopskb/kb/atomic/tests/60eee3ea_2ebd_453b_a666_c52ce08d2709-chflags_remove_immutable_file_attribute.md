@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.002"
 attack_technique_name: "File and Directory Permissions Modification: FreeBSD, Linux and Mac File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.002/T1222.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "60eee3ea-2ebd-453b-a666-c52ce08d2709"
@@ -51,7 +51,7 @@ This technique was used by the threat actor Rocke during the compromise of Linux
 
 ### Command
 
-```sh
+```bash
 touch #{file_to_modify}
 chflags simmutable #{file_to_modify}
 chflags nosimmutable #{file_to_modify}

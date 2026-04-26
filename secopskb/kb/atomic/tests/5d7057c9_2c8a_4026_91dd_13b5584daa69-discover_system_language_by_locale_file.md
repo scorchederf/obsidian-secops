@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614.001"
 attack_technique_name: "System Location Discovery: System Language Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614.001/T1614.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "5d7057c9-2c8a-4026-91dd-13b5584daa69"
@@ -47,13 +47,13 @@ Check the location of the locale configuration file.
 
 ### Prerequisite Check
 
-```text
+```bash
 [ -f /etc/locale.conf ] || [ -f /etc/default/locale ] && exit 0 || exit 1
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Test only valid for systems that have locale file"
 ```
 
@@ -63,7 +63,7 @@ echo "Test only valid for systems that have locale file"
 
 ### Command
 
-```sh
+```bash
 [ -f /etc/locale.conf ] && cat /etc/locale.conf || cat /etc/default/locale
 ```
 

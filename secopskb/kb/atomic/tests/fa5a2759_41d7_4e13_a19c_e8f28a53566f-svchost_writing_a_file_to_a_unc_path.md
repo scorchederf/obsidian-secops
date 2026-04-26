@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fa5a2759-41d7-4e13-a19c-e8f28a53566f"
@@ -45,14 +45,14 @@ Upon successful execution, this will rename cmd.exe as svchost.exe and move it t
 
 ### Command
 
-```commandprompt
+```cmd
 copy C:\Windows\System32\cmd.exe C:\svchost.exe
 C:\svchost.exe /c echo T1105 > \\localhost\c$\T1105.txt
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del C:\T1105.txt >nul 2>&1
 del C:\\svchost.exe >nul 2>&1
 ```

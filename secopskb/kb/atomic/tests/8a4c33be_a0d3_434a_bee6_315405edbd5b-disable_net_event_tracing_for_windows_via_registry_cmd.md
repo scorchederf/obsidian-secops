@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.006"
 attack_technique_name: "Impair Defenses: Indicator Blocking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.006/T1562.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "8a4c33be-a0d3-434a-bee6-315405edbd5b"
@@ -44,13 +44,13 @@ Disables ETW for the .NET Framework using the reg.exe utility to update the Wind
 
 ### Command
 
-```commandprompt
+```cmd
 REG ADD HKLM\Software\Microsoft\.NETFramework /v ETWEnabled /t REG_DWORD /d 0
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 REG DELETE HKLM\Software\Microsoft\.NETFramework /v ETWEnabled /f > nul 2>&1
 ```
 

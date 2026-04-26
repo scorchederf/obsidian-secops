@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1120"
 attack_technique_name: "Peripheral Device Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1120/T1120.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "5c876daf-db1e-41cf-988d-139a7443ccd4"

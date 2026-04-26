@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1124"
 attack_technique_name: "System Time Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1124/T1124.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "20aba24b-e61f-4b26-b4ce-4784f763ca20"
@@ -50,7 +50,7 @@ Identify the system time. Upon execution, the local computer system time and tim
 
 ### Command
 
-```commandprompt
+```cmd
 net time \\#{computer_name}
 w32tm /tz
 ```

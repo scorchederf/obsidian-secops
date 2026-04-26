@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1491.001"
 attack_technique_name: "Defacement: Internal Defacement"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1491.001/T1491.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "30558d53-9d76-41c4-9267-a7bd5184bed3"

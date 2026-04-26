@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "ae9ef4b0-d8c1-49d4-8758-06206f19af0a"

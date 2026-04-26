@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1567.002"
 attack_technique_name: "Exfiltration Over Web Service: Exfiltration to Cloud Storage"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1567.002/T1567.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a4b74723-5cee-4300-91c3-5e34166909b4"
@@ -88,13 +88,13 @@ rclone must exist at (#{rclone_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{rclone_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder/../ExternalPayloads/" -ErrorAction Ignore -Force | Out-Null
 $arch = ([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture).ToString().ToLower()
 $operatingSystem = ([System.Runtime.InteropServices.RuntimeInformation]::OSDescription).ToString().ToLower()
@@ -110,13 +110,13 @@ terraform must exist at (#{terraform_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{terraform_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder/../ExternalPayloads/" -ErrorAction Ignore -Force | Out-Null
 $arch = ([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture).ToString().ToLower()
 $operatingSystem = ([System.Runtime.InteropServices.RuntimeInformation]::OSDescription).ToString().ToLower()
@@ -132,13 +132,13 @@ Must provide a valid directory or file path to exfiltrate to AWS S3
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{exfil_directory}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder/../ExternalPayloads/T1567.002/data" -ErrorAction Ignore -Force | Out-Null
 foreach($fileSuffix in 1..10) {
   Set-Content "PathToAtomicsFolder/../ExternalPayloads/T1567.002/data/test$fileSuffix.txt" "This is a test file"

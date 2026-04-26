@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "0d181431-ddf3-4826-8055-2dbf63ae848b"
@@ -62,7 +62,7 @@ The AtomicTestHarnesses module must be installed and Out-ATHPowerShellCommandLin
 
 ### Prerequisite Check
 
-```text
+```untitled
 $RequiredModule = Get-Module -Name AtomicTestHarnesses -ListAvailable
 if (-not $RequiredModule) {exit 1}
 if (-not $RequiredModule.ExportedCommands['Out-ATHPowerShellCommandLineParameter']) {exit 1} else {exit 0}
@@ -70,7 +70,7 @@ if (-not $RequiredModule.ExportedCommands['Out-ATHPowerShellCommandLineParameter
 
 ### Get Prerequisite
 
-```text
+```untitled
 Install-Module -Name AtomicTestHarnesses -Scope CurrentUser -Force
 ```
 

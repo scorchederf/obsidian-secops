@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "d9841bf8-f161-4c73-81e9-fd773a5ff8c1"
@@ -43,14 +43,14 @@ Caution if you access remotely the host where the test runs! Especially with the
 
 ### Command
 
-```commandprompt
+```cmd
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 netsh advfirewall firewall set rule group="file and printer sharing" new enable=Yes
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 netsh advfirewall reset >nul 2>&1
 ```
 

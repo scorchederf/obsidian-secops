@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1529"
 attack_technique_name: "System Shutdown/Reboot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1529/T1529.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f4648f0d-bf78-483c-bafc-3ec99cd1c302"
@@ -52,7 +52,7 @@ This test restarts a Windows system.
 
 ### Command
 
-```commandprompt
+```cmd
 shutdown /r /t #{timeout}
 ```
 

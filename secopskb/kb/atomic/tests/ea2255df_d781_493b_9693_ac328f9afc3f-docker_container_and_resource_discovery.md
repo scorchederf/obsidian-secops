@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1613"
 attack_technique_name: "Container and Resource Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1613/T1613.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "ea2255df-d781-493b-9693-ac328f9afc3f"
@@ -43,13 +43,13 @@ Verify Docker is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which docker
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which docker`" ]; then echo "Docker Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install docker ; elif [ -n "`which yum`" ]; then sudo yum -y install docker ; fi ; else echo "Docker installed"; fi
 ```
 
@@ -57,13 +57,13 @@ Verify Docker service is running.
 
 ### Prerequisite Check
 
-```text
+```bash
 sudo systemctl status docker --no-pager
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo systemctl start docker
 ```
 
@@ -73,7 +73,7 @@ sudo systemctl start docker
 
 ### Command
 
-```sh
+```bash
 docker build -t t1613 $PathtoAtomicsFolder/T1613/src/
 docker run --name t1613_container --rm -d -t t1613
 docker ps
@@ -83,7 +83,7 @@ docker inspect $(docker ps -l -q --filter ancestor=t1613)
 
 ### Cleanup
 
-```sh
+```bash
 docker stop t1613_container
 docker rmi -f t1613
 ```

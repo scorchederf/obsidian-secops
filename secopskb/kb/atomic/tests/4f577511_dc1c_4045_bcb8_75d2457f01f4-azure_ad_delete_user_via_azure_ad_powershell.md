@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1531"
 attack_technique_name: "Account Access Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1531/T1531.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "4f577511-dc1c-4045-bcb8-75d2457f01f4"
@@ -51,13 +51,13 @@ Check if AzureAD PowerShell module is installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 Get-InstalledModule -Name AzureAD
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "use the following to install AzureAD PowerShell module - Install-Module -Name AzureAD -Scope CurrentUser -Repository PSGallery -Force"
 ```
 
@@ -65,13 +65,13 @@ Check if AzureAD PowerShell module is installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 Update the input arguments so the userprincipalname value is accurate for your environment
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "Update the input arguments in the .yaml file so that the userprincipalname value is accurate for your environment"
 ```
 

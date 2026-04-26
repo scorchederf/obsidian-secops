@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.004"
 attack_technique_name: "Masquerading: Masquerade Task or Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.004/T1036.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "ad4b73c2-d6e2-4d8b-9868-4c6f55906e01"
@@ -44,7 +44,7 @@ Creates a malicious process and hides it by bind mounting to the /proc filesyste
 
 ### Command
 
-```sh
+```bash
 eval '(while true; do :; done) &'
 echo $! > /tmp/evil_pid.txt
 random_kernel_pid=$(ps -ef | grep "\[.*\]" | awk '{print $2}' | shuf -n 1)
@@ -53,7 +53,7 @@ sudo mount -B /proc/$random_kernel_pid /proc/$(cat /tmp/evil_pid.txt)
 
 ### Cleanup
 
-```sh
+```bash
 kill $(cat /tmp/evil_pid.txt) || echo "Failed to kill PID $evil_pid"
 rm /tmp/evil_pid.txt
 ```

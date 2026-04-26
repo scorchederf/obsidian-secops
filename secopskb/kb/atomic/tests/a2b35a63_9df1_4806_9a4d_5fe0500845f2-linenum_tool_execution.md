@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a2b35a63-9df1-4806-9a4d-5fe0500845f2"
@@ -57,13 +57,13 @@ LinnEnum must exist on disk at specified location (#{linenum})
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{linenum} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 curl --create-dirs #{linenum_url} --output #{linenum}
 ```
 
@@ -73,14 +73,14 @@ curl --create-dirs #{linenum_url} --output #{linenum}
 
 ### Command
 
-```sh
+```bash
 chmod +x #{linenum}
 bash #{linenum}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf #{linenum}
 ```
 

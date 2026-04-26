@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1496"
 attack_technique_name: "Resource Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1496/T1496.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "904a5a0e-fb02-490d-9f8d-0e256eb37549"
@@ -44,7 +44,7 @@ End the test by using CTRL/CMD+C to break.
 
 ### Command
 
-```sh
+```bash
 yes > /dev/null
 ```
 

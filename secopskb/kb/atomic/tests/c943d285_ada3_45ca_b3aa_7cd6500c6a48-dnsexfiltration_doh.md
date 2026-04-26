@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048"
 attack_technique_name: "Exfiltration Over Alternative Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048/T1048.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "c943d285-ada3-45ca-b3aa-7cd6500c6a48"
@@ -82,13 +82,13 @@ DNSExfiltrator powershell file must exist on disk at specified location (#{ps_mo
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{ps_module}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 IWR "https://raw.githubusercontent.com/Arno0x/DNSExfiltrator/8faa972408b0384416fffd5b4d42a7aa00526ca8/Invoke-DNSExfiltrator.ps1" -OutFile "#{ps_module}"
 ```

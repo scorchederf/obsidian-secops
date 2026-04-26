@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "c7ac59cb-13cc-4622-81dc-6d2fee9bfac7"
@@ -43,13 +43,13 @@ chsh - change login shell, must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ -f /usr/bin/chsh ]; then echo "exit 0"; else echo "exit 1"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Automated installer not implemented yet, please install chsh manually"
 ```
 

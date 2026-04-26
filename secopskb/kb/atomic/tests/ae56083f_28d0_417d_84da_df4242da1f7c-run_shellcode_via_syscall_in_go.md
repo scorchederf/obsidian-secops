@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1106"
 attack_technique_name: "Native API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1106/T1106.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "ae56083f-28d0-417d-84da-df4242da1f7c"

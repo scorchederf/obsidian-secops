@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546"
 attack_technique_name: "Event Triggered Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546/T1546.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "aca9ae16-7425-4b6d-8c30-cad306fdbd5b"
@@ -46,13 +46,13 @@ AltWinSock2DLL DLL must exist on disk at specified at PathToAtomicsFolder\T1546\
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path PathToAtomicsFolder\T1546\bin\AltWinSock2DLL.dll) { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\T1546\bin\" -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546/bin/AltWinSock2DLL.dll" -OutFile "PathToAtomicsFolder\T1546\bin\AltWinSock2DLL.dll"
 ```

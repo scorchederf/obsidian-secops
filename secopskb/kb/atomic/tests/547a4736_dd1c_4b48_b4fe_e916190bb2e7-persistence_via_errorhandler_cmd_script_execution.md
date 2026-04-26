@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546"
 attack_technique_name: "Event Triggered Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546/T1546.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "547a4736-dd1c-4b48-b4fe-e916190bb2e7"
@@ -44,13 +44,13 @@ ErrorHandler.cmd script must exist on disk at specified at PathToAtomicsFolder\T
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path PathToAtomicsFolder\T1546\src\ErrorHandler.cmd) { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\T1546\src\" -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546/src/ErrorHandler.cmd" -OutFile "PathToAtomicsFolder\T1546\src\ErrorHandler.cmd"
 ```

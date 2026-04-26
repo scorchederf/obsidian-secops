@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2e5eac3e-327b-4a88-a0c0-c4057039a8dd"
@@ -77,13 +77,13 @@ Upon successful execution, cmd.exe will create a scheduled task to spawn cmd.exe
 
 ### Command
 
-```commandprompt
+```cmd
 SCHTASKS /Create /S #{target} /RU #{user_name} /RP #{password} /TN "Atomic task" /TR "#{task_command}" /SC daily /ST #{time}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 SCHTASKS /Delete /S #{target} /U #{user_name} /P #{password} /TN "Atomic task" /F >nul 2>&1
 ```
 

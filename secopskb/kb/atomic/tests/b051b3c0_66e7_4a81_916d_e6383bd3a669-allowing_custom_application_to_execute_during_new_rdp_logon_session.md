@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "b051b3c0-66e7-4a81-916d-e6383bd3a669"
@@ -53,13 +53,13 @@ By default, rdpclip is the value stored. An attacker with administrator privileg
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd" /f /v StartupPrograms /t REG_SZ /d "#{malicious_app}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd" /f /v StartupPrograms /t REG_SZ /d "rdpclip"
 ```
 

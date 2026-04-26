@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7b8ce084-3922-4618-8d22-95f996173765"
@@ -70,13 +70,13 @@ Finds where gpg is located
 
 ### Prerequisite Check
 
-```text
+```bash
 which_gpg=`which gpg`
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y gnupg)||(which yum && yum -y install epel-release gpg)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y gpg)
 ```
 
@@ -87,13 +87,13 @@ which_gpg=`which gpg`
 
 ### Command
 
-```sh
+```bash
 echo "#{pwd_for_encrypted_file}" | $which_gpg --batch --yes --passphrase-fd 0 --cipher-algo #{encryption_alg} -o #{encrypted_file_path} -c #{input_file_path}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{encrypted_file_path}
 ```
 

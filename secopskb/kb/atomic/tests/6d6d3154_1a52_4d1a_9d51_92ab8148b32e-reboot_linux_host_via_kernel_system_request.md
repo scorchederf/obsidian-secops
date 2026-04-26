@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "6d6d3154-1a52-4d1a-9d51-92ab8148b32e"
@@ -44,7 +44,7 @@ reboot system via system request seen in Awfulshred wiper.
 
 ### Command
 
-```sh
+```bash
 echo 1> /proc/sys/kernel/sysrq 
 echo b> /proc/sysrq-trigger
 ```

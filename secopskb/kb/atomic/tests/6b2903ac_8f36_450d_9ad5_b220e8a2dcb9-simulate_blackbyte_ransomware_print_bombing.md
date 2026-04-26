@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "6b2903ac-8f36-450d-9ad5-b220e8a2dcb9"
@@ -59,13 +59,13 @@ File to print must exist on disk at specified location (#{file_to_print})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "#{file_to_print}"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 new-item "#{file_to_print}" -value "This file has been created by T1059.003 Test 4" -Force | Out-Null
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003"
 attack_technique_name: "OS Credential Dumping"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003/T1003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d400090a-d8ca-4be0-982e-c70598a23de9"

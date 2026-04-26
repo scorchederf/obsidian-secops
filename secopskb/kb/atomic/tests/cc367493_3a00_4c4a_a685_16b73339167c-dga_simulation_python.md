@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1568.002"
 attack_technique_name: "Dynamic Resolution: Domain Generation Algorithms"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1568.002/T1568.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "cc367493-3a00-4c4a-a685-16b73339167c"
@@ -53,13 +53,13 @@ This is designed to trigger DNS analytics and NGIDS.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f "#{python_script_path}" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 mkdir -p "$(dirname "#{python_script_path}")"
 curl -sL "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1568.002/src/T1568.002.py" -o "#{python_script_path}"
 ```
@@ -68,13 +68,13 @@ Python 3 must be installed to run the script.
 
 ### Prerequisite Check
 
-```text
+```bash
 which python3
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo apt-get update && sudo apt-get install -y python3
 ```
 

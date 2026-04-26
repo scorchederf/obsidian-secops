@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.003"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.003/T1550.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a2fc4ec5-12c6-4fb4-b661-961f23f359cb"
@@ -77,13 +77,13 @@ Rubeus must exist on disk at "PathToAtomicsFolder\..\ExternalPayloads\rubeus.exe
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\rubeus.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-Webrequest -Uri #{rubeus_url} -OutFile "PathToAtomicsFolder\..\ExternalPayloads\rubeus.exe"
 ```
@@ -92,13 +92,13 @@ PsExec must exist on disk at "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip" "PathToAtomicsFolder\..\ExternalPayloads\PsTools" -Force
 New-Item -ItemType Directory (Split-Path "PathToAtomicsFolder\..\ExternalPayloads\PsExec.exe") -Force | Out-Null

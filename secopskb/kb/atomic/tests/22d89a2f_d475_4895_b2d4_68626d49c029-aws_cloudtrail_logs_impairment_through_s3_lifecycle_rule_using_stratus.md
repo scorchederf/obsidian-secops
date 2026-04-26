@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "22d89a2f-d475-4895-b2d4-68626d49c029"
@@ -60,13 +60,13 @@ Stratus binary must be present at the (#{stratus_path}/stratus)
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{stratus_path}/stratus ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "$(uname)" == "Darwin" ]
 then DOWNLOAD_URL=$(curl -s https://api.github.com/repos/DataDog/stratus-red-team/releases/latest | grep browser_download_url | grep Darwin_x86_64 | cut -d '"' -f 4); wget -q -O #{stratus_path}/stratus-red-team-latest.tar.gz $DOWNLOAD_URL
   tar -xzvf #{stratus_path}/stratus-red-team-latest.tar.gz --directory #{stratus_path}/
@@ -81,13 +81,13 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```bash
 cat ~/.aws/credentials | grep "default"
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo Please install the aws-cli and configure your AWS defult profile using: aws configure
 ```
 
@@ -98,7 +98,7 @@ echo Please install the aws-cli and configure your AWS defult profile using: aws
 
 ### Command
 
-```sh
+```bash
 export AWS_REGION=#{aws_region} 
 cd #{stratus_path}
 echo "starting warmup"
@@ -109,7 +109,7 @@ echo "starting detonate"
 
 ### Cleanup
 
-```sh
+```bash
 export AWS_REGION=#{aws_region}
 echo "Cleanup detonation"
 cd #{stratus_path}

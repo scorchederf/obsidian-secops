@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.006"
 attack_technique_name: "Indicator Removal on Host: Timestomp"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.006/T1070.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "631ea661-d661-44b0-abdb-7a7f3fc08e50"
@@ -59,14 +59,14 @@ This technique was used by the threat actor Rocke during the compromise of Linux
 
 ### Command
 
-```sh
+```bash
 touch #{target_file_path}
 touch -acmr #{reference_file_path} #{target_file_path}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{target_file_path}
 ```
 

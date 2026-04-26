@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d696a3cb-d7a8-4976-8eb5-5af4abf2e3df"
@@ -58,13 +58,13 @@ NMap must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (cmd /c "nmap 2>nul") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\nmap-7.80-setup.exe" #{nmap_url}
 Start-Process "PathToAtomicsFolder\..\ExternalPayloads\nmap-7.80-setup.exe" /S

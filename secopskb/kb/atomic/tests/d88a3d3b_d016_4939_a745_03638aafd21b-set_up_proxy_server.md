@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d88a3d3b-d016-4939-a745-03638aafd21b"
@@ -42,13 +42,13 @@ A modification registry to setup proxy server. This technique was seen in DarkGa
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /t REG_SZ /d "proxy.atomic-test.com:8080" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /f
 ```
 

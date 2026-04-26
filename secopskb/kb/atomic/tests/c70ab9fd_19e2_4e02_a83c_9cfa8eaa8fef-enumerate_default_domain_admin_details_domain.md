@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.002"
 attack_technique_name: "Account Discovery: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.002/T1087.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c70ab9fd-19e2-4e02-a83c-9cfa8eaa8fef"
@@ -42,7 +42,7 @@ This test will enumerate the details of the built-in domain admin account
 
 ### Command
 
-```commandprompt
+```cmd
 net user administrator /domain
 ```
 

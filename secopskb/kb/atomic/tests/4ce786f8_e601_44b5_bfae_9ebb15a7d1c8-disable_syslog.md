@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "4ce786f8-e601-44b5-bfae-9ebb15a7d1c8"
@@ -70,13 +70,13 @@ Package with rsyslog must be on system
 
 ### Prerequisite Check
 
-```text
+```bash
 if #{package_checker} > /dev/null; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo #{package_installer}
 ```
 
@@ -87,13 +87,13 @@ sudo #{package_installer}
 
 ### Command
 
-```sh
+```bash
 #{flavor_command}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 #{cleanup_command}
 ```
 

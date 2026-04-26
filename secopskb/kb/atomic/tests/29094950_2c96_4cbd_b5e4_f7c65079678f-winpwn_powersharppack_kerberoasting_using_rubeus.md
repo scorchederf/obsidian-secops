@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.003"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Kerberoasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.003/T1558.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "29094950-2c96-4cbd-b5e4-f7c65079678f"

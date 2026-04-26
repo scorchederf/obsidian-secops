@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.004"
 attack_technique_name: "Masquerading: Masquerade Task or Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.004/T1036.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f0e3aaea-5cd9-4db6-a077-631dd19b27a8"
@@ -51,13 +51,13 @@ Runs a C program that calls prctl(PR_SET_NAME) to modify /proc/pid/comm value to
 
 ### Prerequisite Check
 
-```text
+```bash
 stat #{exe_path}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 cc -o #{exe_path} PathToAtomicsFolder/T1036.004/src/prctl_rename.c
 ```
 
@@ -67,7 +67,7 @@ cc -o #{exe_path} PathToAtomicsFolder/T1036.004/src/prctl_rename.c
 
 ### Command
 
-```sh
+```bash
 #{exe_path} & ps
 TMP=`ps | grep totally_legit`
 if [ -z "${TMP}" ] ; then echo "renamed process NOT FOUND in process list" && exit 1; fi
@@ -76,7 +76,7 @@ exit 0
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{exe_path}
 ```
 

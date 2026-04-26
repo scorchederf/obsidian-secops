@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "2382dee2-a75f-49aa-9378-f52df6ed3fb1"
@@ -63,7 +63,7 @@ Upon successful execution, cmd.exe creates a new service using sc.exe that will 
 
 ### Command
 
-```commandprompt
+```cmd
 sc.exe create #{service_name} binPath= "#{executable_command}"
 sc.exe start #{service_name}
 sc.exe delete #{service_name}
@@ -71,7 +71,7 @@ sc.exe delete #{service_name}
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del C:\art-marker.txt >nul 2>&1
 ```
 

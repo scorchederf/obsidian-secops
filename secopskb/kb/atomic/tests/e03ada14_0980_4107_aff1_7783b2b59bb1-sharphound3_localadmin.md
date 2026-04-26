@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.001"
 attack_technique_name: "Permission Groups Discovery: Local Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.001/T1069.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "e03ada14-0980-4107-aff1-7783b2b59bb1"
@@ -65,13 +65,13 @@ And the computer must be domain joined (implicit authentication).
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{sharphound_path}") { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/BloodHoundAD/BloodHound/blob/e062fe73d73c015dccb37fae5089342d009b84b8/Collectors/SharpHound.exe?raw=true" -OutFile "#{sharphound_path}"
 ```

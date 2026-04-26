@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "bdaebd56-368b-4970-a523-f905ff4a8a51"
@@ -44,14 +44,14 @@ An adversary may place scripts in an environment variable because they can't or 
 
 ### Command
 
-```sh
+```bash
 export ART='echo "Atomic Red Team was here... T1059.004"'
 echo $ART |/bin/sh
 ```
 
 ### Cleanup
 
-```sh
+```bash
 unset ART
 ```
 

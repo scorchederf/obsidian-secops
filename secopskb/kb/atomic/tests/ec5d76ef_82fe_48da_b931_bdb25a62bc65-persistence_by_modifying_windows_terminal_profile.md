@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.015"
 attack_technique_name: "Boot or Logon Autostart Execution: Login Items"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.015/T1547.015.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "ec5d76ef-82fe-48da-b931-bdb25a62bc65"
@@ -69,13 +69,13 @@ Windows Terminal must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{wt_exe}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $(rm ~\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\StoreEdgeFD\installed.db -ErrorAction Ignore; Write-Output ""; $?) -and $(winget install --id=Microsoft.WindowsTerminal)
 ```
 

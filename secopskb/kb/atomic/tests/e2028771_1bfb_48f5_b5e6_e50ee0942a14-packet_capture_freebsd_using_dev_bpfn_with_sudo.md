@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "e2028771-1bfb-48f5-b5e6-e50ee0942a14"
@@ -64,13 +64,13 @@ compile C program
 
 ### Prerequisite Check
 
-```text
+```bash
 exit 1
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 cc #{csource_path} -o #{program_path}
 ```
 
@@ -81,13 +81,13 @@ cc #{csource_path} -o #{program_path}
 
 ### Command
 
-```sh
+```bash
 sudo #{program_path} -i #{ifname} -t 3
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{program_path}
 ```
 

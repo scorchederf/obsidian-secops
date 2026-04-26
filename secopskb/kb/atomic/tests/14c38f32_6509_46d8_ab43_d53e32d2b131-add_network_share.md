@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.005"
 attack_technique_name: "Indicator Removal on Host: Network Share Connection Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.005/T1070.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "14c38f32-6509-46d8-ab43-d53e32d2b131"
@@ -50,7 +50,7 @@ Add a Network Share utilizing the command_prompt
 
 ### Command
 
-```commandprompt
+```cmd
 net use c: #{share_name}
 net share test=#{share_name} /REMARK:"test share" /CACHE:No
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564"
 attack_technique_name: "Hide Artifacts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564/T1564.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "2ec63cc2-4975-41a6-bf09-dffdfb610778"
@@ -44,13 +44,13 @@ Creating a user with a username containing "$"
 
 ### Command
 
-```commandprompt
+```cmd
 net user $ ATOMIC123! /add /active:yes
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net user $ /DELETE 2>&1
 ```
 

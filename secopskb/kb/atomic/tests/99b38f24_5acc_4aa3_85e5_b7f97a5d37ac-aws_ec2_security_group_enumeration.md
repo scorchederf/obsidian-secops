@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1580"
 attack_technique_name: "Cloud Infrastructure Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1580/T1580.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "99b38f24-5acc-4aa3-85e5-b7f97a5d37ac"
@@ -56,13 +56,13 @@ AWS CLI installed and configured with the necessary access rights.
 
 ### Prerequisite Check
 
-```text
+```untitled
 type aws || aws --version
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 if [ "$(uname)" = "Darwin" ] || [ "$(expr substr $(uname) 1 5)" = "Linux" ]; then
   curl "https://aws.amazon.com/cli/" -o "Install-AWSCLI.sh" && sh Install-AWSCLI.sh
 elif [ "$(expr substr $(uname) 1 5)" = "MINGW" ]; then
@@ -74,13 +74,13 @@ Check if AWS CLI is installed and configured.
 
 ### Prerequisite Check
 
-```text
+```untitled
 aws sts get-caller-identity --profile #{aws_profile}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 if ! aws sts get-caller-identity --profile #{aws_profile}; then
   echo "AWS CLI not properly configured. Please configure AWS CLI."
 fi
@@ -92,7 +92,7 @@ fi
 
 ### Command
 
-```commandprompt
+```cmd
 aws ec2 describe-security-groups --profile #{aws_profile} --output #{output_format}
 ```
 

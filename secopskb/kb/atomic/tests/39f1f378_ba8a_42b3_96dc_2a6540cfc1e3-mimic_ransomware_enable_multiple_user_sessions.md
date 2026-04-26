@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "39f1f378-ba8a-42b3-96dc-2a6540cfc1e3"
@@ -45,13 +45,13 @@ See [Mimic Ransomware Overview] (https://www.trendmicro.com/en_us/research/23/a/
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Winlogon /t REG_DWORD /v AllowMultipleTSSessions /d 1 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Winlogon /v AllowMultipleTSSessions /f >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1652"
 attack_technique_name: "Device Driver Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1652/T1652.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "c63bbe52-6f17-4832-b221-f07ba8b1736f"

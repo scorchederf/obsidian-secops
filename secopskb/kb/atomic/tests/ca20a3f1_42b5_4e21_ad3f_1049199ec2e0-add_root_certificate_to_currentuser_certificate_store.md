@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.004"
 attack_technique_name: "Subvert Trust Controls: Install Root Certificate"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.004/T1553.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "ca20a3f1-42b5-4e21-ad3f-1049199ec2e0"

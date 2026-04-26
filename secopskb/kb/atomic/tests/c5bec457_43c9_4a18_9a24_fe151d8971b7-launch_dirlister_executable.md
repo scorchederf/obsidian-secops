@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1083"
 attack_technique_name: "File and Directory Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "c5bec457-43c9-4a18-9a24-fe151d8971b7"
@@ -53,13 +53,13 @@ DirLister.exe must exist in the specified path #{dirlister_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dirlister_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $parentpath = Split-Path "#{dirlister_path}"
 New-Item -ItemType Directory -Force -Path $parentpath | Out-Null
 Invoke-WebRequest https://github.com/SanderSade/DirLister/releases/download/v2.beta4/DirLister.v2.beta4.zip -OutFile "PathToAtomicsFolder\..\ExternalPayloads\TDirLister.v2.beta4.zip"

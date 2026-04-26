@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.012"
 attack_technique_name: "Process Injection: Process Hollowing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.012/T1055.012.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "562427b4-39ef-4e8c-af88-463a78e70b9c"
@@ -82,13 +82,13 @@ Start-Hollow.ps1 must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{script_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 try {
   iwr "#{script_download_url}" -OutFile (New-Item -Path #{script_path} -Force)
 } catch {

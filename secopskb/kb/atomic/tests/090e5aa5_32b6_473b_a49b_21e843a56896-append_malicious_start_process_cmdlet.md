@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.013"
 attack_technique_name: "Event Triggered Execution: PowerShell Profile"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.013/T1546.013.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "090e5aa5-32b6-473b-a49b-21e843a56896"
@@ -57,13 +57,13 @@ Ensure a powershell profile exists for the current user
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{ps_profile}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path #{ps_profile} -Type File -Force
 ```
 

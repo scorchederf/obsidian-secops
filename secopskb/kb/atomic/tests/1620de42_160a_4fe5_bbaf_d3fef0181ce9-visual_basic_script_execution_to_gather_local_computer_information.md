@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.005"
 attack_technique_name: "Command and Scripting Interpreter: Visual Basic"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.005/T1059.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "1620de42-160a-4fe5-bbaf-d3fef0181ce9"
@@ -53,13 +53,13 @@ Sample script must exist on disk at specified location (#{vbscript})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{vbscript}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -ItemType Directory (Split-Path "#{vbscript}") -Force | Out-Null
 Invoke-WebRequest "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1059.005/src/sys_info.vbs" -OutFile "#{vbscript}"
 ```

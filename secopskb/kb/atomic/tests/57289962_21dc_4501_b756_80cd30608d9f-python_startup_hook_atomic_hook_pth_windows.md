@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.018"
 attack_technique_name: "Event Triggered Execution: Python Startup Hooks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.018/T1546.018.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "57289962-21dc-4501-b756-80cd30608d9f"
@@ -53,13 +53,13 @@ Python must be installed and the specified binary (#{python_exe}) must be in the
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command @("#{python_exe}", 'python3.exe') -ErrorAction SilentlyContinue) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "[!] Python3 not found. Please install Python3 (e.g., winget install python3 or winget install python or https://www.python.org/downloads/windows/) or ensure it is in your PATH."
 ```
 

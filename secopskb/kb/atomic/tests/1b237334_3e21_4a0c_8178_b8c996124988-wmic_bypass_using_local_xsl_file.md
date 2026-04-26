@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1220"
 attack_technique_name: "XSL Script Processing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1220/T1220.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "1b237334-3e21-4a0c-8178-b8c996124988"
@@ -57,13 +57,13 @@ XSL file must exist on disk at specified location (#{local_xsl_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{local_xsl_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{local_xsl_file}") -ErrorAction Ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1220/src/wmicscript.xsl" -OutFile "#{local_xsl_file}"
 ```
@@ -74,7 +74,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 wmic #{wmic_command} /FORMAT:"#{local_xsl_file}"
 ```
 

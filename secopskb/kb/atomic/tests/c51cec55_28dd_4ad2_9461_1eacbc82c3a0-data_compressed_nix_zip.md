@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "c51cec55-28dd-4ad2-9461-1eacbc82c3a0"
@@ -58,13 +58,13 @@ Files to zip must exist (#{input_files})
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ $(ls #{input_files} | wc -l) > 0 ] && [ -x $(which zip) ] ; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 (which yum && yum -y install epel-release zip)||(which apt-get && apt-get install -y zip)
 echo Please set input_files argument to include files that exist
 ```

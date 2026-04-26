@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016.001"
 attack_technique_name: "System Network Configuration Discovery: Internet Connection Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016.001/T1016.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "be8f4019-d8b6-434c-a814-53123cdcc11e"

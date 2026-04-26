@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.008"
 attack_technique_name: "Event Triggered Execution: Accessibility Features"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.008/T1546.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "3309f53e-b22b-4eb6-8fd2-a6cf58b355a9"

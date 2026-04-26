@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.001"
 attack_technique_name: "Permission Groups Discovery: Local Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.001/T1069.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "1f454dd6-e134-44df-bebb-67de70fb6cd8"
@@ -43,7 +43,7 @@ information will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 net localgroup
 net localgroup "Administrators"
 ```

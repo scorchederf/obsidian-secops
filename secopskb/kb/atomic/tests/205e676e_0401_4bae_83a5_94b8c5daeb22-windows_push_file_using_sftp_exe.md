@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "205e676e-0401-4bae-83a5-94b8c5daeb22"
@@ -76,7 +76,7 @@ This test requires the `sftp` command to be available on the system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Command sftp -ErrorAction SilentlyContinue) {
     Write-Output "SFTP command is available."
     exit 0
@@ -88,7 +88,7 @@ if (Get-Command sftp -ErrorAction SilentlyContinue) {
 
 ### Get Prerequisite
 
-```text
+```powershell
 # Define the capability name for OpenSSH Client
 $capabilityName = "OpenSSH.Client~~~~0.0.1.0"
 try {

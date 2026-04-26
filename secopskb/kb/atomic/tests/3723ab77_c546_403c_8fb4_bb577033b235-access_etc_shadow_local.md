@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.008"
 attack_technique_name: "OS Credential Dumping: /etc/passwd, /etc/master.passwd and /etc/shadow"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.008/T1003.008.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "3723ab77-c546-403c-8fb4-bb577033b235"

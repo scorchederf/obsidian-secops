@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1006"
 attack_technique_name: "Direct Volume Access"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1006/T1006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "88f6327e-51ec-4bbf-b2e8-3fea534eab8b"

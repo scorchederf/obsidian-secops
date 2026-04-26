@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.005"
 attack_technique_name: "Unsecured Credentials: Cloud Instance Metadata API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.005/T1552.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "ae9b2e3e-efa1-4483-86e2-fae529ab9fb6"
@@ -60,13 +60,13 @@ The MSOnline module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (get-command Get-MsolUser -erroraction silentlycontinue){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 install-module MSOnline
 ```
 

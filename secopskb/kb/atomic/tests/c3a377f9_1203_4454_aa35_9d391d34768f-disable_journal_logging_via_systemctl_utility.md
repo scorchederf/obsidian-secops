@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562"
 attack_technique_name: "Impair Defenses"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562/T1562.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "c3a377f9-1203-4454-aa35-9d391d34768f"
@@ -44,13 +44,13 @@ The atomic test disables the journal logging using built-in systemctl utility
 
 ### Command
 
-```sh
+```bash
 sudo systemctl stop systemd-journald #disables journal logging
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo systemctl start systemd-journald #starts journal service
 sudo systemctl enable systemd-journald #starts journal service automatically at boot time
 ```

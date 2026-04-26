@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "fbff3f1f-b0bf-448e-840f-7e1687affdce"
@@ -53,13 +53,13 @@ RemotePC must exist on disk at the specified location (#{RemotePC_Path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{RemotePC_Path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://static.remotepc.com/downloads/rpc/140422/RemotePC.exe" -OutFile "#{RemotePC_Path}" -UseBasicParsing
 ```

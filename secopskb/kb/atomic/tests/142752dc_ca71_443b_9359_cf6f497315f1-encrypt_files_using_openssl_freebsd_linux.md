@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "142752dc-ca71-443b-9359-cf6f497315f1"
@@ -76,7 +76,7 @@ Finds where openssl is located
 
 ### Prerequisite Check
 
-```text
+```bash
 which_openssl=`which openssl`
 ```
 
@@ -87,7 +87,7 @@ which_openssl=`which openssl`
 
 ### Command
 
-```sh
+```bash
 which_openssl=`which openssl`
 $which_openssl genrsa -out #{private_key_path} #{encryption_bit_size}
 $which_openssl rsa -in #{private_key_path} -pubout -out #{public_key_path}
@@ -96,7 +96,7 @@ $which_openssl rsautl -encrypt -inkey #{public_key_path} -pubin -in #{input_file
 
 ### Cleanup
 
-```sh
+```bash
 $which_openssl rsautl -decrypt -inkey #{private_key_path} -in #{encrypted_file_path}
 rm #{encrypted_file_path}
 ```

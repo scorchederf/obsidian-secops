@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "eb8da98a-2e16-4551-b3dd-83de49baa14c"
@@ -44,13 +44,13 @@ Firefox must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Test-Path "C:\Program Files\Mozilla Firefox\firefox.exe") -Or (Test-Path "C:\Program Files (x86)\Mozilla Firefox\firefox.exe")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 if ($env:PROCESSOR_ARCHITECTURE -eq 'AMD64') {$url="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"}else {$url="https://download.mozilla.org/?product=firefox-latest-ssl&os=win&lang=en-US"}
 $installer = "PathToAtomicsFolder\..\ExternalPayloads\firefoxsetup.exe"
@@ -62,13 +62,13 @@ Firefox login data file must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "$env:APPDATA\Mozilla\Firefox\Profiles\") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 if ($env:PROCESSOR_ARCHITECTURE -eq 'AMD64') {$firefox="C:\Program Files\Mozilla Firefox\firefox.exe"}else {$firefox="C:\Program Files (x86)\Mozilla Firefox\firefox.exe"}
 Start-Process $firefox -ArgumentList '-CreateProfile Atomic' -Wait
 Start-Process $firefox -NoNewWindow

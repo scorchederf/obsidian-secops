@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.005"
 attack_technique_name: "Boot or Logon Autostart Execution: Security Support Provider"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.005/T1547.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "afdfd7e3-8a0b-409f-85f7-886fdf249c9e"

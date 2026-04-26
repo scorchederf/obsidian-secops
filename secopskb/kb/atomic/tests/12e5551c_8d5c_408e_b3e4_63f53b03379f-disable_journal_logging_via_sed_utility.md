@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562"
 attack_technique_name: "Impair Defenses"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562/T1562.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "12e5551c-8d5c-408e-b3e4-63f53b03379f"
@@ -44,13 +44,13 @@ The atomic test disables the journal logging by searching and replacing the "Sto
 
 ### Command
 
-```sh
+```bash
 sudo sed -i 's/Storage=auto/Storage=none/' /etc/systemd/journald.conf
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo sed -i 's/Storage=none/Storage=auto/' /etc/systemd/journald.conf #re-enables storage of journal data
 sudo systemctl restart systemd-journald #restart the journal service
 ```

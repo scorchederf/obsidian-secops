@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1518.001"
 attack_technique_name: "Software Discovery: Security Software Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1518.001/T1518.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "1553252f-14ea-4d3b-8a08-d7a4211aa945"
@@ -46,7 +46,7 @@ when sucessfully executed, the test is going to display installed AV software.
 
 ### Command
 
-```commandprompt
+```cmd
 wmic.exe /Namespace:\\root\SecurityCenter2 Path AntiVirusProduct Get displayName /Format:List
 ```
 

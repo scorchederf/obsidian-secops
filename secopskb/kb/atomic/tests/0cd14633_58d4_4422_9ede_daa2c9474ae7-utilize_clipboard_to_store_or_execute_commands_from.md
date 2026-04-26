@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1115"
 attack_technique_name: "Clipboard Data"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1115/T1115.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0cd14633-58d4-4422-9ede-daa2c9474ae7"
@@ -42,7 +42,7 @@ Add data to clipboard to copy off or execute commands from.
 
 ### Command
 
-```commandprompt
+```cmd
 dir | clip
 echo "T1115" > %temp%\T1115.txt
 clip < %temp%\T1115.txt
@@ -50,7 +50,7 @@ clip < %temp%\T1115.txt
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %temp%\T1115.txt >nul 2>&1
 ```
 

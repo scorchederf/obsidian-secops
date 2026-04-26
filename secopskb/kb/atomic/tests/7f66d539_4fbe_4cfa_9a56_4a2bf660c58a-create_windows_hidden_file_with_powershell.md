@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.001"
 attack_technique_name: "Hide Artifacts: Hidden Files and Directories"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.001/T1564.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "7f66d539-4fbe-4cfa-9a56-4a2bf660c58a"
@@ -53,13 +53,13 @@ The file must exist on disk at specified location (#{file_to_modify})
 
 ### Prerequisite Check
 
-```text
+```cmd
 IF EXIST #{file_to_modify} ( EXIT 0 ) ELSE ( EXIT 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 echo system_Attrib_T1564.001-9 >> #{file_to_modify}
 ```
 

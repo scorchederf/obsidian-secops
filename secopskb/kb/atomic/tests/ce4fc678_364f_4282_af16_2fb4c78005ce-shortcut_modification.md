@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.009"
 attack_technique_name: "Boot or Logon Autostart Execution: Shortcut Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.009/T1547.009.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "ce4fc678-364f-4282-af16-2fb4c78005ce"
@@ -52,7 +52,7 @@ Upon execution, calc.exe will be launched.
 
 ### Command
 
-```commandprompt
+```cmd
 echo [InternetShortcut] > #{shortcut_file_path}
 echo URL=C:\windows\system32\calc.exe >> #{shortcut_file_path}
 #{shortcut_file_path}
@@ -60,7 +60,7 @@ echo URL=C:\windows\system32\calc.exe >> #{shortcut_file_path}
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del -f #{shortcut_file_path} >nul 2>&1
 ```
 

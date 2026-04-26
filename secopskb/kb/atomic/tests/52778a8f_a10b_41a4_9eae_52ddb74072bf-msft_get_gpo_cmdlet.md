@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1615"
 attack_technique_name: "Group Policy Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1615/T1615.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "52778a8f-a10b-41a4-9eae-52ddb74072bf"
@@ -58,13 +58,13 @@ Add Rsat.ActiveDirectory.DS
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Get-WindowsCapability -Online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0 | Where-Object { $_.State -eq 'Installed' }){ exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Add-WindowsCapability -online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
 ```
 
@@ -72,13 +72,13 @@ Add Rsat.GroupPolicy.Management.Tools ###Two RSAT Modules needed for this to wor
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Get-WindowsCapability -Online -Name Rsat.GroupPolicy.Management.Tools~~~~0.0.1.0 | Where-Object { $_.State -eq 'Installed' }){ exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Add-WindowsCapability -online -Name Rsat.GroupPolicy.Management.Tools~~~~0.0.1.0
 ```
 

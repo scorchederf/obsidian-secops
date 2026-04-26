@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547"
 attack_technique_name: "Boot or Logon Autostart Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547/T1547.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "cb01b3da-b0e7-4e24-bf6d-de5223526785"
@@ -50,7 +50,7 @@ Install a driver via pnputil.exe lolbin
 
 ### Command
 
-```commandprompt
+```cmd
 pnputil.exe /add-driver "#{driver_inf}"
 ```
 

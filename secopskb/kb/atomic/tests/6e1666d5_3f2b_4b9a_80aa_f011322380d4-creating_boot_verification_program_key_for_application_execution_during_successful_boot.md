@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "6e1666d5-3f2b-4b9a-80aa-f011322380d4"
@@ -53,13 +53,13 @@ can abuse by creating this registry key and providing a malicious application to
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKLM\System\CurrentControlSet\Control\BootVerificationProgram /v ImagePath /t REG_SZ /d "#{malicious_file}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKLM\System\CurrentControlSet\Control\BootVerificationProgram /f
 ```
 

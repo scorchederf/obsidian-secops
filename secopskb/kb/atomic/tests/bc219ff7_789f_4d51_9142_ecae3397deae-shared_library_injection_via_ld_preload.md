@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.006"
 attack_technique_name: "Hijack Execution Flow: LD_PRELOAD"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.006/T1574.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "bc219ff7-789f-4d51-9142-ecae3397deae"
@@ -59,13 +59,13 @@ The shared library must exist on disk at specified location (#{path_to_shared_li
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{path_to_shared_library} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 gcc -shared -fPIC -o #{path_to_shared_library} #{path_to_shared_library_source}
 ```
 

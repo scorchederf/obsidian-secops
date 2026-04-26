@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d5b886d9-d1c7-4b6e-a7b0-460041bf2823"
@@ -52,7 +52,7 @@ Change the password on the Directory Service Restore Mode (DSRM) account using n
 
 ### Command
 
-```commandprompt
+```cmd
 ntdsutil "set dsrm password" "sync from domain account #{sync_account}" "q" "q"
 ```
 

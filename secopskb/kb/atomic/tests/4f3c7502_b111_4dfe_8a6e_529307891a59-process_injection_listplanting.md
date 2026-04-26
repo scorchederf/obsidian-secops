@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.015"
 attack_technique_name: "Process Injection: ListPlanting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.015/T1055.015.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "4f3c7502-b111-4dfe-8a6e-529307891a59"
@@ -52,13 +52,13 @@ Injector ListPlanting.exe must exist at specified location (#{exe_binary})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{exe_binary}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{exe_binary}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.015/bin/ListPlanting.exe" -OutFile "#{exe_binary}"
 ```

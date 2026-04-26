@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.010"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvr32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "449aa403-6aba-47ce-8a37-247d21ef0306"
@@ -63,13 +63,13 @@ Regsvr32.sct must exist on disk at specified location (#{filename})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{filename}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{filename}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.010/src/RegSvr32.sct" -OutFile "#{filename}"
 ```
@@ -80,7 +80,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 #{regsvr32path}\#{regsvr32name} /s /u /i:"#{filename}" scrobj.dll
 ```
 

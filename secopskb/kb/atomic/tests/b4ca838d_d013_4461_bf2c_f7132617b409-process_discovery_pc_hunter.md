@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "b4ca838d-d013-4461-bf2c-f7132617b409"
@@ -52,13 +52,13 @@ PCHunter must be present in device
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-ChildItem -Path C:\ -Include *PCHunter64* -File -Recurse -ErrorAction SilentlyContinue) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading PC Hunter
 New-Item -Type Directory "C:\Temp\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://www.snapfiles.com/directdl/PCHunter_free.zip" -OutFile "C:\Temp\ExternalPayloads\PCHunter_free.zip"

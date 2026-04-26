@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1567.002"
 attack_technique_name: "Exfiltration Over Web Service: Exfiltration to Cloud Storage"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1567.002/T1567.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "8529ee44-279a-4a19-80bf-b846a40dda58"
@@ -83,13 +83,13 @@ rclone must exist at (#{rclone_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{rclone_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://downloads.rclone.org/rclone-current-windows-amd64.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\rclone.zip"
 Expand-archive -path "PathToAtomicsFolder\..\ExternalPayloads\rclone.zip" -destinationpath "PathToAtomicsFolder\..\ExternalPayloads\T1567.002\" -force

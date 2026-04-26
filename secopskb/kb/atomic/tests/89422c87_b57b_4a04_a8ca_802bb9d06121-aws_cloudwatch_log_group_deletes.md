@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "89422c87-b57b-4a04-a8ca-802bb9d06121"
@@ -58,13 +58,13 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 cat ~/.aws/credentials | grep "default"
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please install the aws-cli and configure your AWS defult profile using: aws configure
 ```
 
@@ -75,7 +75,7 @@ echo Please install the aws-cli and configure your AWS defult profile using: aws
 
 ### Command
 
-```sh
+```bash
 aws logs create-log-group --log-group-name #{cloudwatch_log_group_name} --region #{region} --output json
 echo "*** Log Group Created ***"
 aws logs delete-log-group --log-group-name #{cloudwatch_log_group_name} --region #{region} --output json

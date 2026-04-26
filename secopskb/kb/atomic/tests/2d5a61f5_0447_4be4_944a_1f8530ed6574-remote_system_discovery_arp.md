@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2d5a61f5-0447-4be4-944a-1f8530ed6574"
@@ -44,7 +44,7 @@ Upon successful execution, cmd.exe will execute arp to list out the arp cache. O
 
 ### Command
 
-```commandprompt
+```cmd
 arp -a
 ```
 

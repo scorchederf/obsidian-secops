@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "9f5d081a-ee5a-42f9-a04e-b7bdc487e676"
@@ -50,7 +50,7 @@ Executes the LaunchApplication function in pcwutl.dll to proxy execution of an e
 
 ### Command
 
-```commandprompt
+```cmd
 rundll32.exe pcwutl.dll,LaunchApplication #{exe_to_launch}
 ```
 

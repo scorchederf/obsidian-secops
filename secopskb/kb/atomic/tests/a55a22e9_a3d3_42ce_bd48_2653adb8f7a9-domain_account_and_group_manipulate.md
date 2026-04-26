@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "a55a22e9-a3d3-42ce-bd48-2653adb8f7a9"
@@ -74,7 +74,7 @@ PS Module ActiveDirectory
 
 ### Prerequisite Check
 
-```text
+```untitled
 Try {
     Import-Module ActiveDirectory -ErrorAction Stop | Out-Null
     exit 0
@@ -86,7 +86,7 @@ Catch {
 
 ### Get Prerequisite
 
-```text
+```untitled
 if((Get-CimInstance -ClassName Win32_OperatingSystem).ProductType -eq 1) {
   Add-WindowsCapability -Name (Get-WindowsCapability -Name RSAT.ActiveDirectory.DS* -Online).Name -Online
 } else {

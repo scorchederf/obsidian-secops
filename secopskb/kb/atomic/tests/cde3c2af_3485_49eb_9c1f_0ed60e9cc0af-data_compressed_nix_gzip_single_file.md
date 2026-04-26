@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "cde3c2af-3485-49eb-9c1f-0ed60e9cc0af"
@@ -59,13 +59,13 @@ An adversary may compress data (e.g., sensitive documents) that is collected pri
 
 ### Command
 
-```sh
+```bash
 test -e #{input_file} && gzip -k #{input_file} || (echo '#{input_content}' >> #{input_file}; gzip -k #{input_file})
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{input_file}.gz
 ```
 

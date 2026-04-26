@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614"
 attack_technique_name: "System Location Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614/T1614.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "552b4db3-8850-412c-abce-ab5cc8a86604"

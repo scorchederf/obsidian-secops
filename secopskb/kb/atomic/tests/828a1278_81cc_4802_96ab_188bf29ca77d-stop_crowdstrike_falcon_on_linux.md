@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "828a1278-81cc-4802-96ab-188bf29ca77d"
@@ -44,14 +44,14 @@ Stop and disable Crowdstrike Falcon on Linux
 
 ### Command
 
-```sh
+```bash
 sudo systemctl stop falcon-sensor.service
 sudo systemctl disable falcon-sensor.service
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo systemctl enable falcon-sensor.service
 sudo systemctl start falcon-sensor.service
 ```

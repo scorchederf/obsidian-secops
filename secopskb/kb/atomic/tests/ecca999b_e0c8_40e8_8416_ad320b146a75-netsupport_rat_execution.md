@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "ecca999b-e0c8-40e8-8416-ad320b146a75"
@@ -52,13 +52,13 @@ NetSupport must be downloaded and exist on the disk at the specified location. (
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{NetSupport_Path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 (New-Object Net.WebClient).DownloadFile("https://nsproducts.azureedge.net/nsm-1270/en/Setup.exe","#{NetSupport_Path}")
 ```

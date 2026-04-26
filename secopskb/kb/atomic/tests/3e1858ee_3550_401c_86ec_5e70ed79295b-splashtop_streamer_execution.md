@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "3e1858ee-3550-401c-86ec-5e70ed79295b"
@@ -52,13 +52,13 @@ Splashtop Streamer must be installed in the location
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "C:\Program Files (x86)\Splashtop\Splashtop Remote\Server\#{srserver_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading Splashtop Streamer
 New-Item -Type Directory "C:\Temp\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.splashtop.com/win/Splashtop_Streamer_Win_INSTALLER_v3.6.4.1.exe" -OutFile  "C:\Temp\ExternalPayloads\Splashtop.exe"

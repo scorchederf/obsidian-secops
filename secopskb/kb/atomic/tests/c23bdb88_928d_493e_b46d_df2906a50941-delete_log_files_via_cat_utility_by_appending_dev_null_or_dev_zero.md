@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c23bdb88-928d-493e-b46d-df2906a50941"
@@ -52,13 +52,13 @@ target files must exist
 
 ### Prerequisite Check
 
-```text
+```bash
 stat #{system_log_path}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 touch #{system_log_path}
 ```
 
@@ -69,7 +69,7 @@ touch #{system_log_path}
 
 ### Command
 
-```sh
+```bash
 sudo cat /dev/null > #{system_log_path} #truncating the file to zero bytes
 sudo dd if=/dev/zero bs=1000 count=5 of=#{system_log_path} #log file filled with null bytes(zeros)
 ```

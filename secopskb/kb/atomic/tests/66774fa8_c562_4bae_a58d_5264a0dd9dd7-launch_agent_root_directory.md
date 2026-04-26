@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.001"
 attack_technique_name: "Create or Modify System Process: Launch Agent"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.001/T1543.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "66774fa8-c562-4bae-a58d-5264a0dd9dd7"
@@ -58,13 +58,13 @@ Create a plist and execute it
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -d /Library/LaunchAgents ]; then mkdir /Library/LaunchAgents; exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Failed to create /Library/LaunchAgents"; exit 1;
 ```
 
@@ -72,13 +72,13 @@ The shared library must exist on disk at specified location (#{path_malicious_pl
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{path_malicious_plist} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "The plist file doesn't exist. Check the path and try again."; exit 1;
 ```
 

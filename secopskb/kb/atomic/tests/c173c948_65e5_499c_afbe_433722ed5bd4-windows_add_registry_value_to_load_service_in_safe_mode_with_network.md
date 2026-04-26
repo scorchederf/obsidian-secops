@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c173c948-65e5-499c-afbe-433722ed5bd4"
@@ -46,13 +46,13 @@ Adding a subkey to Netowrk with the name of your service and a default value set
 
 ### Command
 
-```commandprompt
+```cmd
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Network\AtomicSafeMode" /VE /T REG_SZ /F /D "Service"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Network\AtomicSafeMode" /f
 ```
 

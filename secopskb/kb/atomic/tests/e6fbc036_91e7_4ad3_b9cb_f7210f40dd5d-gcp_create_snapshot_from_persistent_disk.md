@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1578.001"
 attack_technique_name: "Modify Cloud Compute Infrastructure: Create Snapshot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1578.001/T1578.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "e6fbc036-91e7-4ad3-b9cb-f7210f40dd5d"
@@ -64,13 +64,13 @@ gcloud CLI must be installed.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if command -v gcloud > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Install gcloud CLI: https://cloud.google.com/sdk/docs/install"
 ```
 
@@ -78,13 +78,13 @@ gcloud CLI must be authenticated.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if gcloud auth list --filter=status:ACTIVE --format="value(account)" | grep . > /dev/null; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Authenticate with: gcloud auth login"
 ```
 
@@ -92,13 +92,13 @@ GCP disk must exist.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if gcloud compute disks describe #{gcp_disk_name} --zone=#{gcp_zone} > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Ensure the disk exists in the specified zone."
 ```
 
@@ -109,13 +109,13 @@ echo "Ensure the disk exists in the specified zone."
 
 ### Command
 
-```sh
+```bash
 gcloud compute snapshots create #{gcp_snapshot_name} --source-disk=#{gcp_disk_name} --zone=#{gcp_zone}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 gcloud compute snapshots delete #{gcp_snapshot_name} --quiet
 ```
 

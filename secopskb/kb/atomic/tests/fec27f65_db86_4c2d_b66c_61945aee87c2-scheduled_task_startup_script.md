@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fec27f65-db86-4c2d-b66c-61945aee87c2"
@@ -45,14 +45,14 @@ the tasks, open the Task Scheduler and look in the Active Tasks pane.
 
 ### Command
 
-```commandprompt
+```cmd
 schtasks /create /tn "T1053_005_OnLogon" /sc onlogon /tr "cmd.exe /c calc.exe"
 schtasks /create /tn "T1053_005_OnStartup" /sc onstart /ru system /tr "cmd.exe /c calc.exe"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 schtasks /delete /tn "T1053_005_OnLogon" /f >nul 2>&1
 schtasks /delete /tn "T1053_005_OnStartup" /f >nul 2>&1
 ```

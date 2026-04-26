@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "bd4cf0d1-7646-474e-8610-78ccf5a097c4"
@@ -51,7 +51,7 @@ Extracting credentials from files
 
 ### Command
 
-```sh
+```bash
 grep -ri password #{file_path}
 exit 0
 ```

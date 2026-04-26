@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "08cbf59f-85da-4369-a5f4-049cffd7709f"
@@ -64,14 +64,14 @@ Finds where ccencrypt and ccdecrypt are located
 
 ### Prerequisite Check
 
-```text
+```bash
 which_ccencrypt=`which ccencrypt`
 which_ccdecrypt=`which ccdecrypt`
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y ccript)||(which yum && yum -y install epel-release ccrypt)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y ccrypt)
 ```
 
@@ -82,7 +82,7 @@ which_ccdecrypt=`which ccdecrypt`
 
 ### Command
 
-```sh
+```bash
 which_ccencrypt=`which ccencrypt`
 cp #{root_input_file_path} #{cped_file_path};
 $which_ccencrypt -T -K #{pwd_for_encrypted_file} #{cped_file_path}
@@ -90,7 +90,7 @@ $which_ccencrypt -T -K #{pwd_for_encrypted_file} #{cped_file_path}
 
 ### Cleanup
 
-```sh
+```bash
 rm #{cped_file_path}.cpt
 ```
 

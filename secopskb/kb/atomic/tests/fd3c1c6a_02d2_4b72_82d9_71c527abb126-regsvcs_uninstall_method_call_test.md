@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.009"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvcs/Regasm"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.009/T1218.009.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "fd3c1c6a-02d2-4b72-82d9-71c527abb126"
@@ -59,13 +59,13 @@ The CSharp source file must exist on disk at specified location (#{source_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{source_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{source_file}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.009/src/T1218.009.cs" -OutFile "#{source_file}"
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1217"
 attack_technique_name: "Browser Bookmark Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "3a41f169-a5ab-407f-9269-abafdb5da6c2"
@@ -50,14 +50,14 @@ Searches for Mozilla Firefox's places.sqlite file (on FreeBSD or Linux distribut
 
 ### Command
 
-```sh
+```bash
 find / -path "*.mozilla/firefox/*/places.sqlite" 2>/dev/null -exec echo {} >> #{output_file} \;
 cat #{output_file} 2>/dev/null
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file} 2>/dev/null
 ```
 

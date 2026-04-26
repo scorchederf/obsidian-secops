@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.004"
 attack_technique_name: "Event Triggered Execution: .bash_profile .bashrc and .shrc"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.004/T1546.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "37ad2f24-7c53-4a50-92da-427a4ad13f58"

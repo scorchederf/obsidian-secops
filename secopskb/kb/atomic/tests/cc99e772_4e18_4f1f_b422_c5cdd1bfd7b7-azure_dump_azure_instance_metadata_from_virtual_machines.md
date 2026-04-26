@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.005"
 attack_technique_name: "Unsecured Credentials: Cloud Instance Metadata API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.005/T1552.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "cc99e772-4e18-4f1f-b422-c5cdd1bfd7b7"

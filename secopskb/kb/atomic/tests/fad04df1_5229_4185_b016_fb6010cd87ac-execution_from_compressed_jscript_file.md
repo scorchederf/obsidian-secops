@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027"
 attack_technique_name: "Obfuscated Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027/T1027.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fad04df1-5229-4185-b016-fb6010cd87ac"
@@ -51,13 +51,13 @@ T1027.js must exist on disk at PathToAtomicsFolder\..\ExternalPayloads\temp_T102
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\temp_T1027js.zip\T1027js.js") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest "#{url_path}" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\T1027js.zip"
@@ -70,13 +70,13 @@ Expand-Archive -path "PathToAtomicsFolder\..\ExternalPayloads\T1027js.zip" -Dest
 
 ### Command
 
-```commandprompt
+```cmd
 "PathToAtomicsFolder\..\ExternalPayloads\temp_T1027js.zip\T1027js.js"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /f /im calculator.exe >nul 2>nul
 ```
 

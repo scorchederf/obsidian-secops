@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.004"
 attack_technique_name: "Masquerading: Masquerade Task or Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.004/T1036.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "b721c6ef-472c-4263-a0d9-37f1f4ecff66"
@@ -44,14 +44,14 @@ Creating W32Time similar named service (win32times) using sc just like threat ac
 
 ### Command
 
-```commandprompt
+```cmd
 sc create win32times binPath= "cmd /c start c:\T1036.004_NonExistingScript.ps1"
 sc qc win32times
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc delete win32times
 ```
 

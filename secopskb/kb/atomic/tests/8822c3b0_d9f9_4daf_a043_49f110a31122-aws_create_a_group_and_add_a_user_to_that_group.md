@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8822c3b0-d9f9-4daf-a043-49f110a31122"
@@ -50,13 +50,13 @@ Check if the user exists, we can only add a user to a group if the user exists.
 
 ### Prerequisite Check
 
-```text
+```untitled
 aws iam list-users | grep #{username}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please run atomic test T1136.003, before running this atomic test
 ```
 
@@ -66,14 +66,14 @@ echo Please run atomic test T1136.003, before running this atomic test
 
 ### Command
 
-```sh
+```bash
 aws iam create-group --group-name #{username}
 aws iam add-user-to-group --user-name #{username} --group-name #{username}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 aws iam remove-user-from-group --user-name #{username} --group-name #{username}
 aws iam delete-group --group-name #{username}
 ```

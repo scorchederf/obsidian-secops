@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.005"
 attack_technique_name: "Subvert Trust Controls: Mark-of-the-Web Bypass"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.005/T1553.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "42f22b00-0242-4afc-a61b-0da05041f9cc"
@@ -54,13 +54,13 @@ FeelTheBurn.iso must exist on disk at specified location (#{path_of_iso})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{path_of_iso}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{path_of_iso}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1553.005/bin/FeelTheBurn.iso -OutFile "#{path_of_iso}"
 ```

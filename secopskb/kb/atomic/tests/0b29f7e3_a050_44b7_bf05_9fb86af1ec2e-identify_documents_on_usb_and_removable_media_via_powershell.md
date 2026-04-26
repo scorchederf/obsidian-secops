@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1025"
 attack_technique_name: "Data from Removable Media"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1025/T1025.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "0b29f7e3-a050-44b7-bf05-9fb86af1ec2e"
@@ -45,7 +45,7 @@ how adversaries might scan for sensitive documents on removable devices for exfi
 
 ### Command
 
-```commandprompt
+```cmd
 powershell.exe -c "Get-Volume | Where-Object {$_.DriveType -eq 'Removable'} | ForEach-Object { Get-ChildItem -Path ($_.DriveLetter + ':\*') -Recurse -Include '*.doc*','*.xls*','*.txt','*.pdf' -ErrorAction SilentlyContinue | ForEach-Object {Write-Output $_.FullName} } ; if (-not (Get-Volume | Where-Object {$_.DriveType -eq 'Removable'})) { Write-Output 'No removable media.' }"
 ```
 

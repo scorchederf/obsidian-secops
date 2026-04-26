@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.002"
 attack_technique_name: "OS Credential Dumping: Security Account Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.002/T1003.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9d77fed7-05f8-476e-a81b-8ff0472c64d0"

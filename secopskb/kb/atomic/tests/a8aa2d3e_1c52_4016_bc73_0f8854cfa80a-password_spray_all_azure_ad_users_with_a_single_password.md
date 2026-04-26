@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "a8aa2d3e-1c52-4016-bc73-0f8854cfa80a"
@@ -65,13 +65,13 @@ AzureAD module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AzureAD -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AzureAD -Force
 ```
 

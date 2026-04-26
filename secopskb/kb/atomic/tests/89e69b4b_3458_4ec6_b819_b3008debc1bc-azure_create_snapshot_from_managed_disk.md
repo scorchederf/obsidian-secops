@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1578.001"
 attack_technique_name: "Modify Cloud Compute Infrastructure: Create Snapshot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1578.001/T1578.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "89e69b4b-3458-4ec6-b819-b3008debc1bc"
@@ -64,13 +64,13 @@ Azure CLI must be installed.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if command -v az > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Install Azure CLI: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli"
 ```
 
@@ -78,13 +78,13 @@ Azure CLI must be authenticated.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if az account show > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Login with: az login"
 ```
 
@@ -92,13 +92,13 @@ Azure disk must exist.
 
 ### Prerequisite Check
 
-```text
+```untitled
 if az disk show --resource-group #{azure_resource_group} --name #{azure_disk_name} > /dev/null 2>&1; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Ensure the disk exists in the given resource group."
 ```
 
@@ -109,13 +109,13 @@ echo "Ensure the disk exists in the given resource group."
 
 ### Command
 
-```sh
+```bash
 az snapshot create --resource-group #{azure_resource_group} --name #{azure_snapshot_name} --source #{azure_disk_name} --location eastus
 ```
 
 ### Cleanup
 
-```sh
+```bash
 az snapshot delete --resource-group #{azure_resource_group} --name #{azure_snapshot_name}
 ```
 

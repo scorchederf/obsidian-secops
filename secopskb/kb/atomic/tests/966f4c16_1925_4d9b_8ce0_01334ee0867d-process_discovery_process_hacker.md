@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "966f4c16-1925-4d9b-8ce0-01334ee0867d"
@@ -52,13 +52,13 @@ Process Hacker must be installed in the location
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "c:\Program Files\Process Hacker 2\#{processhacker_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading Process Hacker
 New-Item -Type Directory "C:\Temp\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://versaweb.dl.sourceforge.net/project/processhacker/processhacker2/processhacker-2.39-setup.exe" -OutFile "C:\Temp\ExternalPayloads\processhacker-2.39-setup.exe"

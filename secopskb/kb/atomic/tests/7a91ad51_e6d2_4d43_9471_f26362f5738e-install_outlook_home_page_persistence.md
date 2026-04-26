@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.004"
 attack_technique_name: "Office Application Startup: Outlook Home Page"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.004/T1137.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "7a91ad51-e6d2-4d43-9471-f26362f5738e"
@@ -66,13 +66,13 @@ Triggering the payload requires manually opening Outlook and viewing the targett
 
 ### Command
 
-```commandprompt
+```cmd
 reg.exe add HKCU\Software\Microsoft\Office\#{outlook_version}\Outlook\WebView\#{outlook_folder} /v URL /t REG_SZ /d #{url} /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg.exe delete HKCU\Software\Microsoft\Office\#{outlook_version}\Outlook\WebView\#{outlook_folder} /v URL /f >nul 2>&1
 ```
 

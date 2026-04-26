@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.004"
 attack_technique_name: "Input Capture: Credential API Hooking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.004/T1056.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "de1934ea-1fbf-425b-8795-65fb27dd7e33"
@@ -58,13 +58,13 @@ T1056.004x64.dll must exist on disk at specified location (#{file_name})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_name}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{file_name}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1056.004/bin/T1056.004x64.dll" -OutFile "#{file_name}" -UseBasicParsing
 ```

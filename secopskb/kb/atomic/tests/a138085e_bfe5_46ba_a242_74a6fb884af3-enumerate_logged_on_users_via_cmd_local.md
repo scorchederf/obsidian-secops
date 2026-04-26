@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a138085e-bfe5-46ba-a242-74a6fb884af3"
@@ -42,7 +42,7 @@ Enumerate logged on users. Upon execution, logged on users will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 query user
 ```
 

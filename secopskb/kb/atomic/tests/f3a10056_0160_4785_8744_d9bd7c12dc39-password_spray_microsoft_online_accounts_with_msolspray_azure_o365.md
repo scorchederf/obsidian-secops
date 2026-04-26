@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "f3a10056-0160-4785-8744-d9bd7c12dc39"
@@ -58,13 +58,13 @@ MSOLSpray module must exist in PathToAtomicsFolder\..\ExternalPayloads.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\MSOLSpray.ps1"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://raw.githubusercontent.com/dafthack/MSOLSpray/922f159104fb3ec77c9fc6507a6388a05c227b5f/MSOLSpray.ps1" -outfile "PathToAtomicsFolder\..\ExternalPayloads\MSOLSpray.ps1"
 ```

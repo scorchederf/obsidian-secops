@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.003"
 attack_technique_name: "Indicator Removal on Host: Clear Command History"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.003/T1070.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7e6721df-5f08-4370-9255-f06d8a77af4c"
@@ -43,7 +43,7 @@ Clears the history of a bunch of different shell types by setting the history si
 
 ### Command
 
-```sh
+```bash
 unset HISTFILE
 export HISTFILESIZE=0
 history -c

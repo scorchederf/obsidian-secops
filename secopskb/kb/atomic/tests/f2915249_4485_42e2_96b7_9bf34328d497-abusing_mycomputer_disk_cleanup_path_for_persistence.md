@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "f2915249-4485-42e2-96b7-9bf34328d497"
@@ -44,13 +44,13 @@ Replacing the registry settings with custom executable will end up with the repl
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\cleanuppath" /t REG_EXPAND_SZ /d "%systemroot%\system32\notepad.exe" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\cleanuppath" /t REG_EXPAND_SZ /d "%SystemRoot%\System32\cleanmgr.exe /D %c" /f
 ```
 

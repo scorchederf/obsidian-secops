@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a6a5ec26-a2d1-4109-9d35-58b867689329"
@@ -44,13 +44,13 @@ Edge must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 "Installation is not implemented as Edge is a part of windows"
 ```
 
@@ -58,13 +58,13 @@ Edge login data file must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Default") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $edge="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 Start-Process $edge 
 Start-Sleep -s 20

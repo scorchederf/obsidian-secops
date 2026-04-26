@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.005"
 attack_technique_name: "OS Credential Dumping: Cached Domain Credentials"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.005/T1003.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "56506854-89d6-46a3-9804-b7fde90791f9"
@@ -48,7 +48,7 @@ https://www.peew.pw/blog/2017/11/26/exploring-cmdkey-an-edge-case-for-privilege-
 
 ### Command
 
-```commandprompt
+```cmd
 cmdkey /list
 ```
 

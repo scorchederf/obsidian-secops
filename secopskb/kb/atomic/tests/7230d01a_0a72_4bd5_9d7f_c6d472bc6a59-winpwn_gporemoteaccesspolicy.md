@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1615"
 attack_technique_name: "Group Policy Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1615/T1615.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "7230d01a-0a72-4bd5-9d7f-c6d472bc6a59"

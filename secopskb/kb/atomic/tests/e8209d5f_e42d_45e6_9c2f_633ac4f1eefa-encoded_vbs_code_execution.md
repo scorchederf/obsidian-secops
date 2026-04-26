@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.005"
 attack_technique_name: "Command and Scripting Interpreter: Visual Basic"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.005/T1059.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "e8209d5f-e42d-45e6-9c2f-633ac4f1eefa"
@@ -47,7 +47,7 @@ The 64-bit version of Microsoft Office must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   $wdApp = New-Object -COMObject "Word.Application"
   $path = $wdApp.Path
@@ -58,7 +58,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft Word (64-bit) manually to meet this requirement"
 ```
 

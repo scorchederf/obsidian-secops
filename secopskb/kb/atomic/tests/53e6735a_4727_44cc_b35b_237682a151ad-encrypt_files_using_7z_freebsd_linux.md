@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "53e6735a-4727-44cc-b35b-237682a151ad"
@@ -64,13 +64,13 @@ Finds where 7z is located
 
 ### Prerequisite Check
 
-```text
+```bash
 which_7z=`which 7z`
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y 7-zip)
 ```
 
@@ -81,13 +81,13 @@ which_7z=`which 7z`
 
 ### Command
 
-```sh
+```bash
 $which_7z a -p#{pwd_for_encrypted_file} #{encrypted_file_path} #{input_file_path}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 $which_7z e #{encrypted_file_path}
 rm #{encrypted_file_path}
 ```

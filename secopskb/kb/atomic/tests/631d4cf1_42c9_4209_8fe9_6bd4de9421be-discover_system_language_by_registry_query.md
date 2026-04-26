@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614.001"
 attack_technique_name: "System Location Discovery: System Language Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614.001/T1614.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "631d4cf1-42c9-4209-8fe9-6bd4de9421be"
@@ -44,7 +44,7 @@ Upon successful execution, result in number format can be looked up to correlate
 
 ### Command
 
-```commandprompt
+```cmd
 reg query HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Language
 ```
 

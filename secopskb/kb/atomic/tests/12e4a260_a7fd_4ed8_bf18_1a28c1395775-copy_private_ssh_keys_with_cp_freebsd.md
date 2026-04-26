@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.004"
 attack_technique_name: "Unsecured Credentials: Private Keys"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.004/T1552.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "12e4a260-a7fd-4ed8-bf18-1a28c1395775"
@@ -57,13 +57,13 @@ Install GNU cp from coreutils package.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v gcp)" ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y coreutils)
 ```
 
@@ -73,14 +73,14 @@ if [ ! -x "$(command -v gcp)" ]; then exit 1; else exit 0; fi;
 
 ### Command
 
-```sh
+```bash
 mkdir #{output_folder}
 find #{search_path} -name id_rsa 2>/dev/null -exec gcp --parents {} #{output_folder} \;
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf #{output_folder}
 ```
 

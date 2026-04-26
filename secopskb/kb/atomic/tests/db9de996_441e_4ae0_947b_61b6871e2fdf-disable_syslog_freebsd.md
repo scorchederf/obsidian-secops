@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "db9de996-441e-4ae0-947b-61b6871e2fdf"
@@ -44,14 +44,14 @@ Disables syslog collection
 
 ### Command
 
-```sh
+```bash
 service syslogd stop
 sysrc syslogd_enable="NO"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sysrc syslogd_enable="YES"
 service syslogd start
 ```

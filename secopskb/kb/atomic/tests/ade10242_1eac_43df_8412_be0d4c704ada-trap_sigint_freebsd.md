@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.005"
 attack_technique_name: "Event Triggered Execution: Trap"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.005/T1546.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "ade10242-1eac-43df-8412-be0d4c704ada"
@@ -44,13 +44,13 @@ Check if bash is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v bash)" ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y bash)
 ```
 
@@ -60,13 +60,13 @@ if [ ! -x "$(command -v bash)" ]; then exit 1; else exit 0; fi;
 
 ### Command
 
-```sh
+```bash
 bash -c 'trap "nohup sh $PathToAtomicsFolder/T1546.005/src/echo-art-fish.sh" SIGINT && kill -SIGINT $$'
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f /tmp/art-fish.txt
 ```
 

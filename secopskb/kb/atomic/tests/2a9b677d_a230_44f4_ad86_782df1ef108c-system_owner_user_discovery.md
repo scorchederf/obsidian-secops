@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1033"
 attack_technique_name: "System Owner/User Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1033/T1033.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "2a9b677d-a230-44f4-ad86-782df1ef108c"
@@ -45,7 +45,7 @@ Upon successful execution, sh will stdout list of usernames.
 
 ### Command
 
-```sh
+```bash
 users
 w
 who

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "a743e3a6-e8b2-4a30-abe7-ca85d201b5d3"
@@ -68,13 +68,13 @@ The folder and test files must exist
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -d #{input_folder} ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ ! -d #{input_folder} ]; then mkdir -p #{input_folder}; cd #{input_folder}; touch {a..z}.data; fi;
 ```
 

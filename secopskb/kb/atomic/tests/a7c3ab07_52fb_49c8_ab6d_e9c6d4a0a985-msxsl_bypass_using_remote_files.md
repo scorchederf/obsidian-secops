@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1220"
 attack_technique_name: "XSL Script Processing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1220/T1220.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a7c3ab07-52fb-49c8-ab6d-e9c6d4a0a985"
@@ -66,13 +66,13 @@ msxsl.exe must exist on disk at specified location ("#{msxsl_exe}")
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{msxsl_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://web.archive.org/web/20200803205229if_/https://download.microsoft.com/download/f/2/6/f263ac46-1fe9-4ae9-8fd3-21102100ebf5/msxsl.exe" -OutFile "#{msxsl_exe}"
 ```
 
@@ -82,13 +82,13 @@ Invoke-WebRequest "https://web.archive.org/web/20200803205229if_/https://downloa
 
 ### Command
 
-```commandprompt
+```cmd
 "#{msxsl_exe}" "#{xmlfile}" "#{xslfile}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del -Path #{msxsl_exe} >nul 2>&1
 ```
 

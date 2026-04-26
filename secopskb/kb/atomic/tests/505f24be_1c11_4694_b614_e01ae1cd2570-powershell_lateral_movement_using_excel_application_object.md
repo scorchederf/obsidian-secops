@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.003"
 attack_technique_name: "Remote Services: Distributed Component Object Model"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.003/T1021.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "505f24be-1c11-4694-b614-e01ae1cd2570"
@@ -62,7 +62,7 @@ Microsoft Excel must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 try {
   New-Object -COMObject "Excel.Application" | Out-Null
   Stop-Process -Name "Excel"
@@ -72,7 +72,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host "You will need to install Microsoft Excel manually to meet this requirement"
 ```
 

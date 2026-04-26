@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.006"
 attack_technique_name: "Impair Defenses: Indicator Blocking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.006/T1562.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "6f118276-121d-4c09-bb58-a8fb4a72ee84"
@@ -64,13 +64,13 @@ PSExec must be installed on the machine.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{ps_exec_location}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/PSTools.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\PStools.zip"
 expand-archive -literalpath "PathToAtomicsFolder\..\ExternalPayloads\PStools.zip" -destinationpath "PathToAtomicsFolder\..\ExternalPayloads\pstools" -force

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.008"
 attack_technique_name: "Hide Artifacts: Email Hiding Rules"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.008/T1564.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "30f7d3d1-78e2-4bf0-9efa-a175b5fce2a9"
@@ -71,13 +71,13 @@ ExchangeOnlineManagement module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name ExchangeOnlineManagement -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name ExchangeOnlineManagement -Force
 ```
 

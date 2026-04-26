@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.007"
 attack_technique_name: "Signed Binary Proxy Execution: Msiexec"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.007/T1218.007.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "882082f0-27c6-4eec-a43c-9aa80bccdb30"
@@ -58,13 +58,13 @@ The MSI file must exist on disk at specified location (#{msi_payload})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{msi_payload}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{msi_payload}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.007/bin/T1218.007_JScript.msi" -OutFile "#{msi_payload}"
 ```

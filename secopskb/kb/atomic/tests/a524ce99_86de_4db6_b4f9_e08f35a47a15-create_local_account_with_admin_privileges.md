@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.003"
 attack_technique_name: "Valid Accounts: Local Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a524ce99-86de-4db6-b4f9-e08f35a47a15"
@@ -52,7 +52,7 @@ After execution the new account will be active and added to the Administrators g
 
 ### Command
 
-```commandprompt
+```cmd
 net user art-test /add
 net user art-test #{password}
 net localgroup administrators art-test /add
@@ -60,7 +60,7 @@ net localgroup administrators art-test /add
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net localgroup administrators art-test /delete >nul 2>&1
 net user art-test /delete >nul 2>&1
 ```

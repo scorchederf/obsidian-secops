@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1114.002"
 attack_technique_name: "Email Collection: Remote Email Collection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1114.002/T1114.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "36657d95-d9d6-4fbf-8a31-f4085607bafd"
@@ -71,14 +71,14 @@ Microsoft Graph PowerShell SDK must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule = Get-InstalledModule Microsoft.Graph
 if (-not $RequiredModule) {exit 1} else {exit 0}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 
@@ -86,14 +86,14 @@ Az.Accounts module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule2 = Get-InstalledModule Az.Accounts
 if (-not $RequiredModule2) {exit 1} else {exit 0}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module Az.Accounts -Scope CurrentUser
 ```
 

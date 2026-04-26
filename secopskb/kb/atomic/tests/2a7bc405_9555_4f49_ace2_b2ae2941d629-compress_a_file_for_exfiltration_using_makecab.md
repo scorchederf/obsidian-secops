@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "2a7bc405-9555-4f49-ace2-b2ae2941d629"
@@ -58,13 +58,13 @@ A sample file for compression must be located at specified location (#{input_fil
 
 ### Prerequisite Check
 
-```text
+```untitled
 if not exist "#{input_file}" (exit /b 1)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 fsutil file createnew c:\Temp\sam.hiv 10485760
 ```
 
@@ -75,13 +75,13 @@ fsutil file createnew c:\Temp\sam.hiv 10485760
 
 ### Command
 
-```commandprompt
+```cmd
 makecab.exe #{input_file} #{output_file}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{output_file}
 ```
 

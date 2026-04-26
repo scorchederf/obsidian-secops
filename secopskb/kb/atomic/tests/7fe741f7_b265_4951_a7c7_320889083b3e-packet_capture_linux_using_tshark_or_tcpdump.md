@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "7fe741f7-b265-4951-a7c7-320889083b3e"
@@ -54,13 +54,13 @@ Check if at least one of tcpdump or tshark is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v tcpdump)" ] && [ ! -x "$(command -v tshark)" ]; then exit 1; else exit 0; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install epel-release tcpdump tshark)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y tcpdump tshark)
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1114.003"
 attack_technique_name: "Email Collection: Email Forwarding Rule"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1114.003/T1114.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "3234117e-151d-4254-9150-3d0bac41e38c"
@@ -68,7 +68,7 @@ ExchangeOnlineManagement PowerShell module must be installed. Your user must als
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule = Get-Module -Name ExchangeOnlineManagement -ListAvailable
 if (-not $RequiredModule) {exit 1}
 if (-not $RequiredModule.ExportedCommands['Connect-ExchangeOnline']) {exit 1} else {exit 0}
@@ -76,7 +76,7 @@ if (-not $RequiredModule.ExportedCommands['Connect-ExchangeOnline']) {exit 1} el
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name ExchangeOnlineManagement         
 Import-Module ExchangeOnlineManagement
 ```

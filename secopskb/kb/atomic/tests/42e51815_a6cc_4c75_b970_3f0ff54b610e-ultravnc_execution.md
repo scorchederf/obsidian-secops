@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "42e51815-a6cc-4c75-b970-3f0ff54b610e"
@@ -53,13 +53,13 @@ UltraVNC must exist at (#{UltraVNC_Viewer_Path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{UltraVNC_Viewer_Path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://www.uvnc.eu/download/1381/UltraVNC_1_3_81_X64_Setup.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\vncsetup.exe"
 start-process "PathToAtomicsFolder\..\ExternalPayloads\vncsetup.exe" /silent

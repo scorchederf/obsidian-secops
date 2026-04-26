@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a668edb9-334e-48eb-8c2e-5413a40867af"
@@ -44,13 +44,13 @@ This test requires sshd and auditd
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v auditd)" ]; then echo -e "\n***** auditd NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -61,7 +61,7 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 auditctl -a always,exit -F arch=b64 -S execve -k CMDS 
 auditctl -a always,exit -F arch=b32 -S execve -k CMDS
 whoami; ausearch -i --start now
@@ -69,7 +69,7 @@ whoami; ausearch -i --start now
 
 ### Cleanup
 
-```sh
+```bash
 systemctl restart auditd
 ```
 

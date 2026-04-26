@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1201"
 attack_technique_name: "Password Policy Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1201/T1201.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "46c2c362-2679-4ef5-aec9-0e958e135be4"
@@ -42,7 +42,7 @@ Lists the domain password policy to console on Windows.
 
 ### Command
 
-```commandprompt
+```cmd
 net accounts /domain
 ```
 

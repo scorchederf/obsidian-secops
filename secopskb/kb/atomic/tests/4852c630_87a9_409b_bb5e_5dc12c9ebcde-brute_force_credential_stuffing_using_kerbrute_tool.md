@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.004"
 attack_technique_name: "Brute Force: Credential Stuffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/T1110.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "4852c630-87a9-409b-bb5e-5dc12c9ebcde"
@@ -58,13 +58,13 @@ kerbrute.exe must exist in PathToAtomicsFolder\..\ExternalPayloads
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\kerbrute.exe"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_windows_386.exe" -outfile "PathToAtomicsFolder\..\ExternalPayloads\kerbrute.exe"
 ```
@@ -73,13 +73,13 @@ bruteforce.txt must exist in PathToAtomicsFolder\..\ExternalPayloads
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\bruteforce.txt"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/src/bruteforce.txt?raw=true" -outfile "PathToAtomicsFolder\..\ExternalPayloads\bruteforce.txt"
 ```

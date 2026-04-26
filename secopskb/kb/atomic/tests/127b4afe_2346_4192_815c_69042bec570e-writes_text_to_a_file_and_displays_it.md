@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "127b4afe-2346-4192-815c-69042bec570e"
@@ -56,13 +56,13 @@ Writes text to a file and display the results. This test is intended to emulate 
 
 ### Command
 
-```commandprompt
+```cmd
 echo "#{message}" > "#{file_contents_path}" & type "#{file_contents_path}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del "#{file_contents_path}" >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.006"
 attack_technique_name: "Indicator Removal on Host: Timestomp"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.006/T1070.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "87fffff4-d371-4057-a539-e3b24c37e564"
@@ -57,13 +57,13 @@ The file must exist in order to be timestomped
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -e #{target_filename} && exit 0 || exit 1
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo 'T1070.006 MacOS file modified timestomp test' > #{target_filename}
 ```
 
@@ -73,13 +73,13 @@ echo 'T1070.006 MacOS file modified timestomp test' > #{target_filename}
 
 ### Command
 
-```sh
+```bash
 SetFile -m #{target_date} #{target_filename}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{target_filename}
 ```
 

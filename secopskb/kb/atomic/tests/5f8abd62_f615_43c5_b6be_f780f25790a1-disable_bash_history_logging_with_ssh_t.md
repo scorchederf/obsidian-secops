@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.003"
 attack_technique_name: "Indicator Removal on Host: Clear Command History"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.003/T1070.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "5f8abd62-f615-43c5-b6be-f780f25790a1"
@@ -42,13 +42,13 @@ Install sshpass and create user account used for excuting
 
 ### Prerequisite Check
 
-```text
+```untitled
 $(getent passwd testuser1 >/dev/null) && $(which sshpass >/dev/null)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 [ "$(uname)" = 'FreeBSD' ] && pw useradd testuser1 -g wheel -s /bin/sh || /usr/sbin/useradd testuser1
 [ "$(uname)" = 'FreeBSD' ] && echo 'pwd101!' | pw mod user testuser1 -h 0 || echo -e 'pwd101!\npwd101!' | passwd testuser1
 (which yum && yum -y install epel-release sshpass)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y sshpass)||(which pkg && pkg install -y sshpass)
@@ -60,13 +60,13 @@ $(getent passwd testuser1 >/dev/null) && $(which sshpass >/dev/null)
 
 ### Command
 
-```sh
+```bash
 sshpass -p 'pwd101!' ssh testuser1@localhost -T hostname
 ```
 
 ### Cleanup
 
-```sh
+```bash
 [ "$(uname)" = 'FreeBSD' ] && rmuser -y testuser1 || userdel -f testuser1
 ```
 

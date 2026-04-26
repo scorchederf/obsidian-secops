@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.010"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvr32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "1ae5ea1f-0a4e-4e54-b2f5-4ac328a7f421"
@@ -64,13 +64,13 @@ Test requires a renamed dll file
 
 ### Prerequisite Check
 
-```text
+```cmd
 if exist #{dll_file} ( exit 0 ) else ( exit 1 )
 ```
 
 ### Get Prerequisite
 
-```text
+```cmd
 copy "C:\Windows\System32\shell32.dll" "#{dll_file}"
 ```
 
@@ -81,13 +81,13 @@ copy "C:\Windows\System32\shell32.dll" "#{dll_file}"
 
 ### Command
 
-```commandprompt
+```cmd
 #{regsvr32path}\#{regsvr32name} /s #{dll_file}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 #{regsvr32path}\#{regsvr32name} /U /s #{dll_file}
 ```
 

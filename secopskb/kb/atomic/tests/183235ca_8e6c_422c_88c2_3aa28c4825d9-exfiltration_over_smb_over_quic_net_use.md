@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1570"
 attack_technique_name: "Lateral Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1570/T1570.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "183235ca-8e6c-422c-88c2-3aa28c4825d9"

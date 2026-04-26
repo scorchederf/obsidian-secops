@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546"
 attack_technique_name: "Event Triggered Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546/T1546.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "b7fc4c3f-fe6e-479a-ba27-ef91b88536e3"
@@ -45,13 +45,13 @@ If such key exists, the OS will attempt to read the Path value underneath.Once t
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\TestDVCPlugin" /v Path /t REG_SZ /d "C:\Windows\System32\amsi.dll" /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\TestDVCPlugin" /f
 ```
 

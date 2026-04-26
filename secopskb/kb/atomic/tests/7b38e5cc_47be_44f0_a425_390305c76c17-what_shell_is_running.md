@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7b38e5cc-47be-44f0-a425-390305c76c17"
@@ -44,7 +44,7 @@ An adversary will want to discover what shell is running so that they can tailor
 
 ### Command
 
-```sh
+```bash
 echo $0
 if $(env |grep "SHELL" >/dev/null); then env |grep "SHELL"; fi
 if $(printenv SHELL >/dev/null); then printenv SHELL; fi

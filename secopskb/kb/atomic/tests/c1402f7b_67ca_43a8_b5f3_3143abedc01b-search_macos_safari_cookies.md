@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "c1402f7b-67ca-43a8-b5f3-3143abedc01b"
@@ -52,7 +52,7 @@ Upon successful execution, MacOS shell will cd to `~/Libraries/Cookies` and grep
 
 ### Command
 
-```sh
+```bash
 cd ~/Library/Cookies
 grep -q "#{search_string}" "Cookies.binarycookies"
 ```

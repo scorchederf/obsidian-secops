@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1005"
 attack_technique_name: "Data from Local System"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1005/T1005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d3d9af44-b8ad-4375-8b0a-4bff4b7e419c"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.004"
 attack_technique_name: "Boot or Logon Autostart Execution: Winlogon Helper DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.004/T1547.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "fb32c935-ee2e-454b-8fa3-1c46b42e8dfb"

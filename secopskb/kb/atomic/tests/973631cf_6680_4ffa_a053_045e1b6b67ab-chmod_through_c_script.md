@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.002"
 attack_technique_name: "File and Directory Permissions Modification: FreeBSD, Linux and Mac File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.002/T1222.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "973631cf-6680-4ffa-a053-045e1b6b67ab"
@@ -58,13 +58,13 @@ Compile the script from (#{source_file}). Destination is #{compiled_file}
 
 ### Prerequisite Check
 
-```text
+```bash
 gcc #{source_file} -o #{compiled_file}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 gcc #{source_file} -o #{compiled_file}
 ```
 
@@ -74,7 +74,7 @@ gcc #{source_file} -o #{compiled_file}
 
 ### Command
 
-```sh
+```bash
 #{compiled_file} /tmp/ T1222002
 ```
 

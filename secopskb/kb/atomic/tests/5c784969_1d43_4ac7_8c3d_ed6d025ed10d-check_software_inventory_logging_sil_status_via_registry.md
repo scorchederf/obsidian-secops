@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1012"
 attack_technique_name: "Query Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1012/T1012.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "5c784969-1d43-4ac7-8c3d-ed6d025ed10d"
@@ -46,7 +46,7 @@ check for existence of software of interest to them. Status of SIL can be checke
 
 ### Command
 
-```commandprompt
+```cmd
 reg.exe query hklm\software\microsoft\windows\softwareinventorylogging /v collectionstate /reg:64
 ```
 

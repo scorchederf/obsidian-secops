@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.006"
 attack_technique_name: "Indicator Removal on Host: Timestomp"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.006/T1070.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8164a4a6-f99c-4661-ac4f-80f5e4e78d2b"
@@ -56,7 +56,7 @@ Sudo or root privileges are required to change date. Use with caution.
 
 ### Command
 
-```sh
+```bash
 NOW=$(date +%m%d%H%M%Y)
 date 010100001971
 touch #{target_filename}
@@ -66,7 +66,7 @@ stat #{target_filename}
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{target_filename}
 ```
 

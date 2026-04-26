@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1539"
 attack_technique_name: "Steal Web Session Cookie"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1539/T1539.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "e43cfdaf-3fb8-4a45-8de0-7eee8741d072"
@@ -50,13 +50,13 @@ Install Go
 
 ### Prerequisite Check
 
-```text
+```bash
 go version
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 brew install go
 ```
 
@@ -64,13 +64,13 @@ Download and compile WhiteChocolateMacademiaNut
 
 ### Prerequisite Check
 
-```text
+```bash
 /tmp/WhiteChocolateMacademiaNut/chocolate -h
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 git clone https://github.com/slyd0g/WhiteChocolateMacademiaNut.git /tmp/WhiteChocolateMacademiaNut
 cd /tmp/WhiteChocolateMacademiaNut
 go mod init chocolate

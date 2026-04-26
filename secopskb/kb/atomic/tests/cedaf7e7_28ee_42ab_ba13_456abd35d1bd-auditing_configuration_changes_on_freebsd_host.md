@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.006"
 attack_technique_name: "Impair Defenses: Indicator Blocking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.006/T1562.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "cedaf7e7-28ee-42ab-ba13-456abd35d1bd"
@@ -52,13 +52,13 @@ Emulates modification of auditd configuration files
 
 ### Command
 
-```sh
+```bash
 echo '#art_test_1562_006_1' >> /etc/security/#{auditd_config_file_name}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sed -i "" '/#art_test_1562_006_1/d' /etc/security/#{auditd_config_file_name}
 ```
 

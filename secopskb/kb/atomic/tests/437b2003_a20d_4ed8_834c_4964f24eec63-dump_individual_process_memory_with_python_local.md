@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.007"
 attack_technique_name: "OS Credential Dumping: Proc Filesystem"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "437b2003-a20d-4ed8-834c-4964f24eec63"
@@ -71,14 +71,14 @@ Script to launch target process must exist
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -f #{script_path}
 grep "#{pid_term}" #{script_path}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo '#!/bin/sh' > #{script_path}
 echo "sh -c 'echo \"The password is #{pid_term}\" && sleep 30' &" >> #{script_path}
 ```
@@ -87,13 +87,13 @@ Requires Python
 
 ### Prerequisite Check
 
-```text
+```untitled
 (which python || which python3 || which python2)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Python 2.7+ or 3.4+ must be installed"
 ```
 
@@ -104,7 +104,7 @@ echo "Python 2.7+ or 3.4+ must be installed"
 
 ### Command
 
-```sh
+```bash
 sh #{script_path}
 PID=$(pgrep -n -f "#{pid_term}")
 PYTHON=$(which python || which python3 || which python2)
@@ -114,7 +114,7 @@ grep -i "PASS" "#{output_file}"
 
 ### Cleanup
 
-```sh
+```bash
 rm -f "#{output_file}"
 ```
 

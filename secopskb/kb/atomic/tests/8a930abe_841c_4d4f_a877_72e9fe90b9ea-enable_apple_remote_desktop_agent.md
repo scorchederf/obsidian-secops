@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.005"
 attack_technique_name: "Remote Services:VNC"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.005/T1021.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "8a930abe-841c-4d4f-a877-72e9fe90b9ea"
@@ -47,13 +47,13 @@ References:  https://www.mandiant.com/resources/blog/leveraging-apple-remote-des
 
 ### Command
 
-```sh
+```bash
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -allowAccessFor -allUsers -privs -all -quiet
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -deactivate -stop -configure -privs -none -quiet
 ```
 

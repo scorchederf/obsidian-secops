@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "3448824b-3c35-4a9e-a8f5-f887f68bea21"
@@ -44,13 +44,13 @@ Must have the "MR9" Remote Desktop Connection history Key
 
 ### Prerequisite Check
 
-```text
+```powershell
 if ((Get-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Terminal Server Client\Default\").MR9) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -path "HKCU:\SOFTWARE\Microsoft\" -name "Terminal Server Client"  -ErrorAction Ignore
 New-Item -path "HKCU:\SOFTWARE\Microsoft\Terminal Server Client\" -name "Default" -ErrorAction Ignore
 New-Itemproperty -path "HKCU:\SOFTWARE\Microsoft\Terminal Server Client\Default" -name "MR9" -value "127.0.0.1"  -PropertyType "String" -ErrorAction Ignore
@@ -65,7 +65,7 @@ New-Item -path "HKCU:\SOFTWARE\Microsoft\Terminal Server Client\Servers" -name "
 
 ### Command
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default" /va /f
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Servers" /f
 ```

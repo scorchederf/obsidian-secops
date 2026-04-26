@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.003"
 attack_technique_name: "Event Triggered Execution: Windows Management Instrumentation Event Subscription"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.003/T1546.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "3c64f177-28e2-49eb-a799-d767b24dd1e0"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "228c336a-2f79-4043-8aef-bfa453a611d5"
@@ -72,13 +72,13 @@ Download cloudflared
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -f "#{binary_path}" && exit 0 || exit 1
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 ARCH_SUFFIX=$(uname -m | grep -q "arm64\|aarch64" && echo "arm64" || echo "amd64")
 if [ "$(uname)" = "Darwin" ]
 then curl -L "#{cloudflared_artifact_base_url}/cloudflared-darwin-${ARCH_SUFFIX}.tgz" -o "$(dirname #{binary_path})/cloudflared-darwin-${ARCH_SUFFIX}.tgz" 
@@ -99,13 +99,13 @@ fi
 
 ### Command
 
-```sh
+```bash
 nohup #{binary_path} tunnel --url #{url_to_tunnel} #{additional_args} >/dev/null 2>&1 &
 ```
 
 ### Cleanup
 
-```sh
+```bash
 pkill -9 $(basename "#{binary_path}")
 rm -f "#{binary_path}"
 ```

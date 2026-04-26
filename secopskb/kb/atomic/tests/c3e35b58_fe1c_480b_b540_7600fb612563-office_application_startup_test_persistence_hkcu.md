@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.002"
 attack_technique_name: "Office Application Startup: Office Test"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.002/T1137.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "c3e35b58-fe1c-480b-b540-7600fb612563"
@@ -43,7 +43,7 @@ Microsoft Word must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 try {
   New-Object -COMObject "Word.Application" | Out-Null
   Stop-Process -Name "winword"
@@ -53,7 +53,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host "You will need to install Microsoft Word manually to meet this requirement"
 ```
 
@@ -61,13 +61,13 @@ DLL files must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```untitled
 if ((Test-Path "PathToAtomicsFolder\T1137.002\bin\officetest_x64.dll") -and (Test-Path "PathToAtomicsFolder\T1137.002\bin\officetest_x86.dll")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\T1137.002\bin\" -Force | Out-Null
 Invoke-Webrequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1137.002/bin/officetest_x64.dll" -UseBasicParsing -OutFile "PathToAtomicsFolder\T1137.002\bin\officetest_x64.dll"
 Invoke-Webrequest -Uri "htps://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1137.002/bin/officetest_x86.dll" -UseBasicParsing -OutFile "PathToAtomicsFolder\T1137.002\bin\officetest_x86.dll"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "bf07f520-3909-4ef5-aa22-877a50f2f77b"
@@ -45,7 +45,7 @@ Modify permissions of Service Control Manager via SDSET. This allows any adminis
 
 ### Command
 
-```commandprompt
+```cmd
 sc.exe sdset scmanager D:(A;;KA;;;WD)
 ```
 

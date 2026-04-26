@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.004"
 attack_technique_name: "Obfuscated Files or Information: Compile After Delivery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.004/T1027.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "453614d8-3ba6-4147-acc0-7ec4b3e1faef"
@@ -54,13 +54,13 @@ exe file must exist on disk at specified location (#{input_file})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{input_file}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1027.004/bin/T1027.004_DynamicCompile.exe -OutFile "#{input_file}"
 ```
 

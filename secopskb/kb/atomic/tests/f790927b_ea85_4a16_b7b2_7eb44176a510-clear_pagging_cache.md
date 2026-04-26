@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "f790927b-ea85-4a16-b7b2-7eb44176a510"
@@ -45,7 +45,7 @@ of its malicious payload on the compromised host. added reference link for this 
 
 ### Command
 
-```sh
+```bash
 free && echo 3 > /proc/sys/vm/drop_caches && free
 echo 3> /proc/sys/vm/drop_caches
 ```

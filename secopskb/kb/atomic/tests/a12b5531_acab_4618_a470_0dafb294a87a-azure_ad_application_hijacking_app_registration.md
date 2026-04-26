@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.001"
 attack_technique_name: "Account Manipulation: Additional Cloud Credentials"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.001/T1098.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "a12b5531-acab-4618-a470-0dafb294a87a"
@@ -66,13 +66,13 @@ AzureAD module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AzureAD -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AzureAD -Force
 ```
 

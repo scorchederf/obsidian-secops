@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "4ff64f0b-aaf2-4866-b39d-38d9791407cc"
@@ -53,14 +53,14 @@ Upon successful execution, sh will execute ps and output to /tmp/loot.txt.
 
 ### Command
 
-```sh
+```bash
 ps >> #{output_file}
 ps aux >> #{output_file}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file}
 ```
 

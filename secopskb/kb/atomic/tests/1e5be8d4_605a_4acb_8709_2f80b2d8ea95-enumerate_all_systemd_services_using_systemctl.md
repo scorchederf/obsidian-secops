@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "1e5be8d4-605a-4acb-8709-2f80b2d8ea95"
@@ -51,13 +51,13 @@ systemctl must be available on the system
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v systemctl)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "systemctl is not available. Ensure systemd is running on this system."
 ```
 
@@ -68,14 +68,14 @@ echo "systemctl is not available. Ensure systemd is running on this system."
 
 ### Command
 
-```sh
+```bash
 systemctl list-units --type=service --all
 systemctl list-unit-files --type=service
 ```
 
 ### Cleanup
 
-```sh
+```bash
 echo "No cleanup required"
 ```
 

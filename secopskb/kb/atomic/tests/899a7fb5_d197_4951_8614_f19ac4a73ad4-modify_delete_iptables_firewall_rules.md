@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "899a7fb5-d197-4951-8614-f19ac4a73ad4"
@@ -45,14 +45,14 @@ Check if iptables is installed on the machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v iptables)" ]; then echo -e "\n***** iptables NOT installed *****\n"; exit 1; fi
 if ! echo "$(iptables -L)" | grep -q "DROP .*dpt:ftp"; then echo -e "\n***** this firewall rule is NOT activated *****\n***** activate it by executing \"iptables -A OUTPUT -p tcp --dport 21 -j DROP\" *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 iptables-save > /tmp/iptables.rules
 if echo "$(iptables -L)" | grep -q "DROP .*dpt:ftp"; then echo "Rule found"; else echo "Rule not found. Setting it..."; iptables -A OUTPUT -p tcp --dport 21 -j DROP; fi
 ```
@@ -64,13 +64,13 @@ if echo "$(iptables -L)" | grep -q "DROP .*dpt:ftp"; then echo "Rule found"; els
 
 ### Command
 
-```sh
+```bash
 iptables -D OUTPUT -p tcp --dport 21 -j DROP
 ```
 
 ### Cleanup
 
-```sh
+```bash
 iptables-restore < /tmp/iptables.rules
 ```
 

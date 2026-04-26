@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "6c2da894-0b57-43cb-87af-46ea3b501388"
@@ -43,13 +43,13 @@ Check if ip command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v ip)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 apt-get install iproute2 -y
 ```
 
@@ -59,7 +59,7 @@ apt-get install iproute2 -y
 
 ### Command
 
-```sh
+```bash
 ip tcp_metrics show |grep --invert-match "^127\."
 ```
 

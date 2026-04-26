@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.004"
 attack_technique_name: "Steal or Forge Kerberos Tickets: AS-REP Roasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.004/T1558.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "615bd568-2859-41b5-9aed-61f6a88e48dd"
@@ -71,13 +71,13 @@ Computer must be domain joined
 
 ### Prerequisite Check
 
-```text
+```powershell
 if((Get-CIMInstance -Class Win32_ComputerSystem).PartOfDomain) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Joining this computer to a domain must be done manually
 ```
 
@@ -85,13 +85,13 @@ Rubeus must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path -Path "#{local_folder}\#{local_executable}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-Webrequest -Uri #{rubeus_url} -OutFile #{local_folder}\#{local_executable}
 ```

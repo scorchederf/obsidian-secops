@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.015"
 attack_technique_name: "Event Triggered Execution: Component Object Model Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.015/T1546.015.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "752191b1-7c71-445c-9dbe-21bb031b18eb"

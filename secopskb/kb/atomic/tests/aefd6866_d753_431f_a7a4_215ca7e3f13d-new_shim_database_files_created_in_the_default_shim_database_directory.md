@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.011"
 attack_technique_name: "Event Triggered Execution: Application Shimming"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.011/T1546.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "aefd6866-d753-431f-a7a4-215ca7e3f13d"

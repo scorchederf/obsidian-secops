@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "1f73af33-62a8-4bf1-bd10-3bea931f2c0d"
@@ -52,7 +52,7 @@ This test sets the SetGID flag on a file in FreeBSD.
 
 ### Command
 
-```sh
+```bash
 touch #{file_to_setuid}
 chown root #{file_to_setuid}
 chmod g+xs #{file_to_setuid}
@@ -60,7 +60,7 @@ chmod g+xs #{file_to_setuid}
 
 ### Cleanup
 
-```sh
+```bash
 rm #{file_to_setuid}
 ```
 

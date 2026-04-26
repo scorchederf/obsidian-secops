@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1489"
 attack_technique_name: "Service Stop"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1489/T1489.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "08b4718f-a8bf-4bb5-a552-294fc5178fea"
@@ -61,13 +61,13 @@ You can list all available services with following command: "systemctl list-unit
 
 ### Command
 
-```sh
+```bash
 sudo pkill -SIGTERM #{process_pattern}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo systemctl start #{service_name} 2> /dev/null
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "71abc534-3c05-4d0c-80f7-cbe93cb2aa94"
@@ -50,7 +50,7 @@ Rename certutil and decode a file. This is in reference to latest research by Fi
 
 ### Command
 
-```commandprompt
+```cmd
 copy %windir%\system32\certutil.exe %temp%\tcm.tmp
 %temp%\tcm.tmp -encode #{executable} %temp%\T1140_calc2.txt
 %temp%\tcm.tmp -decode %temp%\T1140_calc2.txt %temp%\T1140_calc2_decoded.exe
@@ -58,7 +58,7 @@ copy %windir%\system32\certutil.exe %temp%\tcm.tmp
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %temp%\tcm.tmp >nul 2>&1
 del %temp%\T1140_calc2.txt >nul 2>&1
 del %temp%\T1140_calc2_decoded.exe >nul 2>&1

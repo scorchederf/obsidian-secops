@@ -176,8 +176,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "bf4dbdba13e21401",
+  "active": "7de01b302d7d3444",
   "lastOpenFiles": [
+    "post.zip",
     "c.zip",
     "b.zip",
     "kb/atomic/tests/04bb8e3d_1670_46ab_a3f1_5cee64da29b6-embedded_script_in_image_execution_via_extract_invoke_psimage.md",
@@ -212,7 +213,6 @@
     "kb/atomic/platforms",
     "kb/atomic/executors",
     "kb/atomic",
-    "kb/sigma/techniques",
-    "kb/sigma/rules"
+    "kb/sigma/techniques"
   ]
 }

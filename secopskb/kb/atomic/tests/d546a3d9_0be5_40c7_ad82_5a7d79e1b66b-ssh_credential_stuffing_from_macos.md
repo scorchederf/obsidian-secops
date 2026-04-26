@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.004"
 attack_technique_name: "Brute Force: Credential Stuffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/T1110.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "d546a3d9-0be5-40c7-ad82-5a7d79e1b66b"
@@ -52,13 +52,13 @@ Requires SSHPASS
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v sshpass)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/e8114640740938c20cc41ffdbf07816b428afc49/install.sh)"
 brew install hudochenkov/sshpass/sshpass
 ```

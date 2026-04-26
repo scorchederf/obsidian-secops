@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "356dc0e8-684f-4428-bb94-9313998ad608"
@@ -58,13 +58,13 @@ Python must be present
 
 ### Prerequisite Check
 
-```text
+```untitled
 which python3
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Please install Python 3"
 ```
 
@@ -75,7 +75,7 @@ echo "Please install Python 3"
 
 ### Command
 
-```sh
+```bash
 ENCODED=$(python3 -c 'import base64;enc=base64.b64encode("#{message}".encode());print(enc.decode())')
 python3 -c "import base64;dec=base64.b64decode(\"$ENCODED\");print(dec.decode())"
 python3 -c "import base64 as d;dec=d.b64decode(\"$ENCODED\");print(dec.decode())"

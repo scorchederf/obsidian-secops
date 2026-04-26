@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137"
 attack_technique_name: "Office Application Startup"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137/T1137.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "bfe6ac15-c50b-4c4f-a186-0fc6b8ba936c"
@@ -46,7 +46,7 @@ Too achieve this two things must happened on the syste
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Security" /v Level /t REG_DWORD /d 1 /f
 mkdir  %APPDATA%\Microsoft\Outlook\ >nul 2>&1
 echo "Atomic Red Team TEST" > %APPDATA%\Microsoft\Outlook\VbaProject.OTM
@@ -54,7 +54,7 @@ echo "Atomic Red Team TEST" > %APPDATA%\Microsoft\Outlook\VbaProject.OTM
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Security" /v Level /f >nul 2>&1
 del %APPDATA%\Microsoft\Outlook\VbaProject.OTM >nul 2>&1
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.003"
 attack_technique_name: "Create or Modify System Process: Windows Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "ef0581fd-528e-4662-87bc-4c2affb86940"
@@ -54,7 +54,7 @@ It's running Dll as service to emulate the TinyTurla backdoor
 
 ### Command
 
-```commandprompt
+```cmd
 copy "#{dllfilename}" %systemroot%\system32\
 sc create W64Time binPath= "c:\Windows\System32\svchost.exe -k TimeService" type= share start=auto
 sc config W64Time DisplayName= "Windows 64 Time"
@@ -66,7 +66,7 @@ sc start W64Time
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc stop W64Time
 sc.exe delete W64Time
 del %systemroot%\system32\w64time.dll

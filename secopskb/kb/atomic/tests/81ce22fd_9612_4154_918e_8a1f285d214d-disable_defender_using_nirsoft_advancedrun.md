@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "81ce22fd-9612-4154-918e-8a1f285d214d"
@@ -61,13 +61,13 @@ Advancedrun.exe must exist at #{AdvancedRun_Location}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path -Path "#{AdvancedRun_Location}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "http://www.nirsoft.net/utils/advancedrun.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\advancedrun.zip"
 Expand-Archive -path "PathToAtomicsFolder\..\ExternalPayloads\advancedrun.zip" -destinationpath "PathToAtomicsFolder\..\ExternalPayloads\" -Force

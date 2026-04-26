@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.001"
 attack_technique_name: "Create Account: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "fda74566-a604-4581-a4cc-fbbe21d66559"
@@ -58,14 +58,14 @@ Creates a new admin user in a command prompt.
 
 ### Command
 
-```commandprompt
+```cmd
 net user /add "#{username}" "#{password}"
 net localgroup administrators "#{username}" /add
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net user /del "#{username}" >nul 2>&1
 ```
 

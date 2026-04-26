@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1606.002"
 attack_technique_name: "Forge Web Credentials: SAML token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1606.002/T1606.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "b16a03bc-1089-4dcc-ad98-30fe8f3a2b31"
@@ -65,13 +65,13 @@ AADInternals module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Get-Module AADInternals) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AADInternals -Force
 ```
 

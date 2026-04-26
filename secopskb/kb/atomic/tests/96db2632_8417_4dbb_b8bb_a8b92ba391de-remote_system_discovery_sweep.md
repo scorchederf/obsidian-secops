@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "96db2632-8417-4dbb-b8bb-a8b92ba391de"
@@ -65,7 +65,7 @@ Upon successful execution, sh will perform a ping sweep on the 192.168.1.1/24 an
 
 ### Command
 
-```sh
+```bash
 for ip in $(seq #{start_host} #{stop_host}); do ping -c 1 #{subnet}.$ip; [ $? -eq 0 ] && echo "#{subnet}.$ip UP" || : ; done
 ```
 

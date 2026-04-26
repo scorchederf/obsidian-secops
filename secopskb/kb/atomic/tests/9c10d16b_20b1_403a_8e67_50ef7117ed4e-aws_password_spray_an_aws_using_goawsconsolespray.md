@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "9c10d16b-20b1-403a-8e67-50ef7117ed4e"
@@ -51,13 +51,13 @@ Check if go is installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 go version
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Install GO
 ```
 
@@ -68,7 +68,7 @@ echo Install GO
 
 ### Command
 
-```sh
+```bash
 cd /tmp
 git clone git@github.com:WhiteOakSecurity/GoAWSConsoleSpray.git
 cd /tmp/GoAWSConsoleSpray
@@ -77,7 +77,7 @@ go run main.go GoAWSConsoleSpray -a #{aws_account_id} -u PathToAtomicsFolder/T11
 
 ### Cleanup
 
-```sh
+```bash
 rm -rf /tmp/GoAWSConsoleSpray
 ```
 

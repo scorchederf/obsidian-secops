@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "24136435-c91a-4ede-9da1-8b284a1c1a23"
@@ -45,13 +45,13 @@ Wscript file to execute must exist on disk
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\T1036.003\src\T1036.003_masquerading.vbs") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "PathToAtomicsFolder\..\ExternalPayloads\T1036.003\src\T1036.003_masquerading.vbs") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1036.003/src/T1036.003_masquerading.vbs" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\T1036.003\src\T1036.003_masquerading.vbs"
 ```
@@ -62,14 +62,14 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 copy %SystemRoot%\System32\wscript.exe %APPDATA%\svchost.exe /Y
 cmd.exe /c %APPDATA%\svchost.exe "PathToAtomicsFolder\..\ExternalPayloads\T1036.003\src\T1036.003_masquerading.vbs"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /Q /F %APPDATA%\svchost.exe >nul 2>&1
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a538de64-1c74-46ed-aa60-b995ed302598"
@@ -50,7 +50,7 @@ Use of obfuscated PowerShell to execute an arbitrary command; outputs "Hello, fr
 
 ### Command
 
-```commandprompt
+```cmd
 powershell.exe -e  #{obfuscated_code}
 ```
 

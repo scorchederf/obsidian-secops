@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "7af2b51e-ad1c-498c-aca8-d3290c19535a"
@@ -58,13 +58,13 @@ Folder to zip must exist (#{input_file_folder})
 
 ### Prerequisite Check
 
-```text
+```untitled
 test -e #{input_file_folder}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 mkdir -p #{input_file_folder} && touch #{input_file_folder}/file1
 ```
 
@@ -75,13 +75,13 @@ mkdir -p #{input_file_folder} && touch #{input_file_folder}/file1
 
 ### Command
 
-```sh
+```bash
 tar -cvzf #{output_file} #{input_file_folder}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm -f #{output_file}
 ```
 

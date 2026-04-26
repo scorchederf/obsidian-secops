@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "d9b633ca-8efb-45e6-b838-70f595c6ae26"
@@ -55,13 +55,13 @@ Get-Keystrokes PowerShell script must exist on disk at PathToAtomicsFolder\T1056
 
 ### Prerequisite Check
 
-```text
+```untitled
 if (Test-Path "PathToAtomicsFolder\T1056.001\src\Get-Keystrokes.ps1") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -ItemType Directory (Split-Path "PathToAtomicsFolder\T1056.001\src\Get-Keystrokes.ps1") -Force | Out-Null
 Invoke-WebRequest https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1056.001/src/Get-Keystrokes.ps1 -OutFile "PathToAtomicsFolder\T1056.001\src\Get-Keystrokes.ps1"
 ```

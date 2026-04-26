@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.006"
 attack_technique_name: "Command and Scripting Interpreter: Python"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.006/T1059.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "6c4d1dcb-33c7-4c36-a8df-c6cfd0408be8"
@@ -75,14 +75,14 @@ Requires Python
 
 ### Prerequisite Check
 
-```text
+```bash
 which_python=$(which python || which python3 || which python3.9 || which python2); $which_python -V
 $which_python -c 'import requests' 2>/dev/null; echo $?
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 pip install requests
 ```
 
@@ -92,7 +92,7 @@ pip install requests
 
 ### Command
 
-```sh
+```bash
 which_python=$(which python || which python3 || which python3.9 || which python2)
 echo 'import requests' > #{python_script_name}
 echo 'import os' >> #{python_script_name}
@@ -109,7 +109,7 @@ $which_python #{python_script_name}
 
 ### Cleanup
 
-```sh
+```bash
 rm #{python_script_name} #{payload_file_name}
 ```
 

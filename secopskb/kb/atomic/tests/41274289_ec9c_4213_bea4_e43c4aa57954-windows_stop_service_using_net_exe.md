@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1489"
 attack_technique_name: "Service Stop"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1489/T1489.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "41274289-ec9c-4213-bea4-e43c4aa57954"
@@ -54,13 +54,13 @@ started by running the cleanup command.
 
 ### Command
 
-```commandprompt
+```cmd
 net.exe stop #{service_name}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net.exe start #{service_name} >nul 2>&1
 ```
 

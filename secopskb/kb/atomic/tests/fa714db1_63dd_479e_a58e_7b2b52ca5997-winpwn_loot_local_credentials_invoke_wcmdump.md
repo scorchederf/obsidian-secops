@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.004"
 attack_technique_name: "Credentials from Password Stores: Windows Credential Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.004/T1555.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "fa714db1-63dd-479e-a58e-7b2b52ca5997"

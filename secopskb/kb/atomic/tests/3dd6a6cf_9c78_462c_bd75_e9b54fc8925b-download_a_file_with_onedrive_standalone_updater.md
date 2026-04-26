@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "3dd6a6cf-9c78-462c-bd75-e9b54fc8925b"
@@ -60,13 +60,13 @@ OneDriveStandaloneUpdater.exe must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{onedrive_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "OneDriveStandaloneUpdater.exe not found at #{onedrive_path}. Please install OneDrive or specify correct path."
 ```
 

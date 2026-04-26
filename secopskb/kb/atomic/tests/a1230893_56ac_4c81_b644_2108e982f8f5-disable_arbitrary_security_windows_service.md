@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "a1230893-56ac-4c81-b644-2108e982f8f5"
@@ -54,14 +54,14 @@ To verify that the service has stopped, run "sc query McAfeeDLPAgentService"
 
 ### Command
 
-```commandprompt
+```cmd
 net.exe stop #{service_name}
 sc.exe config #{service_name} start= disabled
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sc.exe config #{service_name} start= auto >nul 2>&1
 net.exe start #{service_name} >nul 2>&1
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.010"
 attack_technique_name: "Boot or Logon Autostart Execution: Port Monitors"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.010/T1547.010.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "d34ef297-f178-4462-871e-9ce618d44e50"
@@ -52,13 +52,13 @@ Add key-value pair to a Windows Port Monitor registry. On the subsequent reboot 
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "hklm\system\currentcontrolset\control\print\monitors\AtomicRedTeam" /v "Driver" /d "#{monitor_dll}" /t REG_SZ /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "hklm\system\currentcontrolset\control\print\monitors\AtomicRedTeam" /f >nul 2>&1
 ```
 

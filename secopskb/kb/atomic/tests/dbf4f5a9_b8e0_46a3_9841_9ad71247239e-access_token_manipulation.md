@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.002"
 attack_technique_name: "Create Process with Token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.002/T1134.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "dbf4f5a9-b8e0-46a3-9841-9ad71247239e"

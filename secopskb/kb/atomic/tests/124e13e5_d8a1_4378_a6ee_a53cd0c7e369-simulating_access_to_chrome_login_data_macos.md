@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "124e13e5-d8a1-4378-a6ee-a53cd0c7e369"
@@ -44,14 +44,14 @@ See https://unit42.paloaltonetworks.com/mac-malware-steals-cryptocurrency-exchan
 
 ### Command
 
-```sh
+```bash
 cp ~/Library/"Application Support/Google/Chrome/Default/Login Data" "/tmp/T1555.003_Login Data"
 cp ~/Library/"Application Support/Google/Chrome/Default/Login Data For Account" "/tmp/T1555.003_Login Data For Account"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm "/tmp/T1555.003_Login Data" >/dev/null 2>&1
 rm "/tmp/T1555.003_Login Data For Account" >/dev/null 2>&1
 ```

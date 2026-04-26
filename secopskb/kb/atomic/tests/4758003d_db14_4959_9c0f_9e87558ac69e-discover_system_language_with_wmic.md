@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614.001"
 attack_technique_name: "System Location Discovery: System Language Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614.001/T1614.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "4758003d-db14-4959-9c0f-9e87558ac69e"
@@ -65,7 +65,7 @@ For example: "DESKTOP-123" or "'DESKTOP-123'".
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /node:#{target_host} os get Locale,OSLanguage,MUILanguages /format:#{format_style}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.002"
 attack_technique_name: "Create or Modify System Process: SysV/Systemd Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.002/T1543.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "760fe8d2-79d9-494f-905e-a239a3df86f6"
@@ -58,7 +58,7 @@ This test creates a SysV service unit file and enables it as a service.
 
 ### Command
 
-```sh
+```bash
 echo '#\!/bin/sh' > #{rc_service_path}/#{rc_service_file}
 echo ' ' >> #{rc_service_path}/#{rc_service_file}
 echo '#' >> #{rc_service_path}/#{rc_service_file}
@@ -87,7 +87,7 @@ service art-test start
 
 ### Cleanup
 
-```sh
+```bash
 sysrc -x art_test_enable
 rm -f #{rc_service_path}/#{rc_service_file}
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1083"
 attack_technique_name: "File and Directory Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "13c5e1ae-605b-46c4-a79f-db28c77ff24e"
@@ -51,7 +51,7 @@ Find or discover files on the file system
 
 ### Command
 
-```sh
+```bash
 cd $HOME && find . -print | sed -e 's;[^/]*/;|__;g;s;__|; |;g' > #{output_file}
 if [ -f /etc/mtab ]; then cat /etc/mtab >> #{output_file}; fi;
 find . -type f -iname *.pdf >> #{output_file}
@@ -61,7 +61,7 @@ find . -type f -name ".*"
 
 ### Cleanup
 
-```sh
+```bash
 rm #{output_file}
 ```
 

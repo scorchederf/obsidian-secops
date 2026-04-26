@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.005"
 attack_technique_name: "Indicator Removal on Host: Network Share Connection Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.005/T1070.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "4299eff5-90f1-4446-b2f3-7f4f5cfd5d62"
@@ -47,13 +47,13 @@ https://threatpost.com/conti-ransomware-gang-has-full-log4shell-attack-chain/177
 
 ### Command
 
-```commandprompt
+```cmd
 for %i in (C$ IPC$ ADMIN$) do net share %i /delete
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 net share ADMIN$ /UNLIMITED >nul 2>&1
 net share C$=C:\ >nul 2>&1
 net share IPC$ >nul 2>&1

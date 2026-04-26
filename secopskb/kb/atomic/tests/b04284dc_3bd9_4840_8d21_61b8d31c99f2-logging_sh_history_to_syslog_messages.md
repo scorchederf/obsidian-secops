@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "b04284dc-3bd9-4840-8d21-61b8d31c99f2"
@@ -46,14 +46,14 @@ This test requires to be run in a bash shell and that logger and tee are install
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ "$(echo $SHELL)" != "/bin/sh" ]; then echo -e "\n***** sh not running! *****\n"; exit 1; fi
 if [ ! -x "$(command -v logger)" ]; then echo -e "\n***** logger NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -64,7 +64,7 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 PS2=`logger -t "$USER" -f ~/.sh_history`
 $PS2
 tail /var/log/messages
@@ -72,7 +72,7 @@ tail /var/log/messages
 
 ### Cleanup
 
-```sh
+```bash
 unset PS2
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222"
 attack_technique_name: "File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222/T1222.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6c4ac96f-d4fa-44f4-83ca-56d8f4a55c02"
@@ -45,14 +45,14 @@ Use fsutil to enable both ‘remote to local’ and ‘remote to remote’ symbo
 
 ### Command
 
-```commandprompt
+```cmd
 fsutil behavior set SymlinkEvaluation R2L:1
 fsutil behavior set SymlinkEvaluation R2R:1
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 fsutil behavior set SymlinkEvaluation R2L:0
 fsutil behavior set SymlinkEvaluation R2R:0
 ```

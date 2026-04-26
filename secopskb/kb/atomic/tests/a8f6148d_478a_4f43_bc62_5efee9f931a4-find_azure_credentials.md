@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "a8f6148d-478a-4f43-bc62-5efee9f931a4"
@@ -51,7 +51,7 @@ Find local Azure credentials from file, defaults to using / as the look path.
 
 ### Command
 
-```sh
+```bash
 find #{file_path}/.azure -name "msal_token_cache.json" -o -name "accessTokens.json" -type f 2>/dev/null
 ```
 

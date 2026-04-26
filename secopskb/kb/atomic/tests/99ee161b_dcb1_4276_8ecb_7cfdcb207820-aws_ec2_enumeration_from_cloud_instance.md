@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1580"
 attack_technique_name: "Cloud Infrastructure Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1580/T1580.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "99ee161b-dcb1-4276-8ecb-7cfdcb207820"
@@ -60,13 +60,13 @@ Stratus binary must be present at the (#{stratus_path}/stratus)
 
 ### Prerequisite Check
 
-```text
+```bash
 if test -f "#{stratus_path}/stratus"; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "$(uname)" = "Darwin" ]
 then DOWNLOAD_URL=$(curl -s https://api.github.com/repos/DataDog/stratus-red-team/releases/latest | grep browser_download_url | grep -i Darwin_x86_64 | cut -d '"' -f 4); wget -q -O #{stratus_path}/stratus-red-team-latest.tar.gz $DOWNLOAD_URL
   tar -xzvf #{stratus_path}/stratus-red-team-latest.tar.gz --directory #{stratus_path}/
@@ -80,13 +80,13 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```bash
 cat ~/.aws/credentials | grep "default"
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Please install the aws-cli and configure your AWS default profile using: aws configure"
 ```
 
@@ -97,7 +97,7 @@ echo "Please install the aws-cli and configure your AWS default profile using: a
 
 ### Command
 
-```sh
+```bash
 export AWS_REGION=#{aws_region}
 cd #{stratus_path}
 echo "Stratus: Start Warmup."
@@ -108,7 +108,7 @@ echo "Stratus: Start Detonate."
 
 ### Cleanup
 
-```sh
+```bash
 cd #{stratus_path}
 echo "Stratus: Start Cleanup."
 ./stratus cleanup aws.discovery.ec2-enumerate-from-instance

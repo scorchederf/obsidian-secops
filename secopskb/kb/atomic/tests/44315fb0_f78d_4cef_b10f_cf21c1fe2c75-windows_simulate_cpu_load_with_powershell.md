@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1496"
 attack_technique_name: "Resource Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1496/T1496.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "44315fb0-f78d-4cef-b10f-cf21c1fe2c75"

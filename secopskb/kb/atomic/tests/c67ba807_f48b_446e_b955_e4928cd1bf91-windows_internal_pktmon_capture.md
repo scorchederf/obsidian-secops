@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "c67ba807-f48b-446e-b955-e4928cd1bf91"
@@ -45,7 +45,7 @@ https://lolbas-project.github.io/lolbas/Binaries/Pktmon/
 
 ### Command
 
-```commandprompt
+```cmd
 pktmon.exe start --etw  -f %TEMP%\t1040.etl
 TIMEOUT /T 5 >nul 2>&1
 pktmon.exe stop
@@ -53,7 +53,7 @@ pktmon.exe stop
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\t1040.etl
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1095"
 attack_technique_name: "Non-Application Layer Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1095/T1095.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "manual"
 aliases:
   - "8e139e1f-1f3a-4be7-901d-afae9738c064"

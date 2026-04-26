@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.001"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Golden Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.001/T1558.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "e42d33cd-205c-4acf-ab59-a9f38f6bad9c"
@@ -84,13 +84,13 @@ Computer must be domain joined
 
 ### Prerequisite Check
 
-```text
+```powershell
 if((Get-CIMInstance -Class Win32_ComputerSystem).PartOfDomain) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Joining this computer to a domain must be done manually
 ```
 
@@ -98,13 +98,13 @@ Rubeus must exist
 
 ### Prerequisite Check
 
-```text
+```powershell
 if(Test-Path -Path #{local_folder}\#{local_executable}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-Webrequest -Uri #{rubeus_url} -OutFile #{local_folder}\#{local_executable}
 ```
 

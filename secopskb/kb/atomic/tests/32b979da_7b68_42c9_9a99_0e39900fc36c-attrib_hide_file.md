@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "32b979da-7b68-42c9-9a99-0e39900fc36c"
@@ -51,7 +51,7 @@ the victim does not see the file.
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir #{file_or_folder} >nul 2>&1
 echo T1222.001_attrib1 >> #{file_or_folder}\T1222.001_attrib1.txt
 echo T1222.001_attrib2 >> #{file_or_folder}\T1222.001_attrib2.txt
@@ -61,7 +61,7 @@ attrib.exe +h #{file_or_folder}\T1222.001_attrib2.txt
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del /A:H #{file_or_folder}\T1222.001_attrib*.txt >nul 2>&1
 ```
 

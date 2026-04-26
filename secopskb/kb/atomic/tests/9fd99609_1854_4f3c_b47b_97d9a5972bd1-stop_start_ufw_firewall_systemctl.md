@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "9fd99609-1854-4f3c-b47b-97d9a5972bd1"
@@ -44,7 +44,7 @@ Check if systemctl and ufw is installed on the machine.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v systemctl)" ]; then echo -e "\n***** systemctl NOT installed *****\n"; exit 1; fi
 if [ ! -x "$(command -v ufw)" ]; then echo -e "\n***** ufw NOT installed *****\n"; exit 1; fi
 if echo "$(ufw status)" |grep -q "inactive"; then echo -e "\n***** ufw inactive *****\n"; exit 1; fi
@@ -52,7 +52,7 @@ if echo "$(ufw status)" |grep -q "inactive"; then echo -e "\n***** ufw inactive 
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -63,13 +63,13 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 systemctl stop ufw
 ```
 
 ### Cleanup
 
-```sh
+```bash
 systemctl start ufw
 systemctl status ufw
 ```

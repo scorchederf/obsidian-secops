@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "22cf8cb9-adb1-4e8c-80ca-7c723dfc8784"
@@ -59,7 +59,7 @@ PowerShell ActiveDirectory Module must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 Try {
     Import-Module ActiveDirectory -ErrorAction Stop | Out-Null
     exit 0
@@ -71,7 +71,7 @@ Catch {
 
 ### Get Prerequisite
 
-```text
+```powershell
 if((Get-CimInstance -ClassName Win32_OperatingSystem).ProductType -eq 1) {
   Add-WindowsCapability -Name (Get-WindowsCapability -Name RSAT.ActiveDirectory.DS* -Online).Name -Online
 } else {
@@ -86,13 +86,13 @@ if((Get-CimInstance -ClassName Win32_OperatingSystem).ProductType -eq 1) {
 
 ### Command
 
-```commandprompt
+```cmd
 ldifde.exe -f #{output_path}\#{output_file} -p subtree
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{output_path}\#{output_file}
 ```
 

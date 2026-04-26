@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1490"
 attack_technique_name: "Inhibit System Recovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1490/T1490.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "ed952f70-91d4-445a-b7ff-30966bfb1aff"
@@ -44,13 +44,13 @@ Disables Time Machine which is Apple's automated backup utility software. Attack
 
 ### Command
 
-```sh
+```bash
 sudo tmutil disable
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo tmutil enable
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1619"
 attack_technique_name: "Cloud Storage Object Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1619/T1619.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "3c7094f8-71ec-4917-aeb8-a633d7ec4ef5"
@@ -43,13 +43,13 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 cat ~/.aws/credentials | grep "default"
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please install the aws-cli and configure your AWS default profile using: aws configure
 ```
 
@@ -60,7 +60,7 @@ echo Please install the aws-cli and configure your AWS default profile using: aw
 
 ### Command
 
-```sh
+```bash
 for bucket in "$(aws s3 ls | cut -d " " -f3)"; do aws s3api list-objects-v2 --bucket $bucket --output text; done
 ```
 

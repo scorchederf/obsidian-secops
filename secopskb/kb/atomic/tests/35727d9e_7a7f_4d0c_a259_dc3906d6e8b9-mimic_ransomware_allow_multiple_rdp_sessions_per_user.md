@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "35727d9e-7a7f-4d0c-a259-dc3906d6e8b9"
@@ -45,13 +45,13 @@ See [Mimic Ransomware Overview] (https://www.trendmicro.com/en_us/research/23/a/
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v fSingleSessionPerUser /t REG_DWORD /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKLM\System\CurrentControlSet\Control\Terminal Server" /v fSingleSessionPerUser /f >nul 2>&1
 ```
 

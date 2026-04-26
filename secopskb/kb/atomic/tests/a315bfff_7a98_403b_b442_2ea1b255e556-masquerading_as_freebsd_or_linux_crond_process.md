@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a315bfff-7a98-403b-b442-2ea1b255e556"
@@ -44,14 +44,14 @@ Upon successful execution, sh is renamed to `crond` and executed.
 
 ### Command
 
-```sh
+```bash
 cp /bin/sh /tmp/crond;
 echo 'sleep 5' | /tmp/crond
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm /tmp/crond
 ```
 

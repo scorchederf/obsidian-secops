@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1127"
 attack_technique_name: "Trusted Developer Utilities Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "3fc9fea2-871d-414d-8ef6-02e85e322b80"
@@ -65,13 +65,13 @@ JavaScript code file must exist on disk at specified location (#{filename})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{filename}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{filename}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1127/src/LibHello.js" -OutFile "#{filename}"
 ```
@@ -82,14 +82,14 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 copy "#{filename}" %TEMP%\LibHello.js
 #{jscpath}\#{jscname} /t:library %TEMP%\LibHello.js
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %TEMP%\LibHello.js
 del %TEMP%\LibHello.dll
 ```

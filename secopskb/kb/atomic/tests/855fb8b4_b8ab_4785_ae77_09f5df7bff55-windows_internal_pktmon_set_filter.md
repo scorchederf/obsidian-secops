@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "855fb8b4-b8ab-4785-ae77-09f5df7bff55"
@@ -45,13 +45,13 @@ https://lolbas-project.github.io/lolbas/Binaries/Pktmon/
 
 ### Command
 
-```commandprompt
+```cmd
 pktmon.exe filter add -p 445
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 pktmon filter remove
 ```
 

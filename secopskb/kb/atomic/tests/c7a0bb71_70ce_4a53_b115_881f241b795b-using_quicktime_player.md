@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1123"
 attack_technique_name: "Audio Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1123/T1123.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "c7a0bb71-70ce-4a53-b115-881f241b795b"
@@ -67,13 +67,13 @@ Should create a non-empty m4a file with sound from the microphone.
 
 ### Command
 
-```sh
+```bash
 sh #{filename} #{audiofile} #{duration}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 if test -w #{audiofile}; then
   rm #{audiofile}
 fi

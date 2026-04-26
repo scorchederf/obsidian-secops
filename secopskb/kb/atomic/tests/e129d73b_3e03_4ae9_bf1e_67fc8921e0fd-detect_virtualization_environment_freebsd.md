@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1497.001"
 attack_technique_name: "Virtualization/Sandbox Evasion: System Checks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1497.001/T1497.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "e129d73b-3e03-4ae9-bf1e-67fc8921e0fd"
@@ -45,7 +45,7 @@ At boot, dmesg stores a log if a hypervisor is detected.
 
 ### Command
 
-```sh
+```bash
 if [ "$(sysctl -n hw.hv_vendor)" != "" ]; then echo "Virtualization Environment detected"; fi
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218"
 attack_technique_name: "Signed Binary Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "0e1483ba-8f0c-425d-b8c6-42736e058eaa"
@@ -58,13 +58,13 @@ txt file must exist on disk at specified location (#{txt_payload})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{txt_payload}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{txt_payload}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218/src/T1218.txt" -OutFile "#{txt_payload}"
 ```
@@ -73,13 +73,13 @@ DiskShadow.exe must exist on disk at specified location (#{dspath})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{dspath}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "DiskShadow.exe not found on disk at expected location"
 ```
 

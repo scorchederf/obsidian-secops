@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "37807632-d3da-442e-8c2e-00f44928ff8f"
@@ -51,7 +51,7 @@ Find local AWS credentials from file, defaults to using / as the look path.
 
 ### Command
 
-```sh
+```bash
 find #{file_path}/.aws -name "credentials" -type f 2>/dev/null
 ```
 

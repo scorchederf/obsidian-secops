@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1557.001"
 attack_technique_name: "Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1557.001/T1557.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "deecd55f-afe0-4a62-9fba-4d1ba2deb321"

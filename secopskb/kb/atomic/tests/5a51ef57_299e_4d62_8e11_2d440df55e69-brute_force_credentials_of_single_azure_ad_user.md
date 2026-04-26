@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.001"
 attack_technique_name: "Brute Force: Password Guessing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.001/T1110.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "5a51ef57-299e-4d62-8e11-2d440df55e69"
@@ -58,13 +58,13 @@ AzureAD module must be installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name AzureAD -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name AzureAD -Force
 ```
 

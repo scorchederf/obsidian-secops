@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.002"
 attack_technique_name: "Archive Collected Data: Archive via Library"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.002/T1560.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "c75612b2-9de0-4d7c-879c-10d7b077072d"
@@ -58,13 +58,13 @@ Requires Python
 
 ### Prerequisite Check
 
-```text
+```bash
 which python || which python3
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "please install python to run this test"; exit 1
 ```
 
@@ -75,14 +75,14 @@ echo "please install python to run this test"; exit 1
 
 ### Command
 
-```sh
+```bash
 which_python=`which python || which python3`
 $which_python -c "import bz2;input_file=open('#{path_to_input_file}','rb');content=input_file.read();input_file.close();bz2content=bz2.compress(content,compresslevel=9);output_file=open('#{path_to_output_file}','w+');output_file.write(str(bz2content));output_file.close();"
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{path_to_output_file}
 ```
 

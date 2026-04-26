@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.006"
 attack_technique_name: "Impair Defenses: Indicator Blocking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.006/T1562.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "110b4281-43fe-405f-a184-5d8eaf228ebf"
@@ -44,13 +44,13 @@ Disables ETW for the .NET Framework by setting the COMPlus_ETWEnabled environmen
 
 ### Command
 
-```commandprompt
+```cmd
 REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v COMPlus_ETWEnabled /t REG_SZ /d 0 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v COMPlus_ETWEnabled /f > nul 2>&1
 ```
 

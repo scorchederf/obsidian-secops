@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "db53959c-207d-4000-9e7a-cd8eb417e072"
@@ -54,7 +54,7 @@ Without being owned by root, the binary can set the UID to 0.
 
 ### Command
 
-```sh
+```bash
 cp #{payload} /tmp/cap.c
 make /tmp/cap
 sudo setcap cap_setuid=ep /tmp/cap
@@ -63,7 +63,7 @@ sudo setcap cap_setuid=ep /tmp/cap
 
 ### Cleanup
 
-```sh
+```bash
 rm /tmp/cap
 rm /tmp/cap.c
 ```

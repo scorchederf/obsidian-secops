@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1619"
 attack_technique_name: "Cloud Storage Object Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1619/T1619.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "3dab4bcc-667f-4459-aea7-4162dd2d6590"
@@ -64,13 +64,13 @@ The Invoke-EnumerateAzureBlobs module must exist in PathToAtomicsFolder\..\Exter
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "PathToAtomicsFolder\..\ExternalPayloads\Invoke-EnumerateAzureBlobs.ps1"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 invoke-webrequest "https://raw.githubusercontent.com/NetSPI/MicroBurst/156c4e9f4253b482b2b68eda4651116b9f0f2e17/Misc/Invoke-EnumerateAzureBlobs.ps1" -outfile "PathToAtomicsFolder\..\ExternalPayloads\Invoke-EnumerateAzureBlobs.ps1"
 ```
@@ -79,13 +79,13 @@ The wordlist file for search permutations must exist in PathToAtomicsFolder\..\E
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (test-path "#{wordlist}"){exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 invoke-webrequest "https://raw.githubusercontent.com/NetSPI/MicroBurst/156c4e9f4253b482b2b68eda4651116b9f0f2e17/Misc/permutations.txt" -outfile "#{wordlist}"
 ```
 

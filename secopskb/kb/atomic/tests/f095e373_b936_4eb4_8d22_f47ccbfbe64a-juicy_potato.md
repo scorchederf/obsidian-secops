@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.001"
 attack_technique_name: "Access Token Manipulation: Token Impersonation/Theft"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.001/T1134.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "f095e373-b936-4eb4-8d22-f47ccbfbe64a"
@@ -73,13 +73,13 @@ JuicyPotato.exe must exist on disk
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\JuicyPotato.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\JuicyPotato.exe" "https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe"
 ```

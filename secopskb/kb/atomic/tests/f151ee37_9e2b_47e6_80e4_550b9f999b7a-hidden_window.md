@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.003"
 attack_technique_name: "Hide Artifacts: Hidden Window"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.003/T1564.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "f151ee37-9e2b-47e6-80e4-550b9f999b7a"

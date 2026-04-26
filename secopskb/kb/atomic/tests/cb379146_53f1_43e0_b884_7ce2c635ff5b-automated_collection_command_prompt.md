@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1119"
 attack_technique_name: "Automated Collection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1119/T1119.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "cb379146-53f1-43e0-b884-7ce2c635ff5b"
@@ -43,7 +43,7 @@ to see what was collected.
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir %temp%\T1119_command_prompt_collection >nul 2>&1
 dir c: /b /s .docx | findstr /e .docx
 for /R c:\ %f in (*.docx) do copy /Y %f %temp%\T1119_command_prompt_collection
@@ -51,7 +51,7 @@ for /R c:\ %f in (*.docx) do copy /Y %f %temp%\T1119_command_prompt_collection
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del %temp%\T1119_command_prompt_collection /F /Q >nul 2>&1
 ```
 

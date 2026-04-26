@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1556.002"
 attack_technique_name: "Modify Authentication Process: Password Filter DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1556.002/T1556.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "a7961770-beb5-4134-9674-83d7e1fa865c"
@@ -62,13 +62,13 @@ AtomicRedTeamPWFilter.dll must exist on disk at specified location (#{dll_path}\
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_path}\#{dll_name}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest "https://github.com/redcanaryco/atomicredteam/atomics/T1556.002/bin/AtomicRedTeamPWFilter.dll" -OutFile "#{dll_path}\#{dll_name}"
 ```

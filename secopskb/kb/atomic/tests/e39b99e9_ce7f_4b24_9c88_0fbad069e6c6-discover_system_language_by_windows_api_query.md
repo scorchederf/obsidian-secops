@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614.001"
 attack_technique_name: "System Location Discovery: System Language Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614.001/T1614.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "e39b99e9-ce7f-4b24-9c88-0fbad069e6c6"
@@ -48,13 +48,13 @@ LanguageKeyboardLayout.exe must exist on disk (default location: PathToAtomicsFo
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "PathToAtomicsFolder\..\ExternalPayloads\LanguageKeyboardLayout.exe") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "PathToAtomicsFolder\..\ExternalPayloads\LanguageKeyboardLayout.exe") -ErrorAction Ignore | Out-Null
 Invoke-WebRequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1614.001/bin/LanguageKeyboardLayout.exe" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\LanguageKeyboardLayout.exe"
 ```
@@ -66,7 +66,7 @@ Invoke-WebRequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/maste
 
 ### Command
 
-```commandprompt
+```cmd
 PathToAtomicsFolder\..\ExternalPayloads\LanguageKeyboardLayout.exe
 ```
 

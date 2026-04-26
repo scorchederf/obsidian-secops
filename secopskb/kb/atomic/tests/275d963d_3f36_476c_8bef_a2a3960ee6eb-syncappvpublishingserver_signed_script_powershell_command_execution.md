@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1216"
 attack_technique_name: "Signed Script Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1216/T1216.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "275d963d-3f36-476c-8bef-a2a3960ee6eb"
@@ -51,7 +51,7 @@ Upon execution, calc.exe will be launched.
 
 ### Command
 
-```commandprompt
+```cmd
 C:\windows\system32\SyncAppvPublishingServer.vbs "\n;#{command_to_execute}"
 ```
 

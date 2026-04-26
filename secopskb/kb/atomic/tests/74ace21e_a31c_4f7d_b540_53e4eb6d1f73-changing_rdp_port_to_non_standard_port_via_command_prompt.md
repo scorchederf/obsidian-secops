@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.001"
 attack_technique_name: "Remote Services: Remote Desktop Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.001/T1021.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "74ace21e-a31c-4f7d-b540-53e4eb6d1f73"
@@ -58,14 +58,14 @@ Changing RDP Port to Non Standard Port via Command_Prompt
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKLM\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber /t REG_DWORD /d #{NEW_Remote_Port} /f
 netsh advfirewall firewall add rule name="RDPPORTLatest-TCP-In" dir=in action=allow protocol=TCP localport=#{NEW_Remote_Port}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg add "HKLM\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber /t REG_DWORD /d #{OLD_Remote_Port} /f >nul 2>&1
 netsh advfirewall firewall delete rule name="RDPPORTLatest-TCP-In" >nul 2>&1
 net stop TermService /y >nul 2>&1

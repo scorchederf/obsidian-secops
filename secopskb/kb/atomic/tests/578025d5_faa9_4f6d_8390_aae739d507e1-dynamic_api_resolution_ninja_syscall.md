@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.007"
 attack_technique_name: "Obfuscated Files or Information: Dynamic API Resolution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.007/T1027.007.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "578025d5-faa9-4f6d-8390-aae739d507e1"
@@ -52,13 +52,13 @@ Portable Executable to run must exist at specified location (#{exe_binary})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{exe_binary}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{exe_binary}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1027.007/bin/ninja_syscall1.exe" -OutFile "#{exe_binary}"
 ```

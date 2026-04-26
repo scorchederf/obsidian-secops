@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1518.001"
 attack_technique_name: "Software Discovery: Security Software Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1518.001/T1518.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "015cd268-996e-4c32-8347-94c80c6286ee"
@@ -46,7 +46,7 @@ when sucessfully executed, information about installed AV software is displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 powershell Get-CimInstance -Namespace root/securityCenter2 -classname antivirusproduct
 powershell Get-WmiObject -Namespace root\securitycenter2 -Class antivirusproduct
 ```

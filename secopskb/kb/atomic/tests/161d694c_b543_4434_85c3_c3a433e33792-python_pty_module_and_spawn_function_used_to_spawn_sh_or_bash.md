@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.006"
 attack_technique_name: "Command and Scripting Interpreter: Python"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.006/T1059.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "161d694c-b543-4434-85c3-c3a433e33792"
@@ -42,14 +42,14 @@ Verify if python is in the environment variable path and attempt to import reque
 
 ### Prerequisite Check
 
-```text
+```untitled
 which_python=$(which python || which python3 || which python3.9 || which python2); $which_python -V
 $which_python -c 'import requests' 2>/dev/null; echo $?
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 pip install requests
 ```
 
@@ -59,7 +59,7 @@ pip install requests
 
 ### Command
 
-```sh
+```bash
 which_python=$(which python || which python3 || which python3.9 || which python2)
 $which_python -c "import pty;pty.spawn('/bin/sh')"
 exit

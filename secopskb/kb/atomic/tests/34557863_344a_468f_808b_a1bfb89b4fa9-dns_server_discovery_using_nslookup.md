@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016"
 attack_technique_name: "System Network Configuration Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016/T1016.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "34557863-344a-468f-808b-a1bfb89b4fa9"
@@ -43,7 +43,7 @@ controller of the targeted or compromised host. reference https://securelist.com
 
 ### Command
 
-```commandprompt
+```cmd
 nslookup -querytype=ALL -timeout=12 _ldap._tcp.dc._msdcs.%USERDNSDOMAIN%
 ```
 

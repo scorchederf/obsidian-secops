@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "c4ae0701-88d3-4cd8-8bce-4801ed9f97e4"
@@ -45,13 +45,13 @@ Check if /etc/ufw/sysctl.conf exists.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -f "/etc/ufw/sysctl.conf" ]; then echo -e "\n***** ufw NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -62,14 +62,14 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 echo "# THIS IS A COMMENT" >> /etc/ufw/sysctl.conf
 grep "# THIS IS A COMMENT" /etc/ufw/sysctl.conf
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sed -i 's/# THIS IS A COMMENT//g' /etc/ufw/sysctl.conf
 cat /etc/ufw/sysctl.conf
 ```

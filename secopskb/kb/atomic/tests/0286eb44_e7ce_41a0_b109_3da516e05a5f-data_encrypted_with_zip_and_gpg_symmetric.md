@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "0286eb44-e7ce-41a0-b109-3da516e05a5f"
@@ -65,13 +65,13 @@ gpg and zip are required to run the test.
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v gpg)" ] || [ ! -x "$(command -v zip)" ]; then exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which pkg && pkg install -y gnupg zip)||(which yum && yum -y install epel-release zip gpg)||(which apt-get && apt-get install -y zip gpg)
 ```
 
@@ -82,7 +82,7 @@ if [ ! -x "$(command -v gpg)" ] || [ ! -x "$(command -v zip)" ]; then exit 1; fi
 
 ### Command
 
-```sh
+```bash
 mkdir -p #{test_folder}
 cd #{test_folder}; touch a b c d e f g
 zip --password "#{encryption_password}" #{test_folder}/#{test_file} ./*
@@ -92,7 +92,7 @@ ls -l #{test_folder}
 
 ### Cleanup
 
-```sh
+```bash
 rm -Rf #{test_folder}
 ```
 

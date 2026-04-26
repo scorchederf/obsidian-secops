@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "edbcd8c9-3639-4844-afad-455c91e95a35"
@@ -74,13 +74,13 @@ psexec.py (Impacket)
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v psexec.py)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo pip3 install impacket
 ```
 

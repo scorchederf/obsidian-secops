@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "515942b0-a09f-4163-a7bb-22fefb6f185f"
@@ -66,13 +66,13 @@ Check if nmap command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v nmap)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install epel-release nmap)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y nmap)||(which pkg && pkg install -y nmap)
 ```
 
@@ -80,13 +80,13 @@ Check if nc command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v nc)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install epel-release nc)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y netcat)||(which pkg && pkg install -y netcat)
 ```
 
@@ -94,13 +94,13 @@ Check if telnet command exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v telnet)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (which yum && yum -y install epel-release telnet)||(which apt-get && DEBIAN_FRONTEND=noninteractive apt-get install -y telnet)
 ```
 
@@ -111,7 +111,7 @@ if [ -x "$(command -v telnet)" ]; then exit 0; else exit 1; fi;
 
 ### Command
 
-```sh
+```bash
 sudo nmap -sS #{network_range} -p #{port}
 telnet #{host} #{port}
 nc -nv #{host} #{port}

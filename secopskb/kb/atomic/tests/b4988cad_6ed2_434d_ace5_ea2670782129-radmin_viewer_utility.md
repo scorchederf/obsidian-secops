@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1072"
 attack_technique_name: "Software Deployment Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1072/T1072.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "b4988cad-6ed2-434d-ace5-ea2670782129"
@@ -58,13 +58,13 @@ Radmin Viewer Utility must be installed at specified location (#{radmin_exe})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "${env:ProgramFiles(x86)}/#{radmin_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host Downloading radmin installer
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://www.radmin.com/download/Radmin_Viewer_3.5.2.1_EN.msi" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\#{radmin_installer}"
@@ -79,7 +79,7 @@ Start-Process msiexec  -Wait -ArgumentList /i , "PathToAtomicsFolder\..\External
 
 ### Command
 
-```commandprompt
+```cmd
 "%PROGRAMFILES(x86)%/#{radmin_exe}"
 ```
 

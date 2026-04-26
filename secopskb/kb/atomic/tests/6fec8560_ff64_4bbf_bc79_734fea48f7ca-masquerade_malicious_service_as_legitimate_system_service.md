@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "6fec8560-ff64-4bbf-bc79-734fea48f7ca"
@@ -66,13 +66,13 @@ systemctl must be available on the system
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v systemctl)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "systemctl is not available. Ensure systemd is running on this system."
 ```
 
@@ -80,13 +80,13 @@ The test must be run as root or with sudo privileges
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ "$(id -u)" -eq 0 ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "This test requires root privileges. Run as root or use sudo."
 ```
 
@@ -94,13 +94,13 @@ echo "This test requires root privileges. Run as root or use sudo."
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -d "/etc/systemd/system" ] && [ -w "/etc/systemd/system" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "/etc/systemd/system/ does not exist or is not writable."
 ```
 
@@ -108,13 +108,13 @@ Chosen masquerade service name must not already exist as a real service
 
 ### Prerequisite Check
 
-```text
+```bash
 if ! systemctl list-unit-files --type=service | grep -q "^#{masquerade_name}.service"; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "A service named #{masquerade_name} already exists. Change the masquerade_name input argument to avoid conflicts."
 ```
 
@@ -125,7 +125,7 @@ echo "A service named #{masquerade_name} already exists. Change the masquerade_n
 
 ### Command
 
-```sh
+```bash
 echo "[Unit]" > /etc/systemd/system/#{masquerade_name}.service
 echo "Description=Network connectivity helper service" >> /etc/systemd/system/#{masquerade_name}.service
 echo "After=network.target" >> /etc/systemd/system/#{masquerade_name}.service
@@ -145,7 +145,7 @@ systemctl status #{masquerade_name}.service
 
 ### Cleanup
 
-```sh
+```bash
 systemctl stop #{masquerade_name}.service 2>/dev/null || true
 systemctl disable #{masquerade_name}.service 2>/dev/null || true
 rm -f /etc/systemd/system/#{masquerade_name}.service

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "7e7ac3ed-f795-4fa5-b711-09d6fbe9b873"
@@ -57,7 +57,7 @@ Creates and executes a simple sh script.
 
 ### Command
 
-```sh
+```bash
 sh -c "echo 'echo Hello from the Atomic Red Team' > #{script_path}"
 sh -c "echo 'ping -c 4 #{host}' >> #{script_path}"
 chmod +x #{script_path}
@@ -66,7 +66,7 @@ sh #{script_path}
 
 ### Cleanup
 
-```sh
+```bash
 rm #{script_path}
 ```
 

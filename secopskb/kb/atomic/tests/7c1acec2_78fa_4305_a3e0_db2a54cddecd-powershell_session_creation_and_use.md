@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "7c1acec2-78fa-4305-a3e0-db2a54cddecd"
@@ -52,7 +52,7 @@ PSRemoting must be enabled
 
 ### Prerequisite Check
 
-```text
+```untitled
 Try {
     New-PSSession -ComputerName #{hostname_to_connect} -ErrorAction Stop | Out-Null
     exit 0
@@ -64,7 +64,7 @@ Catch {
 
 ### Get Prerequisite
 
-```text
+```untitled
 Enable-PSRemoting
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.006"
 attack_technique_name: "Scheduled Task/Job: Systemd Timers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.006/T1053.006.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "d3eda496-1fc0-49e9-aff5-3bec5da9fa22"
@@ -44,13 +44,13 @@ Check if systemd-run exists on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v systemd-run)" ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo "Install systemd on the machine."; exit 1;
 ```
 
@@ -61,13 +61,13 @@ echo "Install systemd on the machine."; exit 1;
 
 ### Command
 
-```sh
+```bash
 systemd-run --unit=Atomic-Red-Team --on-calendar '*:0/1' /bin/sh -c 'echo "$(date) $(whoami)" >>/tmp/log'
 ```
 
 ### Cleanup
 
-```sh
+```bash
 systemctl stop Atomic-Red-Team.service
 systemctl stop Atomic-Red-Team.timer
 rm /tmp/log

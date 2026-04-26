@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.001"
 attack_technique_name: "Create Account: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "a39ee1bc-b8c1-4331-8e5f-1859eb408518"
@@ -52,13 +52,13 @@ Create a user via pw
 
 ### Command
 
-```sh
+```bash
 pw useradd #{username} -s /usr/sbin/nologin -d /nonexistent -c evil_account
 ```
 
 ### Cleanup
 
-```sh
+```bash
 rmuser -y #{username}
 ```
 

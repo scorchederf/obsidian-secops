@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.006"
 attack_technique_name: "Office Application Startup: Add-ins"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.006/T1137.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "95408a99-4fa7-4cd6-a7ef-cb65f86351cf"
@@ -44,7 +44,7 @@ Microsoft Word must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 try {
   New-Object -COMObject "Word.Application" | Out-Null
   Stop-Process -Name "winword"
@@ -54,7 +54,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host "You will need to install Microsoft Word manually to meet this requirement"
 ```
 
@@ -62,13 +62,13 @@ WLL files must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```untitled
 if ((Test-Path "PathToAtomicsFolder\T1137.006\bin\Addins\wordwll_x64.wll") -and (Test-Path "PathToAtomicsFolder\T1137.006\bin\Addins\wordwll_x86.wll")) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 New-Item -Type Directory "PathToAtomicsFolder\T1137.006\bin\Addins\" -Force | Out-Null
 Invoke-Webrequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1137.006/bin/Addins/wordwll_x64.wll" -UseBasicParsing -OutFile "PathToAtomicsFolder\T1137.006\bin\Addins\wordwll_x64.wll"
 Invoke-Webrequest -Uri "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1137.006/bin/Addins/wordwll_x86.wll" -UseBasicParsing -OutFile "PathToAtomicsFolder\T1137.006\bin\Addins\wordwll_x86.wll"

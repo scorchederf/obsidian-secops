@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "1602ff76-ed7f-4c94-b550-2f727b4782d4"
@@ -52,13 +52,13 @@ target files must exist
 
 ### Prerequisite Check
 
-```text
+```bash
 stat /var/spool/mail/#{username}
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 touch /var/spool/mail/#{username}
 ```
 

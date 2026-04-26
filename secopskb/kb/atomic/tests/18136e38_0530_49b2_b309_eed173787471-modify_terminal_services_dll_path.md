@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.005"
 attack_technique_name: "Server Software Component: Terminal Services DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.005/T1505.005.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "18136e38-0530-49b2-b309-eed173787471"

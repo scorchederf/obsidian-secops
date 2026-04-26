@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.001"
 attack_technique_name: "Access Token Manipulation: Token Impersonation/Theft"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.001/T1134.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "7be1bc0f-d8e5-4345-9333-f5f67d742cb9"
@@ -52,13 +52,13 @@ NSudoLG.exe must exist in the specified path #{nsudo_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{nsudo_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest -OutFile "PathToAtomicsFolder\..\ExternalPayloads\NSudo_8.2_All_Components.zip" "https://github.com/M2Team/NSudo/releases/download/8.2/NSudo_8.2_All_Components.zip"
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\NSudo_8.2_All_Components.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\NSudo_8.2_All_Components" -Force

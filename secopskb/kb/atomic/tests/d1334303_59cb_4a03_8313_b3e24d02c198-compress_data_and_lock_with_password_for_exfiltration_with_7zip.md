@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "d1334303-59cb-4a03-8313-b3e24d02c198"
@@ -57,13 +57,13 @@ Note: This test requires 7zip installation
 
 ### Prerequisite Check
 
-```text
+```untitled
 if not exist "#{7zip_exe}" (exit /b 1)
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Downloading 7-zip installer
 bitsadmin /transfer myDownloadJob /download /priority normal "https://www.7-zip.org/a/7z2301-x64.exe" #{7zip_installer}
 #{7zip_installer} /S
@@ -76,7 +76,7 @@ bitsadmin /transfer myDownloadJob /download /priority normal "https://www.7-zip.
 
 ### Command
 
-```commandprompt
+```cmd
 mkdir $PathToAtomicsFolder\T1560.001\victim-files
 cd $PathToAtomicsFolder\T1560.001\victim-files
 echo "This file will be encrypted" > .\encrypted_file.txt
@@ -86,7 +86,7 @@ dir
 
 ### Cleanup
 
-```commandprompt
+```cmd
 rmdir /s /Q $PathToAtomicsFolder\T1560.001\victim-files >nul 2>&1
 ```
 

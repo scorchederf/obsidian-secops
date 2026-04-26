@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1659"
 attack_technique_name: "Content Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1659/T1659.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "9b360eaf-c778-4f07-a6e7-895c4f01ac1c"
@@ -43,13 +43,13 @@ python3 must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 command -v python3
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 brew install python3 || (sudo apt-get update && sudo apt-get install -y python3) || sudo yum install -y python3
 ```
 
@@ -57,13 +57,13 @@ curl must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 command -v curl
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 brew install curl || (sudo apt-get update && sudo apt-get install -y curl) || sudo yum install -y curl
 ```
 
@@ -71,13 +71,13 @@ pipx must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 pipx --version
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 brew install pipx || (sudo apt-get update && sudo apt-get install -y pipx) || sudo yum install -y pipx
 ```
 
@@ -85,13 +85,13 @@ mitmproxy must be installed
 
 ### Prerequisite Check
 
-```text
+```untitled
 pipx list | grep mitmproxy
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 pipx install mitmproxy || brew install mitmproxy
 ```
 
@@ -99,13 +99,13 @@ mitmdump must be running on port 8080
 
 ### Prerequisite Check
 
-```text
+```untitled
 lsof -i tcp:8080 | grep mitmdump
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 printf "from mitmproxy import http\ndef response(flow: http.HTTPFlow):\n    if 'text/html' in flow.response.headers.get('content-type',''):\n        flow.response.headers['X-Atomic']='T1659'\n        flow.response.text = flow.response.text.replace('</body>', '<script>alert(\"Atomic T1659 Injection\")</script></body>')" > /tmp/atomic_t1659_inject.py
 ($HOME/.local/bin/mitmdump -s /tmp/atomic_t1659_inject.py -p 8080 > /tmp/atomic_t1659.log 2>&1 &)
 sleep 5

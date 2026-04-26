@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.003"
 attack_technique_name: "Create Account: Cloud Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.003/T1136.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "e62d23ef-3153-4837-8625-fa4a3829134d"
@@ -63,13 +63,13 @@ Check if AzureAD PowerShell module is installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 Get-InstalledModule -Name AzureAD
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "use the following to install AzureAD PowerShell module - Install-Module -Name AzureAD -Scope CurrentUser -Repository PSGallery -Force"
 ```
 
@@ -77,13 +77,13 @@ Check if AzureAD PowerShell module is installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 Update the input arguments so the userprincipalname value is accurate for your environment
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "Update the input arguments in the .yaml file so that the userprincipalname value is accurate for your environment"
 ```
 

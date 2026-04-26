@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.010"
 attack_technique_name: "Impair Defenses: Downgrade Attack"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.010/T1562.010.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "062f92c9-28b1-4391-a5f8-9d8ca6852091"
@@ -65,14 +65,14 @@ Check if VMWARE PowerCLI PowerShell Module is installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $RequiredModule = Get-Module -Name VMware.PowerCLI -ListAvailable
 if (-not $RequiredModule) {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name VMware.PowerCLI -Confirm:$false
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1530"
 attack_technique_name: "Data from Cloud Storage Object"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1530/T1530.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "67374845-b4c8-4204-adcc-9b217b65d4f1"
@@ -62,13 +62,13 @@ Azure CLI must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Install-Module -Name Az -Force
 ```
 

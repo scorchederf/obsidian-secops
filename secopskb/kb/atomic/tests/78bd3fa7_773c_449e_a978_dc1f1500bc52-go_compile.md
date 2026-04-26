@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.004"
 attack_technique_name: "Obfuscated Files or Information: Compile After Delivery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.004/T1027.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "78bd3fa7-773c-449e-a978-dc1f1500bc52"
@@ -52,13 +52,13 @@ the source file must exist on disk at specified location (#{input_file})
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -e  #{input_file} ]; then exit 0; else exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 wget https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1027.004/src/T1027-004-test.go -O #{input_file}
 ```
 
@@ -68,7 +68,7 @@ wget https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1027.004
 
 ### Command
 
-```sh
+```bash
 go run #{input_file}
 ```
 

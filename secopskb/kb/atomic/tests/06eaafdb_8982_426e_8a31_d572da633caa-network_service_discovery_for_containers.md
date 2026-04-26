@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "06eaafdb-8982-426e-8a31-d572da633caa"
@@ -43,13 +43,13 @@ Verify docker is installed.
 
 ### Prerequisite Check
 
-```text
+```bash
 which docker
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ "" == "`which docker`" ]; then echo "Docker Not Found"; if [ -n "`which apt-get`" ]; then sudo apt-get -y install docker ; elif [ -n "`which yum`" ]; then sudo yum -y install docker ; fi ; else echo "Docker installed"; fi
 ```
 
@@ -57,13 +57,13 @@ Verify docker service is running.
 
 ### Prerequisite Check
 
-```text
+```bash
 sudo systemctl status docker  --no-pager
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 sudo systemctl start docker
 ```
 
@@ -73,7 +73,7 @@ sudo systemctl start docker
 
 ### Command
 
-```sh
+```bash
 docker build -t t1046 $PathToAtomicsFolder/T1046/src/
 docker run --name t1046_container --rm -d -t t1046
 docker exec t1046_container /scan.sh
@@ -81,7 +81,7 @@ docker exec t1046_container /scan.sh
 
 ### Cleanup
 
-```sh
+```bash
 docker stop t1046_container
 docker rmi -f t1046
 ```

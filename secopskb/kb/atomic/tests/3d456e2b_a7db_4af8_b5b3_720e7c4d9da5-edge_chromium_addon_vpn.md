@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1176"
 attack_technique_name: "Browser Extensions"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1176/T1176.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "manual"
 aliases:
   - "3d456e2b-a7db-4af8-b5b3-720e7c4d9da5"

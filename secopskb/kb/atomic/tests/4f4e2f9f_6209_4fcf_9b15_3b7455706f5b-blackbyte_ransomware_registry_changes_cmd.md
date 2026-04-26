@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "4f4e2f9f-6209-4fcf-9b15-3b7455706f5b"
@@ -51,7 +51,7 @@ The registry keys and their respective values will be created upon successful ex
 
 ### Command
 
-```commandprompt
+```cmd
 cmd.exe /c reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
 cmd.exe /c reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLinkedConnections /t REG_DWORD /d 1 /f
 cmd.exe /c reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
@@ -59,7 +59,7 @@ cmd.exe /c reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPaths
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ /v LocalAccountTokenFilterPolicy /f >nul 2>&1
 reg delete HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLinkedConnections /f >nul 2>&1
 reg delete HKLM\SYSTEM\CurrentControlSet\Control\FileSystem\ /v LongPathsEnabled /f >nul 2>&1

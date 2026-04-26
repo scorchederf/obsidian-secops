@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1566.001"
 attack_technique_name: "Phishing: Spearphishing Attachment"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1566.001/T1566.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "cbb6799a-425c-4f83-9194-5447a909d67f"
@@ -59,7 +59,7 @@ Microsoft #{ms_product} must be installed
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {
   New-Object -COMObject "#{ms_product}.Application" | Out-Null
   $process = "#{ms_product}"; if ( $process -eq "Word") {$process = "winword"}
@@ -70,7 +70,7 @@ try {
 
 ### Get Prerequisite
 
-```text
+```powershell
 Write-Host "You will need to install Microsoft #{ms_product} manually to meet this requirement"
 ```
 

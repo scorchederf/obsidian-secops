@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1614"
 attack_technique_name: "System Location Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1614/T1614.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "fe53e878-10a3-477b-963e-4367348f5af5"
@@ -58,13 +58,13 @@ Curl must be installed on system.
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{curl_path}) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://curl.se/windows/dl-8.4.0_6/curl-8.4.0_6-win64-mingw.zip" -Outfile "PathToAtomicsFolder\..\ExternalPayloads\curl.zip"
 Expand-Archive -Path "PathToAtomicsFolder\..\ExternalPayloads\curl.zip" -DestinationPath "PathToAtomicsFolder\..\ExternalPayloads\curl"
@@ -78,7 +78,7 @@ Copy-Item "PathToAtomicsFolder\..\ExternalPayloads\curl\curl-8.4.0_6-win64-mingw
 
 ### Command
 
-```commandprompt
+```cmd
 #{curl_path} -k #{ip_lookup_url}
 ```
 

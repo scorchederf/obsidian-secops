@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.001"
 attack_technique_name: "Credentials from Password Stores: Keychain"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.001/T1555.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "88e1fa00-bf63-4e5b-a3e1-e2ea51c8cca6"
@@ -51,7 +51,7 @@ Source: https://www.loobins.io/binaries/security/
 
 ### Command
 
-```sh
+```bash
 sudo security dump-keychain -d login.keychain
 ```
 

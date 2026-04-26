@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.008"
 attack_technique_name: "Email Collection: Mailbox Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.008/T1070.008.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "bash"
 aliases:
   - "25e2be0e-96f7-4417-bd16-a4a2500e3802"
@@ -43,13 +43,13 @@ Create dummy file in /var/spool/mail/ if no files exist
 
 ### Prerequisite Check
 
-```text
+```untitled
 if [ -z "$(ls -A /var/spool/mail/)" ]; then exit 1; else exit 0; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 if [ -z "$(ls -A /var/spool/mail/)" ]; then touch /var/spool/mail/temp; fi
 ```
 

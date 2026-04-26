@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.002"
 attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "command_prompt"
 aliases:
   - "5102a3a7-e2d7-4129-9e45-f483f2e0eea8"
@@ -45,7 +45,7 @@ Disables the windows audit policy to prevent key host based telemetry being writ
 
 ### Command
 
-```commandprompt
+```cmd
 auditpol /set /category:"Account Logon" /success:disable /failure:disable
 auditpol /set /category:"Logon/Logoff" /success:disable /failure:disable
 auditpol /set /category:"Detailed Tracking" /success:disable
@@ -53,7 +53,7 @@ auditpol /set /category:"Detailed Tracking" /success:disable
 
 ### Cleanup
 
-```commandprompt
+```cmd
 auditpol /set /category:"Account Logon" /success:enable /failure:enable
 auditpol /set /category:"Detailed Tracking" /success:enable
 auditpol /set /category:"Logon/Logoff" /success:enable /failure:enable

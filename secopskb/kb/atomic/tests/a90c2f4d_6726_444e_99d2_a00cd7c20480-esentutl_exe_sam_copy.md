@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.002"
 attack_technique_name: "OS Credential Dumping: Security Account Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.002/T1003.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "a90c2f4d-6726-444e-99d2-a00cd7c20480"
@@ -65,13 +65,13 @@ This can also be used to copy other files and hives like SYSTEM, NTUSER.dat etc.
 
 ### Command
 
-```commandprompt
+```cmd
 esentutl.exe /y /vss #{file_path} /d #{copy_dest}/#{file_name}
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 del #{copy_dest}\#{file_name} >nul 2>&1
 ```
 

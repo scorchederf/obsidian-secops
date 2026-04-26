@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "70bd71e6-eba4-4e00-92f7-617911dbe020"
@@ -48,13 +48,13 @@ HVCI must be enabled
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (((cmd.exe /c "reg query "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" 2> nul | findstr EnableVirtualizationBasedSecurity 2> nul") -and (cmd.exe /c "reg query "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "RequirePlatformSecurityFeatures" 2> nul | findstr RequirePlatformSecurityFeatures 2> nul") -and (cmd.exe /c "reg query "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "Locked" 2> nul | findstr Locked 2> nul") -and (cmd.exe /c "reg query "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" 2> nul | findstr Enabled 2> nul") -and (cmd.exe /c "reg query "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Locked" 2> nul | findstr Locked 2> nul"))) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /t REG_DWORD /d 1 /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "RequirePlatformSecurityFeatures" /t REG_DWORD /d 1 /f
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "Locked" /t REG_DWORD /d 0 /f

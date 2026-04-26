@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "d58d749c-4450-4975-a9e9-8b1d562755c2"
@@ -70,13 +70,13 @@ Packages sssd-ad sssd-tools realmd adcli installed and realm available, ldapsear
 
 ### Prerequisite Check
 
-```text
+```bash
 which ldapsearch
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo missing ldapsearch command; exit 1
 ```
 
@@ -87,7 +87,7 @@ echo missing ldapsearch command; exit 1
 
 ### Command
 
-```sh
+```bash
 ldapsearch -H ldap://#{domain}.#{top_level_domain}:389 -x -D #{user} -w #{password} -b "CN=Users,DC=#{domain},DC=#{top_level_domain}" "(objectClass=group)" -s sub -a always -z 1000 dn
 ```
 

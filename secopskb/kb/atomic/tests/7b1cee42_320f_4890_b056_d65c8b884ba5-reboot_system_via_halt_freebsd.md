@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1529"
 attack_technique_name: "System Shutdown/Reboot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1529/T1529.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "7b1cee42-320f-4890-b056-d65c8b884ba5"
@@ -44,7 +44,7 @@ This test restarts a FreeBSD system using `halt`.
 
 ### Command
 
-```sh
+```bash
 halt -r
 ```
 

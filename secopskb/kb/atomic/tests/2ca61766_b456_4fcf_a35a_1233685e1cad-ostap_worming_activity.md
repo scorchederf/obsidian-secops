@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "2ca61766-b456-4fcf-a35a-1233685e1cad"
@@ -52,7 +52,7 @@ OSTap copies itself in a specfic way to shares and secondary drives. This emulat
 
 ### Command
 
-```commandprompt
+```cmd
 pushd #{destination_path}
 echo var fileObject = WScript.createobject("Scripting.FileSystemObject");var newfile = fileObject.CreateTextFile("AtomicTestFileT1105.js", true);newfile.WriteLine("This is an atomic red team test file for T1105. It simulates how OSTap worms accross network shares and drives.");newfile.Close(); > AtomicTestT1105.js
 CScript.exe AtomicTestT1105.js //E:JScript

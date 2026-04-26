@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "62155dd8-bb3d-4f32-b31c-6532ff3ac6a3"
@@ -44,13 +44,13 @@ Disables LittleSnitch
 
 ### Command
 
-```sh
+```bash
 sudo launchctl unload /Library/LaunchDaemons/at.obdev.littlesnitchd.plist
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo launchctl load -w /Library/LaunchDaemons/at.obdev.littlesnitchd.plist
 ```
 

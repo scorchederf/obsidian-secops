@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "9d0072c8-7cca-45c4-bd14-f852cfa35cf0"
@@ -46,14 +46,14 @@ Use createdump executable from .NET to create an LSASS dump.
 
 ### Prerequisite Check
 
-```text
+```powershell
 $exePath =  resolve-path "$env:ProgramFiles\dotnet\shared\Microsoft.NETCore.App\5*\createdump.exe"
 if ($exePath -and (Test-Path $exePath)) {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 winget install Microsoft.DotNet.DesktopRuntime.5 --accept-source-agreements --accept-package-agreements --silent
 ```
 

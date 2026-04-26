@@ -2,6 +2,8 @@
 
 Builds an Obsidian vault for ATT&CK, D3FEND, tools, workspaces, MITRE CAR, Sigma, and Atomic Red Team.
 
+The build backlog also tracks LOLBAS, GTFOBins, PayloadsAllTheThings, InternalAllTheThings, The Hacker Recipes, Splunk Security Content, Elastic Detection Rules, Security Datasets, Malware Behavior Catalog, and MITRE Engage in `data-source-integration-plan.md`.
+
 ## What changed
 
 - `run.py` is the entry point.
@@ -33,6 +35,21 @@ Generated sources can be narrowed in `utils/config.py`.
 - `BUILD_CAR`, `BUILD_ATOMIC`, and `BUILD_SIGMA` enable or disable generated sections.
 - `SIGMA_LEVELS` defaults to `["critical", "high"]` to keep the vault lean.
 - Empty filter lists mean include everything for that dimension.
+
+## Continuing the build
+
+Use `data-source-integration-plan.md` as the build queue and design record. For each new source:
+
+1. Add build flags and filters to `utils/config.py`.
+2. Add one builder under `builds/`.
+3. Generate into a dedicated `secopskb/kb/<source>/` folder.
+4. Wire the builder in `run.py`.
+5. Add comparison ignores for the generated folder.
+6. Run the builder standalone before running the full build.
+7. Run syntax checks and a fenced-code-aware wikilink check.
+8. Update this README and the integration plan with counts, filters, and next-build notes.
+
+Keep imported tradecraft sources such as PayloadsAllTheThings, InternalAllTheThings, and The Hacker Recipes in their own folders. ATT&CK technique pages should receive compact generated summary sections and links, not full copied source pages.
 
 ## Important cleanup before running v4
 

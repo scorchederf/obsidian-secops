@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.003"
 attack_technique_name: "Unsecured Credentials: Bash History"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.003/T1552.003.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "3cfde62b-7c33-4b26-a61e-755d6131c8ce"
@@ -63,7 +63,7 @@ Search through bash history for specifice commands we want to capture
 
 ### Command
 
-```sh
+```bash
 cat #{bash_history_filename} | grep #{bash_history_grep_args} > #{output_file}
 ```
 

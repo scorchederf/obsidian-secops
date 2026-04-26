@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055"
 attack_technique_name: "Process Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055/T1055.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "0128e48e-8c1a-433a-a11a-a5387384f1e1"
@@ -58,13 +58,13 @@ Utility to inject must exist on disk at specified location (#{vuln_dll})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{vuln_dll}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory (split-path "#{vuln_dll}") -ErrorAction ignore | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055/bin/x64/vuln_dll/msys-2.0.dll" -OutFile "#{vuln_dll}"
 ```

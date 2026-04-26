@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "dd66d77d-8998-48c0-8024-df263dc2ce5d"
@@ -43,7 +43,7 @@ information will be displayed.
 
 ### Command
 
-```commandprompt
+```cmd
 net localgroup
 net group /domain
 net group "enterprise admins" /domain

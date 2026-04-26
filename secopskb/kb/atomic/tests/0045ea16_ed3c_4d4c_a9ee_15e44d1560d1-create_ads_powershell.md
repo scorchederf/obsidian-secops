@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.004"
 attack_technique_name: "Hide Artifacts: NTFS File Attributes"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.004/T1564.004.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "0045ea16-ed3c-4d4c-a9ee-15e44d1560d1"
@@ -58,13 +58,13 @@ The file must exist on disk at specified location (#{file_name})
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path #{file_name}) { exit 0 } else { exit 1 }
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Path #{file_name} | Out-Null
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "653d39cd-bae7-499a-898c-9fb96b8b5cd1"
@@ -44,7 +44,7 @@ This test deletes main log datastore, inflight log data, time-to-live data(TTL),
 
 ### Command
 
-```sh
+```bash
 sudo log erase --all
 sudo log erase --ttl #Deletes only time-to-live log content
 ```

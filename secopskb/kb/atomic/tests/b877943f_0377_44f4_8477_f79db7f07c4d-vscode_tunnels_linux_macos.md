@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "b877943f-0377-44f4-8477-f79db7f07c4d"
@@ -72,13 +72,13 @@ Install code-cli
 
 ### Prerequisite Check
 
-```text
+```untitled
 which code
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 ARCH_SUFFIX=$(uname -m | grep -q "arm64\|aarch64" && echo "arm64" || echo "x64")
 if [ "$(uname)" = "Darwin" ]
 then brew install code-cli
@@ -95,13 +95,13 @@ Login to VSCode Dev tunnels
 
 ### Prerequisite Check
 
-```text
+```untitled
 code tunnel user show | grep -q "not logged in" && exit 1 || exit 0
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo "Login to code tunnel using the following command: code tunnel user login"
 ```
 
@@ -111,13 +111,13 @@ echo "Login to code tunnel using the following command: code tunnel user login"
 
 ### Command
 
-```sh
+```bash
 nohup code tunnel --accept-server-license-terms #{additional_args} >/dev/null 2>&1 &
 ```
 
 ### Cleanup
 
-```sh
+```bash
 pkill -9 tunnel
 code tunnel unregister
 code tunnel user logout

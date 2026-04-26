@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.006"
 attack_technique_name: "Boot or Logon Autostart Execution: Kernel Modules and Extensions"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.006/T1547.006.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "bash"
 aliases:
   - "687dcb93-9656-4853-9c36-9977315e9d23"
@@ -70,13 +70,13 @@ The kernel module must exist on disk at specified location
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ -f #{module_path} ]; then exit 0; else exit 1; fi;
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 if [ ! -d #{temp_folder} ]; then mkdir #{temp_folder}; touch #{temp_folder}/safe_to_delete; fi;
 cp #{module_source_path}/* #{temp_folder}/
 cd #{temp_folder}; make

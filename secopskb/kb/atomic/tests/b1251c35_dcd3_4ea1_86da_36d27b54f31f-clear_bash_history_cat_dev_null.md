@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.003"
 attack_technique_name: "Indicator Removal on Host: Clear Command History"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.003/T1070.003.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "b1251c35-dcd3-4ea1-86da-36d27b54f31f"
@@ -51,7 +51,7 @@ Clears bash history via cat /dev/null
 
 ### Command
 
-```sh
+```bash
 cat /dev/null > #{history_path}
 ```
 

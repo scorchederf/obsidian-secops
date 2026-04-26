@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "81d7d2ad-d644-4b6a-bea7-28ffe43becca"
@@ -52,14 +52,14 @@ This test requires sshd and auditd
 
 ### Prerequisite Check
 
-```text
+```bash
 if [ ! -x "$(command -v sshd)" ]; then echo -e "\n***** sshd NOT installed *****\n"; exit 1; fi
 if [ ! -x "$(command -v auditd)" ]; then echo -e "\n***** auditd NOT installed *****\n"; exit 1; fi
 ```
 
 ### Get Prerequisite
 
-```text
+```bash
 echo ""
 ```
 
@@ -70,7 +70,7 @@ echo ""
 
 ### Command
 
-```sh
+```bash
 cp -v /etc/pam.d/sshd /tmp/
 echo "session required pam_tty_audit.so disable=* enable=* open_only log_passwd" >> /etc/pam.d/sshd
 systemctl restart sshd
@@ -85,7 +85,7 @@ exit
 
 ### Cleanup
 
-```sh
+```bash
 cp -fv /tmp/sshd /etc/pam.d/
 ```
 

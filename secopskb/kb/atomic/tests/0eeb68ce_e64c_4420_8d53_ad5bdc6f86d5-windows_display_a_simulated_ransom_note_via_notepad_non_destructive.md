@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1491.001"
 attack_technique_name: "Defacement: Internal Defacement"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1491.001/T1491.001.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "powershell"
 aliases:
   - "0eeb68ce-e64c-4420-8d53-ad5bdc6f86d5"
@@ -78,7 +78,7 @@ Notepad must be present on the system
 
 ### Prerequisite Check
 
-```text
+```cmd
 where notepad
 ```
 

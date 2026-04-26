@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "b04ed73c-7d43-4dc8-b563-a2fc595cba1a"
@@ -42,7 +42,7 @@ An adversary may type in elaborate multi-line shell commands into a terminal ses
 
 ### Command
 
-```sh
+```bash
 for i in $(seq 1 5); do echo "$i, Atomic Red Team was here!"; sleep 1; done
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "00738d2a-4651-4d76-adf2-c43a41dfb243"
@@ -63,13 +63,13 @@ DLL with function to execute must exist on disk at specified location (#{dll_to_
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{dll_to_execute}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/bin/calc.dll?raw=true" -OutFile "#{dll_to_execute}"
 ```
@@ -80,13 +80,13 @@ Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/blob/master/at
 
 ### Command
 
-```commandprompt
+```cmd
 wmic /node:#{node} process call create "rundll32.exe \"#{dll_to_execute}\" #{function_to_execute}"
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 taskkill /f /im calculator.exe
 ```
 

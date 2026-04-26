@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1485"
 attack_technique_name: "Data Destruction"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "476419b5-aebf-4366-a131-ae3e8dae5fc2"
@@ -58,13 +58,13 @@ Secure delete tool from SysInternals must exist on disk at specified location (#
 
 ### Prerequisite Check
 
-```text
+```powershell
 if (Test-Path "#{sdelete_exe}") {exit 0} else {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
 Invoke-WebRequest "https://download.sysinternals.com/files/SDelete.zip" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\SDelete.zip"
 Expand-Archive "PathToAtomicsFolder\..\ExternalPayloads\SDelete.zip" "PathToAtomicsFolder\..\ExternalPayloads\Sdelete" -Force

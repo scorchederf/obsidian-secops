@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1037.005"
 attack_technique_name: "Boot or Logon Initialization Scripts: Startup Items"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1037.005/T1037.005.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "sh"
 aliases:
   - "134627c3-75db-410e-bff8-7a920075f198"
@@ -45,13 +45,13 @@ Modify or create an file in /Library/StartupItems
 
 ### Command
 
-```sh
+```bash
 sudo touch /Library/StartupItems/EvilStartup.plist
 ```
 
 ### Cleanup
 
-```sh
+```bash
 sudo rm /Library/StartupItems/EvilStartup.plist
 ```
 

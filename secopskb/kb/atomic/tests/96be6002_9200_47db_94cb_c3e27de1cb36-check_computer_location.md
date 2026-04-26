@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "96be6002-9200-47db-94cb-c3e27de1cb36"
@@ -43,7 +43,7 @@ Looks up country code configured in the registry, likely geofence. Upon executio
 
 ### Command
 
-```commandprompt
+```cmd
 reg query "HKEY_CURRENT_USER\Control Panel\International\Geo"
 ```
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.004"
 attack_technique_name: "Valid Accounts: Cloud Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.004/T1078.004.yaml"
-build_date: "2026-04-26 14:38:39"
+build_date: "2026-04-26 17:02:12"
 executor: "powershell"
 aliases:
   - "348f4d14-4bd3-4f6b-bd8a-61237f78b3ac"
@@ -65,13 +65,13 @@ Check if terraform is installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 terraform version
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "Please install terraform via https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli (URL accurate as of Nov. 15, 2024)."
 ```
 
@@ -82,13 +82,13 @@ Check if Azure CLI and Azure Powershell are installed.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Get-InstalledModule -Name Az -ErrorAction SilentlyContinue) {exit 0} else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindowsx64 -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
 ```
 
@@ -96,13 +96,13 @@ Check if the user is logged into Azure.
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (-not (Get-AzContext)) { exit 1 } else { exit 0 }} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "* Configure your Azure account using: Connect-AzAccount"
 ```
 
@@ -114,13 +114,13 @@ Create dependency resources using terraform
 
 ### Prerequisite Check
 
-```text
+```powershell
 try {if (Test-Path "$PathToAtomicsFolder/T1078.004/src/T1078.004-2/terraform.tfstate" ){ exit 0 } else {exit 1}} catch {exit 1}
 ```
 
 ### Get Prerequisite
 
-```text
+```powershell
 echo "Navigating to: $PathToAtomicsFolder/T1078.004/src/T1078.004-2/"
 cd "$PathToAtomicsFolder/T1078.004/src/T1078.004-2/"
 terraform init

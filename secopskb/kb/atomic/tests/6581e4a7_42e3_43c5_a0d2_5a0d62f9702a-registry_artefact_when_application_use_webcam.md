@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1125"
 attack_technique_name: "Video Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1125/T1125.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:12"
 executor: "command_prompt"
 aliases:
   - "6581e4a7-42e3-43c5-a0d2-5a0d62f9702a"
@@ -42,14 +42,14 @@ tags:
 
 ### Command
 
-```commandprompt
+```cmd
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam\NonPackaged\C:#Windows#Temp#atomic.exe /v LastUsedTimeStart /t REG_BINARY /d a273b6f07104d601 /f
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam\NonPackaged\C:#Windows#Temp#atomic.exe /v LastUsedTimeStop /t REG_BINARY /d 96ef514b7204d601 /f
 ```
 
 ### Cleanup
 
-```commandprompt
+```cmd
 reg DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam\NonPackaged\C:#Windows#Temp#atomic.exe /f
 ```
 

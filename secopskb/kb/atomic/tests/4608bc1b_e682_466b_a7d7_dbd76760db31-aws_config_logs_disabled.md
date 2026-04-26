@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 14:38:40"
+build_date: "2026-04-26 17:02:13"
 executor: "sh"
 aliases:
   - "4608bc1b-e682-466b-a7d7-dbd76760db31"
@@ -63,13 +63,13 @@ Check if ~/.aws/credentials file has a default stanza is configured
 
 ### Prerequisite Check
 
-```text
+```untitled
 cat ~/.aws/credentials | grep "default"
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please install the aws-cli and configure your AWS default profile using: aws configure
 ```
 
@@ -77,13 +77,13 @@ Check if terraform is installed.
 
 ### Prerequisite Check
 
-```text
+```untitled
 terraform version
 ```
 
 ### Get Prerequisite
 
-```text
+```untitled
 echo Please install terraform and configure your AWS default profile
 ```
 
@@ -94,7 +94,7 @@ echo Please install terraform and configure your AWS default profile
 
 ### Command
 
-```sh
+```bash
 aws configservice stop-configuration-recorder --configuration-recorder-name #{configuration_recorder_name} --region #{region}
 echo "*** Configuration recorder stopped ***"
 aws configservice delete-delivery-channel --delivery-channel-name #{delivery_channel_name} --region #{region}
@@ -105,7 +105,7 @@ echo "*** Configuration recorder deleted ***"
 
 ### Cleanup
 
-```sh
+```bash
 aws configservice list-configuration-recorders --region us-west-2
 ```
 
