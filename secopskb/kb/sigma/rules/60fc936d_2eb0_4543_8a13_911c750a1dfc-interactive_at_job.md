@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_at_interactive_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_at_interactive_execution.yml"
-build_date: "2026-04-26 14:14:27"
+build_date: "2026-04-26 15:01:45"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Interactive AT Job
 
@@ -63,6 +63,7 @@ condition: selection
 
 ### At.exe Scheduled task
 
+- Atomic Test: [[kb/atomic/tests/4a6c0dc4_0f2a_4203_9298_a5a9bdc21ed8-at_exe_scheduled_task|4a6c0dc4-0f2a-4203-9298-a5a9bdc21ed8]]
 - atomic_guid: 4a6c0dc4-0f2a-4203-9298-a5a9bdc21ed8
 - name: At.exe Scheduled task
 - technique: T1053.002

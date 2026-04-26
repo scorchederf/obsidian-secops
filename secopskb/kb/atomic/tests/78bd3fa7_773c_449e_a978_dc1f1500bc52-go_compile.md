@@ -1,0 +1,77 @@
+---
+atomic_guid: "78bd3fa7-773c-449e-a978-dc1f1500bc52"
+title: "Go compile"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1027.004"
+attack_technique_name: "Obfuscated Files or Information: Compile After Delivery"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.004/T1027.004.yaml"
+build_date: "2026-04-26 14:38:39"
+executor: "sh"
+aliases:
+  - "78bd3fa7-773c-449e-a978-dc1f1500bc52"
+  - "Go compile"
+platforms:
+  - "linux"
+  - "macos"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Go compile
+
+Compile a go file with golang on FreeBSD, Linux or Macos.
+
+## Metadata
+
+- Atomic GUID: 78bd3fa7-773c-449e-a978-dc1f1500bc52
+- Technique: T1027.004: Obfuscated Files or Information: Compile After Delivery
+- Platforms: linux, macos
+- Executor: sh
+- Dependency Executor: sh
+- Source Path: atomics/T1027.004/T1027.004.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.004]]
+
+## Input Arguments
+
+### input_file
+
+- description: source file
+- type: path
+- default: PathToAtomicsFolder/T1027.004/src/T1027-004-test.go
+
+## Dependencies
+
+the source file must exist on disk at specified location (#{input_file})
+
+### Prerequisite Check
+
+```text
+if [ -e  #{input_file} ]; then exit 0; else exit 1; fi
+```
+
+### Get Prerequisite
+
+```text
+wget https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1027.004/src/T1027-004-test.go -O #{input_file}
+```
+
+## Executor
+
+- name: sh
+
+### Command
+
+```sh
+go run #{input_file}
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.004/T1027.004.yaml)

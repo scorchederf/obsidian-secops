@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_change_rdp_port.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_change_rdp_port.yml"
-build_date: "2026-04-26 14:14:23"
+build_date: "2026-04-26 15:01:44"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Default RDP Port Changed to Non Standard Port
 
@@ -66,6 +66,7 @@ condition: selection and not 1 of filter_main_*
 
 ### Changing RDP Port to Non Standard Port via Powershell
 
+- Atomic Test: [[kb/atomic/tests/2f840dd4_8a2e_4f44_beb3_6b2399ea3771-changing_rdp_port_to_non_standard_port_via_powershell|2f840dd4-8a2e-4f44-beb3-6b2399ea3771]]
 - atomic_guid: 2f840dd4-8a2e-4f44-beb3-6b2399ea3771
 - name: Changing RDP Port to Non Standard Port via Powershell
 - technique: T1021.001
@@ -73,6 +74,7 @@ condition: selection and not 1 of filter_main_*
 
 ### Changing RDP Port to Non Standard Port via Command_Prompt
 
+- Atomic Test: [[kb/atomic/tests/74ace21e_a31c_4f7d_b540_53e4eb6d1f73-changing_rdp_port_to_non_standard_port_via_command_prompt|74ace21e-a31c-4f7d-b540-53e4eb6d1f73]]
 - atomic_guid: 74ace21e-a31c-4f7d-b540-53e4eb6d1f73
 - name: Changing RDP Port to Non Standard Port via Command_Prompt
 - technique: T1021.001

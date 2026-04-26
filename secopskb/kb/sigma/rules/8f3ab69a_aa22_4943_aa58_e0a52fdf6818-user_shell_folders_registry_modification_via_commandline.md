@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_user_shell_folders_registry_modification.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_user_shell_folders_registry_modification.yml"
-build_date: "2026-04-26 14:14:38"
+build_date: "2026-04-26 15:01:53"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -20,7 +20,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # User Shell Folders Registry Modification via CommandLine
 
@@ -84,6 +84,7 @@ condition: all of selection_*
 
 ### Change Startup Folder - HKLM Modify User Shell Folders Common Startup Value
 
+- Atomic Test: [[kb/atomic/tests/acfef903_7662_447e_a391_9c91c2f00f7b-change_startup_folder_hklm_modify_user_shell_folders_common_startup_value|acfef903-7662-447e-a391-9c91c2f00f7b]]
 - atomic_guid: acfef903-7662-447e-a391-9c91c2f00f7b
 - name: Change Startup Folder - HKLM Modify User Shell Folders Common Startup Value
 - technique: T1547.001

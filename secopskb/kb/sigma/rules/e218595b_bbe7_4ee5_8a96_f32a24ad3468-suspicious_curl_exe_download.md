@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_curl_susp_download.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_curl_susp_download.yml"
-build_date: "2026-04-26 14:14:36"
+build_date: "2026-04-26 15:01:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Suspicious Curl.EXE Download
 
@@ -95,6 +95,7 @@ condition: selection_curl and 1 of selection_susp_* and not 1 of filter_optional
 
 ### Curl Download File
 
+- Atomic Test: [[kb/atomic/tests/2b080b99_0deb_4d51_af0f_833d37c4ca6a-curl_download_file|2b080b99-0deb-4d51-af0f-833d37c4ca6a]]
 - atomic_guid: 2b080b99-0deb-4d51-af0f-833d37c4ca6a
 - name: Curl Download File
 - technique: T1105

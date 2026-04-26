@@ -1,0 +1,126 @@
+---
+atomic_guid: "c59f246a-34f8-4e4d-9276-c295ef9ba0dd"
+title: "Register Portable Virtualbox"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1564.006"
+attack_technique_name: "Run Virtual Instance"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "command_prompt"
+aliases:
+  - "c59f246a-34f8-4e4d-9276-c295ef9ba0dd"
+  - "Register Portable Virtualbox"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Register Portable Virtualbox
+
+ransomware payloads via virtual machines (VM). 
+[Maze ransomware](https://threatpost.com/maze-ransomware-ragnar-locker-virtual-machine/159350/)
+
+## Metadata
+
+- Atomic GUID: c59f246a-34f8-4e4d-9276-c295ef9ba0dd
+- Technique: T1564.006: Run Virtual Instance
+- Platforms: windows
+- Executor: command_prompt
+- Dependency Executor: powershell
+- Source Path: atomics/T1564.006/T1564.006.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564.006]]
+
+## Input Arguments
+
+### cab_file_path
+
+- description: Path to the CAB file
+- type: path
+- default: PathToAtomicsFolder\T1564.006\bin\common.cab
+
+### msi_file_path
+
+- description: Path to the MSI file
+- type: path
+- default: PathToAtomicsFolder\T1564.006\bin\Virtualbox_52.msi
+
+## Dependencies
+
+MSI file must exist on disk at specified location (#{msi_file_path})
+
+### Prerequisite Check
+
+```text
+if (Test-Path "#{msi_file_path}") {exit 0} else {exit 1}
+```
+
+### Get Prerequisite
+
+```text
+New-Item -Type Directory (split-path "#{msi_file_path}") -ErrorAction ignore | Out-Null
+Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1564.006/bin/Virtualbox_52.msi" -OutFile "#{msi_file_path}"
+```
+
+CAB file must exist on disk at specified location (#{cab_file_path})
+
+### Prerequisite Check
+
+```text
+if (Test-Path "#{cab_file_path}") {exit 0} else {exit 1}
+```
+
+### Get Prerequisite
+
+```text
+New-Item -Type Directory (split-path "#{cab_file_path}") -ErrorAction ignore | Out-Null
+Invoke-WebRequest "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1564.006/bin/common.cab" -OutFile "#{cab_file_path}"
+```
+
+Old version of Virtualbox must be installed
+
+### Prerequisite Check
+
+```text
+if (Test-Path "C:\Program Files\Oracle\VirtualBox\VboxC.dll") {exit 0} else {exit 1}
+```
+
+### Get Prerequisite
+
+```text
+msiexec /i "#{msi_file_path}" /qn
+```
+
+## Executor
+
+- name: command_prompt
+
+### Command
+
+```commandprompt
+"C:\Program Files\Oracle\VirtualBox\VBoxSVC.exe" /reregserver
+regsvr32 /S "C:\Program Files\Oracle\VirtualBox\VboxC.dll"
+rundll32 "C:\Program Files\Oracle\VirtualBox\VBoxRT.dll,RTR3Init"
+sc create VBoxDRV binpath= "C:\Program Files\Oracle\VirtualBox\drivers\VboxDrv.sys" type= kernel start= auto error= normal displayname= PortableVBoxDRV
+sc start VBoxDRV
+```
+
+### Cleanup
+
+```commandprompt
+sc stop VBoxDRV
+sc delete VBoxDRV
+regsvr32 /u /S "C:\Program Files\Oracle\VirtualBox\VboxC.dll"
+msiexec /x "#{msi_file_path}" /qn
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml)

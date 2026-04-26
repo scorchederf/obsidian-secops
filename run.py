@@ -1,17 +1,30 @@
 from builds.attack import build_attack
+from builds.atomic import build_atomic
 from builds.car import build_car
 from builds.indexes import build_indexes
 from builds.sigma import build_sigma
 from utils.compare_vaults import compare_vaults
-from utils.config import COMPARE_DIFF_FOLDER, COMPARE_REPORT_FILE, NEW_VAULT, OLD_VAULT
+from utils.config import (
+    BUILD_ATOMIC,
+    BUILD_CAR,
+    BUILD_SIGMA,
+    COMPARE_DIFF_FOLDER,
+    COMPARE_REPORT_FILE,
+    NEW_VAULT,
+    OLD_VAULT,
+)
 from utils.logging_utils import log
 
 
 def main():
     log("Starting full vault build", "INFO")
     build_attack()
-    build_car()
-    build_sigma()
+    if BUILD_CAR:
+        build_car()
+    if BUILD_ATOMIC:
+        build_atomic()
+    if BUILD_SIGMA:
+        build_sigma()
     build_indexes()
     log("Starting vault verification", "INFO")
     result = compare_vaults(OLD_VAULT, NEW_VAULT, COMPARE_REPORT_FILE, COMPARE_DIFF_FOLDER)

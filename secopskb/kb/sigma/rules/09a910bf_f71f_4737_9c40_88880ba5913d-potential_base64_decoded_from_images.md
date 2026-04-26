@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/macos/process_creation/proc_creation_macos_tail_base64_decode_from_image.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/macos/process_creation/proc_creation_macos_tail_base64_decode_from_image.yml"
-build_date: "2026-04-26 14:14:31"
+build_date: "2026-04-26 15:01:48"
 status: "test"
 level: "high"
 logsource: "macos / process_creation"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Potential Base64 Decoded From Images
 

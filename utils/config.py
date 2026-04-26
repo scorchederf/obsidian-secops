@@ -7,14 +7,29 @@ LEGACY_BUILD_FILE = "legacy_build.py"
 LEGACY_BUILD_URL = "https://raw.githubusercontent.com/scorchederf/obsidian-secops/main/build.py"
 COMPARE_REPORT_FILE = "vault_compare_report.md"
 COMPARE_DIFF_FOLDER = "vault_compare_diffs"
+
+BUILD_CAR = True
+BUILD_ATOMIC = True
+BUILD_SIGMA = True
+
+# Empty lists mean include everything for that dimension.
+SIGMA_LEVELS = ["critical", "high"]
+SIGMA_PRODUCTS = []
+SIGMA_STATUSES = []
+
+ATOMIC_PLATFORMS = []
+ATOMIC_EXECUTORS = []
+
 IGNORED_COMPARE_LINE_PREFIXES = [
     "build_date:", "generated:", "last_build:", "last_updated:", "updated:", "created:",
 ]
 IGNORED_COMPARE_PATH_PREFIXES = [
+    "kb/atomic/",
     "kb/car/",
     "kb/sigma/",
 ]
 IGNORED_COMPARE_EXACT_LINES = [
+    "- [[kb/atomic/index|Atomic]]",
     "- [[kb/car/index|CAR]]",
     "- [[kb/car/index|CAR]] (102 analytics)",
     "- [[kb/sigma/index|Sigma]]",

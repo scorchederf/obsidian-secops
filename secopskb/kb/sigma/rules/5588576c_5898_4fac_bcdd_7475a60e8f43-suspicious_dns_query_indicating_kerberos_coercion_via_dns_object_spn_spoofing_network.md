@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/zeek/zeek_dns_kerberos_coercion_via_dns_object_spn_spoofing.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/zeek/zeek_dns_kerberos_coercion_via_dns_object_spn_spoofing.yml"
-build_date: "2026-04-26 14:14:36"
+build_date: "2026-04-26 15:01:51"
 status: "experimental"
 level: "high"
 logsource: "zeek / dns"
@@ -20,7 +20,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing - Network
 

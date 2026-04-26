@@ -1,0 +1,61 @@
+---
+atomic_guid: "37950714-e923-4f92-8c7c-51e4b6fffbf6"
+title: "Allow Simultaneous Download Registry"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1112"
+attack_technique_name: "Modify Registry"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
+build_date: "2026-04-26 14:38:39"
+executor: "command_prompt"
+aliases:
+  - "37950714-e923-4f92-8c7c-51e4b6fffbf6"
+  - "Allow Simultaneous Download Registry"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Allow Simultaneous Download Registry
+
+A registry modification to allow Simultaneous download in the system.
+
+## Metadata
+
+- Atomic GUID: 37950714-e923-4f92-8c7c-51e4b6fffbf6
+- Technique: T1112: Modify Registry
+- Platforms: windows
+- Executor: command_prompt
+- Elevation Required: True
+- Source Path: atomics/T1112/T1112.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+
+## Executor
+
+- elevation_required: True
+- name: command_prompt
+
+### Command
+
+```commandprompt
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "MaxConnectionsPerServer" /t REG_DWORD /d 10 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "MaxConnectionsPer1_0Server" /t REG_DWORD /d 10 /f
+```
+
+### Cleanup
+
+```commandprompt
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "MaxConnectionsPerServer" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v "MaxConnectionsPer1_0Server" /f
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml)

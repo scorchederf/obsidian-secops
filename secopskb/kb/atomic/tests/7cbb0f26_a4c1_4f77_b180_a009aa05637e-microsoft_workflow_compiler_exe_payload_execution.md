@@ -1,0 +1,90 @@
+---
+atomic_guid: "7cbb0f26-a4c1-4f77-b180-a009aa05637e"
+title: "Microsoft.Workflow.Compiler.exe Payload Execution"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1218"
+attack_technique_name: "Signed Binary Proxy Execution"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "powershell"
+aliases:
+  - "7cbb0f26-a4c1-4f77-b180-a009aa05637e"
+  - "Microsoft.Workflow.Compiler.exe Payload Execution"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Microsoft.Workflow.Compiler.exe Payload Execution
+
+Emulates attack with Microsoft.Workflow.Compiler.exe running a .Net assembly that launches calc.exe
+
+## Metadata
+
+- Atomic GUID: 7cbb0f26-a4c1-4f77-b180-a009aa05637e
+- Technique: T1218: Signed Binary Proxy Execution
+- Platforms: windows
+- Executor: powershell
+- Elevation Required: False
+- Dependency Executor: powershell
+- Source Path: atomics/T1218/T1218.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+
+## Input Arguments
+
+### mwcname
+
+- description: Default name of microsoft.workflow.compiler.exe
+- type: path
+- default: microsoft.workflow.compiler.exe
+
+### mwcpath
+
+- description: Default location of Microsoft.Workflow.Compiler.exe
+- type: path
+- default: C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+
+### xml_payload
+
+- description: XML to execution
+- type: path
+- default: PathToAtomicsFolder\T1218\src\T1218.xml
+
+## Dependencies
+
+.Net must be installed for this test to work correctly.
+
+### Prerequisite Check
+
+```text
+if (Test-Path #{mwcpath}\#{mwcname} ) {exit 0} else {exit 1}
+```
+
+### Get Prerequisite
+
+```text
+write-host ".Net must be installed for this test to work correctly."
+```
+
+## Executor
+
+- elevation_required: False
+- name: powershell
+
+### Command
+
+```powershell
+#{mwcpath}\#{mwcname} "#{xml_payload}" output.txt
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml)

@@ -50,6 +50,7 @@ The vault should keep ATT&CK as the primary behavior spine. Other sources should
    - Parse `atomics/T*/T*.yaml`.
    - Generate test pages and technique indexes.
    - Link tests to Sigma simulation blocks where `atomic_guid` matches.
+   - Status: implemented in `kb/atomic/`, with Sigma simulation links resolved to Atomic test pages when GUIDs match.
 
 3. LOLBAS and GTFOBins
    - Parse project YAML/Markdown data.

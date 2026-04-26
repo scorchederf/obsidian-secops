@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_findstr_gpp_passwords.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_gpp_passwords.yml"
-build_date: "2026-04-26 14:14:25"
+build_date: "2026-04-26 15:01:44"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Findstr GPP Passwords
 
@@ -72,6 +72,7 @@ condition: all of selection_*
 
 ### GPP Passwords (findstr)
 
+- Atomic Test: [[kb/atomic/tests/870fe8fb_5e23_4f5f_b89d_dd7fe26f3b5f-gpp_passwords_findstr|870fe8fb-5e23-4f5f-b89d-dd7fe26f3b5f]]
 - atomic_guid: 870fe8fb-5e23-4f5f-b89d-dd7fe26f3b5f
 - name: GPP Passwords (findstr)
 - technique: T1552.006

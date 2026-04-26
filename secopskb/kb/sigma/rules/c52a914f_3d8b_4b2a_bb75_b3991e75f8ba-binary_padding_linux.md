@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/execve/lnx_auditd_binary_padding.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/execve/lnx_auditd_binary_padding.yml"
-build_date: "2026-04-26 14:14:21"
+build_date: "2026-04-26 15:01:43"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Binary Padding - Linux
 
@@ -73,6 +73,7 @@ condition: selection_execve and (keywords_truncate or (keywords_dd and not keywo
 
 ### Pad Binary to Change Hash - Linux/macOS dd
 
+- Atomic Test: [[kb/atomic/tests/ffe2346c_abd5_4b45_a713_bf5f1ebd573a-pad_binary_to_change_hash_linux_macos_dd|ffe2346c-abd5-4b45-a713-bf5f1ebd573a]]
 - atomic_guid: ffe2346c-abd5-4b45-a713-bf5f1ebd573a
 - name: Pad Binary to Change Hash - Linux/macOS dd
 - technique: T1027.001

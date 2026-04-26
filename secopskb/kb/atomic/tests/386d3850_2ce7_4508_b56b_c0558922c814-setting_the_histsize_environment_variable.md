@@ -1,0 +1,66 @@
+---
+atomic_guid: "386d3850-2ce7-4508-b56b-c0558922c814"
+title: "Setting the HISTSIZE environment variable"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1562.003"
+attack_technique_name: "Impair Defenses: Impair Command History Logging"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "sh"
+aliases:
+  - "386d3850-2ce7-4508-b56b-c0558922c814"
+  - "Setting the HISTSIZE environment variable"
+platforms:
+  - "linux"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Setting the HISTSIZE environment variable
+
+An Adversary may set the sh history files size environment variable (HISTSIZE) to zero to prevent the logging of commands to the history file after they log out of the system.
+
+Note: we don't wish to log out, so we are just confirming the value of HISTSIZE. In this test we 1. echo HISTSIZE 2. set it to zero 3. confirm that HISTSIZE is set to zero.
+
+## Metadata
+
+- Atomic GUID: 386d3850-2ce7-4508-b56b-c0558922c814
+- Technique: T1562.003: Impair Defenses: Impair Command History Logging
+- Platforms: linux
+- Executor: sh
+- Elevation Required: False
+- Source Path: atomics/T1562.003/T1562.003.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1562-impair_defenses|T1562.003]]
+
+## Executor
+
+- elevation_required: False
+- name: sh
+
+### Command
+
+```sh
+echo $HISTSIZE
+export HISTSIZE=0
+echo "runnning some commands to populate the history"
+whoami
+groups
+if [ $(echo $HISTSIZE) -eq 0 ]; then echo "\$HISTSIZE is zero"; else HIST_LENGTH=$(wc -l $HISTFILE); echo "\$HISTSIZE is not zero, history size is $HIST_LENGTH";  fi
+```
+
+### Cleanup
+
+```sh
+export HISTSIZE=100
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml)

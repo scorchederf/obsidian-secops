@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_amsi_registry_tampering.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_amsi_registry_tampering.yml"
-build_date: "2026-04-26 14:14:40"
+build_date: "2026-04-26 15:01:54"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -20,7 +20,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Windows AMSI Related Registry Tampering Via CommandLine
 
@@ -84,6 +84,7 @@ condition: selection_key and (all of selection_powershell_* or all of selection_
 
 ### AMSI Bypass - Create AMSIEnable Reg Key
 
+- Atomic Test: [[kb/atomic/tests/728eca7b_0444_4f6f_ac36_437e3d751dc0-amsi_bypass_create_amsienable_reg_key|728eca7b-0444-4f6f-ac36-437e3d751dc0]]
 - atomic_guid: 728eca7b-0444-4f6f-ac36-437e3d751dc0
 - name: AMSI Bypass - Create AMSIEnable Reg Key
 - technique: T1562.001

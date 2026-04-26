@@ -1,0 +1,66 @@
+---
+atomic_guid: "b789d341-154b-4a42-a071-9111588be9bc"
+title: "List Google Chrome Bookmark JSON Files on macOS"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1217"
+attack_technique_name: "Browser Bookmark Discovery"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "sh"
+aliases:
+  - "b789d341-154b-4a42-a071-9111588be9bc"
+  - "List Google Chrome Bookmark JSON Files on macOS"
+platforms:
+  - "macos"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# List Google Chrome Bookmark JSON Files on macOS
+
+Searches for Google Chrome's Bookmark file (on macOS) that contains bookmarks in JSON format and lists any found instances to a text file.
+
+## Metadata
+
+- Atomic GUID: b789d341-154b-4a42-a071-9111588be9bc
+- Technique: T1217: Browser Bookmark Discovery
+- Platforms: macos
+- Executor: sh
+- Source Path: atomics/T1217/T1217.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1217-browser_information_discovery|T1217]]
+
+## Input Arguments
+
+### output_file
+
+- description: Path where captured results will be placed.
+- type: path
+- default: /tmp/T1217-Chrome.txt
+
+## Executor
+
+- name: sh
+
+### Command
+
+```sh
+find / -path "*/Google/Chrome/*/Bookmarks" -exec echo {} >> #{output_file} \;
+cat #{output_file} 2>/dev/null
+```
+
+### Cleanup
+
+```sh
+rm -f #{output_file} 2>/dev/null
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1217/T1217.yaml)

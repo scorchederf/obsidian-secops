@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_bypass_uac_using_silentcleanup_task.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_bypass_uac_using_silentcleanup_task.yml"
-build_date: "2026-04-26 14:14:21"
+build_date: "2026-04-26 15:01:43"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Bypass UAC Using SilentCleanup Task
 
@@ -66,6 +66,7 @@ condition: selection and not 1 of filter_main_*
 
 ### Bypass UAC using SilentCleanup Task
 
+- Atomic Test: [[kb/atomic/tests/28104f8a_4ff1_4582_bcf6_699dce156608-bypass_uac_using_silentcleanup_task|28104f8a-4ff1-4582-bcf6-699dce156608]]
 - atomic_guid: 28104f8a-4ff1-4582-bcf6-699dce156608
 - name: Bypass UAC using SilentCleanup Task
 - technique: T1548.002

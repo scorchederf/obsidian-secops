@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_deviceguard_hypervisorenforcedcodeintegrity_disabled.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_deviceguard_hypervisorenforcedcodeintegrity_disabled.yml"
-build_date: "2026-04-26 14:14:40"
+build_date: "2026-04-26 15:01:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Windows Hypervisor Enforced Code Integrity Disabled
 
@@ -66,6 +66,7 @@ condition: selection
 
 ### Disable Hypervisor-Enforced Code Integrity (HVCI)
 
+- Atomic Test: [[kb/atomic/tests/70bd71e6_eba4_4e00_92f7_617911dbe020-disable_hypervisor_enforced_code_integrity_hvci|70bd71e6-eba4-4e00-92f7-617911dbe020]]
 - atomic_guid: 70bd71e6-eba4-4e00-92f7-617911dbe020
 - name: Disable Hypervisor-Enforced Code Integrity (HVCI)
 - technique: T1562.001

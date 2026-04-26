@@ -1,0 +1,66 @@
+---
+atomic_guid: "b26a3340-dad7-4360-9176-706269c74103"
+title: "Disable Event Logging with wevtutil"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1562.002"
+attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "command_prompt"
+aliases:
+  - "b26a3340-dad7-4360-9176-706269c74103"
+  - "Disable Event Logging with wevtutil"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Disable Event Logging with wevtutil
+
+Wevtutil can be used to disable logs. 
+NOTE: RansomEXX ransomware uses this to disable Security logs post-encryption.
+
+## Metadata
+
+- Atomic GUID: b26a3340-dad7-4360-9176-706269c74103
+- Technique: T1562.002: Impair Defenses: Disable Windows Event Logging
+- Platforms: windows
+- Executor: command_prompt
+- Source Path: atomics/T1562.002/T1562.002.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+
+## Input Arguments
+
+### log_name
+
+- description: Name of the log to be disabled
+- type: string
+- default: Microsoft-Windows-IKE/Operational
+
+## Executor
+
+- name: command_prompt
+
+### Command
+
+```commandprompt
+wevtutil sl "#{log_name}" /e:false
+```
+
+### Cleanup
+
+```commandprompt
+wevtutil sl "#{log_name}" /e:true
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml)

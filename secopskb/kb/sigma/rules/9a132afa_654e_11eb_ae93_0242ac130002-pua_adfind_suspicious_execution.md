@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml"
-build_date: "2026-04-26 14:14:30"
+build_date: "2026-04-26 15:01:47"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,7 +22,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # PUA - AdFind Suspicious Execution
 
@@ -87,6 +87,7 @@ condition: selection
 
 ### Adfind - Enumerate Active Directory Computer Objects
 
+- Atomic Test: [[kb/atomic/tests/a889f5be_2d54_4050_bd05_884578748bb4-adfind_enumerate_active_directory_computer_objects|a889f5be-2d54-4050-bd05-884578748bb4]]
 - atomic_guid: a889f5be-2d54-4050-bd05-884578748bb4
 - name: Adfind - Enumerate Active Directory Computer Objects
 - technique: T1018
@@ -94,6 +95,7 @@ condition: selection
 
 ### Adfind - Enumerate Active Directory Domain Controller Objects
 
+- Atomic Test: [[kb/atomic/tests/5838c31e_a0e2_4b9f_b60a_d79d2cb7995e-adfind_enumerate_active_directory_domain_controller_objects|5838c31e-a0e2-4b9f-b60a-d79d2cb7995e]]
 - atomic_guid: 5838c31e-a0e2-4b9f-b60a-d79d2cb7995e
 - name: Adfind - Enumerate Active Directory Domain Controller Objects
 - technique: T1018

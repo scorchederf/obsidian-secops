@@ -1,0 +1,66 @@
+---
+atomic_guid: "34ca1464-de9d-40c6-8c77-690adf36a135"
+title: "chmod - Change file or folder mode (numeric mode)"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1222.002"
+attack_technique_name: "File and Directory Permissions Modification: FreeBSD, Linux and Mac File and Directory Permissions Modification"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.002/T1222.002.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "sh"
+aliases:
+  - "34ca1464-de9d-40c6-8c77-690adf36a135"
+  - "chmod - Change file or folder mode (numeric mode)"
+platforms:
+  - "linux"
+  - "macos"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# chmod - Change file or folder mode (numeric mode)
+
+Changes a file or folder's permissions using chmod and a specified numeric mode.
+
+## Metadata
+
+- Atomic GUID: 34ca1464-de9d-40c6-8c77-690adf36a135
+- Technique: T1222.002: File and Directory Permissions Modification: FreeBSD, Linux and Mac File and Directory Permissions Modification
+- Platforms: linux, macos
+- Executor: sh
+- Source Path: atomics/T1222.002/T1222.002.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.002]]
+
+## Input Arguments
+
+### file_or_folder
+
+- description: Path of the file or folder
+- type: path
+- default: /tmp/AtomicRedTeam/atomics/T1222.002
+
+### numeric_mode
+
+- description: Specified numeric mode value
+- type: integer
+- default: 755
+
+## Executor
+
+- name: sh
+
+### Command
+
+```sh
+chmod #{numeric_mode} #{file_or_folder}
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.002/T1222.002.yaml)

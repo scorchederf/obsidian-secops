@@ -1,0 +1,62 @@
+---
+atomic_guid: "13daa2cf-195a-43df-a8bd-7dd5ffb607b5"
+title: "Network Share Discovery via dir command"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1135"
+attack_technique_name: "Network Share Discovery"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "command_prompt"
+aliases:
+  - "13daa2cf-195a-43df-a8bd-7dd5ffb607b5"
+  - "Network Share Discovery via dir command"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# Network Share Discovery via dir command
+
+Network Share Discovery utilizing the dir command prompt. The computer ip variable may need to be modified to point to a different host ip
+Upon execution available network shares will be displayed in the commandline session
+
+## Metadata
+
+- Atomic GUID: 13daa2cf-195a-43df-a8bd-7dd5ffb607b5
+- Technique: T1135: Network Share Discovery
+- Platforms: windows
+- Executor: command_prompt
+- Source Path: atomics/T1135/T1135.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1135-network_share_discovery|T1135]]
+
+## Input Arguments
+
+### computer_ip
+
+- description: Computer IP to find a mount on.
+- type: string
+- default: 127.0.0.1
+
+## Executor
+
+- name: command_prompt
+
+### Command
+
+```commandprompt
+dir \\#{computer_ip}\c$
+dir \\#{computer_ip}\admin$
+dir \\#{computer_ip}\IPC$
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml)

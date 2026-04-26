@@ -10,6 +10,7 @@ from datetime import datetime
 import requests
 import yaml
 
+from utils.config import SIGMA_LEVELS, SIGMA_PRODUCTS, SIGMA_STATUSES
 from utils.files import ensure_folder, read_text_file, remove_folder_if_exists, write_text_file
 from utils.logging_utils import log
 
@@ -26,11 +27,13 @@ SIGMA_DIR = os.path.join(KB_DIR, "sigma")
 SIGMA_RULES_DIR = os.path.join(SIGMA_DIR, "rules")
 SIGMA_TECHNIQUES_DIR = os.path.join(SIGMA_DIR, "techniques")
 SIGMA_LOGSOURCES_DIR = os.path.join(SIGMA_DIR, "logsources")
+ATOMIC_TESTS_DIR = os.path.join(KB_DIR, "atomic", "tests")
 ATTACK_TECHNIQUES_DIR = os.path.join(KB_DIR, "attack", "techniques")
 
 BASE_NAV = "[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[workspaces/index|Notes]]"
 CAR_NAV = "[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[workspaces/index|Notes]]"
 SIGMA_NAV = "[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]"
+ATOMIC_NAV = "[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]"
 
 
 def make_safe_name(value):
@@ -73,7 +76,7 @@ def render_yaml(lines):
 
 
 def build_page_start():
-    return SIGMA_NAV + "\n\n"
+    return ATOMIC_NAV + "\n\n"
 
 
 def safe_extract_archive(archive, destination):
@@ -120,10 +123,13 @@ def load_sigma_rules():
             if not isinstance(data, dict) or not data.get("title"):
                 skipped += 1
                 continue
+            if not sigma_rule_is_included(data):
+                skipped += 1
+                continue
             rules.append({"data": data, "source_path": source_path})
 
     rules.sort(key=lambda item: (item["data"].get("title", ""), item["source_path"]))
-    log("Loaded " + str(len(rules)) + " Sigma rules; skipped " + str(skipped), "INFO")
+    log("Loaded " + str(len(rules)) + " Sigma rules after filters; skipped " + str(skipped), "INFO")
     return rules
 
 
@@ -138,6 +144,25 @@ def build_attack_technique_lookup():
         attack_id = filename.split("-", 1)[0]
         if re.match(r"^T\d{4}$", attack_id):
             lookup[attack_id] = os.path.splitext(filename)[0]
+    return lookup
+
+
+def build_atomic_guid_lookup():
+    lookup = {}
+    if not os.path.isdir(ATOMIC_TESTS_DIR):
+        return lookup
+
+    for filename in os.listdir(ATOMIC_TESTS_DIR):
+        if not filename.endswith(".md") or filename == "index.md":
+            continue
+        filepath = os.path.join(ATOMIC_TESTS_DIR, filename)
+        try:
+            text = read_text_file(filepath)
+        except OSError:
+            continue
+        match = re.search(r'^atomic_guid: "([^"]+)"', text, flags=re.MULTILINE)
+        if match:
+            lookup[match.group(1)] = os.path.splitext(filename)[0]
     return lookup
 
 
@@ -185,6 +210,27 @@ def get_logsource_key(rule):
     ]
     values = [value for value in values if value]
     return " / ".join(values) if values else "unspecified"
+
+
+def get_logsource_product(rule):
+    logsource = rule.get("logsource") or {}
+    if not isinstance(logsource, dict):
+        return ""
+    return str(logsource.get("product", "") or "").strip().lower()
+
+
+def sigma_rule_is_included(rule):
+    level = str(rule.get("level", "") or "").strip().lower()
+    product = get_logsource_product(rule)
+    status = str(rule.get("status", "") or "").strip().lower()
+
+    if SIGMA_LEVELS and level not in {item.lower() for item in SIGMA_LEVELS}:
+        return False
+    if SIGMA_PRODUCTS and product not in {item.lower() for item in SIGMA_PRODUCTS}:
+        return False
+    if SIGMA_STATUSES and status not in {item.lower() for item in SIGMA_STATUSES}:
+        return False
+    return True
 
 
 def make_rule_filename(item):
@@ -263,7 +309,7 @@ def write_detection_section(rule):
     return "## Detection\n\n```yaml\n" + yaml.safe_dump(detection, sort_keys=False, allow_unicode=True).rstrip() + "\n```\n\n"
 
 
-def write_simulation_section(rule):
+def write_simulation_section(rule, atomic_lookup):
     simulations = normalize_list(rule.get("simulation"))
     if not simulations:
         return ""
@@ -274,13 +320,16 @@ def write_simulation_section(rule):
             continue
         label = item.get("name") or item.get("type") or "simulation"
         text += f"### {label}\n\n"
+        atomic_guid = item.get("atomic_guid")
+        if atomic_guid and atomic_guid in atomic_lookup:
+            text += f"- Atomic Test: [[kb/atomic/tests/{atomic_lookup[atomic_guid]}|{atomic_guid}]]\n"
         for key in sorted(item.keys()):
             text += f"- {key}: {item[key]}\n"
         text += "\n"
     return text
 
 
-def build_sigma_rule_note(item, attack_lookup):
+def build_sigma_rule_note(item, attack_lookup, atomic_lookup):
     rule = item["data"]
     techniques = extract_attack_techniques(rule)
 
@@ -310,7 +359,7 @@ def build_sigma_rule_note(item, attack_lookup):
     text += write_detection_section(rule)
     text += write_list_section("Fields", rule.get("fields"))
     text += write_list_section("False Positives", rule.get("falsepositives") or rule.get("false positives"))
-    text += write_simulation_section(rule)
+    text += write_simulation_section(rule, atomic_lookup)
     text += write_list_section("References", rule.get("references"))
     text += "## Source\n\n"
     text += "- [Source YAML](" + SIGMA_REPO_RULE_URL_TEMPLATE.format(source_path=item["source_path"]) + ")\n"
@@ -373,7 +422,7 @@ def update_vault_navigation():
                 continue
             filepath = os.path.join(folder, filename)
             text = read_text_file(filepath)
-            new_text = text.replace(CAR_NAV, SIGMA_NAV).replace(BASE_NAV, SIGMA_NAV)
+            new_text = text.replace(SIGMA_NAV, ATOMIC_NAV).replace(CAR_NAV, ATOMIC_NAV).replace(BASE_NAV, ATOMIC_NAV)
             if new_text != text:
                 write_text_file(filepath, new_text)
                 changed += 1
@@ -393,8 +442,14 @@ def update_root_indexes(rule_count):
         if not os.path.exists(filepath):
             continue
         text = read_text_file(filepath)
-        text = text.replace(CAR_NAV, SIGMA_NAV).replace(BASE_NAV, SIGMA_NAV)
-        body_without_nav = text.replace(SIGMA_NAV, "")
+        text = text.replace(SIGMA_NAV, ATOMIC_NAV).replace(CAR_NAV, ATOMIC_NAV).replace(BASE_NAV, ATOMIC_NAV)
+        text = re.sub(
+            r"- \[\[kb/sigma/index\|Sigma\]\](?: \(\d+ rules\))?",
+            "- [[kb/sigma/index|Sigma]] (" + str(rule_count) + " rules)",
+            text,
+            count=1,
+        )
+        body_without_nav = text.replace(ATOMIC_NAV, "")
         if "- [[kb/sigma/index|Sigma]]" not in body_without_nav:
             for old, new in replacements:
                 if old in text:
@@ -408,6 +463,7 @@ def build_sigma():
     download_sigma_source_if_needed()
     rules = load_sigma_rules()
     attack_lookup = build_attack_technique_lookup()
+    atomic_lookup = build_atomic_guid_lookup()
 
     remove_folder_if_exists(SIGMA_DIR)
     ensure_folder(SIGMA_RULES_DIR)
@@ -416,7 +472,7 @@ def build_sigma():
 
     for item in rules:
         filepath = os.path.join(SIGMA_RULES_DIR, make_rule_filename(item) + ".md")
-        write_text_file(filepath, build_sigma_rule_note(item, attack_lookup))
+        write_text_file(filepath, build_sigma_rule_note(item, attack_lookup, atomic_lookup))
 
     build_sigma_indexes(rules, attack_lookup)
     update_vault_navigation()

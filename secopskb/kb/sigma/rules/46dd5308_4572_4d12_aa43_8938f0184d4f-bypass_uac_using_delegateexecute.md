@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_bypass_uac_using_delegateexecute.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_bypass_uac_using_delegateexecute.yml"
-build_date: "2026-04-26 14:14:21"
+build_date: "2026-04-26 15:01:43"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Bypass UAC Using DelegateExecute
 
@@ -63,6 +63,7 @@ condition: selection
 
 ### Bypass UAC using sdclt DelegateExecute
 
+- Atomic Test: [[kb/atomic/tests/3be891eb_4608_4173_87e8_78b494c029b7-bypass_uac_using_sdclt_delegateexecute|3be891eb-4608-4173-87e8-78b494c029b7]]
 - atomic_guid: 3be891eb-4608-4173-87e8-78b494c029b7
 - name: Bypass UAC using sdclt DelegateExecute
 - technique: T1548.002

@@ -1,0 +1,84 @@
+---
+atomic_guid: "ea1b4f2d-5b82-4006-b64f-f2845608a3bf"
+title: "TruffleSnout - Listing AD Infrastructure"
+framework: "atomic"
+generated: "true"
+attack_technique_id: "T1482"
+attack_technique_name: "Domain Trust Discovery"
+source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml"
+build_date: "2026-04-26 14:38:40"
+executor: "command_prompt"
+aliases:
+  - "ea1b4f2d-5b82-4006-b64f-f2845608a3bf"
+  - "TruffleSnout - Listing AD Infrastructure"
+platforms:
+  - "windows"
+tags:
+  - "atomic"
+  - "validation-test"
+---
+
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+
+# TruffleSnout - Listing AD Infrastructure
+
+Iterative AD discovery toolkit for offensive operators. Situational awareness and targeted low noise enumeration. Preference for OpSec.- https://github.com/dsnezhkov/TruffleSnout
+
+## Metadata
+
+- Atomic GUID: ea1b4f2d-5b82-4006-b64f-f2845608a3bf
+- Technique: T1482: Domain Trust Discovery
+- Platforms: windows
+- Executor: command_prompt
+- Dependency Executor: powershell
+- Source Path: atomics/T1482/T1482.yaml
+
+## ATT&CK Mapping
+
+- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
+
+## Input Arguments
+
+### domain
+
+- description: Domain name to search on
+- type: string
+- default: %userdomain%
+
+### trufflesnout_path
+
+- description: Path to the TruffleSnout executable
+- type: path
+- default: PathToAtomicsFolder\..\ExternalPayloads\TruffleSnout.exe
+
+## Dependencies
+
+TruffleSnout.exe must exist on disk at specified location (#{trufflesnout_path})
+
+### Prerequisite Check
+
+```text
+if (Test-Path "#{trufflesnout_path}") {exit 0} else {exit 1}
+```
+
+### Get Prerequisite
+
+```text
+New-Item -ItemType Directory (Split-Path "#{trufflesnout_path}") -Force | Out-Null
+Invoke-WebRequest -Uri "https://github.com/dsnezhkov/TruffleSnout/releases/download/0.5/TruffleSnout.exe" -OutFile "#{trufflesnout_path}"
+```
+
+## Executor
+
+- name: command_prompt
+
+### Command
+
+```commandprompt
+"#{trufflesnout_path}" forest -n #{domain}
+"#{trufflesnout_path}" domain -n #{domain}
+```
+
+## Source
+
+- [Source YAML](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml)

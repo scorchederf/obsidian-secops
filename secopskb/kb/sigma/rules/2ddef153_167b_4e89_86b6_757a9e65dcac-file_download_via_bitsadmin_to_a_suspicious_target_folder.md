@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_bitsadmin_download_susp_targetfolder.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download_susp_targetfolder.yml"
-build_date: "2026-04-26 14:14:25"
+build_date: "2026-04-26 15:01:44"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,7 +21,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # File Download Via Bitsadmin To A Suspicious Target Folder
 
@@ -100,6 +100,7 @@ condition: all of selection_*
 
 ### Windows - BITSAdmin BITS Download
 
+- Atomic Test: [[kb/atomic/tests/a1921cd3_9a2d_47d5_a891_f1d0f2a7a31b-windows_bitsadmin_bits_download|a1921cd3-9a2d-47d5-a891-f1d0f2a7a31b]]
 - atomic_guid: a1921cd3-9a2d-47d5-a891-f1d0f2a7a31b
 - name: Windows - BITSAdmin BITS Download
 - technique: T1105

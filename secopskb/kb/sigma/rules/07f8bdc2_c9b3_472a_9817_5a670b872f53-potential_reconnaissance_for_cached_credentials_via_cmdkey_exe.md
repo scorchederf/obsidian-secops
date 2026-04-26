@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmdkey_recon.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmdkey_recon.yml"
-build_date: "2026-04-26 14:14:32"
+build_date: "2026-04-26 15:01:49"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,7 +19,7 @@ tags:
   - "detection-rule"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 # Potential Reconnaissance For Cached Credentials Via Cmdkey.EXE
 
@@ -65,6 +65,7 @@ condition: all of selection*
 
 ### Cached Credential Dump via Cmdkey
 
+- Atomic Test: [[kb/atomic/tests/56506854_89d6_46a3_9804_b7fde90791f9-cached_credential_dump_via_cmdkey|56506854-89d6-46a3-9804-b7fde90791f9]]
 - atomic_guid: 56506854-89d6-46a3-9804-b7fde90791f9
 - name: Cached Credential Dump via Cmdkey
 - technique: T1003.005

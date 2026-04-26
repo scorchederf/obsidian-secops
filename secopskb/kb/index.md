@@ -1,4 +1,4 @@
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -10,5 +10,6 @@
 - [[kb/tools/index|MITRE Tools]] (91 tools)
 - [[kb/defend/index|D3FEND]] (271 techniques)
 - [[kb/car/index|CAR]] (102 analytics)
-- [[kb/sigma/index|Sigma]] (3120 rules)
+- [[kb/sigma/index|Sigma]] (1484 rules)
+- [[kb/atomic/index|Atomic]] (1790 tests)
 
