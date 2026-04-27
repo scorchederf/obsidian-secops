@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_rds_dbcluster_actions.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_rds_dbcluster_actions.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Modification or Deletion of an AWS RDS Cluster
-
 Detects modifications to an RDS cluster or its deletion, which may indicate potential data exfiltration attempts, unauthorized access, or exposure of sensitive information.
-
-## Metadata
-
-- Rule ID: 457cc9ac-d8e6-4d1d-8c0e-251d0f11a74c
-- Status: experimental
-- Level: high
-- Author: Ivan Saakov
-- Date: 2024-12-06
-- Source Path: rules/cloud/aws/cloudtrail/aws_rds_dbcluster_actions.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects modifications to an RDS cluster or its deletion, which may indicate pote
 
 ### Techniques
 
-- [[kb/attack/techniques/T1020-automated_exfiltration|T1020]]
+- [[kb/attack/techniques/T1020-automated_exfiltration|T1020: Automated Exfiltration]]
 
 ## Detection
 

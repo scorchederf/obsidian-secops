@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.002"
 attack_technique_name: "Office Application Startup: Office Test"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.002/T1137.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "c3e35b58-fe1c-480b-b540-7600fb612563"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Office Application Startup Test Persistence (HKCU)
-
 Office Test Registry location exists that allows a user to specify an arbitrary DLL that will be executed every time an Office
 application is started. Key is used for debugging purposes. Not created by default & exist in HKCU & HKLM hives.
 
-## Metadata
-
-- Atomic GUID: c3e35b58-fe1c-480b-b540-7600fb612563
-- Technique: T1137.002: Office Application Startup: Office Test
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1137.002/T1137.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.002]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137002-office-test|T1137.002: Office Test]]
 
 ## Dependencies
 

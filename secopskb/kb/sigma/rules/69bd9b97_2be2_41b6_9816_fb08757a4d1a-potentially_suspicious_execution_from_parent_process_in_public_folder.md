@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_execution_from_public_folder_as_parent.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_execution_from_public_folder_as_parent.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potentially Suspicious Execution From Parent Process In Public Folder
-
 Detects a potentially suspicious execution of a parent process located in the "\Users\Public" folder executing a child process containing references to shell or scripting binaries and commandlines.
-
-## Metadata
-
-- Rule ID: 69bd9b97-2be2-41b6-9816-fb08757a4d1a
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-02-25
-- Modified: 2024-07-12
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_execution_from_public_folder_as_parent.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a potentially suspicious execution of a parent process located in the "\
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Detection
 

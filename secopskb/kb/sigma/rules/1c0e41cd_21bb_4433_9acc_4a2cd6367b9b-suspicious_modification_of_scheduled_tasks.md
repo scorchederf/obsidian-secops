@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_schtasks_change.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_change.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Modification Of Scheduled Tasks
-
 Detects when an attacker tries to modify an already existing scheduled tasks to run from a suspicious location
 Attackers can create a simple looking task in order to avoid detection on creation as it's often the most focused on
 Instead they modify the task after creation to include their malicious payload
-
-## Metadata
-
-- Rule ID: 1c0e41cd-21bb-4433-9acc-4a2cd6367b9b
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-28
-- Modified: 2022-11-18
-- Source Path: rules/windows/process_creation/proc_creation_win_schtasks_change.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ Instead they modify the task after creation to include their malicious payload
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "228c336a-2f79-4043-8aef-bfa453a611d5"
@@ -21,25 +21,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cloudflare tunnels (Linux/macOS)
-
 Cloudflared can be used for exposing local development environment/services/files over the internet.
 This atomic will generate a dev tunnel binding it to the local service running on the provided port.
 Reference:
 - [Cloudflared Docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)
 - [LOT Tunnels](https://lottunnels.github.io/lottunnels/Binaries/cloudflared/)
 
-## Metadata
-
-- Atomic GUID: 228c336a-2f79-4043-8aef-bfa453a611d5
-- Technique: T1572: Protocol Tunneling
-- Platforms: linux, macos
-- Executor: sh
-- Source Path: atomics/T1572/T1572.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
+- [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 
 ## Input Arguments
 

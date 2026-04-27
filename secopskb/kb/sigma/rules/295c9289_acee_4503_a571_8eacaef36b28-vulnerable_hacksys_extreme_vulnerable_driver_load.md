@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/driver_load/driver_load_win_vuln_hevd_driver.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/driver_load/driver_load_win_vuln_hevd_driver.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / driver_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Vulnerable HackSys Extreme Vulnerable Driver Load
-
 Detects the load of HackSys Extreme Vulnerable Driver which is an intentionally vulnerable Windows driver developed for security enthusiasts to learn and polish their exploitation skills at Kernel level and often abused by threat actors
-
-## Metadata
-
-- Rule ID: 295c9289-acee-4503-a571-8eacaef36b28
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-18
-- Modified: 2024-11-23
-- Source Path: rules/windows/driver_load/driver_load_win_vuln_hevd_driver.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the load of HackSys Extreme Vulnerable Driver which is an intentionally 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Detection
 

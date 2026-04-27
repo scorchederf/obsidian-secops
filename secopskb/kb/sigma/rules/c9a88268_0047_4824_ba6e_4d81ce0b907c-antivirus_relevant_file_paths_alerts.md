@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/category/antivirus/av_relevant_files.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/category/antivirus/av_relevant_files.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "antivirus"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Antivirus Relevant File Paths Alerts
-
 Detects an Antivirus alert in a highly relevant file path or with a relevant file name.
 This event must not be ignored just because the AV has blocked the malware but investigate, how it came there in the first place.
-
-## Metadata
-
-- Rule ID: c9a88268-0047-4824-ba6e-4d81ce0b907c
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Arnim Rupp
-- Date: 2018-09-09
-- Modified: 2024-11-02
-- Source Path: rules/category/antivirus/av_relevant_files.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ This event must not be ignored just because the AV has blocked the malware but i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1588-obtain_capabilities|T1588]]
+- [[kb/attack/techniques/T1588-obtain_capabilities|T1588: Obtain Capabilities]]
 
 ## Detection
 

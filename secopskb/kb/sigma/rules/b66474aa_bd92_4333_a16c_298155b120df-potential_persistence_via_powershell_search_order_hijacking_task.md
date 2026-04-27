@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_schtasks_powershell_persistence.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_powershell_persistence.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Persistence Via Powershell Search Order Hijacking - Task
-
 Detects suspicious powershell execution via a schedule task where the command ends with an suspicious flags to hide the powershell instance instead of executeing scripts or commands. This could be a sign of persistence via PowerShell "Get-Variable" technique as seen being used in Colibri Loader
-
-## Metadata
-
-- Rule ID: b66474aa-bd92-4333-a16c-298155b120df
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems), Florian Roth (Nextron Systems)
-- Date: 2022-04-08
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_schtasks_powershell_persistence.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects suspicious powershell execution via a schedule task where the command en
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

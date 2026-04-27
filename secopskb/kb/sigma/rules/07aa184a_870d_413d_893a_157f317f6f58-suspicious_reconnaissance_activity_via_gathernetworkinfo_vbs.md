@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_gather_network_info_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_gather_network_info_execution.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Reconnaissance Activity Via GatherNetworkInfo.VBS
-
 Detects execution of the built-in script located in "C:\Windows\System32\gatherNetworkInfo.vbs". Which can be used to gather information about the target machine
-
-## Metadata
-
-- Rule ID: 07aa184a-870d-413d-893a-157f317f6f58
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-02-08
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_gather_network_info_execution.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects execution of the built-in script located in "C:\Windows\System32\gatherN
 
 ### Techniques
 
-- [[kb/attack/techniques/T1615-group_policy_discovery|T1615]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
+- [[kb/attack/techniques/T1615-group_policy_discovery|T1615: Group Policy Discovery]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
 
 ## Detection
 

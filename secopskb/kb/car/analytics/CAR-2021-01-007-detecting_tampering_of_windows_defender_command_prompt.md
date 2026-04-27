@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-01-007/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-01-007.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-01-007"
   - "Detecting Tampering of Windows Defender Command Prompt"
@@ -25,26 +25,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt
-
-## Metadata
-
-- CAR ID: CAR-2021-01-007
-- Submission Date: 2020/12/11
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Cyware Labs
-
-## Description
-
 In an attempt to avoid detection after compromising a machine, threat actors often try to disable Windows Defender. This is often done using “sc” [service control], a legitimate tool provided by Microsoft for managing services. This action interferes with event detection and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]] (coverage: Medium; tactics: TA0005)
-  - [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]] (coverage: Medium; tactics: TA0005)
+  - [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Implementations
 

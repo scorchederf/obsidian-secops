@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_stickykey_like_backdoor.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_stickykey_like_backdoor.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "critical"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sticky Key Like Backdoor Usage - Registry
-
 Detects the usage and installation of a backdoor that uses an option to register a malicious debugger for built-in tools that are accessible in the login screen
-
-## Metadata
-
-- Rule ID: baca5663-583c-45f9-b5dc-ea96a22ce542
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems), @twjackomo, Jonhnathan Ribeiro, oscd.community
-- Date: 2018-03-15
-- Modified: 2022-11-26
-- Source Path: rules/windows/registry/registry_event/registry_event_stickykey_like_backdoor.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the usage and installation of a backdoor that uses an option to register
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 ## Detection
 

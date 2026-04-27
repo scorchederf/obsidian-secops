@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1074.001"
 attack_technique_name: "Data Staged: Local Data Staging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1074.001/T1074.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "39ce0303-ae16-4b9e-bb5b-4f53e8262066"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Stage data from Discovery.sh
-
 Utilize curl to download discovery.sh and execute a basic information gathering shell script
-
-## Metadata
-
-- Atomic GUID: 39ce0303-ae16-4b9e-bb5b-4f53e8262066
-- Technique: T1074.001: Data Staged: Local Data Staging
-- Platforms: linux, macos
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1074.001/T1074.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1074-data_staged|T1074.001]]
+- [[kb/attack/techniques/T1074-data_staged#^t1074001-local-data-staging|T1074.001: Local Data Staging]]
 
 ## Input Arguments
 

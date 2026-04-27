@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1615"
 attack_technique_name: "Group Policy Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1615/T1615.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "bc25c04b-841e-4965-855f-d1f645d7ab73"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - GPOAudit
-
 Check domain Group policies for common misconfigurations using Grouper2 via GPOAudit function of WinPwn
-
-## Metadata
-
-- Atomic GUID: bc25c04b-841e-4965-855f-d1f645d7ab73
-- Technique: T1615: Group Policy Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1615/T1615.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1615-group_policy_discovery|T1615]]
+- [[kb/attack/techniques/T1615-group_policy_discovery|T1615: Group Policy Discovery]]
 
 ## Executor
 

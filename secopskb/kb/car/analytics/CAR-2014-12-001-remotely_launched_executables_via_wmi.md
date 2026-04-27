@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-12-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-12-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-12-001"
   - "Remotely Launched Executables via WMI"
@@ -22,20 +22,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# CAR-2014-12-001: Remotely Launched Executables via WMI
-
-## Metadata
-
-- CAR ID: CAR-2014-12-001
-- Submission Date: 2014/12/02
-- Information Domain: Host, Network
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: PCAP
-- Contributors: MITRE
-
-## Description
 
 Adversaries can use [Windows Management Instrumentation (WMI)](https://attack.mitre.org/techniques/T1047) to move laterally by launching executables remotely. For adversaries to achieve this, they must open a WMI connection to a remote host. This RPC activity is currently detected by [[kb/car/analytics/CAR-2014-11-007-remote_windows_management_instrumentation_wmi_over_rpc|CAR-2014-11-007]]. After the WMI connection has been initialized, a process can be remotely launched using the command: `wmic /node:"<hostname>" process call create "<command line>"`, which is detected via [[kb/car/analytics/CAR-2016-03-002-create_remote_process_via_wmic|CAR-2016-03-002]].
 
@@ -68,7 +54,7 @@ Identifies the process that initiated the RPC request (such as wmic.exe or power
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]] (coverage: High; tactics: TA0002)
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]] (coverage: High; tactics: TA0002)
 
 ## Implementations
 

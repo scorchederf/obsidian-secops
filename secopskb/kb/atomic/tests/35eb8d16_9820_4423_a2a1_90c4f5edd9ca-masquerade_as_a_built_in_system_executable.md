@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.005"
 attack_technique_name: "Masquerading: Match Legitimate Name or Location"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.005/T1036.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "35eb8d16-9820-4423-a2a1-90c4f5edd9ca"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Masquerade as a built-in system executable
-
 Launch an executable that attempts to masquerade as a legitimate executable.
-
-## Metadata
-
-- Atomic GUID: 35eb8d16-9820-4423-a2a1-90c4f5edd9ca
-- Technique: T1036.005: Masquerading: Match Legitimate Name or Location
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1036.005/T1036.005.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.005]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036005-match-legitimate-resource-name-or-location|T1036.005: Match Legitimate Resource Name or Location]]
 
 ## Input Arguments
 

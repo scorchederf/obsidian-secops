@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_lolbin_manage_bde.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_manage_bde.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Manage-bde.wsf Abuse To Proxy Execution
-
 Detects potential abuse of the "manage-bde.wsf" script as a LOLBIN to proxy execution
-
-## Metadata
-
-- Rule ID: c363385c-f75d-4753-a108-c1a8e28bdbda
-- Status: test
-- Level: high
-- Author: oscd.community, Natalia Shornikova, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2020-10-13
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_lolbin_manage_bde.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential abuse of the "manage-bde.wsf" script as a LOLBIN to proxy exec
 
 ### Techniques
 
-- [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ## Detection
 

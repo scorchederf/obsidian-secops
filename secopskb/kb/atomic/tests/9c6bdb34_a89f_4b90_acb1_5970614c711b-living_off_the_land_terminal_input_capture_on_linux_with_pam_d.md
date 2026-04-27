@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "9c6bdb34-a89f-4b90-acb1-5970614c711b"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Living off the land Terminal Input Capture on Linux with pam.d
-
 Pluggable Access Module, which is present on all modern Linux systems, generally contains a library called pam_tty_audit.so which logs all keystrokes for the selected users and sends it to audit.log.  All terminal activity on any new logins would then be archived and readable by an adversary with elevated privledges.
 
 Passwords hidden by the console can also be logged, with 'log_passwd' as in this example.  If root logging is enabled, then output from any process which is later started by root is also logged, even if this policy is carefully enabled (e.g. 'disable=*' as the initial command).
 
 Use 'aureport --tty' or other audit.d reading tools to read the log output, which is binary.  Mac OS does not currently contain the pam_tty_audit.so library.
 
-## Metadata
-
-- Atomic GUID: 9c6bdb34-a89f-4b90-acb1-5970614c711b
-- Technique: T1056.001: Input Capture: Keylogging
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1056.001/T1056.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1056-input_capture|T1056.001]]
+- [[kb/attack/techniques/T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
 
 ## Dependencies
 

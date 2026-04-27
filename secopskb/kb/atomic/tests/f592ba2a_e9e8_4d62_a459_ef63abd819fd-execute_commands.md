@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1559.002"
 attack_technique_name: "Inter-Process Communication: Dynamic Data Exchange"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1559.002/T1559.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "manual"
 aliases:
   - "f592ba2a-e9e8-4d62-a459-ef63abd819fd"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Execute Commands
-
 Executes commands via DDE using Microsfot Word
-
-## Metadata
-
-- Atomic GUID: f592ba2a-e9e8-4d62-a459-ef63abd819fd
-- Technique: T1559.002: Inter-Process Communication: Dynamic Data Exchange
-- Platforms: windows
-- Executor: manual
-- Source Path: atomics/T1559.002/T1559.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1559-inter-process_communication|T1559.002]]
+- [[kb/attack/techniques/T1559-inter-process_communication#^t1559002-dynamic-data-exchange|T1559.002: Dynamic Data Exchange]]
 
 ## Executor
 

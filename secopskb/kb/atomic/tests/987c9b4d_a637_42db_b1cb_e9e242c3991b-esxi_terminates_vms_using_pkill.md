@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1529"
 attack_technique_name: "System Shutdown/Reboot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1529/T1529.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "987c9b4d-a637-42db-b1cb-e9e242c3991b"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Terminates VMs using pkill
-
 In VMWARE ESXi, process names starting with vmx are associated with running VMs. An adversary can use the pkill command to kill all processes with a prefix vmx.
 [Reference](https://www.crowdstrike.com/blog/hypervisor-jackpotting-ecrime-actors-increase-targeting-of-esxi-servers/)
 
-## Metadata
-
-- Atomic GUID: 987c9b4d-a637-42db-b1cb-e9e242c3991b
-- Technique: T1529: System Shutdown/Reboot
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1529/T1529.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529]]
+- [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529: System Shutdown/Reboot]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_legitimate_app_dropping_in_uncommon_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_legitimate_app_dropping_in_uncommon_location.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "experimental"
 level: "high"
 logsource: "windows / file_event"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Legitimate Application Writing Files In Uncommon Location
-
 Detects legitimate applications writing any type of file to uncommon or suspicious locations that are not typical for application data storage or execution.
 Adversaries may leverage legitimate applications (Living off the Land Binaries - LOLBins) to drop or download malicious files to uncommon locations on the system to evade detection by security solutions.
-
-## Metadata
-
-- Rule ID: 1cf465a1-2609-4c15-9b66-c32dbe4bfd67
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-12-10
-- Source Path: rules/windows/file/file_event/file_event_win_susp_legitimate_app_dropping_in_uncommon_location.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ Adversaries may leverage legitimate applications (Living off the Land Binaries -
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detection
 

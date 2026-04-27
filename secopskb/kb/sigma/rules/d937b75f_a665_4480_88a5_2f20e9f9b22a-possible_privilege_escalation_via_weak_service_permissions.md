@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_sc_change_sevice_image_path_by_non_admin.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_change_sevice_image_path_by_non_admin.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Possible Privilege Escalation via Weak Service Permissions
-
 Detection of sc.exe utility spawning by user with Medium integrity level to change service ImagePath or FailureCommand
-
-## Metadata
-
-- Rule ID: d937b75f-a665-4480-88a5-2f20e9f9b22a
-- Status: test
-- Level: high
-- Author: Teymur Kheirkhabarov
-- Date: 2019-10-26
-- Modified: 2024-12-01
-- Source Path: rules/windows/process_creation/proc_creation_win_sc_change_sevice_image_path_by_non_admin.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detection of sc.exe utility spawning by user with Medium integrity level to chan
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 ## Detection
 

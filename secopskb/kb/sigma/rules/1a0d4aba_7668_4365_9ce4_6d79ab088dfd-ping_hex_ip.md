@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_ping_hex_ip.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ping_hex_ip.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Ping Hex IP
-
 Detects a ping command that uses a hex encoded IP address
-
-## Metadata
-
-- Rule ID: 1a0d4aba-7668-4365-9ce4-6d79ab088dfd
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2018-03-23
-- Modified: 2025-10-17
-- Source Path: rules/windows/process_creation/proc_creation_win_ping_hex_ip.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a ping command that uses a hex encoded IP address
 
 ### Techniques
 
-- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Detection
 

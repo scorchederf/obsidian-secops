@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_devcon_disable_vmci_driver.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_devcon_disable_vmci_driver.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,20 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Devcon Execution Disabling VMware VMCI Device
-
 Detects execution of devcon.exe with commands that disable the VMware Virtual Machine Communication Interface (VMCI) device.
 This can be legitimate during VMware Tools troubleshooting or driver conflicts, but may also indicate malware attempting to hijack communication with the hardware via the VMCI device.
 This has been used to facilitate VMware ESXi vulnerability exploits to escape VMs and execute code on the ESXi host.
-
-## Metadata
-
-- Rule ID: 85f520e7-6f5e-43ca-874c-222e5bf9c0de
-- Status: experimental
-- Level: high
-- Author: Matt Anderson, Dray Agha, Anna Pham (Huntress)
-- Date: 2026-01-02
-- Source Path: rules/windows/process_creation/proc_creation_win_devcon_disable_vmci_driver.yml
 
 ## Logsource
 
@@ -46,8 +35,8 @@ This has been used to facilitate VMware ESXi vulnerability exploits to escape VM
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

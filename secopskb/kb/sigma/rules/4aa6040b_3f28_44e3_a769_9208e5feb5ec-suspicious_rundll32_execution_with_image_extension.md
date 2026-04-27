@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_susp_execution_with_image_extension.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_susp_execution_with_image_extension.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Rundll32 Execution With Image Extension
-
 Detects the execution of Rundll32.exe with DLL files masquerading as image files
-
-## Metadata
-
-- Rule ID: 4aa6040b-3f28-44e3-a769-9208e5feb5ec
-- Status: test
-- Level: high
-- Author: Hieu Tran
-- Date: 2023-03-13
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_susp_execution_with_image_extension.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the execution of Rundll32.exe with DLL files masquerading as image files
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detection
 

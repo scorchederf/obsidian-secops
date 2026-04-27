@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_policies_attachments_tamper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_policies_attachments_tamper.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Attachment Manager Settings Attachments Tamper
-
 Detects tampering with attachment manager settings policies attachments (See reference for more information)
-
-## Metadata
-
-- Rule ID: ee77a5db-b0f3-4be2-bfd4-b58be1c6b15a
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-01
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_policies_attachments_tamper.yml
 
 ## Logsource
 

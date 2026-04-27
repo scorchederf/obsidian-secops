@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-05-004/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-05-004.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-05-004"
   - "BITS Job Persistence"
@@ -24,25 +24,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-05-004: BITS Job Persistence
-
-## Metadata
-
-- CAR ID: CAR-2021-05-004
-- Submission Date: 2021/05/11
-- Information Domain: Analytic
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Splunk Threat Research <research@splunk.com>
-
-## Description
-
 The following query identifies Microsoft Background Intelligent Transfer Service utility `bitsadmin.exe` scheduling a BITS job to persist on an endpoint. The query identifies the parameters used to create, resume or add a file to a BITS job. Typically seen combined in a oneliner or ran in sequence. If identified, review the BITS job created and capture any files written to disk. It is possible for BITS to be used to upload files and this may require further network data analysis to identify. You can use `bitsadmin /list /verbose` to list out the jobs during investigation.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1197-bits_jobs|T1197]] (coverage: Moderate; tactics: TA0005, TA0003)
+- [[kb/attack/techniques/T1197-bits_jobs|T1197: BITS Jobs]] (coverage: Moderate; tactics: TA0005, TA0003)
 
 ## Implementations
 

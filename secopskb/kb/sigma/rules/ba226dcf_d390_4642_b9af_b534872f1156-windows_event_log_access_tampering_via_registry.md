@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_disable_windows_event_log_access.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_disable_windows_event_log_access.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "experimental"
 level: "high"
 logsource: "windows / registry_set"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Event Log Access Tampering Via Registry
-
 Detects changes to the Windows EventLog channel permission values. It focuses on changes to the Security Descriptor Definition Language (SDDL) string, as modifications to these values can restrict access to specific users or groups, potentially aiding in defense evasion by controlling who can view or modify a event log channel. Upon execution, the user shouldn't be able to access the event log channel via the event viewer or via utilities such as "Get-EventLog" or "wevtutil".
-
-## Metadata
-
-- Rule ID: ba226dcf-d390-4642-b9af-b534872f1156
-- Status: experimental
-- Level: high
-- Author: X__Junior
-- Date: 2025-01-16
-- Modified: 2025-08-16
-- Source Path: rules/windows/registry/registry_set/registry_set_disable_windows_event_log_access.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects changes to the Windows EventLog channel permission values. It focuses on
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

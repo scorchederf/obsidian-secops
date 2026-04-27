@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.003"
 attack_technique_name: "Create Account: Cloud Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.003/T1136.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "8d1c2368-b503-40c9-9057-8e42f21c58ad"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - Create a new IAM user
-
 Creates a new IAM user in AWS. Upon successful creation, a new user will be created. Adversaries create new IAM users so that their malicious activity do not interupt the normal functions of the compromised users and can remain undetected for a long time
-
-## Metadata
-
-- Atomic GUID: 8d1c2368-b503-40c9-9057-8e42f21c58ad
-- Technique: T1136.003: Create Account: Cloud Account
-- Platforms: iaas:aws
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1136.003/T1136.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1136-create_account|T1136.003]]
+- [[kb/attack/techniques/T1136-create_account#^t1136003-cloud-account|T1136.003: Cloud Account]]
 
 ## Input Arguments
 

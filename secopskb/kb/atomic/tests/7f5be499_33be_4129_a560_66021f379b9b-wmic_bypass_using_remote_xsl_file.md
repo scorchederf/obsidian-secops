@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1220"
 attack_technique_name: "XSL Script Processing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1220/T1220.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "7f5be499-33be-4129-a560-66021f379b9b"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WMIC bypass using remote XSL file
-
 Executes the code specified within a XSL script using a remote payload. Open Calculator.exe when test successfully executed, while AV turned off.
-
-## Metadata
-
-- Atomic GUID: 7f5be499-33be-4129-a560-66021f379b9b
-- Technique: T1220: XSL Script Processing
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1220/T1220.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ## Input Arguments
 

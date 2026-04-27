@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_hidden_user_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_hidden_user_creation.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Hidden Local User Creation
-
 Detects the creation of a local hidden user account which should not happen for event ID 4720.
-
-## Metadata
-
-- Rule ID: 7b449a5e-1db5-4dd0-a2dc-4e3a67282538
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems)
-- Date: 2021-05-03
-- Modified: 2024-01-16
-- Source Path: rules/windows/builtin/security/win_security_hidden_user_creation.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the creation of a local hidden user account which should not happen for 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1136-create_account|T1136.001]]
+- [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 ## Detection
 

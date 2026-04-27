@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_potential_invoke_mimikatz.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_potential_invoke_mimikatz.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Invoke-Mimikatz PowerShell Script
-
 Detects Invoke-Mimikatz PowerShell script and alike. Mimikatz is a credential dumper capable of obtaining plaintext Windows account logins and passwords.
-
-## Metadata
-
-- Rule ID: 189e3b02-82b2-4b90-9662-411eb64486d4
-- Status: test
-- Level: high
-- Author: Tim Rauch, Elastic (idea)
-- Date: 2022-09-28
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_potential_invoke_mimikatz.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects Invoke-Mimikatz PowerShell script and alike. Mimikatz is a credential du
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ## Detection
 

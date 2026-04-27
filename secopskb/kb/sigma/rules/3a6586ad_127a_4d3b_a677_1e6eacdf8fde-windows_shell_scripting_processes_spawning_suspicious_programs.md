@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Shell/Scripting Processes Spawning Suspicious Programs
-
 Detects suspicious child processes of a Windows shell and scripting processes such as wscript, rundll32, powershell, mshta...etc.
-
-## Metadata
-
-- Rule ID: 3a6586ad-127a-4d3b-a677-1e6eacdf8fde
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Tim Shelton
-- Date: 2018-04-06
-- Modified: 2023-05-23
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_shell_spawn_susp_program.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects suspicious child processes of a Windows shell and scripting processes su
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

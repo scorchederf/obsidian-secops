@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_sys.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_sys.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Rundll32 Activity Invoking Sys File
-
 Detects suspicious process related to rundll32 based on command line that includes a *.sys file as seen being used by UNC2452
-
-## Metadata
-
-- Rule ID: 731231b9-0b5d-4219-94dd-abb6959aa7ea
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-03-05
-- Modified: 2022-10-09
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_sys.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious process related to rundll32 based on command line that includ
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218"
 attack_technique_name: "Signed Binary Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "9ebe7901-7edf-45c0-b5c7-8366300919db"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Invoke-ATHRemoteFXvGPUDisablementCommand base test
-
 RemoteFXvGPUDisablement.exe is an abusable, signed PowerShell host executable that was introduced in Windows 10 and Server 2019 (OS Build 17763.1339).
 
 One of the PowerShell functions called by RemoteFXvGPUDisablement.exe is Get-VMRemoteFXPhysicalVideoAdapter, a part of the Hyper-V module. This atomic test influences RemoteFXvGPUDisablement.exe to execute custom PowerShell code by using a technique referred to as "PowerShell module load-order hijacking" where a module containing, in this case, an implementation of the Get-VMRemoteFXPhysicalVideoAdapter is loaded first by way of introducing a temporary module into the first directory listed in the %PSModulePath% environment variable or within a user-specified module directory outside of %PSModulePath%. Upon execution the temporary module is deleted.
@@ -32,17 +30,9 @@ The Invoke-ATHRemoteFXvGPUDisablementCommand function outputs all relevant execu
 
 Reference: https://github.com/redcanaryco/AtomicTestHarnesses/blob/master/TestHarnesses/T1218_SignedBinaryProxyExecution/InvokeRemoteFXvGPUDisablementCommand.ps1
 
-## Metadata
-
-- Atomic GUID: 9ebe7901-7edf-45c0-b5c7-8366300919db
-- Technique: T1218: Signed Binary Proxy Execution
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1218/T1218.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Input Arguments
 

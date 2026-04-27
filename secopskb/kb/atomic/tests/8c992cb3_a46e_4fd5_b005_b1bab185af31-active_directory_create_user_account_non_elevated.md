@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.002"
 attack_technique_name: "Create Account: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.002/T1136.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "8c992cb3-a46e-4fd5-b005-b1bab185af31"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Active Directory Create User Account (Non-elevated)
-
 Use Admin Credentials to Create A Normal Account (as means of entry)
-
-## Metadata
-
-- Atomic GUID: 8c992cb3-a46e-4fd5-b005-b1bab185af31
-- Technique: T1136.002: Create Account: Domain Account
-- Platforms: linux
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1136.002/T1136.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1136-create_account|T1136.002]]
+- [[kb/attack/techniques/T1136-create_account#^t1136002-domain-account|T1136.002: Domain Account]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_ssp_added_lsa_config.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_ssp_added_lsa_config.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Security Support Provider (SSP) Added to LSA Configuration
-
 Detects the addition of a SSP to the registry. Upon a reboot or API call, SSP DLLs gain access to encrypted and plaintext passwords stored in Windows.
-
-## Metadata
-
-- Rule ID: eeb30123-9fbd-4ee8-aaa0-2e545bbed6dc
-- Status: test
-- Level: high
-- Author: iwillkeepwatch
-- Date: 2019-01-18
-- Modified: 2026-03-30
-- Source Path: rules/windows/registry/registry_event/registry_event_ssp_added_lsa_config.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the addition of a SSP to the registry. Upon a reboot or API call, SSP DL
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.005]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547005-security-support-provider|T1547.005: Security Support Provider]]
 
 ## Detection
 

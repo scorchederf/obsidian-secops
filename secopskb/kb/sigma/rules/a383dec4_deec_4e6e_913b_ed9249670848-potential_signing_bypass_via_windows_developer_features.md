@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_systemsettingsadminflows_turn_on_dev_features.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_systemsettingsadminflows_turn_on_dev_features.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Signing Bypass Via Windows Developer Features
-
 Detects when a user enable developer features such as "Developer Mode" or "Application Sideloading". Which allows the user to install untrusted packages.
-
-## Metadata
-
-- Rule ID: a383dec4-deec-4e6e-913b-ed9249670848
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-01-11
-- Source Path: rules/windows/process_creation/proc_creation_win_systemsettingsadminflows_turn_on_dev_features.yml
 
 ## Logsource
 

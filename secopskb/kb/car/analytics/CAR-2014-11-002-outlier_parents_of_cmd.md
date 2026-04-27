@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-11-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-11-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-11-002"
   - "Outlier Parents of Cmd"
@@ -24,20 +24,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-11-002: Outlier Parents of Cmd
-
-## Metadata
-
-- CAR ID: CAR-2014-11-002
-- Submission Date: 2014/11/06
-- Information Domain: Host
-- Analytic Type: Anomaly, TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Many programs create command prompts as part of their normal operation including malware used by attackers. This analytic attempts to identify suspicious programs spawning `cmd.exe` by looking for programs that do not normally create `cmd.exe`.
 
 While this analytic does not take the user into account, doing so could generate further interesting results.
@@ -50,8 +36,8 @@ The time and host the new process was started as well as its parent
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]] (coverage: Moderate; tactics: TA0002)
-  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]] (coverage: Moderate; tactics: TA0002)
+  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Implementations
 

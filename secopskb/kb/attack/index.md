@@ -4,6 +4,14 @@
 
 # ATT&CK
 
+<!-- generated-source-description-start -->
+MITRE ATT&CK is a knowledge base of adversary tactics, techniques, and procedures based on real-world observations. This vault uses ATT&CK as the main behavior spine: techniques become the pivot point for tools, D3FEND defensive techniques, CAR analytics, Sigma rules, Atomic Red Team tests, LOLBAS entries, and future sources.
+
+## Upstream
+
+- [MITRE ATT&CK](https://attack.mitre.org/)
+<!-- generated-source-description-end -->
+
 ## ATT&CK Areas
 
 - [[kb/attack/tactics/index|Tactics]] (14)

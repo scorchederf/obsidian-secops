@@ -4,6 +4,14 @@
 
 # Tools
 
+<!-- generated-source-description-start -->
+This index contains ATT&CK software objects categorized as tools. These pages describe utilities, frameworks, and legitimate binaries that ATT&CK associates with adversary behavior. `kb/tools/` is kept as the shared tool index so generated sources such as Sigma, Atomic Red Team, LOLBAS, GTFOBins, and future tradecraft repositories can cross-link to the same entities.
+
+## Upstream
+
+- [ATT&CK Software](https://attack.mitre.org/software/)
+<!-- generated-source-description-end -->
+
 ## Tools
 - [[kb/tools/aadinternals|S0677: AADInternals]]
 - [[kb/tools/adfind|S0552: AdFind]]

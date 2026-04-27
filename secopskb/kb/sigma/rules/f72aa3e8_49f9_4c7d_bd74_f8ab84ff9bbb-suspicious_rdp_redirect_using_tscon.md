@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_tscon_rdp_redirect.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_tscon_rdp_redirect.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious RDP Redirect Using TSCON
-
 Detects a suspicious RDP session redirect using tscon.exe
-
-## Metadata
-
-- Rule ID: f72aa3e8-49f9-4c7d-bd74-f8ab84ff9bbb
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2018-03-17
-- Modified: 2023-05-16
-- Source Path: rules/windows/process_creation/proc_creation_win_tscon_rdp_redirect.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a suspicious RDP session redirect using tscon.exe
 
 ### Techniques
 
-- [[kb/attack/techniques/T1563-remote_service_session_hijacking|T1563.002]]
-- [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+- [[kb/attack/techniques/T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 ## Detection
 

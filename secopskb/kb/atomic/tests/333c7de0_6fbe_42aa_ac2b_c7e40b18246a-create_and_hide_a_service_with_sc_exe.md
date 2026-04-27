@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564"
 attack_technique_name: "Hide Artifacts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564/T1564.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "333c7de0-6fbe-42aa-ac2b-c7e40b18246a"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create and Hide a Service with sc.exe
-
 The following technique utilizes sc.exe and sdset to change the security descriptor of a service and "hide" it from Get-Service or sc query.
 
 Upon successful execution, sc.exe creates a new service changes the security descriptor.
@@ -29,18 +27,9 @@ Upon successful execution, sc.exe creates a new service changes the security des
 https://twitter.com/Alh4zr3d/status/1580925761996828672
 https://learn.microsoft.com/en-us/windows/win32/secauthz/security-descriptor-string-format
 
-## Metadata
-
-- Atomic GUID: 333c7de0-6fbe-42aa-ac2b-c7e40b18246a
-- Technique: T1564: Hide Artifacts
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1564/T1564.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.003"
 attack_technique_name: "Masquerading: Rename System Utilities"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "c3d24a39-2bfe-4c6a-b064-90cd73896cb0"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Masquerading - windows exe running as different windows exe
-
 Copies a windows exe, renames it as another windows exe, and launches it to masquerade as second windows exe
-
-## Metadata
-
-- Atomic GUID: c3d24a39-2bfe-4c6a-b064-90cd73896cb0
-- Technique: T1036.003: Masquerading: Rename System Utilities
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1036.003/T1036.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Input Arguments
 

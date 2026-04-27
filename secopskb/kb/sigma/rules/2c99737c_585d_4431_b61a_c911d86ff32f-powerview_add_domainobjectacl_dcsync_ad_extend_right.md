@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_account_backdoor_dcsync_rights.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_account_backdoor_dcsync_rights.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Powerview Add-DomainObjectAcl DCSync AD Extend Right
-
 Backdooring domain object to grant the rights associated with DCSync to a regular user or machine account using Powerview\Add-DomainObjectAcl DCSync Extended Right cmdlet, will allow to re-obtain the pwd hashes of any user/computer
-
-## Metadata
-
-- Rule ID: 2c99737c-585d-4431-b61a-c911d86ff32f
-- Status: test
-- Level: high
-- Author: Samir Bousseaden, Roberto Rodriguez @Cyb3rWard0g, oscd.community, Tim Shelton, Maxence Fossat
-- Date: 2019-04-03
-- Modified: 2022-08-16
-- Source Path: rules/windows/builtin/security/win_security_account_backdoor_dcsync_rights.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Backdooring domain object to grant the rights associated with DCSync to a regula
 
 ### Techniques
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

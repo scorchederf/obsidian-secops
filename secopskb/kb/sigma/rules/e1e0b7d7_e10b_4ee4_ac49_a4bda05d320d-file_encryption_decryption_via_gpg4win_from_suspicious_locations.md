@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_gpg4win_susp_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_gpg4win_susp_location.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# File Encryption/Decryption Via Gpg4win From Suspicious Locations
-
 Detects usage of Gpg4win to encrypt/decrypt files located in potentially suspicious locations.
-
-## Metadata
-
-- Rule ID: e1e0b7d7-e10b-4ee4-ac49-a4bda05d320d
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), X__Junior (Nextron Systems)
-- Date: 2022-11-30
-- Modified: 2023-08-09
-- Source Path: rules/windows/process_creation/proc_creation_win_gpg4win_susp_location.yml
 
 ## Logsource
 

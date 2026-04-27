@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-11-007/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-007.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-11-007"
   - "Network Share Connection Removal"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-11-007: Network Share Connection Removal
-
-## Metadata
-
-- CAR ID: CAR-2020-11-007
-- Submission Date: 2020/11/30
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Adversaries may use network shares to exfliltrate date; they will then remove the shares to cover their tracks. This analytic looks for the removal of network shares via commandline, which is otherwise a rare event.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070]] (coverage: High; tactics: TA0005)
-  - [[kb/attack/techniques/T1070-indicator_removal|T1070.005]]
+- [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]] (coverage: High; tactics: TA0005)
+  - [[kb/attack/techniques/T1070-indicator_removal#^t1070005-network-share-connection-removal|T1070.005: Network Share Connection Removal]]
 
 ## Implementations
 

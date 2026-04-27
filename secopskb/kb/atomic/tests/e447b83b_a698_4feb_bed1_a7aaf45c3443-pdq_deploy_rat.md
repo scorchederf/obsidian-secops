@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1072"
 attack_technique_name: "Software Deployment Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1072/T1072.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "e447b83b-a698-4feb-bed1-a7aaf45c3443"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PDQ Deploy RAT
-
 An adversary may use PDQ Deploy Software to deploy the Remote Adminstartion Tool, this will start the PDQ console.
-
-## Metadata
-
-- Atomic GUID: e447b83b-a698-4feb-bed1-a7aaf45c3443
-- Technique: T1072: Software Deployment Tools
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1072/T1072.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1072-software_deployment_tools|T1072]]
+- [[kb/attack/techniques/T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 
 ## Input Arguments
 

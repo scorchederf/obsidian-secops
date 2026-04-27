@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_copy_item_system_directory.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_copy_item_system_directory.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Powershell Install a DLL in System Directory
-
 Uses PowerShell to install/copy a file into a system directory such as "System32" or "SysWOW64"
-
-## Metadata
-
-- Rule ID: 63bf8794-9917-45bc-88dd-e1b5abc0ecfd
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-12-27
-- Modified: 2024-01-22
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_copy_item_system_directory.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Uses PowerShell to install/copy a file into a system directory such as "System32
 
 ### Techniques
 
-- [[kb/attack/techniques/T1556-modify_authentication_process|T1556.002]]
+- [[kb/attack/techniques/T1556-modify_authentication_process#^t1556002-password-filter-dll|T1556.002: Password Filter DLL]]
 
 ## Detection
 

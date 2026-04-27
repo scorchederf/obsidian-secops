@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1106"
 attack_technique_name: "Native API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1106/T1106.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "99be2089-c52d-4a4a-b5c3-261ee42c8b62"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Execution through API - CreateProcess
-
 Execute program by leveraging Win32 API's. By default, this will launch calc.exe from the command prompt.
-
-## Metadata
-
-- Atomic GUID: 99be2089-c52d-4a4a-b5c3-261ee42c8b62
-- Technique: T1106: Native API
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1106/T1106.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1106-native_api|T1106]]
+- [[kb/attack/techniques/T1106-native_api|T1106: Native API]]
 
 ## Input Arguments
 

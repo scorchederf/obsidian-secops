@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1129"
 attack_technique_name: "Server Software Component"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1129/T1129.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "7f843046-abf2-443f-b880-07a83cf968ec"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Install a custom VIB on an ESXi host
-
 An adversary can maintain persistence within an ESXi host by installing malicious vSphere Installation Bundles (VIBs).
 [Reference](https://www.mandiant.com/resources/blog/esxi-hypervisors-malware-persistence)
 
-## Metadata
-
-- Atomic GUID: 7f843046-abf2-443f-b880-07a83cf968ec
-- Technique: T1129: Server Software Component
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1129/T1129.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1129-shared_modules|T1129]]
+- [[kb/attack/techniques/T1129-shared_modules|T1129: Shared Modules]]
 
 ## Input Arguments
 

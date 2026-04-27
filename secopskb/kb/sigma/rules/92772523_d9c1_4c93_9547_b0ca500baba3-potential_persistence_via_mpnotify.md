@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_persistence_mpnotify.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_persistence_mpnotify.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Persistence Via Mpnotify
-
 Detects when an attacker register a new SIP provider for persistence and defense evasion
-
-## Metadata
-
-- Rule ID: 92772523-d9c1-4c93-9547-b0ca500baba3
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-21
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_persistence_mpnotify.yml
 
 ## Logsource
 

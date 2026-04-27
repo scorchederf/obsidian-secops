@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1001.002"
 attack_technique_name: "Data Obfuscation via Steganography"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1001.002/T1001.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "04bb8e3d-1670-46ab-a3f1-5cee64da29b6"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Embedded Script in Image Execution via Extract-Invoke-PSImage
-
 This atomic test demonstrates the technique of data obfuscation via steganography, where a PowerShell script is concealed within an image file. 
 The PowerShell script is embedded using steganography techniques, making it undetectable by traditional security measures. The script is hidden 
 within the pixels of the image, enabling attackers to covertly transfer and execute malicious code across systems.
@@ -33,19 +31,9 @@ separate PowerShell (textExtraction.ps1). Consequently, the textExtraction.ps1 s
 In the case of this atomic test, the malicious image file which is downloaded has the powershell command Start-Process notepad embedded within in base64. This
 is done to emulate an attackers behaviour in the case they were to execute malware embedded within the image file.
 
-## Metadata
-
-- Atomic GUID: 04bb8e3d-1670-46ab-a3f1-5cee64da29b6
-- Technique: T1001.002: Data Obfuscation via Steganography
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1001.002/T1001.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1001-data_obfuscation|T1001.002]]
+- [[kb/attack/techniques/T1001-data_obfuscation#^t1001002-steganography|T1001.002: Steganography]]
 
 ## Input Arguments
 

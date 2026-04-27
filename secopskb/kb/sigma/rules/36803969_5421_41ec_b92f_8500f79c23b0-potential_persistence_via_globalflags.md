@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_persistence_globalflags.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_persistence_globalflags.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Persistence Via GlobalFlags
-
 Detects registry persistence technique using the GlobalFlags and SilentProcessExit keys
-
-## Metadata
-
-- Rule ID: 36803969-5421-41ec-b92f-8500f79c23b0
-- Status: test
-- Level: high
-- Author: Karneades, Jonhnathan Ribeiro, Florian Roth
-- Date: 2018-04-11
-- Modified: 2023-06-05
-- Source Path: rules/windows/registry/registry_set/registry_set_persistence_globalflags.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects registry persistence technique using the GlobalFlags and SilentProcessEx
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.012]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546012-image-file-execution-options-injection|T1546.012: Image File Execution Options Injection]]
 
 ## Detection
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSScripts/Launch-VsDevShell.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSScripts/Launch-VsDevShell.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSScripts"
 aliases:
   - "Launch-VsDevShell.ps1"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Launch-VsDevShell.ps1
-
 Locates and imports a Developer PowerShell module and calls the Enter-VsDevShell cmdlet
-
-## Metadata
-
-- Category: OSScripts
-- Created: 2022-06-13
-- Author: Nasreddine Bencherchali
-- Source Path: yml/OSScripts/Launch-VsDevShell.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ powershell -ep RemoteSigned -f .\Launch-VsDevShell.ps1 -VsWherePath {PATH_ABSOLU
 - Use Case: Proxy execution
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ### 2. Execute
 
@@ -61,7 +52,7 @@ powershell -ep RemoteSigned -f .\Launch-VsDevShell.ps1 -VsInstallationPath "/../
 - Use Case: Proxy execution
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ## Detections
 

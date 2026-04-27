@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.013"
 attack_technique_name: "Obfuscated Files or Information: Encrypted/Encoded File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.013/T1027.013.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "b404caaa-12ce-43c7-9214-62a531c044f7"
@@ -22,22 +22,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Decrypt Eicar File and Write to File
-
 Decrypt the eicar value, and write it to file, for AV/EDR to try to catch.
-
-## Metadata
-
-- Atomic GUID: b404caaa-12ce-43c7-9214-62a531c044f7
-- Technique: T1027.013: Obfuscated Files or Information: Encrypted/Encoded File
-- Platforms: windows, macos, linux
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1027.013/T1027.013.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.013]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027013-encrypted-encoded-file|T1027.013: Encrypted/Encoded File]]
 
 ## Executor
 

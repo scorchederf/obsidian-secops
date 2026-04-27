@@ -70,6 +70,11 @@ def strip_generated_enrichment(text):
         r"\n?<!-- generated-detection-validation-start -->.*?<!-- generated-detection-validation-end -->\n*",
         flags=re.DOTALL,
     )
+    text = re.sub(pattern, "\n", text)
+    pattern = re.compile(
+        r"\n?<!-- generated-source-description-start -->.*?<!-- generated-source-description-end -->\n*",
+        flags=re.DOTALL,
+    )
     return re.sub(pattern, "\n", text)
 
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/driver_load/driver_load_win_vuln_winring0_driver.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/driver_load/driver_load_win_vuln_winring0_driver.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / driver_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Vulnerable WinRing0 Driver Load
-
 Detects the load of a signed WinRing0 driver often used by threat actors, crypto miners (XMRIG) or malware for privilege escalation
-
-## Metadata
-
-- Rule ID: 1a42dfa6-6cb2-4df9-9b48-295be477e835
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-07-26
-- Modified: 2024-11-23
-- Source Path: rules/windows/driver_load/driver_load_win_vuln_winring0_driver.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the load of a signed WinRing0 driver often used by threat actors, crypto
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Detection
 

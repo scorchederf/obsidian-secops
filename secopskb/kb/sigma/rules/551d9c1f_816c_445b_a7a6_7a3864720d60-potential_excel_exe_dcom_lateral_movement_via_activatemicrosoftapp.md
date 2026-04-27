@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_office_excel_dcom_lateral_movement.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_excel_dcom_lateral_movement.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Excel.EXE DCOM Lateral Movement Via ActivateMicrosoftApp
-
 Detects suspicious child processes of Excel which could be an indicator of lateral movement leveraging the "ActivateMicrosoftApp" Excel DCOM object.
-
-## Metadata
-
-- Rule ID: 551d9c1f-816c-445b-a7a6-7a3864720d60
-- Status: test
-- Level: high
-- Author: Aaron Stratton
-- Date: 2023-11-13
-- Source Path: rules/windows/process_creation/proc_creation_win_office_excel_dcom_lateral_movement.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects suspicious child processes of Excel which could be an indicator of later
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.003]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
 
 ## Detection
 

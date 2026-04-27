@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_vulnerable_driver_blocklist_registry_tampering.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vulnerable_driver_blocklist_registry_tampering.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Vulnerable Driver Blocklist Registry Tampering Via CommandLine
-
 Detects tampering of the Vulnerable Driver Blocklist registry via command line tools such as PowerShell or REG.EXE.
 The Vulnerable Driver Blocklist is a security feature that helps prevent the loading of known vulnerable drivers.
 Disabling this feature may indicate an attempt to bypass security controls, often targeted by threat actors
 to facilitate the installation of malicious or vulnerable drivers, particularly in scenarios involving Endpoint Detection and Response
-
-## Metadata
-
-- Rule ID: 22154f0e-5132-4a54-aa78-cc62f6def531
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2026-01-26
-- Source Path: rules/windows/process_creation/proc_creation_win_vulnerable_driver_blocklist_registry_tampering.yml
 
 ## Logsource
 
@@ -46,7 +35,7 @@ to facilitate the installation of malicious or vulnerable drivers, particularly 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

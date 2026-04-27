@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/signin_logs/azure_ad_suspicious_signin_bypassing_mfa.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/signin_logs/azure_ad_suspicious_signin_bypassing_mfa.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "azure / signinlogs"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential MFA Bypass Using Legacy Client Authentication
-
 Detects successful authentication from potential clients using legacy authentication via user agent strings. This could be a sign of MFA bypass using a password spray attack.
-
-## Metadata
-
-- Rule ID: 53bb4f7f-48a8-4475-ac30-5a82ddfdf6fc
-- Status: test
-- Level: high
-- Author: Harjot Singh, '@cyb3rjy0t'
-- Date: 2023-03-20
-- Source Path: rules/cloud/azure/signin_logs/azure_ad_suspicious_signin_bypassing_mfa.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects successful authentication from potential clients using legacy authentica
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
-- [[kb/attack/techniques/T1110-brute_force|T1110]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+- [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
 
 ## Detection
 

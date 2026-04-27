@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_remote_thread/create_remote_thread_win_keepass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_remote_thread/create_remote_thread_win_keepass.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / create_remote_thread"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote Thread Created In KeePass.EXE
-
 Detects remote thread creation in "KeePass.exe" which could indicates potential password dumping activity
-
-## Metadata
-
-- Rule ID: 77564cc2-7382-438b-a7f6-395c2ae53b9a
-- Status: test
-- Level: high
-- Author: Timon Hackenjos
-- Date: 2022-04-22
-- Modified: 2023-05-05
-- Source Path: rules/windows/create_remote_thread/create_remote_thread_win_keepass.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects remote thread creation in "KeePass.exe" which could indicates potential 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.005]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555005-password-managers|T1555.005: Password Managers]]
 
 ## Detection
 

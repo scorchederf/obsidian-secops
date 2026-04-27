@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_waveedit.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_waveedit.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Waveedit.DLL Sideloading
-
 Detects potential DLL sideloading of "waveedit.dll", which is part of the Nero WaveEditor audio editing software.
-
-## Metadata
-
-- Rule ID: 71b31e99-9ad0-47d4-aeb5-c0ca3928eeeb
-- Status: test
-- Level: high
-- Author: X__Junior (Nextron Systems)
-- Date: 2023-06-14
-- Source Path: rules/windows/image_load/image_load_side_load_waveedit.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potential DLL sideloading of "waveedit.dll", which is part of the Nero W
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Iediagcmd.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Iediagcmd.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "iediagcmd.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# iediagcmd.exe
-
 Diagnostics Utility for Internet Explorer
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2022-03-29
-- Author: manasmbellani
-- Source Path: yml/OSBinaries/Iediagcmd.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ set windir=c:\test& cd "C:\Program Files\Internet Explorer\" & iediagcmd.exe /ou
 - Use Case: Spawn a pre-planted executable from iediagcmd.exe.
 - Privileges: User
 - Operating System: Windows 10 1803, Windows 10 1703, Windows 10 22H1, Windows 10 22H2, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

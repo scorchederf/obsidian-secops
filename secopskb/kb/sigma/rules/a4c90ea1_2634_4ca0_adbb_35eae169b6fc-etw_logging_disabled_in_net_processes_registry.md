@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_dot_net_etw_tamper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_dot_net_etw_tamper.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ETW Logging Disabled In .NET Processes - Registry
-
 Potential adversaries stopping ETW providers recording loaded .NET assemblies.
-
-## Metadata
-
-- Rule ID: a4c90ea1-2634-4ca0-adbb-35eae169b6fc
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
-- Date: 2020-06-05
-- Modified: 2022-12-20
-- Source Path: rules/windows/builtin/security/win_security_dot_net_etw_tamper.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Potential adversaries stopping ETW providers recording loaded .NET assemblies.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 ## Detection
 

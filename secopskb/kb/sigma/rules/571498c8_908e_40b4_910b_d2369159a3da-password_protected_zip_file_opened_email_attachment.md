@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_outlook.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_outlook.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Password Protected ZIP File Opened (Email Attachment)
-
 Detects the extraction of password protected ZIP archives. See the filename variable for more details on which file has been opened.
-
-## Metadata
-
-- Rule ID: 571498c8-908e-40b4-910b-d2369159a3da
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-05-09
-- Source Path: rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_outlook.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects the extraction of password protected ZIP archives. See the filename vari
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
-- [[kb/attack/techniques/T1566-phishing|T1566.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
+- [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 ## Detection
 

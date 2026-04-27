@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Process By Web Server Process
-
 Detects potentially suspicious processes being spawned by a web server process which could be the result of a successfully placed web shell or exploitation
-
-## Metadata
-
-- Rule ID: 8202070f-edeb-4d31-a010-a26c72ac5600
-- Status: test
-- Level: high
-- Author: Thomas Patzke, Florian Roth (Nextron Systems), Zach Stanford @svch0st, Tim Shelton, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2019-01-16
-- Modified: 2024-11-26
-- Source Path: rules/windows/process_creation/proc_creation_win_webshell_susp_process_spawned_from_webserver.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects potentially suspicious processes being spawned by a web server process w
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 ## Detection
 

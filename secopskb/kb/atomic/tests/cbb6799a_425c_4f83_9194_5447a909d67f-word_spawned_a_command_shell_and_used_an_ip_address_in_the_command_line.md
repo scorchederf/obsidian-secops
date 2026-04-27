@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1566.001"
 attack_technique_name: "Phishing: Spearphishing Attachment"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1566.001/T1566.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "cbb6799a-425c-4f83-9194-5447a909d67f"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Word spawned a command shell and used an IP address in the command line
-
 Word spawning a command prompt then running a command with an IP address in the command line is an indicator of malicious activity.
 Upon execution, CMD will be launched and ping 8.8.8.8.
 
-## Metadata
-
-- Atomic GUID: cbb6799a-425c-4f83-9194-5447a909d67f
-- Technique: T1566.001: Phishing: Spearphishing Attachment
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1566.001/T1566.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1566-phishing|T1566.001]]
+- [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 ## Input Arguments
 

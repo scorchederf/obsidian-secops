@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_office_outlook_enable_load_macro_provider_on_boot.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_office_outlook_enable_load_macro_provider_on_boot.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Persistence Via Outlook LoadMacroProviderOnBoot Setting
-
 Detects the modification of Outlook setting "LoadMacroProviderOnBoot" which if enabled allows the automatic loading of any configured VBA project/module
-
-## Metadata
-
-- Rule ID: 396ae3eb-4174-4b9b-880e-dc0364d78a19
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-04-05
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_office_outlook_enable_load_macro_provider_on_boot.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects the modification of Outlook setting "LoadMacroProviderOnBoot" which if e
 
 ### Techniques
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137]]
-- [[kb/attack/techniques/T1008-fallback_channels|T1008]]
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]]
+- [[kb/attack/techniques/T1137-office_application_startup|T1137: Office Application Startup]]
+- [[kb/attack/techniques/T1008-fallback_channels|T1008: Fallback Channels]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]]
 
 ## Detection
 

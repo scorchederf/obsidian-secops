@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_selectmyparent.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_selectmyparent.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - PPID Spoofing SelectMyParent Tool Execution
-
 Detects the use of parent process ID spoofing tools like Didier Stevens tool SelectMyParent
-
-## Metadata
-
-- Rule ID: 52ff7941-8211-46f9-84f8-9903efb7077d
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-07-23
-- Modified: 2024-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_selectmyparent.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of parent process ID spoofing tools like Didier Stevens tool Sel
 
 ### Techniques
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.004]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134004-parent-pid-spoofing|T1134.004: Parent PID Spoofing]]
 
 ## Detection
 

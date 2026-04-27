@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.004"
 attack_technique_name: "Brute Force: Credential Stuffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/T1110.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "4852c630-87a9-409b-bb5e-5dc12c9ebcde"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Brute Force:Credential Stuffing using Kerbrute Tool
-
 Will read username and password combos from a file or stdin (format username:password) and perform a bruteforce attack
-
-## Metadata
-
-- Atomic GUID: 4852c630-87a9-409b-bb5e-5dc12c9ebcde
-- Technique: T1110.004: Brute Force: Credential Stuffing
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1110.004/T1110.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1110-brute_force|T1110.004]]
+- [[kb/attack/techniques/T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
 
 ## Input Arguments
 

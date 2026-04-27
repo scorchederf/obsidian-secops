@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_certoc_download_direct_ip.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_certoc_download_direct_ip.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# File Download From IP Based URL Via CertOC.EXE
-
 Detects when a user downloads a file from an IP based URL using CertOC.exe
-
-## Metadata
-
-- Rule ID: b86f6dea-0b2f-41f5-bdcc-a057bd19cd6a
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-10-18
-- Source Path: rules/windows/process_creation/proc_creation_win_certoc_download_direct_ip.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects when a user downloads a file from an IP based URL using CertOC.exe
 
 ### Techniques
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detection
 

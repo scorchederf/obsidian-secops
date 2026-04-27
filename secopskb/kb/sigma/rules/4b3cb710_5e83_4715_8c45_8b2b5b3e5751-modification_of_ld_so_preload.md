@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/path/lnx_auditd_ld_so_preload_mod.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/path/lnx_auditd_ld_so_preload_mod.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Modification of ld.so.preload
-
 Identifies modification of ld.so.preload for shared object injection. This technique is used by attackers to load arbitrary code into processes.
-
-## Metadata
-
-- Rule ID: 4b3cb710-5e83-4715-8c45-8b2b5b3e5751
-- Status: test
-- Level: high
-- Author: E.M. Anhaus (originally from Atomic Blue Detections, Tony Lambert), oscd.community
-- Date: 2019-10-24
-- Modified: 2021-11-27
-- Source Path: rules/linux/auditd/path/lnx_auditd_ld_so_preload_mod.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Identifies modification of ld.so.preload for shared object injection. This techn
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.006]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574006-dynamic-linker-hijacking|T1574.006: Dynamic Linker Hijacking]]
 
 ## Detection
 

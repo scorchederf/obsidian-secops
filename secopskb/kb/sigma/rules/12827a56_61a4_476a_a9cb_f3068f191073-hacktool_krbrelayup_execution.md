@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_krbrelayup.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_krbrelayup.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - KrbRelayUp Execution
-
 Detects KrbRelayUp used to perform a universal no-fix local privilege escalation in Windows domain environments where LDAP signing is not enforced
-
-## Metadata
-
-- Rule ID: 12827a56-61a4-476a-a9cb-f3068f191073
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-04-26
-- Modified: 2023-02-04
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_krbrelayup.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects KrbRelayUp used to perform a universal no-fix local privilege escalation
 
 ### Techniques
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.003]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 
 ## Detection
 

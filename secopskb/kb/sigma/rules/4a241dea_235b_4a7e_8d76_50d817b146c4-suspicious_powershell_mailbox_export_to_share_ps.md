@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_mailboxexport_share.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_mailboxexport_share.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "critical"
 logsource: "windows / ps_script"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious PowerShell Mailbox Export to Share - PS
-
 Detects usage of the powerShell New-MailboxExportRequest Cmdlet to exports a mailbox to a remote or local share, as used in ProxyShell exploitations
-
-## Metadata
-
-- Rule ID: 4a241dea-235b-4a7e-8d76-50d817b146c4
-- Status: test
-- Level: critical
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-10-26
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_mailboxexport_share.yml
 
 ## Logsource
 

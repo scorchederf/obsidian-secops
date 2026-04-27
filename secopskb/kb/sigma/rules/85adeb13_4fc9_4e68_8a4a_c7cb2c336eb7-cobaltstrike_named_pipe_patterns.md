@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_hktl_cobaltstrike_susp_pipe_patterns.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_hktl_cobaltstrike_susp_pipe_patterns.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / pipe_created"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CobaltStrike Named Pipe Patterns
-
 Detects the creation of a named pipe with a pattern found in CobaltStrike malleable C2 profiles
-
-## Metadata
-
-- Rule ID: 85adeb13-4fc9-4e68-8a4a-c7cb2c336eb7
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Christian Burkard (Nextron Systems)
-- Date: 2021-07-30
-- Modified: 2024-01-26
-- Source Path: rules/windows/pipe_created/pipe_created_hktl_cobaltstrike_susp_pipe_patterns.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the creation of a named pipe with a pattern found in CobaltStrike mallea
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

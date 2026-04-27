@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027"
 attack_technique_name: "Obfuscated Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027/T1027.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "sh"
 aliases:
   - "f45df6be-2e1e-4136-a384-8f18ab3826fb"
@@ -21,25 +21,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Decode base64 Data into Script
-
 Creates a base64-encoded data file and decodes it into an executable shell script
 
 Upon successful execution, sh will execute art.sh, which is a base64 encoded command, that echoes `Hello from the Atomic Red Team` 
 and uname -v
 
-## Metadata
-
-- Atomic GUID: f45df6be-2e1e-4136-a384-8f18ab3826fb
-- Technique: T1027: Obfuscated Files or Information
-- Platforms: macos, linux
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1027/T1027.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Input Arguments
 

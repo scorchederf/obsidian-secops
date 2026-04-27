@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_netsh_fw_allow_rdp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_netsh_fw_allow_rdp.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RDP Connection Allowed Via Netsh.EXE
-
 Detects usage of the netsh command to open and allow connections to port 3389 (RDP). As seen used by Sarwent Malware
-
-## Metadata
-
-- Rule ID: 01aeb693-138d-49d2-9403-c4f52d7d3d62
-- Status: test
-- Level: high
-- Author: Sander Wiebing
-- Date: 2020-05-23
-- Modified: 2023-12-11
-- Source Path: rules/windows/process_creation/proc_creation_win_netsh_fw_allow_rdp.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects usage of the netsh command to open and allow connections to port 3389 (R
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 ## Detection
 

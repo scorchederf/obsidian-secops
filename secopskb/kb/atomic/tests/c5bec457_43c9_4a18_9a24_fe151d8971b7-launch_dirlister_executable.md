@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1083"
 attack_technique_name: "File and Directory Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "c5bec457-43c9-4a18-9a24-fe151d8971b7"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Launch DirLister Executable
-
 Launches the DirLister executable for a short period of time and then exits.
 
 Recently seen used by [BlackCat ransomware](https://news.sophos.com/en-us/2022/07/14/blackcat-ransomware-attacks-not-merely-a-byproduct-of-bad-luck/) to create a list of accessible directories and files.
 
-## Metadata
-
-- Atomic GUID: c5bec457-43c9-4a18-9a24-fe151d8971b7
-- Technique: T1083: File and Directory Discovery
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1083/T1083.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
+- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/webserver_generic/web_java_payload_in_access_logs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/webserver_generic/web_java_payload_in_access_logs.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "webserver"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Java Payload Strings
-
 Detects possible Java payloads in web access logs
-
-## Metadata
-
-- Rule ID: 583aa0a2-30b1-4d62-8bf3-ab73689efe6c
-- Status: test
-- Level: high
-- Author: frack113, Harjot Singh, "@cyb3rjy0t" (update)
-- Date: 2022-06-04
-- Modified: 2023-01-19
-- Source Path: rules/web/webserver_generic/web_java_payload_in_access_logs.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects possible Java payloads in web access logs
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 ## Detection
 

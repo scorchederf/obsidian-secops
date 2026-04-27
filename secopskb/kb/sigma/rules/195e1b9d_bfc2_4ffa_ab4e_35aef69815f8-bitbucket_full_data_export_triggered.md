@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/bitbucket/audit/bitbucket_audit_full_data_export_triggered.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/bitbucket/audit/bitbucket_audit_full_data_export_triggered.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "bitbucket / audit"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bitbucket Full Data Export Triggered
-
 Detects when full data export is attempted.
-
-## Metadata
-
-- Rule ID: 195e1b9d-bfc2-4ffa-ab4e-35aef69815f8
-- Status: test
-- Level: high
-- Author: Muhammad Faisal (@faisalusuf)
-- Date: 2024-02-25
-- Source Path: rules/application/bitbucket/audit/bitbucket_audit_full_data_export_triggered.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Detects when full data export is attempted.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1213-data_from_information_repositories|T1213.003]]
+- [[kb/attack/techniques/T1213-data_from_information_repositories#^t1213003-code-repositories|T1213.003: Code Repositories]]
 
 ## Detection
 

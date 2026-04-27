@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.003"
 attack_technique_name: "Subvert Trust Controls: SIP and Trust Provider Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.003/T1553.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "e12f5d8d-574a-4e9d-8a84-c0e8b4a8a675"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# SIP (Subject Interface Package) Hijacking via Custom DLL
-
 Registers a DLL that logs signature checks, mimicking SIP hijacking. This test uses a DLL from 
 https://github.com/gtworek/PSBits/tree/master/SIP and registers it using regsvr32, thereby causing
 the system to utilize it during signature checks, and logging said checks.
 
-## Metadata
-
-- Atomic GUID: e12f5d8d-574a-4e9d-8a84-c0e8b4a8a675
-- Technique: T1553.003: Subvert Trust Controls: SIP and Trust Provider Hijacking
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1553.003/T1553.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.003]]
+- [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553003-sip-and-trust-provider-hijacking|T1553.003: SIP and Trust Provider Hijacking]]
 
 ## Input Arguments
 

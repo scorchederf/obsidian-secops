@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1484.001"
 attack_technique_name: "Domain Policy Modification: Group Policy Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1484.001/T1484.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "9ab80952-74ee-43da-a98c-1e740a985f28"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LockBit Black - Modify Group policy settings -cmd
-
 An adversary can modify the group policy settings.
-
-## Metadata
-
-- Atomic GUID: 9ab80952-74ee-43da-a98c-1e740a985f28
-- Technique: T1484.001: Domain Policy Modification: Group Policy Modification
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1484.001/T1484.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification|T1484.001]]
+- [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification#^t1484001-group-policy-modification|T1484.001: Group Policy Modification]]
 
 ## Executor
 

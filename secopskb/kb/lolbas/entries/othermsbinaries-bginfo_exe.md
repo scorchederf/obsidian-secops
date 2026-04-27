@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Bginfo.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Bginfo.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Bginfo.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bginfo.exe
-
 Background Information Utility included with SysInternals Suite
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OtherMSBinaries/Bginfo.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ bginfo.exe {PATH:.bgi} /popup /nolicprompt
 - Use Case: Local execution of VBScript
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 2. AWL Bypass
 
@@ -61,7 +52,7 @@ bginfo.exe {PATH:.bgi} /popup /nolicprompt
 - Use Case: Local execution of VBScript
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 3. Execute
 
@@ -74,7 +65,7 @@ Execute bginfo.exe from a WebDAV server.
 - Use Case: Remote execution of VBScript
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 4. AWL Bypass
 
@@ -87,7 +78,7 @@ Execute bginfo.exe from a WebDAV server.
 - Use Case: Remote execution of VBScript
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 5. Execute
 
@@ -100,7 +91,7 @@ This style of execution may not longer work due to patch.
 - Use Case: Remote execution of VBScript
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 6. AWL Bypass
 
@@ -113,7 +104,7 @@ This style of execution may not longer work due to patch.
 - Use Case: Remote execution of VBScript
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

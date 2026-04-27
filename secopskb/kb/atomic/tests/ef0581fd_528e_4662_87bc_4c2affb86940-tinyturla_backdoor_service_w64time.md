@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.003"
 attack_technique_name: "Create or Modify System Process: Windows Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "ef0581fd-528e-4662-87bc-4c2affb86940"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# TinyTurla backdoor service w64time
-
 It's running Dll as service to emulate the TinyTurla backdoor
 
 [Related Talos Blog](https://blog.talosintelligence.com/2021/09/tinyturla.html)
 
-## Metadata
-
-- Atomic GUID: ef0581fd-528e-4662-87bc-4c2affb86940
-- Technique: T1543.003: Create or Modify System Process: Windows Service
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1543.003/T1543.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Input Arguments
 

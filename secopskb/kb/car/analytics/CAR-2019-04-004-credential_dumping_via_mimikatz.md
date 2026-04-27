@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2019-04-004/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2019-04-004.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2019-04-004"
   - "Credential Dumping via Mimikatz"
@@ -25,28 +25,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2019-04-004: Credential Dumping via Mimikatz
-
-## Metadata
-
-- CAR ID: CAR-2019-04-004
-- Submission Date: 2019/04/29
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Credential dumpers like Mimikatz can be loaded into memory and from there read data from another processes. This analytic looks for instances where processes are requesting specific permissions to read parts of the LSASS process in order to detect when credential dumping is occurring. One weakness is that all current implementations are “overtuned” to look for common access patterns used by Mimikatz.
 
 *This requires information about process access, e.g. Sysmon Event ID 10. That currently doesn’t have a CAR data model mapping, since we currently lack any open/access actions for Processes. If this changes, we will update the data model requirements.*
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]] (coverage: Low; tactics: TA0006)
-  - [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]] (coverage: Low; tactics: TA0006)
+  - [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Implementations
 

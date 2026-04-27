@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_pingcastle.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_pingcastle.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed PingCastle Binary Execution
-
 Detects the execution of a renamed "PingCastle" binary based on the PE metadata fields.
-
-## Metadata
-
-- Rule ID: 2433a154-bb3d-42e4-86c3-a26bdac91c45
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), X__Junior (Nextron Systems)
-- Date: 2024-01-11
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_pingcastle.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects the execution of a renamed "PingCastle" binary based on the PE metadata 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detection
 

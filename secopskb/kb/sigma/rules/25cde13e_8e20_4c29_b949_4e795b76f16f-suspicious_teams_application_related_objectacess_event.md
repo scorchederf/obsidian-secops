@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_teams_suspicious_objectaccess.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_teams_suspicious_objectaccess.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Teams Application Related ObjectAcess Event
-
 Detects an access to authentication tokens and accounts of Microsoft Teams desktop application.
-
-## Metadata
-
-- Rule ID: 25cde13e-8e20-4c29-b949-4e795b76f16f
-- Status: test
-- Level: high
-- Author: @SerkinValery
-- Date: 2022-09-16
-- Source Path: rules/windows/builtin/security/win_security_teams_suspicious_objectaccess.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects an access to authentication tokens and accounts of Microsoft Teams deskt
 
 ### Techniques
 
-- [[kb/attack/techniques/T1528-steal_application_access_token|T1528]]
+- [[kb/attack/techniques/T1528-steal_application_access_token|T1528: Steal Application Access Token]]
 
 ## Detection
 

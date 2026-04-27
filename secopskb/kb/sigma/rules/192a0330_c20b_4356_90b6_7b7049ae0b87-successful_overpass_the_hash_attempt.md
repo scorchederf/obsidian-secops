@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/account_management/win_security_overpass_the_hash.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/account_management/win_security_overpass_the_hash.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Successful Overpass the Hash Attempt
-
 Detects successful logon with logon type 9 (NewCredentials) which matches the Overpass the Hash behavior of e.g Mimikatz's sekurlsa::pth module.
-
-## Metadata
-
-- Rule ID: 192a0330-c20b-4356-90b6-7b7049ae0b87
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez (source), Dominik Schaudel (rule)
-- Date: 2018-02-12
-- Modified: 2021-11-27
-- Source Path: rules/windows/builtin/security/account_management/win_security_overpass_the_hash.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects successful logon with logon type 9 (NewCredentials) which matches the Ov
 
 ### Techniques
 
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.002]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 
 ### Software Tags
 

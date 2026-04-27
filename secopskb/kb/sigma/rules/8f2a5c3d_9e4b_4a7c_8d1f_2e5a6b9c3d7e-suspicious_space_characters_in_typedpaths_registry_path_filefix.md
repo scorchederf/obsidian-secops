@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_susp_typedpaths_space_characters.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_susp_typedpaths_space_characters.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "experimental"
 level: "high"
 logsource: "windows / registry_set"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Space Characters in TypedPaths Registry Path - FileFix
-
 Detects the occurrence of numerous space characters in TypedPaths registry paths, which may indicate execution via phishing lures using file-fix techniques to hide malicious commands.
-
-## Metadata
-
-- Rule ID: 8f2a5c3d-9e4b-4a7c-8d1f-2e5a6b9c3d7e
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-04
-- Source Path: rules/windows/registry/registry_set/registry_set_susp_typedpaths_space_characters.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects the occurrence of numerous space characters in TypedPaths registry paths
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.004]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.010]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204004-malicious-copy-and-paste|T1204.004: Malicious Copy and Paste]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027010-command-obfuscation|T1027.010: Command Obfuscation]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.005"
 attack_technique_name: "Signed Binary Proxy Execution: Mshta"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.005/T1218.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "c4b97eeb-5249-4455-a607-59f95485cb45"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mshta Executes Remote HTML Application (HTA)
-
 Execute an arbitrary remote HTA. Upon execution calc.exe will be launched.
-
-## Metadata
-
-- Atomic GUID: c4b97eeb-5249-4455-a607-59f95485cb45
-- Technique: T1218.005: Signed Binary Proxy Execution: Mshta
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1218.005/T1218.005.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ## Input Arguments
 

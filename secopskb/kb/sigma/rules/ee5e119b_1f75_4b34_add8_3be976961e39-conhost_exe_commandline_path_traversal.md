@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_conhost_path_traversal.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_conhost_path_traversal.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Conhost.exe CommandLine Path Traversal
-
 detects the usage of path traversal in conhost.exe indicating possible command/argument confusion/hijacking
-
-## Metadata
-
-- Rule ID: ee5e119b-1f75-4b34-add8-3be976961e39
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-06-14
-- Source Path: rules/windows/process_creation/proc_creation_win_conhost_path_traversal.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ detects the usage of path traversal in conhost.exe indicating possible command/a
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Detection
 

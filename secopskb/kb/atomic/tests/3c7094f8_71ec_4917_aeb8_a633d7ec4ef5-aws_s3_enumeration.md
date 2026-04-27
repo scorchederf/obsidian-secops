@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1619"
 attack_technique_name: "Cloud Storage Object Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1619/T1619.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "3c7094f8-71ec-4917-aeb8-a633d7ec4ef5"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS S3 Enumeration
-
 This test will enumerate all the S3 buckets in the user account and lists all the files in each bucket.
-
-## Metadata
-
-- Atomic GUID: 3c7094f8-71ec-4917-aeb8-a633d7ec4ef5
-- Technique: T1619: Cloud Storage Object Discovery
-- Platforms: iaas:aws
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1619/T1619.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1619-cloud_storage_object_discovery|T1619]]
+- [[kb/attack/techniques/T1619-cloud_storage_object_discovery|T1619: Cloud Storage Object Discovery]]
 
 ## Dependencies
 

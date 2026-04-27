@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_shell_open_keys_manipulation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_shell_open_keys_manipulation.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Shell Open Registry Keys Manipulation
-
 Detects the shell open key manipulation (exefile and ms-settings) used for persistence and the pattern of UAC Bypass using fodhelper.exe, computerdefaults.exe, slui.exe via registry keys (e.g. UACMe 33 or 62)
-
-## Metadata
-
-- Rule ID: 152f3630-77c1-4284-bcc0-4cc68ab2f6e7
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems)
-- Date: 2021-08-30
-- Modified: 2022-01-13
-- Source Path: rules/windows/registry/registry_event/registry_event_shell_open_keys_manipulation.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the shell open key manipulation (exefile and ms-settings) used for persi
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.001]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546001-change-default-file-association|T1546.001: Change Default File Association]]
 
 ## Detection
 

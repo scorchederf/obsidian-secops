@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "4ea1fc97-8a46-4b4e-ba48-af43d2a98052"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Excel 4 Macro
-
 This module creates an Excel 4 Macro (XLM) enabled spreadsheet and executes it. The XLM will first write a "malicious"
 VBS file to %TEMP%, then execute this file. The VBS will download Process Explorer to the same directory (%TEMP%) and exec.
 
@@ -29,18 +27,9 @@ A note regarding this module. By default, this module will pull the current user
 you'd like to utilize the "=GET.WORKSPACE(26)" method, that many maldoc authors use, you will need to ensure that the User Name associated
 with Excel matches that of the local system. This username can be found under Files -> Options -> Username
 
-## Metadata
-
-- Atomic GUID: 4ea1fc97-8a46-4b4e-ba48-af43d2a98052
-- Technique: T1204.002: User Execution: Malicious File
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1204.002/T1204.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 ## Input Arguments
 

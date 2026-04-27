@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_susp_script_interpretor_spawn_credential_scanner.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_susp_script_interpretor_spawn_credential_scanner.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "linux / process_creation"
@@ -23,19 +23,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Script Interpreter Spawning Credential Scanner - Linux
-
 Detects a script interpreter process (like node.js or bun) spawning a known credential scanning tool (e.g., trufflehog, gitleaks).
 This behavior is indicative of an attempt to find and steal secrets, as seen in the "Shai-Hulud: The Second Coming" campaign.
-
-## Metadata
-
-- Rule ID: f0025a69-e1b7-4dda-a53c-db21fa2d4071
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-25
-- Source Path: rules/linux/process_creation/proc_creation_lnx_susp_script_interpretor_spawn_credential_scanner.yml
 
 ## Logsource
 
@@ -46,9 +35,9 @@ This behavior is indicative of an attempt to find and steal secrets, as seen in 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552]]
-- [[kb/attack/techniques/T1005-data_from_local_system|T1005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
+- [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+- [[kb/attack/techniques/T1005-data_from_local_system|T1005: Data from Local System]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
 
 ## Detection
 

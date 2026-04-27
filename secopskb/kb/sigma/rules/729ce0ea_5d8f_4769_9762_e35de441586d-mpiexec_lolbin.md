@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_lolbin_mpiexec.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_mpiexec.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MpiExec Lolbin
-
 Detects a certain command line flag combination used by mpiexec.exe LOLBIN from HPC pack that can be used to execute any other binary
-
-## Metadata
-
-- Rule ID: 729ce0ea-5d8f-4769-9762-e35de441586d
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-01-11
-- Modified: 2024-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_lolbin_mpiexec.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a certain command line flag combination used by mpiexec.exe LOLBIN from 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.002"
 attack_technique_name: "Account Discovery: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.002/T1087.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "a54d497e-8dbe-4558-9895-44944baa395f"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Account Enumeration with LDAPDomainDump
-
 This test uses LDAPDomainDump to perform account enumeration on a domain.
 [Reference](https://securityonline.info/ldapdomaindump-active-directory-information-dumper-via-ldap/)
 
-## Metadata
-
-- Atomic GUID: a54d497e-8dbe-4558-9895-44944baa395f
-- Technique: T1087.002: Account Discovery: Domain Account
-- Platforms: linux
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1087.002/T1087.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 
 ## Input Arguments
 

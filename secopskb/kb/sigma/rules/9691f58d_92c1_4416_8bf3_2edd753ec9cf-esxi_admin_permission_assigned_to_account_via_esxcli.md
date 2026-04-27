@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_esxcli_permission_change_admin.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_esxcli_permission_change_admin.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi Admin Permission Assigned To Account Via ESXCLI
-
 Detects execution of the "esxcli" command with the "system" and "permission" flags in order to assign admin permissions to an account.
-
-## Metadata
-
-- Rule ID: 9691f58d-92c1-4416-8bf3-2edd753ec9cf
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-09-04
-- Source Path: rules/linux/process_creation/proc_creation_lnx_esxcli_permission_change_admin.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects execution of the "esxcli" command with the "system" and "permission" fla
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.012]]
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059012-hypervisor-cli|T1059.012: Hypervisor CLI]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

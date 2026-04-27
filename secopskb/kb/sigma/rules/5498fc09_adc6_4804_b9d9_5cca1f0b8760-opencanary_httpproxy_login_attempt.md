@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_httpproxy_login_attempt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_httpproxy_login_attempt.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - HTTPPROXY Login Attempt
-
 Detects instances where an HTTPPROXY service on an OpenCanary node has had an attempt to proxy another page.
-
-## Metadata
-
-- Rule ID: 5498fc09-adc6-4804-b9d9-5cca1f0b8760
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_httpproxy_login_attempt.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects instances where an HTTPPROXY service on an OpenCanary node has had an at
 
 ### Techniques
 
-- [[kb/attack/techniques/T1090-proxy|T1090]]
+- [[kb/attack/techniques/T1090-proxy|T1090: Proxy]]
 
 ## Detection
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Sqlps.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Sqlps.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Sqlps.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sqlps.exe
-
 Tool included with Microsoft SQL Server that loads SQL Server cmdlets. Microsoft SQL Server\100 and 110 are Powershell v2. Microsoft SQL Server\120 and 130 are Powershell version 4. Replaced by SQLToolsPS.exe in SQL Server 2016, but will be included with installation for compatability reasons.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OtherMSBinaries/Sqlps.yml
 
 ## Paths
 
@@ -51,7 +42,7 @@ Sqlps.exe -noprofile
 - Use Case: Execute PowerShell commands without ScriptBlock logging.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

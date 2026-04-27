@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/syscall/lnx_auditd_web_rce.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/syscall/lnx_auditd_web_rce.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "critical"
 logsource: "linux / auditd"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Webshell Remote Command Execution
-
 Detects possible command execution by web application/web shell
-
-## Metadata
-
-- Rule ID: c0d3734d-330f-4a03-aae2-65dacc6a8222
-- Status: test
-- Level: critical
-- Author: Ilyas Ochkov, Beyu Denis, oscd.community
-- Date: 2019-10-12
-- Modified: 2025-12-05
-- Source Path: rules/linux/auditd/syscall/lnx_auditd_web_rce.yml
 
 ## Logsource
 
@@ -51,7 +39,7 @@ Change the number "33" to the ID of your WebServer user. Default: www-data:x:33:
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

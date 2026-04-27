@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_sharpview.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_sharpview.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -25,19 +25,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - SharpView Execution
-
 Adversaries may look for details about the network configuration and settings of systems they access or through information discovery of remote systems
-
-## Metadata
-
-- Rule ID: b2317cfa-4a47-4ead-b3ff-297438c0bc2d
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-12-10
-- Modified: 2023-02-14
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_sharpview.yml
 
 ## Logsource
 
@@ -48,11 +36,11 @@ Adversaries may look for details about the network configuration and settings of
 
 ### Techniques
 
-- [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
-- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
-- [[kb/attack/techniques/T1135-network_share_discovery|T1135]]
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049: System Network Connections Discovery]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
+- [[kb/attack/techniques/T1135-network_share_discovery|T1135: Network Share Discovery]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Detection
 

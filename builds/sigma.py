@@ -143,7 +143,31 @@ def build_attack_technique_lookup():
             continue
         attack_id = filename.split("-", 1)[0]
         if re.match(r"^T\d{4}$", attack_id):
-            lookup[attack_id] = os.path.splitext(filename)[0]
+            note_stem = os.path.splitext(filename)[0]
+            filepath = os.path.join(ATTACK_TECHNIQUES_DIR, filename)
+            try:
+                text = read_text_file(filepath)
+            except OSError:
+                text = ""
+            technique_name = ""
+            if text.startswith("---\n"):
+                end = text.find("\n---\n", 4)
+                if end != -1:
+                    data = yaml.safe_load(text[4:end]) or {}
+                    if isinstance(data, dict):
+                        technique_name = data.get("mitre_name", "")
+            lookup[attack_id] = {
+                "target": note_stem,
+                "label": attack_id + (": " + technique_name if technique_name else ""),
+            }
+            for match in re.finditer(r"^### (T\d{4}\.\d{3}): ([^\n]+)\n\n(\^[^\n]+)", text, flags=re.MULTILINE):
+                subtechnique_id = match.group(1)
+                subtechnique_name = match.group(2).strip()
+                anchor = match.group(3).strip()
+                lookup[subtechnique_id] = {
+                    "target": note_stem + "#" + anchor,
+                    "label": subtechnique_id + ": " + subtechnique_name,
+                }
     return lookup
 
 
@@ -168,10 +192,13 @@ def build_atomic_guid_lookup():
 
 def make_attack_link(attack_id, attack_lookup):
     parent_id = attack_id.split(".", 1)[0]
-    target = attack_lookup.get(parent_id)
-    if not target:
+    link_info = attack_lookup.get(attack_id) or attack_lookup.get(parent_id)
+    if not link_info:
         return attack_id
-    return f"[[kb/attack/techniques/{target}|{attack_id}]]"
+    label = link_info.get("label") or attack_id
+    if attack_id != parent_id and attack_id not in attack_lookup:
+        label = attack_id
+    return f"[[kb/attack/techniques/{link_info['target']}|{label}]]"
 
 
 def extract_attack_techniques(rule):
@@ -350,10 +377,8 @@ def build_sigma_rule_note(item, attack_lookup, atomic_lookup):
 
     text = render_yaml(yaml_lines)
     text += build_page_start()
-    text += "# " + str(rule.get("title", "")) + "\n\n"
     if rule.get("description"):
         text += str(rule["description"]).strip() + "\n\n"
-    text += write_metadata_section(rule, item)
     text += write_logsource_section(rule)
     text += write_attack_section(rule, attack_lookup)
     text += write_detection_section(rule)
@@ -379,7 +404,13 @@ def build_sigma_indexes(rules, attack_lookup):
 
     text = build_page_start()
     text += "# Sigma\n\n"
-    text += "SigmaHQ detection rules generated from the upstream Sigma rule repository.\n\n"
+    text += "<!-- generated-source-description-start -->\n"
+    text += "Sigma is a generic detection rule format for describing log-based detections in a SIEM-independent way. This vault imports filtered SigmaHQ rules from the upstream rule repository, preserves rule metadata and detection YAML, and maps rules to ATT&CK techniques and logsources where those tags exist.\n\n"
+    text += "Use Sigma pages as portable detection references. ATT&CK technique pages link back to matching Sigma rules, and Sigma simulation metadata links to Atomic Red Team tests when upstream rule metadata includes a matching Atomic GUID.\n\n"
+    text += "## Upstream\n\n"
+    text += "- [SigmaHQ](https://github.com/SigmaHQ/sigma)\n"
+    text += "- [Sigma project](https://sigmahq.io/)\n"
+    text += "<!-- generated-source-description-end -->\n\n"
     text += "## Areas\n\n"
     text += f"- [[kb/sigma/rules/index|Rules]] ({len(rules)})\n"
     text += f"- [[kb/sigma/techniques/index|Rules by ATT&CK Technique]] ({len(by_technique)})\n"

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1202"
 attack_technique_name: "Indirect Command Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1202/T1202.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "de323a93-2f18-4bd5-ba60-d6fca6aeff76"
@@ -20,24 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Indirect Command Execution - RunMRU Dialog
-
 Simulates execution of commands via the Windows Run dialog (Win+R) by programmatically opening the Run dialog, 
 copying a command to clipboard, and automating the paste and execution. This generates artifacts in the RunMRU registry key,
 which is commonly abused by threat actors to execute malicious commands disguised as CAPTCHA verification steps.
 Upon execution, a test PowerShell command will be executed through the Run dialog.
 
-## Metadata
-
-- Atomic GUID: de323a93-2f18-4bd5-ba60-d6fca6aeff76
-- Technique: T1202: Indirect Command Execution
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1202/T1202.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Input Arguments
 

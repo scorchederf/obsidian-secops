@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_sysinternals_susp_psexec_paexec_flags.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sysinternals_susp_psexec_paexec_flags.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Privilege Escalation To LOCAL SYSTEM
-
 Detects unknown program using commandline flags usually used by tools such as PsExec and PAExec to start programs with SYSTEM Privileges
-
-## Metadata
-
-- Rule ID: 207b0396-3689-42d9-8399-4222658efc99
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-05-22
-- Modified: 2024-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_sysinternals_susp_psexec_paexec_flags.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects unknown program using commandline flags usually used by tools such as Ps
 
 ### Techniques
 
-- [[kb/attack/techniques/T1587-develop_capabilities|T1587.001]]
+- [[kb/attack/techniques/T1587-develop_capabilities#^t1587001-malware|T1587.001: Malware]]
 
 ## Detection
 

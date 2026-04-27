@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.002"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Silver Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.002/T1558.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "385e59aa-113e-4711-84d9-f637aef01f2c"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Crafting Active Directory silver tickets with mimikatz
-
 Once the hash of service account is retrieved it is possible to forge Kerberos ticket granting service (TGS) tickets, also known as silver tickets.
 The generated ticket is injected in a new empty Windows session and discarded after, so it does not pollute the current Windows session.
 
-## Metadata
-
-- Atomic GUID: 385e59aa-113e-4711-84d9-f637aef01f2c
-- Technique: T1558.002: Steal or Forge Kerberos Tickets: Silver Ticket
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1558.002/T1558.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.002]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558002-silver-ticket|T1558.002: Silver Ticket]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-07-005/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-07-005.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-07-005"
   - "Command Line Usage of Archiving Software"
@@ -28,28 +28,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-07-005: Command Line Usage of Archiving Software
-
-## Metadata
-
-- CAR ID: CAR-2013-07-005
-- Submission Date: 2013/07/31
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Before [exfiltrating data](https://attack.mitre.org/tactics/TA0010) that an adversary has [collected](https://attack.mitre.org/tactics/TA0009), it is very likely that a [compressed archive](https://attack.mitre.org/techniques/T1560) will be created, so that transfer times are minimized and fewer files are transmitted. There is variety between the tools used to compress data, but the command line usage and context of archiving tools, such as ZIP, RAR, and 7ZIP, should be monitored.
 
 In addition to looking for RAR or 7z program names, command line usage of 7Zip or RAR can be detected with the flag usage of "`\* a \*`". This is helpful, as adversaries may change program names.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1560-archive_collected_data|T1560]] (coverage: Moderate; tactics: TA0010)
-  - [[kb/attack/techniques/T1560-archive_collected_data|T1560.001]]
+- [[kb/attack/techniques/T1560-archive_collected_data|T1560: Archive Collected Data]] (coverage: Moderate; tactics: TA0010)
+  - [[kb/attack/techniques/T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 
 ## Implementations
 

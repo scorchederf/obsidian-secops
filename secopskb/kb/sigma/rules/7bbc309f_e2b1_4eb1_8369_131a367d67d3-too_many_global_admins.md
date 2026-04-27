@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/privileged_identity_management/azure_pim_too_many_global_admins.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/privileged_identity_management/azure_pim_too_many_global_admins.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "azure / pim"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Too Many Global Admins
-
 Identifies an event where there are there are too many accounts assigned the Global Administrator role.
-
-## Metadata
-
-- Rule ID: 7bbc309f-e2b1-4eb1-8369-131a367d67d3
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'
-- Date: 2023-09-14
-- Source Path: rules/cloud/azure/privileged_identity_management/azure_pim_too_many_global_admins.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Identifies an event where there are there are too many accounts assigned the Glo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
 
 ## Detection
 

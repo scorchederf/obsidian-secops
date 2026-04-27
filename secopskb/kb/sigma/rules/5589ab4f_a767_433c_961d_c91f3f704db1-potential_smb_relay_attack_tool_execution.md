@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_relay_attacks_tools.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_relay_attacks_tools.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential SMB Relay Attack Tool Execution
-
 Detects different hacktools used for relay attacks on Windows for privilege escalation
-
-## Metadata
-
-- Rule ID: 5589ab4f-a767-433c-961d-c91f3f704db1
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-07-24
-- Modified: 2023-02-14
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_relay_attacks_tools.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects different hacktools used for relay attacks on Windows for privilege esca
 
 ### Techniques
 
-- [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557.001]]
+- [[kb/attack/techniques/T1557-adversary-in-the-middle#^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay|T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay]]
 
 ## Detection
 

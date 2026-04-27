@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.002"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Hash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.002/T1550.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "f8757545-b00a-4e4e-8cfb-8cfb961ee713"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Invoke-WMIExec Pass the Hash
-
 Use Invoke-WMIExec to Pass the Hash
 Note: must dump hashes first
 [Reference](https://github.com/gentilkiwi/mimikatz/wiki/module-~-sekurlsa#pth)
 
-## Metadata
-
-- Atomic GUID: f8757545-b00a-4e4e-8cfb-8cfb961ee713
-- Technique: T1550.002: Use Alternate Authentication Material: Pass the Hash
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1550.002/T1550.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.002]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 
 ## Input Arguments
 

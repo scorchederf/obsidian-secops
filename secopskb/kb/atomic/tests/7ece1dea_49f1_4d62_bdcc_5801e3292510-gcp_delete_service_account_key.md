@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "7ece1dea-49f1-4d62-bdcc-5801e3292510"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# GCP - Delete Service Account Key
 
 This Atomic will: 
   - Create a service account
@@ -37,19 +35,9 @@ If a key is deleted, the application will no longer be able to access Google Clo
 
 Reference: https://github.com/elastic/detection-rules/blob/main/rules/integrations/gcp/impact_gcp_storage_bucket_deleted.toml
 
-## Metadata
-
-- Atomic GUID: 7ece1dea-49f1-4d62-bdcc-5801e3292510
-- Technique: T1098: Account Manipulation
-- Platforms: iaas:gcp
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1098/T1098.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Input Arguments
 

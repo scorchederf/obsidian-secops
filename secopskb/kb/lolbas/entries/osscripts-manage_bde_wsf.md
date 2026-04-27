@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSScripts/Manage-bde.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSScripts/Manage-bde.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSScripts"
 aliases:
   - "Manage-bde.wsf"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Manage-bde.wsf
-
 Script for managing BitLocker
-
-## Metadata
-
-- Category: OSScripts
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSScripts/Manage-bde.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ set comspec={PATH_ABSOLUTE:.exe} & cscript c:\windows\system32\manage-bde.wsf
 - Use Case: Proxy execution from script
 - Privileges: User
 - Operating System: Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ### 2. Execute
 
@@ -60,7 +51,7 @@ copy c:\users\person\evil.exe c:\users\public\manage-bde.exe & cd c:\users\publi
 - Use Case: Proxy execution from script
 - Privileges: User
 - Operating System: Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ## Detections
 

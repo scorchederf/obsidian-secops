@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-05-008/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-05-008.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-05-008"
   - "Certutil exe certificate extraction"
@@ -25,26 +25,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-05-008: Certutil exe certificate extraction
-
-## Metadata
-
-- CAR ID: CAR-2021-05-008
-- Submission Date: 2021/05/11
-- Information Domain: Analytic
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Splunk Threat Research <research@splunk.com>
-
-## Description
-
 This search looks for arguments to certutil.exe indicating the manipulation or extraction of Certificate. This certificate can then be used to sign new authentication tokens specially inside Federated environments such as Windows ADFS.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1606-forge_web_credentials|T1606]] (coverage: Moderate; tactics: TA0006)
-  - [[kb/attack/techniques/T1606-forge_web_credentials|T1606.002]]
+- [[kb/attack/techniques/T1606-forge_web_credentials|T1606: Forge Web Credentials]] (coverage: Moderate; tactics: TA0006)
+  - [[kb/attack/techniques/T1606-forge_web_credentials#^t1606002-saml-tokens|T1606.002: SAML Tokens]]
 
 ## Implementations
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1530"
 attack_technique_name: "Data from Cloud Storage Object"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1530/T1530.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "979356b9-b588-4e49-bba4-c35517c484f5"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - Scan for Anonymous Access to S3
-
 Upon successful execution, this test will test for anonymous access to AWS S3 buckets and dumps all the files to a local folder.
-
-## Metadata
-
-- Atomic GUID: 979356b9-b588-4e49-bba4-c35517c484f5
-- Technique: T1530: Data from Cloud Storage Object
-- Platforms: iaas:aws
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1530/T1530.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1530-data_from_cloud_storage|T1530]]
+- [[kb/attack/techniques/T1530-data_from_cloud_storage|T1530: Data from Cloud Storage]]
 
 ## Input Arguments
 

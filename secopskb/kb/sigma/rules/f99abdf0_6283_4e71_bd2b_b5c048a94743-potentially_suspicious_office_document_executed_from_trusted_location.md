@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_office_exec_from_trusted_locations.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_exec_from_trusted_locations.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potentially Suspicious Office Document Executed From Trusted Location
-
 Detects the execution of an Office application that points to a document that is located in a trusted location. Attackers often used this to avoid macro security and execute their malicious code.
-
-## Metadata
-
-- Rule ID: f99abdf0-6283-4e71-bd2b-b5c048a94743
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-06-21
-- Modified: 2023-10-18
-- Source Path: rules/windows/process_creation/proc_creation_win_office_exec_from_trusted_locations.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of an Office application that points to a document that is
 
 ### Techniques
 
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detection
 

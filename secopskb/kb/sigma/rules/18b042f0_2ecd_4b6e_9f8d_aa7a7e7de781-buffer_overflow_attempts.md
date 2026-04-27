@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/lnx_buffer_overflows.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/lnx_buffer_overflows.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "linux"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Buffer Overflow Attempts
-
 Detects buffer overflow attempts in Unix system log files
-
-## Metadata
-
-- Rule ID: 18b042f0-2ecd-4b6e-9f8d-aa7a7e7de781
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2017-03-01
-- Modified: 2025-03-17
-- Source Path: rules/linux/builtin/lnx_buffer_overflows.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects buffer overflow attempts in Unix system log files
 
 ### Techniques
 
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 
 ## Detection
 

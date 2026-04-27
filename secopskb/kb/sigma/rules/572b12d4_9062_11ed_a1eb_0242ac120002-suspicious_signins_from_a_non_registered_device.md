@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/signin_logs/azure_ad_risky_sign_ins_with_singlefactorauth_from_unknown_devices.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/signin_logs/azure_ad_risky_sign_ins_with_singlefactorauth_from_unknown_devices.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "azure / signinlogs"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious SignIns From A Non Registered Device
-
 Detects risky authentication from a non AD registered device without MFA being required.
-
-## Metadata
-
-- Rule ID: 572b12d4-9062-11ed-a1eb-0242ac120002
-- Status: test
-- Level: high
-- Author: Harjot Singh, '@cyb3rjy0t'
-- Date: 2023-01-10
-- Modified: 2025-07-02
-- Source Path: rules/cloud/azure/signin_logs/azure_ad_risky_sign_ins_with_singlefactorauth_from_unknown_devices.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects risky authentication from a non AD registered device without MFA being r
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
 
 ## Detection
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSLibraries/Syssetup.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/Syssetup.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSLibraries"
 aliases:
   - "Syssetup.dll"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Syssetup.dll
-
 Windows NT System Setup
-
-## Metadata
-
-- Category: OSLibraries
-- Created: 2018-05-25
-- Author: LOLBAS Team
-- Source Path: yml/OSLibraries/Syssetup.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 {PATH_ABSOL
 - Use Case: Run local or remote script(let) code through INF file specification (Note May pop an error window).
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ### 2. Execute
 
@@ -62,7 +53,7 @@ rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 {PATH_ABSOL
 - Use Case: Load an executable payload.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detections
 

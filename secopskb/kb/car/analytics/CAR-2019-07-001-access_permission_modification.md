@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2019-07-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2019-07-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2019-07-001"
   - "Access Permission Modification"
@@ -29,29 +29,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2019-07-001: Access Permission Modification
-
-## Metadata
-
-- CAR ID: CAR-2019-07-001
-- Submission Date: 2019/07/08
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: File
-- Contributors: Meric Degirmenci, MITRE
-
-## Description
-
 Adversaries sometimes modify object access rights at the operating system level. There are varying motivations behind this action -  they may not want some files/objects to be changed on systems for persistence reasons and therefore provide admin only rights; also, they may want files to be accessible with lower levels of permissions.
 
 Note - this analytic references file permissions, which are not currently in the CAR data model.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.001]]
-  - [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.002]]
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222: File and Directory Permissions Modification]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222001-windows-file-and-directory-permissions-modification|T1222.001: Windows File and Directory Permissions Modification]]
+  - [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222002-linux-and-mac-file-and-directory-permissions-modification|T1222.002: Linux and Mac File and Directory Permissions Modification]]
 
 ## Implementations
 

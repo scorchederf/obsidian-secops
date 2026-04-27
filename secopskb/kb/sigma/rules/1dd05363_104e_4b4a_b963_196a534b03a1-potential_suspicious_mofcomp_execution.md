@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mofcomp_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mofcomp_execution.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Suspicious Mofcomp Execution
-
 Detects execution of the "mofcomp" utility as a child of a suspicious shell or script running utility or by having a suspicious path in the commandline.
 The "mofcomp" utility parses a file containing MOF statements and adds the classes and class instances defined in the file to the WMI repository.
 Attackers abuse this utility to install malicious MOF scripts
-
-## Metadata
-
-- Rule ID: 1dd05363-104e-4b4a-b963-196a534b03a1
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-12
-- Modified: 2023-04-11
-- Source Path: rules/windows/process_creation/proc_creation_win_mofcomp_execution.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ Attackers abuse this utility to install malicious MOF scripts
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

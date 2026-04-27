@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.004"
 attack_technique_name: "Obfuscated Files or Information: Compile After Delivery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.004/T1027.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "ffcdbd6a-b0e8-487d-927a-09127fe9a206"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Compile After Delivery using csc.exe
-
 Compile C# code using csc.exe binary used by .NET
 Upon execution an exe named T1027.004.exe will be placed in the temp folder
 
-## Metadata
-
-- Atomic GUID: ffcdbd6a-b0e8-487d-927a-09127fe9a206
-- Technique: T1027.004: Obfuscated Files or Information: Compile After Delivery
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1027.004/T1027.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.004]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027004-compile-after-delivery|T1027.004: Compile After Delivery]]
 
 ## Input Arguments
 

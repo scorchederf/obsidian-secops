@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "ac7e6118-473d-41ec-9ac0-ef4f1d1ed2f6"
@@ -20,26 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Grant Full Access to folder for Everyone - Ryuk Ransomware Style
-
 Invokes the command line similar to that used by Ryuk Ransomware to grant full access to the entire C:\ drive for Everyone.
 **icacls "C:\*" /grant Everyone:F /T /C /Q**
 However, for this atomic we set the permission on C:\Users\Public so it completes faster and doesn't irreversibly affect the host.
 You can set your own path variable to "C:\*" if you prefer.
 
-## Metadata
-
-- Atomic GUID: ac7e6118-473d-41ec-9ac0-ef4f1d1ed2f6
-- Technique: T1222.001: File and Directory Permissions Modification: Windows File and Directory Permissions Modification
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: command_prompt
-- Source Path: atomics/T1222.001/T1222.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.001]]
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222001-windows-file-and-directory-permissions-modification|T1222.001: Windows File and Directory Permissions Modification]]
 
 ## Input Arguments
 

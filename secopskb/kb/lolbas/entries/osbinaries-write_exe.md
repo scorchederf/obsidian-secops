@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/write.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/write.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "write.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# write.exe
-
 Windows Write
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2025-06-17
-- Author: Michal Belzak
-- Source Path: yml/OSBinaries/write.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ write.exe
 - Use Case: Execute binary through legitimate proxy. This might be utilized to confuse detection solutions that rely on parent-child relationships.
 - Privileges: User
 - Operating System: Windows 10, Windows 11 (before 24H2)
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

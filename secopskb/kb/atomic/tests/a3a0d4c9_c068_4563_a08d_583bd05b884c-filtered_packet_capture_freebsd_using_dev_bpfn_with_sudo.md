@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "a3a0d4c9-c068-4563-a08d-583bd05b884c"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Filtered Packet Capture FreeBSD using /dev/bpfN with sudo
-
 Opens a /dev/bpf file (O_RDONLY), sets BPF filter for 'udp' and captures packets for a few seconds.
-
-## Metadata
-
-- Atomic GUID: a3a0d4c9-c068-4563-a08d-583bd05b884c
-- Technique: T1040: Network Sniffing
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1040/T1040.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1040-network_sniffing|T1040]]
+- [[kb/attack/techniques/T1040-network_sniffing|T1040: Network Sniffing]]
 
 ## Input Arguments
 

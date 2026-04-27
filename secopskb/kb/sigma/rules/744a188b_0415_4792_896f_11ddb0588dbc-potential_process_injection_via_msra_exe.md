@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_msra_process_injection.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msra_process_injection.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Process Injection Via Msra.EXE
-
 Detects potential process injection via Microsoft Remote Asssistance (Msra.exe) by looking at suspicious child processes spawned from the aforementioned process. It has been a target used by many threat actors and used for discovery and persistence tactics
-
-## Metadata
-
-- Rule ID: 744a188b-0415-4792-896f-11ddb0588dbc
-- Status: test
-- Level: high
-- Author: Alexander McDonald
-- Date: 2022-06-24
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_msra_process_injection.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential process injection via Microsoft Remote Asssistance (Msra.exe) 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

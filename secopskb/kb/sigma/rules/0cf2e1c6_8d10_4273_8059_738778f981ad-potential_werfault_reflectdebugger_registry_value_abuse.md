@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_persistence_reflectdebugger.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_persistence_reflectdebugger.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential WerFault ReflectDebugger Registry Value Abuse
-
 Detects potential WerFault "ReflectDebugger" registry value abuse for persistence.
-
-## Metadata
-
-- Rule ID: 0cf2e1c6-8d10-4273-8059-738778f981ad
-- Status: test
-- Level: high
-- Author: X__Junior
-- Date: 2023-05-18
-- Source Path: rules/windows/registry/registry_set/registry_set_persistence_reflectdebugger.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potential WerFault "ReflectDebugger" registry value abuse for persistenc
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_certutil_download_direct_ip.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_certutil_download_direct_ip.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Downloaded From Direct IP Via Certutil.EXE
-
 Detects the execution of certutil with certain flags that allow the utility to download files from direct IPs.
-
-## Metadata
-
-- Rule ID: 13e6fe51-d478-4c7e-b0f2-6da9b400a829
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-02-15
-- Modified: 2025-12-01
-- Source Path: rules/windows/process_creation/proc_creation_win_certutil_download_direct_ip.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the execution of certutil with certain flags that allow the utility to d
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detection
 

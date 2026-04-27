@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1083"
 attack_technique_name: "File and Directory Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "c6c34f61-1c3e-40fb-8a58-d017d88286d8"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Simulating MAZE Directory Enumeration
-
 This test emulates MAZE ransomware's ability to enumerate directories using Powershell.
 Upon successful execution, this test will output the directory enumeration results to a specified file, as well as display them in the active window.
 See https://www.mandiant.com/resources/tactics-techniques-procedures-associated-with-maze-ransomware-incidents
 
-## Metadata
-
-- Atomic GUID: c6c34f61-1c3e-40fb-8a58-d017d88286d8
-- Technique: T1083: File and Directory Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1083/T1083.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
+- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 
 ## Input Arguments
 

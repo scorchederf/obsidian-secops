@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_whoami_as_param.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_whoami_as_param.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WhoAmI as Parameter
-
 Detects a suspicious process command line that uses whoami as first parameter (as e.g. used by EfsPotato)
-
-## Metadata
-
-- Rule ID: e9142d84-fbe0-401d-ac50-3e519fb00c89
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-11-29
-- Modified: 2022-12-25
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_whoami_as_param.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious process command line that uses whoami as first parameter (a
 
 ### Techniques
 
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Detection
 

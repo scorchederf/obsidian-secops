@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_winlogon_notify_key.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_winlogon_notify_key.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Winlogon Notify Key Logon Persistence
-
 Adversaries may abuse features of Winlogon to execute DLLs and/or executables when a user logs in.
 Winlogon.exe is a Windows component responsible for actions at logon/logoff as well as the secure attention sequence (SAS) triggered by Ctrl-Alt-Delete.
-
-## Metadata
-
-- Rule ID: bbf59793-6efb-4fa1-95ca-a7d288e52c88
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-12-30
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_winlogon_notify_key.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Winlogon.exe is a Windows component responsible for actions at logon/logoff as w
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.004]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547004-winlogon-helper-dll|T1547.004: Winlogon Helper DLL]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.005"
 attack_technique_name: "Office Application Startup: Outlook Rules"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.005/T1137.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "cb814cf8-24f2-41dc-a1cd-1c2073276d4a"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Outlook Rule - Create Rule with Obfuscated Blank Name (MAPI Evasion)
 
 Creates an Outlook rule with a zero-width space as its display name,
 making it appear blank and invisible in the standard Outlook Rules UI.
@@ -36,18 +34,9 @@ session. Outlook COM fails with 0x80080005 when invoked as Administrator.
 NOTE: Script is written to a temp file before execution to prevent the
 ART executor's quote-wrapping from mangling the zero-width space bytes.
 
-## Metadata
-
-- Atomic GUID: cb814cf8-24f2-41dc-a1cd-1c2073276d4a
-- Technique: T1137.005: Office Application Startup: Outlook Rules
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1137.005/T1137.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.005]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
 
 ## Input Arguments
 

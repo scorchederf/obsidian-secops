@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_deviceguard_hypervisorenforcedpagingtranslation_disabled.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_deviceguard_hypervisorenforcedpagingtranslation_disabled.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Hypervisor Enforced Paging Translation Disabled
-
 Detects changes to the "DisableHypervisorEnforcedPagingTranslation" registry value. Where the it is set to "1" in order to disable the Hypervisor Enforced Paging Translation feature.
-
-## Metadata
-
-- Rule ID: 7f2954d2-99c2-4d42-a065-ca36740f187b
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2024-07-05
-- Source Path: rules/windows/registry/registry_set/registry_set_deviceguard_hypervisorenforcedpagingtranslation_disabled.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects changes to the "DisableHypervisorEnforcedPagingTranslation" registry val
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

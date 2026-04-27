@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.001"
 attack_technique_name: "Valid Accounts: Default Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.001/T1078.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "99747561-ed8d-47f2-9c91-1e5fde1ed6e0"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enable Guest account with RDP capability and admin privileges
-
 After execution the Default Guest account will be enabled (Active) and added to Administrators and Remote Desktop Users Group,
 and desktop will allow multiple RDP connections.
 
-## Metadata
-
-- Atomic GUID: 99747561-ed8d-47f2-9c91-1e5fde1ed6e0
-- Technique: T1078.001: Valid Accounts: Default Accounts
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1078.001/T1078.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.001]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078001-default-accounts|T1078.001: Default Accounts]]
 
 ## Input Arguments
 

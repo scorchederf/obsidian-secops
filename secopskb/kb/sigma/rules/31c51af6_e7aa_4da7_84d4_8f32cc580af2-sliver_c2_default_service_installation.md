@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/service_control_manager/win_system_service_install_sliver.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_service_install_sliver.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sliver C2 Default Service Installation
-
 Detects known malicious service installation that appear in cases in which a Sliver implants execute the PsExec commands
-
-## Metadata
-
-- Rule ID: 31c51af6-e7aa-4da7-84d4-8f32cc580af2
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-25
-- Source Path: rules/windows/builtin/system/service_control_manager/win_system_service_install_sliver.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects known malicious service installation that appear in cases in which a Sli
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Detection
 

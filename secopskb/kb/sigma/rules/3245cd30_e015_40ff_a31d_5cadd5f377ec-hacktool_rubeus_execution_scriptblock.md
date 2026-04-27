@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_hktl_rubeus.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_hktl_rubeus.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -23,18 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Rubeus Execution - ScriptBlock
-
 Detects the execution of the hacktool Rubeus using specific command line flags
-
-## Metadata
-
-- Rule ID: 3245cd30-e015-40ff-a31d-5cadd5f377ec
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems), Florian Roth (Nextron Systems)
-- Date: 2023-04-27
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_hktl_rubeus.yml
 
 ## Logsource
 
@@ -46,9 +35,9 @@ Detects the execution of the hacktool Rubeus using specific command line flags
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 
 ## Detection
 

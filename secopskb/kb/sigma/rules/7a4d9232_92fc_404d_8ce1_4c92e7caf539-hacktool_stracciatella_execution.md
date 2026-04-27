@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_stracciatella_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_stracciatella_execution.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Stracciatella Execution
-
 Detects Stracciatella which executes a Powershell runspace from within C# (aka SharpPick technique) with AMSI, ETW and Script Block Logging disabled based on PE metadata characteristics.
-
-## Metadata
-
-- Rule ID: 7a4d9232-92fc-404d-8ce1-4c92e7caf539
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems)
-- Date: 2023-04-17
-- Modified: 2024-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_stracciatella_execution.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects Stracciatella which executes a Powershell runspace from within C# (aka S
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

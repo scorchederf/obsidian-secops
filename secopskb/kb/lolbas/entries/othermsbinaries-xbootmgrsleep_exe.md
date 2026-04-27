@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/XBootMgrSleep.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/XBootMgrSleep.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "XBootMgrSleep.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# XBootMgrSleep.exe
-
 Windows Performance Toolkit binary used for tracing and analyzing system performance during sleep and resume transitions.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2024-06-13
-- Author: Avihay Eldad
-- Source Path: yml/OtherMSBinaries/XBootMgrSleep.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ xbootmgrsleep.exe 1000 {PATH:.exe}
 - Use Case: Performs execution of specified executable, can be used as a defense evasion
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Resources
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/audit_logs/azure_app_privileged_permissions.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/audit_logs/azure_app_privileged_permissions.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "azure / auditlogs"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# App Granted Privileged Delegated Or App Permissions
-
 Detects when administrator grants either application permissions (app roles) or highly privileged delegated permissions
-
-## Metadata
-
-- Rule ID: 5aecf3d5-f8a0-48e7-99be-3a759df7358f
-- Status: test
-- Level: high
-- Author: Bailey Bercik '@baileybercik', Mark Morowczynski '@markmorow'
-- Date: 2022-07-28
-- Modified: 2023-03-29
-- Source Path: rules/cloud/azure/audit_logs/azure_app_privileged_permissions.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when administrator grants either application permissions (app roles) or 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098.003]]
+- [[kb/attack/techniques/T1098-account_manipulation#^t1098003-additional-cloud-roles|T1098.003: Additional Cloud Roles]]
 
 ## Detection
 

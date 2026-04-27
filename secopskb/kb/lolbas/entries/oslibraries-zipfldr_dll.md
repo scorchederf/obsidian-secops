@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSLibraries/Zipfldr.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/Zipfldr.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSLibraries"
 aliases:
   - "Zipfldr.dll"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Zipfldr.dll
-
 Compressed Folder library
-
-## Metadata
-
-- Category: OSLibraries
-- Created: 2018-05-25
-- Author: LOLBAS Team
-- Source Path: yml/OSLibraries/Zipfldr.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ rundll32.exe zipfldr.dll,RouteTheCall {PATH:.exe}
 - Use Case: Launch an executable.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ### 2. Execute
 
@@ -61,7 +52,7 @@ rundll32.exe zipfldr.dll,RouteTheCall file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^
 - Use Case: Launch an executable.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detections
 

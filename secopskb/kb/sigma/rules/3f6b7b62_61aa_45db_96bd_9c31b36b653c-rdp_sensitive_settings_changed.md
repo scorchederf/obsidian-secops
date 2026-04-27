@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_terminal_server_tampering.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_terminal_server_tampering.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,8 +21,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RDP Sensitive Settings Changed
-
 Detects tampering of RDP Terminal Service/Server sensitive settings.
 Such as allowing unauthorized users access to a system via the 'fAllowUnsolicited' or enabling RDP via 'fDenyTSConnections', etc.
 
@@ -37,16 +35,6 @@ Below is a list of registry keys/values that are monitored by this rule:
 - ServiceDll: Used in RDP hijacking techniques to specify a custom DLL to be loaded by the Terminal Services service.
 - SecurityLayer: Specifies the security layer used for RDP connections.
 
-## Metadata
-
-- Rule ID: 3f6b7b62-61aa-45db-96bd-9c31b36b653c
-- Status: test
-- Level: high
-- Author: Samir Bousseaden, David ANDRE, Roberto Rodriguez @Cyb3rWard0g, Nasreddine Bencherchali
-- Date: 2022-08-06
-- Modified: 2025-11-22
-- Source Path: rules/windows/registry/registry_set/registry_set_terminal_server_tampering.yml
-
 ## Logsource
 
 - category: registry_set
@@ -56,7 +44,7 @@ Below is a list of registry keys/values that are monitored by this rule:
 
 ### Techniques
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.009"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvcs/Regasm"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.009/T1218.009.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "fd3c1c6a-02d2-4b72-82d9-71c527abb126"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regsvcs Uninstall Method Call Test
-
 Executes the Uninstall Method, No Admin Rights Required, Requires SNK. Upon execution, "I shouldn't really execute" will be displayed
 along with other information about the assembly being installed.
 
-## Metadata
-
-- Atomic GUID: fd3c1c6a-02d2-4b72-82d9-71c527abb126
-- Technique: T1218.009: Signed Binary Proxy Execution: Regsvcs/Regasm
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1218.009/T1218.009.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.009]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218009-regsvcs-regasm|T1218.009: Regsvcs/Regasm]]
 
 ## Input Arguments
 

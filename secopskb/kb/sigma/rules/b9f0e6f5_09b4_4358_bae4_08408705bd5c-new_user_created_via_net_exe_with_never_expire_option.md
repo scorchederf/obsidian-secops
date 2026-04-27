@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_net_user_add_never_expire.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_user_add_never_expire.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New User Created Via Net.EXE With Never Expire Option
-
 Detects creation of local users via the net.exe command with the option "never expire"
-
-## Metadata
-
-- Rule ID: b9f0e6f5-09b4-4358-bae4-08408705bd5c
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-12
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_net_user_add_never_expire.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects creation of local users via the net.exe command with the option "never e
 
 ### Techniques
 
-- [[kb/attack/techniques/T1136-create_account|T1136.001]]
+- [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-11-008/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-008.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-11-008"
   - "MSBuild and msxsl"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-11-008: MSBuild and msxsl
-
-## Metadata
-
-- CAR ID: CAR-2020-11-008
-- Submission Date: 2020/11/30
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Trusted developer utilities such as MSBuild may be leveraged to run malicious code with elevated privileges. This analytic looks for any instances of msbuild.exe, which will execute any C# code placed within a given XML document; and msxsl.exe, which processes xsl transformation specifications for XML files and will execute a variaty of scripting languages contained within the XSL file. Both of these executables are rarely used outside of Visual Studio.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]] (coverage: High; tactics: TA0005)
-  - [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]] (coverage: High; tactics: TA0005)
+  - [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 ## Implementations
 

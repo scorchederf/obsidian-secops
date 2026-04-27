@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "1a94b3fc-b080-450a-b3d8-6d9b57b472ea"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - adding user to Azure role in subscription
-
 The adversaries want to add user to some Azure role, also called Azure resource role. Threat actor 
 may be interested primarily in highly privileged roles, e.g. Owner, Contributor.
 By default, the role Reader is assigned to user in this test.
@@ -34,18 +32,9 @@ and Microsoft Graph Directory.Read.All permissions.
 
 Detection hint - check Operation Name "Create role assignment" in subscriptions Activity Logs.
 
-## Metadata
-
-- Atomic GUID: 1a94b3fc-b080-450a-b3d8-6d9b57b472ea
-- Technique: T1098: Account Manipulation
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1098/T1098.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Input Arguments
 

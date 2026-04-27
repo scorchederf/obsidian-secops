@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-05-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-05-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-05-001"
   - "RPC Activity"
@@ -26,20 +26,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-05-001: RPC Activity
-
-## Metadata
-
-- CAR ID: CAR-2014-05-001
-- Submission Date: 2014/05/01
-- Information Domain: Network
-- Analytic Type: TTP, Situational Awareness
-- Platforms: Windows
-- Data Subtypes: Netflow
-- Contributors: MITRE
-
-## Description
-
 Microsoft Windows uses its implementation of [Distributed Computing Environment/Remote Procedure Call](https://en.wikipedia.org/wiki/DCE/RPC) (DCE/RPC), which it calls [Microsoft RPC](https://en.wikipedia.org/wiki/Microsoft_RPC), to call certain APIs remotely.
 
 A Remote Procedure Call is initiated by communicating to the RPC Endpoint Mapper, which exists as the Windows service RpcEptMapper and listens on the port 135/tcp. The endpoint mapper resolves a requested endpoint/interface and responds to the client with the port that the service is listening on. Since the RPC endpoints are assigned ports when the services start, these ports are dynamically assigned from 49152 to 65535. The connection to the endpoint mapper then terminates and the client program can communicate directly with the requested service.
@@ -56,10 +42,10 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1021-remote_services|T1021]] (coverage: Moderate; tactics: TA0008)
-  - [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-  - [[kb/attack/techniques/T1021-remote_services|T1021.003]]
-  - [[kb/attack/techniques/T1021-remote_services|T1021.006]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]] (coverage: Moderate; tactics: TA0008)
+  - [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+  - [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
+  - [[kb/attack/techniques/T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
 
 ## Implementations
 

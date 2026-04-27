@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Fsutil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Fsutil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Fsutil.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Fsutil.exe
-
 File System Utility
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2021-08-16
-- Author: Elliot Killick
-- Source Path: yml/OSBinaries/Fsutil.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ fsutil.exe file setZeroData offset=0 length=9999999999 {PATH_ABSOLUTE}
 - Use Case: Can be used to forensically erase a file
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-- ATT&CK: [[kb/attack/techniques/T1485-data_destruction|T1485]]
+- ATT&CK: [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 ### 2. Tamper
 
@@ -63,7 +54,7 @@ fsutil.exe usn deletejournal /d c:
 - Use Case: Can be used to hide file creation activity
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-- ATT&CK: [[kb/attack/techniques/T1485-data_destruction|T1485]]
+- ATT&CK: [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 ### 3. Execute
 
@@ -76,7 +67,7 @@ fsutil.exe trace decode
 - Use Case: Spawn a pre-planted executable from fsutil.exe.
 - Privileges: User
 - Operating System: Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

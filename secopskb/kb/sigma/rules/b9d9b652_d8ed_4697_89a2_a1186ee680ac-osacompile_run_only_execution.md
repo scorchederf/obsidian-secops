@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/macos/process_creation/proc_creation_macos_osacompile_runonly_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/macos/process_creation/proc_creation_macos_osacompile_runonly_execution.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "macos / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OSACompile Run-Only Execution
-
 Detects potential suspicious run-only executions compiled using OSACompile
-
-## Metadata
-
-- Rule ID: b9d9b652-d8ed-4697-89a2-a1186ee680ac
-- Status: test
-- Level: high
-- Author: Sohan G (D4rkCiph3r)
-- Date: 2023-01-31
-- Source Path: rules/macos/process_creation/proc_creation_macos_osacompile_runonly_execution.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potential suspicious run-only executions compiled using OSACompile
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.002]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
 
 ## Detection
 

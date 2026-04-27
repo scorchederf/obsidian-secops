@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-05-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-05-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-05-003"
   - "Rare LolBAS Command Lines"
@@ -29,20 +29,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-05-003: Rare LolBAS Command Lines
-
-## Metadata
-
-- CAR ID: CAR-2020-05-003
-- Submission Date: 2020/05/04
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Cyber National Mission Force (CNMF)
-
-## Description
-
 [LoLBAS](https://lolbas-project.github.io/) are binaries and scripts that are built in to Windows, frequently are signed by Microsoft, and may be used by an attacker. Some LoLBAS are used very rarely and it might be possible to alert every time they're used (this would depend on your environment), but many others are very common and can't be simply alerted on.
 
 This analytic takes all instances of LoLBAS execution and then looks for instances of command lines that are not normal in the environment. This can detect attackers (which will tend to need the binaries for something different than normal usage) but will also tend to have false positives.
@@ -53,12 +39,12 @@ Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002)
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1012-query_registry|T1012]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Low; tactics: TA0005)
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]] (coverage: Low; tactics: TA0003)
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: Low; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Low; tactics: TA0005)
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]] (coverage: Low; tactics: TA0003)
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: Low; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 ## Implementations
 

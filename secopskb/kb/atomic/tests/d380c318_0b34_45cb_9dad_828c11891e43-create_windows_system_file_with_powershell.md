@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.001"
 attack_technique_name: "Hide Artifacts: Hidden Files and Directories"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.001/T1564.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "d380c318-0b34-45cb-9dad-828c11891e43"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create Windows System File with powershell
-
 Creates a file and marks it as System through powershell. Upon execution, open File Epxplorer and enable View > Hidden Items. Then, open Properties > Details on the file
 and observe that the Attributes is "S" System.
 
-## Metadata
-
-- Atomic GUID: d380c318-0b34-45cb-9dad-828c11891e43
-- Technique: T1564.001: Hide Artifacts: Hidden Files and Directories
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: command_prompt
-- Source Path: atomics/T1564.001/T1564.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.001]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564001-hidden-files-and-directories|T1564.001: Hidden Files and Directories]]
 
 ## Input Arguments
 

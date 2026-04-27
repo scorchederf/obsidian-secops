@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2019-04-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2019-04-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2019-04-001"
   - "UAC Bypass"
@@ -27,26 +27,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2019-04-001: UAC Bypass
-
-## Metadata
-
-- CAR ID: CAR-2019-04-001
-- Submission Date: 2019/04/19
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Bypassing user account control (UAC Bypass) is generally done by piggybacking on a system process that has auto-escalate privileges. This analytic looks to detect those cases as described by the open-source [UACME](https://github.com/hfiref0x/UACME) tool.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548]] (coverage: Low; tactics: TA0005)
-  - [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]] (coverage: Low; tactics: TA0005)
+  - [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Implementations
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/privileged_identity_management/azure_pim_role_assigned_outside_of_pim.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/privileged_identity_management/azure_pim_role_assigned_outside_of_pim.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "azure / pim"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Roles Assigned Outside PIM
-
 Identifies when a privilege role assignment has taken place outside of PIM and may indicate an attack.
-
-## Metadata
-
-- Rule ID: b1bc08d1-8224-4758-a0e6-fbcfc98c73bb
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'
-- Date: 2023-09-14
-- Source Path: rules/cloud/azure/privileged_identity_management/azure_pim_role_assigned_outside_of_pim.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Identifies when a privilege role assignment has taken place outside of PIM and m
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
 
 ## Detection
 

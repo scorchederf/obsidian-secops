@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_node_abuse.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_node_abuse.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Arbitrary Code Execution Via Node.EXE
-
 Detects the execution node.exe which is shipped with multiple software such as VMware, Adobe...etc. In order to execute arbitrary code. For example to establish reverse shell as seen in Log4j attacks...etc
-
-## Metadata
-
-- Rule ID: 6640f31c-01ad-49b5-beb5-83498a5cd8bd
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-09-09
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_node_abuse.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution node.exe which is shipped with multiple software such as V
 
 ### Techniques
 
-- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detection
 

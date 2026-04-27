@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_office_dlls.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_office_dlls.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Microsoft Office DLL Sideload
-
 Detects DLL sideloading of DLLs that are part of Microsoft Office from non standard location
-
-## Metadata
-
-- Rule ID: 829a3bdf-34da-4051-9cf4-8ed221a8ae4f
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Wietze Beukema (project and research)
-- Date: 2022-08-17
-- Modified: 2023-03-15
-- Source Path: rules/windows/image_load/image_load_side_load_office_dlls.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects DLL sideloading of DLLs that are part of Microsoft Office from non stand
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_csc_susp_parent.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_csc_susp_parent.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -24,19 +24,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Csc.EXE Execution Form Potentially Suspicious Parent
-
 Detects a potentially suspicious parent of "csc.exe", which could be a sign of payload delivery.
-
-## Metadata
-
-- Rule ID: b730a276-6b63-41b8-bcf8-55930c8fc6ee
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), X__Junior (Nextron Systems)
-- Date: 2019-02-11
-- Modified: 2024-05-27
-- Source Path: rules/windows/process_creation/proc_creation_win_csc_susp_parent.yml
 
 ## Logsource
 
@@ -47,10 +35,10 @@ Detects a potentially suspicious parent of "csc.exe", which could be a sign of p
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.004]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027004-compile-after-delivery|T1027.004: Compile After Delivery]]
 
 ## Detection
 

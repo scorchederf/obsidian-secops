@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Child Process Of Wermgr.EXE
-
 Detects suspicious Windows Error Reporting manager (wermgr.exe) child process
-
-## Metadata
-
-- Rule ID: 396f6630-f3ac-44e3-bfc8-1b161bc00c4e
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-10-14
-- Modified: 2024-08-29
-- Source Path: rules/windows/process_creation/proc_creation_win_wermgr_susp_child_process.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects suspicious Windows Error Reporting manager (wermgr.exe) child process
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detection
 

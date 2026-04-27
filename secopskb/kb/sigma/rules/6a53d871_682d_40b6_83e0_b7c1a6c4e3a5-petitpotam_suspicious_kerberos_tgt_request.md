@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_petitpotam_susp_tgt_request.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_petitpotam_susp_tgt_request.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,23 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PetitPotam Suspicious Kerberos TGT Request
-
 Detect suspicious Kerberos TGT requests.
 Once an attacer obtains a computer certificate by abusing Active Directory Certificate Services in combination with PetitPotam, the next step would be to leverage the certificate for malicious purposes.
 One way of doing this is to request a Kerberos Ticket Granting Ticket using a tool like Rubeus.
 This request will generate a 4768 event with some unusual fields depending on the environment.
 This analytic will require tuning, we recommend filtering Account_Name to the Domain Controller computer accounts.
-
-## Metadata
-
-- Rule ID: 6a53d871-682d-40b6-83e0-b7c1a6c4e3a5
-- Status: test
-- Level: high
-- Author: Mauricio Velazco, Michael Haag
-- Date: 2021-09-02
-- Modified: 2022-10-05
-- Source Path: rules/windows/builtin/security/win_security_petitpotam_susp_tgt_request.yml
 
 ## Logsource
 
@@ -49,7 +37,7 @@ This analytic will require tuning, we recommend filtering Account_Name to the Do
 
 ### Techniques
 
-- [[kb/attack/techniques/T1187-forced_authentication|T1187]]
+- [[kb/attack/techniques/T1187-forced_authentication|T1187: Forced Authentication]]
 
 ## Detection
 

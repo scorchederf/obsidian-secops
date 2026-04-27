@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Dotnet.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Dotnet.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Dotnet.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dotnet.exe
-
 dotnet.exe comes with .NET Framework
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2019-11-12
-- Author: felamos
-- Source Path: yml/OtherMSBinaries/Dotnet.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ dotnet.exe {PATH:.dll}
 - Use Case: Execute code bypassing AWL
 - Privileges: User
 - Operating System: Windows 7 and up with .NET installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 2. Execute
 
@@ -62,7 +53,7 @@ dotnet.exe {PATH:.dll}
 - Use Case: Execute DLL
 - Privileges: User
 - Operating System: Windows 7 and up with .NET installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 3. Execute
 
@@ -75,7 +66,7 @@ dotnet.exe fsi
 - Use Case: Execute arbitrary F# code
 - Privileges: User
 - Operating System: Windows 10 and up with .NET SDK installed
-- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ### 4. AWL Bypass
 
@@ -88,7 +79,7 @@ dotnet.exe msbuild {PATH:.csproj}
 - Use Case: Execute code bypassing AWL
 - Privileges: User
 - Operating System: Windows 10 and up with .NET Core installed
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

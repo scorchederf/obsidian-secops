@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-01-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-01-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-01-003"
   - "Clearing Windows Logs with Wevtutil"
@@ -24,26 +24,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-01-003: Clearing Windows Logs with Wevtutil
-
-## Metadata
-
-- CAR ID: CAR-2021-01-003
-- Submission Date: 2020/12/02
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Cyware Labs
-
-## Description
-
 In an attempt to clear traces after compromising a machine, threat actors often try to clear Windows Event logs. This is often done using “wevtutil”, a legitimate tool provided by Microsoft. This action interferes with event collection and notification, and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070]] (coverage: Low; tactics: TA0005)
-  - [[kb/attack/techniques/T1070-indicator_removal|T1070.001]]
+- [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]] (coverage: Low; tactics: TA0005)
+  - [[kb/attack/techniques/T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
 
 ## Implementations
 

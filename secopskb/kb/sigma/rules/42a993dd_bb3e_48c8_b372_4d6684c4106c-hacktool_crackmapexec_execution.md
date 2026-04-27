@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -26,19 +26,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - CrackMapExec Execution
-
 This rule detect common flag combinations used by CrackMapExec in order to detect its use even if the binary has been replaced.
-
-## Metadata
-
-- Rule ID: 42a993dd-bb3e-48c8-b372-4d6684c4106c
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-02-25
-- Modified: 2023-03-08
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution.yml
 
 ## Logsource
 
@@ -49,12 +37,12 @@ This rule detect common flag combinations used by CrackMapExec in order to detec
 
 ### Techniques
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
-- [[kb/attack/techniques/T1110-brute_force|T1110]]
-- [[kb/attack/techniques/T1201-password_policy_discovery|T1201]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
+- [[kb/attack/techniques/T1201-password_policy_discovery|T1201: Password Policy Discovery]]
 
 ## Detection
 

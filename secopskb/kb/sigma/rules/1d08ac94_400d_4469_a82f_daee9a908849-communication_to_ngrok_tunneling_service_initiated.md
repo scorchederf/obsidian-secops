@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_domain_ngrok_tunnel.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_ngrok_tunnel.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / network_connection"
@@ -25,21 +25,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Communication To Ngrok Tunneling Service Initiated
-
 Detects an executable initiating a network connection to "ngrok" tunneling domains.
 Attackers were seen using this "ngrok" in order to store their second stage payloads and malware.
 While communication with such domains can be legitimate, often times is a sign of either data exfiltration by malicious actors or additional download.
-
-## Metadata
-
-- Rule ID: 1d08ac94-400d-4469-a82f-daee9a908849
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-11-03
-- Modified: 2024-02-02
-- Source Path: rules/windows/network_connection/net_connection_win_domain_ngrok_tunnel.yml
 
 ## Logsource
 
@@ -50,11 +38,11 @@ While communication with such domains can be legitimate, often times is a sign o
 
 ### Techniques
 
-- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567]]
-- [[kb/attack/techniques/T1568-dynamic_resolution|T1568.002]]
-- [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
-- [[kb/attack/techniques/T1090-proxy|T1090]]
-- [[kb/attack/techniques/T1102-web_service|T1102]]
+- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
+- [[kb/attack/techniques/T1568-dynamic_resolution#^t1568002-domain-generation-algorithms|T1568.002: Domain Generation Algorithms]]
+- [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
+- [[kb/attack/techniques/T1090-proxy|T1090: Proxy]]
+- [[kb/attack/techniques/T1102-web_service|T1102: Web Service]]
 
 ### Software Tags
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_comctl32.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_comctl32.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential DLL Sideloading Via comctl32.dll
-
 Detects potential DLL sideloading using comctl32.dll to obtain system privileges
-
-## Metadata
-
-- Rule ID: 6360757a-d460-456c-8b13-74cf0e60cceb
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Subhash Popuri (@pbssubhash)
-- Date: 2022-12-16
-- Modified: 2022-12-19
-- Source Path: rules/windows/image_load/image_load_side_load_comctl32.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential DLL sideloading using comctl32.dll to obtain system privileges
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

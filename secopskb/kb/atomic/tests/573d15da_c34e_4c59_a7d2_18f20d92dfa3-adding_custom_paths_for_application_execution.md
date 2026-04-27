@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "573d15da-c34e-4c59-a7d2-18f20d92dfa3"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Adding custom paths for application execution
-
 As per Microsoft,the entries found under App Paths are used primarily to map an application’s executable file name to that file’s fully qualified path and to pre-pend information to the PATH environment variable on a per-application, per-process basis. 
 The path can be modified to load a custom application of choice. 
 Post the registry changes of this test, when someone tries to manually run msedge.exe via StartMenu/Run window , notepad will be launched.
 
-## Metadata
-
-- Atomic GUID: 573d15da-c34e-4c59-a7d2-18f20d92dfa3
-- Technique: T1112: Modify Registry
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1112/T1112.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Input Arguments
 

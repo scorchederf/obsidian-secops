@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_nircmd_as_system.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_nircmd_as_system.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - NirCmd Execution As LOCAL SYSTEM
-
 Detects the use of NirCmd tool for command execution as SYSTEM user
-
-## Metadata
-
-- Rule ID: d9047477-0359-48c9-b8c7-792cedcdc9c4
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-01-24
-- Modified: 2023-02-13
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_nircmd_as_system.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of NirCmd tool for command execution as SYSTEM user
 
 ### Techniques
 
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ### Software Tags
 

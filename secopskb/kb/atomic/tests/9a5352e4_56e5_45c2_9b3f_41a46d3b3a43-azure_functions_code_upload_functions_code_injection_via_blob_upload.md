@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1528"
 attack_technique_name: "Steal Application Access Token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1528/T1528.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "9a5352e4-56e5-45c2-9b3f-41a46d3b3a43"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Azure - Functions code upload - Functions code injection via Blob upload
 
 This test injects code into an Azure Function (RCE).
 
@@ -37,19 +35,9 @@ Requirements:
 - The test is intended to be executed in interactive mode (with -Interactive parameter) in order to complete the az login command when MFA is required.
 - The EntraID user must have the role "Storage Account Contributor", or a role with similar permissions.
 
-## Metadata
-
-- Atomic GUID: 9a5352e4-56e5-45c2-9b3f-41a46d3b3a43
-- Technique: T1528: Steal Application Access Token
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1528/T1528.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1528-steal_application_access_token|T1528]]
+- [[kb/attack/techniques/T1528-steal_application_access_token|T1528: Steal Application Access Token]]
 
 ## Input Arguments
 

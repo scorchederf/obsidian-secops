@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/zeek/zeek_rdp_public_listener.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/zeek/zeek_rdp_public_listener.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "zeek / rdp"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Publicly Accessible RDP Service
-
 Detects connections from routable IPs to an RDP listener. Which is indicative of a publicly-accessible RDP service.
-
-## Metadata
-
-- Rule ID: 1fc0809e-06bf-4de3-ad52-25e5263b7623
-- Status: test
-- Level: high
-- Author: Josh Brower @DefensiveDepth
-- Date: 2020-08-22
-- Modified: 2024-03-13
-- Source Path: rules/network/zeek/zeek_rdp_public_listener.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects connections from routable IPs to an RDP listener. Which is indicative of
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 ## Detection
 

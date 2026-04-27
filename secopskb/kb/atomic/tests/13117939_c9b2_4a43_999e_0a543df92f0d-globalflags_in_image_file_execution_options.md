@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.012"
 attack_technique_name: "Event Triggered Execution: Image File Execution Options Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.012/T1546.012.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "13117939-c9b2-4a43-999e-0a543df92f0d"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# GlobalFlags in Image File Execution Options
-
 The following Atomic Test will create a GlobalFlag key under Image File Execution Options, also a SilentProcessExit Key with ReportingMode and MonitorProcess values. This test is similar to a recent CanaryToken that will generate an EventCode 3000 in the Application log when a command, whoami.exe for example, is executed.
 Upon running Whoami.exe, a command shell will spawn and start calc.exe based on the MonitorProcess value. 
 Upon successful execution, powershell will modify the registry and spawn calc.exe. An event 3000 will generate in the Application log.
 
-## Metadata
-
-- Atomic GUID: 13117939-c9b2-4a43-999e-0a543df92f0d
-- Technique: T1546.012: Event Triggered Execution: Image File Execution Options Injection
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1546.012/T1546.012.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.012]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546012-image-file-execution-options-injection|T1546.012: Image File Execution Options Injection]]
 
 ## Input Arguments
 

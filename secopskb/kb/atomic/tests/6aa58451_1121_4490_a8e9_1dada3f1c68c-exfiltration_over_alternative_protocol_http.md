@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.003"
 attack_technique_name: "Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.003/T1048.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "6aa58451-1121-4490-a8e9-1dada3f1c68c"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltration Over Alternative Protocol - HTTP
-
 Exfiltration of specified file over HTTP.
 Upon successful execution, powershell will invoke web request using POST method to exfiltrate notepad.exe to a remote address (default http://127.0.0.1). Results will be via stdout.
 
-## Metadata
-
-- Atomic GUID: 6aa58451-1121-4490-a8e9-1dada3f1c68c
-- Technique: T1048.003: Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1048.003/T1048.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 ## Input Arguments
 

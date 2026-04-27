@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_dpapi_backup_and_cert_export_ioc.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_dpapi_backup_and_cert_export_ioc.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DPAPI Backup Keys And Certificate Export Activity IOC
-
 Detects file names with specific patterns seen generated and used by tools such as Mimikatz and DSInternals related to exported or stolen DPAPI backup keys and certificates.
-
-## Metadata
-
-- Rule ID: 7892ec59-c5bb-496d-8968-e5d210ca3ac4
-- Status: test
-- Level: high
-- Author: Nounou Mbeiri, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2024-06-26
-- Source Path: rules/windows/file/file_event/file_event_win_susp_dpapi_backup_and_cert_export_ioc.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects file names with specific patterns seen generated and used by tools such 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555]]
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.004]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552004-private-keys|T1552.004: Private Keys]]
 
 ## Detection
 

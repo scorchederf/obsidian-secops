@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "b1729c57-9384-4d1c-9b99-9b220afb384e"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Nimgrab - Transfer Files
-
 Use nimgrab.exe to download a file from the web.
-
-## Metadata
-
-- Atomic GUID: b1729c57-9384-4d1c-9b99-9b220afb384e
-- Technique: T1105: Ingress Tool Transfer
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1105/T1105.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_dllhost_no_cli_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dllhost_no_cli_execution.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dllhost.EXE Execution Anomaly
-
 Detects a "dllhost" process spawning with no commandline arguments which is very rare to happen and could indicate process injection activity or malware mimicking similar system processes.
-
-## Metadata
-
-- Rule ID: e7888eb1-13b0-4616-bd99-4bc0c2b054b9
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-06-27
-- Modified: 2023-05-15
-- Source Path: rules/windows/process_creation/proc_creation_win_dllhost_no_cli_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a "dllhost" process spawning with no commandline arguments which is very
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

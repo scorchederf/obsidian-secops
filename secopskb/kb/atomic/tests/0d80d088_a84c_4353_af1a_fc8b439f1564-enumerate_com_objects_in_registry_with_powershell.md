@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1012"
 attack_technique_name: "Query Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1012/T1012.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "0d80d088-a84c-4353-af1a-fc8b439f1564"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enumerate COM Objects in Registry with Powershell
-
 This test is designed to enumerate the COM objects listed in HKCR, then output their methods and CLSIDs to a text file.
 An adversary could then use this information to identify COM objects that might be vulnerable to abuse, such as using them to spawn arbitrary processes. 
 See: https://www.mandiant.com/resources/hunting-com-objects
 
-## Metadata
-
-- Atomic GUID: 0d80d088-a84c-4353-af1a-fc8b439f1564
-- Technique: T1012: Query Registry
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1012/T1012.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1012-query_registry|T1012]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]]
 
 ## Input Arguments
 

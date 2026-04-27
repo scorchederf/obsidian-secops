@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/dns_query/dns_query_win_tor_onion_domain_query.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_tor_onion_domain_query.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / dns_query"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNS Query Tor .Onion Address - Sysmon
-
 Detects DNS queries to an ".onion" address related to Tor routing networks
-
-## Metadata
-
-- Rule ID: b55ca2a3-7cff-4dda-8bdd-c7bfa63bf544
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-02-20
-- Modified: 2025-09-12
-- Source Path: rules/windows/dns_query/dns_query_win_tor_onion_domain_query.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects DNS queries to an ".onion" address related to Tor routing networks
 
 ### Techniques
 
-- [[kb/attack/techniques/T1090-proxy|T1090.003]]
+- [[kb/attack/techniques/T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 
 ## Detection
 

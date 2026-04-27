@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_office_access_vbom_tamper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_office_access_vbom_tamper.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Trust Access Disable For VBApplications
-
 Detects registry changes to Microsoft Office "AccessVBOM" to a value of "1" which disables trust access for VBA on the victim machine and lets attackers execute malicious macros without any Microsoft Office warnings.
-
-## Metadata
-
-- Rule ID: 1a5c46e9-f32f-42f7-b2bc-6e9084db7fbf
-- Status: test
-- Level: high
-- Author: Trent Liffick (@tliffick), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2020-05-22
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_office_access_vbom_tamper.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects registry changes to Microsoft Office "AccessVBOM" to a value of "1" whic
 
 ### Techniques
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-12-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-12-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-12-001"
   - "Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths"
@@ -27,26 +27,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths
-
-## Metadata
-
-- CAR ID: CAR-2021-12-001
-- Submission Date: 2021/12/04
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Lucas Heiligenstein
-
-## Description
-
 Detection of the creation or modification of Scheduled Tasks with a suspicious script, extension or user writable path. Attackers may create or modify Scheduled Tasks for the persistent execution of malicious code. This detection focuses at the same time on EventIDs 4688 and 1 with process creation (SCHTASKS) and EventID 4698, 4702 for Scheduled Task creation/modification event log.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]] (coverage: Medium; tactics: TA0002, TA0003, TA0004)
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]] (coverage: Medium; tactics: TA0002, TA0003, TA0004)
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Implementations
 

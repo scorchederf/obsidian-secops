@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Register-cimprovider.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Register-cimprovider.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Register-cimprovider.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Register-cimprovider.exe
-
 Used to register new wmi providers
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Register-cimprovider.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ Register-cimprovider -path {PATH_ABSOLUTE:.dll}
 - Use Case: Execute code within dll file
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

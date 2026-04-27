@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222"
 attack_technique_name: "File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222/T1222.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "6cd715aa-20ac-4be1-a8f1-dda7bae160bd"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enable Local and Remote Symbolic Links via Powershell
-
 Use Powershell to enable both ‘remote to local’ and ‘remote to remote’ symbolic links. This allows access to files from local shortcuts with local or remote paths.
 [reference](https://symantec-enterprise-blogs.security.com/threat-intelligence/noberus-blackcat-alphv-rust-ransomware/)
 
-## Metadata
-
-- Atomic GUID: 6cd715aa-20ac-4be1-a8f1-dda7bae160bd
-- Technique: T1222: File and Directory Permissions Modification
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1222/T1222.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222]]
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222: File and Directory Permissions Modification]]
 
 ## Executor
 

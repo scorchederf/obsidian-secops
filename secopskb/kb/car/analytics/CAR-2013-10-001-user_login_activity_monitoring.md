@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-10-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-10-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-10-001"
   - "User Login Activity Monitoring"
@@ -31,20 +31,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-10-001: User Login Activity Monitoring
-
-## Metadata
-
-- CAR ID: CAR-2013-10-001
-- Submission Date: 2013/10/03
-- Information Domain: Host, Network
-- Analytic Type: Situational Awareness
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Login, Netflow
-- Contributors: MITRE
-
-## Description
-
 Monitoring logon and logoff events for hosts on the network is very important for situational awareness. This information can be used as an indicator of unusual activity as well as to corroborate activity seen elsewhere.
 
 Could be applied to a number of different types of monitoring depending on what information is desired. Some use cases include monitoring for all remote connections and building login timelines for users.
@@ -56,11 +42,11 @@ The time of login events for distinct users on individual systems
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1021-remote_services|T1021]] (coverage: Moderate; tactics: TA0008)
-  - [[kb/attack/techniques/T1021-remote_services|T1021.001]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1078-valid_accounts|T1078.002]]
-  - [[kb/attack/techniques/T1078-valid_accounts|T1078.003]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]] (coverage: Moderate; tactics: TA0008)
+  - [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1078-valid_accounts#^t1078002-domain-accounts|T1078.002: Domain Accounts]]
+  - [[kb/attack/techniques/T1078-valid_accounts#^t1078003-local-accounts|T1078.003: Local Accounts]]
 
 ## Implementations
 

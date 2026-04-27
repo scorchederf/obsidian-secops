@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/terminalservices/win_terminalservices_rdp_ngrok.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/terminalservices/win_terminalservices_rdp_ngrok.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / terminalservices-localsessionmanager"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Ngrok Usage with Remote Desktop Service
-
 Detects cases in which ngrok, a reverse proxy tool, forwards events to the local RDP port, which could be a sign of malicious behaviour
-
-## Metadata
-
-- Rule ID: 64d51a51-32a6-49f0-9f3d-17e34d640272
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-04-29
-- Source Path: rules/windows/builtin/terminalservices/win_terminalservices_rdp_ngrok.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects cases in which ngrok, a reverse proxy tool, forwards events to the local
 
 ### Techniques
 
-- [[kb/attack/techniques/T1090-proxy|T1090]]
+- [[kb/attack/techniques/T1090-proxy|T1090: Proxy]]
 
 ## Detection
 

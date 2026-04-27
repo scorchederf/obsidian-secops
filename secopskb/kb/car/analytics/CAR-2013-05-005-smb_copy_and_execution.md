@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-05-005/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-05-005.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-05-005"
   - "SMB Copy and Execution"
@@ -30,32 +30,18 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-05-005: SMB Copy and Execution
-
-## Metadata
-
-- CAR ID: CAR-2013-05-005
-- Submission Date: 2013/05/13
-- Information Domain: Host, Network
-- Analytic Type: TTP
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Network Process File, PCAP
-- Contributors: MITRE
-
-## Description
-
 An adversary needs to gain access to other hosts to move throughout an environment. In many cases, this is a twofold process. First, a file is remotely written to a host via an SMB share (detected by [[kb/car/analytics/CAR-2013-05-003-smb_write_request|CAR-2013-05-003]]). Then, a variety of [Execution](https://attack.mitre.org/tactics/TA0002) techniques can be used to remotely establish execution of the file or script. To detect this behavior, look for files that are written to a host over SMB and then later run directly as a process or in the command line arguments. SMB File Writes and Remote Execution may happen normally in an environment, but the combination of the two behaviors is less frequent and more likely to indicate adversarial activity.
 
 This can possibly extend to more copy protocols in order to widen its reach, or it could be tuned more finely to focus on specific program run locations (e.g. `%SYSTEMROOT%\system32`) to gain a higher detection rate.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1021-remote_services|T1021]] (coverage: Moderate; tactics: TA0008)
-  - [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1078-valid_accounts|T1078.002]]
-  - [[kb/attack/techniques/T1078-valid_accounts|T1078.003]]
-- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570]] (coverage: Moderate; tactics: TA0008)
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]] (coverage: Moderate; tactics: TA0008)
+  - [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1078-valid_accounts#^t1078002-domain-accounts|T1078.002: Domain Accounts]]
+  - [[kb/attack/techniques/T1078-valid_accounts#^t1078003-local-accounts|T1078.003: Local Accounts]]
+- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]] (coverage: Moderate; tactics: TA0008)
 
 ## Implementations
 

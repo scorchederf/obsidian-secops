@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.004"
 attack_technique_name: "Indicator Removal on Host: File Deletion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.004/T1070.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "ded937c4-2add-42f7-9c2c-c742b7a98698"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Delete an entire folder - Windows cmd
-
 Recursively delete a folder in the temporary directory using cmd.exe.
 Upon execution, no output will be displayed. Use File Explorer to verify the folder was deleted.
 
-## Metadata
-
-- Atomic GUID: ded937c4-2add-42f7-9c2c-c742b7a98698
-- Technique: T1070.004: Indicator Removal on Host: File Deletion
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: command_prompt
-- Source Path: atomics/T1070.004/T1070.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.004]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070004-file-deletion|T1070.004: File Deletion]]
 
 ## Input Arguments
 

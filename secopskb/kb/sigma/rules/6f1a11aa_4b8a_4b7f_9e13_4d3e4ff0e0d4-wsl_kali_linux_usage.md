@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wsl_kali_linux_usage.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wsl_kali_linux_usage.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WSL Kali-Linux Usage
-
 Detects the use of Kali Linux through Windows Subsystem for Linux
-
-## Metadata
-
-- Rule ID: 6f1a11aa-4b8a-4b7f-9e13-4d3e4ff0e0d4
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-10-10
-- Source Path: rules/windows/process_creation/proc_creation_win_wsl_kali_linux_usage.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the use of Kali Linux through Windows Subsystem for Linux
 
 ### Techniques
 
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detection
 

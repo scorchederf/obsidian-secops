@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "8822c3b0-d9f9-4daf-a043-49f110a31122"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - Create a group and add a user to that group
-
 Adversaries create AWS group, add users to specific to that group to elevate their privileges to gain more accesss
-
-## Metadata
-
-- Atomic GUID: 8822c3b0-d9f9-4daf-a043-49f110a31122
-- Technique: T1098: Account Manipulation
-- Platforms: iaas:aws
-- Executor: sh
-- Source Path: atomics/T1098/T1098.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Input Arguments
 

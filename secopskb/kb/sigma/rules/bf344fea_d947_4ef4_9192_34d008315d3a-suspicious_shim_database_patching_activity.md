@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_persistence_shim_database_susp_application.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_persistence_shim_database_susp_application.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Shim Database Patching Activity
-
 Detects installation of new shim databases that try to patch sections of known processes for potential process injection or persistence.
-
-## Metadata
-
-- Rule ID: bf344fea-d947-4ef4-9192-34d008315d3a
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-08-01
-- Modified: 2023-12-06
-- Source Path: rules/windows/registry/registry_set/registry_set_persistence_shim_database_susp_application.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects installation of new shim databases that try to patch sections of known p
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.011]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546011-application-shimming|T1546.011: Application Shimming]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_copy_system_dir_lolbin.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_copy_system_dir_lolbin.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LOL-Binary Copied From System Directory
-
 Detects a suspicious copy operation that tries to copy a known LOLBIN from system (System32, SysWOW64, WinSxS) directories to another on disk in order to bypass detections based on locations.
-
-## Metadata
-
-- Rule ID: f5d19838-41b5-476c-98d8-ba8af4929ee2
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-08-29
-- Modified: 2025-11-27
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_copy_system_dir_lolbin.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious copy operation that tries to copy a known LOLBIN from syste
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Detection
 

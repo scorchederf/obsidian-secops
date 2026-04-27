@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_remotefxvgpudisablement_abuse.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_remotefxvgpudisablement_abuse.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RemoteFXvGPUDisablement Abuse Via AtomicTestHarnesses
-
 Detects calls to the AtomicTestHarnesses "Invoke-ATHRemoteFXvGPUDisablementCommand" which is designed to abuse the "RemoteFXvGPUDisablement.exe" binary to run custom PowerShell code via module load-order hijacking.
-
-## Metadata
-
-- Rule ID: a6fc3c46-23b8-4996-9ea2-573f4c4d88c5
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-07-13
-- Modified: 2023-05-09
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_remotefxvgpudisablement_abuse.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects calls to the AtomicTestHarnesses "Invoke-ATHRemoteFXvGPUDisablementComma
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

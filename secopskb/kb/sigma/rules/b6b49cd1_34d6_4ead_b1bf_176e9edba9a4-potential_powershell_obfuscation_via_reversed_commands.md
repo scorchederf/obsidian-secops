@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_cmdline_reversed_strings.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_cmdline_reversed_strings.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential PowerShell Obfuscation Via Reversed Commands
-
 Detects the presence of reversed PowerShell commands in the CommandLine. This is often used as a method of obfuscation by attackers
-
-## Metadata
-
-- Rule ID: b6b49cd1-34d6-4ead-b1bf-176e9edba9a4
-- Status: test
-- Level: high
-- Author: Teymur Kheirkhabarov (idea), Vasiliy Burov (rule), oscd.community, Tim Shelton
-- Date: 2020-10-11
-- Modified: 2023-05-31
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_cmdline_reversed_strings.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the presence of reversed PowerShell commands in the CommandLine. This is
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

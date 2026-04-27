@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "24fd9719-7419-42dd-bce6-ab3463110b3c"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mirror Blast Emulation
-
 Emulates the JS -> MSI chain of the MirrorBlast T505 campaign by executing an xlsm file designed.
 Requires the 32 bit version of Office to run. [MirrorBlast Campaign Analysis](https://blog.morphisec.com/explosive-new-mirrorblast-campaign-targets-financial-companies)
 
-## Metadata
-
-- Atomic GUID: 24fd9719-7419-42dd-bce6-ab3463110b3c
-- Technique: T1204.002: User Execution: Malicious File
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1204.002/T1204.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 ## Executor
 

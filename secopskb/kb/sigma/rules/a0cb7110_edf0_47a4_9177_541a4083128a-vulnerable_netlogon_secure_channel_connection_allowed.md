@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/netlogon/win_system_vul_cve_2020_1472.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/netlogon/win_system_vul_cve_2020_1472.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Vulnerable Netlogon Secure Channel Connection Allowed
-
 Detects that a vulnerable Netlogon secure channel connection was allowed, which could be an indicator of CVE-2020-1472.
-
-## Metadata
-
-- Rule ID: a0cb7110-edf0-47a4-9177-541a4083128a
-- Status: test
-- Level: high
-- Author: NVISO
-- Date: 2020-09-15
-- Modified: 2022-12-25
-- Source Path: rules/windows/builtin/system/netlogon/win_system_vul_cve_2020_1472.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects that a vulnerable Netlogon secure channel connection was allowed, which 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
 
 ## Detection
 

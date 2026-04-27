@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_domain_dead_drop_resolvers.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_dead_drop_resolvers.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / network_connection"
@@ -22,20 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New Connection Initiated To Potential Dead Drop Resolver Domain
-
 Detects an executable, which is not an internet browser or known application, initiating network connections to legit popular websites, which were seen to be used as dead drop resolvers in previous attacks.
 In this context attackers leverage known websites such as "facebook", "youtube", etc. In order to pass through undetected.
-
-## Metadata
-
-- Rule ID: 297ae038-edc2-4b2e-bb3e-7c5fc94dd5c7
-- Status: test
-- Level: high
-- Author: Sorina Ionescu, X__Junior (Nextron Systems)
-- Date: 2022-08-17
-- Modified: 2024-10-21
-- Source Path: rules/windows/network_connection/net_connection_win_domain_dead_drop_resolvers.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ In this context attackers leverage known websites such as "facebook", "youtube",
 
 ### Techniques
 
-- [[kb/attack/techniques/T1102-web_service|T1102]]
-- [[kb/attack/techniques/T1102-web_service|T1102.001]]
+- [[kb/attack/techniques/T1102-web_service|T1102: Web Service]]
+- [[kb/attack/techniques/T1102-web_service#^t1102001-dead-drop-resolver|T1102.001: Dead Drop Resolver]]
 
 ## Detection
 

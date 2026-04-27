@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Coregen.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Coregen.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "coregen.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# coregen.exe
-
 Binary coregen.exe (Microsoft CoreCLR Native Image Generator) loads exported function GetCLRRuntimeHost from coreclr.dll or from .DLL in arbitrary path. Coregen is located within "C:\Program Files (x86)\Microsoft Silverlight\5.1.50918.0\" or another version of Silverlight. Coregen is signed by Microsoft and bundled with Microsoft Silverlight.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2020-10-09
-- Author: Martin Sohn Christensen
-- Source Path: yml/OtherMSBinaries/Coregen.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ coregen.exe /L {PATH_ABSOLUTE:.dll} dummy_assembly_name
 - Use Case: Execute DLL code
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1055-process_injection|T1055]]
+- ATT&CK: [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ coregen.exe dummy_assembly_name
 - Use Case: Execute DLL code
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1055-process_injection|T1055]]
+- ATT&CK: [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ### 3. AWL Bypass
 
@@ -76,7 +67,7 @@ coregen.exe /L {PATH_ABSOLUTE:.dll} dummy_assembly_name
 - Use Case: Execute DLL code
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

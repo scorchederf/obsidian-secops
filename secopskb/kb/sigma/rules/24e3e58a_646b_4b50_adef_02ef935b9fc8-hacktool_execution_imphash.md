@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_execution_via_imphashes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_execution_via_imphashes.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Hacktool Execution - Imphash
-
 Detects the execution of different Windows based hacktools via their import hash (imphash) even if the files have been renamed
-
-## Metadata
-
-- Rule ID: 24e3e58a-646b-4b50-adef-02ef935b9fc8
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-03-04
-- Modified: 2024-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_execution_via_imphashes.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the execution of different Windows based hacktools via their import hash
 
 ### Techniques
 
-- [[kb/attack/techniques/T1588-obtain_capabilities|T1588.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- [[kb/attack/techniques/T1588-obtain_capabilities#^t1588002-tool|T1588.002: Tool]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ## Detection
 

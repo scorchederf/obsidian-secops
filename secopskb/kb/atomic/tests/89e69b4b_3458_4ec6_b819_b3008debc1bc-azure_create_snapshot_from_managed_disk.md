@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1578.001"
 attack_technique_name: "Modify Cloud Compute Infrastructure: Create Snapshot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1578.001/T1578.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "89e69b4b-3458-4ec6-b819-b3008debc1bc"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Create Snapshot from Managed Disk
-
 Creates a snapshot of a managed disk in Azure using the Azure CLI.
 Simulates adversary snapshotting behavior for persistence or data duplication.
 
-## Metadata
-
-- Atomic GUID: 89e69b4b-3458-4ec6-b819-b3008debc1bc
-- Technique: T1578.001: Modify Cloud Compute Infrastructure: Create Snapshot
-- Platforms: iaas:azure
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1578.001/T1578.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1578-modify_cloud_compute_infrastructure|T1578.001]]
+- [[kb/attack/techniques/T1578-modify_cloud_compute_infrastructure#^t1578001-create-snapshot|T1578.001: Create Snapshot]]
 
 ## Input Arguments
 

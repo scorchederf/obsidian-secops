@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_hvci_disallowed_images.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_hvci_disallowed_images.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Driver Added To Disallowed Images In HVCI - Registry
-
 Detects changes to the "HVCIDisallowedImages" registry value to potentially add a driver to the list, in order to prevent it from loading.
-
-## Metadata
-
-- Rule ID: 555155a2-03bf-4fe7-af74-d176b3fdbe16
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Omar Khaled (@beacon_exe)
-- Date: 2023-12-05
-- Modified: 2024-08-21
-- Source Path: rules/windows/registry/registry_set/registry_set_hvci_disallowed_images.yml
 
 ## Logsource
 

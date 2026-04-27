@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-05-009/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-05-009.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-05-009"
   - "Running executables with same hash and different names"
@@ -29,20 +29,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-05-009: Running executables with same hash and different names
-
-## Metadata
-
-- CAR ID: CAR-2013-05-009
-- Submission Date: 2013/05/23
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Executables are generally not renamed, thus a given hash of an executable should only have ever one name. Identifying instances where multiple process names share the same hash may find cases where tools are copied by attackers to different folders or hosts to [avoid detection](https://attack.mitre.org/tactics/TA0005).
 
 Although this analytic was initially based on MD5 hashes, it is equally applicable to any hashing convention.
@@ -53,8 +39,8 @@ A list of hashes and the different executables associated with each one
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Implementations
 

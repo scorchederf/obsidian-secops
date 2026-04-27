@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_shadowcopy_deletion.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_shadowcopy_deletion.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Deletion of Volume Shadow Copies via WMI with PowerShell
-
 Detects deletion of Windows Volume Shadow Copies with PowerShell code and Get-WMIObject. This technique is used by numerous ransomware families such as Sodinokibi/REvil
-
-## Metadata
-
-- Rule ID: 21ff4ca9-f13a-41ad-b828-0077b2af2e40
-- Status: test
-- Level: high
-- Author: Tim Rauch, Elastic (idea)
-- Date: 2022-09-20
-- Modified: 2022-12-30
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_shadowcopy_deletion.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects deletion of Windows Volume Shadow Copies with PowerShell code and Get-WM
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

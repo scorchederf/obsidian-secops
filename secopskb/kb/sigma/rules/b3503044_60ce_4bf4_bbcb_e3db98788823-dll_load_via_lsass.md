@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_susp_lsass_dll_load.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_susp_lsass_dll_load.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DLL Load via LSASS
-
 Detects a method to load DLL via LSASS process using an undocumented Registry key
-
-## Metadata
-
-- Rule ID: b3503044-60ce-4bf4-bbcb-e3db98788823
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2019-10-16
-- Modified: 2022-04-21
-- Source Path: rules/windows/registry/registry_event/registry_event_susp_lsass_dll_load.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a method to load DLL via LSASS process using an undocumented Registry ke
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.008]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 
 ## Detection
 

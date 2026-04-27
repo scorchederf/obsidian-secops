@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Msbuild.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Msbuild.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Msbuild.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Msbuild.exe
-
 Used to compile and execute code
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Msbuild.yml
 
 ## Paths
 
@@ -55,7 +46,7 @@ msbuild.exe {PATH:.xml}
 - Use Case: Compile and run code
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 ### 2. Execute
 
@@ -68,7 +59,7 @@ msbuild.exe {PATH:.csproj}
 - Use Case: Compile and run code
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 ### 3. Execute
 
@@ -81,7 +72,7 @@ msbuild.exe /logger:TargetLogger,{PATH_ABSOLUTE:.dll};MyParameters,Foo
 - Use Case: Execute DLL
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 ### 4. Execute
 
@@ -94,7 +85,7 @@ msbuild.exe {PATH:.proj}
 - Use Case: Execute project file that contains XslTransformation tag parameters
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 ### 5. Execute
 
@@ -107,7 +98,7 @@ msbuild.exe @{PATH:.rsp}
 - Use Case: Bypass command-line based detections
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1036-masquerading|T1036]]
+- ATT&CK: [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detections
 

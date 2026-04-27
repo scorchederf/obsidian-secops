@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "e895677d-4f06-49ab-91b6-ae3742d0a2ba"
@@ -20,25 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Scheduled Task Executing Base64 Encoded Commands From Registry
-
 A Base64 Encoded command will be stored in the registry (ping 127.0.0.1) and then a scheduled task will be created.
 The scheduled task will launch powershell to decode and run the command in the registry daily.
 This is a persistence mechanism recently seen in use by Qakbot.  
 
 [Additiona Information](https://thedfirreport.com/2022/02/07/qbot-likes-to-move-it-move-it/)
 
-## Metadata
-
-- Atomic GUID: e895677d-4f06-49ab-91b6-ae3742d0a2ba
-- Technique: T1053.005: Scheduled Task/Job: Scheduled Task
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1053.005/T1053.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Input Arguments
 

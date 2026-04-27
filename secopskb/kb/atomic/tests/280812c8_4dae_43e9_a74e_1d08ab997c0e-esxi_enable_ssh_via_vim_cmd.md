@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.004"
 attack_technique_name: "Remote Services: SSH"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.004/T1021.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "280812c8-4dae-43e9-a74e-1d08ab997c0e"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Enable SSH via VIM-CMD
-
 An adversary enables SSH on an ESXi host to maintain persistence and creeate another command execution interface.
 [Reference](https://lolesxi-project.github.io/LOLESXi/lolesxi/Binaries/vim-cmd/#enable%20service)
 
-## Metadata
-
-- Atomic GUID: 280812c8-4dae-43e9-a74e-1d08ab997c0e
-- Technique: T1021.004: Remote Services: SSH
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1021.004/T1021.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.004]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
 
 ## Input Arguments
 

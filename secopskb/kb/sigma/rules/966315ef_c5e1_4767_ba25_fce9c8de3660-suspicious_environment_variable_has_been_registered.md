@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_suspicious_env_variables.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_suspicious_env_variables.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Environment Variable Has Been Registered
-
 Detects the creation of user-specific or system-wide environment variables via the registry. Which contains suspicious commands and strings
-
-## Metadata
-
-- Rule ID: 966315ef-c5e1-4767-ba25-fce9c8de3660
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-12-20
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_suspicious_env_variables.yml
 
 ## Logsource
 

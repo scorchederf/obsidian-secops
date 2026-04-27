@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1030"
 attack_technique_name: "Data Transfer Size Limits"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1030/T1030.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "sh"
 aliases:
   - "ab936c51-10f4-46ce-9144-e02137b2016a"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Data Transfer Size Limits
-
 Take a file/directory, split it into 5Mb chunks
-
-## Metadata
-
-- Atomic GUID: ab936c51-10f4-46ce-9144-e02137b2016a
-- Technique: T1030: Data Transfer Size Limits
-- Platforms: macos, linux
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1030/T1030.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1030-data_transfer_size_limits|T1030]]
+- [[kb/attack/techniques/T1030-data_transfer_size_limits|T1030: Data Transfer Size Limits]]
 
 ## Input Arguments
 

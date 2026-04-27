@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/proxy_generic/proxy_pwndrop.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/proxy_generic/proxy_pwndrop.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "critical"
 logsource: "proxy"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PwnDrp Access
-
 Detects downloads from PwnDrp web servers developed for red team testing and most likely also used for criminal activity
-
-## Metadata
-
-- Rule ID: 2b1ee7e4-89b6-4739-b7bb-b811b6607e5e
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2020-04-15
-- Modified: 2021-11-27
-- Source Path: rules/web/proxy_generic/proxy_pwndrop.yml
 
 ## Logsource
 
@@ -45,9 +33,9 @@ Detects downloads from PwnDrp web servers developed for red team testing and mos
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
-- [[kb/attack/techniques/T1102-web_service|T1102.001]]
-- [[kb/attack/techniques/T1102-web_service|T1102.003]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+- [[kb/attack/techniques/T1102-web_service#^t1102001-dead-drop-resolver|T1102.001: Dead Drop Resolver]]
+- [[kb/attack/techniques/T1102-web_service#^t1102003-one-way-communication|T1102.003: One-Way Communication]]
 
 ## Detection
 

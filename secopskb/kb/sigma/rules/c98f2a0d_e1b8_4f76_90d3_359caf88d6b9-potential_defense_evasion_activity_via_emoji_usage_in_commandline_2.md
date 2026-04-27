@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_emoji_usage_in_cli_2.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_emoji_usage_in_cli_2.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Defense Evasion Activity Via Emoji Usage In CommandLine - 2
-
 Detects the usage of emojis in the command line, this could be a sign of potential defense evasion activity.
-
-## Metadata
-
-- Rule ID: c98f2a0d-e1b8-4f76-90d3-359caf88d6b9
-- Status: test
-- Level: high
-- Author: @Kostastsale, TheDFIRReport
-- Date: 2022-12-05
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_emoji_usage_in_cli_2.yml
 
 ## Logsource
 

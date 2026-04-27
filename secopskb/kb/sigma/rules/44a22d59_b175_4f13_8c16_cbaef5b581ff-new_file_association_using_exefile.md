@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_file_association_exefile.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_file_association_exefile.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New File Association Using Exefile
-
 Detects the abuse of the exefile handler in new file association. Used for bypass of security products.
-
-## Metadata
-
-- Rule ID: 44a22d59-b175-4f13-8c16-cbaef5b581ff
-- Status: test
-- Level: high
-- Author: Andreas Hunkeler (@Karneades)
-- Date: 2021-11-19
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_file_association_exefile.yml
 
 ## Logsource
 

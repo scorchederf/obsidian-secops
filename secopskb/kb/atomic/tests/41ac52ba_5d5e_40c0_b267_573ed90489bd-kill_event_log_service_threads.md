@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.002"
 attack_technique_name: "Impair Defenses: Disable Windows Event Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.002/T1562.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "41ac52ba-5d5e-40c0-b267-573ed90489bd"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Kill Event Log Service Threads
-
 Kill Windows Event Log Service Threads using Invoke-Phant0m. WARNING you will need to restart PC to return to normal state with Log Service. https://artofpwn.com/phant0m-killing-windows-event-log.html
-
-## Metadata
-
-- Atomic GUID: 41ac52ba-5d5e-40c0-b267-573ed90489bd
-- Technique: T1562.002: Impair Defenses: Disable Windows Event Logging
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1562.002/T1562.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Executor
 

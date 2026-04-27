@@ -166,16 +166,43 @@ def build_attack_technique_lookup():
             continue
         attack_id = filename.split("-", 1)[0]
         if re.match(r"^T\d{4}$", attack_id):
-            lookup[attack_id] = os.path.splitext(filename)[0]
+            note_stem = os.path.splitext(filename)[0]
+            filepath = os.path.join(ATTACK_TECHNIQUES_DIR, filename)
+            try:
+                text = read_text_file(filepath)
+            except OSError:
+                text = ""
+            technique_name = ""
+            if text.startswith("---\n"):
+                end = text.find("\n---\n", 4)
+                if end != -1:
+                    data = yaml.safe_load(text[4:end]) or {}
+                    if isinstance(data, dict):
+                        technique_name = data.get("mitre_name", "")
+            lookup[attack_id] = {
+                "target": note_stem,
+                "label": attack_id + (": " + technique_name if technique_name else ""),
+            }
+            for match in re.finditer(r"^### (T\d{4}\.\d{3}): ([^\n]+)\n\n(\^[^\n]+)", text, flags=re.MULTILINE):
+                subtechnique_id = match.group(1)
+                subtechnique_name = match.group(2).strip()
+                anchor = match.group(3).strip()
+                lookup[subtechnique_id] = {
+                    "target": note_stem + "#" + anchor,
+                    "label": subtechnique_id + ": " + subtechnique_name,
+                }
     return lookup
 
 
 def make_attack_link(attack_id, attack_lookup):
     parent_id = attack_id.split(".", 1)[0]
-    target = attack_lookup.get(parent_id)
-    if not target:
+    link_info = attack_lookup.get(attack_id) or attack_lookup.get(parent_id)
+    if not link_info:
         return attack_id
-    return f"[[kb/attack/techniques/{target}|{attack_id}]]"
+    label = link_info.get("label") or attack_id
+    if attack_id != parent_id and attack_id not in attack_lookup:
+        label = attack_id
+    return f"[[kb/attack/techniques/{link_info['target']}|{label}]]"
 
 
 def make_test_filename(item):
@@ -300,10 +327,8 @@ def build_atomic_test_note(item, attack_lookup):
 
     text = render_yaml(yaml_lines)
     text += build_page_start()
-    text += "# " + str(test.get("name", "")) + "\n\n"
     if test.get("description"):
         text += str(test["description"]).strip() + "\n\n"
-    text += write_metadata_section(item)
     text += "## ATT&CK Mapping\n\n"
     text += "- " + make_attack_link(item["attack_id"], attack_lookup) + "\n\n"
     text += write_input_arguments_section(test)
@@ -327,7 +352,12 @@ def build_atomic_indexes(tests, attack_lookup):
 
     text = build_page_start()
     text += "# Atomic Red Team\n\n"
-    text += "Atomic Red Team validation tests generated from the upstream atomic-red-team repository.\n\n"
+    text += "<!-- generated-source-description-start -->\n"
+    text += "Atomic Red Team is a library of small, focused tests for emulating ATT&CK techniques in controlled environments. This vault imports Atomic YAML tests, keeps command and dependency blocks with executor-aware code fences, and maps each test back to its ATT&CK technique.\n\n"
+    text += "Use Atomic pages as validation references for testing whether detections, analytics, and telemetry collection work as expected. ATT&CK technique pages link to matching Atomic tests, and Sigma simulation metadata links to Atomic tests when GUIDs match.\n\n"
+    text += "## Upstream\n\n"
+    text += "- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)\n"
+    text += "<!-- generated-source-description-end -->\n\n"
     text += "## Areas\n\n"
     text += f"- [[kb/atomic/tests/index|Tests]] ({len(tests)})\n"
     text += f"- [[kb/atomic/techniques/index|Tests by ATT&CK Technique]] ({len(by_technique)})\n"

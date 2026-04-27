@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Winget.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Winget.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "winget.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# winget.exe
-
 Windows Package Manager tool
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2022-01-03
-- Author: Paul Sanders
-- Source Path: yml/OSBinaries/Winget.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ winget.exe install --manifest {PATH:.yml}
 - Use Case: Download and execute an arbitrary file from the internet
 - Privileges: Local Administrator - required to enable local manifest setting
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 2. Download
 
@@ -62,7 +53,7 @@ winget.exe install --accept-package-agreements -s msstore {name or ID}
 - Use Case: Download and install software from Microsoft Store, even if Microsoft Store App is blocked
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 3. AWL Bypass
 
@@ -75,7 +66,7 @@ winget.exe install --accept-package-agreements -s msstore {name or ID}
 - Use Case: Download and install software from Microsoft Store, even if Microsoft Store App is blocked, and AppLocker is activated on the machine
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

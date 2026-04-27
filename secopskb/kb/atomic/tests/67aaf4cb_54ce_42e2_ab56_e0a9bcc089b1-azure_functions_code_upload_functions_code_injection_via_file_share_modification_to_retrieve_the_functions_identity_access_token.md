@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1528"
 attack_technique_name: "Steal Application Access Token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1528/T1528.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "67aaf4cb-54ce-42e2-ab56-e0a9bcc089b1"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Azure - Functions code upload - Functions code injection via File Share modification to retrieve the Functions identity access token
 
 This test injects code into an Azure Function (RCE) to perform Subscription Privilege Escalation by retrieving the identity access token of an Azure functions instance.
 
@@ -43,19 +41,9 @@ Execution options: Defined by the input field execution_option
 - insert_code: This option (1) downloads the existing funciton code into a tmp file, (2) injects the code from code_to_insert_path at the beginning of the file, and (3) uploads the tampered file to the targeted Azure Function code (Azure File Share File).
 - replace_file: This option uploads the function code defined in code_to_insert_path to the targeted Azure Function code (Azure File Share File).
 
-## Metadata
-
-- Atomic GUID: 67aaf4cb-54ce-42e2-ab56-e0a9bcc089b1
-- Technique: T1528: Steal Application Access Token
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1528/T1528.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1528-steal_application_access_token|T1528]]
+- [[kb/attack/techniques/T1528-steal_application_access_token|T1528: Steal Application Access Token]]
 
 ## Input Arguments
 

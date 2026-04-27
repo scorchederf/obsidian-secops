@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.006"
 attack_technique_name: "Command and Scripting Interpreter: Python"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.006/T1059.006.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "0b44d79b-570a-4b27-a31f-3bf2156e5eaa"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Execute Python via Python executables
-
 Create Python file (.py) then compile to binary (.pyc) that downloads an external malicious script then executes locally using the supplied executor and arguments
-
-## Metadata
-
-- Atomic GUID: 0b44d79b-570a-4b27-a31f-3bf2156e5eaa
-- Technique: T1059.006: Command and Scripting Interpreter: Python
-- Platforms: linux
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1059.006/T1059.006.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.006]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
 
 ## Input Arguments
 

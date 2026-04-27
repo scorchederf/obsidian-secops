@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_config_disable_recording.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_config_disable_recording.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS Config Disabling Channel/Recorder
-
 Detects AWS Config Service disabling
-
-## Metadata
-
-- Rule ID: 07330162-dba1-4746-8121-a9647d49d297
-- Status: test
-- Level: high
-- Author: vitaliy0x1
-- Date: 2020-01-21
-- Modified: 2022-10-09
-- Source Path: rules/cloud/aws/cloudtrail/aws_config_disable_recording.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects AWS Config Service disabling
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Detection
 

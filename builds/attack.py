@@ -30,6 +30,33 @@ WORKSPACE_PATCH_MARKER = "# stage1_workspaces_patch_applied_v6"
 TOOLS_LABEL_PATCH_MARKER = "# stage1_tools_label_patch_applied_v2"
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEGACY_BUILD_PATH = os.path.join(PROJECT_ROOT, LEGACY_BUILD_FILE)
+VAULT_DIR = os.path.join(PROJECT_ROOT, NEW_VAULT)
+SOURCE_DESCRIPTION_START = "<!-- generated-source-description-start -->"
+SOURCE_DESCRIPTION_END = "<!-- generated-source-description-end -->"
+
+SOURCE_INDEX_DESCRIPTIONS = {
+    os.path.join("kb", "attack", "index.md"): (
+        "ATT&CK",
+        "MITRE ATT&CK is a knowledge base of adversary tactics, techniques, and procedures based on real-world observations. "
+        "This vault uses ATT&CK as the main behavior spine: techniques become the pivot point for tools, D3FEND defensive techniques, CAR analytics, Sigma rules, Atomic Red Team tests, LOLBAS entries, and future sources.\n\n"
+        "## Upstream\n\n"
+        "- [MITRE ATT&CK](https://attack.mitre.org/)\n"
+    ),
+    os.path.join("kb", "defend", "index.md"): (
+        "D3FEND",
+        "MITRE D3FEND is a knowledge graph of defensive cybersecurity techniques and countermeasures. "
+        "This vault keeps D3FEND under `kb/defend/` and links it back to ATT&CK where defensive techniques help prevent, detect, isolate, harden, or evict adversary behavior.\n\n"
+        "## Upstream\n\n"
+        "- [MITRE D3FEND](https://d3fend.mitre.org/)\n"
+    ),
+    os.path.join("kb", "tools", "index.md"): (
+        "Tools",
+        "This index contains ATT&CK software objects categorized as tools. These pages describe utilities, frameworks, and legitimate binaries that ATT&CK associates with adversary behavior. "
+        "`kb/tools/` is kept as the shared tool index so generated sources such as Sigma, Atomic Red Team, LOLBAS, GTFOBins, and future tradecraft repositories can cross-link to the same entities.\n\n"
+        "## Upstream\n\n"
+        "- [ATT&CK Software](https://attack.mitre.org/software/)\n"
+    ),
+}
 
 BACKWARD_COMPATIBLE_TOOL_LINK_FUNCTION = '''def make_tool_link(attack_id_or_name, name=""):
     # Backward-compatible signature.
@@ -480,6 +507,38 @@ def sort_generated_tool_sections():
     log("Post-build tool section sorting updated " + str(changed_count) + " files", "INFO")
 
 
+def remove_generated_source_description(text):
+    pattern = re.compile(
+        r"\n?" + re.escape(SOURCE_DESCRIPTION_START) + r".*?" + re.escape(SOURCE_DESCRIPTION_END) + r"\n*",
+        flags=re.DOTALL,
+    )
+    return re.sub(pattern, "\n", text)
+
+
+def insert_source_description(text, title, description):
+    text = remove_generated_source_description(text)
+    block = SOURCE_DESCRIPTION_START + "\n" + description.rstrip() + "\n" + SOURCE_DESCRIPTION_END + "\n\n"
+    heading = "# " + title + "\n\n"
+    if heading in text:
+        return text.replace(heading, heading + block, 1)
+    return text.rstrip() + "\n\n" + block
+
+
+def patch_generated_source_index_descriptions():
+    changed_count = 0
+    for relative_path, values in SOURCE_INDEX_DESCRIPTIONS.items():
+        title, description = values
+        filepath = os.path.join(VAULT_DIR, relative_path)
+        if not os.path.exists(filepath):
+            continue
+        old_text = read_text_file(filepath)
+        new_text = insert_source_description(old_text, title, description)
+        if new_text != old_text:
+            write_text_file(filepath, new_text)
+            changed_count += 1
+    log("Patched generated source index descriptions in " + str(changed_count) + " files", "INFO")
+
+
 def build_attack():
     log("Starting ATT&CK/D3FEND legacy build", "INFO")
     download_legacy_build_if_missing()
@@ -494,4 +553,5 @@ def build_attack():
     finally:
         os.chdir(current_folder)
     sort_generated_tool_sections()
+    patch_generated_source_index_descriptions()
     log("Finished ATT&CK/D3FEND legacy build", "INFO")

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.004"
 attack_technique_name: "Command and Scripting Interpreter: Bash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.004/T1059.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "46274fc6-08a7-4956-861b-24cbbaa0503c"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Harvest SUID executable files
-
 AutoSUID application is the Open-Source project, the main idea of which is to automate harvesting the SUID executable files and to find a way for further escalating the privileges.
-
-## Metadata
-
-- Atomic GUID: 46274fc6-08a7-4956-861b-24cbbaa0503c
-- Technique: T1059.004: Command and Scripting Interpreter: Bash
-- Platforms: linux
-- Executor: sh
-- Dependency Executor: bash
-- Source Path: atomics/T1059.004/T1059.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
 
 ## Input Arguments
 

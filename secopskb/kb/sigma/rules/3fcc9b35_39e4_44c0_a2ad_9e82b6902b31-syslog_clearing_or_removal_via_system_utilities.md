@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_clear_syslog.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_clear_syslog.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Syslog Clearing or Removal Via System Utilities
-
 Detects specific commands commonly used to remove or empty the syslog. Which is a technique often used by attacker as a method to hide their tracks
-
-## Metadata
-
-- Rule ID: 3fcc9b35-39e4-44c0-a2ad-9e82b6902b31
-- Status: test
-- Level: high
-- Author: Max Altgelt (Nextron Systems), Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC
-- Date: 2021-10-15
-- Modified: 2025-10-15
-- Source Path: rules/linux/process_creation/proc_creation_lnx_clear_syslog.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects specific commands commonly used to remove or empty the syslog. Which is 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.002]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
 
 ## Detection
 

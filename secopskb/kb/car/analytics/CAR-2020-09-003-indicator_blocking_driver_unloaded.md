@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-09-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-09-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-09-003"
   - "Indicator Blocking - Driver Unloaded"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-09-003: Indicator Blocking - Driver Unloaded
-
-## Metadata
-
-- CAR ID: CAR-2020-09-003
-- Submission Date: 2020/09/10
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Adversaries may attempt to evade system defenses by unloading minifilter drivers used by host-based sensors such as Sysmon through the use of the fltmc command-line utility. Accordingly, this analytic looks for command-line invocations of this utility when used to unload minifilter drivers.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]] (coverage: Low; tactics: TA0005)
-  - [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]] (coverage: Low; tactics: TA0005)
+  - [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
 
 ## Implementations
 

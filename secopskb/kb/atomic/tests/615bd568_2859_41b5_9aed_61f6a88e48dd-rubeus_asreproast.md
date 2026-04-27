@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.004"
 attack_technique_name: "Steal or Forge Kerberos Tickets: AS-REP Roasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.004/T1558.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "615bd568-2859-41b5-9aed-61f6a88e48dd"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rubeus asreproast
-
 Information on the Rubeus tool and it's creators found here: https://github.com/GhostPack/Rubeus#asreproast
 This build targets .NET 4.5.  If targeting a different version you will need to compile Rubeus
 
-## Metadata
-
-- Atomic GUID: 615bd568-2859-41b5-9aed-61f6a88e48dd
-- Technique: T1558.004: Steal or Forge Kerberos Tickets: AS-REP Roasting
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1558.004/T1558.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.004]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558004-as-rep-roasting|T1558.004: AS-REP Roasting]]
 
 ## Input Arguments
 

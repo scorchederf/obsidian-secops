@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_meterpreter_or_cobaltstrike_getsystem_service_install.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_meterpreter_or_cobaltstrike_getsystem_service_install.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Meterpreter or Cobalt Strike Getsystem Service Installation - Security
-
 Detects the use of getsystem Meterpreter/Cobalt Strike command by detecting a specific service installation
-
-## Metadata
-
-- Rule ID: ecbc5e16-58e0-4521-9c60-eb9a7ea4ad34
-- Status: test
-- Level: high
-- Author: Teymur Kheirkhabarov, Ecco, Florian Roth (Nextron Systems)
-- Date: 2019-10-26
-- Modified: 2023-11-15
-- Source Path: rules/windows/builtin/security/win_security_meterpreter_or_cobaltstrike_getsystem_service_install.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ Detects the use of getsystem Meterpreter/Cobalt Strike command by detecting a sp
 
 ### Techniques
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.001]]
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.002]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134001-token-impersonation-theft|T1134.001: Token Impersonation/Theft]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134002-create-process-with-token|T1134.002: Create Process with Token]]
 
 ## Detection
 

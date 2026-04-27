@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_susp_possible_shadow_credentials_added.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_susp_possible_shadow_credentials_added.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Possible Shadow Credentials Added
-
 Detects possible addition of shadow credentials to an active directory object.
-
-## Metadata
-
-- Rule ID: f598ea0c-c25a-4f72-a219-50c44411c791
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Elastic (idea)
-- Date: 2022-10-17
-- Source Path: rules/windows/builtin/security/win_security_susp_possible_shadow_credentials_added.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Detects possible addition of shadow credentials to an active directory object.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1556-modify_authentication_process|T1556]]
+- [[kb/attack/techniques/T1556-modify_authentication_process|T1556: Modify Authentication Process]]
 
 ## Detection
 

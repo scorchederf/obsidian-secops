@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_domain_crypto_mining_pools.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_crypto_mining_pools.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "stable"
 level: "high"
 logsource: "windows / network_connection"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Network Communication With Crypto Mining Pool
-
 Detects initiated network connections to crypto mining pools
-
-## Metadata
-
-- Rule ID: fa5b1358-b040-4403-9868-15f7d9ab6329
-- Status: stable
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-10-26
-- Modified: 2024-01-19
-- Source Path: rules/windows/network_connection/net_connection_win_domain_crypto_mining_pools.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects initiated network connections to crypto mining pools
 
 ### Techniques
 
-- [[kb/attack/techniques/T1496-resource_hijacking|T1496]]
+- [[kb/attack/techniques/T1496-resource_hijacking|T1496: Resource Hijacking]]
 
 ## Detection
 

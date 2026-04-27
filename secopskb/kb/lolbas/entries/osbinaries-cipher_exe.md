@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Cipher.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Cipher.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Cipher.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cipher.exe
-
 File Encryption Utility
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2024-11-22
-- Author: Adetutu Ogunsowo
-- Source Path: yml/OSBinaries/Cipher.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ cipher /w:{PATH_ABSOLUTE:folder}
 - Use Case: Can be used to forensically erase a file.
 - Privileges: User
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1485-data_destruction|T1485]]
+- ATT&CK: [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 ### 2. Tamper
 
@@ -62,7 +53,7 @@ cipher.exe /e {PATH_ABSOLUTE}
 - Use Case: Can be used to impair defences by e.g. encrypting a critical EDR solution file.
 - Privileges: Admin
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+- ATT&CK: [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 ## Detections
 

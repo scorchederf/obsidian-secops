@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-08-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-08-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-08-002"
   - "NTFS Alternate Data Stream Execution - LOLBAS"
@@ -25,26 +25,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS
-
-## Metadata
-
-- CAR ID: CAR-2020-08-002
-- Submission Date: 2020/08/03
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 NTFS Alternate Data Streams (ADSs) may be used by adversaries as a means of evading security tools by storing malicious data or binaries in file attribute metadata. ADSs are also powerful because their contents can be directly executed by various Windows tools; accordingly, this analytic looks at common ways of executing ADSs using Living off the Land Binaries and Scripts (LOLBAS).
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]] (coverage: Low; tactics: TA0005)
-  - [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]] (coverage: Low; tactics: TA0005)
+  - [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ## Implementations
 

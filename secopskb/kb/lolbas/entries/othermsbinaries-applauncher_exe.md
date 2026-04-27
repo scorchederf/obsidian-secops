@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/AppLauncher.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/AppLauncher.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "AppLauncher.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AppLauncher.exe
-
 User Experience Virtualization tool that launches applications under monitoring to capture and synchronize user settings.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2025-09-21
-- Author: Avihay Eldad
-- Source Path: yml/OtherMSBinaries/AppLauncher.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ AppLauncher.exe {PATH_ABSOLUTE:.exe}
 - Use Case: Executes an executable under a trusted, Microsoft signed binary.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Resources
 

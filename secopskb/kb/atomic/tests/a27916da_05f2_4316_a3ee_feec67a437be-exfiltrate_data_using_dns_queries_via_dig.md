@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048"
 attack_technique_name: "Exfiltration Over Alternative Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048/T1048.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "bash"
 aliases:
   - "a27916da-05f2-4316-a3ee-feec67a437be"
@@ -21,24 +21,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltrate Data using DNS Queries via dig
-
 This test demonstrates how an attacker can exfiltrate sensitive information by encoding it as a subdomain (using base64 encoding) and 
 making DNS queries via the dig command to a controlled DNS server.
 
-## Metadata
-
-- Atomic GUID: a27916da-05f2-4316-a3ee-feec67a437be
-- Technique: T1048: Exfiltration Over Alternative Protocol
-- Platforms: macos, linux
-- Executor: bash
-- Elevation Required: False
-- Dependency Executor: bash
-- Source Path: atomics/T1048/T1048.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 
 ## Input Arguments
 

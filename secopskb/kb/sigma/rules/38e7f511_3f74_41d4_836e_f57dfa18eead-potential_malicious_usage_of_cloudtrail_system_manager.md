@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_cloudtrail_ssm_malicious_usage.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_cloudtrail_ssm_malicious_usage.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Malicious Usage of CloudTrail System Manager
-
 Detect when System Manager successfully executes commands against an instance.
-
-## Metadata
-
-- Rule ID: 38e7f511-3f74-41d4-836e-f57dfa18eead
-- Status: test
-- Level: high
-- Author: jamesc-grafana
-- Date: 2024-07-11
-- Modified: 2025-12-08
-- Source Path: rules/cloud/aws/cloudtrail/aws_cloudtrail_ssm_malicious_usage.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detect when System Manager successfully executes commands against an instance.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1566-phishing|T1566]]
-- [[kb/attack/techniques/T1566-phishing|T1566.002]]
+- [[kb/attack/techniques/T1566-phishing|T1566: Phishing]]
+- [[kb/attack/techniques/T1566-phishing#^t1566002-spearphishing-link|T1566.002: Spearphishing Link]]
 
 ## Detection
 

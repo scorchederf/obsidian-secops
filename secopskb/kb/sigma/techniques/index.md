@@ -2,11 +2,11 @@
 
 # Sigma Rules by ATT&CK Technique
 
-## [[kb/attack/techniques/T1001-data_obfuscation|T1001.003]]
+## [[kb/attack/techniques/T1001-data_obfuscation#^t1001003-protocol-or-service-impersonation|T1001.003: Protocol or Service Impersonation]]
 
 - [[kb/sigma/rules/d00a9a72_2c09_4459_ad03_5e0a23351e36-suspicious_ldap_attributes_used|Suspicious LDAP-Attributes Used]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+## [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 - [[kb/sigma/rules/78cc2dd2_7d20_4d32_93ff_057084c38b93-antivirus_password_dumper_detection|Antivirus Password Dumper Detection]]
 - [[kb/sigma/rules/6e2a900a_ced9_4e4a_a9c2_13e706f9518a-hacktool_potential_remote_credential_dumping_activity_via_crackmapexec_or_impacket_secretsdump|HackTool - Potential Remote Credential Dumping Activity Via CrackMapExec Or Impacket-Secretsdump]]
@@ -30,7 +30,7 @@
 - [[kb/sigma/rules/2617e7ed_adb7_40ba_b0f3_8f9945fe6c09-suspicious_system_user_process_creation|Suspicious SYSTEM User Process Creation]]
 - [[kb/sigma/rules/1de68c67_af5c_4097_9c85_fe5578e09e67-wce_wceaux_dll_access|WCE wceaux.dll Access]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 - [[kb/sigma/rules/78cc2dd2_7d20_4d32_93ff_057084c38b93-antivirus_password_dumper_detection|Antivirus Password Dumper Detection]]
 - [[kb/sigma/rules/515c8be5_e5df_4c5e_8f6d_a4a2f05e4b48-createdump_process_dump|CreateDump Process Dump]]
@@ -95,7 +95,7 @@
 - [[kb/sigma/rules/c3e76af5_4ce0_4a14_9c9a_25ceb8fda182-werfault_lsass_process_memory_dump|WerFault LSASS Process Memory Dump]]
 - [[kb/sigma/rules/a6b33c02_8305_488f_8585_03cb2a7763f2-windows_credential_editor_registry|Windows Credential Editor Registry]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 
 - [[kb/sigma/rules/78cc2dd2_7d20_4d32_93ff_057084c38b93-antivirus_password_dumper_detection|Antivirus Password Dumper Detection]]
 - [[kb/sigma/rules/e7be6119_fc37_43f0_ad4f_1f3f99be2f9f-copying_sensitive_files_with_credential_data|Copying Sensitive Files with Credential Data]]
@@ -118,7 +118,7 @@
 - [[kb/sigma/rules/1af57a4b_460a_4738_9034_db68b880c665-powershell_sam_copy|PowerShell SAM Copy]]
 - [[kb/sigma/rules/40b19fa6_d835_400c_b301_41f3a2baacaf-volumeshadowcopy_symlink_creation_via_mklink|VolumeShadowCopy Symlink Creation Via Mklink]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 - [[kb/sigma/rules/e7be6119_fc37_43f0_ad4f_1f3f99be2f9f-copying_sensitive_files_with_credential_data|Copying Sensitive Files with Credential Data]]
 - [[kb/sigma/rules/afd12fed_b0ec_45c9_a13d_aa86625dac81-create_volume_shadow_copy_with_powershell|Create Volume Shadow Copy with Powershell]]
@@ -135,7 +135,7 @@
 - [[kb/sigma/rules/8bc64091_6875_4881_aaf9_7bd25b5dda08-suspicious_process_patterns_ntds_dit_exfil|Suspicious Process Patterns NTDS.DIT Exfil]]
 - [[kb/sigma/rules/40b19fa6_d835_400c_b301_41f3a2baacaf-volumeshadowcopy_symlink_creation_via_mklink|VolumeShadowCopy Symlink Creation Via Mklink]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
 
 - [[kb/sigma/rules/8fbf3271_1ef6_4e94_8210_03c2317947f6-cred_dump_tools_dropped_files|Cred Dump Tools Dropped Files]]
 - [[kb/sigma/rules/f0d1feba_4344_4ca9_8121_a6c97bd6df52-credential_dumping_tools_service_execution_security|Credential Dumping Tools Service Execution - Security]]
@@ -148,7 +148,7 @@
 - [[kb/sigma/rules/252902e3_5830_4cf6_bf21_c22083dfd5cf-possible_impacket_secretdump_remote_activity|Possible Impacket SecretDump Remote Activity]]
 - [[kb/sigma/rules/92dae1ed_1c9d_4eff_a567_33acbd95b00e-possible_impacket_secretdump_remote_activity_zeek|Possible Impacket SecretDump Remote Activity - Zeek]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.005]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
 
 - [[kb/sigma/rules/8fbf3271_1ef6_4e94_8210_03c2317947f6-cred_dump_tools_dropped_files|Cred Dump Tools Dropped Files]]
 - [[kb/sigma/rules/f0d1feba_4344_4ca9_8121_a6c97bd6df52-credential_dumping_tools_service_execution_security|Credential Dumping Tools Service Execution - Security]]
@@ -158,7 +158,7 @@
 - [[kb/sigma/rules/a642964e_bead_4bed_8910_1bb4d63e3b4d-hacktool_mimikatz_execution|HackTool - Mimikatz Execution]]
 - [[kb/sigma/rules/07f8bdc2_c9b3_472a_9817_5a670b872f53-potential_reconnaissance_for_cached_credentials_via_cmdkey_exe|Potential Reconnaissance For Cached Credentials Via Cmdkey.EXE]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.006]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003006-dcsync|T1003.006: DCSync]]
 
 - [[kb/sigma/rules/17d619c1_e020_4347_957e_1d1207455c93-active_directory_replication_from_non_machine_account|Active Directory Replication from Non Machine Account]]
 - [[kb/sigma/rules/f0d1feba_4344_4ca9_8121_a6c97bd6df52-credential_dumping_tools_service_execution_security|Credential Dumping Tools Service Execution - Security]]
@@ -167,7 +167,7 @@
 - [[kb/sigma/rules/611eab06_a145_4dfa_a295_3ccc5c20f59a-mimikatz_dc_sync|Mimikatz DC Sync]]
 - [[kb/sigma/rules/06d71506_7beb_4f22_8888_e2e5e2ca7fd8-mimikatz_use|Mimikatz Use]]
 
-## [[kb/attack/techniques/T1005-data_from_local_system|T1005]]
+## [[kb/attack/techniques/T1005-data_from_local_system|T1005: Data from Local System]]
 
 - [[kb/sigma/rules/22777c9e_873a_4b49_855f_6072ab861a52-opencanary_smb_file_open_request|OpenCanary - SMB File Open Request]]
 - [[kb/sigma/rules/24c77512_782b_448a_8950_eddb0785fc71-sqlite_chromium_profile_data_db_access|SQLite Chromium Profile Data DB Access]]
@@ -176,32 +176,32 @@
 - [[kb/sigma/rules/0f60b28c_64dd_4e2c_9a63_5334d3e3a6e6-script_interpreter_spawning_credential_scanner_windows|Script Interpreter Spawning Credential Scanner - Windows]]
 - [[kb/sigma/rules/b57ba453_b384_4ab9_9f40_1038086b4e53-veeambackup_database_credentials_dump_via_sqlcmd_exe|VeeamBackup Database Credentials Dump Via Sqlcmd.EXE]]
 
-## [[kb/attack/techniques/T1007-system_service_discovery|T1007]]
+## [[kb/attack/techniques/T1007-system_service_discovery|T1007: System Service Discovery]]
 
 - [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution]]
 
-## [[kb/attack/techniques/T1008-fallback_channels|T1008]]
+## [[kb/attack/techniques/T1008-fallback_channels|T1008: Fallback Channels]]
 
 - [[kb/sigma/rules/e3b50fa5_3c3f_444e_937b_0a99d33731cd-outlook_macro_execution_without_warning_setting_enabled|Outlook Macro Execution Without Warning Setting Enabled]]
 - [[kb/sigma/rules/396ae3eb_4174_4b9b_880e_dc0364d78a19-potential_persistence_via_outlook_loadmacroprovideronboot_setting|Potential Persistence Via Outlook LoadMacroProviderOnBoot Setting]]
 - [[kb/sigma/rules/117d3d3a_755c_4a61_b23e_9171146d094c-suspicious_outlook_macro_created|Suspicious Outlook Macro Created]]
 
-## [[kb/attack/techniques/T1012-query_registry|T1012]]
+## [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]]
 
 - [[kb/sigma/rules/82880171_b475_4201_b811_e9c826cd5eaa-exports_critical_registry_keys_to_a_file|Exports Critical Registry Keys To a File]]
 - [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution]]
 - [[kb/sigma/rules/f8748f2c_89dc_4d95_afb0_5a2dfdbad332-sam_registry_hive_handle_request|SAM Registry Hive Handle Request]]
 - [[kb/sigma/rules/9a4ff3b8_6187_4fd2_8e8b_e0eae1129495-syskey_registry_keys_access|SysKey Registry Keys Access]]
 
-## [[kb/attack/techniques/T1014-rootkit|T1014]]
+## [[kb/attack/techniques/T1014-rootkit|T1014: Rootkit]]
 
 - [[kb/sigma/rules/22236d75_d5a0_4287_bf06_c93b1770860f-triple_cross_ebpf_rootkit_install_commands|Triple Cross eBPF Rootkit Install Commands]]
 
-## [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016]]
+## [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
 
 - [[kb/sigma/rules/e9856028_fd4e_46e6_b3d1_10f7ceb95078-opencanary_snmp_oid_request|OpenCanary - SNMP OID Request]]
 
-## [[kb/attack/techniques/T1018-remote_system_discovery|T1018]]
+## [[kb/attack/techniques/T1018-remote_system_discovery|T1018: Remote System Discovery]]
 
 - [[kb/sigma/rules/fa3c117a_bc0d_416e_a31b_0c0e80653efb-chopper_webshell_process_pattern|Chopper Webshell Process Pattern]]
 - [[kb/sigma/rules/7638e5fe_600c_4289_a968_f49dd537ec7d-hacktool_netexec_execution|HackTool - NetExec Execution]]
@@ -210,12 +210,12 @@
 - [[kb/sigma/rules/bed2a484_9348_4143_8a8a_b801c979301c-webshell_detection_with_command_line_keywords|Webshell Detection With Command Line Keywords]]
 - [[kb/sigma/rules/4ebc877f_4612_45cb_b3a5_8e3834db36c9-webshell_hacking_activity_patterns|Webshell Hacking Activity Patterns]]
 
-## [[kb/attack/techniques/T1020-automated_exfiltration|T1020]]
+## [[kb/attack/techniques/T1020-automated_exfiltration|T1020: Automated Exfiltration]]
 
 - [[kb/sigma/rules/457cc9ac_d8e6_4d1d_8c0e_251d0f11a74c-modification_or_deletion_of_an_aws_rds_cluster|Modification or Deletion of an AWS RDS Cluster]]
 - [[kb/sigma/rules/c3f265c7_ff03_4056_8ab2_d486227b4599-restore_public_aws_rds_instance|Restore Public AWS RDS Instance]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021]]
+## [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]]
 
 - [[kb/sigma/rules/7638e5fe_600c_4289_a968_f49dd537ec7d-hacktool_netexec_execution|HackTool - NetExec Execution]]
 - [[kb/sigma/rules/6991bc2b_ae2e_447f_bc55_3a1ba04c14e5-opencanary_ftp_login_attempt|OpenCanary - FTP Login Attempt]]
@@ -226,7 +226,7 @@
 - [[kb/sigma/rules/9db5446c_b44a_4291_8b89_fcab5609c3b3-opencanary_vnc_connection_attempt|OpenCanary - VNC Connection Attempt]]
 - [[kb/sigma/rules/9bd04a79_dabe_4f1f_a5ff_92430265c96b-privilege_escalation_via_named_pipe_impersonation|Privilege Escalation via Named Pipe Impersonation]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 - [[kb/sigma/rules/598290cf_5932_45cd_9123_be1e05ab4f2e-opencanary_rdp_new_connection_attempt|OpenCanary - RDP New Connection Attempt]]
 - [[kb/sigma/rules/ed74fe75_7594_4b4b_ae38_e38e3fd2eb23-outbound_rdp_connections_over_non_standard_tools|Outbound RDP Connections Over Non-Standard Tools]]
@@ -240,7 +240,7 @@
 - [[kb/sigma/rules/f72aa3e8_49f9_4c7d_bd74_f8ab84ff9bbb-suspicious_rdp_redirect_using_tscon|Suspicious RDP Redirect Using TSCON]]
 - [[kb/sigma/rules/ffa28e60_bdb1_46e0_9f82_05f7a61cc06e-user_added_to_remote_desktop_users_group|User Added to Remote Desktop Users Group]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.002]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
 
 - [[kb/sigma/rules/d7a95147_145f_4678_b85d_d1ff4a3bb3f6-cobaltstrike_service_installations_security|CobaltStrike Service Installations - Security]]
 - [[kb/sigma/rules/5a105d34_05fc_401e_8553_272b45c1522d-cobaltstrike_service_installations_system|CobaltStrike Service Installations - System]]
@@ -267,7 +267,7 @@
 - [[kb/sigma/rules/614a7e17_5643_4d89_b6fe_f9df1a79641c-wmiprvse_wbemcomn_dll_hijack_file|Wmiprvse Wbemcomn DLL Hijack - File]]
 - [[kb/sigma/rules/52a85084_6989_40c3_8f32_091e12e13f09-smbexec_py_service_installation|smbexec.py Service Installation]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.003]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
 
 - [[kb/sigma/rules/6e8fe0a8_ba0b_4a93_8f9e_82657e7a5984-baaupdate_exe_suspicious_dll_load|BaaUpdate.exe Suspicious DLL Load]]
 - [[kb/sigma/rules/c39f0c81_7348_4965_ab27_2fde35a1b641-dcom_internetexplorer_application_iertutil_dll_hijack_security|DCOM InternetExplorer.Application Iertutil DLL Hijack - Security]]
@@ -281,18 +281,18 @@
 - [[kb/sigma/rules/9f38c1db_e2ae_40bf_81d0_5b68f73fb512-suspicious_bitlocker_access_agent_update_utility_execution|Suspicious BitLocker Access Agent Update Utility Execution]]
 - [[kb/sigma/rules/78f10490_f2f4_4d19_a75b_4e0683bf3b8d-suspicious_speech_runtime_binary_child_process|Suspicious Speech Runtime Binary Child Process]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.005]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021005-vnc|T1021.005: VNC]]
 
 - [[kb/sigma/rules/871b9555_69ca_4993_99d3_35a59f9f3599-suspicious_ultravnc_execution|Suspicious UltraVNC Execution]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.006]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
 
 - [[kb/sigma/rules/c539afac_c12a_46ed_b1bd_5a5567c9f045-potential_remote_powershell_session_initiated|Potential Remote PowerShell Session Initiated]]
 - [[kb/sigma/rules/aa35a627_33fb_4d04_a165_d33b4afca3e8-remote_lsass_process_access_through_windows_remote_management|Remote LSASS Process Access Through Windows Remote Management]]
 - [[kb/sigma/rules/96b9f619_aa91_478f_bacb_c3e50f8df575-remote_powershell_session_ps_module|Remote PowerShell Session (PS Module)]]
 - [[kb/sigma/rules/bcfece3d_56fe_4545_9931_3b8e92927db1-winrs_local_command_execution|Winrs Local Command Execution]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 - [[kb/sigma/rules/e32d4572_9826_4738_b651_95fa63747e8a-base64_encoded_powershell_command_detected|Base64 Encoded PowerShell Command Detected]]
 - [[kb/sigma/rules/cc9cbe82_7bc0_4ef5_bc23_bbfb83947be7-file_decoded_from_base64_hex_via_certutil_exe|File Decoded From Base64/Hex Via Certutil.EXE]]
@@ -361,26 +361,26 @@
 - [[kb/sigma/rules/0c3fac91_5627_46e8_a6a8_a0d7b9b8ae1b-suspicious_get_variable_exe_creation|Suspicious Get-Variable.exe Creation]]
 - [[kb/sigma/rules/2617e7ed_adb7_40ba_b0f3_8f9945fe6c09-suspicious_system_user_process_creation|Suspicious SYSTEM User Process Creation]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.001]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027001-binary-padding|T1027.001: Binary Padding]]
 
 - [[kb/sigma/rules/c52a914f_3d8b_4b2a_bb75_b3991e75f8ba-binary_padding_linux|Binary Padding - Linux]]
 - [[kb/sigma/rules/95361ce5_c891_4b0a_87ca_e24607884a96-binary_padding_macos|Binary Padding - MacOS]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.004]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027004-compile-after-delivery|T1027.004: Compile After Delivery]]
 
 - [[kb/sigma/rules/b730a276_6b63_41b8_bcf8_55930c8fc6ee-csc_exe_execution_form_potentially_suspicious_parent|Csc.EXE Execution Form Potentially Suspicious Parent]]
 - [[kb/sigma/rules/7b10f171_7f04_47c7_9fa2_5be43c76e535-visual_basic_command_line_compiler_usage|Visual Basic Command Line Compiler Usage]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.005]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027005-indicator-removal-from-tools|T1027.005: Indicator Removal from Tools]]
 
 - [[kb/sigma/rules/6f8b3439_a203_45dc_a88b_abf57ea15ccf-hacktool_crackmapexec_powershell_obfuscation|HackTool - CrackMapExec PowerShell Obfuscation]]
 - [[kb/sigma/rules/f0ca6c24_3225_47d5_b1f5_352bf07ecfa7-pua_defendercheck_execution|PUA - DefenderCheck Execution]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.009]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027009-embedded-payloads|T1027.009: Embedded Payloads]]
 
 - [[kb/sigma/rules/deb9b646_a508_44ee_b7c9_d8965921c6b6-powershell_token_obfuscation_process_creation|Powershell Token Obfuscation - Process Creation]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.010]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027010-command-obfuscation|T1027.010: Command Obfuscation]]
 
 - [[kb/sigma/rules/7b6a7418_3afc_11f0_aff4_000d3abf478c-obfuscated_powershell_msi_install_via_windowsinstaller_com|Obfuscated PowerShell MSI Install via WindowsInstaller COM]]
 - [[kb/sigma/rules/50a0aa3d_ab16_4594_a8aa_5145a6e6792b-python_one_liners_with_base64_decoding|Python One-Liners with Base64 Decoding]]
@@ -389,7 +389,7 @@
 - [[kb/sigma/rules/7a1b4c5e_8f3d_4b9a_7c2e_1f4a5b8c6d9e-suspicious_space_characters_in_runmru_registry_path_clickfix|Suspicious Space Characters in RunMRU Registry Path - ClickFix]]
 - [[kb/sigma/rules/8f2a5c3d_9e4b_4a7c_8d1f_2e5a6b9c3d7e-suspicious_space_characters_in_typedpaths_registry_path_filefix|Suspicious Space Characters in TypedPaths Registry Path - FileFix]]
 
-## [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+## [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 - [[kb/sigma/rules/fa3c117a_bc0d_416e_a31b_0c0e80653efb-chopper_webshell_process_pattern|Chopper Webshell Process Pattern]]
 - [[kb/sigma/rules/d9367cbb_c2e0_47ce_bdc0_128cb6da898d-hacktool_sharpldapwhoami_execution|HackTool - SharpLdapWhoami Execution]]
@@ -403,7 +403,7 @@
 - [[kb/sigma/rules/e9142d84_fbe0_401d_ac50_3e519fb00c89-whoami_as_parameter|WhoAmI as Parameter]]
 - [[kb/sigma/rules/79ce34ca_af29_4d0e_b832_fc1b377020db-whoami_exe_execution_from_privileged_process|Whoami.EXE Execution From Privileged Process]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036]]
+## [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 - [[kb/sigma/rules/515c8be5_e5df_4c5e_8f6d_a4a2f05e4b48-createdump_process_dump|CreateDump Process Dump]]
 - [[kb/sigma/rules/f53714ec_5077_420e_ad20_907ff9bb2958-forfiles_exe_child_process_masquerading|Forfiles.EXE Child Process Masquerading]]
@@ -427,13 +427,13 @@
 - [[kb/sigma/rules/9fff585c_c33e_4a86_b3cd_39312079a65f-taskmgr_as_local_system|Taskmgr as LOCAL_SYSTEM]]
 - [[kb/sigma/rules/b8fd0e93_ff58_4cbd_8f48_1c114e342e62-windows_binaries_write_suspicious_extensions|Windows Binaries Write Suspicious Extensions]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.002]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036002-right-to-left-override|T1036.002: Right-to-Left Override]]
 
 - [[kb/sigma/rules/9cfe4b27_1e56_48b4_b7a8_d46851c91a44-mmc_executing_files_with_reversed_extensions_using_rtlo_abuse|MMC Executing Files with Reversed Extensions Using RTLO Abuse]]
 - [[kb/sigma/rules/ad691d92_15f2_4181_9aa4_723c74f9ddc3-potential_defense_evasion_via_right_to_left_override|Potential Defense Evasion Via Right-to-Left Override]]
 - [[kb/sigma/rules/979baf41_ca44_4540_9d0c_4fcef3b5a3a4-potential_file_extension_spoofing_using_right_to_left_override|Potential File Extension Spoofing Using Right-to-Left Override]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 - [[kb/sigma/rules/2ddef153_167b_4e89_86b6_757a9e65dcac-file_download_via_bitsadmin_to_a_suspicious_target_folder|File Download Via Bitsadmin To A Suspicious Target Folder]]
 - [[kb/sigma/rules/5b80a791_ad9b_4b75_bcc1_ad4e1e89c200-file_with_suspicious_extension_downloaded_via_bitsadmin|File With Suspicious Extension Downloaded Via Bitsadmin]]
@@ -451,11 +451,11 @@
 - [[kb/sigma/rules/99c840f2_2012_46fd_9141_c761987550ef-suspicious_download_from_direct_ip_via_bitsadmin|Suspicious Download From Direct IP Via Bitsadmin]]
 - [[kb/sigma/rules/8518ed3d_f7c9_4601_a26c_f361a4256a0c-suspicious_download_from_file_sharing_website_via_bitsadmin|Suspicious Download From File-Sharing Website Via Bitsadmin]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.004]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036004-masquerade-task-or-service|T1036.004: Masquerade Task or Service]]
 
 - [[kb/sigma/rules/9f8573c9_22b4_40e3_89c1_72bc2b8d49ab-scheduled_task_creation_masquerading_as_system_processes|Scheduled Task Creation Masquerading as System Processes]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.005]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036005-match-legitimate-resource-name-or-location|T1036.005: Match Legitimate Resource Name or Location]]
 
 - [[kb/sigma/rules/4922a5dd_6743_4fc2_8e81_144374280997-flash_player_update_from_suspicious_location|Flash Player Update from Suspicious Location]]
 - [[kb/sigma/rules/e22a6eb2_f8a5_44b5_8b44_a2dbd47b1144-potential_msiexec_masquerading|Potential MsiExec Masquerading]]
@@ -463,21 +463,21 @@
 - [[kb/sigma/rules/be58d2e2_06c8_4f58_b666_b99f6dc3b6cd-suspicious_process_masquerading_as_svchost_exe|Suspicious Process Masquerading As SvcHost.EXE]]
 - [[kb/sigma/rules/f17211f1_1f24_4d0c_829f_31e28dc93cdd-uncommon_svchost_command_line_parameter|Uncommon Svchost Command Line Parameter]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.007]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036007-double-file-extension|T1036.007: Double File Extension]]
 
 - [[kb/sigma/rules/b4926b47_a9d7_434c_b3a0_adc3fa0bd13e-suspicious_double_extension_files|Suspicious Double Extension Files]]
 - [[kb/sigma/rules/5e6a80c8_2d45_4633_9ef4_fa2671a39c5c-suspicious_parent_double_extension_file_execution|Suspicious Parent Double Extension File Execution]]
 
-## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.001]]
+## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037001-logon-script-(windows)|T1037.001: Logon Script (Windows)]]
 
 - [[kb/sigma/rules/21d856f9_9281_4ded_9377_51a1a6e2a432-potential_persistence_via_logon_scripts_commandline|Potential Persistence Via Logon Scripts - CommandLine]]
 - [[kb/sigma/rules/0a98a10c_685d_4ab0_bddc_b6bdd1d48458-uncommon_userinit_child_process|Uncommon Userinit Child Process]]
 
-## [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041]]
+## [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041: Exfiltration Over C2 Channel]]
 
 - [[kb/sigma/rules/b4e6b016_a2ac_4759_ad85_8000b300d61e-opencanary_tftp_request|OpenCanary - TFTP Request]]
 
-## [[kb/attack/techniques/T1046-network_service_discovery|T1046]]
+## [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]]
 
 - [[kb/sigma/rules/d557dc06_62e8_4468_a8e8_7984124908ce-hacktool_winpwn_execution|HackTool - WinPwn Execution]]
 - [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock]]
@@ -488,7 +488,7 @@
 - [[kb/sigma/rules/e8a677fd_248c_4eab_94df_de2f6f645884-opencanary_nmap_os_scan|OpenCanary - NMAP OS Scan]]
 - [[kb/sigma/rules/d7553d7b_f485_479c_b192_cdac6edd83a4-opencanary_nmap_xmas_scan|OpenCanary - NMAP XMAS Scan]]
 
-## [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
+## [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
 
 - [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process]]
 - [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution]]
@@ -512,25 +512,25 @@
 - [[kb/sigma/rules/7707a579_e0d8_4886_a853_ce47e4575aaa-wmiprvse_wbemcomn_dll_hijack|Wmiprvse Wbemcomn DLL Hijack]]
 - [[kb/sigma/rules/614a7e17_5643_4d89_b6fe_f9df1a79641c-wmiprvse_wbemcomn_dll_hijack_file|Wmiprvse Wbemcomn DLL Hijack - File]]
 
-## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048]]
+## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 
 - [[kb/sigma/rules/6ddff2e8_ea1a_45d0_8938_93dfc1d67ae7-pua_restic_backup_tool_execution|PUA - Restic Backup Tool Execution]]
 - [[kb/sigma/rules/d59d7842_9a21_4bc6_ba98_64bfe0091355-powershell_dnsexfiltration|Powershell DNSExfiltration]]
 - [[kb/sigma/rules/ab9e3b40_0c85_4ba1_aede_455d226fd124-suspicious_redirection_to_local_admin_share|Suspicious Redirection to Local Admin Share]]
 
-## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.001]]
+## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048001-exfiltration-over-symmetric-encrypted-non-c2-protocol|T1048.001: Exfiltration Over Symmetric Encrypted Non-C2 Protocol]]
 
 - [[kb/sigma/rules/98a96a5a_64a0_4c42_92c5_489da3866cb0-dns_exfiltration_and_tunneling_tools_execution|DNS Exfiltration and Tunneling Tools Execution]]
 
-## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 - [[kb/sigma/rules/982e9f2d_1a85_4d5b_aea4_31f5e97c6555-suspicious_webdav_client_execution_via_rundll32_exe|Suspicious WebDav Client Execution Via Rundll32.EXE]]
 
-## [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049]]
+## [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049: System Network Connections Discovery]]
 
 - [[kb/sigma/rules/b2317cfa_4a47_4ead_b3ff_297438c0bc2d-hacktool_sharpview_execution|HackTool - SharpView Execution]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053]]
+## [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
 
 - [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution]]
 - [[kb/sigma/rules/058f4380_962d_40a5_afce_50207d36d7e2-hacktool_crackmapexec_execution_patterns|HackTool - CrackMapExec Execution Patterns]]
@@ -541,18 +541,18 @@
 - [[kb/sigma/rules/4720b7df_40c3_48fd_bbdf_fd4b3c464f0d-scheduled_taskcache_change_by_uncommon_program|Scheduled TaskCache Change by Uncommon Program]]
 - [[kb/sigma/rules/80e1f67a_4596_4351_98f5_a9c3efabac95-suspicious_scheduled_task_write_to_system32_tasks|Suspicious Scheduled Task Write to System32 Tasks]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 - [[kb/sigma/rules/60fc936d_2eb0_4543_8a13_911c750a1dfc-interactive_at_job|Interactive AT Job]]
 - [[kb/sigma/rules/0fcd1c79_4eeb_4746_aba9_1b458f7a79cb-remote_schedule_task_lateral_movement_via_atsvc|Remote Schedule Task Lateral Movement via ATSvc]]
 - [[kb/sigma/rules/ace3ff54_e7fd_46bd_8ea0_74b49a0aca1d-remote_schedule_task_lateral_movement_via_itaskschedulerservice|Remote Schedule Task Lateral Movement via ITaskSchedulerService]]
 - [[kb/sigma/rules/aff229ab_f8cd_447b_b215_084d11e79eb0-remote_schedule_task_lateral_movement_via_sasec|Remote Schedule Task Lateral Movement via SASec]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.003]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053003-cron|T1053.003: Cron]]
 
 - [[kb/sigma/rules/1a2ea919_d11d_4d1e_8535_06cda13be20f-triple_cross_ebpf_rootkit_default_persistence|Triple Cross eBPF Rootkit Default Persistence]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 - [[kb/sigma/rules/56c217c3_2de2_479b_990f_5c109ba8458f-hacktool_default_powersploit_empire_scheduled_task_creation|HackTool - Default PowerSploit/Empire Scheduled Task Creation]]
 - [[kb/sigma/rules/7595ba94_cf3b_4471_aa03_4f6baa9e5fad-important_scheduled_task_deleted_disabled|Important Scheduled Task Deleted/Disabled]]
@@ -575,7 +575,7 @@
 - [[kb/sigma/rules/24c8392b_aa3c_46b7_a545_43f71657fe98-suspicious_schtasks_schedule_types|Suspicious Schtasks Schedule Types]]
 - [[kb/sigma/rules/970823b7_273b_460a_8afc_3a6811998529-uncommon_one_time_only_scheduled_task_at_00_00|Uncommon One Time Only Scheduled Task At 00:00]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055]]
+## [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 - [[kb/sigma/rules/d5601f8c_b26f_4ab0_9035_69e11a8d4ad2-cobaltstrike_named_pipe|CobaltStrike Named Pipe]]
 - [[kb/sigma/rules/0e7163d4_9e19_4fa7_9be6_000c61aad77a-cobaltstrike_named_pipe_pattern_regex|CobaltStrike Named Pipe Pattern Regex]]
@@ -596,7 +596,7 @@
 - [[kb/sigma/rules/1cc50f3f_1fc8_4acf_b2e9_6f172e1fdebd-suspicious_rundll32_invoking_inline_vbscript|Suspicious Rundll32 Invoking Inline VBScript]]
 - [[kb/sigma/rules/f17211f1_1f24_4d0c_829f_31e28dc93cdd-uncommon_svchost_command_line_parameter|Uncommon Svchost Command Line Parameter]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 - [[kb/sigma/rules/6309645e_122d_4c5b_bb2b_22e4f9c2fa42-hacktool_potential_cobaltstrike_process_injection|HackTool - Potential CobaltStrike Process Injection]]
 - [[kb/sigma/rules/6345b048_8441_43a7_9bed_541133633d7a-manageengine_endpoint_central_dctask64_exe_potential_abuse|ManageEngine Endpoint Central Dctask64.EXE Potential Abuse]]
@@ -604,29 +604,29 @@
 - [[kb/sigma/rules/e6474a1b_5390_49cd_ab41_8d88655f7394-renamed_mavinject_exe_execution|Renamed Mavinject.EXE Execution]]
 - [[kb/sigma/rules/340a090b_c4e9_412e_bb36_b4b16fe96f9b-renamed_zoho_dctask64_execution|Renamed ZOHO Dctask64 Execution]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.003]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055003-thread-execution-hijacking|T1055.003: Thread Execution Hijacking]]
 
 - [[kb/sigma/rules/7bdde3bf_2a42_4c39_aa31_a92b3e17afac-hacktool_littlecorporal_generated_maldoc_injection|HackTool - LittleCorporal Generated Maldoc Injection]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.009]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055009-proc-memory|T1055.009: Proc Memory]]
 
 - [[kb/sigma/rules/e497a24e_9345_4a62_9803_b06d7d7cb132-aslr_disabled_via_sysctl_or_direct_syscall_linux|ASLR Disabled Via Sysctl or Direct Syscall - Linux]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.012]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055012-process-hollowing|T1055.012: Process Hollowing]]
 
 - [[kb/sigma/rules/2e4e488a_6164_4811_9ea1_f960c7359c40-hacktool_cactustorch_remote_thread_creation|HackTool - CACTUSTORCH Remote Thread Creation]]
 - [[kb/sigma/rules/85d23b42_9a9d_4f8f_b3d7_d2733c1d58f5-hacktool_hollowreaper_execution|HackTool - HollowReaper Execution]]
 - [[kb/sigma/rules/f17211f1_1f24_4d0c_829f_31e28dc93cdd-uncommon_svchost_command_line_parameter|Uncommon Svchost Command Line Parameter]]
 
-## [[kb/attack/techniques/T1056-input_capture|T1056.001]]
+## [[kb/attack/techniques/T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
 
 - [[kb/sigma/rules/49aae26c_450e_448b_911d_b3c13d178dfc-linux_keylogging_with_pam_d|Linux Keylogging with Pam.d]]
 
-## [[kb/attack/techniques/T1057-process_discovery|T1057]]
+## [[kb/attack/techniques/T1057-process_discovery|T1057: Process Discovery]]
 
 - [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 - [[kb/sigma/rules/799a5f48_0ac1_4e0f_9152_71d137d48c2a-abusable_dll_potential_sideloading_from_suspicious_location|Abusable DLL Potential Sideloading From Suspicious Location]]
 - [[kb/sigma/rules/81a0ecb5_0a41_4ba1_b2ba_c944eb92bfa2-add_insecure_download_source_to_winget|Add Insecure Download Source To Winget]]
@@ -668,7 +668,7 @@
 - [[kb/sigma/rules/57b649ef_ff42_4fb0_8bf6_62da243a1708-windows_defender_threat_detected|Windows Defender Threat Detected]]
 - [[kb/sigma/rules/1277f594_a7d1_4f28_a2d3_73af5cbeab43-windows_shell_scripting_application_file_write_to_suspicious_folder|Windows Shell/Scripting Application File Write to Suspicious Folder]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 - [[kb/sigma/rules/1ab3c5ed_5baf_417b_bb6b_78ca33f6c3df-aws_ec2_startup_shell_script_change|AWS EC2 Startup Shell Script Change]]
 - [[kb/sigma/rules/8d31a8ce_46b5_4dd6_bdc3_680931f1db86-bad_opsec_powershell_code_artifacts|Bad Opsec Powershell Code Artifacts]]
@@ -786,14 +786,14 @@
 - [[kb/sigma/rules/8028c2c3_e25a_46e3_827f_bbb5abf181d7-wmimplant_hack_tool|WMImplant Hack Tool]]
 - [[kb/sigma/rules/3a6586ad_127a_4d3b_a677_1e6eacdf8fde-windows_shell_scripting_processes_spawning_suspicious_programs|Windows Shell/Scripting Processes Spawning Suspicious Programs]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.002]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
 
 - [[kb/sigma/rules/7794fa3c_edea_4cff_bec7_267dd4770fd7-clipboard_data_collection_via_osascript|Clipboard Data Collection Via OSAScript]]
 - [[kb/sigma/rules/f1408a58_0e94_4165_b80a_da9f96cf6fc3-jxa_in_memory_execution_via_osascript|JXA In-memory Execution Via OSAScript]]
 - [[kb/sigma/rules/b9d9b652_d8ed_4697_89a2_a1186ee680ac-osacompile_run_only_execution|OSACompile Run-Only Execution]]
 - [[kb/sigma/rules/69483748_1525_4a6c_95ca_90dc8d431b68-suspicious_microsoft_office_child_process_macos|Suspicious Microsoft Office Child Process - MacOS]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 - [[kb/sigma/rules/1ab3c5ed_5baf_417b_bb6b_78ca33f6c3df-aws_ec2_startup_shell_script_change|AWS EC2 Startup Shell Script Change]]
 - [[kb/sigma/rules/ee5e119b_1f75_4b34_add8_3be976961e39-conhost_exe_commandline_path_traversal|Conhost.exe CommandLine Path Traversal]]
@@ -810,7 +810,7 @@
 - [[kb/sigma/rules/e8a95b5e_c891_46e2_b33a_93937d3abc31-suspicious_hh_exe_execution|Suspicious HH.EXE Execution]]
 - [[kb/sigma/rules/023394c4_29d5_46ab_92b8_6a534c6f447b-suspicious_hwp_sub_processes|Suspicious HWP Sub Processes]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
 
 - [[kb/sigma/rules/1ab3c5ed_5baf_417b_bb6b_78ca33f6c3df-aws_ec2_startup_shell_script_change|AWS EC2 Startup Shell Script Change]]
 - [[kb/sigma/rules/41e5c73d_9983_4b69_bd03_e13b67e9623c-equation_group_indicators|Equation Group Indicators]]
@@ -822,7 +822,7 @@
 - [[kb/sigma/rules/179b3686_6271_4d87_807d_17d843a8af73-suspicious_filename_with_embedded_base64_commands|Suspicious Filename with Embedded Base64 Commands]]
 - [[kb/sigma/rules/738d9bcf_6999_4fdb_b4ac_3033037db8ab-suspicious_reverse_shell_command_line|Suspicious Reverse Shell Command Line]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
 
 - [[kb/sigma/rules/0bcfabcb_7929_47f4_93d6_b33fb67d34d1-adwind_rat_jrat_file_artifact|Adwind RAT / JRAT File Artifact]]
 - [[kb/sigma/rules/b730a276_6b63_41b8_bcf8_55930c8fc6ee-csc_exe_execution_form_potentially_suspicious_parent|Csc.EXE Execution Form Potentially Suspicious Parent]]
@@ -839,12 +839,12 @@
 - [[kb/sigma/rules/002bdb95_0cf1_46a6_9e08_d38c128a6127-wscript_or_cscript_dropper_file|WScript or CScript Dropper - File]]
 - [[kb/sigma/rules/3a6586ad_127a_4d3b_a677_1e6eacdf8fde-windows_shell_scripting_processes_spawning_suspicious_programs|Windows Shell/Scripting Processes Spawning Suspicious Programs]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.006]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
 
 - [[kb/sigma/rules/50a0aa3d_ab16_4594_a8aa_5145a6e6792b-python_one_liners_with_base64_decoding|Python One-Liners with Base64 Decoding]]
 - [[kb/sigma/rules/55e862a8_dd9c_4651_807a_f21fcad56716-python_one_liners_with_base64_decoding_linux|Python One-Liners with Base64 Decoding - Linux]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 - [[kb/sigma/rules/0bcfabcb_7929_47f4_93d6_b33fb67d34d1-adwind_rat_jrat_file_artifact|Adwind RAT / JRAT File Artifact]]
 - [[kb/sigma/rules/b730a276_6b63_41b8_bcf8_55930c8fc6ee-csc_exe_execution_form_potentially_suspicious_parent|Csc.EXE Execution Form Potentially Suspicious Parent]]
@@ -859,17 +859,17 @@
 - [[kb/sigma/rules/e8a95b5e_c891_46e2_b33a_93937d3abc31-suspicious_hh_exe_execution|Suspicious HH.EXE Execution]]
 - [[kb/sigma/rules/002bdb95_0cf1_46a6_9e08_d38c128a6127-wscript_or_cscript_dropper_file|WScript or CScript Dropper - File]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.009]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059009-cloud-api|T1059.009: Cloud API]]
 
 - [[kb/sigma/rules/db014773_b1d3_46bd_ba26_133337c0ffee-aws_iam_s3browser_loginprofile_creation|AWS IAM S3Browser LoginProfile Creation]]
 - [[kb/sigma/rules/db014773_7375_4f4e_b83b_133337c0ffee-aws_iam_s3browser_templated_s3_bucket_policy_creation|AWS IAM S3Browser Templated S3 Bucket Policy Creation]]
 - [[kb/sigma/rules/db014773_d9d9_4792_91e5_133337c0ffee-aws_iam_s3browser_user_or_accesskey_creation|AWS IAM S3Browser User or AccessKey Creation]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.012]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059012-hypervisor-cli|T1059.012: Hypervisor CLI]]
 
 - [[kb/sigma/rules/9691f58d_92c1_4416_8bf3_2edd753ec9cf-esxi_admin_permission_assigned_to_account_via_esxcli|ESXi Admin Permission Assigned To Account Via ESXCLI]]
 
-## [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
+## [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 
 - [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event]]
 - [[kb/sigma/rules/18b042f0_2ecd_4b6e_9f8d_aa7a7e7de781-buffer_overflow_attempts|Buffer Overflow Attempts]]
@@ -883,13 +883,13 @@
 - [[kb/sigma/rules/dcdbc940_0bff_46b2_95f3_2d73f848e33b-suspicious_spool_service_child_process|Suspicious Spool Service Child Process]]
 - [[kb/sigma/rules/7aaaf4b8_e47c_4295_92ee_6ed40a6f60c8-vulnerable_driver_load|Vulnerable Driver Load]]
 
-## [[kb/attack/techniques/T1069-permission_groups_discovery|T1069]]
+## [[kb/attack/techniques/T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
 
 - [[kb/sigma/rules/7d0d0329_0ef1_4e84_a9f5_49500f9d7c6c-malicious_powershell_commandlets_poshmodule|Malicious PowerShell Commandlets - PoshModule]]
 - [[kb/sigma/rules/02030f2f_6199_49ec_b258_ea71b07e03dc-malicious_powershell_commandlets_processcreation|Malicious PowerShell Commandlets - ProcessCreation]]
 - [[kb/sigma/rules/89819aa4_bbd6_46bc_88ec_c7f7fe30efa6-malicious_powershell_commandlets_scriptblock|Malicious PowerShell Commandlets - ScriptBlock]]
 
-## [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
+## [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
 
 - [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files]]
 - [[kb/sigma/rules/f376c8a7_a2d0_4ddc_aa0c_16c17236d962-hacktool_bloodhound_sharphound_execution|HackTool - Bloodhound/Sharphound Execution]]
@@ -897,7 +897,7 @@
 - [[kb/sigma/rules/02030f2f_6199_49ec_b258_ea71b07e03dc-malicious_powershell_commandlets_processcreation|Malicious PowerShell Commandlets - ProcessCreation]]
 - [[kb/sigma/rules/89819aa4_bbd6_46bc_88ec_c7f7fe30efa6-malicious_powershell_commandlets_scriptblock|Malicious PowerShell Commandlets - ScriptBlock]]
 
-## [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
+## [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 
 - [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files]]
 - [[kb/sigma/rules/f376c8a7_a2d0_4ddc_aa0c_16c17236d962-hacktool_bloodhound_sharphound_execution|HackTool - Bloodhound/Sharphound Execution]]
@@ -910,7 +910,7 @@
 - [[kb/sigma/rules/df55196f_f105_44d3_a675_e9dfb6cc2f2b-renamed_adfind_execution|Renamed AdFind Execution]]
 - [[kb/sigma/rules/ef61af62_bc74_4f58_b49b_626448227652-suspicious_active_directory_database_snapshot_via_adexplorer|Suspicious Active Directory Database Snapshot Via ADExplorer]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070]]
+## [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]]
 
 - [[kb/sigma/rules/bde47d4b_9987_405c_94c7_b080410e8ea7-clearing_windows_console_history|Clearing Windows Console History]]
 - [[kb/sigma/rules/115fdba9_f017_42e6_84cf_d5573bf2ddf8-disable_of_etw_trace_powershell|Disable of ETW Trace - Powershell]]
@@ -922,18 +922,18 @@
 - [[kb/sigma/rules/4d7cda18_1b12_4e52_b45c_d28653210df8-sysmon_driver_unloaded_via_fltmc_exe|Sysmon Driver Unloaded Via Fltmc.EXE]]
 - [[kb/sigma/rules/07bdd2f5_9c58_4f38_aec8_e101bb79ef8d-terminal_server_client_connection_history_cleared_registry|Terminal Server Client Connection History Cleared - Registry]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.001]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
 
 - [[kb/sigma/rules/100ef69e_3327_481c_8e5c_6d80d9507556-important_windows_eventlog_cleared|Important Windows Eventlog Cleared]]
 - [[kb/sigma/rules/d99b79d2_0a6f_4f46_ad8b_260b6e17f982-security_eventlog_cleared|Security Eventlog Cleared]]
 - [[kb/sigma/rules/cc36992a_4671_4f21_a91d_6c2b72a2edf5-suspicious_eventlog_clearing_or_configuration_change_activity|Suspicious Eventlog Clearing or Configuration Change Activity]]
 - [[kb/sigma/rules/cd1f961e_0b96_436b_b7c6_38da4583ec00-suspicious_windows_trace_etw_session_tamper_via_logman_exe|Suspicious Windows Trace ETW Session Tamper Via Logman.EXE]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.002]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
 
 - [[kb/sigma/rules/3fcc9b35_39e4_44c0_a2ad_9e82b6902b31-syslog_clearing_or_removal_via_system_utilities|Syslog Clearing or Removal Via System Utilities]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.003]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 
 - [[kb/sigma/rules/ceb407f6_8277_439b_951f_e4210e3ed956-cisco_clear_logs|Cisco Clear Logs]]
 - [[kb/sigma/rules/bde47d4b_9987_405c_94c7_b080410e8ea7-clearing_windows_console_history|Clearing Windows Console History]]
@@ -942,17 +942,17 @@
 - [[kb/sigma/rules/c11aecef_9c37_45a6_9c07_bc0782f963fd-runmru_registry_key_deletion|RunMRU Registry Key Deletion]]
 - [[kb/sigma/rules/3a9b8c1e_5b2e_4f7a_9d1c_2a7f3b6e1c55-runmru_registry_key_deletion_registry|RunMRU Registry Key Deletion - Registry]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.004]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070004-file-deletion|T1070.004: File Deletion]]
 
 - [[kb/sigma/rules/0a1f9d29_6465_4776_b091_7f43b26e4c89-prefetch_file_deleted|Prefetch File Deleted]]
 - [[kb/sigma/rules/54786ddc_5b8a_11ed_9b6a_0242ac120002-suspicious_ping_del_command_combination|Suspicious Ping/Del Command Combination]]
 
-## [[kb/attack/techniques/T1071-application_layer_protocol|T1071]]
+## [[kb/attack/techniques/T1071-application_layer_protocol|T1071: Application Layer Protocol]]
 
 - [[kb/sigma/rules/75c505b1_711d_4f68_a357_8c3fe37dbf2d-hacktool_silenttrinity_stager_dll_load|HackTool - SILENTTRINITY Stager DLL Load]]
 - [[kb/sigma/rules/03552375_cc2c_4883_bbe4_7958d5a980be-hacktool_silenttrinity_stager_execution|HackTool - SILENTTRINITY Stager Execution]]
 
-## [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
+## [[kb/attack/techniques/T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 
 - [[kb/sigma/rules/6ec820f2_e963_4801_9127_d8b2dce4d31b-apt_user_agent|APT User Agent]]
 - [[kb/sigma/rules/8ccd35a2_1c7c_468b_b568_ac6cdf80eec3-bitsadmin_to_uncommon_ip_server_address|Bitsadmin to Uncommon IP Server Address]]
@@ -971,7 +971,7 @@
 - [[kb/sigma/rules/3eaf6218_3bed_4d8a_8707_274096f12a18-wannacry_killswitch_domain|Wannacry Killswitch Domain]]
 - [[kb/sigma/rules/e09aed7a_09e0_4c9a_90dd_f0d52507347e-windows_webdav_user_agent|Windows WebDAV User Agent]]
 
-## [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
+## [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
 
 - [[kb/sigma/rules/2975af79_28c4_4d2f_a951_9095f229df29-cobalt_strike_dns_beaconing|Cobalt Strike DNS Beaconing]]
 - [[kb/sigma/rules/98a96a5a_64a0_4c42_92c5_489da3866cb0-dns_exfiltration_and_tunneling_tools_execution|DNS Exfiltration and Tunneling Tools Execution]]
@@ -982,11 +982,11 @@
 - [[kb/sigma/rules/0d18728b_f5bf_4381_9dcf_915539fff6c2-suspicious_cobalt_strike_dns_beaconing_dns_client|Suspicious Cobalt Strike DNS Beaconing - DNS Client]]
 - [[kb/sigma/rules/f356a9c4_effd_4608_bbf8_408afd5cd006-suspicious_cobalt_strike_dns_beaconing_sysmon|Suspicious Cobalt Strike DNS Beaconing - Sysmon]]
 
-## [[kb/attack/techniques/T1072-software_deployment_tools|T1072]]
+## [[kb/attack/techniques/T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 
 - [[kb/sigma/rules/b4c8da4a_1c12_46b0_8a2b_0a8521d03442-restricted_software_access_by_srp|Restricted Software Access By SRP]]
 
-## [[kb/attack/techniques/T1078-valid_accounts|T1078]]
+## [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
 
 - [[kb/sigma/rules/6f583da0_3a90_4566_a4ed_83c09fe18bbf-account_created_and_deleted_within_a_close_time_frame|Account Created And Deleted Within A Close Time Frame]]
 - [[kb/sigma/rules/be4d9c86_d702_4030_b52e_c7859110e5e8-activity_from_anonymous_ip_address|Activity From Anonymous IP Address]]
@@ -1014,11 +1014,11 @@
 - [[kb/sigma/rules/128faeef_79dd_44ca_b43c_a9e236a60f49-unfamiliar_sign_in_properties|Unfamiliar Sign-In Properties]]
 - [[kb/sigma/rules/39698b3f_da92_4bc6_bfb5_645a98386e45-win_susp_computer_name_containing_samtheadmin|Win Susp Computer Name Containing Samtheadmin]]
 
-## [[kb/attack/techniques/T1078-valid_accounts|T1078.002]]
+## [[kb/attack/techniques/T1078-valid_accounts#^t1078002-domain-accounts|T1078.002: Domain Accounts]]
 
 - [[kb/sigma/rules/352a918a_34d8_4882_8470_44830c507aa3-malicious_usage_of_imds_credentials_outside_of_aws_infrastructure|Malicious Usage Of IMDS Credentials Outside Of AWS Infrastructure]]
 
-## [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+## [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 - [[kb/sigma/rules/db014773_b1d3_46bd_ba26_133337c0ffee-aws_iam_s3browser_loginprofile_creation|AWS IAM S3Browser LoginProfile Creation]]
 - [[kb/sigma/rules/db014773_7375_4f4e_b83b_133337c0ffee-aws_iam_s3browser_templated_s3_bucket_policy_creation|AWS IAM S3Browser Templated S3 Bucket Policy Creation]]
@@ -1037,7 +1037,7 @@
 - [[kb/sigma/rules/49a268a4_72f4_4e38_8a7b_885be690c5b5-user_added_to_privilege_role|User Added To Privilege Role]]
 - [[kb/sigma/rules/11c767ae_500b_423b_bae3_b234450736ed-users_added_to_global_or_device_admin_roles|Users Added to Global or Device Admin Roles]]
 
-## [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
+## [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
 
 - [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution]]
 - [[kb/sigma/rules/d557dc06_62e8_4468_a8e8_7984124908ce-hacktool_winpwn_execution|HackTool - WinPwn Execution]]
@@ -1047,7 +1047,7 @@
 - [[kb/sigma/rules/e34cfa0c_0a50_4210_9cb3_5632d08eb041-potential_gobrat_file_discovery_via_grep|Potential GobRAT File Discovery Via Grep]]
 - [[kb/sigma/rules/7124aebe_4cd7_4ccb_8df0_6d6b93c96795-suspicious_kernel_dump_using_dtrace|Suspicious Kernel Dump Using Dtrace]]
 
-## [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
+## [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 
 - [[kb/sigma/rules/fca949cc_79ca_446e_8064_01aa7e52ece5-hacktool_pchunter_execution|HackTool - PCHunter Execution]]
 - [[kb/sigma/rules/38646daa_e78f_4ace_9de0_55547b2d30da-pua_seatbelt_execution|PUA - Seatbelt Execution]]
@@ -1057,7 +1057,7 @@
 - [[kb/sigma/rules/093d68c7_762a_42f4_9f46_95e79142571a-shell_execution_via_nice_linux|Shell Execution via Nice - Linux]]
 - [[kb/sigma/rules/7ab8f73a_fcff_428b_84aa_6a5ff7877dea-vim_gtfobin_abuse_linux|Vim GTFOBin Abuse - Linux]]
 
-## [[kb/attack/techniques/T1087-account_discovery|T1087]]
+## [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]]
 
 - [[kb/sigma/rules/fa3c117a_bc0d_416e_a31b_0c0e80653efb-chopper_webshell_process_pattern|Chopper Webshell Process Pattern]]
 - [[kb/sigma/rules/e92a4287_e072_4a40_9739_370c106bb750-hacktool_soaphound_execution|HackTool - SOAPHound Execution]]
@@ -1072,7 +1072,7 @@
 - [[kb/sigma/rules/bed2a484_9348_4143_8a8a_b801c979301c-webshell_detection_with_command_line_keywords|Webshell Detection With Command Line Keywords]]
 - [[kb/sigma/rules/4ebc877f_4612_45cb_b3a5_8e3834db36c9-webshell_hacking_activity_patterns|Webshell Hacking Activity Patterns]]
 
-## [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
+## [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
 
 - [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files]]
 - [[kb/sigma/rules/f376c8a7_a2d0_4ddc_aa0c_16c17236d962-hacktool_bloodhound_sharphound_execution|HackTool - Bloodhound/Sharphound Execution]]
@@ -1080,7 +1080,7 @@
 - [[kb/sigma/rules/02030f2f_6199_49ec_b258_ea71b07e03dc-malicious_powershell_commandlets_processcreation|Malicious PowerShell Commandlets - ProcessCreation]]
 - [[kb/sigma/rules/89819aa4_bbd6_46bc_88ec_c7f7fe30efa6-malicious_powershell_commandlets_scriptblock|Malicious PowerShell Commandlets - ScriptBlock]]
 
-## [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
+## [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 
 - [[kb/sigma/rules/35ba1d85_724d_42a3_889f_2e2362bcaf23-ad_privileged_users_or_groups_reconnaissance|AD Privileged Users or Groups Reconnaissance]]
 - [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files]]
@@ -1094,11 +1094,11 @@
 - [[kb/sigma/rules/df55196f_f105_44d3_a675_e9dfb6cc2f2b-renamed_adfind_execution|Renamed AdFind Execution]]
 - [[kb/sigma/rules/ef61af62_bc74_4f58_b49b_626448227652-suspicious_active_directory_database_snapshot_via_adexplorer|Suspicious Active Directory Database Snapshot Via ADExplorer]]
 
-## [[kb/attack/techniques/T1087-account_discovery|T1087.004]]
+## [[kb/attack/techniques/T1087-account_discovery#^t1087004-cloud-account|T1087.004: Cloud Account]]
 
 - [[kb/sigma/rules/35b781cc_1a08_4a5a_80af_42fd7c315c6b-discovery_using_azurehound|Discovery Using AzureHound]]
 
-## [[kb/attack/techniques/T1090-proxy|T1090]]
+## [[kb/attack/techniques/T1090-proxy|T1090: Proxy]]
 
 - [[kb/sigma/rules/3ab65069_d82a_4d44_a759_466661a082d1-communication_to_localtonet_tunneling_service_initiated|Communication To LocaltoNet Tunneling Service Initiated]]
 - [[kb/sigma/rules/c4568f5d_131f_4e78_83d4_45b2da0ec4f1-communication_to_localtonet_tunneling_service_initiated_linux|Communication To LocaltoNet Tunneling Service Initiated - Linux]]
@@ -1115,28 +1115,28 @@
 - [[kb/sigma/rules/782d6f3e_4c5d_4b8c_92a3_1d05fed72e63-rdp_port_forwarding_rule_added_via_netsh_exe|RDP Port Forwarding Rule Added Via Netsh.EXE]]
 - [[kb/sigma/rules/821b4dc3_1295_41e7_b157_39ab212dd6bd-sign_in_from_malware_infected_ip|Sign-In From Malware Infected IP]]
 
-## [[kb/attack/techniques/T1090-proxy|T1090.001]]
+## [[kb/attack/techniques/T1090-proxy#^t1090001-internal-proxy|T1090.001: Internal Proxy]]
 
 - [[kb/sigma/rules/cf93e05e_d798_4d9e_b522_b0248dc61eaf-hacktool_sharpchisel_execution|HackTool - SharpChisel Execution]]
 - [[kb/sigma/rules/8b0e12da_d3c3_49db_bb4f_256703f380e5-pua_chisel_tunneling_tool_execution|PUA - Chisel Tunneling Tool Execution]]
 - [[kb/sigma/rules/5bed80b6_b3e8_428e_a3ae_d3c757589e41-rdp_over_reverse_ssh_tunnel_wfp|RDP over Reverse SSH Tunnel WFP]]
 - [[kb/sigma/rules/e0c69ebd_b54f_4aed_8ae3_e3467843f3f0-renamed_cloudflared_exe_execution|Renamed Cloudflared.EXE Execution]]
 
-## [[kb/attack/techniques/T1090-proxy|T1090.002]]
+## [[kb/attack/techniques/T1090-proxy#^t1090002-external-proxy|T1090.002: External Proxy]]
 
 - [[kb/sigma/rules/5bed80b6_b3e8_428e_a3ae_d3c757589e41-rdp_over_reverse_ssh_tunnel_wfp|RDP over Reverse SSH Tunnel WFP]]
 
-## [[kb/attack/techniques/T1090-proxy|T1090.003]]
+## [[kb/attack/techniques/T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 
 - [[kb/sigma/rules/b55ca2a3_7cff_4dda_8bdd_c7bfa63bf544-dns_query_tor_onion_address_sysmon|DNS Query Tor .Onion Address - Sysmon]]
 - [[kb/sigma/rules/8384bd26_bde6_4da9_8e5d_4174a7a47ca2-query_tor_onion_address_dns_client|Query Tor Onion Address - DNS Client]]
 - [[kb/sigma/rules/62f7c9bf_9135_49b2_8aeb_1e54a6ecc13c-tor_client_browser_execution|Tor Client/Browser Execution]]
 
-## [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095]]
+## [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095: Non-Application Layer Protocol]]
 
 - [[kb/sigma/rules/e31033fc_33f0_4020_9a16_faf9b31cbf08-pua_netcat_suspicious_execution|PUA - Netcat Suspicious Execution]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+## [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 - [[kb/sigma/rules/055fb148_60f8_462d_ad16_26926ce050f1-aws_user_login_profile_was_modified|AWS User Login Profile Was Modified]]
 - [[kb/sigma/rules/300bac00_e041_4ee2_9c36_e262656a6ecc-active_directory_user_backdoors|Active Directory User Backdoors]]
@@ -1150,19 +1150,19 @@
 - [[kb/sigma/rules/0ac15ec3_d24f_4246_aa2a_3077bb1cf90e-privileged_user_has_been_created|Privileged User Has Been Created]]
 - [[kb/sigma/rules/10fb649c_3600_4d37_b1e6_56ea90bb7e09-user_added_to_highly_privileged_group|User Added To Highly Privileged Group]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.001]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098001-additional-cloud-credentials|T1098.001: Additional Cloud Credentials]]
 
 - [[kb/sigma/rules/cbb67ecc_fb70_4467_9350_c910bdf7c628-added_credentials_to_existing_application|Added Credentials to Existing Application]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.003]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098003-additional-cloud-roles|T1098.003: Additional Cloud Roles]]
 
 - [[kb/sigma/rules/5aecf3d5_f8a0_48e7_99be_3a759df7358f-app_granted_privileged_delegated_or_app_permissions|App Granted Privileged Delegated Or App Permissions]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.005]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098005-device-registration|T1098.005: Device Registration]]
 
 - [[kb/sigma/rules/a4b25073_8947_489c_a8dd_93b41c23f26d-windows_laps_credential_dump_from_entra_id|Windows LAPS Credential Dump From Entra ID]]
 
-## [[kb/attack/techniques/T1102-web_service|T1102]]
+## [[kb/attack/techniques/T1102-web_service|T1102: Web Service]]
 
 - [[kb/sigma/rules/3ab65069_d82a_4d44_a759_466661a082d1-communication_to_localtonet_tunneling_service_initiated|Communication To LocaltoNet Tunneling Service Initiated]]
 - [[kb/sigma/rules/c4568f5d_131f_4e78_83d4_45b2da0ec4f1-communication_to_localtonet_tunneling_service_initiated_linux|Communication To LocaltoNet Tunneling Service Initiated - Linux]]
@@ -1172,18 +1172,18 @@
 - [[kb/sigma/rules/18249279_932f_45e2_b37a_8925f2597670-process_initiated_network_connection_to_ngrok_domain|Process Initiated Network Connection To Ngrok Domain]]
 - [[kb/sigma/rules/cea2b7ea_792b_405f_95a1_b903ea06458f-suspicious_child_process_of_manage_engine_servicedesk|Suspicious Child Process Of Manage Engine ServiceDesk]]
 
-## [[kb/attack/techniques/T1102-web_service|T1102.001]]
+## [[kb/attack/techniques/T1102-web_service#^t1102001-dead-drop-resolver|T1102.001: Dead Drop Resolver]]
 
 - [[kb/sigma/rules/297ae038_edc2_4b2e_bb3e_7c5fc94dd5c7-new_connection_initiated_to_potential_dead_drop_resolver_domain|New Connection Initiated To Potential Dead Drop Resolver Domain]]
 - [[kb/sigma/rules/2b1ee7e4_89b6_4739_b7bb_b811b6607e5e-pwndrp_access|PwnDrp Access]]
 - [[kb/sigma/rules/5468045b_4fcc_4d1a_973c_c9c9578edacb-raw_paste_service_access|Raw Paste Service Access]]
 
-## [[kb/attack/techniques/T1102-web_service|T1102.003]]
+## [[kb/attack/techniques/T1102-web_service#^t1102003-one-way-communication|T1102.003: One-Way Communication]]
 
 - [[kb/sigma/rules/2b1ee7e4_89b6_4739_b7bb_b811b6607e5e-pwndrp_access|PwnDrp Access]]
 - [[kb/sigma/rules/5468045b_4fcc_4d1a_973c_c9c9578edacb-raw_paste_service_access|Raw Paste Service Access]]
 
-## [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+## [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 - [[kb/sigma/rules/21dd6d38_2b18_4453_9404_a0fe4a0cc288-curl_download_and_execute_combination|Curl Download And Execute Combination]]
 - [[kb/sigma/rules/9801abb8_e297_4dbf_9fbd_57dde0e830ad-file_download_and_execution_via_ieexec_exe|File Download And Execution Via IEExec.EXE]]
@@ -1216,7 +1216,7 @@
 - [[kb/sigma/rules/5e3cc4d8_3e68_43db_8656_eaaeefdec9cc-suspicious_invoke_webrequest_execution|Suspicious Invoke-WebRequest Execution]]
 - [[kb/sigma/rules/0dba975d_a193_4ed1_a067_424df57570d1-uncommon_network_connection_initiated_by_certutil_exe|Uncommon Network Connection Initiated By Certutil.EXE]]
 
-## [[kb/attack/techniques/T1106-native_api|T1106]]
+## [[kb/attack/techniques/T1106-native_api|T1106: Native API]]
 
 - [[kb/sigma/rules/808146b2_9332_4d78_9416_d7e47012d83d-bpfdoor_abnormal_process_id_or_lock_file_accessed|BPFDoor Abnormal Process ID or Lock File Accessed]]
 - [[kb/sigma/rules/09706624_b7f6_455d_9d02_adee024cee1d-hacktool_cobaltstrike_bof_injection_pattern|HackTool - CobaltStrike BOF Injection Pattern]]
@@ -1228,7 +1228,7 @@
 - [[kb/sigma/rules/03d83090_8cba_44a0_b02f_0b756a050306-potential_winapi_calls_via_powershell_scripts|Potential WinAPI Calls Via PowerShell Scripts]]
 - [[kb/sigma/rules/e32f92d1_523e_49c3_9374_bdb13b46a3ba-suspicious_mshta_exe_execution_patterns|Suspicious Mshta.EXE Execution Patterns]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110]]
+## [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
 
 - [[kb/sigma/rules/78d5cab4_557e_454f_9fb9_a222bd0d5edc-external_remote_smb_logon_from_public_ip|External Remote SMB Logon from Public IP]]
 - [[kb/sigma/rules/c42a3073_30fb_48ae_8c99_c23ada84b103-hack_tool_user_agent|Hack Tool User Agent]]
@@ -1239,15 +1239,15 @@
 - [[kb/sigma/rules/b4a6d707_9430_4f5f_af68_0337f52d5c42-sign_in_failure_due_to_conditional_access_requirements_not_met|Sign-in Failure Due to Conditional Access Requirements Not Met]]
 - [[kb/sigma/rules/60f6535a_760f_42a9_be3f_c9a0a025906e-use_of_legacy_authentication_protocols|Use of Legacy Authentication Protocols]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110.001]]
+## [[kb/attack/techniques/T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
 
 - [[kb/sigma/rules/aaafa146_074c_11eb_adc1_0242ac120002-hacktool_hydra_password_bruteforce_execution|HackTool - Hydra Password Bruteforce Execution]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110.002]]
+## [[kb/attack/techniques/T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]]
 
 - [[kb/sigma/rules/39b31e81_5f5f_4898_9c0e_2160cfc0f9bf-hacktool_hashcat_password_cracker_execution|HackTool - Hashcat Password Cracker Execution]]
 
-## [[kb/attack/techniques/T1112-modify_registry|T1112]]
+## [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 - [[kb/sigma/rules/e3fdf743_f05b_4051_990a_b66919be1743-change_user_account_associated_with_the_fax_service|Change User Account Associated with the FAX Service]]
 - [[kb/sigma/rules/9e3357ba_09d4_4fbd_a7c5_ad6386314513-change_the_fax_dll|Change the Fax Dll]]
@@ -1294,33 +1294,33 @@
 - [[kb/sigma/rules/d6a9b252_c666_4de6_8806_5561bbbd3bdc-wdigest_enable_uselogoncredential|Wdigest Enable UseLogonCredential]]
 - [[kb/sigma/rules/ba226dcf_d390_4642_b9af_b534872f1156-windows_event_log_access_tampering_via_registry|Windows Event Log Access Tampering Via Registry]]
 
-## [[kb/attack/techniques/T1114-email_collection|T1114]]
+## [[kb/attack/techniques/T1114-email_collection|T1114: Email Collection]]
 
 - [[kb/sigma/rules/25676e10_2121_446e_80a4_71ff8506af47-exchange_powershell_snap_ins_usage|Exchange PowerShell Snap-Ins Usage]]
 - [[kb/sigma/rules/24549159_ac1b_479c_8175_d42aea947cae-hacktool_ruler|Hacktool Ruler]]
 
-## [[kb/attack/techniques/T1114-email_collection|T1114.003]]
+## [[kb/attack/techniques/T1114-email_collection#^t1114003-email-forwarding-rule|T1114.003: Email Forwarding Rule]]
 
 - [[kb/sigma/rules/27e4f1d6_ae72_4ea0_8a67_77a73a289c3d-suspicious_inbox_forwarding_identity_protection|Suspicious Inbox Forwarding Identity Protection]]
 
-## [[kb/attack/techniques/T1115-clipboard_data|T1115]]
+## [[kb/attack/techniques/T1115-clipboard_data|T1115: Clipboard Data]]
 
 - [[kb/sigma/rules/7794fa3c_edea_4cff_bec7_267dd4770fd7-clipboard_data_collection_via_osascript|Clipboard Data Collection Via OSAScript]]
 
-## [[kb/attack/techniques/T1123-audio_capture|T1123]]
+## [[kb/attack/techniques/T1123-audio_capture|T1123: Audio Capture]]
 
 - [[kb/sigma/rules/e30de276_68ec_435c_ab99_ef3befec6c61-opencanary_sip_request|OpenCanary - SIP Request]]
 - [[kb/sigma/rules/62120148_6b7a_42be_8b91_271c04e281a3-suspicious_camera_and_microphone_access|Suspicious Camera and Microphone Access]]
 
-## [[kb/attack/techniques/T1124-system_time_discovery|T1124]]
+## [[kb/attack/techniques/T1124-system_time_discovery|T1124: System Time Discovery]]
 
 - [[kb/sigma/rules/6da2c9f5_7c53_401b_aacb_92c040ce1215-use_of_w32tm_as_timer|Use of W32tm as Timer]]
 
-## [[kb/attack/techniques/T1125-video_capture|T1125]]
+## [[kb/attack/techniques/T1125-video_capture|T1125: Video Capture]]
 
 - [[kb/sigma/rules/62120148_6b7a_42be_8b91_271c04e281a3-suspicious_camera_and_microphone_access|Suspicious Camera and Microphone Access]]
 
-## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 - [[kb/sigma/rules/d047726b_c71c_4048_a99b_2e2f50dc107d-kavremover_dropped_binary_lolbin_usage|Kavremover Dropped Binary LOLBIN Usage]]
 - [[kb/sigma/rules/6640f31c_01ad_49b5_beb5_83498a5cd8bd-potential_arbitrary_code_execution_via_node_exe|Potential Arbitrary Code Execution Via Node.EXE]]
@@ -1330,15 +1330,15 @@
 - [[kb/sigma/rules/e890acee_d488_420e_8f20_d9b19b3c3d43-suspicious_file_created_by_arcsoc_exe|Suspicious File Created by ArcSOC.exe]]
 - [[kb/sigma/rules/a9e416a8_e613_4f8b_88b8_a7d1d1af2f61-suspicious_use_of_csharp_interactive_console|Suspicious Use of CSharp Interactive Console]]
 
-## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 - [[kb/sigma/rules/50e54b8d_ad73_43f8_96a1_5191685b17a4-silenttrinity_stager_msbuild_activity|Silenttrinity Stager Msbuild Activity]]
 
-## [[kb/attack/techniques/T1132-data_encoding|T1132.001]]
+## [[kb/attack/techniques/T1132-data_encoding#^t1132001-standard-encoding|T1132.001: Standard Encoding]]
 
 - [[kb/sigma/rules/98a96a5a_64a0_4c42_92c5_489da3866cb0-dns_exfiltration_and_tunneling_tools_execution|DNS Exfiltration and Tunneling Tools Execution]]
 
-## [[kb/attack/techniques/T1133-external_remote_services|T1133]]
+## [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
 
 - [[kb/sigma/rules/78d5cab4_557e_454f_9fb9_a222bd0d5edc-external_remote_smb_logon_from_public_ip|External Remote SMB Logon from Public IP]]
 - [[kb/sigma/rules/598290cf_5932_45cd_9123_be1e05ab4f2e-opencanary_rdp_new_connection_attempt|OpenCanary - RDP New Connection Attempt]]
@@ -1352,12 +1352,12 @@
 - [[kb/sigma/rules/9f383dc0_fdeb_4d56_acbc_9f9f4f8f20f3-unusual_file_modification_by_dns_exe|Unusual File Modification by dns.exe]]
 - [[kb/sigma/rules/ffa28e60_bdb1_46e0_9f82_05f7a61cc06e-user_added_to_remote_desktop_users_group|User Added to Remote Desktop Users Group]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134]]
+## [[kb/attack/techniques/T1134-access_token_manipulation|T1134: Access Token Manipulation]]
 
 - [[kb/sigma/rules/7b14c76a_c602_4ae6_9717_eff868153fc0-hacktool_nofilter_execution|HackTool - NoFilter Execution]]
 - [[kb/sigma/rules/2617e7ed_adb7_40ba_b0f3_8f9945fe6c09-suspicious_system_user_process_creation|Suspicious SYSTEM User Process Creation]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.001]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134001-token-impersonation-theft|T1134.001: Token Impersonation/Theft]]
 
 - [[kb/sigma/rules/0adc67e0_a68f_4ffd_9c43_28905aad5d6a-hacktool_koh_default_named_pipe|HackTool - Koh Default Named Pipe]]
 - [[kb/sigma/rules/7b14c76a_c602_4ae6_9717_eff868153fc0-hacktool_nofilter_execution|HackTool - NoFilter Execution]]
@@ -1367,7 +1367,7 @@
 - [[kb/sigma/rules/843544a7_56e0_4dcc_a44f_5cc266dd97d6-meterpreter_or_cobalt_strike_getsystem_service_installation_system|Meterpreter or Cobalt Strike Getsystem Service Installation - System]]
 - [[kb/sigma/rules/15619216_e993_4721_b590_4c520615a67d-potential_meterpreter_cobaltstrike_activity|Potential Meterpreter/CobaltStrike Activity]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.002]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134002-create-process-with-token|T1134.002: Create Process with Token]]
 
 - [[kb/sigma/rules/ecbc5e16_58e0_4521_9c60_eb9a7ea4ad34-meterpreter_or_cobalt_strike_getsystem_service_installation_security|Meterpreter or Cobalt Strike Getsystem Service Installation - Security]]
 - [[kb/sigma/rules/843544a7_56e0_4dcc_a44f_5cc266dd97d6-meterpreter_or_cobalt_strike_getsystem_service_installation_system|Meterpreter or Cobalt Strike Getsystem Service Installation - System]]
@@ -1375,21 +1375,21 @@
 - [[kb/sigma/rules/15619216_e993_4721_b590_4c520615a67d-potential_meterpreter_cobaltstrike_activity|Potential Meterpreter/CobaltStrike Activity]]
 - [[kb/sigma/rules/590a5f4c_6c8c_4f10_8307_89afe9453a9d-suspicious_child_process_created_as_system|Suspicious Child Process Created as System]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.003]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134003-make-and-impersonate-token|T1134.003: Make and Impersonate Token]]
 
 - [[kb/sigma/rules/c7d33b50_f690_4b51_8cfb_0fb912a31e57-hacktool_sharpdpapi_execution|HackTool - SharpDPAPI Execution]]
 - [[kb/sigma/rules/f89b08d0_77ad_4728_817b_9b16c5a69c7a-hacktool_sharpimpersonation_execution|HackTool - SharpImpersonation Execution]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.004]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134004-parent-pid-spoofing|T1134.004: Parent PID Spoofing]]
 
 - [[kb/sigma/rules/52ff7941_8211_46f9_84f8_9903efb7077d-hacktool_ppid_spoofing_selectmyparent_tool_execution|HackTool - PPID Spoofing SelectMyParent Tool Execution]]
 
-## [[kb/attack/techniques/T1135-network_share_discovery|T1135]]
+## [[kb/attack/techniques/T1135-network_share_discovery|T1135: Network Share Discovery]]
 
 - [[kb/sigma/rules/c3d76afc_93df_461e_8e67_9b2bad3f2ac4-file_explorer_folder_opened_using_explorer_folder_shortcut_via_shell|File Explorer Folder Opened Using Explorer Folder Shortcut Via Shell]]
 - [[kb/sigma/rules/b2317cfa_4a47_4ead_b3ff_297438c0bc2d-hacktool_sharpview_execution|HackTool - SharpView Execution]]
 
-## [[kb/attack/techniques/T1136-create_account|T1136.001]]
+## [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 - [[kb/sigma/rules/6d844f0f_1c18_41af_8f19_33e7654edfc3-cisco_local_accounts|Cisco Local Accounts]]
 - [[kb/sigma/rules/460479f3_80b7_42da_9c43_2cc1d54dbccd-creation_of_a_local_hidden_user_account_by_registry|Creation of a Local Hidden User Account by Registry]]
@@ -1399,33 +1399,33 @@
 - [[kb/sigma/rules/1bbf25b9_8038_4154_a50b_118f2a32be27-suspicious_windows_anonymous_logon_local_account_created|Suspicious Windows ANONYMOUS LOGON Local Account Created]]
 - [[kb/sigma/rules/ffa28e60_bdb1_46e0_9f82_05f7a61cc06e-user_added_to_remote_desktop_users_group|User Added to Remote Desktop Users Group]]
 
-## [[kb/attack/techniques/T1136-create_account|T1136.002]]
+## [[kb/attack/techniques/T1136-create_account#^t1136002-domain-account|T1136.002: Domain Account]]
 
 - [[kb/sigma/rules/304afd73_55a5_4bb9_8c21_0b1fc84ea9e4-psexec_remote_execution_file_artefact|PSEXEC Remote Execution File Artefact]]
 - [[kb/sigma/rules/1bbf25b9_8038_4154_a50b_118f2a32be27-suspicious_windows_anonymous_logon_local_account_created|Suspicious Windows ANONYMOUS LOGON Local Account Created]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137]]
+## [[kb/attack/techniques/T1137-office_application_startup|T1137: Office Application Startup]]
 
 - [[kb/sigma/rules/e3b50fa5_3c3f_444e_937b_0a99d33731cd-outlook_macro_execution_without_warning_setting_enabled|Outlook Macro Execution Without Warning Setting Enabled]]
 - [[kb/sigma/rules/0e20c89d_2264_44ae_8238_aeeaba609ece-potential_persistence_via_microsoft_office_startup_folder|Potential Persistence Via Microsoft Office Startup Folder]]
 - [[kb/sigma/rules/396ae3eb_4174_4b9b_880e_dc0364d78a19-potential_persistence_via_outlook_loadmacroprovideronboot_setting|Potential Persistence Via Outlook LoadMacroProviderOnBoot Setting]]
 - [[kb/sigma/rules/117d3d3a_755c_4a61_b23e_9171146d094c-suspicious_outlook_macro_created|Suspicious Outlook Macro Created]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.002]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137002-office-test|T1137.002: Office Test]]
 
 - [[kb/sigma/rules/69483748_1525_4a6c_95ca_90dc8d431b68-suspicious_microsoft_office_child_process_macos|Suspicious Microsoft Office Child Process - MacOS]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.003]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137003-outlook-forms|T1137.003: Outlook Forms]]
 
 - [[kb/sigma/rules/c3edc6a5_d9d4_48d8_930e_aab518390917-potential_persistence_via_outlook_form|Potential Persistence Via Outlook Form]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.006]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137006-add-ins|T1137.006: Add-ins]]
 
 - [[kb/sigma/rules/36fbec91_fa1b_4d5d_8df1_8d8edcb632ad-code_executed_via_office_add_in_xll_file|Code Executed Via Office Add-in XLL File]]
 - [[kb/sigma/rules/961e33d1_4f86_4fcf_80ab_930a708b2f82-potential_persistence_via_excel_add_in_registry|Potential Persistence Via Excel Add-in - Registry]]
 - [[kb/sigma/rules/8e1cb247_6cf6_42fa_b440_3f27d57e9936-potential_persistence_via_microsoft_office_add_in|Potential Persistence Via Microsoft Office Add-In]]
 
-## [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+## [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 - [[kb/sigma/rules/e32d4572_9826_4738_b651_95fa63747e8a-base64_encoded_powershell_command_detected|Base64 Encoded PowerShell Command Detected]]
 - [[kb/sigma/rules/cc7abbd0_762b_41e3_8a26_57ad50d2eea3-mshta_execution_with_suspicious_file_extensions|MSHTA Execution with Suspicious File Extensions]]
@@ -1434,15 +1434,15 @@
 - [[kb/sigma/rules/fdb62a13_9a81_4e5c_a38f_ea93a16f6d7c-powershell_base64_encoded_frombase64string_cmdlet|PowerShell Base64 Encoded FromBase64String Cmdlet]]
 - [[kb/sigma/rules/ceb55fd0_726e_4656_bf4e_b585b7f7d572-suspicious_inbox_manipulation_rules|Suspicious Inbox Manipulation Rules]]
 
-## [[kb/attack/techniques/T1176-software_extensions|T1176.001]]
+## [[kb/attack/techniques/T1176-software_extensions#^t1176001-browser-extensions|T1176.001: Browser Extensions]]
 
 - [[kb/sigma/rules/27ba3207_dd30_4812_abbf_5d20c57d474e-suspicious_chromium_browser_instance_executed_with_custom_extension|Suspicious Chromium Browser Instance Executed With Custom Extension]]
 
-## [[kb/attack/techniques/T1185-browser_session_hijacking|T1185]]
+## [[kb/attack/techniques/T1185-browser_session_hijacking|T1185: Browser Session Hijacking]]
 
 - [[kb/sigma/rules/3e8207c5_fcd2_4ea6_9418_15d45b4890e4-potential_data_stealing_via_chromium_headless_debugging|Potential Data Stealing Via Chromium Headless Debugging]]
 
-## [[kb/attack/techniques/T1187-forced_authentication|T1187]]
+## [[kb/attack/techniques/T1187-forced_authentication|T1187: Forced Authentication]]
 
 - [[kb/sigma/rules/0ed99dda_6a35_11ef_8c99_0242ac120002-attempts_of_kerberos_coercion_via_dns_spn_spoofing|Attempts of Kerberos Coercion Via DNS SPN Spoofing]]
 - [[kb/sigma/rules/6a53d871_682d_40b6_83e0_b7c1a6c4e3a5-petitpotam_suspicious_kerberos_tgt_request|PetitPotam Suspicious Kerberos TGT Request]]
@@ -1450,12 +1450,12 @@
 - [[kb/sigma/rules/e7a21b5f_d8c4_4ae5_b8d9_93c5d3f28e1c-suspicious_dns_query_indicating_kerberos_coercion_via_dns_object_spn_spoofing|Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing]]
 - [[kb/sigma/rules/5588576c_5898_4fac_bcdd_7475a60e8f43-suspicious_dns_query_indicating_kerberos_coercion_via_dns_object_spn_spoofing_network|Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing - Network]]
 
-## [[kb/attack/techniques/T1189-drive-by_compromise|T1189]]
+## [[kb/attack/techniques/T1189-drive-by_compromise|T1189: Drive-by Compromise]]
 
 - [[kb/sigma/rules/65354b83_a2ea_4ea6_8414_3ab38be0d409-cross_site_scripting_strings|Cross Site Scripting Strings]]
 - [[kb/sigma/rules/4922a5dd_6743_4fc2_8e81_144374280997-flash_player_update_from_suspicious_location|Flash Player Update from Suspicious Location]]
 
-## [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+## [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 - [[kb/sigma/rules/aff715fa_4dd5_497a_8db3_910bea555566-dns_query_to_external_service_interaction_domains|DNS Query to External Service Interaction Domains]]
 - [[kb/sigma/rules/c42a3073_30fb_48ae_8c99_c23ada84b103-hack_tool_user_agent|Hack Tool User Agent]]
@@ -1485,21 +1485,21 @@
 - [[kb/sigma/rules/8a670c6d_7189_4b1c_8017_a417ca84a086-suspicious_sql_error_messages|Suspicious SQL Error Messages]]
 - [[kb/sigma/rules/1012f107_b8f1_4271_af30_5aed2de89b39-terminal_service_process_spawn|Terminal Service Process Spawn]]
 
-## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195]]
+## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
 
 - [[kb/sigma/rules/805c55d9_31e6_4846_9878_c34c75054fe9-octopus_scanner_malware|Octopus Scanner Malware]]
 
-## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195.001]]
+## [[kb/attack/techniques/T1195-supply_chain_compromise#^t1195001-compromise-software-dependencies-and-development-tools|T1195.001: Compromise Software Dependencies and Development Tools]]
 
 - [[kb/sigma/rules/805c55d9_31e6_4846_9878_c34c75054fe9-octopus_scanner_malware|Octopus Scanner Malware]]
 - [[kb/sigma/rules/34e1c7d4_0cd5_419d_9f1b_1dad3f61018d-outdated_dependency_or_vulnerability_alert_disabled|Outdated Dependency Or Vulnerability Alert Disabled]]
 
-## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195.002]]
+## [[kb/attack/techniques/T1195-supply_chain_compromise#^t1195002-compromise-software-supply-chain|T1195.002: Compromise Software Supply Chain]]
 
 - [[kb/sigma/rules/bb0e87ce_c89f_4857_84fa_095e4483e9cb-suspicious_child_process_of_notepad_updater_gup_exe|Suspicious Child Process of Notepad++ Updater - GUP.Exe]]
 - [[kb/sigma/rules/3b8f4c92_6a51_4d7e_9c3a_8e2d1f5a7b09-uncommon_file_created_by_notepad_updater_gup_exe|Uncommon File Created by Notepad++ Updater Gup.EXE]]
 
-## [[kb/attack/techniques/T1197-bits_jobs|T1197]]
+## [[kb/attack/techniques/T1197-bits_jobs|T1197: BITS Jobs]]
 
 - [[kb/sigma/rules/90f138c1_f578_4ac3_8c49_eecfd847c8b7-bits_transfer_job_download_from_direct_ip|BITS Transfer Job Download From Direct IP]]
 - [[kb/sigma/rules/d635249d_86b5_4dad_a8c7_d7272b788586-bits_transfer_job_download_from_file_sharing_domains|BITS Transfer Job Download From File Sharing Domains]]
@@ -1511,11 +1511,11 @@
 - [[kb/sigma/rules/99c840f2_2012_46fd_9141_c761987550ef-suspicious_download_from_direct_ip_via_bitsadmin|Suspicious Download From Direct IP Via Bitsadmin]]
 - [[kb/sigma/rules/8518ed3d_f7c9_4601_a26c_f361a4256a0c-suspicious_download_from_file_sharing_website_via_bitsadmin|Suspicious Download From File-Sharing Website Via Bitsadmin]]
 
-## [[kb/attack/techniques/T1201-password_policy_discovery|T1201]]
+## [[kb/attack/techniques/T1201-password_policy_discovery|T1201: Password Policy Discovery]]
 
 - [[kb/sigma/rules/42a993dd_bb3e_48c8_b372_4d6684c4106c-hacktool_crackmapexec_execution|HackTool - CrackMapExec Execution]]
 
-## [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+## [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 - [[kb/sigma/rules/7530b96f_ad8e_431d_a04d_ac85cc461fdc-custom_file_open_handler_executes_powershell|Custom File Open Handler Executes PowerShell]]
 - [[kb/sigma/rules/ec8c4047_fad9_416a_8c81_0f479353d7f6-diagnostic_library_sdiageng_dll_loaded_by_msdt_exe|Diagnostic Library Sdiageng.DLL Loaded By Msdt.EXE]]
@@ -1536,7 +1536,7 @@
 - [[kb/sigma/rules/835e75bf_4bfd_47a4_b8a6_b766cac8bcb7-uncommon_child_process_of_setres_exe|Uncommon Child Process Of Setres.EXE]]
 - [[kb/sigma/rules/6f1a11aa_4b8a_4b7f_9e13_4d3e4ff0e0d4-wsl_kali_linux_usage|WSL Kali-Linux Usage]]
 
-## [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203]]
+## [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203: Exploitation for Client Execution]]
 
 - [[kb/sigma/rules/238527ad_3c2c_4e4f_a1f6_92fd63adb864-antivirus_exploitation_framework_detection|Antivirus Exploitation Framework Detection]]
 - [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event]]
@@ -1549,18 +1549,18 @@
 - [[kb/sigma/rules/297241f3_8108_4b3a_8c15_2dda9f844594-suspicious_invocation_of_shell_via_rsync|Suspicious Invocation of Shell via Rsync]]
 - [[kb/sigma/rules/dcdbc940_0bff_46b2_95f3_2d73f848e33b-suspicious_spool_service_child_process|Suspicious Spool Service Child Process]]
 
-## [[kb/attack/techniques/T1204-user_execution|T1204]]
+## [[kb/attack/techniques/T1204-user_execution|T1204: User Execution]]
 
 - [[kb/sigma/rules/fa0c05b6_8ad3_468d_8231_c1cbccb64fba-antivirus_hacktool_detection|Antivirus Hacktool Detection]]
 - [[kb/sigma/rules/b447f7de_1e53_4cbf_bfb4_f1f6d0b04e4e-suspicious_binaries_and_scripts_in_public_folder|Suspicious Binaries and Scripts in Public Folder]]
 
-## [[kb/attack/techniques/T1204-user_execution|T1204.001]]
+## [[kb/attack/techniques/T1204-user_execution#^t1204001-malicious-link|T1204.001: Malicious Link]]
 
 - [[kb/sigma/rules/f5fe36cf_f1ec_4c23_903d_09a3110f6bbb-potential_clickfix_execution_pattern_registry|Potential ClickFix Execution Pattern - Registry]]
 - [[kb/sigma/rules/d487ed4a_fd24_436d_a0b2_f4e95f7b2635-suspicious_clickfix_filefix_execution_pattern|Suspicious ClickFix/FileFix Execution Pattern]]
 - [[kb/sigma/rules/c67fc22a_0be5_4b4f_aad5_2b32c4b69523-symlink_etc_passwd|Symlink Etc Passwd]]
 
-## [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+## [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 - [[kb/sigma/rules/c7a74c80_ba5a_486e_9974_ab9e682bc5e4-file_with_uncommon_extension_created_by_an_office_application|File With Uncommon Extension Created By An Office Application]]
 - [[kb/sigma/rules/4922a5dd_6743_4fc2_8e81_144374280997-flash_player_update_from_suspicious_location|Flash Player Update from Suspicious Location]]
@@ -1577,7 +1577,7 @@
 - [[kb/sigma/rules/8a582fe2_0882_4b89_a82a_da6b2dc32937-suspicious_wmiprvse_child_process|Suspicious WmiPrvSE Child Process]]
 - [[kb/sigma/rules/e6ce8457_68b1_485b_9bdd_3c2b5d679aa9-vba_dll_loaded_via_office_application|VBA DLL Loaded Via Office Application]]
 
-## [[kb/attack/techniques/T1204-user_execution|T1204.004]]
+## [[kb/attack/techniques/T1204-user_execution#^t1204004-malicious-copy-and-paste|T1204.004: Malicious Copy and Paste]]
 
 - [[kb/sigma/rules/4fee3d51_8069_4a4c_a0f7_924fcaff2c70-filefix_command_evidence_in_typedpaths|FileFix - Command Evidence in TypedPaths]]
 - [[kb/sigma/rules/d487ed4a_fd24_436d_a0b2_f4e95f7b2635-suspicious_clickfix_filefix_execution_pattern|Suspicious ClickFix/FileFix Execution Pattern]]
@@ -1586,27 +1586,27 @@
 - [[kb/sigma/rules/7a1b4c5e_8f3d_4b9a_7c2e_1f4a5b8c6d9e-suspicious_space_characters_in_runmru_registry_path_clickfix|Suspicious Space Characters in RunMRU Registry Path - ClickFix]]
 - [[kb/sigma/rules/8f2a5c3d_9e4b_4a7c_8d1f_2e5a6b9c3d7e-suspicious_space_characters_in_typedpaths_registry_path_filefix|Suspicious Space Characters in TypedPaths Registry Path - FileFix]]
 
-## [[kb/attack/techniques/T1210-exploitation_of_remote_services|T1210]]
+## [[kb/attack/techniques/T1210-exploitation_of_remote_services|T1210: Exploitation of Remote Services]]
 
 - [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event]]
 - [[kb/sigma/rules/b0ce780f_10bd_496d_9067_066d23dc3aa5-hacktool_sharpwsus_wsuspendu_execution|HackTool - SharpWSUS/WSUSpendu Execution]]
 - [[kb/sigma/rules/1012f107_b8f1_4271_af30_5aed2de89b39-terminal_service_process_spawn|Terminal Service Process Spawn]]
 - [[kb/sigma/rules/18f37338_b9bd_4117_a039_280c81f7a596-zerologon_exploitation_using_well_known_tools|Zerologon Exploitation Using Well-known Tools]]
 
-## [[kb/attack/techniques/T1211-exploitation_for_defense_evasion|T1211]]
+## [[kb/attack/techniques/T1211-exploitation_for_defense_evasion|T1211: Exploitation for Defense Evasion]]
 
 - [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event]]
 - [[kb/sigma/rules/545a5da6_f103_4919_a519_e9aec1026ee4-microsoft_malware_protection_engine_crash|Microsoft Malware Protection Engine Crash]]
 - [[kb/sigma/rules/6c82cf5c_090d_4d57_9188_533577631108-microsoft_malware_protection_engine_crash_wer|Microsoft Malware Protection Engine Crash - WER]]
 
-## [[kb/attack/techniques/T1212-exploitation_for_credential_access|T1212]]
+## [[kb/attack/techniques/T1212-exploitation_for_credential_access|T1212: Exploitation for Credential Access]]
 
 - [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event]]
 - [[kb/sigma/rules/1edd77db_0669_4fef_9598_165bda82826d-guacamole_two_users_sharing_session_anomaly|Guacamole Two Users Sharing Session Anomaly]]
 - [[kb/sigma/rules/f7644214_0eb0_4ace_9455_331ec4c09253-kerberos_manipulation|Kerberos Manipulation]]
 - [[kb/sigma/rules/bb76d96b_821c_47cf_944b_7ce377864492-suspicious_ntlm_authentication_on_the_printer_spooler_service|Suspicious NTLM Authentication on the Printer Spooler Service]]
 
-## [[kb/attack/techniques/T1213-data_from_information_repositories|T1213]]
+## [[kb/attack/techniques/T1213-data_from_information_repositories|T1213: Data from Information Repositories]]
 
 - [[kb/sigma/rules/4fe17521_aef3_4e6a_9d6b_4a7c8de155a8-opencanary_git_clone_request|OpenCanary - GIT Clone Request]]
 - [[kb/sigma/rules/3ec9a16d_0b4f_4967_9542_ebf38ceac7dd-opencanary_mssql_login_attempt_via_sqlauth|OpenCanary - MSSQL Login Attempt Via SQLAuth]]
@@ -1614,17 +1614,17 @@
 - [[kb/sigma/rules/e7d79a1b_25ed_4956_bd56_bd344fa8fd06-opencanary_mysql_login_attempt|OpenCanary - MySQL Login Attempt]]
 - [[kb/sigma/rules/547dfc53_ebf6_4afe_8d2e_793d9574975d-opencanary_redis_action_command_attempt|OpenCanary - REDIS Action Command Attempt]]
 
-## [[kb/attack/techniques/T1213-data_from_information_repositories|T1213.003]]
+## [[kb/attack/techniques/T1213-data_from_information_repositories#^t1213003-code-repositories|T1213.003: Code Repositories]]
 
 - [[kb/sigma/rules/195e1b9d_bfc2_4ffa_ab4e_35aef69815f8-bitbucket_full_data_export_triggered|Bitbucket Full Data Export Triggered]]
 - [[kb/sigma/rules/34d81081_03c9_4a7f_91c9_5e46af625cde-bitbucket_unauthorized_full_data_export_triggered|Bitbucket Unauthorized Full Data Export Triggered]]
 
-## [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+## [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 - [[kb/sigma/rules/c363385c_f75d_4753_a108_c1a8e28bdbda-potential_manage_bde_wsf_abuse_to_proxy_execution|Potential Manage-bde.wsf Abuse To Proxy Execution]]
 - [[kb/sigma/rules/84b14121_9d14_416e_800b_f3b829c5a14d-suspicious_customshellhost_execution|Suspicious CustomShellHost Execution]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 - [[kb/sigma/rules/863218bd_c7d0_4c52_80cd_0a96c09f54af-arbitrary_file_download_via_imewdbld_exe|Arbitrary File Download Via IMEWDBLD.EXE]]
 - [[kb/sigma/rules/6e8fe0a8_ba0b_4a93_8f9e_82657e7a5984-baaupdate_exe_suspicious_dll_load|BaaUpdate.exe Suspicious DLL Load]]
@@ -1674,18 +1674,18 @@
 - [[kb/sigma/rules/3a6586ad_127a_4d3b_a677_1e6eacdf8fde-windows_shell_scripting_processes_spawning_suspicious_programs|Windows Shell/Scripting Processes Spawning Suspicious Programs]]
 - [[kb/sigma/rules/bcfece3d_56fe_4545_9931_3b8e92927db1-winrs_local_command_execution|Winrs Local Command Execution]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.001]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218001-compiled-html-file|T1218.001: Compiled HTML File]]
 
 - [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process]]
 - [[kb/sigma/rules/84b1706c_932a_44c4_ae28_892b28a25b94-onenote_exe_execution_of_malicious_embedded_scripts|OneNote.EXE Execution of Malicious Embedded Scripts]]
 - [[kb/sigma/rules/f57c58b3_ee69_4ef5_9041_455bf39aaa89-remote_chm_file_download_execution_via_hh_exe|Remote CHM File Download/Execution Via HH.EXE]]
 - [[kb/sigma/rules/e8a95b5e_c891_46e2_b33a_93937d3abc31-suspicious_hh_exe_execution|Suspicious HH.EXE Execution]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.002]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218002-control-panel|T1218.002: Control Panel]]
 
 - [[kb/sigma/rules/0ba863e6_def5_4e50_9cea_4dd8c7dc46a4-control_panel_items|Control Panel Items]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 - [[kb/sigma/rules/e66779cc_383e_4224_a3a4_267eeb585c40-bypass_uac_via_cmstp|Bypass UAC via CMSTP]]
 - [[kb/sigma/rules/3b4b232a_af90_427c_a22f_30b0c0837b95-cmstp_execution_process_access|CMSTP Execution Process Access]]
@@ -1695,7 +1695,7 @@
 - [[kb/sigma/rules/75e508f7_932d_4ebc_af77_269237a84ce1-dll_loaded_from_suspicious_location_via_cmspt_exe|DLL Loaded From Suspicious Location Via Cmspt.EXE]]
 - [[kb/sigma/rules/efafe0bf_4238_479e_af8f_797bd3490d2d-outbound_network_connection_initiated_by_cmstp_exe|Outbound Network Connection Initiated By Cmstp.EXE]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 - [[kb/sigma/rules/b730a276_6b63_41b8_bcf8_55930c8fc6ee-csc_exe_execution_form_potentially_suspicious_parent|Csc.EXE Execution Form Potentially Suspicious Parent]]
 - [[kb/sigma/rules/2e4e488a_6164_4811_9ea1_f960c7359c40-hacktool_cactustorch_remote_thread_creation|HackTool - CACTUSTORCH Remote Thread Creation]]
@@ -1705,18 +1705,18 @@
 - [[kb/sigma/rules/67f113fa_e23d_4271_befa_30113b3e08b1-suspicious_javascript_execution_via_mshta_exe|Suspicious JavaScript Execution Via Mshta.EXE]]
 - [[kb/sigma/rules/03cc0c25_389f_4bf8_b48d_11878079f1ca-suspicious_mshta_child_process|Suspicious MSHTA Child Process]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.007]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
 
 - [[kb/sigma/rules/7b6a7418_3afc_11f0_aff4_000d3abf478c-obfuscated_powershell_msi_install_via_windowsinstaller_com|Obfuscated PowerShell MSI Install via WindowsInstaller COM]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.008]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218008-odbcconf|T1218.008: Odbcconf]]
 
 - [[kb/sigma/rules/6b65c28e_11f3_46cb_902a_68f2cafaf474-odbcconf_exe_suspicious_dll_location|Odbcconf.EXE Suspicious DLL Location]]
 - [[kb/sigma/rules/ba4cfc11_d0fa_4d94_bf20_7c332c412e76-potentially_suspicious_dll_registered_via_odbcconf_exe|Potentially Suspicious DLL Registered Via Odbcconf.EXE]]
 - [[kb/sigma/rules/cb0fe7c5_f3a3_484d_aa25_d350a7912729-suspicious_driver_dll_installation_via_odbcconf_exe|Suspicious Driver/DLL Installation Via Odbcconf.EXE]]
 - [[kb/sigma/rules/2d32dd6f_3196_4093_b9eb_1ad8ab088ca5-suspicious_response_file_execution_via_odbcconf_exe|Suspicious Response File Execution Via Odbcconf.EXE]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 - [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process]]
 - [[kb/sigma/rules/6f0947a4_1c5e_4e0d_8ac7_53159b8f23ca-potentially_suspicious_child_process_of_regsvr32|Potentially Suspicious Child Process Of Regsvr32]]
@@ -1729,7 +1729,7 @@
 - [[kb/sigma/rules/e1693bc8_7168_4eab_8718_cdcaa68a1738-suspicious_wmic_execution_via_office_process|Suspicious WMIC Execution Via Office Process]]
 - [[kb/sigma/rules/8a582fe2_0882_4b89_a82a_da6b2dc32937-suspicious_wmiprvse_child_process|Suspicious WmiPrvSE Child Process]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 - [[kb/sigma/rules/a7c3d773_caef_227e_a7e7_c2f13c622329-bad_opsec_defaults_sacrificial_processes_with_improper_arguments|Bad Opsec Defaults Sacrificial Processes With Improper Arguments]]
 - [[kb/sigma/rules/ae9c6a7c_9521_42a6_915e_5aaa8689d529-cobaltstrike_load_by_rundll32|CobaltStrike Load by Rundll32]]
@@ -1747,21 +1747,21 @@
 - [[kb/sigma/rules/4aa6040b_3f28_44e3_a769_9208e5feb5ec-suspicious_rundll32_execution_with_image_extension|Suspicious Rundll32 Execution With Image Extension]]
 - [[kb/sigma/rules/8823e85d_31d8_473e_b7f4_92da070f0fc6-suspicious_shellexec_rundll_call_via_ordinal|Suspicious ShellExec_RunDLL Call Via Ordinal]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.013]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218013-mavinject|T1218.013: Mavinject]]
 
 - [[kb/sigma/rules/4f73421b_5a0b_4bbf_a892_5a7fb99bea66-mavinject_inject_dll_into_running_process|Mavinject Inject DLL Into Running Process]]
 - [[kb/sigma/rules/e6474a1b_5390_49cd_ab41_8d88655f7394-renamed_mavinject_exe_execution|Renamed Mavinject.EXE Execution]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.014]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218014-mmc|T1218.014: MMC]]
 
 - [[kb/sigma/rules/9cfe4b27_1e56_48b4_b7a8_d46851c91a44-mmc_executing_files_with_reversed_extensions_using_rtlo_abuse|MMC Executing Files with Reversed Extensions Using RTLO Abuse]]
 
-## [[kb/attack/techniques/T1219-remote_access_tools|T1219]]
+## [[kb/attack/techniques/T1219-remote_access_tools|T1219: Remote Access Tools]]
 
 - [[kb/sigma/rules/2cf29f11_e356_4f61_98c0_1bdb9393d6da-renamed_visual_studio_code_tunnel_execution|Renamed Visual Studio Code Tunnel Execution]]
 - [[kb/sigma/rules/4bc90587_e6ca_4b41_be0b_ed4d04e4ed0c-suspicious_velociraptor_child_process|Suspicious Velociraptor Child Process]]
 
-## [[kb/attack/techniques/T1219-remote_access_tools|T1219.002]]
+## [[kb/attack/techniques/T1219-remote_access_tools#^t1219002-remote-desktop-software|T1219.002: Remote Desktop Software]]
 
 - [[kb/sigma/rules/238527ad_3c2c_4e4f_a1f6_92fd63adb864-antivirus_exploitation_framework_detection|Antivirus Exploitation Framework Detection]]
 - [[kb/sigma/rules/87261fb2_69d0_42fe_b9de_88c6b5f65a43-atera_agent_installation|Atera Agent Installation]]
@@ -1776,24 +1776,24 @@
 - [[kb/sigma/rules/6e22722b_dfb1_4508_a911_49ac840b40f8-suspicious_mstsc_exe_execution_with_local_rdp_file|Suspicious Mstsc.EXE Execution With Local RDP File]]
 - [[kb/sigma/rules/9847f263_4a81_424f_970c_875dab15b79b-suspicious_tscon_start_as_system|Suspicious TSCON Start as SYSTEM]]
 
-## [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+## [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 - [[kb/sigma/rules/8d63dadf_b91b_4187_87b6_34a1114577ea-potential_remote_squiblytwo_technique_execution|Potential Remote SquiblyTwo Technique Execution]]
 - [[kb/sigma/rules/75d0a94e_6252_448d_a7be_d953dff527bb-remote_xsl_execution_via_msxsl_exe|Remote XSL Execution Via Msxsl.EXE]]
 
-## [[kb/attack/techniques/T1221-template_injection|T1221]]
+## [[kb/attack/techniques/T1221-template_injection|T1221: Template Injection]]
 
 - [[kb/sigma/rules/ada3bc4f_f0fd_42b9_ba91_e105e8af7342-server_side_template_injection_strings|Server Side Template Injection Strings]]
 
-## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222]]
+## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222: File and Directory Permissions Modification]]
 
 - [[kb/sigma/rules/3bf1d859_3a7e_44cb_8809_a99e066d3478-powershell_set_acl_on_windows_folder_psscript|PowerShell Set-Acl On Windows Folder - PsScript]]
 
-## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.001]]
+## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222001-windows-file-and-directory-permissions-modification|T1222.001: Windows File and Directory Permissions Modification]]
 
 - [[kb/sigma/rules/028c7842_4243_41cd_be6f_12f3cf1a26c7-ad_object_writedac_access|AD Object WriteDAC Access]]
 
-## [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
+## [[kb/attack/techniques/T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 
 - [[kb/sigma/rules/02773bed_83bf_469f_b7ff_e676e7d78bab-bloodhound_collection_files|BloodHound Collection Files]]
 - [[kb/sigma/rules/f376c8a7_a2d0_4ddc_aa0c_16c17236d962-hacktool_bloodhound_sharphound_execution|HackTool - Bloodhound/Sharphound Execution]]
@@ -1806,17 +1806,17 @@
 - [[kb/sigma/rules/df55196f_f105_44d3_a675_e9dfb6cc2f2b-renamed_adfind_execution|Renamed AdFind Execution]]
 - [[kb/sigma/rules/ef61af62_bc74_4f58_b49b_626448227652-suspicious_active_directory_database_snapshot_via_adexplorer|Suspicious Active Directory Database Snapshot Via ADExplorer]]
 
-## [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification|T1484]]
+## [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification|T1484: Domain or Tenant Policy Modification]]
 
 - [[kb/sigma/rules/9494bff8_959f_4440_bbce_fb87a208d517-changes_to_device_registration_policy|Changes to Device Registration Policy]]
 
-## [[kb/attack/techniques/T1485-data_destruction|T1485]]
+## [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 - [[kb/sigma/rules/add64136_62e5_48ea_807e_88638d02df1e-fsutil_suspicious_invocation|Fsutil Suspicious Invocation]]
 - [[kb/sigma/rules/a4824fca_976f_4964_b334_0621379e84c4-potential_file_overwrite_via_sysinternals_sdelete|Potential File Overwrite Via Sysinternals SDelete]]
 - [[kb/sigma/rules/c1d867fe_8d95_4487_aab4_e53f2d339f90-renamed_sysinternals_sdelete_execution|Renamed Sysinternals Sdelete Execution]]
 
-## [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+## [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 - [[kb/sigma/rules/1279262f_1464_422f_ac0d_5b545320c526-aws_kms_imported_key_material_usage|AWS KMS Imported Key Material Usage]]
 - [[kb/sigma/rules/4c6ca276_d4d0_4a8c_9e4c_d69832f8671f-antivirus_ransomware_detection|Antivirus Ransomware Detection]]
@@ -1825,7 +1825,7 @@
 - [[kb/sigma/rules/caf02a0a_1e1c_4552_9b48_5e070bd88d11-suspicious_creation_txt_file_in_user_desktop|Suspicious Creation TXT File in User Desktop]]
 - [[kb/sigma/rules/0e0255bf_2548_47b8_9582_c0955c9283f5-suspicious_reg_add_bitlocker|Suspicious Reg Add BitLocker]]
 
-## [[kb/attack/techniques/T1489-service_stop|T1489]]
+## [[kb/attack/techniques/T1489-service_stop|T1489: Service Stop]]
 
 - [[kb/sigma/rules/220457c1_1c9f_4c2e_afe6_9598926222c1-delete_all_scheduled_tasks|Delete All Scheduled Tasks]]
 - [[kb/sigma/rules/dbc1f800_0fe0_4bc0_9c66_292c2abe3f78-delete_important_scheduled_task|Delete Important Scheduled Task]]
@@ -1833,7 +1833,7 @@
 - [[kb/sigma/rules/9e3cb244_bdb8_4632_8c90_6079c8f4f16d-important_scheduled_task_deleted|Important Scheduled Task Deleted]]
 - [[kb/sigma/rules/ce72ef99_22f1_43d4_8695_419dcb5d9330-suspicious_windows_service_tampering|Suspicious Windows Service Tampering]]
 
-## [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+## [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 - [[kb/sigma/rules/639c9081_f482_47d3_a0bd_ddee3d4ecd76-all_backups_deleted_via_wbadmin_exe|All Backups Deleted Via Wbadmin.EXE]]
 - [[kb/sigma/rules/1444443e_6757_43e4_9ea4_c8fc705f79a2-boot_configuration_tampering_via_bcdedit_exe|Boot Configuration Tampering Via Bcdedit.EXE]]
@@ -1847,11 +1847,11 @@
 - [[kb/sigma/rules/333cdbe8_27bb_4246_bf82_b41a0dca4b70-suspicious_volume_shadow_copy_vss_ps_dll_load|Suspicious Volume Shadow Copy VSS_PS.dll Load]]
 - [[kb/sigma/rules/37774c23_25a1_4adb_bb6d_8bb9fd59c0f8-suspicious_volume_shadow_copy_vssapi_dll_load|Suspicious Volume Shadow Copy Vssapi.dll Load]]
 
-## [[kb/attack/techniques/T1491-defacement|T1491.001]]
+## [[kb/attack/techniques/T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
 
 - [[kb/sigma/rules/8b9606c9_28be_4a38_b146_0e313cc232c1-potential_ransomware_activity_using_legalnotice_message|Potential Ransomware Activity Using LegalNotice Message]]
 
-## [[kb/attack/techniques/T1496-resource_hijacking|T1496]]
+## [[kb/attack/techniques/T1496-resource_hijacking|T1496: Resource Hijacking]]
 
 - [[kb/sigma/rules/9069ea3c_b213_4c52_be13_86506a227ab1-linux_crypto_mining_indicators|Linux Crypto Mining Indicators]]
 - [[kb/sigma/rules/a46c93b7_55ed_4d27_a41b_c259456c4746-linux_crypto_mining_pool_connections|Linux Crypto Mining Pool Connections]]
@@ -1859,25 +1859,25 @@
 - [[kb/sigma/rules/fa5b1358_b040_4403_9868_15f7d9ab6329-network_communication_with_crypto_mining_pool|Network Communication With Crypto Mining Pool]]
 - [[kb/sigma/rules/66c3b204_9f88_4d0a_a7f7_8a57d521ca55-potential_crypto_mining_activity|Potential Crypto Mining Activity]]
 
-## [[kb/attack/techniques/T1498-network_denial_of_service|T1498]]
+## [[kb/attack/techniques/T1498-network_denial_of_service|T1498: Network Denial of Service]]
 
 - [[kb/sigma/rules/7cded4b3_f09e_405a_b96f_24248433ba44-opencanary_ntp_monlist_request|OpenCanary - NTP Monlist Request]]
 
-## [[kb/attack/techniques/T1499-endpoint_denial_of_service|T1499.001]]
+## [[kb/attack/techniques/T1499-endpoint_denial_of_service#^t1499001-os-exhaustion-flood|T1499.001: OS Exhaustion Flood]]
 
 - [[kb/sigma/rules/f14719ce_d3ab_4e25_9ce6_2899092260b0-ntfs_vulnerability_exploitation|NTFS Vulnerability Exploitation]]
 
-## [[kb/attack/techniques/T1499-endpoint_denial_of_service|T1499.004]]
+## [[kb/attack/techniques/T1499-endpoint_denial_of_service#^t1499004-application-or-system-exploitation|T1499.004: Application or System Exploitation]]
 
 - [[kb/sigma/rules/1da8ce0b_855d_4004_8860_7d64d42063b1-apache_segmentation_fault|Apache Segmentation Fault]]
 - [[kb/sigma/rules/48d91a3a_2363_43ba_a456_ca71ac3da5c2-audit_cve_event|Audit CVE Event]]
 - [[kb/sigma/rules/59ec40bb_322e_40ab_808d_84fa690d7e56-nginx_core_dump|Nginx Core Dump]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.002]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505002-transport-agent|T1505.002: Transport Agent]]
 
 - [[kb/sigma/rules/c7d16cae_aaf3_42e5_9c1c_fb8553faa6fa-failed_msexchange_transport_agent_installation|Failed MSExchange Transport Agent Installation]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 - [[kb/sigma/rules/fdf135a2_9241_4f96_a114_bb404948f736-antivirus_web_shell_detection|Antivirus Web Shell Detection]]
 - [[kb/sigma/rules/b7bc7038_638b_4ffd_880c_292c692209ef-certificate_request_export_to_exchange_webserver|Certificate Request Export to Exchange Webserver]]
@@ -1899,26 +1899,26 @@
 - [[kb/sigma/rules/f64e5c19_879c_4bae_b471_6d84c8339677-webshell_tool_reconnaissance_activity|Webshell Tool Reconnaissance Activity]]
 - [[kb/sigma/rules/7ff9db12_1b94_4a79_ba68_a2402c5d6729-windows_webshell_strings|Windows Webshell Strings]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.004]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505004-iis-components|T1505.004: IIS Components]]
 
 - [[kb/sigma/rules/e8ebd53a_30c2_45bd_81bb_74befba07bdb-http_logging_disabled_on_iis_server|HTTP Logging Disabled On IIS Server]]
 - [[kb/sigma/rules/043c4b8b_3a54_4780_9682_081cb6b8185c-suspicious_iis_module_registration|Suspicious IIS Module Registration]]
 
-## [[kb/attack/techniques/T1518-software_discovery|T1518]]
+## [[kb/attack/techniques/T1518-software_discovery|T1518: Software Discovery]]
 
 - [[kb/sigma/rules/d557dc06_62e8_4468_a8e8_7984124908ce-hacktool_winpwn_execution|HackTool - WinPwn Execution]]
 - [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock]]
 
-## [[kb/attack/techniques/T1518-software_discovery|T1518.001]]
+## [[kb/attack/techniques/T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]
 
 - [[kb/sigma/rules/37db85d1_b089_490a_a59a_c7b6f984f480-sysmon_discovery_via_default_driver_altitude_using_findstr_exe|Sysmon Discovery Via Default Driver Altitude Using Findstr.EXE]]
 
-## [[kb/attack/techniques/T1526-cloud_service_discovery|T1526]]
+## [[kb/attack/techniques/T1526-cloud_service_discovery|T1526: Cloud Service Discovery]]
 
 - [[kb/sigma/rules/35b781cc_1a08_4a5a_80af_42fd7c315c6b-discovery_using_azurehound|Discovery Using AzureHound]]
 - [[kb/sigma/rules/38646daa_e78f_4ace_9de0_55547b2d30da-pua_seatbelt_execution|PUA - Seatbelt Execution]]
 
-## [[kb/attack/techniques/T1528-steal_application_access_token|T1528]]
+## [[kb/attack/techniques/T1528-steal_application_access_token|T1528: Steal Application Access Token]]
 
 - [[kb/sigma/rules/6555754e_5e7f_4a67_ad1c_4041c413a007-anomalous_token|Anomalous Token]]
 - [[kb/sigma/rules/53acd925_2003_440d_a1f3_71a5253fe237-anonymous_ip_address|Anonymous IP Address]]
@@ -1930,21 +1930,21 @@
 - [[kb/sigma/rules/8a4519e8_e64a_40b6_ae85_ba8ad2177559-renamed_browsercore_exe_execution|Renamed BrowserCore.EXE Execution]]
 - [[kb/sigma/rules/25cde13e_8e20_4c29_b949_4e795b76f16f-suspicious_teams_application_related_objectacess_event|Suspicious Teams Application Related ObjectAcess Event]]
 
-## [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529]]
+## [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529: System Shutdown/Reboot]]
 
 - [[kb/sigma/rules/3ceb2083_a27f_449a_be33_14ec1b7cc973-silence_eda_detection|Silence.EDA Detection]]
 
-## [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539]]
+## [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539: Steal Web Session Cookie]]
 
 - [[kb/sigma/rules/24c77512_782b_448a_8950_eddb0785fc71-sqlite_chromium_profile_data_db_access|SQLite Chromium Profile Data DB Access]]
 - [[kb/sigma/rules/4833155a_4053_4c9c_a997_777fcea0baa7-sqlite_firefox_profile_data_db_access|SQLite Firefox Profile Data DB Access]]
 
-## [[kb/attack/techniques/T1542-pre-os_boot|T1542.001]]
+## [[kb/attack/techniques/T1542-pre-os_boot#^t1542001-system-firmware|T1542.001: System Firmware]]
 
 - [[kb/sigma/rules/e94b9ddc_eec5_4bb8_8a58_b9dc5f4e185f-uefi_persistence_via_wpbbin_filecreation|UEFI Persistence Via Wpbbin - FileCreation]]
 - [[kb/sigma/rules/4abc0ec4_db5a_412f_9632_26659cddf145-uefi_persistence_via_wpbbin_processcreation|UEFI Persistence Via Wpbbin - ProcessCreation]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
 
 - [[kb/sigma/rules/9b72b82d_f1c5_4632_b589_187159bc6ec1-codeintegrity_blocked_driver_load_with_revoked_certificate|CodeIntegrity - Blocked Driver Load With Revoked Certificate]]
 - [[kb/sigma/rules/e4be5675_4a53_426a_8c81_a8bb2387e947-codeintegrity_blocked_image_driver_load_for_policy_violation|CodeIntegrity - Blocked Image/Driver Load For Policy Violation]]
@@ -1953,11 +1953,11 @@
 - [[kb/sigma/rules/c4e92a97_a9ff_4392_9d2d_7a4c642768ca-service_installed_by_unusual_client_security|Service Installed By Unusual Client - Security]]
 - [[kb/sigma/rules/71c276aa_49cd_43d2_b920_2dcd3e6962d5-service_installed_by_unusual_client_system|Service Installed By Unusual Client - System]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.001]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543001-launch-agent|T1543.001: Launch Agent]]
 
 - [[kb/sigma/rules/65d506d3_fcfe_4071_b4b2_bcefe721bbbb-potential_persistence_via_plistbuddy|Potential Persistence Via PlistBuddy]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 - [[kb/sigma/rules/6c8fbee5_dee8_49bc_851d_c3142d02aa47-allow_service_access_using_security_descriptor_tampering_via_sc_exe|Allow Service Access Using Security Descriptor Tampering Via Sc.EXE]]
 - [[kb/sigma/rules/d7a95147_145f_4678_b85d_d1ff4a3bb3f6-cobaltstrike_service_installations_security|CobaltStrike Service Installations - Security]]
@@ -1982,11 +1982,11 @@
 - [[kb/sigma/rules/295c9289_acee_4503_a571_8eacaef36b28-vulnerable_hacksys_extreme_vulnerable_driver_load|Vulnerable HackSys Extreme Vulnerable Driver Load]]
 - [[kb/sigma/rules/1a42dfa6_6cb2_4df9_9b48_295be477e835-vulnerable_winring0_driver_load|Vulnerable WinRing0 Driver Load]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.004]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543004-launch-daemon|T1543.004: Launch Daemon]]
 
 - [[kb/sigma/rules/65d506d3_fcfe_4071_b4b2_bcefe721bbbb-potential_persistence_via_plistbuddy|Potential Persistence Via PlistBuddy]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546]]
+## [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]]
 
 - [[kb/sigma/rules/07743f65_7ec9_404a_a519_913db7118a8d-com_hijack_via_sdclt|COM Hijack via Sdclt]]
 - [[kb/sigma/rules/0ba863e6_def5_4e50_9cea_4dd8c7dc46a4-control_panel_items|Control Panel Items]]
@@ -1995,12 +1995,12 @@
 - [[kb/sigma/rules/0c3fac91_5627_46e8_a6a8_a0d7b9b8ae1b-suspicious_get_variable_exe_creation|Suspicious Get-Variable.exe Creation]]
 - [[kb/sigma/rules/117d3d3a_755c_4a61_b23e_9171146d094c-suspicious_outlook_macro_created|Suspicious Outlook Macro Created]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.001]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546001-change-default-file-association|T1546.001: Change Default File Association]]
 
 - [[kb/sigma/rules/ae6f14e6_14de_45b0_9f44_c0986f50dc89-change_default_file_association_to_executable_via_assoc|Change Default File Association To Executable Via Assoc]]
 - [[kb/sigma/rules/152f3630_77c1_4284_bcc0_4cc68ab2f6e7-shell_open_registry_keys_manipulation|Shell Open Registry Keys Manipulation]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 - [[kb/sigma/rules/ebef4391_1a81_4761_a40a_1db446c0e625-new_activescripteventconsumer_created_via_wmic_exe|New ActiveScriptEventConsumer Created Via Wmic.EXE]]
 - [[kb/sigma/rules/83844185_1c5b_45bc_bcf3_b5bf3084ca5b-suspicious_encoded_scripts_in_a_wmi_consumer|Suspicious Encoded Scripts in a WMI Consumer]]
@@ -2008,11 +2008,11 @@
 - [[kb/sigma/rules/05936ce2_ee05_4dae_9d03_9a391cf2d2c6-wmi_persistence_command_line_event_consumer|WMI Persistence - Command Line Event Consumer]]
 - [[kb/sigma/rules/33f41cdd_35ac_4ba8_814b_c6a4244a1ad4-wmi_persistence_script_event_consumer_file_write|WMI Persistence - Script Event Consumer File Write]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.007]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546007-netsh-helper-dll|T1546.007: Netsh Helper DLL]]
 
 - [[kb/sigma/rules/e7b18879_676e_4a0e_ae18_27039185a8e7-new_netsh_helper_dll_registered_from_a_suspicious_location|New Netsh Helper DLL Registered From A Suspicious Location]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 - [[kb/sigma/rules/1070db9a_3e5d_412e_8e7b_7183b616e1b3-persistence_via_sticky_key_backdoor|Persistence Via Sticky Key Backdoor]]
 - [[kb/sigma/rules/e9b61244_893f_427c_b287_3e708f321c6b-potential_privilege_escalation_using_symlink_between_osk_and_cmd|Potential Privilege Escalation Using Symlink Between Osk and Cmd]]
@@ -2020,30 +2020,30 @@
 - [[kb/sigma/rules/baca5663_583c_45f9_b5dc_ea96a22ce542-sticky_key_like_backdoor_usage_registry|Sticky Key Like Backdoor Usage - Registry]]
 - [[kb/sigma/rules/ae215552_081e_44c7_805f_be16f975c8a2-suspicious_debugger_registration_cmdline|Suspicious Debugger Registration Cmdline]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.011]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546011-application-shimming|T1546.011: Application Shimming]]
 
 - [[kb/sigma/rules/6b6976a3_b0e6_4723_ac24_ae38a737af41-potential_persistence_via_shim_database_in_uncommon_location|Potential Persistence Via Shim Database In Uncommon Location]]
 - [[kb/sigma/rules/bf344fea_d947_4ef4_9192_34d008315d3a-suspicious_shim_database_patching_activity|Suspicious Shim Database Patching Activity]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.012]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546012-image-file-execution-options-injection|T1546.012: Image File Execution Options Injection]]
 
 - [[kb/sigma/rules/707e097c_e20f_4f67_8807_1f72ff4500d6-potential_persistence_via_app_paths_default_property|Potential Persistence Via App Paths Default Property]]
 - [[kb/sigma/rules/36803969_5421_41ec_b92f_8500f79c23b0-potential_persistence_via_globalflags|Potential Persistence Via GlobalFlags]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 - [[kb/sigma/rules/790317c0_0a36_4a6a_a105_6e576bf99a14-com_object_hijacking_via_modification_of_default_system_clsid_default_value|COM Object Hijacking Via Modification Of Default System CLSID Default Value]]
 - [[kb/sigma/rules/243380fa_11eb_4141_af92_e14925e77c1b-potential_psfactorybuffer_com_hijacking|Potential PSFactoryBuffer COM Hijacking]]
 - [[kb/sigma/rules/f1edd233_30b5_4823_9e6a_c4171b24d316-rundll32_registered_com_objects|Rundll32 Registered COM Objects]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
 
 - [[kb/sigma/rules/a6976974_ea6f_4e97_818e_ea08625c52cb-potential_ripzip_attack_on_startup_folder|Potential RipZip Attack on Startup Folder]]
 - [[kb/sigma/rules/277efb8f_60be_4f10_b4d3_037802f37167-registry_persistence_mechanisms_in_recycle_bin|Registry Persistence Mechanisms in Recycle Bin]]
 - [[kb/sigma/rules/f14e169e_9978_4c69_acb3_1cff8200bc36-suspicious_grpconv_execution|Suspicious GrpConv Execution]]
 - [[kb/sigma/rules/b98968aa_dbc0_4a9c_ac35_108363cbf8d5-winekey_registry_modification|WINEKEY Registry Modification]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 - [[kb/sigma/rules/318557a5_150c_4c8d_b70e_a9910e199857-file_creation_in_suspicious_directory_by_msdt_exe|File Creation In Suspicious Directory By Msdt.EXE]]
 - [[kb/sigma/rules/9c226817_8dc9_46c2_a58d_66655aafd7dc-modify_user_shell_folders_startup_value|Modify User Shell Folders Startup Value]]
@@ -2059,36 +2059,36 @@
 - [[kb/sigma/rules/74a2b37d_fea4_41e0_9ac7_c9fbcf1f60cc-winrar_creating_files_in_startup_locations|WinRAR Creating Files in Startup Locations]]
 - [[kb/sigma/rules/ba226dcf_d390_4642_b9af_b534872f1156-windows_event_log_access_tampering_via_registry|Windows Event Log Access Tampering Via Registry]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.003]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547003-time-providers|T1547.003: Time Providers]]
 
 - [[kb/sigma/rules/e88a6ddc_74f7_463b_9b26_f69fc0d2ce85-new_timeproviders_registered_with_uncommon_dll_name|New TimeProviders Registered With Uncommon DLL Name]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.004]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547004-winlogon-helper-dll|T1547.004: Winlogon Helper DLL]]
 
 - [[kb/sigma/rules/bbf59793_6efb_4fa1_95ca_a7d288e52c88-winlogon_notify_key_logon_persistence|Winlogon Notify Key Logon Persistence]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.005]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547005-security-support-provider|T1547.005: Security Support Provider]]
 
 - [[kb/sigma/rules/eeb30123_9fbd_4ee8_aaa0_2e545bbed6dc-security_support_provider_ssp_added_to_lsa_configuration|Security Support Provider (SSP) Added to LSA Configuration]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.006]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547006-kernel-modules-and-extensions|T1547.006: Kernel Modules and Extensions]]
 
 - [[kb/sigma/rules/106d7cbd_80ff_4985_b682_a7043e5acb72-loading_of_kernel_module_via_insmod|Loading of Kernel Module via Insmod]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.008]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 
 - [[kb/sigma/rules/b3503044_60ce_4bf4_bbcb_e3db98788823-dll_load_via_lsass|DLL Load via LSASS]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.009]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547009-shortcut-modification|T1547.009: Shortcut Modification]]
 
 - [[kb/sigma/rules/8c3c76ca_8f8b_4b1d_aaf3_81aebcd367c9-creation_exe_for_service_with_unquoted_path|Creation Exe for Service with Unquoted Path]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.010]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547010-port-monitors|T1547.010: Port Monitors]]
 
 - [[kb/sigma/rules/674202d0_b22a_4af4_ae5f_2eda1f3da1af-bypass_uac_using_event_viewer|Bypass UAC Using Event Viewer]]
 - [[kb/sigma/rules/509e84b9_a71a_40e0_834f_05470369bd1e-default_rdp_port_changed_to_non_standard_port|Default RDP Port Changed to Non Standard Port]]
 
-## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548]]
+## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
 
 - [[kb/sigma/rules/d522eca2_2973_4391_a3e0_ef0374321dae-abused_debug_privilege_by_arbitrary_parent_processes|Abused Debug Privilege by Arbitrary Parent Processes]]
 - [[kb/sigma/rules/07743f65_7ec9_404a_a519_913db7118a8d-com_hijack_via_sdclt|COM Hijack via Sdclt]]
@@ -2097,7 +2097,7 @@
 - [[kb/sigma/rules/883835a7_df45_43e4_bf1d_4268768afda4-regedit_as_trusted_installer|Regedit as Trusted Installer]]
 - [[kb/sigma/rules/a0cb7110_edf0_47a4_9177_541a4083128a-vulnerable_netlogon_secure_channel_connection_allowed|Vulnerable Netlogon Secure Channel Connection Allowed]]
 
-## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 - [[kb/sigma/rules/46dd5308_4572_4d12_aa43_8938f0184d4f-bypass_uac_using_delegateexecute|Bypass UAC Using DelegateExecute]]
 - [[kb/sigma/rules/724ea201_6514_4f38_9739_e5973c34f49a-bypass_uac_using_silentcleanup_task|Bypass UAC Using SilentCleanup Task]]
@@ -2146,25 +2146,25 @@
 - [[kb/sigma/rules/49f2f17b_b4c8_4172_a68b_d5bf95d05130-uac_bypass_via_icmluautil|UAC Bypass via ICMLuaUtil]]
 - [[kb/sigma/rules/5b872a46_3b90_45c1_8419_f675db8053aa-uac_bypass_via_sdclt|UAC Bypass via Sdclt]]
 
-## [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.002]]
+## [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 
 - [[kb/sigma/rules/24549159_ac1b_479c_8175_d42aea947cae-hacktool_ruler|Hacktool Ruler]]
 - [[kb/sigma/rules/192a0330_c20b_4356_90b6_7b7049ae0b87-successful_overpass_the_hash_attempt|Successful Overpass the Hash Attempt]]
 
-## [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.003]]
+## [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 
 - [[kb/sigma/rules/12827a56_61a4_476a_a9cb_f3068f191073-hacktool_krbrelayup_execution|HackTool - KrbRelayUp Execution]]
 - [[kb/sigma/rules/7ec2c172_dceb_4c10_92c9_87c1881b7e18-hacktool_rubeus_execution|HackTool - Rubeus Execution]]
 - [[kb/sigma/rules/3245cd30_e015_40ff_a31d_5cadd5f377ec-hacktool_rubeus_execution_scriptblock|HackTool - Rubeus Execution - ScriptBlock]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552]]
+## [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]]
 
 - [[kb/sigma/rules/1b45b0d1_773f_4f23_aedc_814b759563b1-application_appid_uri_configuration_changes|Application AppID Uri Configuration Changes]]
 - [[kb/sigma/rules/91b76b84_8589_47aa_9605_c837583b82a9-potential_okta_password_in_alternateid_field|Potential Okta Password in AlternateID Field]]
 - [[kb/sigma/rules/f0025a69_e1b7_4dda_a53c_db21fa2d4071-script_interpreter_spawning_credential_scanner_linux|Script Interpreter Spawning Credential Scanner - Linux]]
 - [[kb/sigma/rules/0f60b28c_64dd_4e2c_9a63_5334d3e3a6e6-script_interpreter_spawning_credential_scanner_windows|Script Interpreter Spawning Credential Scanner - Windows]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 - [[kb/sigma/rules/fa4aaed5_4fe0_498d_bbc0_08e3346387ba-copy_passwd_or_shadow_from_tmp_path|Copy Passwd Or Shadow From TMP Path]]
 - [[kb/sigma/rules/53b1b378_9b06_4992_b972_dde6e423d2b4-credentials_in_files|Credentials In Files]]
@@ -2174,34 +2174,34 @@
 - [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock]]
 - [[kb/sigma/rules/0cf7a157_8879_41a2_8f55_388dd23746b7-linux_recon_indicators|Linux Recon Indicators]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.002]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]
 
 - [[kb/sigma/rules/cc1abf27_78a3_4ac5_a51c_f3070b1d8e40-registry_export_of_third_party_credentials|Registry Export of Third-Party Credentials]]
 - [[kb/sigma/rules/f8748f2c_89dc_4d95_afb0_5a2dfdbad332-sam_registry_hive_handle_request|SAM Registry Hive Handle Request]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.004]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552004-private-keys|T1552.004: Private Keys]]
 
 - [[kb/sigma/rules/1f978c6a_4415_47fb_aca5_736a44d7ca3d-cisco_crypto_commands|Cisco Crypto Commands]]
 - [[kb/sigma/rules/7892ec59_c5bb_496d_8968_e5d210ca3ac4-dpapi_backup_keys_and_certificate_export_activity_ioc|DPAPI Backup Keys And Certificate Export Activity IOC]]
 - [[kb/sigma/rules/b2815d0d_7481_4bf0_9b6c_a4c48a94b349-powershell_get_process_lsass|PowerShell Get-Process LSASS]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.006]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552006-group-policy-preferences|T1552.006: Group Policy Preferences]]
 
 - [[kb/sigma/rules/91a2c315_9ee6_4052_a853_6f6a8238f90d-findstr_gpp_passwords|Findstr GPP Passwords]]
 - [[kb/sigma/rules/fe63010f_8823_4864_a96b_a7b4a0f7b929-lsass_process_reconnaissance_via_findstr_exe|LSASS Process Reconnaissance Via Findstr.EXE]]
 
-## [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.004]]
+## [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
 
 - [[kb/sigma/rules/1f978c6a_4415_47fb_aca5_736a44d7ca3d-cisco_crypto_commands|Cisco Crypto Commands]]
 - [[kb/sigma/rules/5f6a601c_2ecb_498b_9c33_660362323afa-root_certificate_installed_from_susp_locations|Root Certificate Installed From Susp Locations]]
 
-## [[kb/attack/techniques/T1554-compromise_host_software_binary|T1554]]
+## [[kb/attack/techniques/T1554-compromise_host_software_binary|T1554: Compromise Host Software Binary]]
 
 - [[kb/sigma/rules/7bd3902d_8b8b_4dd4_838a_c6862d40150d-dns_hybridconnectionmanager_service_bus|DNS HybridConnectionManager Service Bus]]
 - [[kb/sigma/rules/0ee4d8a5_4e67_4faf_acfa_62a78457d1f2-hybridconnectionmanager_service_installation|HybridConnectionManager Service Installation]]
 - [[kb/sigma/rules/b55d23e5_6821_44ff_8a6e_67218891e49f-hybridconnectionmanager_service_running|HybridConnectionManager Service Running]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
 
 - [[kb/sigma/rules/7892ec59_c5bb_496d_8968_e5d210ca3ac4-dpapi_backup_keys_and_certificate_export_activity_ioc|DPAPI Backup Keys And Certificate Export Activity IOC]]
 - [[kb/sigma/rules/7679d464_4f74_45e2_9e01_ac66c5eb041a-hacktool_securityxploded_execution|HackTool - SecurityXploded Execution]]
@@ -2209,41 +2209,41 @@
 - [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock]]
 - [[kb/sigma/rules/58f4ea09_0fc2_4520_ba18_b85c540b0eaf-suspicious_serv_u_process_pattern|Suspicious Serv-U Process Pattern]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.003]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555003-credentials-from-web-browsers|T1555.003: Credentials from Web Browsers]]
 
 - [[kb/sigma/rules/d557dc06_62e8_4468_a8e8_7984124908ce-hacktool_winpwn_execution|HackTool - WinPwn Execution]]
 - [[kb/sigma/rules/851fd622_b675_4d26_b803_14bc7baa517a-hacktool_winpwn_execution_scriptblock|HackTool - WinPwn Execution - ScriptBlock]]
 - [[kb/sigma/rules/24c77512_782b_448a_8950_eddb0785fc71-sqlite_chromium_profile_data_db_access|SQLite Chromium Profile Data DB Access]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.004]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555004-windows-credential-manager|T1555.004: Windows Credential Manager]]
 
 - [[kb/sigma/rules/a4694263_59a8_4608_a3a0_6f8d3a51664c-suspicious_key_manager_access|Suspicious Key Manager Access]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.005]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555005-password-managers|T1555.005: Password Managers]]
 
 - [[kb/sigma/rules/77564cc2_7382_438b_a7f6_395c2ae53b9a-remote_thread_created_in_keepass_exe|Remote Thread Created In KeePass.EXE]]
 
-## [[kb/attack/techniques/T1556-modify_authentication_process|T1556]]
+## [[kb/attack/techniques/T1556-modify_authentication_process|T1556: Modify Authentication Process]]
 
 - [[kb/sigma/rules/d3adb3ef_b7e7_4003_9092_1924c797db35-aws_identity_center_identity_provider_change|AWS Identity Center Identity Provider Change]]
 - [[kb/sigma/rules/b61e87c0_50db_4b2e_8986_6a2be94b33b0-directory_service_restore_mode_dsrm_registry_value_tampering|Directory Service Restore Mode(DSRM) Registry Value Tampering]]
 - [[kb/sigma/rules/8622c92d_c00e_463c_b09d_fd06166f6794-github_high_risk_configuration_disabled|Github High Risk Configuration Disabled]]
 - [[kb/sigma/rules/f598ea0c_c25a_4f72_a219_50c44411c791-possible_shadow_credentials_added|Possible Shadow Credentials Added]]
 
-## [[kb/attack/techniques/T1556-modify_authentication_process|T1556.002]]
+## [[kb/attack/techniques/T1556-modify_authentication_process#^t1556002-password-filter-dll|T1556.002: Password Filter DLL]]
 
 - [[kb/sigma/rules/63bf8794_9917_45bc_88dd_e1b5abc0ecfd-powershell_install_a_dll_in_system_directory|Powershell Install a DLL in System Directory]]
 
-## [[kb/attack/techniques/T1556-modify_authentication_process|T1556.006]]
+## [[kb/attack/techniques/T1556-modify_authentication_process#^t1556006-multi-factor-authentication|T1556.006: Multi-Factor Authentication]]
 
 - [[kb/sigma/rules/60de9b57_dc4d_48b9_a6a0_b39e0469f876-disabling_multi_factor_authentication|Disabling Multi Factor Authentication]]
 
-## [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557]]
+## [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
 
 - [[kb/sigma/rules/bb0e87ce_c89f_4857_84fa_095e4483e9cb-suspicious_child_process_of_notepad_updater_gup_exe|Suspicious Child Process of Notepad++ Updater - GUP.Exe]]
 - [[kb/sigma/rules/3b8f4c92_6a51_4d7e_9c3a_8e2d1f5a7b09-uncommon_file_created_by_notepad_updater_gup_exe|Uncommon File Created by Notepad++ Updater Gup.EXE]]
 
-## [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557.001]]
+## [[kb/attack/techniques/T1557-adversary-in-the-middle#^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay|T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay]]
 
 - [[kb/sigma/rules/0ed99dda_6a35_11ef_8c99_0242ac120002-attempts_of_kerberos_coercion_via_dns_spn_spoofing|Attempts of Kerberos Coercion Via DNS SPN Spoofing]]
 - [[kb/sigma/rules/cd8c163e_a19b_402e_bdd5_419ff5859f12-hacktool_adcspwn_execution|HackTool - ADCSPwn Execution]]
@@ -2255,17 +2255,17 @@
 - [[kb/sigma/rules/5588576c_5898_4fac_bcdd_7475a60e8f43-suspicious_dns_query_indicating_kerberos_coercion_via_dns_object_spn_spoofing_network|Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing - Network]]
 - [[kb/sigma/rules/679085d5_f427_4484_9f58_1dc30a7c426d-windivert_driver_load|WinDivert Driver Load]]
 
-## [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557.003]]
+## [[kb/attack/techniques/T1557-adversary-in-the-middle#^t1557003-dhcp-spoofing|T1557.003: DHCP Spoofing]]
 
 - [[kb/sigma/rules/b07e58cf_cacc_4135_8473_ccb2eba63dd2-potential_kerberos_coercion_by_spoofing_spns_via_dns_manipulation|Potential Kerberos Coercion by Spoofing SPNs via DNS Manipulation]]
 
-## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558]]
+## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
 
 - [[kb/sigma/rules/78cc2dd2_7d20_4d32_93ff_057084c38b93-antivirus_password_dumper_detection|Antivirus Password Dumper Detection]]
 - [[kb/sigma/rules/9e099d99_44c2_42b6_a6d8_54c3545cab29-hacktool_mimikatz_kirbi_file_creation|HackTool - Mimikatz Kirbi File Creation]]
 - [[kb/sigma/rules/5a44727c_3b85_4713_8c44_4401d5499629-replay_attack_detected|Replay Attack Detected]]
 
-## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
+## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
 
 - [[kb/sigma/rules/e96253b8_6b3b_4f90_9e59_3b24b99cf9b4-hacktool_krbrelay_execution|HackTool - KrbRelay Execution]]
 - [[kb/sigma/rules/12827a56_61a4_476a_a9cb_f3068f191073-hacktool_krbrelayup_execution|HackTool - KrbRelayUp Execution]]
@@ -2277,16 +2277,16 @@
 - [[kb/sigma/rules/a861d835_af37_4930_bcd6_5b178bfb54df-suspicious_kerberos_ticket_request_via_powershell_script_scriptblock|Suspicious Kerberos Ticket Request via PowerShell Script - ScriptBlock]]
 - [[kb/sigma/rules/6daac7fc_77d1_449a_a71a_e6b4d59a0e54-user_couldn_t_call_a_privileged_service_lsaregisterlogonprocess|User Couldn't Call a Privileged Service 'LsaRegisterLogonProcess']]
 
-## [[kb/attack/techniques/T1559-inter-process_communication|T1559.001]]
+## [[kb/attack/techniques/T1559-inter-process_communication#^t1559001-component-object-model|T1559.001: Component Object Model]]
 
 - [[kb/sigma/rules/3b4b232a_af90_427c_a22f_30b0c0837b95-cmstp_execution_process_access|CMSTP Execution Process Access]]
 
-## [[kb/attack/techniques/T1560-archive_collected_data|T1560.001]]
+## [[kb/attack/techniques/T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 
 - [[kb/sigma/rules/faa48cae_6b25_4f00_a094_08947fef582f-rar_usage_with_password_and_compression_level|Rar Usage with Password and Compression Level]]
 - [[kb/sigma/rules/5b768e71_86f2_4879_b448_81061cbae951-suspicious_manipulation_of_default_accounts_via_net_exe|Suspicious Manipulation Of Default Accounts Via Net.EXE]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+## [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 - [[kb/sigma/rules/a607e1fe_74bf_4440_a3ec_b059b9103157-aws_securityhub_findings_evasion|AWS SecurityHub Findings Evasion]]
 - [[kb/sigma/rules/a4c90ea1_2634_4ca0_adbb_35eae169b6fc-etw_logging_disabled_in_net_processes_registry|ETW Logging Disabled In .NET Processes - Registry]]
@@ -2300,7 +2300,7 @@
 - [[kb/sigma/rules/4d7cda18_1b12_4e52_b45c_d28653210df8-sysmon_driver_unloaded_via_fltmc_exe|Sysmon Driver Unloaded Via Fltmc.EXE]]
 - [[kb/sigma/rules/bacf58c6_e199_4040_a94f_95dea0f1e45a-windows_filtering_platform_blocked_connection_from_edr_agent_binary|Windows Filtering Platform Blocked Connection From EDR Agent Binary]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 - [[kb/sigma/rules/e0d6c087_2d1c_47fd_8799_3904103c5a98-amsi_bypass_pattern_assembly_gettype|AMSI Bypass Pattern Assembly GetType]]
 - [[kb/sigma/rules/aa37cbb0_da36_42cb_a90f_fdf216fc7467-amsi_disabled_via_registry_modification|AMSI Disabled via Registry Modification]]
@@ -2394,7 +2394,7 @@
 - [[kb/sigma/rules/8b7273a4_ba5d_4d8a_b04f_11f2900d043a-windows_hypervisor_enforced_code_integrity_disabled|Windows Hypervisor Enforced Code Integrity Disabled]]
 - [[kb/sigma/rules/d526c60a_e236_4011_b165_831ffa52ab70-windows_vulnerable_driver_blocklist_disabled|Windows Vulnerable Driver Blocklist Disabled]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 - [[kb/sigma/rules/0a13e132_651d_11eb_ae93_0242ac130002-audit_policy_tampering_via_auditpol|Audit Policy Tampering Via Auditpol]]
 - [[kb/sigma/rules/c6c56ada_612b_42d1_9a29_adad3c5c2c1e-audit_policy_tampering_via_nt_resource_kit_auditpol|Audit Policy Tampering Via NT Resource Kit Auditpol]]
@@ -2414,7 +2414,7 @@
 - [[kb/sigma/rules/166e9c50_8cd9_44af_815d_d1f0c0e90dde-suspicious_svchost_process_access|Suspicious Svchost Process Access]]
 - [[kb/sigma/rules/4d7cda18_1b12_4e52_b45c_d28653210df8-sysmon_driver_unloaded_via_fltmc_exe|Sysmon Driver Unloaded Via Fltmc.EXE]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 - [[kb/sigma/rules/79609c82_a488_426e_abcf_9f341a39365d-all_rules_have_been_deleted_from_the_windows_firewall_configuration|All Rules Have Been Deleted From The Windows Firewall Configuration]]
 - [[kb/sigma/rules/53059bc0_1472_438b_956a_7508a94a91f0-disable_system_firewall|Disable System Firewall]]
@@ -2422,7 +2422,7 @@
 - [[kb/sigma/rules/01aeb693_138d_49d2_9403_c4f52d7d3d62-rdp_connection_allowed_via_netsh_exe|RDP Connection Allowed Via Netsh.EXE]]
 - [[kb/sigma/rules/a35f5a72_f347_4e36_8895_9869b0d5fc6d-suspicious_program_location_whitelisted_in_firewall_via_netsh_exe|Suspicious Program Location Whitelisted In Firewall Via Netsh.EXE]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
 
 - [[kb/sigma/rules/aa37cbb0_da36_42cb_a90f_fdf216fc7467-amsi_disabled_via_registry_modification|AMSI Disabled via Registry Modification]]
 - [[kb/sigma/rules/977ef627_4539_4875_adf4_ed8f780c4922-auditing_configuration_changes_on_linux_host|Auditing Configuration Changes on Linux Host]]
@@ -2432,21 +2432,21 @@
 - [[kb/sigma/rules/bde30855_5c53_4c18_ae90_1ff79ebc9578-okta_user_session_start_via_an_anonymising_proxy_service|Okta User Session Start Via An Anonymising Proxy Service]]
 - [[kb/sigma/rules/7dbbcac2_57a0_45ac_b306_ff30a8bd2981-windows_amsi_related_registry_tampering_via_commandline|Windows AMSI Related Registry Tampering Via CommandLine]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 - [[kb/sigma/rules/07330162_dba1_4746_8121_a9647d49d297-aws_config_disabling_channel_recorder|AWS Config Disabling Channel/Recorder]]
 - [[kb/sigma/rules/d2656e78_c069_4571_8220_9e0ab5913f19-aws_guardduty_detector_deleted_or_updated|AWS GuardDuty Detector Deleted Or Updated]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.012]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562012-disable-or-modify-linux-audit-system|T1562.012: Disable or Modify Linux Audit System]]
 
 - [[kb/sigma/rules/bed26dea_4525_47f4_b24a_76e30e44ffb0-audit_rules_deleted_via_auditctl|Audit Rules Deleted Via Auditctl]]
 
-## [[kb/attack/techniques/T1563-remote_service_session_hijacking|T1563.002]]
+## [[kb/attack/techniques/T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
 
 - [[kb/sigma/rules/6ba5a05f_b095_4f0a_8654_b825f4f16334-potential_mstsc_shadowing_activity|Potential MSTSC Shadowing Activity]]
 - [[kb/sigma/rules/f72aa3e8_49f9_4c7d_bd74_f8ab84ff9bbb-suspicious_rdp_redirect_using_tscon|Suspicious RDP Redirect Using TSCON]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+## [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 - [[kb/sigma/rules/69bd9b97_2be2_41b6_9816_fb08757a4d1a-potentially_suspicious_execution_from_parent_process_in_public_folder|Potentially Suspicious Execution From Parent Process In Public Folder]]
 - [[kb/sigma/rules/e15b518d_b4ce_4410_a9cd_501f23ce4a18-suspicious_creation_with_colorcpl|Suspicious Creation with Colorcpl]]
@@ -2454,23 +2454,23 @@
 - [[kb/sigma/rules/815cd91b_7dbc_4247_841a_d7dd1392b0a8-sysmon_configuration_error|Sysmon Configuration Error]]
 - [[kb/sigma/rules/1f2b5353_573f_4880_8e33_7d04dcf97744-sysmon_configuration_modification|Sysmon Configuration Modification]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.001]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564001-hidden-files-and-directories|T1564.001: Hidden Files and Directories]]
 
 - [[kb/sigma/rules/fecfd1a1_cc78_4313_a1ea_2ee2e8ec27a7-powershell_logging_disabled_via_registry_key_tampering|PowerShell Logging Disabled Via Registry Key Tampering]]
 - [[kb/sigma/rules/1547e27c_3974_43e2_a7d7_7f484fb928ec-registry_persistence_via_service_in_safe_mode|Registry Persistence via Service in Safe Mode]]
 - [[kb/sigma/rules/efec536f_72e8_4656_8960_5e85d091345b-set_suspicious_files_as_system_files_using_attrib_exe|Set Suspicious Files as System Files Using Attrib.EXE]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.002]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564002-hidden-users|T1564.002: Hidden Users]]
 
 - [[kb/sigma/rules/f8aebc67_a56d_4ec9_9fbe_7b0e8b7b4efd-hiding_user_account_via_specialaccounts_registry_key|Hiding User Account Via SpecialAccounts Registry Key]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.003]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
 
 - [[kb/sigma/rules/0e8cfe08_02c9_4815_a2f8_0d157b7ed33e-file_download_with_headless_browser|File Download with Headless Browser]]
 - [[kb/sigma/rules/c260b6db_48ba_4b4a_a76f_2f67644e99d2-hacktool_covenant_powershell_launcher|HackTool - Covenant PowerShell Launcher]]
 - [[kb/sigma/rules/3e8207c5_fcd2_4ea6_9418_15d45b4890e4-potential_data_stealing_via_chromium_headless_debugging|Potential Data Stealing Via Chromium Headless Debugging]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 - [[kb/sigma/rules/0d7a9363_af70_4e7b_a3b7_1a176b7fbe84-exports_registry_key_to_an_alternate_data_stream|Exports Registry Key To an Alternate Data Stream]]
 - [[kb/sigma/rules/19b041f6_e583_40dc_b842_d6fa8011493f-hacktool_named_file_stream_created|HackTool Named File Stream Created]]
@@ -2481,16 +2481,16 @@
 - [[kb/sigma/rules/52182dfb_afb7_41db_b4bc_5336cb29b464-suspicious_file_download_from_file_sharing_websites_file_stream|Suspicious File Download From File Sharing Websites -  File Stream]]
 - [[kb/sigma/rules/025bd229_fd1f_4fdb_97ab_20006e1a5368-unusual_file_download_from_direct_ip_address|Unusual File Download from Direct IP Address]]
 
-## [[kb/attack/techniques/T1565-data_manipulation|T1565]]
+## [[kb/attack/techniques/T1565-data_manipulation|T1565: Data Manipulation]]
 
 - [[kb/sigma/rules/4368354e_1797_463c_bc39_a309effbe8d7-powershell_add_name_resolution_policy_table_rule|Powershell Add Name Resolution Policy Table Rule]]
 
-## [[kb/attack/techniques/T1565-data_manipulation|T1565.001]]
+## [[kb/attack/techniques/T1565-data_manipulation#^t1565001-stored-data-manipulation|T1565.001: Stored Data Manipulation]]
 
 - [[kb/sigma/rules/e09eb557_96d2_4de9_ba2d_30f712a5afd3-commands_to_clear_or_remove_the_syslog_builtin|Commands to Clear or Remove the Syslog - Builtin]]
 - [[kb/sigma/rules/1182f3b3_e716_4efa_99ab_d2685d04360f-history_file_deletion|History File Deletion]]
 
-## [[kb/attack/techniques/T1566-phishing|T1566]]
+## [[kb/attack/techniques/T1566-phishing|T1566: Phishing]]
 
 - [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process]]
 - [[kb/sigma/rules/ee39a9f7_5a79_4b0a_9815_d36b3cf28d3e-okta_fastpass_phishing_detection|Okta FastPass Phishing Detection]]
@@ -2500,7 +2500,7 @@
 - [[kb/sigma/rules/e8a95b5e_c891_46e2_b33a_93937d3abc31-suspicious_hh_exe_execution|Suspicious HH.EXE Execution]]
 - [[kb/sigma/rules/c27515df_97a9_4162_8a60_dc0eeb51b775-suspicious_microsoft_onenote_child_process|Suspicious Microsoft OneNote Child Process]]
 
-## [[kb/attack/techniques/T1566-phishing|T1566.001]]
+## [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 - [[kb/sigma/rules/52cad028_0ff0_4854_8f67_d25dfcbc78b4-html_help_hh_exe_suspicious_child_process|HTML Help HH.EXE Suspicious Child Process]]
 - [[kb/sigma/rules/2f9356ae_bf43_41b8_b858_4496d83b2acb-iso_file_created_within_temp_folders|ISO File Created Within Temp Folders]]
@@ -2513,18 +2513,18 @@
 - [[kb/sigma/rules/023394c4_29d5_46ab_92b8_6a534c6f447b-suspicious_hwp_sub_processes|Suspicious HWP Sub Processes]]
 - [[kb/sigma/rules/c27515df_97a9_4162_8a60_dc0eeb51b775-suspicious_microsoft_onenote_child_process|Suspicious Microsoft OneNote Child Process]]
 
-## [[kb/attack/techniques/T1566-phishing|T1566.002]]
+## [[kb/attack/techniques/T1566-phishing#^t1566002-spearphishing-link|T1566.002: Spearphishing Link]]
 
 - [[kb/sigma/rules/38e7f511_3f74_41d4_836e_f57dfa18eead-potential_malicious_usage_of_cloudtrail_system_manager|Potential Malicious Usage of CloudTrail System Manager]]
 
-## [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567]]
+## [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
 
 - [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux]]
 - [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated]]
 - [[kb/sigma/rules/b593fd50_7335_4682_a36c_4edcb68e4641-monero_crypto_coin_mining_pool_lookup|Monero Crypto Coin Mining Pool Lookup]]
 - [[kb/sigma/rules/18249279_932f_45e2_b37a_8925f2597670-process_initiated_network_connection_to_ngrok_domain|Process Initiated Network Connection To Ngrok Domain]]
 
-## [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567.002]]
+## [[kb/attack/techniques/T1567-exfiltration_over_web_service#^t1567002-exfiltration-to-cloud-storage|T1567.002: Exfiltration to Cloud Storage]]
 
 - [[kb/sigma/rules/29f171d7_aa47_42c7_9c7b_3c87938164d9-dns_query_for_anonfiles_com_domain_dns_client|DNS Query for Anonfiles.com Domain - DNS Client]]
 - [[kb/sigma/rules/065cceea_77ec_4030_9052_fc0affea7110-dns_query_for_anonfiles_com_domain_sysmon|DNS Query for Anonfiles.com Domain - Sysmon]]
@@ -2532,12 +2532,12 @@
 - [[kb/sigma/rules/6ddff2e8_ea1a_45d0_8938_93dfc1d67ae7-pua_restic_backup_tool_execution|PUA - Restic Backup Tool Execution]]
 - [[kb/sigma/rules/25eabf56_22f0_4915_a1ed_056b8dae0a68-suspicious_dropbox_api_usage|Suspicious Dropbox API Usage]]
 
-## [[kb/attack/techniques/T1568-dynamic_resolution|T1568.002]]
+## [[kb/attack/techniques/T1568-dynamic_resolution#^t1568002-domain-generation-algorithms|T1568.002: Domain Generation Algorithms]]
 
 - [[kb/sigma/rules/19bf6fdb_7721_4f3d_867f_53467f6a5db6-communication_to_ngrok_tunneling_service_linux|Communication To Ngrok Tunneling Service - Linux]]
 - [[kb/sigma/rules/1d08ac94_400d_4469_a82f_daee9a908849-communication_to_ngrok_tunneling_service_initiated|Communication To Ngrok Tunneling Service Initiated]]
 
-## [[kb/attack/techniques/T1569-system_services|T1569.002]]
+## [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 - [[kb/sigma/rules/d7a95147_145f_4678_b85d_d1ff4a3bb3f6-cobaltstrike_service_installations_security|CobaltStrike Service Installations - Security]]
 - [[kb/sigma/rules/5a105d34_05fc_401e_8553_272b45c1522d-cobaltstrike_service_installations_system|CobaltStrike Service Installations - System]]
@@ -2561,18 +2561,18 @@
 - [[kb/sigma/rules/31c51af6_e7aa_4da7_84d4_8f32cc580af2-sliver_c2_default_service_installation|Sliver C2 Default Service Installation]]
 - [[kb/sigma/rules/52a85084_6989_40c3_8f32_091e12e13f09-smbexec_py_service_installation|smbexec.py Service Installation]]
 
-## [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570]]
+## [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
 
 - [[kb/sigma/rules/6fb63b40_e02a_403e_9ffd_3bcc1d749442-metasploit_or_impacket_service_installation_via_smb_psexec|Metasploit Or Impacket Service Installation Via SMB PsExec]]
 - [[kb/sigma/rules/304afd73_55a5_4bb9_8c21_0b1fc84ea9e4-psexec_remote_execution_file_artefact|PSEXEC Remote Execution File Artefact]]
 - [[kb/sigma/rules/5bb68627_3198_40ca_b458_49f973db8752-rundll32_execution_without_parameters|Rundll32 Execution Without Parameters]]
 
-## [[kb/attack/techniques/T1571-non-standard_port|T1571]]
+## [[kb/attack/techniques/T1571-non-standard_port|T1571: Non-Standard Port]]
 
 - [[kb/sigma/rules/4b89abaa_99fe_4232_afdd_8f9aa4d20382-potentially_suspicious_malware_callback_communication|Potentially Suspicious Malware Callback Communication]]
 - [[kb/sigma/rules/dbfc7c98_04ab_4ab7_aa94_c74d22aa7376-potentially_suspicious_malware_callback_communication_linux|Potentially Suspicious Malware Callback Communication - Linux]]
 
-## [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
+## [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 
 - [[kb/sigma/rules/3ab65069_d82a_4d44_a759_466661a082d1-communication_to_localtonet_tunneling_service_initiated|Communication To LocaltoNet Tunneling Service Initiated]]
 - [[kb/sigma/rules/c4568f5d_131f_4e78_83d4_45b2da0ec4f1-communication_to_localtonet_tunneling_service_initiated_linux|Communication To LocaltoNet Tunneling Service Initiated - Linux]]
@@ -2588,11 +2588,11 @@
 - [[kb/sigma/rules/3ceb2083_a27f_449a_be33_14ec1b7cc973-silence_eda_detection|Silence.EDA Detection]]
 - [[kb/sigma/rules/48a61b29_389f_4032_b317_b30de6b95314-suspicious_plink_port_forwarding|Suspicious Plink Port Forwarding]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
 
 - [[kb/sigma/rules/e0813366_0407_449a_9869_a2db1119dc41-suspicious_printer_driver_empty_manufacturer|Suspicious Printer Driver Empty Manufacturer]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 - [[kb/sigma/rules/90ae0469_0cee_4509_b67f_e5efcef040f7-aruba_network_service_potential_dll_sideloading|Aruba Network Service Potential DLL Sideloading]]
 - [[kb/sigma/rules/9d3436ef_9476_4c43_acca_90ce06bdf33a-dhcp_callout_dll_installation|DHCP Callout DLL Installation]]
@@ -2637,24 +2637,24 @@
 - [[kb/sigma/rules/273a8dd8_3742_4302_bcc7_7df5a80fe425-vmmap_unsigned_dbghelp_dll_potential_sideloading|VMMap Unsigned Dbghelp.DLL Potential Sideloading]]
 - [[kb/sigma/rules/193d5ccd_6f59_40c6_b5b0_8e32d5ddd3d1-xwizard_exe_execution_from_non_default_location|Xwizard.EXE Execution From Non-Default Location]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.005]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574005-executable-installer-file-permissions-weakness|T1574.005: Executable Installer File Permissions Weakness]]
 
 - [[kb/sigma/rules/c484e533_ee16_4a93_b6ac_f0ea4868b2f1-hacktool_sharpup_privesc_tool_execution|HackTool - SharpUp PrivEsc Tool Execution]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.006]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574006-dynamic-linker-hijacking|T1574.006: Dynamic Linker Hijacking]]
 
 - [[kb/sigma/rules/7e3c4651_c347_40c4_b1d4_d48590fdf684-code_injection_by_ld_so_preload|Code Injection by ld.so Preload]]
 - [[kb/sigma/rules/4b3cb710_5e83_4715_8c45_8b2b5b3e5751-modification_of_ld_so_preload|Modification of ld.so.preload]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.007]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574007-path-interception-by-path-environment-variable|T1574.007: Path Interception by PATH Environment Variable]]
 
 - [[kb/sigma/rules/0cbe38c0_270c_41d9_ab79_6e5a9a669290-trusted_path_bypass_via_windows_directory_spoofing|Trusted Path Bypass via Windows Directory Spoofing]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.008]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574008-path-interception-by-search-order-hijacking|T1574.008: Path Interception by Search Order Hijacking]]
 
 - [[kb/sigma/rules/b2ddd389_f676_4ac4_845a_e00781a48e5f-using_settingsynchost_exe_as_lolbin|Using SettingSyncHost.exe as LOLBin]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 - [[kb/sigma/rules/514e4c3a_c77d_4cde_a00f_046425e2301e-abuse_of_service_permissions_to_hide_services_via_set_service|Abuse of Service Permissions to Hide Services Via Set-Service]]
 - [[kb/sigma/rules/953945c5_22fe_4a92_9f8a_a9edc1e522da-abuse_of_service_permissions_to_hide_services_via_set_service_ps|Abuse of Service Permissions to Hide Services Via Set-Service - PS]]
@@ -2663,25 +2663,25 @@
 - [[kb/sigma/rules/a537cfc3_4297_4789_92b5_345bfd845ad0-service_dacl_abuse_to_hide_services_via_sc_exe|Service DACL Abuse To Hide Services Via Sc.EXE]]
 - [[kb/sigma/rules/22d80745_6f2c_46da_826b_77adaededd74-suspicious_service_dacl_modification_via_set_service_cmdlet_ps|Suspicious Service DACL Modification Via Set-Service Cmdlet - PS]]
 
-## [[kb/attack/techniques/T1584-compromise_infrastructure|T1584]]
+## [[kb/attack/techniques/T1584-compromise_infrastructure|T1584: Compromise Infrastructure]]
 
 - [[kb/sigma/rules/1ae64f96_72b6_48b3_ad3d_e71dff6c6398-suspicious_external_webdav_execution|Suspicious External WebDAV Execution]]
 
-## [[kb/attack/techniques/T1586-compromise_accounts|T1586]]
+## [[kb/attack/techniques/T1586-compromise_accounts|T1586: Compromise Accounts]]
 
 - [[kb/sigma/rules/7215374a_de4f_4b33_8ba5_70804c9251d3-bitbucket_unauthorized_access_to_a_resource|Bitbucket Unauthorized Access To A Resource]]
 - [[kb/sigma/rules/34d81081_03c9_4a7f_91c9_5e46af625cde-bitbucket_unauthorized_full_data_export_triggered|Bitbucket Unauthorized Full Data Export Triggered]]
 
-## [[kb/attack/techniques/T1586-compromise_accounts|T1586.003]]
+## [[kb/attack/techniques/T1586-compromise_accounts#^t1586003-cloud-accounts|T1586.003: Cloud Accounts]]
 
 - [[kb/sigma/rules/07e97cc6_aed1_43ae_9081_b3470d2367f1-okta_suspicious_activity_reported_by_end_user|Okta Suspicious Activity Reported by End-user]]
 
-## [[kb/attack/techniques/T1587-develop_capabilities|T1587]]
+## [[kb/attack/techniques/T1587-develop_capabilities|T1587: Develop Capabilities]]
 
 - [[kb/sigma/rules/ff23ffbc_3378_435e_992f_0624dcf93ab4-hacktool_purplesharp_execution|HackTool - PurpleSharp Execution]]
 - [[kb/sigma/rules/a015e032_146d_4717_8944_7a1884122111-linux_hacktool_execution|Linux HackTool Execution]]
 
-## [[kb/attack/techniques/T1587-develop_capabilities|T1587.001]]
+## [[kb/attack/techniques/T1587-develop_capabilities#^t1587001-malware|T1587.001: Malware]]
 
 - [[kb/sigma/rules/d08a2711_ee8b_4323_bdec_b7d85e892b31-pua_csexec_execution|PUA - CsExec Execution]]
 - [[kb/sigma/rules/207b0396_3689_42d9_8399_4222658efc99-potential_privilege_escalation_to_local_system|Potential Privilege Escalation To LOCAL SYSTEM]]
@@ -2690,16 +2690,16 @@
 - [[kb/sigma/rules/8834e2f7_6b4b_4f09_8906_d2276470ee23-psexec_paexec_escalation_to_local_system|PsExec/PAExec Escalation to LOCAL SYSTEM]]
 - [[kb/sigma/rules/a10a2c40_2c4d_49f8_b557_1a946bc55d9d-uncommon_file_created_in_office_startup_folder|Uncommon File Created In Office Startup Folder]]
 
-## [[kb/attack/techniques/T1588-obtain_capabilities|T1588]]
+## [[kb/attack/techniques/T1588-obtain_capabilities|T1588: Obtain Capabilities]]
 
 - [[kb/sigma/rules/c9a88268_0047_4824_ba6e_4d81ce0b907c-antivirus_relevant_file_paths_alerts|Antivirus Relevant File Paths Alerts]]
 - [[kb/sigma/rules/78bc5783_81d9_4d73_ac97_59f6db4f72a8-relevant_anti_virus_signature_keywords_in_application_log|Relevant Anti-Virus Signature Keywords In Application Log]]
 
-## [[kb/attack/techniques/T1588-obtain_capabilities|T1588.001]]
+## [[kb/attack/techniques/T1588-obtain_capabilities#^t1588001-malware|T1588.001: Malware]]
 
 - [[kb/sigma/rules/36aa86ca_fd9d_4456_814e_d3b1b8e1e0bb-relevant_clamav_message|Relevant ClamAV Message]]
 
-## [[kb/attack/techniques/T1588-obtain_capabilities|T1588.002]]
+## [[kb/attack/techniques/T1588-obtain_capabilities#^t1588002-tool|T1588.002: Tool]]
 
 - [[kb/sigma/rules/24e3e58a_646b_4b50_adef_02ef935b9fc8-hacktool_execution_imphash|Hacktool Execution - Imphash]]
 - [[kb/sigma/rules/37c1333a_a0db_48be_b64b_7393b2386e3b-hacktool_execution_pe_metadata|Hacktool Execution - PE Metadata]]
@@ -2707,58 +2707,58 @@
 - [[kb/sigma/rules/f50f3c09_557d_492d_81db_9064a8d4e211-suspicious_execution_of_renamed_sysinternals_tools_registry|Suspicious Execution Of Renamed Sysinternals Tools - Registry]]
 - [[kb/sigma/rules/8023f872_3f1d_4301_a384_801889917ab4-usage_of_renamed_sysinternals_tools_registryset|Usage of Renamed Sysinternals Tools - RegistrySet]]
 
-## [[kb/attack/techniques/T1589-gather_victim_identity_information|T1589]]
+## [[kb/attack/techniques/T1589-gather_victim_identity_information|T1589: Gather Victim Identity Information]]
 
 - [[kb/sigma/rules/19128e5e_4743_48dc_bd97_52e5775af817-azure_ad_account_credential_leaked|Azure AD Account Credential Leaked]]
 
-## [[kb/attack/techniques/T1590-gather_victim_network_information|T1590.001]]
+## [[kb/attack/techniques/T1590-gather_victim_network_information#^t1590001-domain-properties|T1590.001: Domain Properties]]
 
 - [[kb/sigma/rules/2c32b543_1058_4808_91c6_5b31b8bed6c5-pua_crassus_execution|PUA - Crassus Execution]]
 
-## [[kb/attack/techniques/T1592-gather_victim_host_information|T1592.004]]
+## [[kb/attack/techniques/T1592-gather_victim_host_information#^t1592004-client-configurations|T1592.004: Client Configurations]]
 
 - [[kb/sigma/rules/0cf7a157_8879_41a2_8f55_388dd23746b7-linux_recon_indicators|Linux Recon Indicators]]
 
-## [[kb/attack/techniques/T1595-active_scanning|T1595]]
+## [[kb/attack/techniques/T1595-active_scanning|T1595: Active Scanning]]
 
 - [[kb/sigma/rules/b37998de_a70b_4f33_b219_ec36bf433dc0-pua_pingcastle_execution_from_potentially_suspicious_parent|PUA - PingCastle Execution From Potentially Suspicious Parent]]
 
-## [[kb/attack/techniques/T1595-active_scanning|T1595.002]]
+## [[kb/attack/techniques/T1595-active_scanning#^t1595002-vulnerability-scanning|T1595.002: Vulnerability Scanning]]
 
 - [[kb/sigma/rules/aff715fa_4dd5_497a_8db3_910bea555566-dns_query_to_external_service_interaction_domains|DNS Query to External Service Interaction Domains]]
 
-## [[kb/attack/techniques/T1599-network_boundary_bridging|T1599.001]]
+## [[kb/attack/techniques/T1599-network_boundary_bridging#^t1599001-network-address-translation-traversal|T1599.001: Network Address Translation Traversal]]
 
 - [[kb/sigma/rules/679085d5_f427_4484_9f58_1dc30a7c426d-windivert_driver_load|WinDivert Driver Load]]
 
-## [[kb/attack/techniques/T1606-forge_web_credentials|T1606]]
+## [[kb/attack/techniques/T1606-forge_web_credentials|T1606: Forge Web Credentials]]
 
 - [[kb/sigma/rules/e3393cba_31f0_4207_831e_aef90ab17a8c-saml_token_issuer_anomaly|SAML Token Issuer Anomaly]]
 
-## [[kb/attack/techniques/T1608-stage_capabilities|T1608]]
+## [[kb/attack/techniques/T1608-stage_capabilities|T1608: Stage Capabilities]]
 
 - [[kb/sigma/rules/ac8866c7_ce44_46fd_8c17_b24acff96ca8-hybridconnectionmanager_service_installation_registry|HybridConnectionManager Service Installation - Registry]]
 - [[kb/sigma/rules/00d49ed5_4491_4271_a8db_650a4ef6f8c1-suspicious_download_from_office_domain|Suspicious Download from Office Domain]]
 
-## [[kb/attack/techniques/T1608-stage_capabilities|T1608.003]]
+## [[kb/attack/techniques/T1608-stage_capabilities#^t1608003-install-digital-certificate|T1608.003: Install Digital Certificate]]
 
 - [[kb/sigma/rules/1279262f_1464_422f_ac0d_5b545320c526-aws_kms_imported_key_material_usage|AWS KMS Imported Key Material Usage]]
 
-## [[kb/attack/techniques/T1615-group_policy_discovery|T1615]]
+## [[kb/attack/techniques/T1615-group_policy_discovery|T1615: Group Policy Discovery]]
 
 - [[kb/sigma/rules/c484e533_ee16_4a93_b6ac_f0ea4868b2f1-hacktool_sharpup_privesc_tool_execution|HackTool - SharpUp PrivEsc Tool Execution]]
 - [[kb/sigma/rules/07aa184a_870d_413d_893a_157f317f6f58-suspicious_reconnaissance_activity_via_gathernetworkinfo_vbs|Suspicious Reconnaissance Activity Via GatherNetworkInfo.VBS]]
 
-## [[kb/attack/techniques/T1620-reflective_code_loading|T1620]]
+## [[kb/attack/techniques/T1620-reflective_code_loading|T1620: Reflective Code Loading]]
 
 - [[kb/sigma/rules/62b7ccc9_23b4_471e_aa15_6da3663c4d59-powershell_base64_encoded_reflective_assembly_load|PowerShell Base64 Encoded Reflective Assembly Load]]
 
-## [[kb/attack/techniques/T1649-steal_or_forge_authentication_certificates|T1649]]
+## [[kb/attack/techniques/T1649-steal_or_forge_authentication_certificates|T1649: Steal or Forge Authentication Certificates]]
 
 - [[kb/sigma/rules/762f2482_ff21_4970_8939_0aa317a886bb-hacktool_certify_execution|HackTool - Certify Execution]]
 - [[kb/sigma/rules/6938366d_8954_4ddc_baff_c830b3ba8fcd-hacktool_certipy_execution|HackTool - Certipy Execution]]
 
-## [[kb/attack/techniques/T1653-power_settings|T1653]]
+## [[kb/attack/techniques/T1653-power_settings|T1653: Power Settings]]
 
 - [[kb/sigma/rules/c172b7b5_f3a1_4af2_90b7_822c63df86cb-mask_system_power_settings_via_systemctl|Mask System Power Settings Via Systemctl]]
 

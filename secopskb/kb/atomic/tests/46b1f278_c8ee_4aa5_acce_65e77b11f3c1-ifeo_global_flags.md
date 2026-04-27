@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.012"
 attack_technique_name: "Event Triggered Execution: Image File Execution Options Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.012/T1546.012.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "46b1f278-c8ee-4aa5-acce-65e77b11f3c1"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# IFEO Global Flags
-
 Leverage Global Flags Settings
-
-## Metadata
-
-- Atomic GUID: 46b1f278-c8ee-4aa5-acce-65e77b11f3c1
-- Technique: T1546.012: Event Triggered Execution: Image File Execution Options Injection
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1546.012/T1546.012.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.012]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546012-image-file-execution-options-injection|T1546.012: Image File Execution Options Injection]]
 
 ## Input Arguments
 

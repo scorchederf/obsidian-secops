@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.004"
 attack_technique_name: "Valid Accounts: Cloud Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.004/T1078.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "9fdd83fd-bd53-46e5-a716-9dec89c8ae8e"
@@ -21,23 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Creating GCP Service Account and Service Account Key
-
 GCP Service Accounts can be used to gain intial access as well as maintain persistence inside Google Cloud.
-
-## Metadata
-
-- Atomic GUID: 9fdd83fd-bd53-46e5-a716-9dec89c8ae8e
-- Technique: T1078.004: Valid Accounts: Cloud Accounts
-- Platforms: google-workspace, iaas:gcp
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1078.004/T1078.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Input Arguments
 

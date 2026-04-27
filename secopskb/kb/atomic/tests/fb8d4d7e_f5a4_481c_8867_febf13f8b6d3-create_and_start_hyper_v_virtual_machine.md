@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.006"
 attack_technique_name: "Run Virtual Instance"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "fb8d4d7e-f5a4-481c-8867-febf13f8b6d3"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create and start Hyper-V virtual machine
-
 Create a simple Hyper-V VM (Windows native hypervisor) and start up the machine
 Cleanup command stops and deletes the newly created VM
 https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/
 https://attack.mitre.org/techniques/T1564/006/
 
-## Metadata
-
-- Atomic GUID: fb8d4d7e-f5a4-481c-8867-febf13f8b6d3
-- Technique: T1564.006: Run Virtual Instance
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1564.006/T1564.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.006]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564006-run-virtual-instance|T1564.006: Run Virtual Instance]]
 
 ## Input Arguments
 

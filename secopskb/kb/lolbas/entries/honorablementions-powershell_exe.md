@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/HonorableMentions/PowerShell.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/HonorableMentions/PowerShell.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "HonorableMentions"
 aliases:
   - "Powershell.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Powershell.exe
-
 Powershell.exe is a a task-based command-line shell built on .NET.
-
-## Metadata
-
-- Category: HonorableMentions
-- Created: 2024-04-03
-- Author: Everyone
-- Source Path: yml/HonorableMentions/PowerShell.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ powershell.exe -ep bypass -file c:\path\to\a\script.ps1
 - Use Case: Execute PowerShell cmdlets, .NET code, and just about anything else your heart desires
 - Privileges: User
 - Operating System: Windows 7 and up
-- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ### 2. Execute
 
@@ -61,7 +52,7 @@ powershell.exe -ep bypass -command "Invoke-AllTheThings..."
 - Use Case: Execute PowerShell cmdlets, .NET code, and just about anything else your heart desires
 - Privileges: User
 - Operating System: Windows 7 and up
-- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ### 3. Execute
 
@@ -74,7 +65,7 @@ powershell.exe -ep bypass -ec IgBXAGUAIAA8ADMAIABMAE8ATABCAEEAUwAiAA==
 - Use Case: Execute PowerShell cmdlets, .NET code, and just about anything else your heart desires
 - Privileges: User
 - Operating System: Windows 7 and up
-- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detections
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "f543635c-1705-42c3-b180-efd6dc6e7ee7"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Stage Popular Credential Files for Exfiltration
-
 This test is designed to search a drive for credential files used by the most common web browsers on Windows (Firefox, Chrome, Opera, and Edge), export the found files to a folder, and zip it,
 simulating how an adversary might stage sensitive credential files for exfiltration in order to conduct offline password extraction with tools like [firepwd.py](https://github.com/lclevy/firepwd) or [HackBrowserData](https://github.com/moonD4rk/HackBrowserData).
 
-## Metadata
-
-- Atomic GUID: f543635c-1705-42c3-b180-efd6dc6e7ee7
-- Technique: T1555.003: Credentials from Password Stores: Credentials from Web Browsers
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1555.003/T1555.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.003]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555003-credentials-from-web-browsers|T1555.003: Credentials from Web Browsers]]
 
 ## Executor
 

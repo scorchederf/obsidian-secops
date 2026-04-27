@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Defense Evasion Via Rename Of Highly Relevant Binaries
-
 Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.
-
-## Metadata
-
-- Rule ID: 0ba1da6d-b6ce-4366-828c-18826c9de23e
-- Status: test
-- Level: high
-- Author: Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113
-- Date: 2019-06-15
-- Modified: 2026-02-12
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_binary_highly_relevant.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of a renamed binary often used by attackers or malware lev
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Detection
 

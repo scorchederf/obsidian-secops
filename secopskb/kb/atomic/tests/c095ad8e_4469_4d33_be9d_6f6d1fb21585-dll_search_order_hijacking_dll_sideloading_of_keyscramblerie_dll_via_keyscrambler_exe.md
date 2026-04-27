@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.001"
 attack_technique_name: "Hijack Execution Flow: DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "c095ad8e-4469-4d33-be9d-6f6d1fb21585"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DLL Search Order Hijacking,DLL Sideloading Of KeyScramblerIE.DLL Via KeyScrambler.EXE
-
 Various threat actors and malware have been found side loading a masqueraded "KeyScramblerIE.dll" through "KeyScrambler.exe", which can load further executables embedded in modified KeyScramblerIE.dll file.
-
-## Metadata
-
-- Atomic GUID: c095ad8e-4469-4d33-be9d-6f6d1fb21585
-- Technique: T1574.001: Hijack Execution Flow: DLL
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1574.001/T1574.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Executor
 

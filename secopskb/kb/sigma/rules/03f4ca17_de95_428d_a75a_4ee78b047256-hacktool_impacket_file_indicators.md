@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_impacket_file_indicators.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_impacket_file_indicators.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "experimental"
 level: "high"
 logsource: "windows / file_event"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Impacket File Indicators
-
 Detects file creation events with filename patterns used by Impacket.
-
-## Metadata
-
-- Rule ID: 03f4ca17-de95-428d-a75a-4ee78b047256
-- Status: experimental
-- Level: high
-- Author: The DFIR Report, IrishDeath
-- Date: 2025-05-19
-- Source Path: rules/windows/file/file_event/file_event_win_impacket_file_indicators.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects file creation events with filename patterns used by Impacket.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

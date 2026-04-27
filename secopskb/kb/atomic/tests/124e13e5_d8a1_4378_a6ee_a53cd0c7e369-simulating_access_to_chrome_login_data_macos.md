@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "124e13e5-d8a1-4378-a6ee-a53cd0c7e369"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Simulating Access to Chrome Login Data - MacOS
-
 This test locates the Login Data files used by Chrome to store encrypted credentials, then copies them to the temp directory for later exfil. 
 Once the files are exfiltrated, malware like CookieMiner could be used to perform credential extraction. 
 See https://unit42.paloaltonetworks.com/mac-malware-steals-cryptocurrency-exchanges-cookies/ .
 
-## Metadata
-
-- Atomic GUID: 124e13e5-d8a1-4378-a6ee-a53cd0c7e369
-- Technique: T1555.003: Credentials from Password Stores: Credentials from Web Browsers
-- Platforms: macos
-- Executor: sh
-- Source Path: atomics/T1555.003/T1555.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.003]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555003-credentials-from-web-browsers|T1555.003: Credentials from Web Browsers]]
 
 ## Executor
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_advancedrun_priv_user.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_advancedrun_priv_user.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - AdvancedRun Suspicious Execution
-
 Detects the execution of AdvancedRun utility in the context of the TrustedInstaller, SYSTEM, Local Service or Network Service accounts
-
-## Metadata
-
-- Rule ID: fa00b701-44c6-4679-994d-5a18afa8a707
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-01-20
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_advancedrun_priv_user.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of AdvancedRun utility in the context of the TrustedInstal
 
 ### Techniques
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.002]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134002-create-process-with-token|T1134.002: Create Process with Token]]
 
 ## Detection
 

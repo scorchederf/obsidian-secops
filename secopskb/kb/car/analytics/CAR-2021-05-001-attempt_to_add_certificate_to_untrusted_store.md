@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-05-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-05-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-05-001"
   - "Attempt To Add Certificate To Untrusted Store"
@@ -25,26 +25,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store
-
-## Metadata
-
-- CAR ID: CAR-2021-05-001
-- Submission Date: 2021/05/11
-- Information Domain: Analytic
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Splunk Threat Research <research@splunk.com>
-
-## Description
-
 Adversaries may add their own root certificate to the certificate store, to cause the web browser to trust that certificate and not display a security warning when it encounters the previously unseen certificate. This action may be the precursor to malicious activity.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.004]]
+- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553: Subvert Trust Controls]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
 
 ## Implementations
 

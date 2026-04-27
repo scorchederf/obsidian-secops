@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_base64_encoded_obfusc.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_encoded_obfusc.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Obfuscated PowerShell Code
-
 Detects suspicious UTF16 and base64 encoded and often obfuscated PowerShell code often used in command lines
-
-## Metadata
-
-- Rule ID: 8d01b53f-456f-48ee-90f6-bc28e67d4e35
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-07-11
-- Modified: 2023-02-14
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_base64_encoded_obfusc.yml
 
 ## Logsource
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_tsclient_filewrite_startup.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_tsclient_filewrite_startup.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Hijack Legit RDP Session to Move Laterally
-
 Detects the usage of tsclient share to place a backdoor on the RDP source machine's startup folder
-
-## Metadata
-
-- Rule ID: 52753ea4-b3a0-4365-910d-36cff487b789
-- Status: test
-- Level: high
-- Author: Samir Bousseaden
-- Date: 2019-02-21
-- Modified: 2021-11-27
-- Source Path: rules/windows/file/file_event/file_event_win_tsclient_filewrite_startup.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the usage of tsclient share to place a backdoor on the RDP source machin
 
 ### Techniques
 
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219.002]]
+- [[kb/attack/techniques/T1219-remote_access_tools#^t1219002-remote-desktop-software|T1219.002: Remote Desktop Software]]
 
 ## Detection
 

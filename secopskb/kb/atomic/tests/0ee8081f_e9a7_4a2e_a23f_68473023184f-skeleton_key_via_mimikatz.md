@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1556.001"
 attack_technique_name: "Modify Authentication Process: Domain Controller Authentication"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1556.001/T1556.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "0ee8081f-e9a7-4a2e-a23f-68473023184f"
@@ -20,27 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Skeleton Key via Mimikatz
-
 Injects a Skeleton Key into LSASS on a domain controller using Mimikatz. Once injected, any domain
 user account can be authenticated using the password 'mimikatz' until the domain controller is rebooted.
 
 This test must be run on an isolated domain controller and must not be performed on a production DC.
 Cleanup forces a reboot of the domain controller to evict the skeleton key from LSASS memory.
 
-## Metadata
-
-- Atomic GUID: 0ee8081f-e9a7-4a2e-a23f-68473023184f
-- Technique: T1556.001: Modify Authentication Process: Domain Controller Authentication
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1556.001/T1556.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1556-modify_authentication_process|T1556.001]]
+- [[kb/attack/techniques/T1556-modify_authentication_process#^t1556001-domain-controller-authentication|T1556.001: Domain Controller Authentication]]
 
 ## Input Arguments
 

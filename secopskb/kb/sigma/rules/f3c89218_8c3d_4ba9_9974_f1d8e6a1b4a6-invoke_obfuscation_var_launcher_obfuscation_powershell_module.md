@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_module/posh_pm_invoke_obfuscation_via_var.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_module/posh_pm_invoke_obfuscation_via_var.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / ps_module"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Invoke-Obfuscation VAR++ LAUNCHER OBFUSCATION - PowerShell Module
-
 Detects Obfuscated Powershell via VAR++ LAUNCHER
-
-## Metadata
-
-- Rule ID: f3c89218-8c3d-4ba9-9974-f1d8e6a1b4a6
-- Status: test
-- Level: high
-- Author: Timur Zinniatullin, oscd.community
-- Date: 2020-10-13
-- Modified: 2024-04-05
-- Source Path: rules/windows/powershell/powershell_module/posh_pm_invoke_obfuscation_via_var.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ Detects Obfuscated Powershell via VAR++ LAUNCHER
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

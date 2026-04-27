@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/windefend/win_defender_real_time_protection_disabled.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/windefend/win_defender_real_time_protection_disabled.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "stable"
 level: "high"
 logsource: "windows / windefend"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Defender Real-time Protection Disabled
-
 Detects disabling of Windows Defender Real-time Protection. As this event doesn't contain a lot of information on who initiated this action you might want to reduce it to a "medium" level if this occurs too many times in your environment
-
-## Metadata
-
-- Rule ID: b28e58e4-2a72-4fae-bdee-0fbe904db642
-- Status: stable
-- Level: high
-- Author: Ján Trenčanský, frack113
-- Date: 2020-07-28
-- Modified: 2023-11-22
-- Source Path: rules/windows/builtin/windefend/win_defender_real_time_protection_disabled.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects disabling of Windows Defender Real-time Protection. As this event doesn'
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

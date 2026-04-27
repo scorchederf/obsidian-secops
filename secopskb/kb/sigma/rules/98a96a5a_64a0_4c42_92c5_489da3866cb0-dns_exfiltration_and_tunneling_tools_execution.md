@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_dns_exfiltration_tools_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dns_exfiltration_tools_execution.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNS Exfiltration and Tunneling Tools Execution
-
 Well-known DNS Exfiltration tools execution
-
-## Metadata
-
-- Rule ID: 98a96a5a-64a0-4c42-92c5-489da3866cb0
-- Status: test
-- Level: high
-- Author: Daniil Yugoslavskiy, oscd.community
-- Date: 2019-10-24
-- Modified: 2021-11-27
-- Source Path: rules/windows/process_creation/proc_creation_win_dns_exfiltration_tools_execution.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Well-known DNS Exfiltration tools execution
 
 ### Techniques
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.001]]
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
-- [[kb/attack/techniques/T1132-data_encoding|T1132.001]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048001-exfiltration-over-symmetric-encrypted-non-c2-protocol|T1048.001: Exfiltration Over Symmetric Encrypted Non-C2 Protocol]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
+- [[kb/attack/techniques/T1132-data_encoding#^t1132001-standard-encoding|T1132.001: Standard Encoding]]
 
 ## Detection
 

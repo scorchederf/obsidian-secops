@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1482"
 attack_technique_name: "Domain Trust Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1482/T1482.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "58ed10e8-0738-4651-8408-3a3e9a526279"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Get-ForestTrust with PowerView
-
 Utilizing PowerView, run Get-ForestTrust to identify forest trusts. Upon execution, progress and info about forest trusts within the domain being scanned will be displayed.
-
-## Metadata
-
-- Atomic GUID: 58ed10e8-0738-4651-8408-3a3e9a526279
-- Technique: T1482: Domain Trust Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1482/T1482.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
+- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 
 ## Executor
 

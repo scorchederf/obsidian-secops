@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_classic/posh_pc_delete_volume_shadow_copies.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_classic/posh_pc_delete_volume_shadow_copies.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "stable"
 level: "high"
 logsource: "windows / ps_classic_start"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Delete Volume Shadow Copies Via WMI With PowerShell
-
 Shadow Copies deletion using operating systems utilities via PowerShell
-
-## Metadata
-
-- Rule ID: 87df9ee1-5416-453a-8a08-e8d4a51e9ce1
-- Status: stable
-- Level: high
-- Author: frack113
-- Date: 2021-06-03
-- Modified: 2023-10-27
-- Source Path: rules/windows/powershell/powershell_classic/posh_pc_delete_volume_shadow_copies.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Shadow Copies deletion using operating systems utilities via PowerShell
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

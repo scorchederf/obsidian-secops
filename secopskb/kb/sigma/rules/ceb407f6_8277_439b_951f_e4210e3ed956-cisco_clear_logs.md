@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/cisco/aaa/cisco_cli_clear_logs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/cisco/aaa/cisco_cli_clear_logs.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "cisco / aaa"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cisco Clear Logs
-
 Clear command history in network OS which is used for defense evasion
-
-## Metadata
-
-- Rule ID: ceb407f6-8277-439b-951f-e4210e3ed956
-- Status: test
-- Level: high
-- Author: Austin Clark
-- Date: 2019-08-12
-- Modified: 2023-05-26
-- Source Path: rules/network/cisco/aaa/cisco_cli_clear_logs.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Clear command history in network OS which is used for defense evasion
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.003]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 
 ## Detection
 

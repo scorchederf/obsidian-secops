@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Netsh.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Netsh.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Netsh.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Netsh.exe
-
 Netsh is a Windows tool used to manipulate network interface settings.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2019-12-24
-- Author: Freddie Barr-Smith
-- Source Path: yml/OSBinaries/Netsh.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ netsh.exe add helper {PATH_ABSOLUTE:.dll}
 - Use Case: Proxy execution of .dll
 - Privileges: Admin
 - Operating System: Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1546-event_triggered_execution|T1546.007]]
+- ATT&CK: [[kb/attack/techniques/T1546-event_triggered_execution#^t1546007-netsh-helper-dll|T1546.007: Netsh Helper DLL]]
 
 ## Detections
 

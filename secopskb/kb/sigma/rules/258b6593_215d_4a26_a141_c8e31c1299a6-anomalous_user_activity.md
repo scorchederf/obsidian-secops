@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/identity_protection/azure_identity_protection_anomalous_user.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/identity_protection/azure_identity_protection_anomalous_user.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "azure / riskdetection"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Anomalous User Activity
-
 Indicates that there are anomalous patterns of behavior like suspicious changes to the directory.
-
-## Metadata
-
-- Rule ID: 258b6593-215d-4a26-a141-c8e31c1299a6
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'
-- Date: 2023-09-03
-- Source Path: rules/cloud/azure/identity_protection/azure_identity_protection_anomalous_user.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Indicates that there are anomalous patterns of behavior like suspicious changes 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

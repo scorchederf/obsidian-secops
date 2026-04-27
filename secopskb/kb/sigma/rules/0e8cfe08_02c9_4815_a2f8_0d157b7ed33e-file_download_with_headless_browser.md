@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_browsers_chromium_headless_file_download.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_headless_file_download.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# File Download with Headless Browser
-
 Detects execution of chromium based browser in headless mode using the "dump-dom" command line to download files
-
-## Metadata
-
-- Rule ID: 0e8cfe08-02c9-4815-a2f8-0d157b7ed33e
-- Status: test
-- Level: high
-- Author: Sreeman, Florian Roth (Nextron Systems)
-- Date: 2022-01-04
-- Modified: 2025-10-07
-- Source Path: rules/windows/process_creation/proc_creation_win_browsers_chromium_headless_file_download.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects execution of chromium based browser in headless mode using the "dump-dom
 
 ### Techniques
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.003]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
 
 ## Detection
 

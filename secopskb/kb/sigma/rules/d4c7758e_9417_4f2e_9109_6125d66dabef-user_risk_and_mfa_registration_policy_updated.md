@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/audit_logs/azure_update_risk_and_mfa_registration_policy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/audit_logs/azure_update_risk_and_mfa_registration_policy.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "azure / auditlogs"
@@ -19,19 +19,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# User Risk and MFA Registration Policy Updated
-
 Detects changes and updates to the user risk and MFA registration policy.
 Attackers can modified the policies to Bypass MFA, weaken security thresholds, facilitate further attacks, maintain persistence.
-
-## Metadata
-
-- Rule ID: d4c7758e-9417-4f2e-9109-6125d66dabef
-- Status: test
-- Level: high
-- Author: Harjot Singh (@cyb3rjy0t)
-- Date: 2024-08-13
-- Source Path: rules/cloud/azure/audit_logs/azure_update_risk_and_mfa_registration_policy.yml
 
 ## Logsource
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "a6ce9acf-842a-4af6-8f79-539be7608e2b"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC using Event Viewer (PowerShell)
-
 PowerShell code to bypass User Account Control using Event Viewer and a relevant Windows Registry modification. More information here - https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/
 Upon execution command prompt should be launched with administrative privalages
 
-## Metadata
-
-- Atomic GUID: a6ce9acf-842a-4af6-8f79-539be7608e2b
-- Technique: T1548.002: Abuse Elevation Control Mechanism: Bypass User Account Control
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1548.002/T1548.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Input Arguments
 

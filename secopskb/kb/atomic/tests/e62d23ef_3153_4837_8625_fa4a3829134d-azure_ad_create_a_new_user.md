@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.003"
 attack_technique_name: "Create Account: Cloud Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.003/T1136.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "e62d23ef-3153-4837-8625-fa4a3829134d"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure AD - Create a new user
-
 Creates a new user in Azure AD. Upon successful creation, a new user will be created. Adversaries create new users so that their malicious activity does not interrupt the normal functions of the compromised users and can remain undetected for a long time.
-
-## Metadata
-
-- Atomic GUID: e62d23ef-3153-4837-8625-fa4a3829134d
-- Technique: T1136.003: Create Account: Cloud Account
-- Platforms: azure-ad
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1136.003/T1136.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1136-create_account|T1136.003]]
+- [[kb/attack/techniques/T1136-create_account#^t1136003-cloud-account|T1136.003: Cloud Account]]
 
 ## Input Arguments
 

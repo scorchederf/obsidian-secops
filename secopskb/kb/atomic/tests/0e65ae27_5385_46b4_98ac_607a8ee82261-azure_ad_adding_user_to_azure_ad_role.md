@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "0e65ae27-5385-46b4-98ac-607a8ee82261"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure AD - adding user to Azure AD role
-
 The adversaries want to add user to some Azure AD role. Threat actor 
 may be interested primarily in highly privileged roles, e.g. Global Administrator, Application Administrator, 
 Privileged Authentication Administrator (this role can reset Global Administrator password!).
@@ -31,18 +29,9 @@ The account you use to run the PowerShell command should have Privileged Role Ad
 
 Detection hint - check Activity "Add member to role" in Azure AD Audit Logs. In targer you will also see User as a type.
 
-## Metadata
-
-- Atomic GUID: 0e65ae27-5385-46b4-98ac-607a8ee82261
-- Technique: T1098: Account Manipulation
-- Platforms: azure-ad
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1098/T1098.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Input Arguments
 

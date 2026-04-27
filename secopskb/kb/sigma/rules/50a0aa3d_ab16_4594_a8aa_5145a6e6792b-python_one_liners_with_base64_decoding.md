@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_python_base64_encoded_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_python_base64_encoded_execution.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Python One-Liners with Base64 Decoding
-
 Detects Python one-liners that use base64 decoding functions in command line executions.
 Malicious scripts or attackers often use python one-liners to decode and execute base64-encoded payloads, which is a common technique for obfuscation and evasion.
-
-## Metadata
-
-- Rule ID: 50a0aa3d-ab16-4594-a8aa-5145a6e6792b
-- Status: experimental
-- Level: high
-- Author: Hugh Ryan (HueCodes), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2026-03-09
-- Source Path: rules/windows/process_creation/proc_creation_win_python_base64_encoded_execution.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ Malicious scripts or attackers often use python one-liners to decode and execute
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.006]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.010]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027010-command-obfuscation|T1027.010: Command Obfuscation]]
 
 ## Detection
 

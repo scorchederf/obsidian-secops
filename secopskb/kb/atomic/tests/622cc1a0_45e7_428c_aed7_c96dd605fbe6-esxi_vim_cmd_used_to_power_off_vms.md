@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1529"
 attack_technique_name: "System Shutdown/Reboot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1529/T1529.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "622cc1a0-45e7-428c-aed7-c96dd605fbe6"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - vim-cmd Used to Power Off VMs
-
 Adversaries may power off VMs to facilitate the deployment of ransomware payloads.
 [Reference](https://lolesxi-project.github.io/LOLESXi/lolesxi/Binaries/vim-cmd/#power%20off%20vm)
 
-## Metadata
-
-- Atomic GUID: 622cc1a0-45e7-428c-aed7-c96dd605fbe6
-- Technique: T1529: System Shutdown/Reboot
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1529/T1529.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529]]
+- [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529: System Shutdown/Reboot]]
 
 ## Input Arguments
 

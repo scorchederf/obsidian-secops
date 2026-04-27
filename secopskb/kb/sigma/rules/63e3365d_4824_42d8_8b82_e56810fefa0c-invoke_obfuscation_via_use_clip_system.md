@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/service_control_manager/win_system_invoke_obfuscation_via_use_clip_services.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_invoke_obfuscation_via_use_clip_services.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Invoke-Obfuscation Via Use Clip - System
-
 Detects Obfuscated Powershell via use Clip.exe in Scripts
-
-## Metadata
-
-- Rule ID: 63e3365d-4824-42d8-8b82-e56810fefa0c
-- Status: test
-- Level: high
-- Author: Nikita Nazarov, oscd.community
-- Date: 2020-10-09
-- Modified: 2022-11-29
-- Source Path: rules/windows/builtin/system/service_control_manager/win_system_invoke_obfuscation_via_use_clip_services.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects Obfuscated Powershell via use Clip.exe in Scripts
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

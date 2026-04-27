@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.003"
 attack_technique_name: "Signed Binary Proxy Execution: CMSTP"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.003/T1218.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "34e63321-9683-496b-bbc1-7566bc55e624"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CMSTP Executing Remote Scriptlet
-
 Adversaries may supply CMSTP.exe with INF files infected with malicious commands
-
-## Metadata
-
-- Atomic GUID: 34e63321-9683-496b-bbc1-7566bc55e624
-- Technique: T1218.003: Signed Binary Proxy Execution: CMSTP
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1218.003/T1218.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027"
 attack_technique_name: "Obfuscated Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027/T1027.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "6683baf0-6e77-4f58-b114-814184ea8150"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Obfuscated PowerShell Command via Character Array
-
 Spawns a child PowerShell process using character array obfuscation. 
 Both the PowerShell binary name and executed command are constructed 
 from ASCII values at runtime to evade string-based detection.
 
-## Metadata
-
-- Atomic GUID: 6683baf0-6e77-4f58-b114-814184ea8150
-- Technique: T1027: Obfuscated Files or Information
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1027/T1027.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Executor
 

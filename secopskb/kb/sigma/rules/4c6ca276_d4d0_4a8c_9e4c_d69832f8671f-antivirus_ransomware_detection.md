@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/category/antivirus/av_ransomware.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/category/antivirus/av_ransomware.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "antivirus"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Antivirus Ransomware Detection
-
 Detects a highly relevant Antivirus alert that reports ransomware.
 This event must not be ignored just because the AV has blocked the malware but investigate, how it came there in the first place.
-
-## Metadata
-
-- Rule ID: 4c6ca276-d4d0-4a8c-9e4c-d69832f8671f
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems), Arnim Rupp
-- Date: 2022-05-12
-- Modified: 2024-11-02
-- Source Path: rules/category/antivirus/av_ransomware.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ This event must not be ignored just because the AV has blocked the malware but i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 ## Detection
 

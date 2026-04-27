@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-11-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-11-002"
   - "Local Network Sniffing"
@@ -25,25 +25,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-11-002: Local Network Sniffing
-
-## Metadata
-
-- CAR ID: CAR-2020-11-002
-- Submission Date: 2020/11/30
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1040-network_sniffing|T1040]] (coverage: Moderate; tactics: TA0006, TA0007)
+- [[kb/attack/techniques/T1040-network_sniffing|T1040: Network Sniffing]] (coverage: Moderate; tactics: TA0006, TA0007)
 
 ## Implementations
 

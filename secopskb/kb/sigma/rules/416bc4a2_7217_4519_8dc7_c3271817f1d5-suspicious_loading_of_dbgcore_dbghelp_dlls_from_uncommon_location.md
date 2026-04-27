@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_win_susp_dbgcore_dbghelp_load.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_win_susp_dbgcore_dbghelp_load.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "experimental"
 level: "high"
 logsource: "windows / image_load"
@@ -22,20 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Loading of Dbgcore/Dbghelp DLLs from Uncommon Location
-
 Detects loading of dbgcore.dll or dbghelp.dll from uncommon locations such as user directories.
 These DLLs contain the MiniDumpWriteDump function, which can be abused for credential dumping purposes or in some cases for evading EDR/AV detection by suspending processes.
-
-## Metadata
-
-- Rule ID: 416bc4a2-7217-4519-8dc7-c3271817f1d5
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-27
-- Modified: 2026-01-09
-- Source Path: rules/windows/image_load/image_load_win_susp_dbgcore_dbghelp_load.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ These DLLs contain the MiniDumpWriteDump function, which can be abused for crede
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_hktl_cobaltstrike.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_hktl_cobaltstrike.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "windows / pipe_created"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CobaltStrike Named Pipe
-
 Detects the creation of a named pipe as used by CobaltStrike
-
-## Metadata
-
-- Rule ID: d5601f8c-b26f-4ab0-9035-69e11a8d4ad2
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems), Wojciech Lesicki
-- Date: 2021-05-25
-- Modified: 2022-10-31
-- Source Path: rules/windows/pipe_created/pipe_created_hktl_cobaltstrike.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the creation of a named pipe as used by CobaltStrike
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

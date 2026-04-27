@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_bad_opsec_sacrificial_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_bad_opsec_sacrificial_processes.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bad Opsec Defaults Sacrificial Processes With Improper Arguments
-
 Detects attackers using tooling with bad opsec defaults.
 E.g. spawning a sacrificial process to inject a capability into the process without taking into account how the process is normally run.
 One trivial example of this is using rundll32.exe without arguments as a sacrificial process (default in CS, now highlighted by c2lint), running WerFault without arguments (Kraken - credit am0nsec), and other examples.
-
-## Metadata
-
-- Rule ID: a7c3d773-caef-227e-a7e7-c2f13c622329
-- Status: test
-- Level: high
-- Author: Oleg Kolesnikov @securonix invrep_de, oscd.community, Florian Roth (Nextron Systems), Christian Burkard (Nextron Systems)
-- Date: 2020-10-23
-- Modified: 2024-08-15
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_bad_opsec_sacrificial_processes.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ One trivial example of this is using rundll32.exe without arguments as a sacrifi
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detection
 

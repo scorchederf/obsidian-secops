@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_access/proc_access_win_uac_bypass_wow64_logger.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_uac_bypass_wow64_logger.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_access"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# UAC Bypass Using WOW64 Logger DLL Hijack
-
 Detects the pattern of UAC Bypass using a WoW64 logger DLL hijack (UACMe 30)
-
-## Metadata
-
-- Rule ID: 4f6c43e2-f989-4ea5-bcd8-843b49a0317c
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems)
-- Date: 2021-08-23
-- Modified: 2022-10-09
-- Source Path: rules/windows/process_access/proc_access_win_uac_bypass_wow64_logger.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the pattern of UAC Bypass using a WoW64 logger DLL hijack (UACMe 30)
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

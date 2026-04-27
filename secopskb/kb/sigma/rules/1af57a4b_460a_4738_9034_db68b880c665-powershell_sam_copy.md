@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_sam_access.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_sam_access.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell SAM Copy
-
 Detects suspicious PowerShell scripts accessing SAM hives
-
-## Metadata
-
-- Rule ID: 1af57a4b-460a-4738-9034-db68b880c665
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-07-29
-- Modified: 2023-01-06
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_sam_access.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious PowerShell scripts accessing SAM hives
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 
 ## Detection
 

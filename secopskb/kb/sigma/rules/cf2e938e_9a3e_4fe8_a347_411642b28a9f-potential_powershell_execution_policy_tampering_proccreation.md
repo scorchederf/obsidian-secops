@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_registry_set_unsecure_powershell_policy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_registry_set_unsecure_powershell_policy.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential PowerShell Execution Policy Tampering - ProcCreation
-
 Detects changes to the PowerShell execution policy registry key in order to bypass signing requirements for script execution from the CommandLine
-
-## Metadata
-
-- Rule ID: cf2e938e-9a3e-4fe8-a347-411642b28a9f
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-01-11
-- Source Path: rules/windows/process_creation/proc_creation_win_registry_set_unsecure_powershell_policy.yml
 
 ## Logsource
 

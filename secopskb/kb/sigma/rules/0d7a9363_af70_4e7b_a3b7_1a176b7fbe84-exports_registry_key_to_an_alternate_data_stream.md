@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_stream_hash/create_stream_hash_regedit_export_to_ads.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_stream_hash/create_stream_hash_regedit_export_to_ads.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / create_stream_hash"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exports Registry Key To an Alternate Data Stream
-
 Exports the target Registry key and hides it in the specified alternate data stream.
-
-## Metadata
-
-- Rule ID: 0d7a9363-af70-4e7b-a3b7-1a176b7fbe84
-- Status: test
-- Level: high
-- Author: Oddvar Moe, Sander Wiebing, oscd.community
-- Date: 2020-10-07
-- Modified: 2021-11-27
-- Source Path: rules/windows/create_stream_hash/create_stream_hash_regedit_export_to_ads.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Exports the target Registry key and hides it in the specified alternate data str
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ## Detection
 

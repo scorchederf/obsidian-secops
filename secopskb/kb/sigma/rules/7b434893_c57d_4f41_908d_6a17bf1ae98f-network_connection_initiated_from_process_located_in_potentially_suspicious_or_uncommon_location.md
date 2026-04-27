@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_susp_initiated_uncommon_or_suspicious_locations.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_susp_initiated_uncommon_or_suspicious_locations.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / network_connection"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Network Connection Initiated From Process Located In Potentially Suspicious Or Uncommon Location
-
 Detects a network connection initiated by programs or processes running from suspicious or uncommon files system locations.
-
-## Metadata
-
-- Rule ID: 7b434893-c57d-4f41-908d-6a17bf1ae98f
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2017-03-19
-- Modified: 2025-12-10
-- Source Path: rules/windows/network_connection/net_connection_win_susp_initiated_uncommon_or_suspicious_locations.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a network connection initiated by programs or processes running from sus
 
 ### Techniques
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detection
 

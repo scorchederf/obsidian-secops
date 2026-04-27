@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-07-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-07-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-07-001"
   - "Service Search Path Interception"
@@ -24,26 +24,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-07-001: Service Search Path Interception
-
-## Metadata
-
-- CAR ID: CAR-2014-07-001
-- Submission Date: 2014/07/17
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 According to [ATT&CK](https://attack.mitre.org/), an adversary may [escalate privileges](https://attack.mitre.org/tactics/TA0004) by [intercepting the search path](https://attack.mitre.org/techniques/T1579/009) for legitimately installed services. As a result, Windows will launch the target executable instead of the desired binary and command line. This can be done when there are spaces in the binary path and the path is unquoted. Search path interception should never happen legitimately and will likely be the result of an adversary abusing a system misconfiguration. With a few regular expressions, it is possible to identify the execution of services with intercepted search paths.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: High; tactics: TA0004, TA0003)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.009]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: High; tactics: TA0004, TA0003)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574009-path-interception-by-unquoted-path|T1574.009: Path Interception by Unquoted Path]]
 
 ## Implementations
 

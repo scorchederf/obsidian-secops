@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_mimikatz_command_line.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_mimikatz_command_line.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -25,19 +25,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Mimikatz Execution
-
 Detection well-known mimikatz command line arguments
-
-## Metadata
-
-- Rule ID: a642964e-bead-4bed-8910-1bb4d63e3b4d
-- Status: test
-- Level: high
-- Author: Teymur Kheirkhabarov, oscd.community, David ANDRE (additional keywords), Tim Shelton
-- Date: 2019-10-22
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_mimikatz_command_line.yml
 
 ## Logsource
 
@@ -48,11 +36,11 @@ Detection well-known mimikatz command line arguments
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.005]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.006]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003006-dcsync|T1003.006: DCSync]]
 
 ## Detection
 

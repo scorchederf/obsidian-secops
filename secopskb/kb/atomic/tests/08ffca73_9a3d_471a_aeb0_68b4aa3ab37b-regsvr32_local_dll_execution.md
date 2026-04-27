@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.010"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvr32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "08ffca73-9a3d-471a-aeb0-68b4aa3ab37b"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regsvr32 local DLL execution
-
 Regsvr32.exe is a command-line program used to register and unregister OLE controls. Upon execution, calc.exe will be launched.
-
-## Metadata
-
-- Atomic GUID: 08ffca73-9a3d-471a-aeb0-68b4aa3ab37b
-- Technique: T1218.010: Signed Binary Proxy Execution: Regsvr32
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1218.010/T1218.010.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Input Arguments
 

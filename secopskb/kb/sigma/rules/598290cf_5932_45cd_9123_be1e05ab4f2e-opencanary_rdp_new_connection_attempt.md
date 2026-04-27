@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_rdp_connection_attempt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_rdp_connection_attempt.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "opencanary / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - RDP New Connection Attempt
-
 Detects instances where an RDP service on an OpenCanary node has had a connection attempt.
-
-## Metadata
-
-- Rule ID: 598290cf-5932-45cd-9123-be1e05ab4f2e
-- Status: experimental
-- Level: high
-- Author: Marco Pedrinazzi (@pedrinazziM)
-- Date: 2026-01-06
-- Source Path: rules/application/opencanary/opencanary_rdp_connection_attempt.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects instances where an RDP service on an OpenCanary node has had a connectio
 
 ### Techniques
 
-- [[kb/attack/techniques/T1133-external_remote_services|T1133]]
-- [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+- [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 ## Detection
 

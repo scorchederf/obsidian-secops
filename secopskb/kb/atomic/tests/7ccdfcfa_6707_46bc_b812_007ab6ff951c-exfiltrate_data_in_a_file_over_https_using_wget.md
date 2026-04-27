@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.002"
 attack_technique_name: "Exfiltration Over Alternative Protocol - Exfiltration Over Asymmetric Encrypted Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.002/T1048.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "7ccdfcfa-6707-46bc-b812-007ab6ff951c"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltrate data in a file over HTTPS using wget
-
 Exfiltrate data over HTTPS using wget --post-file method
-
-## Metadata
-
-- Atomic GUID: 7ccdfcfa-6707-46bc-b812-007ab6ff951c
-- Technique: T1048.002: Exfiltration Over Alternative Protocol - Exfiltration Over Asymmetric Encrypted Non-C2 Protocol
-- Platforms: linux
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1048.002/T1048.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.002]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
 
 ## Input Arguments
 

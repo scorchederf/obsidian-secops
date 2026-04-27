@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.003"
 attack_technique_name: "Credentials from Password Stores: Credentials from Web Browsers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.003/T1555.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "8c05b133-d438-47ca-a630-19cc464c4622"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Run Chrome-password Collector
-
 A modified sysinternals suite will be downloaded and staged. The Chrome-password collector, renamed accesschk.exe, will then be executed from #{file_path}.
 
 Successful execution will produce stdout message stating "Copying db ... passwordsDB DB Opened. statement prepare DB connection closed properly". Upon completion, final output will be a file modification of PathToAtomicsFolder\..\ExternalPayloads\sysinternals\passwordsdb.
 
 Adapted from [MITRE ATTACK Evals](https://github.com/mitre-attack/attack-arsenal/blob/66650cebd33b9a1e180f7b31261da1789cdceb66/adversary_emulation/APT29/CALDERA_DIY/evals/data/abilities/credential-access/e7cab9bb-3e3a-4d93-99cc-3593c1dc8c6d.yml)
 
-## Metadata
-
-- Atomic GUID: 8c05b133-d438-47ca-a630-19cc464c4622
-- Technique: T1555.003: Credentials from Password Stores: Credentials from Web Browsers
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1555.003/T1555.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.003]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555003-credentials-from-web-browsers|T1555.003: Credentials from Web Browsers]]
 
 ## Input Arguments
 

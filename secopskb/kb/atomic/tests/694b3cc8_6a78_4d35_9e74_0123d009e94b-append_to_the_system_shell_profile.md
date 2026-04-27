@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.004"
 attack_technique_name: "Event Triggered Execution: .bash_profile .bashrc and .shrc"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.004/T1546.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "694b3cc8-6a78-4d35-9e74-0123d009e94b"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Append to the system shell profile
-
 An adversary may wish to establish persistence by executing malicious commands from the systems /etc/profile every time "any" user logs in.
-
-## Metadata
-
-- Atomic GUID: 694b3cc8-6a78-4d35-9e74-0123d009e94b
-- Technique: T1546.004: Event Triggered Execution: .bash_profile .bashrc and .shrc
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1546.004/T1546.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.004]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546004-unix-shell-configuration-modification|T1546.004: Unix Shell Configuration Modification]]
 
 ## Input Arguments
 

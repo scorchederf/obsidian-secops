@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_auditpol_nt_resource_kit_usage.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_auditpol_nt_resource_kit_usage.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Audit Policy Tampering Via NT Resource Kit Auditpol
-
 Threat actors can use an older version of the auditpol binary available inside the NT resource kit to change audit policy configuration to impair detection capability.
 This can be carried out by selectively disabling/removing certain audit policies as well as restoring a custom policy owned by the threat actor.
-
-## Metadata
-
-- Rule ID: c6c56ada-612b-42d1-9a29-adad3c5c2c1e
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-12-18
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_auditpol_nt_resource_kit_usage.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This can be carried out by selectively disabling/removing certain audit policies
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Detection
 

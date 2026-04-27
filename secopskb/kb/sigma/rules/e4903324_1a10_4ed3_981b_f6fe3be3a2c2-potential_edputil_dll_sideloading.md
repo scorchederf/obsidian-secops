@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_edputil.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_edputil.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Edputil.DLL Sideloading
-
 Detects potential DLL sideloading of "edputil.dll"
-
-## Metadata
-
-- Rule ID: e4903324-1a10-4ed3-981b-f6fe3be3a2c2
-- Status: test
-- Level: high
-- Author: X__Junior (Nextron Systems)
-- Date: 2023-06-09
-- Source Path: rules/windows/image_load/image_load_side_load_edputil.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potential DLL sideloading of "edputil.dll"
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

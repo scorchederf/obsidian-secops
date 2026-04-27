@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-04-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-04-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-04-003"
   - "Powershell Execution"
@@ -28,20 +28,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-04-003: Powershell Execution
-
-## Metadata
-
-- CAR ID: CAR-2014-04-003
-- Submission Date: 2014/04/11
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 [PowerShell](https://attack.mitre.org/techniques/T1059/001/) is a scripting environment included with Windows that is used by both attackers and administrators. Execution of PowerShell scripts in most Windows versions is opaque and not typically secured by antivirus which makes using PowerShell an easy way to circumvent security measures. This analytic detects execution of PowerShell scripts.
 
 Powershell can be used to hide monitored command line execution such as:
@@ -50,10 +36,10 @@ Powershell can be used to hide monitored command line execution such as:
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]] (coverage: High; tactics: TA0002)
-  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]] (coverage: High; tactics: TA0002)
+  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Implementations
 

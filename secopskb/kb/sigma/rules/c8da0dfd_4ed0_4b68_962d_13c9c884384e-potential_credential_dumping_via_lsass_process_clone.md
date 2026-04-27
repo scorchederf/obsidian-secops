@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_lsass_process_clone.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lsass_process_clone.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Credential Dumping Via LSASS Process Clone
-
 Detects a suspicious LSASS process process clone that could be a sign of credential dumping activity
-
-## Metadata
-
-- Rule ID: c8da0dfd-4ed0-4b68-962d-13c9c884384e
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems), Samir Bousseaden
-- Date: 2021-11-27
-- Modified: 2023-03-02
-- Source Path: rules/windows/process_creation/proc_creation_win_lsass_process_clone.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a suspicious LSASS process process clone that could be a sign of credent
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

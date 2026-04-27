@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1012"
 attack_technique_name: "Query Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1012/T1012.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "0434d081-bb32-42ce-bcbb-3548e4f2628f"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Query Registry with Powershell cmdlets
-
 Query Windows Registry with Powershell cmdlets, i.e., Get-Item and Get-ChildItem. The results from above can also be achieved with Get-Item and Get-ChildItem.
 Unlike using "reg query" which then executes reg.exe, using cmdlets won't generate new processes, which may evade detection systems monitoring process generation.
 
-## Metadata
-
-- Atomic GUID: 0434d081-bb32-42ce-bcbb-3548e4f2628f
-- Technique: T1012: Query Registry
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1012/T1012.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1012-query_registry|T1012]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]]
 
 ## Executor
 

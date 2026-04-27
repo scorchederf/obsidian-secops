@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Outlook Child Process
-
 Detects a suspicious process spawning from an Outlook process.
-
-## Metadata
-
-- Rule ID: 208748f7-881d-47ac-a29c-07ea84bf691d
-- Status: test
-- Level: high
-- Author: Michael Haag, Florian Roth (Nextron Systems), Markus Neis, Elastic, FPT.EagleEye Team
-- Date: 2022-02-28
-- Modified: 2023-02-04
-- Source Path: rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious process spawning from an Outlook process.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 ## Detection
 

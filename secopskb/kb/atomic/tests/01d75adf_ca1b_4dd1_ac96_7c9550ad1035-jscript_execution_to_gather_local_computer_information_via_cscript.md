@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.007"
 attack_technique_name: "Command and Scripting Interpreter: JavaScript"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.007/T1059.007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "01d75adf-ca1b-4dd1-ac96-7c9550ad1035"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# JScript execution to gather local computer information via cscript
-
 JScript execution test, execute JScript via cscript command. When successful, system information will be written to $env:TEMP\T1059.007.out.txt
-
-## Metadata
-
-- Atomic GUID: 01d75adf-ca1b-4dd1-ac96-7c9550ad1035
-- Technique: T1059.007: Command and Scripting Interpreter: JavaScript
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1059.007/T1059.007.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 ## Input Arguments
 

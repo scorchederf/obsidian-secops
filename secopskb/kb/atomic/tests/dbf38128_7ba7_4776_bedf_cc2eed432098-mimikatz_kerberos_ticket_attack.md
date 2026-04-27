@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.003"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.003/T1550.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "dbf38128-7ba7-4776-bedf-cc2eed432098"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mimikatz Kerberos Ticket Attack
-
 Similar to PTH, but attacking Kerberos
-
-## Metadata
-
-- Atomic GUID: dbf38128-7ba7-4776-bedf-cc2eed432098
-- Technique: T1550.003: Use Alternate Authentication Material: Pass the Ticket
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1550.003/T1550.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.003]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 
 ## Input Arguments
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/HonorableMentions/Code.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/HonorableMentions/Code.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "HonorableMentions"
 aliases:
   - "code.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# code.exe
-
 VSCode binary, also portable (CLI) version
-
-## Metadata
-
-- Category: HonorableMentions
-- Created: 2023-02-01
-- Author: PfiatDe
-- Source Path: yml/HonorableMentions/Code.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ code.exe tunnel --accept-server-license-terms --name "tunnel-name"
 - Use Case: Reverse PowerShell session over MS provided infrastructure.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1219-remote_access_tools|T1219.001]]
+- ATT&CK: [[kb/attack/techniques/T1219-remote_access_tools#^t1219001-ide-tunneling|T1219.001: IDE Tunneling]]
 
 ## Detections
 

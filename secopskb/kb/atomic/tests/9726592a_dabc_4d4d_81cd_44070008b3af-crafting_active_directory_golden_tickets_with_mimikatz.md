@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.001"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Golden Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.001/T1558.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "9726592a-dabc-4d4d-81cd-44070008b3af"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Crafting Active Directory golden tickets with mimikatz
-
 Once the hash of the special krbtgt user is retrieved it is possible to craft Kerberos Ticket Granting Ticket impersonating any user in the Active Directory domain.
 This test crafts a Golden Ticket and then performs an SMB request with it for the SYSVOL share, thus triggering a service ticket request (event ID 4769).
 The generated ticket is injected in a new empty Windows session and discarded after, so it does not pollute the current Windows session.
 
-## Metadata
-
-- Atomic GUID: 9726592a-dabc-4d4d-81cd-44070008b3af
-- Technique: T1558.001: Steal or Forge Kerberos Tickets: Golden Ticket
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1558.001/T1558.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.001]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558001-golden-ticket|T1558.001: Golden Ticket]]
 
 ## Input Arguments
 

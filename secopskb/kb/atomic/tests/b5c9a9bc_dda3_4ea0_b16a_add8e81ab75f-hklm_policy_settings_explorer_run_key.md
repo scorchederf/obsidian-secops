@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.001"
 attack_technique_name: "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "b5c9a9bc-dda3-4ea0-b16a-add8e81ab75f"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HKLM - Policy Settings Explorer Run Key
-
 This test will create a HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run key value to launch calc.exe on boot. 
 *Requires reboot
 
-## Metadata
-
-- Atomic GUID: b5c9a9bc-dda3-4ea0-b16a-add8e81ab75f
-- Technique: T1547.001: Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1547.001/T1547.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Input Arguments
 

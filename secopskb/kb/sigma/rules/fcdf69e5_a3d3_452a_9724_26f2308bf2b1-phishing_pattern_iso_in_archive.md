@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_archiver_iso_phishing.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_archiver_iso_phishing.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Phishing Pattern ISO in Archive
-
 Detects cases in which an ISO files is opend within an archiver like 7Zip or Winrar, which is a sign of phishing as threat actors put small ISO files in archives as email attachments to bypass certain filters and protective measures (mark of web)
-
-## Metadata
-
-- Rule ID: fcdf69e5-a3d3-452a-9724-26f2308bf2b1
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-06-07
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_archiver_iso_phishing.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects cases in which an ISO files is opend within an archiver like 7Zip or Win
 
 ### Techniques
 
-- [[kb/attack/techniques/T1566-phishing|T1566]]
+- [[kb/attack/techniques/T1566-phishing|T1566: Phishing]]
 
 ## Detection
 

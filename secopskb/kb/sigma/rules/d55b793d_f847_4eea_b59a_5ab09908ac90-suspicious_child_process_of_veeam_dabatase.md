@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Child Process Of Veeam Dabatase
-
 Detects suspicious child processes of the Veeam service process. This could indicate potential RCE or SQL Injection.
-
-## Metadata
-
-- Rule ID: d55b793d-f847-4eea-b59a-5ab09908ac90
-- Status: test
-- Level: critical
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-04
-- Source Path: rules/windows/process_creation/proc_creation_win_mssql_veaam_susp_child_processes.yml
 
 ## Logsource
 

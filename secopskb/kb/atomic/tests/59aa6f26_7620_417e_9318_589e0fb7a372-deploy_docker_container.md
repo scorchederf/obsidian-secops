@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1610"
 attack_technique_name: "Deploy a container"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1610/T1610.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "59aa6f26-7620-417e-9318-589e0fb7a372"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Deploy Docker container
-
 Adversaries may deploy containers based on retrieved or built malicious images or from benign images that download and execute malicious payloads at runtime. They can do this using docker create and docker start commands. Kinsing & Doki was exploited using this technique.
-
-## Metadata
-
-- Atomic GUID: 59aa6f26-7620-417e-9318-589e0fb7a372
-- Technique: T1610: Deploy a container
-- Platforms: containers
-- Executor: bash
-- Dependency Executor: sh
-- Source Path: atomics/T1610/T1610.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1610-deploy_container|T1610]]
+- [[kb/attack/techniques/T1610-deploy_container|T1610: Deploy Container]]
 
 ## Dependencies
 

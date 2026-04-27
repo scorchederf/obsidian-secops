@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/identity_protection/azure_identity_protection_password_spray.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/identity_protection/azure_identity_protection_password_spray.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "azure / riskdetection"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Password Spray Activity
-
 Indicates that a password spray attack has been successfully performed.
-
-## Metadata
-
-- Rule ID: 28ecba0a-c743-4690-ad29-9a8f6f25a6f9
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'
-- Date: 2023-09-03
-- Source Path: rules/cloud/azure/identity_protection/azure_identity_protection_password_spray.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Indicates that a password spray attack has been successfully performed.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1110-brute_force|T1110]]
+- [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
 
 ## Detection
 

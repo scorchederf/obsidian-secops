@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.007"
 attack_technique_name: "Signed Binary Proxy Execution: Msiexec"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.007/T1218.007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "32eb3861-30da-4993-897a-42737152f5f8"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WMI Win32_Product Class - Execute Local MSI file with an embedded DLL
-
 Executes an MSI containing an embedded DLL using the WMI Win32_Product class
-
-## Metadata
-
-- Atomic GUID: 32eb3861-30da-4993-897a-42737152f5f8
-- Technique: T1218.007: Signed Binary Proxy Execution: Msiexec
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1218.007/T1218.007.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.007]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
 
 ## Input Arguments
 

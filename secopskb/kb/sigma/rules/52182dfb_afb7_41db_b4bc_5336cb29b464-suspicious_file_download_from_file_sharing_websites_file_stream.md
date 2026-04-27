@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_stream_hash/create_stream_hash_file_sharing_domains_download_susp_extension.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_stream_hash/create_stream_hash_file_sharing_domains_download_susp_extension.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / create_stream_hash"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Download From File Sharing Websites -  File Stream
-
 Detects the download of suspicious file type from a well-known file and paste sharing domain
-
-## Metadata
-
-- Rule ID: 52182dfb-afb7-41db-b4bc-5336cb29b464
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-08-24
-- Modified: 2025-12-10
-- Source Path: rules/windows/create_stream_hash/create_stream_hash_file_sharing_domains_download_susp_extension.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the download of suspicious file type from a well-known file and paste sh
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### Software Tags
 

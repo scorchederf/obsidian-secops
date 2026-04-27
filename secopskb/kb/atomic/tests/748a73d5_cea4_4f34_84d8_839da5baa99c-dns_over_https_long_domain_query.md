@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "748a73d5-cea4-4f34-84d8-839da5baa99c"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNS over HTTPS Long Domain Query
-
 This test simulates an infected host returning data to a command and control server using long domain names.
 The simulation involves sending DoH queries that gradually increase in length until reaching the maximum length. The intent is to test the effectiveness of detection of DoH queries for long domain names over a set threshold.
  Upon execution, DNS information about the domain will be displayed for each callout in a JSON format.
 
-## Metadata
-
-- Atomic GUID: 748a73d5-cea4-4f34-84d8-839da5baa99c
-- Technique: T1572: Protocol Tunneling
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1572/T1572.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
+- [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 
 ## Input Arguments
 

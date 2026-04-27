@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSLibraries/comsvcs.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/comsvcs.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSLibraries"
 aliases:
   - "Comsvcs.dll"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Comsvcs.dll
-
 COM+ Services
-
-## Metadata
-
-- Category: OSLibraries
-- Created: 2019-08-30
-- Author: LOLBAS Team
-- Source Path: yml/OSLibraries/comsvcs.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ rundll32 C:\windows\system32\comsvcs.dll MiniDump {LSASS_PID} dump.bin full
 - Use Case: Dump Lsass.exe process memory to retrieve credentials.
 - Privileges: SYSTEM
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detections
 

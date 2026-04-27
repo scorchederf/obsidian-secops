@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.003"
 attack_technique_name: "Time Providers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.003/T1547.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "df1efab7-bc6d-4b88-8be9-91f55ae017aa"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create a new time provider
-
 Establishes persistence by creating a new time provider registry key under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProvider.
 The new time provider will point to a DLL which will be loaded after the w32time service is started. The DLL will then create the file AtomicTest.txt
 in C:\Users\Public\ as validation that the test is successful.
 
 Payload source code: https://github.com/tr4cefl0w/payloads/tree/master/T1547.003/
 
-## Metadata
-
-- Atomic GUID: df1efab7-bc6d-4b88-8be9-91f55ae017aa
-- Technique: T1547.003: Time Providers
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1547.003/T1547.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.003]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547003-time-providers|T1547.003: Time Providers]]
 
 ## Executor
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Schtasks.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Schtasks.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Schtasks.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Schtasks.exe
-
 Schedule periodic tasks
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Schtasks.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ schtasks /create /sc minute /mo 1 /tn "Reverse shell" /tr "{CMD}"
 - Use Case: Create a recurring task to keep reverse shell session(s) alive
 - Privileges: User
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- ATT&CK: [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ### 2. Execute
 
@@ -61,7 +52,7 @@ schtasks /create /s targetmachine /tn "MyTask" /tr "{CMD}" /sc daily
 - Use Case: Create a remote task to run daily relative to the the time of creation
 - Privileges: Administrator
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- ATT&CK: [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detections
 

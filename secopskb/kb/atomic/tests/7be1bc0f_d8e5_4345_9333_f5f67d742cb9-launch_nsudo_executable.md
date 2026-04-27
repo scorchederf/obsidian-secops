@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.001"
 attack_technique_name: "Access Token Manipulation: Token Impersonation/Theft"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.001/T1134.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "7be1bc0f-d8e5-4345-9333-f5f67d742cb9"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Launch NSudo Executable
-
 Launches the NSudo executable for a short period of time and then exits.
 NSudo download observed after maldoc execution. NSudo is a system management tool for advanced users to launch programs with full privileges.
 
-## Metadata
-
-- Atomic GUID: 7be1bc0f-d8e5-4345-9333-f5f67d742cb9
-- Technique: T1134.001: Access Token Manipulation: Token Impersonation/Theft
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1134.001/T1134.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.001]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134001-token-impersonation-theft|T1134.001: Token Impersonation/Theft]]
 
 ## Input Arguments
 

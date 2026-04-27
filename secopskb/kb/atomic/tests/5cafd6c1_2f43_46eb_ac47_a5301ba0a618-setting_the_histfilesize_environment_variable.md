@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.003"
 attack_technique_name: "Impair Defenses: Impair Command History Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "5cafd6c1-2f43-46eb-ac47-a5301ba0a618"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Setting the HISTFILESIZE environment variable
-
 An Adversary may set the bash history files size environment variable (HISTFILESIZE) to zero to prevent the logging of commands to the history file after they log out of the system.
 
 Note: we don't wish to log out, so we are just confirming the value of HISTFILESIZE. In this test we 1. echo HISTFILESIZE 2. set it to zero 3. confirm that HISTFILESIZE is set to zero.
 
-## Metadata
-
-- Atomic GUID: 5cafd6c1-2f43-46eb-ac47-a5301ba0a618
-- Technique: T1562.003: Impair Defenses: Impair Command History Logging
-- Platforms: linux
-- Executor: bash
-- Elevation Required: False
-- Source Path: atomics/T1562.003/T1562.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.003]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
 
 ## Executor
 

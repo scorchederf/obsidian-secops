@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_bypass_uac_using_eventviewer.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_bypass_uac_using_eventviewer.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC Using Event Viewer
-
 Bypasses User Account Control using Event Viewer and a relevant Windows Registry modification
-
-## Metadata
-
-- Rule ID: 674202d0-b22a-4af4-ae5f-2eda1f3da1af
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-01-05
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_bypass_uac_using_eventviewer.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Bypasses User Account Control using Event Viewer and a relevant Windows Registry
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.010]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547010-port-monitors|T1547.010: Port Monitors]]
 
 ## Detection
 

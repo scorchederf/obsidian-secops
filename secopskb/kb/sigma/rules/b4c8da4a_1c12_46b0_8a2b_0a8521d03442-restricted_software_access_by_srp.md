@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/application/microsoft_windows_software_restriction_policies/win_software_restriction_policies_block.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/application/microsoft_windows_software_restriction_policies/win_software_restriction_policies_block.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Restricted Software Access By SRP
-
 Detects restricted access to applications by the Software Restriction Policies (SRP) policy
-
-## Metadata
-
-- Rule ID: b4c8da4a-1c12-46b0-8a2b-0a8521d03442
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2023-01-12
-- Source Path: rules/windows/builtin/application/microsoft_windows_software_restriction_policies/win_software_restriction_policies_block.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects restricted access to applications by the Software Restriction Policies (
 
 ### Techniques
 
-- [[kb/attack/techniques/T1072-software_deployment_tools|T1072]]
+- [[kb/attack/techniques/T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 
 ## Detection
 

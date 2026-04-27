@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_mal_adwind.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_mal_adwind.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Adwind RAT / JRAT File Artifact
-
 Detects javaw.exe in AppData folder as used by Adwind / JRAT
-
-## Metadata
-
-- Rule ID: 0bcfabcb-7929-47f4-93d6-b33fb67d34d1
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Tom Ueltschi, Jonhnathan Ribeiro, oscd.community
-- Date: 2017-11-10
-- Modified: 2022-12-02
-- Source Path: rules/windows/file/file_event/file_event_win_mal_adwind.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects javaw.exe in AppData folder as used by Adwind / JRAT
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 ## Detection
 

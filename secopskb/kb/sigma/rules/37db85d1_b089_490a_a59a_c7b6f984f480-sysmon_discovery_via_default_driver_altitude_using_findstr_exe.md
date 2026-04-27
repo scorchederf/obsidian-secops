@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_findstr_sysmon_discovery_via_default_altitude.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_sysmon_discovery_via_default_altitude.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sysmon Discovery Via Default Driver Altitude Using Findstr.EXE
-
 Detects usage of "findstr" with the argument "385201". Which could indicate potential discovery of an installed Sysinternals Sysmon service using the default driver altitude (even if the name is changed).
-
-## Metadata
-
-- Rule ID: 37db85d1-b089-490a-a59a-c7b6f984f480
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-12-16
-- Modified: 2023-11-14
-- Source Path: rules/windows/process_creation/proc_creation_win_findstr_sysmon_discovery_via_default_altitude.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects usage of "findstr" with the argument "385201". Which could indicate pote
 
 ### Techniques
 
-- [[kb/attack/techniques/T1518-software_discovery|T1518.001]]
+- [[kb/attack/techniques/T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]
 
 ## Detection
 

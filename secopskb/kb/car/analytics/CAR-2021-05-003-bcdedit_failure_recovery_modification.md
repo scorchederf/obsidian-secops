@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-05-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-05-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-05-003"
   - "BCDEdit Failure Recovery Modification"
@@ -24,25 +24,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-05-003: BCDEdit Failure Recovery Modification
-
-## Metadata
-
-- CAR ID: CAR-2021-05-003
-- Submission Date: 2021/05/11
-- Information Domain: Analytic
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Splunk Threat Research <research@splunk.com>
-
-## Description
-
 This search looks for flags passed to bcdedit.exe modifications to the built-in Windows error recovery boot configurations. This is typically used by ransomware to prevent recovery.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]] (coverage: Moderate; tactics: TA0040)
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]] (coverage: Moderate; tactics: TA0040)
 
 ## Implementations
 

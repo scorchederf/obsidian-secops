@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_whitespace_padding.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_whitespace_padding.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,21 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Explorer Process with Whitespace Padding - ClickFix/FileFix
-
 Detects process creation with suspicious whitespace padding followed by a '#' character, which may indicate ClickFix or FileFix techniques used to conceal malicious commands from visual inspection.
 ClickFix and FileFix are social engineering attack techniques where adversaries distribute phishing documents or malicious links that deceive users into opening the Windows Run dialog box or File Explorer search bar.
 The victims are then instructed to paste commands from their clipboard, which contain extensive whitespace padding using various Unicode space characters to push the actual malicious command far to the right, effectively hiding it from immediate view.
-
-## Metadata
-
-- Rule ID: 3ae9974a-eb09-4044-8e70-8980a50c12c8
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-04
-- Modified: 2025-11-26
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_whitespace_padding.yml
 
 ## Logsource
 
@@ -47,8 +35,8 @@ The victims are then instructed to paste commands from their clipboard, which co
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.004]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.010]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204004-malicious-copy-and-paste|T1204.004: Malicious Copy and Paste]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027010-command-obfuscation|T1027.010: Command Obfuscation]]
 
 ## Detection
 

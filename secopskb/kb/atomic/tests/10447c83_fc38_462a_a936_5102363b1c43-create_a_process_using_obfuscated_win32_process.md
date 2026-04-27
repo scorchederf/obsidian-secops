@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1047"
 attack_technique_name: "Windows Management Instrumentation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "10447c83-fc38-462a-a936-5102363b1c43"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create a Process using obfuscated Win32_Process
-
 This test tries to mask process creation by creating a new class that inherits from Win32_Process. Indirect call of suspicious method such as Win32_Process::Create can break detection logic.
 [Cybereason blog post No Win32_ProcessNeeded](https://www.cybereason.com/blog/wmi-lateral-movement-win32)
 
-## Metadata
-
-- Atomic GUID: 10447c83-fc38-462a-a936-5102363b1c43
-- Technique: T1047: Windows Management Instrumentation
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1047/T1047.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
 
 ## Input Arguments
 

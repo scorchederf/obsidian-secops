@@ -2,7 +2,16 @@
 
 # Sigma
 
-SigmaHQ detection rules generated from the upstream Sigma rule repository.
+<!-- generated-source-description-start -->
+Sigma is a generic detection rule format for describing log-based detections in a SIEM-independent way. This vault imports filtered SigmaHQ rules from the upstream rule repository, preserves rule metadata and detection YAML, and maps rules to ATT&CK techniques and logsources where those tags exist.
+
+Use Sigma pages as portable detection references. ATT&CK technique pages link back to matching Sigma rules, and Sigma simulation metadata links to Atomic Red Team tests when upstream rule metadata includes a matching Atomic GUID.
+
+## Upstream
+
+- [SigmaHQ](https://github.com/SigmaHQ/sigma)
+- [Sigma project](https://sigmahq.io/)
+<!-- generated-source-description-end -->
 
 ## Areas
 

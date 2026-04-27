@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.009"
 attack_technique_name: "Boot or Logon Autostart Execution: Shortcut Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.009/T1547.009.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "cfdc954d-4bb0-4027-875b-a1893ce406f2"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create shortcut to cmd in startup folders
-
 LNK file to launch CMD placed in startup folder. Upon execution, open File Explorer and browse to "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"
 to view the new shortcut.
 
-## Metadata
-
-- Atomic GUID: cfdc954d-4bb0-4027-875b-a1893ce406f2
-- Technique: T1547.009: Boot or Logon Autostart Execution: Shortcut Modification
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1547.009/T1547.009.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.009]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547009-shortcut-modification|T1547.009: Shortcut Modification]]
 
 ## Executor
 

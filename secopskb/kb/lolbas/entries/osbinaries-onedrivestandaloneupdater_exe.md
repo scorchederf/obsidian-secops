@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/OneDriveStandaloneUpdater.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/OneDriveStandaloneUpdater.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "OneDriveStandaloneUpdater.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OneDriveStandaloneUpdater.exe
-
 OneDrive Standalone Updater
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2021-08-22
-- Author: Elliot Killick
-- Source Path: yml/OSBinaries/OneDriveStandaloneUpdater.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ OneDriveStandaloneUpdater
 - Use Case: Download a file from the Internet without executing any anomalous executables with suspicious arguments
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

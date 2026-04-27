@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_finger.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_finger.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "windows / network_connection"
@@ -22,21 +22,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Network Connection Initiated via Finger.EXE
-
 Detects network connections via finger.exe, which can be abused by threat actors to retrieve remote commands for execution on Windows devices.
 In one ClickFix malware campaign, adversaries leveraged the finger protocol to fetch commands from a remote server.
 Since the finger utility is not commonly used in modern Windows environments, its presence already raises suspicion.
 Investigating such network connections can also help identify potential malicious infrastructure used by threat actors
-
-## Metadata
-
-- Rule ID: 2fdaf50b-9fd5-449f-ba69-f17248119af6
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-19
-- Source Path: rules/windows/network_connection/net_connection_win_finger.yml
 
 ## Logsource
 
@@ -47,8 +36,8 @@ Investigating such network connections can also help identify potential maliciou
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Detection
 

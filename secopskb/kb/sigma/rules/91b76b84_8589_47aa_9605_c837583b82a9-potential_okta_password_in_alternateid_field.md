@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/identity/okta/okta_password_in_alternateid_field.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/identity/okta/okta_password_in_alternateid_field.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "okta / okta"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Okta Password in AlternateID Field
-
 Detects when a user has potentially entered their password into the
 username field, which will cause the password to be retained in log files.
-
-## Metadata
-
-- Rule ID: 91b76b84-8589-47aa-9605-c837583b82a9
-- Status: test
-- Level: high
-- Author: kelnage
-- Date: 2023-04-03
-- Modified: 2023-10-25
-- Source Path: rules/identity/okta/okta_password_in_alternateid_field.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ username field, which will cause the password to be retained in log files.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552]]
+- [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "7af2b51e-ad1c-498c-aca8-d3290c19535a"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Data Compressed - nix - tar Folder or File
-
 An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration. This test uses standard gzip compression.
-
-## Metadata
-
-- Atomic GUID: 7af2b51e-ad1c-498c-aca8-d3290c19535a
-- Technique: T1560.001: Archive Collected Data: Archive via Utility
-- Platforms: linux, macos
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1560.001/T1560.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1560-archive_collected_data|T1560.001]]
+- [[kb/attack/techniques/T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 
 ## Input Arguments
 

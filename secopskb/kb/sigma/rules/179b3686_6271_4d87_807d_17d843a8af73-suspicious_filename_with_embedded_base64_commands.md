@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/file_event/file_event_lnx_susp_filename_with_embedded_base64_command.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/file_event/file_event_lnx_susp_filename_with_embedded_base64_command.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "linux / file_event"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Filename with Embedded Base64 Commands
-
 Detects files with specially crafted filenames that embed Base64-encoded bash payloads designed to execute when processed by shell scripts.
 These filenames exploit shell interpretation quirks to trigger hidden commands, a technique observed in VShell malware campaigns.
-
-## Metadata
-
-- Rule ID: 179b3686-6271-4d87-807d-17d843a8af73
-- Status: experimental
-- Level: high
-- Author: @kostastsale
-- Date: 2025-11-22
-- Source Path: rules/linux/file_event/file_event_lnx_susp_filename_with_embedded_base64_command.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ These filenames exploit shell interpretation quirks to trigger hidden commands, 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Detection
 

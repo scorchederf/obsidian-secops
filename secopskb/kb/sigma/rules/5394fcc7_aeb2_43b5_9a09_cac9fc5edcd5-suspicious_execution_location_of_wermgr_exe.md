@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wermgr_susp_exec_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wermgr_susp_exec_location.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Execution Location Of Wermgr.EXE
-
 Detects suspicious Windows Error Reporting manager (wermgr.exe) execution location.
-
-## Metadata
-
-- Rule ID: 5394fcc7-aeb2-43b5-9a09-cac9fc5edcd5
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-10-14
-- Modified: 2023-08-23
-- Source Path: rules/windows/process_creation/proc_creation_win_wermgr_susp_exec_location.yml
 
 ## Logsource
 

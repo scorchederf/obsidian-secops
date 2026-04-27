@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_winget_add_insecure_custom_source.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winget_add_insecure_custom_source.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Add Insecure Download Source To Winget
-
 Detects usage of winget to add a new insecure (http) download source.
 Winget will not allow the addition of insecure sources, hence this could indicate potential suspicious activity (or typos)
-
-## Metadata
-
-- Rule ID: 81a0ecb5-0a41-4ba1-b2ba-c944eb92bfa2
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-04-17
-- Source Path: rules/windows/process_creation/proc_creation_win_winget_add_insecure_custom_source.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Winget will not allow the addition of insecure sources, hence this could indicat
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Detection
 

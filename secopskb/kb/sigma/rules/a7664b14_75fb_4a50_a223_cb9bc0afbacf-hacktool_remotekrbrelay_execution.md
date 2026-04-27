@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_krbrelay_remote.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_krbrelay_remote.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - RemoteKrbRelay Execution
-
 Detects the use of RemoteKrbRelay, a Kerberos relaying tool via CommandLine flags and PE metadata.
-
-## Metadata
-
-- Rule ID: a7664b14-75fb-4a50-a223-cb9bc0afbacf
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2024-06-27
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_krbrelay_remote.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the use of RemoteKrbRelay, a Kerberos relaying tool via CommandLine flag
 
 ### Techniques
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
 
 ## Detection
 

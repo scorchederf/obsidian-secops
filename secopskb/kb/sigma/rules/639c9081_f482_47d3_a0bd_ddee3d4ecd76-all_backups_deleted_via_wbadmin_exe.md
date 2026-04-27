@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wbadmin_delete_all_backups.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wbadmin_delete_all_backups.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# All Backups Deleted Via Wbadmin.EXE
-
 Detects the deletion of all backups or system state backups via "wbadmin.exe".
 This technique is used by numerous ransomware families and actors.
 This may only be successful on server platforms that have Windows Backup enabled.
-
-## Metadata
-
-- Rule ID: 639c9081-f482-47d3-a0bd-ddee3d4ecd76
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-12-13
-- Modified: 2024-05-10
-- Source Path: rules/windows/process_creation/proc_creation_win_wbadmin_delete_all_backups.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ This may only be successful on server platforms that have Windows Backup enabled
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

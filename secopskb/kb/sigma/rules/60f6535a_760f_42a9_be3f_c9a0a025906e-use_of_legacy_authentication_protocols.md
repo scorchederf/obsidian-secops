@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/signin_logs/azure_legacy_authentication_protocols.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/signin_logs/azure_legacy_authentication_protocols.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "azure / signinlogs"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Use of Legacy Authentication Protocols
-
 Alert on when legacy authentication has been used on an account
-
-## Metadata
-
-- Rule ID: 60f6535a-760f-42a9-be3f-c9a0a025906e
-- Status: test
-- Level: high
-- Author: Yochana Henderson, '@Yochana-H'
-- Date: 2022-06-17
-- Source Path: rules/cloud/azure/signin_logs/azure_legacy_authentication_protocols.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Alert on when legacy authentication has been used on an account
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
-- [[kb/attack/techniques/T1110-brute_force|T1110]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
+- [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
 
 ## Detection
 

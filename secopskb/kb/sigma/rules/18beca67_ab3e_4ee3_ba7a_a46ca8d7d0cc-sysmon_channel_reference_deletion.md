@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_sysmon_channel_reference_deletion.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_sysmon_channel_reference_deletion.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sysmon Channel Reference Deletion
-
 Potential threat actor tampering with Sysmon manifest and eventually disabling it
-
-## Metadata
-
-- Rule ID: 18beca67-ab3e-4ee3-ba7a-a46ca8d7d0cc
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
-- Date: 2020-07-14
-- Modified: 2025-10-22
-- Source Path: rules/windows/builtin/security/win_security_sysmon_channel_reference_deletion.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Potential threat actor tampering with Sysmon manifest and eventually disabling i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/msexchange/win_exchange_proxyshell_mailbox_export.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/msexchange/win_exchange_proxyshell_mailbox_export.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "critical"
 logsource: "windows / msexchange-management"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mailbox Export to Exchange Webserver
-
 Detects a successful export of an Exchange mailbox to untypical directory or with aspx name suffix which can be used to place a webshell or the needed role assignment for it
-
-## Metadata
-
-- Rule ID: 516376b4-05cd-4122-bae0-ad7641c38d48
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems), Rich Warren, Christian Burkard (Nextron Systems)
-- Date: 2021-08-09
-- Modified: 2023-04-30
-- Source Path: rules/windows/builtin/msexchange/win_exchange_proxyshell_mailbox_export.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a successful export of an Exchange mailbox to untypical directory or wit
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

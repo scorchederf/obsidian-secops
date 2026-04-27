@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_eventvwr_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_eventvwr_susp_child_process.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potentially Suspicious Event Viewer Child Process
-
 Detects uncommon or suspicious child processes of "eventvwr.exe" which might indicate a UAC bypass attempt
-
-## Metadata
-
-- Rule ID: be344333-921d-4c4d-8bb8-e584cf584780
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2017-03-19
-- Modified: 2023-09-28
-- Source Path: rules/windows/process_creation/proc_creation_win_eventvwr_susp_child_process.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects uncommon or suspicious child processes of "eventvwr.exe" which might ind
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_triple_cross_rootkit_execve_hijack.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_triple_cross_rootkit_execve_hijack.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Triple Cross eBPF Rootkit Execve Hijack
-
 Detects execution of a the file "execve_hijack" which is used by the Triple Cross rootkit as a way to elevate privileges
-
-## Metadata
-
-- Rule ID: 0326c3c8-7803-4a0f-8c5c-368f747f7c3e
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-05
-- Source Path: rules/linux/process_creation/proc_creation_lnx_triple_cross_rootkit_execve_hijack.yml
 
 ## Logsource
 

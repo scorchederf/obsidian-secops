@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "31eb7828-97d7-4067-9c1e-c6feb85edc4b"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# BlackCat pre-encryption cmds with Lateral Movement
-
 This atomic attempts to emulate the unique behavior of BlackCat ransomware prior to encryption and during Lateral Movement attempts via PsExec on Windows. Uses bundled PsExec like BlackCat
-
-## Metadata
-
-- Atomic GUID: 31eb7828-97d7-4067-9c1e-c6feb85edc4b
-- Technique: T1569.002: System Services: Service Execution
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1569.002/T1569.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Input Arguments
 

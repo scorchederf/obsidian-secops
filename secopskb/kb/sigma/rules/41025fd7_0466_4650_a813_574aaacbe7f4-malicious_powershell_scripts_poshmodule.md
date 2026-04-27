@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_module/posh_pm_exploit_scripts.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_module/posh_pm_exploit_scripts.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / ps_module"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious PowerShell Scripts - PoshModule
-
 Detects the execution of known offensive powershell scripts used for exploitation or reconnaissance
-
-## Metadata
-
-- Rule ID: 41025fd7-0466-4650-a813-574aaacbe7f4
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-01-23
-- Modified: 2025-12-10
-- Source Path: rules/windows/powershell/powershell_module/posh_pm_exploit_scripts.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the execution of known offensive powershell scripts used for exploitatio
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

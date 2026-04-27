@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "94ea9cc3-81f9-4111-8dde-3fb54f36af4b"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Azure AD - adding permission to application
 
 The adversaries want to add permission to newly created application. Application could be then used for persistence or for further operation in the attacked infrastructure. Permissions like AppRoleAssignment.ReadWrite.All or RoleManagement.ReadWrite.Directory in particular can be a valuable target for a threat actor.
 This technique will create a new app, with the provided name, and give it the provided permission. But if you prefer to add credentials to an existing app, replace in the code: "Get-AzureADApplication" instead of "New-AzureADServicePrincipal".
@@ -35,18 +33,9 @@ https://github.com/reprise99/Sentinel-Queries
 https://docs.google.com/presentation/d/1AWx1w0Xcq8ENvOmSjAJswEgEio-il09QWZlGg9PbHqE/edit#slide=id.g10460eb209c_0_2766
 https://gist.github.com/andyrobbins/7c3dd62e6ed8678c97df9565ff3523fb
 
-## Metadata
-
-- Atomic GUID: 94ea9cc3-81f9-4111-8dde-3fb54f36af4b
-- Technique: T1098: Account Manipulation
-- Platforms: azure-ad
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1098/T1098.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Input Arguments
 

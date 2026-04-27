@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_uacme.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_uacme.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - UACMe Akagi Execution
-
 Detects the execution of UACMe, a tool used for UAC bypasses, via default PE metadata
-
-## Metadata
-
-- Rule ID: d38d2fa4-98e6-4a24-aff1-410b0c9ad177
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems), Florian Roth (Nextron Systems)
-- Date: 2021-08-30
-- Modified: 2024-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_uacme.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of UACMe, a tool used for UAC bypasses, via default PE met
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

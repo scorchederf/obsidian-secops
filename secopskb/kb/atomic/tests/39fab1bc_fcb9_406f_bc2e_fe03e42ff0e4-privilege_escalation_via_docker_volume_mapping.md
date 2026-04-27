@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1611"
 attack_technique_name: "Escape to Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1611/T1611.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "39fab1bc-fcb9-406f-bc2e-fe03e42ff0e4"
@@ -20,25 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Privilege Escalation via Docker Volume Mapping
-
 This test demonstrates privilege escalation by abusing Docker's volume mapping
 feature to gain access to the host file system. By mounting the root directory
 of the host into a Docker container, the attacker can use chroot to operate as
 root on the host system.
 
-## Metadata
-
-- Atomic GUID: 39fab1bc-fcb9-406f-bc2e-fe03e42ff0e4
-- Technique: T1611: Escape to Host
-- Platforms: containers
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1611/T1611.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1611-escape_to_host|T1611]]
+- [[kb/attack/techniques/T1611-escape_to_host|T1611: Escape to Host]]
 
 ## Input Arguments
 

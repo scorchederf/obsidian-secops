@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/object_access/win_security_wfp_endpoint_agent_blocked.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/object_access/win_security_wfp_endpoint_agent_blocked.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Filtering Platform Blocked Connection From EDR Agent Binary
-
 Detects a Windows Filtering Platform (WFP) blocked connection event involving common Endpoint Detection and Response (EDR) agents.
 Adversaries may use WFP filters to prevent Endpoint Detection and Response (EDR) agents from reporting security events.
-
-## Metadata
-
-- Rule ID: bacf58c6-e199-4040-a94f-95dea0f1e45a
-- Status: test
-- Level: high
-- Author: @gott_cyber
-- Date: 2024-01-08
-- Source Path: rules/windows/builtin/security/object_access/win_security_wfp_endpoint_agent_blocked.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ Adversaries may use WFP filters to prevent Endpoint Detection and Response (EDR)
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 ## Detection
 

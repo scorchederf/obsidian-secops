@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.001"
 attack_technique_name: "Process Injection: Dynamic-link Library Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.001/T1055.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "74496461-11a1-4982-b439-4d87a550d254"
@@ -20,26 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Process Injection via mavinject.exe
-
 Windows 10 Utility To Inject DLLS.
 
 Upon successful execution, powershell.exe will download T1055.dll to disk. Powershell will then spawn mavinject.exe to perform process injection in T1055.dll.
 With default arguments, expect to see a MessageBox, with notepad's icon in taskbar.
 
-## Metadata
-
-- Atomic GUID: 74496461-11a1-4982-b439-4d87a550d254
-- Technique: T1055.001: Process Injection: Dynamic-link Library Injection
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1055.001/T1055.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 ## Input Arguments
 

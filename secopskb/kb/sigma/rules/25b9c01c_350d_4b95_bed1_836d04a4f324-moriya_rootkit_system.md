@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/service_control_manager/win_system_moriya_rootkit.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_moriya_rootkit.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "critical"
 logsource: "windows / system"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Moriya Rootkit - System
-
 Detects the use of Moriya rootkit as described in the securelist's Operation TunnelSnake report
-
-## Metadata
-
-- Rule ID: 25b9c01c-350d-4b95-bed1-836d04a4f324
-- Status: test
-- Level: critical
-- Author: Bhabesh Raj
-- Date: 2021-05-06
-- Modified: 2022-11-29
-- Source Path: rules/windows/builtin/system/service_control_manager/win_system_moriya_rootkit.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of Moriya rootkit as described in the securelist's Operation Tun
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Detection
 

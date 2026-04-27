@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "6b2903ac-8f36-450d-9ad5-b220e8a2dcb9"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Simulate BlackByte Ransomware Print Bombing
-
 This test attempts to open a file a specified number of times in Wordpad, then prints the contents. 
 It is designed to mimic BlackByte ransomware's print bombing technique, where tree.dll, which contains the ransom note, is opened in Wordpad 75 times and then printed. 
 See https://redcanary.com/blog/blackbyte-ransomware/.
 
-## Metadata
-
-- Atomic GUID: 6b2903ac-8f36-450d-9ad5-b220e8a2dcb9
-- Technique: T1059.003: Command and Scripting Interpreter: Windows Command Shell
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1059.003/T1059.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Input Arguments
 

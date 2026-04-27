@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.011"
 attack_technique_name: "Signed Binary Proxy Execution: Rundll32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "71d771cd-d6b3-4f34-bc76-a63d47a10b19"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rundll32 setupapi.dll Execution
-
 Test execution of a command using rundll32.exe with setupapi.dll. Upon execution, a windows saying "installation failed" will be opened
 
 Reference: https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/Setupapi.yml
 
-## Metadata
-
-- Atomic GUID: 71d771cd-d6b3-4f34-bc76-a63d47a10b19
-- Technique: T1218.011: Signed Binary Proxy Execution: Rundll32
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1218.011/T1218.011.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Input Arguments
 

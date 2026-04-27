@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "93c150f5-ad7b-4ee3-8992-df06dec2ac79"
@@ -22,23 +22,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - Remove VPC Flow Logs using Stratus
-
 This Atomic will attempt to remove AWS VPC Flow Logs configuration. Stratus Red Team is a self-contained binary. You can use it to easily detonate offensive attack techniques against a live cloud environment. Ref: https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.vpc-remove-flow-logs/
-
-## Metadata
-
-- Atomic GUID: 93c150f5-ad7b-4ee3-8992-df06dec2ac79
-- Technique: T1562.008: Impair Defenses: Disable Cloud Logs
-- Platforms: linux, macos, iaas:aws
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1562.008/T1562.008.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2016-04-005/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2016-04-005.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2016-04-005"
   - "Remote Desktop Logon"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2016-04-005: Remote Desktop Logon
-
-## Metadata
-
-- CAR ID: CAR-2016-04-005
-- Submission Date: 2016/04/19
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows
-- Data Subtypes: Login
-- Contributors: MITRE/NSA
-
-## Description
-
 A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1021/001), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1021-remote_services|T1021]] (coverage: Moderate; tactics: TA0008)
-  - [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]] (coverage: Moderate; tactics: TA0008)
+  - [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 ## Implementations
 

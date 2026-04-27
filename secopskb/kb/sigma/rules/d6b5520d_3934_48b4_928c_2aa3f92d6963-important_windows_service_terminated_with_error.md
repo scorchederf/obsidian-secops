@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/service_control_manager/win_system_service_terminated_error_important.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_service_terminated_error_important.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Important Windows Service Terminated With Error
-
 Detects important or interesting Windows services that got terminated for whatever reason
-
-## Metadata
-
-- Rule ID: d6b5520d-3934-48b4-928c-2aa3f92d6963
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-04-14
-- Source Path: rules/windows/builtin/system/service_control_manager/win_system_service_terminated_error_important.yml
 
 ## Logsource
 

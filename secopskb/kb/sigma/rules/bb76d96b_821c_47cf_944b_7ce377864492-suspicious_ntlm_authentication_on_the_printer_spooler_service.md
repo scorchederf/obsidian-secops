@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_ntlmrelay.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_ntlmrelay.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious NTLM Authentication on the Printer Spooler Service
-
 Detects a privilege elevation attempt by coercing NTLM authentication on the Printer Spooler service
-
-## Metadata
-
-- Rule ID: bb76d96b-821c-47cf-944b-7ce377864492
-- Status: test
-- Level: high
-- Author: Elastic (idea), Tobias Michalski (Nextron Systems)
-- Date: 2022-05-04
-- Modified: 2023-02-09
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_ntlmrelay.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a privilege elevation attempt by coercing NTLM authentication on the Pri
 
 ### Techniques
 
-- [[kb/attack/techniques/T1212-exploitation_for_credential_access|T1212]]
+- [[kb/attack/techniques/T1212-exploitation_for_credential_access|T1212: Exploitation for Credential Access]]
 
 ## Detection
 

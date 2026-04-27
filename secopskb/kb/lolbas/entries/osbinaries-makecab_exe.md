@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Makecab.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Makecab.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Makecab.exe"
@@ -23,16 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Makecab.exe
-
 Binary to package existing files into a cabinet (.cab) file
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Makecab.yml
 
 ## Paths
 
@@ -52,7 +43,7 @@ makecab {PATH_ABSOLUTE:.exe} {PATH_ABSOLUTE}:autoruns.cab
 - Use Case: Hide data compressed into an alternate data stream
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 2. ADS
 
@@ -65,7 +56,7 @@ makecab {PATH_SMB:.exe} {PATH_ABSOLUTE}:file.cab
 - Use Case: Hide data compressed into an alternate data stream
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 3. Download
 
@@ -78,7 +69,7 @@ makecab {PATH_SMB:.exe} {PATH_ABSOLUTE:.cab}
 - Use Case: Download file and compress into a cab file
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 4. Execute
 
@@ -91,7 +82,7 @@ makecab /F {PATH:.ddf}
 - Use Case: Bypass command-line based detections
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1036-masquerading|T1036]]
+- ATT&CK: [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detections
 

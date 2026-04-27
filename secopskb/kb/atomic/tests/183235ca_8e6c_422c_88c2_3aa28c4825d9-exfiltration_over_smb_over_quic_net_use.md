@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1570"
 attack_technique_name: "Lateral Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1570/T1570.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "183235ca-8e6c-422c-88c2-3aa28c4825d9"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltration Over SMB over QUIC (NET USE)
-
 Simulates an attacker exfiltrating data over SMB over QUIC using the NET USE command.
 Prerequisites:
   - A file server running Windows Server 2022 Datacenter: Azure Edition
   - A Windows 11 computer
   - Windows Admin Center
 
-## Metadata
-
-- Atomic GUID: 183235ca-8e6c-422c-88c2-3aa28c4825d9
-- Technique: T1570: Lateral Tool Transfer
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1570/T1570.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570]]
+- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
 
 ## Input Arguments
 

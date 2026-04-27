@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_filewrite_in_sharepoint_layouts_dir.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_filewrite_in_sharepoint_layouts_dir.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "windows / file_event"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Write to SharePoint Layouts Directory
-
 Detects suspicious file writes to SharePoint layouts directory which could indicate webshell activity or post-exploitation.
 This behavior has been observed in the exploitation of SharePoint vulnerabilities such as CVE-2025-49704, CVE-2025-49706 or CVE-2025-53770.
-
-## Metadata
-
-- Rule ID: 1f0489be-b496-4ddf-b3a9-5900f2044e9c
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-07-24
-- Source Path: rules/windows/file/file_event/file_event_win_susp_filewrite_in_sharepoint_layouts_dir.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ This behavior has been observed in the exploitation of SharePoint vulnerabilitie
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

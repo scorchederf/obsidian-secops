@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmd_no_space_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_no_space_execution.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cmd.EXE Missing Space Characters Execution Anomaly
-
 Detects Windows command lines that miss a space before or after the /c flag when running a command using the cmd.exe.
 This could be a sign of obfuscation of a fat finger problem (typo by the developer).
-
-## Metadata
-
-- Rule ID: a16980c2-0c56-4de0-9a79-17971979efdd
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-08-23
-- Modified: 2023-03-06
-- Source Path: rules/windows/process_creation/proc_creation_win_cmd_no_space_execution.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This could be a sign of obfuscation of a fat finger problem (typo by the develop
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

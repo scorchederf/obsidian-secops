@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/wmi_event/sysmon_wmi_susp_encoded_scripts.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/wmi_event/sysmon_wmi_susp_encoded_scripts.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / wmi_event"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Encoded Scripts in a WMI Consumer
-
 Detects suspicious encoded payloads in WMI Event Consumers
-
-## Metadata
-
-- Rule ID: 83844185-1c5b-45bc-bcf3-b5bf3084ca5b
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-09-01
-- Modified: 2022-10-09
-- Source Path: rules/windows/wmi_event/sysmon_wmi_susp_encoded_scripts.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects suspicious encoded payloads in WMI Event Consumers
 
 ### Techniques
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 ## Detection
 

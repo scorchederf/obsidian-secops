@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1123"
 attack_technique_name: "Audio Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1123/T1123.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "7a21cce2-6ada-4f7c-afd9-e1e9c481e44a"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Registry artefact when application use microphone
-
 [can-you-track-processes-accessing-the-camera-and-microphone](https://svch0st.medium.com/can-you-track-processes-accessing-the-camera-and-microphone-7e6885b37072)
-
-## Metadata
-
-- Atomic GUID: 7a21cce2-6ada-4f7c-afd9-e1e9c481e44a
-- Technique: T1123: Audio Capture
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1123/T1123.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1123-audio_capture|T1123]]
+- [[kb/attack/techniques/T1123-audio_capture|T1123: Audio Capture]]
 
 ## Executor
 

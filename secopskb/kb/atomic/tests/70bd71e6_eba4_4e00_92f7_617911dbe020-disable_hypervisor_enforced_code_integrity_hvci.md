@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "70bd71e6-eba4-4e00-92f7-617911dbe020"
@@ -20,27 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable Hypervisor-Enforced Code Integrity (HVCI)
-
 This test disables Hypervisor-Enforced Code Integrity (HVCI) by setting the registry key HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity "Enabled" value to "0".
 The pre-req needs to be ran in order to setup HVCI and have it enabled. 
 We do not recommend running this in production.
 [Black Lotus Campaign](https://www.microsoft.com/en-us/security/blog/2023/04/11/guidance-for-investigating-attacks-using-cve-2022-21894-the-blacklotus-campaign/)
 [Microsoft](https://learn.microsoft.com/en-us/windows/security/threat-protection/device-guard/enable-virtualization-based-protection-of-code-integrity)
 
-## Metadata
-
-- Atomic GUID: 70bd71e6-eba4-4e00-92f7-617911dbe020
-- Technique: T1562.001: Impair Defenses: Disable or Modify Tools
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1562.001/T1562.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Dependencies
 

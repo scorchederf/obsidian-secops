@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.003"
 attack_technique_name: "Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.003/T1048.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "manual"
 aliases:
   - "c403b5a4-b5fc-49f2-b181-d1c80d27db45"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltration Over Alternative Protocol - DNS
-
 Exfiltration of specified file over DNS protocol.
-
-## Metadata
-
-- Atomic GUID: c403b5a4-b5fc-49f2-b181-d1c80d27db45
-- Technique: T1048.003: Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol
-- Platforms: linux
-- Executor: manual
-- Source Path: atomics/T1048.003/T1048.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 ## Executor
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wmic_namespace_defender.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmic_namespace_defender.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Windows Defender Tampering Via Wmic.EXE
-
 Detects potential tampering with Windows Defender settings such as adding exclusion using wmic
-
-## Metadata
-
-- Rule ID: 51cbac1e-eee3-4a90-b1b7-358efb81fa0a
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-12-11
-- Modified: 2023-02-14
-- Source Path: rules/windows/process_creation/proc_creation_win_wmic_namespace_defender.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects potential tampering with Windows Defender settings such as adding exclus
 
 ### Techniques
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 ## Detection
 

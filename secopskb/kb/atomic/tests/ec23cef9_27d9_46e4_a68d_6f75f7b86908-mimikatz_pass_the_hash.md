@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.002"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Hash"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.002/T1550.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "ec23cef9-27d9-46e4-a68d-6f75f7b86908"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mimikatz Pass the Hash
-
 Note: must dump hashes first
 [Reference](https://github.com/gentilkiwi/mimikatz/wiki/module-~-sekurlsa#pth)
 
-## Metadata
-
-- Atomic GUID: ec23cef9-27d9-46e4-a68d-6f75f7b86908
-- Technique: T1550.002: Use Alternate Authentication Material: Pass the Hash
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1550.002/T1550.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.002]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/driver_load/driver_load_win_vuln_drivers.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/driver_load/driver_load_win_vuln_drivers.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / driver_load"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Vulnerable Driver Load
-
 Detects loading of known vulnerable drivers via their hash.
-
-## Metadata
-
-- Rule ID: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-18
-- Modified: 2023-12-02
-- Source Path: rules/windows/driver_load/driver_load_win_vuln_drivers.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects loading of known vulnerable drivers via their hash.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 
 ## Detection
 

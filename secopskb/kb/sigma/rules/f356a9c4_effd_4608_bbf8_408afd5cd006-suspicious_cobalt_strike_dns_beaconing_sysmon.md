@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/dns_query/dns_query_win_mal_cobaltstrike.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_mal_cobaltstrike.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "critical"
 logsource: "windows / dns_query"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Cobalt Strike DNS Beaconing - Sysmon
-
 Detects a program that invoked suspicious DNS queries known from Cobalt Strike beacons
-
-## Metadata
-
-- Rule ID: f356a9c4-effd-4608-bbf8-408afd5cd006
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-11-09
-- Modified: 2023-01-16
-- Source Path: rules/windows/dns_query/dns_query_win_mal_cobaltstrike.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a program that invoked suspicious DNS queries known from Cobalt Strike b
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
 
 ## Detection
 

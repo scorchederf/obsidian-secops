@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_rds_public_db_restore.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_rds_public_db_restore.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Restore Public AWS RDS Instance
-
 Detects the recovery of a new public database instance from a snapshot. It may be a part of data exfiltration.
-
-## Metadata
-
-- Rule ID: c3f265c7-ff03-4056-8ab2-d486227b4599
-- Status: test
-- Level: high
-- Author: faloker
-- Date: 2020-02-12
-- Modified: 2022-10-09
-- Source Path: rules/cloud/aws/cloudtrail/aws_rds_public_db_restore.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the recovery of a new public database instance from a snapshot. It may b
 
 ### Techniques
 
-- [[kb/attack/techniques/T1020-automated_exfiltration|T1020]]
+- [[kb/attack/techniques/T1020-automated_exfiltration|T1020: Automated Exfiltration]]
 
 ## Detection
 

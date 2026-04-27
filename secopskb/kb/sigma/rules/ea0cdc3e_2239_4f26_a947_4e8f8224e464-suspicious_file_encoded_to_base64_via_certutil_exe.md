@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_certutil_encode_susp_extensions.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_certutil_encode_susp_extensions.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Encoded To Base64 Via Certutil.EXE
-
 Detects the execution of certutil with the "encode" flag to encode a file to base64 where the extensions of the file is suspicious
-
-## Metadata
-
-- Rule ID: ea0cdc3e-2239-4f26-a947-4e8f8224e464
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-15
-- Modified: 2024-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_certutil_encode_susp_extensions.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of certutil with the "encode" flag to encode a file to bas
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Detection
 

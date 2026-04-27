@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Adplus.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Adplus.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "adplus.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# adplus.exe
-
 Debugging tool included with Windows Debugging Tools
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2021-09-01
-- Author: mr.d0x
-- Source Path: yml/OtherMSBinaries/Adplus.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ adplus.exe -hang -pn lsass.exe -o {PATH_ABSOLUTE:folder} -quiet
 - Use Case: Create memory dump and parse it offline
 - Privileges: SYSTEM
 - Operating System: All Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ adplus.exe -c {PATH:.xml}
 - Use Case: Run commands under a trusted Microsoft signed binary
 - Privileges: User
 - Operating System: All Windows
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ### 3. Dump
 
@@ -76,7 +67,7 @@ adplus.exe -c {PATH:.xml}
 - Use Case: Run commands under a trusted Microsoft signed binary
 - Privileges: SYSTEM
 - Operating System: All Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ### 4. Execute
 
@@ -89,7 +80,7 @@ adplus.exe -crash -o "{PATH_ABSOLUTE:folder}" -sc {PATH:.exe}
 - Use Case: Run commands under a trusted Microsoft signed binary
 - Privileges: User
 - Operating System: All windows
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detections
 

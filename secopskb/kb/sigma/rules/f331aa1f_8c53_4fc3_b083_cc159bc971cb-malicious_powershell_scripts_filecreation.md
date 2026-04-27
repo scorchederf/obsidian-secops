@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_powershell_exploit_scripts.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_powershell_exploit_scripts.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious PowerShell Scripts - FileCreation
-
 Detects the creation of known offensive powershell scripts used for exploitation
-
-## Metadata
-
-- Rule ID: f331aa1f-8c53-4fc3-b083-cc159bc971cb
-- Status: test
-- Level: high
-- Author: Markus Neis, Nasreddine Bencherchali (Nextron Systems), Mustafa Kaan Demir, Georg Lauenstein
-- Date: 2018-04-07
-- Modified: 2025-12-10
-- Source Path: rules/windows/file/file_event/file_event_win_powershell_exploit_scripts.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the creation of known offensive powershell scripts used for exploitation
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

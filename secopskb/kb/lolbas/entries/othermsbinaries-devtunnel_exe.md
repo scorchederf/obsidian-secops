@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/devtunnels.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/devtunnels.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "devtunnel.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# devtunnel.exe
-
 Binary to enable forwarded ports on windows operating systems.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2023-09-16
-- Author: Kamran Saifullah
-- Source Path: yml/OtherMSBinaries/devtunnels.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ devtunnel.exe host -p 8080
 - Use Case: Download Files, Upload Files, Data Exfiltration
 - Privileges: User
 - Operating System: Windows 10, Windows 11, MacOS
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1220"
 attack_technique_name: "XSL Script Processing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1220/T1220.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "a7c3ab07-52fb-49c8-ab6d-e9c6d4a0a985"
@@ -20,25 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MSXSL Bypass using remote files
-
 Executes the code specified within a XSL script tag during XSL transformation using a remote payload.
 Requires download of MSXSL.exe. No longer available from Microsoft.
 (Available via Internet Archive https://web.archive.org/web/20200825011623/https://www.microsoft.com/en-us/download/details.aspx?id=21714 )
 Open Calculator.exe when test successfully executed, while AV turned off.
 
-## Metadata
-
-- Atomic GUID: a7c3ab07-52fb-49c8-ab6d-e9c6d4a0a985
-- Technique: T1220: XSL Script Processing
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1220/T1220.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ## Input Arguments
 

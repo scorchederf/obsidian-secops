@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_ssh_new_connection.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_ssh_new_connection.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -23,18 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - SSH New Connection Attempt
-
 Detects instances where an SSH service on an OpenCanary node has had a connection attempt.
-
-## Metadata
-
-- Rule ID: cd55f721-5623-4663-bd9b-5229cab5237d
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_ssh_new_connection.yml
 
 ## Logsource
 
@@ -45,9 +34,9 @@ Detects instances where an SSH service on an OpenCanary node has had a connectio
 
 ### Techniques
 
-- [[kb/attack/techniques/T1133-external_remote_services|T1133]]
-- [[kb/attack/techniques/T1021-remote_services|T1021]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]]
+- [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
 
 ## Detection
 

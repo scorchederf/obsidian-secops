@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048.003"
 attack_technique_name: "Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048.003/T1048.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "3ea1f938-f80a-4305-9aa8-431bc4867313"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Python3 http.server
-
 An adversary may use the python3 standard library module http.server to exfiltrate data. This test checks if python3 is available and if so, creates a HTTP server on port 9090, captures the PID, sleeps for 10 seconds, then kills the PID and unsets the $PID variable.
-
-## Metadata
-
-- Atomic GUID: 3ea1f938-f80a-4305-9aa8-431bc4867313
-- Technique: T1048.003: Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol
-- Platforms: linux
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1048.003/T1048.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 ## Executor
 

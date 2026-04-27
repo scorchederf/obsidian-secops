@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/OpenConsole.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/OpenConsole.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "OpenConsole.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenConsole.exe
-
 Console Window host for Windows Terminal
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2022-06-17
-- Author: Nasreddine Bencherchali
-- Source Path: yml/OtherMSBinaries/OpenConsole.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ OpenConsole.exe {PATH:.exe}
 - Use Case: Use OpenConsole.exe as a proxy binary to evade defensive counter-measures
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detections
 

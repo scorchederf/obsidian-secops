@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.012"
 attack_technique_name: "Boot or Logon Autostart Execution: Print Processors"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.012/T1547.012.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "f7d38f47-c61b-47cc-a59d-fc0368f47ed0"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Print Processors
-
 Establishes persistence by creating a new print processor registry key under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Print Processors.
 The new print processor will point to a DLL which will be loaded by the spooler service after a reboot. The DLL will then create the file AtomicTest.txt in C:\Users\Public\ as validation that the test is successful.
 
@@ -29,18 +27,9 @@ Note: The test assumes a x64 Windows operating system.
 
 The payload source code is based on a blog post by stmxcsr: [https://stmxcsr.com/persistence/print-processor.html](https://stmxcsr.com/persistence/print-processor.html)
 
-## Metadata
-
-- Atomic GUID: f7d38f47-c61b-47cc-a59d-fc0368f47ed0
-- Technique: T1547.012: Boot or Logon Autostart Execution: Print Processors
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1547.012/T1547.012.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.012]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547012-print-processors|T1547.012: Print Processors]]
 
 ## Input Arguments
 

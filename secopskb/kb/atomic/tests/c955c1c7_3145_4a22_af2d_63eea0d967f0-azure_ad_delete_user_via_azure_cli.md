@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1531"
 attack_technique_name: "Account Access Removal"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1531/T1531.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "c955c1c7-3145-4a22-af2d-63eea0d967f0"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure AD - Delete user via Azure CLI
-
 Deletes a user in Azure AD. Adversaries may interrupt availability of system and network resources by inhibiting access to accounts utilized by legitimate users. Accounts may be deleted, locked, or manipulated (excluding changed credentials) to remove access to accounts.
-
-## Metadata
-
-- Atomic GUID: c955c1c7-3145-4a22-af2d-63eea0d967f0
-- Technique: T1531: Account Access Removal
-- Platforms: azure-ad
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1531/T1531.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1531-account_access_removal|T1531]]
+- [[kb/attack/techniques/T1531-account_access_removal|T1531: Account Access Removal]]
 
 ## Input Arguments
 

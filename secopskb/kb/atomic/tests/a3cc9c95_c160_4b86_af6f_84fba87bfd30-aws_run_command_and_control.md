@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1651"
 attack_technique_name: "Cloud Administration Command"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1651/T1651.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "a3cc9c95-c160-4b86-af6f-84fba87bfd30"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS Run Command (and Control)
-
 This test simulates an adversary using the AWS Run Command service to execute commands on EC2 instances.
-
-## Metadata
-
-- Atomic GUID: a3cc9c95-c160-4b86-af6f-84fba87bfd30
-- Technique: T1651: Cloud Administration Command
-- Platforms: iaas:aws
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1651/T1651.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1651-cloud_administration_command|T1651]]
+- [[kb/attack/techniques/T1651-cloud_administration_command|T1651: Cloud Administration Command]]
 
 ## Input Arguments
 

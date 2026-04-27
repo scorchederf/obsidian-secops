@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1219"
 attack_technique_name: "Remote Access Software"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1219/T1219.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "fbff3f1f-b0bf-448e-840f-7e1687affdce"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RemotePC Software Execution
-
 An adversary may attempt to trick the user into downloading RemotePC Software for use as a C2 channel. 
 Upon successful execution, RemotePC will be executed.
 
-## Metadata
-
-- Atomic GUID: fbff3f1f-b0bf-448e-840f-7e1687affdce
-- Technique: T1219: Remote Access Software
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1219/T1219.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219]]
+- [[kb/attack/techniques/T1219-remote_access_tools|T1219: Remote Access Tools]]
 
 ## Input Arguments
 

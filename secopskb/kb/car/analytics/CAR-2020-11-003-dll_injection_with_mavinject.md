@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-11-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-11-003"
   - "DLL Injection with Mavinject"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-11-003: DLL Injection with Mavinject
-
-## Metadata
-
-- CAR ID: CAR-2020-11-003
-- Submission Date: 2020/11/30
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Injecting a malicious DLL into a process is a common adversary TTP. Although the ways of doing this are numerous, mavinject.exe is a commonly used tool for doing so because it roles up many of the necessary steps into one, and is available within Windows. Attackers may rename the executable, so we also use the common argument "INJECTRUNNING" as a related signature here. Whitelisting certain applications may be necessary to reduce noise for this analytic.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]] (coverage: Low; tactics: TA0004, TA0005)
-  - [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]] (coverage: Low; tactics: TA0004, TA0005)
+  - [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 ## Implementations
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_office_addin_persistence.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_office_addin_persistence.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Persistence Via Microsoft Office Add-In
-
 Detects potential persistence activity via startup add-ins that load when Microsoft Office starts (.wll/.xll are simply .dll fit for Word or Excel).
-
-## Metadata
-
-- Rule ID: 8e1cb247-6cf6-42fa-b440-3f27d57e9936
-- Status: test
-- Level: high
-- Author: NVISO
-- Date: 2020-05-11
-- Modified: 2023-02-08
-- Source Path: rules/windows/file/file_event/file_event_win_office_addin_persistence.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential persistence activity via startup add-ins that load when Micros
 
 ### Techniques
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.006]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137006-add-ins|T1137.006: Add-ins]]
 
 ## Detection
 

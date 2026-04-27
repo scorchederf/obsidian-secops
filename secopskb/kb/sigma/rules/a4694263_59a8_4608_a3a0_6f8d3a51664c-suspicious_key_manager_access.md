@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_keymgr.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_keymgr.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Key Manager Access
-
 Detects the invocation of the Stored User Names and Passwords dialogue (Key Manager)
-
-## Metadata
-
-- Rule ID: a4694263-59a8-4608-a3a0-6f8d3a51664c
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-04-21
-- Modified: 2023-02-09
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_keymgr.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the invocation of the Stored User Names and Passwords dialogue (Key Mana
 
 ### Techniques
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.004]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555004-windows-credential-manager|T1555.004: Windows Credential Manager]]
 
 ## Detection
 

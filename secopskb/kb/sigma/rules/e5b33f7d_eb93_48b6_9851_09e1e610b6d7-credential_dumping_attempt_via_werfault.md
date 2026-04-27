@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_access/proc_access_win_lsass_werfault.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_lsass_werfault.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_access"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Credential Dumping Attempt Via WerFault
-
 Detects process LSASS memory dump using Mimikatz, NanoDump, Invoke-Mimikatz, Procdump or Taskmgr based on the CallTrace pointing to ntdll.dll, dbghelp.dll or dbgcore.dll for win10, server2016 and up.
-
-## Metadata
-
-- Rule ID: e5b33f7d-eb93-48b6-9851-09e1e610b6d7
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2012-06-27
-- Modified: 2023-11-29
-- Source Path: rules/windows/process_access/proc_access_win_lsass_werfault.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects process LSASS memory dump using Mimikatz, NanoDump, Invoke-Mimikatz, Pro
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ### Software Tags
 

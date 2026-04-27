@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/file_event/file_event_lnx_triple_cross_rootkit_lock_file.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/file_event/file_event_lnx_triple_cross_rootkit_lock_file.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "linux / file_event"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Triple Cross eBPF Rootkit Default LockFile
-
 Detects the creation of the file "rootlog" which is used by the TripleCross rootkit as a way to check if the backdoor is already running.
-
-## Metadata
-
-- Rule ID: c0239255-822c-4630-b7f1-35362bcb8f44
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-05
-- Modified: 2022-12-31
-- Source Path: rules/linux/file_event/file_event_lnx_triple_cross_rootkit_lock_file.yml
 
 ## Logsource
 

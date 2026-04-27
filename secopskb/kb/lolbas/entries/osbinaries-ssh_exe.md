@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Ssh.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Ssh.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "ssh.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ssh.exe
-
 Ssh.exe is the OpenSSH compatible client can be used to connect to Windows 10 (build 1809 and later) and Windows Server 2019 devices.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2021-11-08
-- Author: Akshat Pradhan
-- Source Path: yml/OSBinaries/Ssh.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ ssh localhost "{CMD}"
 - Use Case: Execute specified command, can be used for defense evasion.
 - Privileges: User
 - Operating System: Windows 10 1809, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 2. Execute
 
@@ -60,7 +51,7 @@ ssh -o ProxyCommand="{CMD}" .
 - Use Case: Performs execution of specified file, can be used as a defensive evasion.
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detections
 

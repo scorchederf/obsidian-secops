@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_remote_access_tools_anydesk_silent_install.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_anydesk_silent_install.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote Access Tool - AnyDesk Silent Installation
-
 Detects AnyDesk Remote Desktop silent installation. Which can be used by attackers to gain remote access.
-
-## Metadata
-
-- Rule ID: 114e7f1c-f137-48c8-8f54-3088c24ce4b9
-- Status: test
-- Level: high
-- Author: Ján Trenčanský
-- Date: 2021-08-06
-- Modified: 2023-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_remote_access_tools_anydesk_silent_install.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects AnyDesk Remote Desktop silent installation. Which can be used by attacke
 
 ### Techniques
 
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219.002]]
+- [[kb/attack/techniques/T1219-remote_access_tools#^t1219002-remote-desktop-software|T1219.002: Remote Desktop Software]]
 
 ## Detection
 

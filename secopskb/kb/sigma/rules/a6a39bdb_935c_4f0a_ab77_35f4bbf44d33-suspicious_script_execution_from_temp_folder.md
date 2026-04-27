@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_script_exec_from_temp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_script_exec_from_temp.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Script Execution From Temp Folder
-
 Detects a suspicious script executions from temporary folder
-
-## Metadata
-
-- Rule ID: a6a39bdb-935c-4f0a-ab77-35f4bbf44d33
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Max Altgelt (Nextron Systems), Tim Shelton
-- Date: 2021-07-14
-- Modified: 2022-10-05
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_script_exec_from_temp.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious script executions from temporary folder
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Detection
 

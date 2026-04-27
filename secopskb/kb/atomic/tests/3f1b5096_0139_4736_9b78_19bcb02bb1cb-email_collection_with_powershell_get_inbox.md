@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1114.001"
 attack_technique_name: "Email Collection: Local Email Collection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1114.001/T1114.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "3f1b5096-0139-4736-9b78-19bcb02bb1cb"
@@ -20,25 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Email Collection with PowerShell Get-Inbox
-
 Search through local Outlook installation, extract mail, compress the contents, and saves everything to a directory for later exfiltration.
 Successful execution will produce stdout message stating "Please be patient, this may take some time...". Upon completion, final output will be a mail.csv file.
 
 Note: Outlook is required, but no email account necessary to produce artifacts.
 
-## Metadata
-
-- Atomic GUID: 3f1b5096-0139-4736-9b78-19bcb02bb1cb
-- Technique: T1114.001: Email Collection: Local Email Collection
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1114.001/T1114.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1114-email_collection|T1114.001]]
+- [[kb/attack/techniques/T1114-email_collection#^t1114001-local-email-collection|T1114.001: Local Email Collection]]
 
 ## Input Arguments
 

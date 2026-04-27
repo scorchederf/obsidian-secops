@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_control_panel_item.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_control_panel_item.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Control Panel Items
-
 Detects the malicious use of a control panel item
-
-## Metadata
-
-- Rule ID: 0ba863e6-def5-4e50-9cea-4dd8c7dc46a4
-- Status: test
-- Level: high
-- Author: Kyaw Min Thein, Furkan Caliskan (@caliskanfurkan_)
-- Date: 2020-06-22
-- Modified: 2023-10-11
-- Source Path: rules/windows/process_creation/proc_creation_win_control_panel_item.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the malicious use of a control panel item
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.002]]
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218002-control-panel|T1218.002: Control Panel]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]]
 
 ## Detection
 

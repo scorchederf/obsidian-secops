@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1090.003"
 attack_technique_name: "Proxy: Multi-hop Proxy"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1090.003/T1090.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "7b9d85e5-c4ce-4434-8060-d3de83595e69"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Tor Proxy Usage - Windows
-
 This test is designed to launch the tor proxy service, which is what is utilized in the background by the Tor Browser and other applications with add-ons in order to provide onion routing functionality.
 Upon successful execution, the tor proxy will be launched, run for 60 seconds, and then exit.
 
-## Metadata
-
-- Atomic GUID: 7b9d85e5-c4ce-4434-8060-d3de83595e69
-- Technique: T1090.003: Proxy: Multi-hop Proxy
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1090.003/T1090.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1090-proxy|T1090.003]]
+- [[kb/attack/techniques/T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 
 ## Input Arguments
 

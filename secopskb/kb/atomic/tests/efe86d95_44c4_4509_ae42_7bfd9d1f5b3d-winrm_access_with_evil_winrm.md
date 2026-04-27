@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.006"
 attack_technique_name: "Remote Services: Windows Remote Management"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.006/T1021.006.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "efe86d95-44c4-4509-ae42-7bfd9d1f5b3d"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinRM Access with Evil-WinRM
-
 An adversary may attempt to use Evil-WinRM with a valid account to interact with remote systems that have WinRM enabled
-
-## Metadata
-
-- Atomic GUID: efe86d95-44c4-4509-ae42-7bfd9d1f5b3d
-- Technique: T1021.006: Remote Services: Windows Remote Management
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1021.006/T1021.006.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.006]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_runkey_winekey.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_runkey_winekey.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WINEKEY Registry Modification
-
 Detects potential malicious modification of run keys by winekey or team9 backdoor
-
-## Metadata
-
-- Rule ID: b98968aa-dbc0-4a9c-ac35-108363cbf8d5
-- Status: test
-- Level: high
-- Author: omkar72
-- Date: 2020-10-30
-- Modified: 2021-11-27
-- Source Path: rules/windows/registry/registry_event/registry_event_runkey_winekey.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential malicious modification of run keys by winekey or team9 backdoo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
 
 ## Detection
 

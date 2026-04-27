@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1606.002"
 attack_technique_name: "Forge Web Credentials: SAML token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1606.002/T1606.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "b16a03bc-1089-4dcc-ad98-30fe8f3a2b31"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Golden SAML
-
 Forge a "Golden SAML" token which allows to impersonate any Azure AD user, and authenticate to AADGraph (as a proof). 
 You will need the ADFS token signing certificate (see T1552.004 to export it).
 More info here : https://o365blog.com/post/adfs/
 
-## Metadata
-
-- Atomic GUID: b16a03bc-1089-4dcc-ad98-30fe8f3a2b31
-- Technique: T1606.002: Forge Web Credentials: SAML token
-- Platforms: azure-ad
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1606.002/T1606.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1606-forge_web_credentials|T1606.002]]
+- [[kb/attack/techniques/T1606-forge_web_credentials#^t1606002-saml-tokens|T1606.002: SAML Tokens]]
 
 ## Input Arguments
 

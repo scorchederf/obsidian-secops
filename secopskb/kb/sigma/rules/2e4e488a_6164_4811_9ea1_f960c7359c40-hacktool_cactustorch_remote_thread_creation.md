@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / create_remote_thread"
@@ -24,19 +24,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - CACTUSTORCH Remote Thread Creation
-
 Detects remote thread creation from CACTUSTORCH as described in references.
-
-## Metadata
-
-- Rule ID: 2e4e488a-6164-4811-9ea1-f960c7359c40
-- Status: test
-- Level: high
-- Author: @SBousseaden (detection), Thomas Patzke (rule)
-- Date: 2019-02-01
-- Modified: 2023-05-05
-- Source Path: rules/windows/create_remote_thread/create_remote_thread_win_hktl_cactustorch.yml
 
 ## Logsource
 
@@ -47,10 +35,10 @@ Detects remote thread creation from CACTUSTORCH as described in references.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.012]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055012-process-hollowing|T1055.012: Process Hollowing]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ## Detection
 

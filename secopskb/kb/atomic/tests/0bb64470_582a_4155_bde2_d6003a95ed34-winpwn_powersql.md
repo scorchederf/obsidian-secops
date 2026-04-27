@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1518"
 attack_technique_name: "Software Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1518/T1518.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "0bb64470-582a-4155-bde2-d6003a95ed34"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - powerSQL
-
 Start PowerUpSQL Checks using powerSQL function of WinPwn
-
-## Metadata
-
-- Atomic GUID: 0bb64470-582a-4155-bde2-d6003a95ed34
-- Technique: T1518: Software Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1518/T1518.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1518-software_discovery|T1518]]
+- [[kb/attack/techniques/T1518-software_discovery|T1518: Software Discovery]]
 
 ## Executor
 

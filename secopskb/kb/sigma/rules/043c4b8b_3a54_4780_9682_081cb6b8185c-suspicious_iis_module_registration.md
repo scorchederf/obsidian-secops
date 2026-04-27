@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_iis_susp_module_registration.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_iis_susp_module_registration.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious IIS Module Registration
-
 Detects a suspicious IIS module registration as described in Microsoft threat report on IIS backdoors
-
-## Metadata
-
-- Rule ID: 043c4b8b-3a54-4780-9682-081cb6b8185c
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Microsoft (idea)
-- Date: 2022-08-04
-- Modified: 2023-01-23
-- Source Path: rules/windows/process_creation/proc_creation_win_iis_susp_module_registration.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious IIS module registration as described in Microsoft threat re
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.004]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505004-iis-components|T1505.004: IIS Components]]
 
 ## Detection
 

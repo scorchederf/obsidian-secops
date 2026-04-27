@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1559"
 attack_technique_name: "Inter-Process Communication"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1559/T1559.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "830c8b6c-7a70-4f40-b975-8bbe74558acd"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cobalt Strike Lateral Movement (psexec_psh) pipe
-
 Uses the [Named Pipes Micro Emulation](https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/micro_emulation_plans/src/named_pipes) executable from the Center for Threat Informed Defense to create a named pipe for inter-process communication.
 
 The named pipe executable will pause for 30 seconds to allow the client and server to exchange a message through the pipe.
 
-## Metadata
-
-- Atomic GUID: 830c8b6c-7a70-4f40-b975-8bbe74558acd
-- Technique: T1559: Inter-Process Communication
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1559/T1559.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1559-inter-process_communication|T1559]]
+- [[kb/attack/techniques/T1559-inter-process_communication|T1559: Inter-Process Communication]]
 
 ## Dependencies
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Logger.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Logger.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Logger.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Logger.exe
-
 A logging configuration tool from the Windows Kits used to start and manage process logging.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2025-07-13
-- Author: Avihay Eldad
-- Source Path: yml/OtherMSBinaries/Logger.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ logger.exe RUN "{CMD}"
 - Use Case: Executes an abitrary command via a signed binary to evade detection.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ logger.exe RUNW "{CMD}"
 - Use Case: Executes an abitrary command via a signed binary to evade detection.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 3. Execute
 
@@ -76,7 +67,7 @@ logger.exe "{CMD}"
 - Use Case: Executes an abitrary command via a signed binary to evade detection.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Resources
 

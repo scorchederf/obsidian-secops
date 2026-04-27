@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/cisco/aaa/cisco_cli_local_accounts.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/cisco/aaa/cisco_cli_local_accounts.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "cisco / aaa"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cisco Local Accounts
-
 Find local accounts being created or modified as well as remote authentication configurations
-
-## Metadata
-
-- Rule ID: 6d844f0f-1c18-41af-8f19-33e7654edfc3
-- Status: test
-- Level: high
-- Author: Austin Clark
-- Date: 2019-08-12
-- Modified: 2023-01-04
-- Source Path: rules/network/cisco/aaa/cisco_cli_local_accounts.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Find local accounts being created or modified as well as remote authentication c
 
 ### Techniques
 
-- [[kb/attack/techniques/T1136-create_account|T1136.001]]
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

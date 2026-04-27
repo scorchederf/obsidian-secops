@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_cloudtrail_vpc_flow_logs_deleted.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_cloudtrail_vpc_flow_logs_deleted.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "experimental"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -19,19 +19,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS VPC Flow Logs Deleted
-
 Detects the deletion of one or more VPC Flow Logs in AWS Elastic Compute Cloud (EC2) through the DeleteFlowLogs API call.
 Adversaries may delete flow logs to evade detection or remove evidence of network activity, hindering forensic investigations and visibility into malicious operations.
-
-## Metadata
-
-- Rule ID: e386b9b5-af12-450e-afff-761730fb8a98
-- Status: experimental
-- Level: high
-- Author: Ivan Saakov
-- Date: 2025-10-19
-- Source Path: rules/cloud/aws/cloudtrail/aws_cloudtrail_vpc_flow_logs_deleted.yml
 
 ## Logsource
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_ultravnc_susp_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_ultravnc_susp_execution.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious UltraVNC Execution
-
 Detects suspicious UltraVNC command line flag combination that indicate a auto reconnect upon execution, e.g. startup (as seen being used by Gamaredon threat group)
-
-## Metadata
-
-- Rule ID: 871b9555-69ca-4993-99d3-35a59f9f3599
-- Status: test
-- Level: high
-- Author: Bhabesh Raj
-- Date: 2022-03-04
-- Modified: 2022-03-09
-- Source Path: rules/windows/process_creation/proc_creation_win_ultravnc_susp_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious UltraVNC command line flag combination that indicate a auto r
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.005]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021005-vnc|T1021.005: VNC]]
 
 ## Detection
 

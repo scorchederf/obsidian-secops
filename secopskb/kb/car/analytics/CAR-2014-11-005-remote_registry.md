@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-11-005/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-11-005.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-11-005"
   - "Remote Registry"
@@ -23,20 +23,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-11-005: Remote Registry
-
-## Metadata
-
-- CAR ID: CAR-2014-11-005
-- Submission Date: 2014/11/19
-- Information Domain: Host, Network
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Network Registry File, PCAP
-- Contributors: MITRE
-
-## Description
-
 An adversary can remotely [manipulate the registry](https://attack.mitre.org/techniques/T1112) of another machine if the RemoteRegistry service is enabled and valid credentials are obtained. While the registry is remotely accessed, it can be used to prepare a [Lateral Movement](https://attack.mitre.org/tactics/TA0008) technique, [discover](https://attack.mitre.org/tactics/TA0007) the configuration of a host, achieve [Persistence](https://attack.mitre.org/tactics/TA0003), or anything that aids an adversary in achieving the mission. Like most ATT&CK techniques, this behavior can be used legitimately, and the reliability of an analytic depends on the proper identification of the pre-existing legitimate behaviors. Although this behavior is disabled in many Windows configurations, it is possible to [remotely enable](https://attack.mitre.org/techniques/T1569/002) the RemoteRegistry service, which can be detected with [[kb/car/analytics/CAR-2014-03-005-remotely_launched_executables_via_services|CAR-2014-03-005]].
 
 Remote access to the registry can be achieved via
@@ -49,7 +35,7 @@ All of these behaviors call into the Windows API, which uses the NamedPipe `WINR
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Moderate; tactics: TA0005)
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Moderate; tactics: TA0005)
 
 ## Implementations
 

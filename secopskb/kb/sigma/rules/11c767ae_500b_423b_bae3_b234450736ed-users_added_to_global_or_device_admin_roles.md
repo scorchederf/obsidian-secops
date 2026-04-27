@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/audit_logs/azure_ad_users_added_to_device_admin_roles.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/audit_logs/azure_ad_users_added_to_device_admin_roles.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "azure / auditlogs"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Users Added to Global or Device Admin Roles
-
 Monitor and alert for users added to device admin roles.
-
-## Metadata
-
-- Rule ID: 11c767ae-500b-423b-bae3-b234450736ed
-- Status: test
-- Level: high
-- Author: Michael Epping, '@mepples21'
-- Date: 2022-06-28
-- Source Path: rules/cloud/azure/audit_logs/azure_ad_users_added_to_device_admin_roles.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Monitor and alert for users added to device admin roles.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

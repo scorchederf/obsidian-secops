@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/sysmon/sysmon_config_modification_status.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/sysmon/sysmon_config_modification_status.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / sysmon_status"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sysmon Configuration Modification
-
 Detects when an attacker tries to hide from Sysmon by disabling or stopping it
-
-## Metadata
-
-- Rule ID: 1f2b5353-573f-4880-8e33-7d04dcf97744
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-06-04
-- Modified: 2022-08-02
-- Source Path: rules/windows/sysmon/sysmon_config_modification_status.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when an attacker tries to hide from Sysmon by disabling or stopping it
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 ## Detection
 

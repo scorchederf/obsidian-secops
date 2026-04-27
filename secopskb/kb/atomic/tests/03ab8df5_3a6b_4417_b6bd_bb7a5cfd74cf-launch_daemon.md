@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.004"
 attack_technique_name: "Create or Modify System Process: Launch Daemon"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.004/T1543.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "bash"
 aliases:
   - "03ab8df5-3a6b-4417-b6bd-bb7a5cfd74cf"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Launch Daemon
-
 Utilize LaunchDaemon to launch `Hello World`
-
-## Metadata
-
-- Atomic GUID: 03ab8df5-3a6b-4417-b6bd-bb7a5cfd74cf
-- Technique: T1543.004: Create or Modify System Process: Launch Daemon
-- Platforms: macos
-- Executor: bash
-- Elevation Required: True
-- Dependency Executor: bash
-- Source Path: atomics/T1543.004/T1543.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.004]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543004-launch-daemon|T1543.004: Launch Daemon]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_odbcconf_exec_susp_locations.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_odbcconf_exec_susp_locations.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Odbcconf.EXE Suspicious DLL Location
-
 Detects execution of "odbcconf" where the path of the DLL being registered is located in a potentially suspicious location.
-
-## Metadata
-
-- Rule ID: 6b65c28e-11f3-46cb-902a-68f2cafaf474
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-22
-- Modified: 2023-05-26
-- Source Path: rules/windows/process_creation/proc_creation_win_odbcconf_exec_susp_locations.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects execution of "odbcconf" where the path of the DLL being registered is lo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.008]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218008-odbcconf|T1218.008: Odbcconf]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2022-03-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2022-03-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2022-03-001"
   - "Disable Windows Event Logging"
@@ -26,20 +26,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2022-03-001: Disable Windows Event Logging
-
-## Metadata
-
-- CAR ID: CAR-2022-03-001
-- Submission Date: 2022/03/14
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Lucas Heiligenstein
-
-## Description
-
 Adversaries may disable Windows event logging to limit data that can be leveraged for detections and audits. Windows event logs record user and system activity such as login attempts, process creation, and much more. This data is used by security tools and analysts to generate detections. There are different ways to perform this attack.
 1. The first one is to create the Registry Key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MiniNt`. This action will not generate Security EventLog 4657 or Sysmon EventLog 13 because the value of the key remains empty. However, if an attacker uses powershell to perform this attack (and not cmd), a Security EventLog 4663 will be generated (but 4663 generates a lot of noise).
 2. The second way is to disable the service EventLog (display name Windows Event Log). After disabed, attacker must reboot the system. The action of disabling or put in manual the service will modify the Registry Key value `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\start`, therefore Security EventLog 4657 or Sysmon EventLog 13 will be generated on the system.
@@ -49,8 +35,8 @@ Adversaries may disable Windows event logging to limit data that can be leverage
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Implementations
 

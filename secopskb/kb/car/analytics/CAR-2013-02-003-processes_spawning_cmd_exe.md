@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-02-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-02-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-02-003"
   - "Processes Spawning cmd.exe"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-02-003: Processes Spawning cmd.exe
-
-## Metadata
-
-- CAR ID: CAR-2013-02-003
-- Submission Date: 2013/02/05
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 The Windows [Command Prompt](https://en.wikipedia.org/wiki/cmd.exe) (`cmd.exe`) is a utility that provides a command line interface to Windows operating systems. It provides the ability to run additional programs and also has several built-in commands such as `dir`, `copy`, `mkdir`, and `type`, as well as batch scripts (`.bat`). Typically, when a user runs a command prompt, the parent process is `explorer.exe` or another instance of the prompt. There may be automated programs, logon scripts, or administrative tools that launch instances of the command prompt in order to run scripts or other built-in commands. Spawning the process `cmd.exe` from certain parents may be more indicative of malice. For example, if Adobe Reader or Outlook launches a command shell, this may suggest that a malicious document has been loaded and should be investigated. Thus, by looking for abnormal parent processes of `cmd.exe`, it may be possible to detect adversaries.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]] (coverage: Moderate; tactics: TA0002)
-  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]] (coverage: Moderate; tactics: TA0002)
+  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Implementations
 

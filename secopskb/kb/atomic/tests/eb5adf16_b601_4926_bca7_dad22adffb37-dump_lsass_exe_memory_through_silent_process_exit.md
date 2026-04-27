@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "eb5adf16-b601-4926-bca7-dad22adffb37"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Dump LSASS.exe Memory through Silent Process Exit
 
 WerFault.exe (Windows Error Reporting process that handles process crashes) can be abused to create a 
 memory dump of lsass.exe, in a directory of your choice. This method relies on a mechanism 
@@ -35,19 +33,9 @@ appear benign because from a defender’s viewpoint it’s within the realm of n
 
 Upon successful execution, you should find the dump file in directory of your choice or "%temp%\SilentProcessExit" by default.
 
-## Metadata
-
-- Atomic GUID: eb5adf16-b601-4926-bca7-dad22adffb37
-- Technique: T1003.001: OS Credential Dumping: LSASS Memory
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1003.001/T1003.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Input Arguments
 

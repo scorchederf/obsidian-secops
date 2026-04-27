@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.003"
 attack_technique_name: "Event Triggered Execution: Windows Management Instrumentation Event Subscription"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.003/T1546.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "3c64f177-28e2-49eb-a799-d767b24dd1e0"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Persistence via WMI Event Subscription - CommandLineEventConsumer
-
 Run from an administrator powershell window. After running, reboot the victim machine.
 After it has been online for 4 minutes you should see notepad.exe running as SYSTEM.
 
@@ -31,18 +29,9 @@ https://gist.github.com/mattifestation/7fe1df7ca2f08cbfa3d067def00c01af
 
 https://github.com/EmpireProject/Empire/blob/master/data/module_source/persistence/Persistence.psm1#L545
 
-## Metadata
-
-- Atomic GUID: 3c64f177-28e2-49eb-a799-d767b24dd1e0
-- Technique: T1546.003: Event Triggered Execution: Windows Management Instrumentation Event Subscription
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1546.003/T1546.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 ## Executor
 

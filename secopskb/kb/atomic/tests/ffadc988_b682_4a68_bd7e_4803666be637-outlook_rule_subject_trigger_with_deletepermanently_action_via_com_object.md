@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.005"
 attack_technique_name: "Office Application Startup: Outlook Rules"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.005/T1137.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ffadc988-b682-4a68-bd7e-4803666be637"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Outlook Rule - Subject Trigger with DeletePermanently Action via COM Object
-
 Creates a malicious Outlook rule via the COM object that permanently deletes
 emails when an email with a specific subject keyword arrives. Simulates
 adversary persistence via Outlook Rules (T1137.005). Uses DeletePermanently
@@ -32,18 +30,9 @@ equivalent that generates the same rule-creation artefact.
 NOTE: This test MUST be run from a non-elevated (standard user) PowerShell
 session. Outlook COM fails with 0x80080005 when invoked as Administrator.
 
-## Metadata
-
-- Atomic GUID: ffadc988-b682-4a68-bd7e-4803666be637
-- Technique: T1137.005: Office Application Startup: Outlook Rules
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1137.005/T1137.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.005]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
 
 ## Input Arguments
 

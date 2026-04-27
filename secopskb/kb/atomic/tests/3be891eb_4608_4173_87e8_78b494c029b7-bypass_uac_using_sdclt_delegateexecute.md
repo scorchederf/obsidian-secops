@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "3be891eb-4608-4173-87e8-78b494c029b7"
@@ -20,24 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC using sdclt DelegateExecute
-
 Bypasses User Account Control using a fileless method, registry only.
 Upon successful execution, sdclt.exe will spawn cmd.exe to spawn notepad.exe
 [Reference - sevagas.com](http://blog.sevagas.com/?Yet-another-sdclt-UAC-bypass)
 Adapted from [MITRE ATT&CK Evals](https://github.com/mitre-attack/attack-arsenal/blob/66650cebd33b9a1e180f7b31261da1789cdceb66/adversary_emulation/APT29/CALDERA_DIY/evals/payloads/stepFourteen_bypassUAC.ps1)
 
-## Metadata
-
-- Atomic GUID: 3be891eb-4608-4173-87e8-78b494c029b7
-- Technique: T1548.002: Abuse Elevation Control Mechanism: Bypass User Account Control
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1548.002/T1548.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Input Arguments
 

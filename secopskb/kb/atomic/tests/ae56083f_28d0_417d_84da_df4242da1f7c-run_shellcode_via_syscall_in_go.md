@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1106"
 attack_technique_name: "Native API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1106/T1106.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ae56083f-28d0-417d-84da-df4242da1f7c"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Run Shellcode via Syscall in Go
-
 Runs shellcode in the current running process via a syscall.
 
 Steps taken with this technique
@@ -32,18 +30,9 @@ Steps taken with this technique
 
 - PoC Credit: (https://github.com/Ne0nd0g/go-shellcode#syscall)
 
-## Metadata
-
-- Atomic GUID: ae56083f-28d0-417d-84da-df4242da1f7c
-- Technique: T1106: Native API
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1106/T1106.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1106-native_api|T1106]]
+- [[kb/attack/techniques/T1106-native_api|T1106: Native API]]
 
 ## Executor
 

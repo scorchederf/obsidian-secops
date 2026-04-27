@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "5e09bed0-7d33-453b-9bf3-caea32bff719"
@@ -20,26 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Eventhub Deletion
-
 Identifies an Event Hub deletion in Azure.
 An Event Hub is an event processing service that ingests and processes large volumes of events and data.
 An adversary may delete an Event Hub in an attempt to evade detection.
 https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about.
 
-## Metadata
-
-- Atomic GUID: 5e09bed0-7d33-453b-9bf3-caea32bff719
-- Technique: T1562.008: Impair Defenses: Disable Cloud Logs
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1562.008/T1562.008.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Input Arguments
 

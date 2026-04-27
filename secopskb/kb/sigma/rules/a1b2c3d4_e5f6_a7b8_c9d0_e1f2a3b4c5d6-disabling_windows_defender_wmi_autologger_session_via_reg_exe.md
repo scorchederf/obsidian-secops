@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_reg_disable_defender_wmi_autologger.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_reg_disable_defender_wmi_autologger.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disabling Windows Defender WMI Autologger Session via Reg.exe
-
 Detects the use of reg.exe to disable the Event Tracing for Windows (ETW) Autologger session for Windows Defender API and Audit events.
 By setting the 'Start' value to '0' for the 'DefenderApiLogger' or 'DefenderAuditLogger' session, an attacker can prevent these critical security events
 from being logged, effectively blinding monitoring tools that rely on this data. This is a powerful defense evasion technique.
-
-## Metadata
-
-- Rule ID: a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6
-- Status: experimental
-- Level: high
-- Author: Matt Anderson (Huntress)
-- Date: 2025-07-09
-- Source Path: rules/windows/process_creation/proc_creation_win_reg_disable_defender_wmi_autologger.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ from being logged, effectively blinding monitoring tools that rely on this data.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

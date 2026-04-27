@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmd_path_traversal.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_path_traversal.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential CommandLine Path Traversal Via Cmd.EXE
-
 Detects potential path traversal attempt via cmd.exe. Could indicate possible command/argument confusion/hijacking
-
-## Metadata
-
-- Rule ID: 087790e3-3287-436c-bccf-cbd0184a7db1
-- Status: test
-- Level: high
-- Author: xknow @xknow_infosec, Tim Shelton
-- Date: 2020-06-11
-- Modified: 2023-03-06
-- Source Path: rules/windows/process_creation/proc_creation_win_cmd_path_traversal.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential path traversal attempt via cmd.exe. Could indicate possible co
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Detection
 

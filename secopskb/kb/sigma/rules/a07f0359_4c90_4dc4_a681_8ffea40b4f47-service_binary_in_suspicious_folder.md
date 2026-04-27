@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_creation_service_susp_folder.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_creation_service_susp_folder.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Service Binary in Suspicious Folder
-
 Detect the creation of a service with a service binary located in a suspicious directory
-
-## Metadata
-
-- Rule ID: a07f0359-4c90-4dc4-a681-8ffea40b4f47
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), frack113
-- Date: 2022-05-02
-- Modified: 2025-10-07
-- Source Path: rules/windows/registry/registry_set/registry_set_creation_service_susp_folder.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detect the creation of a service with a service binary located in a suspicious d
 
 ### Techniques
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

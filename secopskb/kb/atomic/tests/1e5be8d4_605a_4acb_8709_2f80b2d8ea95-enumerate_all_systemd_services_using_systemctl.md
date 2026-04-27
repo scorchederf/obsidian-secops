@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "1e5be8d4-605a-4acb-8709-2f80b2d8ea95"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enumerate All systemd Services Using systemctl
-
 Enumerates all systemd services and their current states using systemctl list-units
 and systemctl list-unit-files. Adversaries may enumerate running and enabled services
 to identify targets for hijacking, understand the host environment, map installed
@@ -31,19 +29,9 @@ Service enumeration is a common reconnaissance step during post-exploitation and
 precede service hijacking or masquerading activity. This test does not require
 elevation as service listing is available to unprivileged users on most Linux systems.
 
-## Metadata
-
-- Atomic GUID: 1e5be8d4-605a-4acb-8709-2f80b2d8ea95
-- Technique: T1569.003: System Services: Systemctl
-- Platforms: linux
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1569.003/T1569.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.003]]
+- [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 ## Dependencies
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1113"
 attack_technique_name: "Screen Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1113/T1113.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "98f19852-7348-4f99-9e15-6ff4320464c7"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RDP Bitmap Cache Extraction via bmc-tools
-
 Simulates an attacker extracting the RDP bitmap cache using the ANSSI "bmc-tools.py" script.
 This test requires valid RDP bitmap cache files to exist on the system (usually created after an outgoing RDP connection is made).
 
-## Metadata
-
-- Atomic GUID: 98f19852-7348-4f99-9e15-6ff4320464c7
-- Technique: T1113: Screen Capture
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1113/T1113.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1113-screen_capture|T1113]]
+- [[kb/attack/techniques/T1113-screen_capture|T1113: Screen Capture]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "28104f8a-4ff1-4582-bcf6-699dce156608"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC using SilentCleanup task
-
 Bypass UAC using SilentCleanup task on Windows 8-10 using bat file from https://www.reddit.com/r/hacking/comments/ajtrws/bypassing_highest_uac_level_windows_810/
 
 There is an auto-elevated task called SilentCleanup located in %windir%\system32\cleanmgr.exe This can be abused to elevate any file with Administrator privileges without prompting UAC (even highest level).
@@ -34,18 +32,9 @@ schtasks /run /tn \Microsoft\Windows\DiskCleanup\SilentCleanup /I
 
 REM will tell it to ignore everything after %windir% and treat it just as a NOTE. Therefore just executing cmd with admin privs.
 
-## Metadata
-
-- Atomic GUID: 28104f8a-4ff1-4582-bcf6-699dce156608
-- Technique: T1548.002: Abuse Elevation Control Mechanism: Bypass User Account Control
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Source Path: atomics/T1548.002/T1548.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Input Arguments
 

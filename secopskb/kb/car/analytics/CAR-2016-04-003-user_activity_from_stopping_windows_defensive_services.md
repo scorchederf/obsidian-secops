@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2016-04-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2016-04-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2016-04-003"
   - "User Activity from Stopping Windows Defensive Services"
@@ -25,28 +25,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2016-04-003: User Activity from Stopping Windows Defensive Services
-
-## Metadata
-
-- CAR ID: CAR-2016-04-003
-- Submission Date: 2016/04/15
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE/NSA
-
-## Description
-
 Spyware and malware remain a serious problem and Microsoft developed security services, Windows Defender and Windows Firewall, to combat this threat. In the event Windows Defender or Windows Firewall is turned off, administrators should correct the issue immediately to prevent the possibility of infection or further infection and investigate to determine if caused by crash or user manipulation.
 
 Stopping services events are Windows Event Code 7036.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]] (coverage: Low; tactics: TA0005)
-  - [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]] (coverage: Low; tactics: TA0005)
+  - [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Implementations
 

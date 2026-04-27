@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_cobaltstrike_service_installs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_cobaltstrike_service_installs.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential CobaltStrike Service Installations - Registry
-
 Detects known malicious service installs that appear in cases in which a Cobalt Strike beacon elevates privileges or lateral movement.
-
-## Metadata
-
-- Rule ID: 61a7697c-cb79-42a8-a2ff-5f0cdfae0130
-- Status: test
-- Level: high
-- Author: Wojciech Lesicki
-- Date: 2021-06-29
-- Modified: 2024-03-25
-- Source Path: rules/windows/registry/registry_set/registry_set_cobaltstrike_service_installs.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects known malicious service installs that appear in cases in which a Cobalt 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Detection
 

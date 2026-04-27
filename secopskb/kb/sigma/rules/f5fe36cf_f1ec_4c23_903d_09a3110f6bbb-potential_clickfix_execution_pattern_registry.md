@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_potential_clickfix_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_potential_clickfix_execution.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,22 +21,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential ClickFix Execution Pattern - Registry
-
 Detects potential ClickFix malware execution patterns by monitoring registry modifications in RunMRU keys containing HTTP/HTTPS links.
 ClickFix is known to be distributed through phishing campaigns and uses techniques like clipboard hijacking and fake CAPTCHA pages.
 Through the fakecaptcha pages, the adversary tricks users into opening the Run dialog box and pasting clipboard-hijacked content,
 such as one-liners that execute remotely hosted malicious files or scripts.
-
-## Metadata
-
-- Rule ID: f5fe36cf-f1ec-4c23-903d-09a3110f6bbb
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-03-25
-- Modified: 2025-11-19
-- Source Path: rules/windows/registry/registry_set/registry_set_potential_clickfix_execution.yml
 
 ## Logsource
 
@@ -47,7 +35,7 @@ such as one-liners that execute remotely hosted malicious files or scripts.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.001]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204001-malicious-link|T1204.001: Malicious Link]]
 
 ## Detection
 

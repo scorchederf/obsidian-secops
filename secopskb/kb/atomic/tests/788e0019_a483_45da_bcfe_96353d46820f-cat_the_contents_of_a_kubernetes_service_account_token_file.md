@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.007"
 attack_technique_name: "Kubernetes List Secrets"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.007/T1552.007.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "788e0019-a483-45da-bcfe-96353d46820f"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cat the contents of a Kubernetes service account token file
-
 Access the Kubernetes service account access token stored within a container in a cluster.
-
-## Metadata
-
-- Atomic GUID: 788e0019-a483-45da-bcfe-96353d46820f
-- Technique: T1552.007: Kubernetes List Secrets
-- Platforms: linux
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1552.007/T1552.007.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.007]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552007-container-api|T1552.007: Container API]]
 
 ## Dependencies
 

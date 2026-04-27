@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmd_net_use_and_exec_combo.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_net_use_and_exec_combo.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Execution From Internet Hosted WebDav Share
-
 Detects the execution of the "net use" command to mount a WebDAV server and then immediately execute some content in it. As seen being used in malicious LNK files
-
-## Metadata
-
-- Rule ID: f0507c0f-a3a2-40f5-acc6-7f543c334993
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems)
-- Date: 2022-09-01
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_cmd_net_use_and_exec_combo.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of the "net use" command to mount a WebDAV server and then
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.001"
 attack_technique_name: "Hijack Execution Flow: DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "5898902d-c5ad-479a-8545-6f5ab3cfc87f"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Phantom Dll Hijacking - ualapi.dll
-
 Re-starting the Print Spooler service leads to C:\Windows\System32\ualapi.dll being loaded
 A malicious ualapi.dll placed in the System32 directory will lead to its execution whenever the system starts
 
 Upon successful execution, amsi.dll will be copied and renamed to ualapi.dll and then ualapi.dll will be copied to system32 folder for loading during system restart.
 Print Spooler service is also configured to auto start. Reboot of system is required
 
-## Metadata
-
-- Atomic GUID: 5898902d-c5ad-479a-8545-6f5ab3cfc87f
-- Technique: T1574.001: Hijack Execution Flow: DLL
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1574.001/T1574.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Executor
 

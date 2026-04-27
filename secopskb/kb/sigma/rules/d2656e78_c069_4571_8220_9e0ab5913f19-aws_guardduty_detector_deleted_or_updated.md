@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_cloudtrail_guardduty_detector_deleted_or_updated.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_cloudtrail_guardduty_detector_deleted_or_updated.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "experimental"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -22,20 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS GuardDuty Detector Deleted Or Updated
-
 Detects successful deletion or disabling of an AWS GuardDuty detector, possibly by an attacker trying to avoid detection of its malicious activities.
 Upon deletion, GuardDuty stops monitoring the environment and all existing findings are lost.
 Verify with the user identity that this activity is legitimate.
-
-## Metadata
-
-- Rule ID: d2656e78-c069-4571-8220-9e0ab5913f19
-- Status: experimental
-- Level: high
-- Author: suktech24
-- Date: 2025-11-27
-- Source Path: rules/cloud/aws/cloudtrail/aws_cloudtrail_guardduty_detector_deleted_or_updated.yml
 
 ## Logsource
 
@@ -46,8 +35,8 @@ Verify with the user identity that this activity is legitimate.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Detection
 

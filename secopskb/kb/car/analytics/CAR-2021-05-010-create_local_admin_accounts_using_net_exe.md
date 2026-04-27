@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-05-010/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-05-010.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-05-010"
   - "Create local admin accounts using net exe"
@@ -25,26 +25,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-05-010: Create local admin accounts using net exe
-
-## Metadata
-
-- CAR ID: CAR-2021-05-010
-- Submission Date: 2021/05/11
-- Information Domain: Analytic
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Splunk Threat Research <research@splunk.com>
-
-## Description
-
 This search looks for the creation of local administrator accounts using net.exe.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1136-create_account|T1136]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1136-create_account|T1136.001]]
+- [[kb/attack/techniques/T1136-create_account|T1136: Create Account]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 ## Implementations
 

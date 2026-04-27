@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/rpc_firewall/rpc_firewall_atsvc_lateral_movement.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/rpc_firewall/rpc_firewall_atsvc_lateral_movement.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "rpc_firewall / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote Schedule Task Lateral Movement via ATSvc
-
 Detects remote RPC calls to create or execute a scheduled task via ATSvc
-
-## Metadata
-
-- Rule ID: 0fcd1c79-4eeb-4746-aba9-1b458f7a79cb
-- Status: test
-- Level: high
-- Author: Sagie Dulce, Dekel Paz
-- Date: 2022-01-01
-- Source Path: rules/application/rpc_firewall/rpc_firewall_atsvc_lateral_movement.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ Detects remote RPC calls to create or execute a scheduled task via ATSvc
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]]
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 ## Detection
 

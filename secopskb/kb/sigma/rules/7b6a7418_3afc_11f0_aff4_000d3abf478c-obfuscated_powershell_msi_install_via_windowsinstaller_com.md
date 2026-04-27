@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_comobject_msi.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_comobject_msi.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,22 +23,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Obfuscated PowerShell MSI Install via WindowsInstaller COM
-
 Detects the execution of obfuscated PowerShell commands that attempt to install MSI packages via the Windows Installer COM object (`WindowsInstaller.Installer`).
 The technique involves manipulating strings to hide functionality, such as constructing class names using string insertion (e.g., 'indowsInstaller.Installer'.Insert(0,'W')) and correcting
 malformed URLs (e.g., converting 'htps://' to 'https://') at runtime. This behavior is commonly associated with malware loaders or droppers that aim to bypass static detection
 by hiding intent in runtime-generated strings and using legitimate tools for code execution. The use of `InstallProduct` and COM object creation, particularly combined with
 hidden window execution and suppressed UI, indicates an attempt to install software (likely malicious) without user interaction.
-
-## Metadata
-
-- Rule ID: 7b6a7418-3afc-11f0-aff4-000d3abf478c
-- Status: experimental
-- Level: high
-- Author: Meroujan Antonyan (vx3r)
-- Date: 2025-05-27
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_comobject_msi.yml
 
 ## Logsource
 
@@ -49,9 +38,9 @@ hidden window execution and suppressed UI, indicates an attempt to install softw
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.010]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.007]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027010-command-obfuscation|T1027.010: Command Obfuscation]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

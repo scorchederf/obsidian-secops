@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-03-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-03-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-03-001"
   - "SMB Write Request - NamedPipes"
@@ -25,27 +25,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-03-001: SMB Write Request - NamedPipes
-
-## Metadata
-
-- CAR ID: CAR-2014-03-001
-- Submission Date: 2014/03/03
-- Information Domain: Host, Network
-- Analytic Type: Situational Awareness
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Process, Netflow
-- Contributors: MITRE
-
-## Description
-
 An SMB write can be an indicator of lateral movement, especially when combined with other information such as execution of that written file. Named pipes are a subset of SMB write requests. Named pipes such as msftewds may not be alarming; however others, such as lsarpc, may.
 
 Monitoring SMB write requests still creates some noise, particulary with named pipes. As a result, SMB is now split between writing named pipes and writing other files.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570]] (coverage: Low; tactics: TA0008)
+- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]] (coverage: Low; tactics: TA0008)
 
 ## Implementations
 

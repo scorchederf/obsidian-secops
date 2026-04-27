@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-09-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-09-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-09-002"
   - "Component Object Model Hijacking"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-09-002: Component Object Model Hijacking
-
-## Metadata
-
-- CAR ID: CAR-2020-09-002
-- Submission Date: 2020/09/10
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows
-- Data Subtypes: Registry
-- Contributors: Olaf Hartong
-
-## Description
-
 Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]] (coverage: Moderate; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]] (coverage: Moderate; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 ## Implementations
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_remote_thread/create_remote_thread_win_powershell_lsass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_remote_thread/create_remote_thread_win_powershell_lsass.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / create_remote_thread"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Credential Dumping Attempt Via PowerShell Remote Thread
-
 Detects remote thread creation by PowerShell processes into "lsass.exe"
-
-## Metadata
-
-- Rule ID: fb656378-f909-47c1-8747-278bf09f4f4f
-- Status: test
-- Level: high
-- Author: oscd.community, Natalia Shornikova
-- Date: 2020-10-06
-- Modified: 2022-12-18
-- Source Path: rules/windows/create_remote_thread/create_remote_thread_win_powershell_lsass.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects remote thread creation by PowerShell processes into "lsass.exe"
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

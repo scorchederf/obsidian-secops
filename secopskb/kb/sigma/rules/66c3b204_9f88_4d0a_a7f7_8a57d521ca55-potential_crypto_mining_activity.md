@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_crypto_mining_monero.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_crypto_mining_monero.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "stable"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Crypto Mining Activity
-
 Detects command line parameters or strings often used by crypto miners
-
-## Metadata
-
-- Rule ID: 66c3b204-9f88-4d0a-a7f7-8a57d521ca55
-- Status: stable
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-10-26
-- Modified: 2023-02-13
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_crypto_mining_monero.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects command line parameters or strings often used by crypto miners
 
 ### Techniques
 
-- [[kb/attack/techniques/T1496-resource_hijacking|T1496]]
+- [[kb/attack/techniques/T1496-resource_hijacking|T1496: Resource Hijacking]]
 
 ## Detection
 

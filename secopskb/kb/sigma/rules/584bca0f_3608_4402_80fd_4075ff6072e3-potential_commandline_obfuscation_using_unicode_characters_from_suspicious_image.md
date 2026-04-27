@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_cli_obfuscation_unicode_img.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_cli_obfuscation_unicode_img.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential CommandLine Obfuscation Using Unicode Characters From Suspicious Image
-
 Detects potential commandline obfuscation using unicode characters.
 Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.
-
-## Metadata
-
-- Rule ID: 584bca0f-3608-4402-80fd-4075ff6072e3
-- Status: test
-- Level: high
-- Author: frack113, Florian Roth (Nextron Systems), Josh Nickels
-- Date: 2024-09-02
-- Modified: 2025-05-30
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_cli_obfuscation_unicode_img.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Adversaries may attempt to make an executable or file difficult to discover or a
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Detection
 

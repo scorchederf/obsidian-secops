@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "a1fa406e-2354-4a24-b6d6-94157e7564d4"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create systemd Service Unit from /tmp (Unusual Location)
-
 Creates a systemd service unit file in /tmp and loads it using systemctl start with
 an absolute path. Adversaries may write service unit files to world-writable directories
 such as /tmp to avoid triggering alerts on new file creation in standard service
@@ -30,19 +28,9 @@ directories, or to execute payloads transiently without permanently installing a
 Loading a service unit from an arbitrary path rather than a standard systemd directory
 is unusual behaviour that should be detectable by monitoring systemctl command arguments.
 
-## Metadata
-
-- Atomic GUID: a1fa406e-2354-4a24-b6d6-94157e7564d4
-- Technique: T1569.003: System Services: Systemctl
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1569.003/T1569.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.003]]
+- [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 ## Input Arguments
 

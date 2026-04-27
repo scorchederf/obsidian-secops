@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Regasm.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Regasm.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Regasm.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regasm.exe
-
 Part of .NET
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Regasm.yml
 
 ## Paths
 
@@ -51,7 +42,7 @@ regasm.exe {PATH:.dll}
 - Use Case: Execute code and bypass Application whitelisting
 - Privileges: Local Admin
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.009]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218009-regsvcs-regasm|T1218.009: Regsvcs/Regasm]]
 
 ### 2. Execute
 
@@ -64,7 +55,7 @@ regasm.exe /U {PATH:.dll}
 - Use Case: Execute code and bypass Application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.009]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218009-regsvcs-regasm|T1218.009: Regsvcs/Regasm]]
 
 ## Detections
 

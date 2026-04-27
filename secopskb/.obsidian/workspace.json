@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4f05b7023e37cef5",
+        "id": "113ea8270d992eb8",
         "type": "tabs",
         "children": [
           {
-            "id": "7de01b302d7d3444",
+            "id": "c904fa8076e3c235",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "index"
             }
           }
         ]
@@ -176,14 +180,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "7de01b302d7d3444",
+  "active": "c904fa8076e3c235",
   "lastOpenFiles": [
-    "e.zip",
+    "kb/car/index.md",
+    "kb/index.md",
+    "index.md",
+    "kb/lolbas/entries/osbinaries-certoc_exe.md",
+    "kb/lolbas/entries/osbinaries-atbroker_exe.md",
+    "kb/lolbas/entries/osbinaries-at_exe.md",
     "kb/lolbas/techniques/index.md",
-    "kb/lolbas/functions/index.md",
-    "kb/lolbas/categories/index.md",
+    "kb/tools/attrib.md",
+    "kb/tools/adfind.md",
+    "kb/tools/aadinternals.md",
+    "kb/lolbas/entries/honorablementions-powershell_exe.md",
     "kb/lolbas/entries/index.md",
     "kb/lolbas/index.md",
+    "kb/attack/tactics/TA0001-initial_access.md",
+    "kb/attack/tactics/index.md",
+    "kb/attack/index.md",
+    "e.zip",
+    "kb/lolbas/functions/index.md",
+    "kb/lolbas/categories/index.md",
     "kb/lolbas/entries/xsd_exe.md",
     "kb/lolbas/entries/wuauclt_exe.md",
     "kb/lolbas/entries/wt_exe.md",
@@ -192,18 +209,6 @@
     "kb/lolbas/entries/winget_exe.md",
     "kb/lolbas/entries/winfile_exe.md",
     "kb/lolbas/entries/wbemtest_exe.md",
-    "kb/lolbas/entries/wbadmin_exe.md",
-    "kb/lolbas/entries/vstest_console_exe.md",
-    "kb/lolbas/entries/vsls_agent_exe.md",
-    "kb/lolbas/entries/vsjitdebugger_exe.md",
-    "kb/lolbas/entries/vbc_exe.md",
-    "kb/lolbas/entries/te_exe.md",
-    "kb/lolbas/entries/ssh_exe.md",
-    "kb/lolbas/entries/rdrleakdiag_exe.md",
-    "kb/lolbas/entries/rcsi_exe.md",
-    "kb/lolbas/entries/odbcad32_exe.md",
-    "kb/lolbas/entries/ntdsutil_exe.md",
-    "kb/lolbas/entries/msxsl_exe.md",
     "kb/lolbas/techniques",
     "kb/lolbas/functions",
     "kb/lolbas/entries",
@@ -212,7 +217,6 @@
     "post.zip",
     "c.zip",
     "b.zip",
-    "a.zip",
-    "d.zip"
+    "a.zip"
   ]
 }

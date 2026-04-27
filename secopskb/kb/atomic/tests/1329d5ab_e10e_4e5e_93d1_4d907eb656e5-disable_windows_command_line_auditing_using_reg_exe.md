@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.003"
 attack_technique_name: "Impair Defenses: Impair Command History Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "1329d5ab-e10e-4e5e-93d1-4d907eb656e5"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Disable Windows Command Line Auditing using reg.exe
 
 In Windows operating systems, command line auditing is controlled through the following registry value:
 
@@ -40,18 +38,9 @@ Because this attack executes reg.exe using a command prompt, this attack can be 
 Read more here:
 https://securitydatasets.com/notebooks/atomic/windows/defense_evasion/SDWIN-220703123711.html
 
-## Metadata
-
-- Atomic GUID: 1329d5ab-e10e-4e5e-93d1-4d907eb656e5
-- Technique: T1562.003: Impair Defenses: Impair Command History Logging
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1562.003/T1562.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.003]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
 
 ## Executor
 

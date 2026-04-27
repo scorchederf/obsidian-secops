@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Psr.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Psr.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Psr.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Psr.exe
-
 Windows Problem Steps Recorder, used to record screen and clicks.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2020-06-27
-- Author: Leon Rodenko
-- Source Path: yml/OSBinaries/Psr.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ psr.exe /start /output {PATH_ABSOLUTE:.zip} /sc 1 /gui 0
 - Use Case: Can be used to take screenshots of the user environment
 - Privileges: User
 - Operating System: since Windows 7 (client) / Windows 2008 R2
-- ATT&CK: [[kb/attack/techniques/T1113-screen_capture|T1113]]
+- ATT&CK: [[kb/attack/techniques/T1113-screen_capture|T1113: Screen Capture]]
 
 ## Detections
 

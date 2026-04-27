@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.001"
 attack_technique_name: "Unsecured Credentials: Credentials In Files"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.001/T1552.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "fdd0c913-714b-4c13-b40f-1824d6c015f2"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - Snaffler
-
 Check Domain Network-Shares for cleartext passwords using Snaffler function of WinPwn
-
-## Metadata
-
-- Atomic GUID: fdd0c913-714b-4c13-b40f-1824d6c015f2
-- Technique: T1552.001: Unsecured Credentials: Credentials In Files
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1552.001/T1552.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 ## Executor
 

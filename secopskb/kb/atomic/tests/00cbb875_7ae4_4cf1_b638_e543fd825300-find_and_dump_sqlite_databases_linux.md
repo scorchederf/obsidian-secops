@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1005"
 attack_technique_name: "Data from Local System"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1005/T1005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "bash"
 aliases:
   - "00cbb875-7ae4-4cf1-b638-e543fd825300"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Find and dump sqlite databases (Linux)
-
 An adversary may know/assume that the user of a system uses sqlite databases which contain interest and sensitive data. In this test we download two databases and a sqlite dump script, then run a find command to find & dump the database content.
-
-## Metadata
-
-- Atomic GUID: 00cbb875-7ae4-4cf1-b638-e543fd825300
-- Technique: T1005: Data from Local System
-- Platforms: linux
-- Executor: bash
-- Elevation Required: False
-- Source Path: atomics/T1005/T1005.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1005-data_from_local_system|T1005]]
+- [[kb/attack/techniques/T1005-data_from_local_system|T1005: Data from Local System]]
 
 ## Input Arguments
 

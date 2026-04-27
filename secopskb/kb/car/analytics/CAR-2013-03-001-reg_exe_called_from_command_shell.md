@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-03-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-03-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-03-001"
   - "Reg.exe called from Command Shell"
@@ -29,20 +29,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-03-001: Reg.exe called from Command Shell
-
-## Metadata
-
-- CAR ID: CAR-2013-03-001
-- Submission Date: 2013/03/28
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Registry modifications are often essential in establishing persistence via known Windows mechanisms. Many legitimate modifications are done graphically via `regedit.exe` or by using the corresponding channels, or even calling the Registry APIs directly. The built-in utility `reg.exe` provides a [command-line interface](https://en.wikipedia.org/wiki/Command-line_interface) to the registry, so that queries and modifications can be performed from a shell, such as `cmd.exe`. When a user is responsible for these actions, the parent of `cmd.exe` will likely be `explorer.exe`. Occasionally, power users and administrators write scripts that do this behavior as well, but likely from a different process tree. These background scripts must be learned so they can be tuned out accordingly.
 
 ### Output Description
@@ -56,12 +42,12 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1012-query_registry|T1012]] (coverage: Moderate; tactics: TA0007)
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Moderate; tactics: TA0005)
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: Moderate; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Moderate; tactics: TA0005)
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: Moderate; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 ## Implementations
 

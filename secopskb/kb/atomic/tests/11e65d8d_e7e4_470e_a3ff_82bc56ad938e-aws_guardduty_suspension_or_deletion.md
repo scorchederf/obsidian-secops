@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "11e65d8d-e7e4-470e-a3ff-82bc56ad938e"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - GuardDuty Suspension or Deletion
-
 Enables GuardDuty in AWS, upon successful creation this test will suspend and then delete the GuardDuty configuration.
-
-## Metadata
-
-- Atomic GUID: 11e65d8d-e7e4-470e-a3ff-82bc56ad938e
-- Technique: T1562.001: Impair Defenses: Disable or Modify Tools
-- Platforms: iaas:aws
-- Executor: bash
-- Elevation Required: False
-- Dependency Executor: bash
-- Source Path: atomics/T1562.001/T1562.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Input Arguments
 

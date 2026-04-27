@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/signin_logs/azure_conditional_access_failure.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/signin_logs/azure_conditional_access_failure.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "azure / signinlogs"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sign-in Failure Due to Conditional Access Requirements Not Met
-
 Define a baseline threshold for failed sign-ins due to Conditional Access failures
-
-## Metadata
-
-- Rule ID: b4a6d707-9430-4f5f-af68-0337f52d5c42
-- Status: test
-- Level: high
-- Author: Yochana Henderson, '@Yochana-H'
-- Date: 2022-06-01
-- Source Path: rules/cloud/azure/signin_logs/azure_conditional_access_failure.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Define a baseline threshold for failed sign-ins due to Conditional Access failur
 
 ### Techniques
 
-- [[kb/attack/techniques/T1110-brute_force|T1110]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

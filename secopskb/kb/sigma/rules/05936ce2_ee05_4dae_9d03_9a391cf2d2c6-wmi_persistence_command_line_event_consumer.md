@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_wmi_persistence_commandline_event_consumer.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_wmi_persistence_commandline_event_consumer.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WMI Persistence - Command Line Event Consumer
-
 Detects WMI command line event consumers
-
-## Metadata
-
-- Rule ID: 05936ce2-ee05-4dae-9d03-9a391cf2d2c6
-- Status: test
-- Level: high
-- Author: Thomas Patzke
-- Date: 2018-03-07
-- Modified: 2021-11-27
-- Source Path: rules/windows/image_load/image_load_wmi_persistence_commandline_event_consumer.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects WMI command line event consumers
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 ## Detection
 

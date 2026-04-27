@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_susp_run_key_img_folder.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_susp_run_key_img_folder.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New RUN Key Pointing to Suspicious Folder
-
 Detects suspicious new RUN key element pointing to an executable in a suspicious folder
-
-## Metadata
-
-- Rule ID: 02ee49e2-e294-4d0f-9278-f5b3212fc588
-- Status: experimental
-- Level: high
-- Author: Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2018-08-25
-- Modified: 2025-10-06
-- Source Path: rules/windows/registry/registry_set/registry_set_susp_run_key_img_folder.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious new RUN key element pointing to an executable in a suspicious
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

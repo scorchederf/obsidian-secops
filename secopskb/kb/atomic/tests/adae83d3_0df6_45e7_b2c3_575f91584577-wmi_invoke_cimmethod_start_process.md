@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546"
 attack_technique_name: "Event Triggered Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546/T1546.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "adae83d3-0df6-45e7-b2c3-575f91584577"
@@ -20,25 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WMI Invoke-CimMethod Start Process
-
 The following Atomic will create a New-CimSession on a remote endpoint and start a process usnig Invoke-CimMethod.
 This is a novel way to perform lateral movement or to start a remote process.
 This does require WinRM to be enabled. The account performing the run will also need to be elevated.
 A successful execution will stdout that the process started. On the remote endpoint, wmiprvse.exe will spawn the given process.
 
-## Metadata
-
-- Atomic GUID: adae83d3-0df6-45e7-b2c3-575f91584577
-- Technique: T1546: Event Triggered Execution
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1546/T1546.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]]
 
 ## Input Arguments
 

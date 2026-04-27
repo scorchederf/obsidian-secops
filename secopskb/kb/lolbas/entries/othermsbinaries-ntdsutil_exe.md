@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Ntdsutil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Ntdsutil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "ntdsutil.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ntdsutil.exe
-
 Command line utility used to export Active Directory.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2020-01-10
-- Author: Tony Lambert
-- Source Path: yml/OtherMSBinaries/Ntdsutil.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ ntdsutil.exe "ac i ntds" "ifm" "create full c:\" q q
 - Use Case: Dumping of Active Directory NTDS.dit database
 - Privileges: Administrator
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detections
 

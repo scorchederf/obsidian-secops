@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "704333ca-cc12-4bcf-9916-101844881f54"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Scheduled Task ("Ghost Task") via Registry Key Manipulation
-
 Create a scheduled task through manipulation of registry keys. This procedure is implemented using the [GhostTask](https://github.com/netero1010/GhostTask) utility. By manipulating registry keys under HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree, the tool creates user-specified scheduled tasks without a corresponding Windows Event 4698, which is logged when scheduled tasks are created through conventional means.
 This requires a download of the GhostTask binary, which must be run as NT Authority\SYSTEM. Upon successful execution of this test, a scheduled task will be set to run at logon which launches notepad.exe or runs a user-specified command.
 For further exploration of this procedure and guidance for hunting and detection, see [Hunting G-G-G-GhostTasks!](https://medium.com/p/154b50ab6a78).
 
-## Metadata
-
-- Atomic GUID: 704333ca-cc12-4bcf-9916-101844881f54
-- Technique: T1053.005: Scheduled Task/Job: Scheduled Task
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1053.005/T1053.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Input Arguments
 

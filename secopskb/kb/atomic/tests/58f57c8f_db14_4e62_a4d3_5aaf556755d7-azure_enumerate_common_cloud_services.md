@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1526"
 attack_technique_name: "Cloud Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1526/T1526.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "58f57c8f-db14-4e62-a4d3-5aaf556755d7"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Enumerate common cloud services
-
 Upon successful execution, this test will enumerate common resources that are contained within a valid Azure subscription.
-
-## Metadata
-
-- Atomic GUID: 58f57c8f-db14-4e62-a4d3-5aaf556755d7
-- Technique: T1526: Cloud Service Discovery
-- Platforms: iaas:azure
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1526/T1526.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1526-cloud_service_discovery|T1526]]
+- [[kb/attack/techniques/T1526-cloud_service_discovery|T1526: Cloud Service Discovery]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_kerberos_kerberos_ticket_request_via_cli.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_kerberos_kerberos_ticket_request_via_cli.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Kerberos Ticket Request via CLI
-
 Detects suspicious Kerberos ticket requests via command line using System.IdentityModel.Tokens.KerberosRequestorSecurityToken class.
 Threat actors may use command line interfaces to request Kerberos tickets for service accounts in order to
 perform offline password cracking attacks commonly known as Kerberoasting or other Kerberos ticket abuse
 techniques like silver ticket attacks.
-
-## Metadata
-
-- Rule ID: caa9a802-8bd8-4b9e-a5cd-4d6221670219
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-18
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_kerberos_kerberos_ticket_request_via_cli.yml
 
 ## Logsource
 
@@ -46,7 +35,7 @@ techniques like silver ticket attacks.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
 
 ## Detection
 

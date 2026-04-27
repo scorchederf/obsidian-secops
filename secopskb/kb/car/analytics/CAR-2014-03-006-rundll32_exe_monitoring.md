@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-03-006/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-03-006.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-03-006"
   - "RunDLL32.exe monitoring"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-03-006: RunDLL32.exe monitoring
-
-## Metadata
-
-- CAR ID: CAR-2014-03-006
-- Submission Date: 2014/03/28
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682589.aspx) (DLLs) to [evade defenses](https://attack.mitre.org/tactics/TA0005). One way these DLLs can be "executed" is through the use of the built-in Windows utility [RunDLL32](https://attack.mitre.org/techniques/T1218.011), which allows a user to execute code in a DLL, providing the name and optional arguments to an exported entry point. Windows uses RunDll32 legitimately in its normal operation, but with a proper baseline and understanding of the environment, monitoring its usage could be fruitful.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Implementations
 

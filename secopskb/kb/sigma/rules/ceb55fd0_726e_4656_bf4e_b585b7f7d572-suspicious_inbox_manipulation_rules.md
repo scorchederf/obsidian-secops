@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/identity_protection/azure_identity_protection_inbox_manipulation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/identity_protection/azure_identity_protection_inbox_manipulation.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "azure / riskdetection"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Inbox Manipulation Rules
-
 Detects suspicious rules that delete or move messages or folders are set on a user's inbox.
-
-## Metadata
-
-- Rule ID: ceb55fd0-726e-4656-bf4e-b585b7f7d572
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'
-- Date: 2023-09-03
-- Source Path: rules/cloud/azure/identity_protection/azure_identity_protection_inbox_manipulation.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects suspicious rules that delete or move messages or folders are set on a us
 
 ### Techniques
 
-- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 ## Detection
 

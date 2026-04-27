@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/dns/net_dns_mal_cobaltstrike.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/dns/net_dns_mal_cobaltstrike.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "dns"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cobalt Strike DNS Beaconing
-
 Detects suspicious DNS queries known from Cobalt Strike beacons
-
-## Metadata
-
-- Rule ID: 2975af79-28c4-4d2f-a951-9095f229df29
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2018-05-10
-- Modified: 2022-10-09
-- Source Path: rules/network/dns/net_dns_mal_cobaltstrike.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects suspicious DNS queries known from Cobalt Strike beacons
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
 
 ## Detection
 

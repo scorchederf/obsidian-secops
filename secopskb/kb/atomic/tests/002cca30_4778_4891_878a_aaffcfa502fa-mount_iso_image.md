@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.005"
 attack_technique_name: "Subvert Trust Controls: Mark-of-the-Web Bypass"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.005/T1553.005.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "002cca30-4778-4891-878a-aaffcfa502fa"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mount ISO image
-
 Mounts ISO image downloaded from internet to evade Mark-of-the-Web. Upon successful execution, powershell will download the .iso from the Atomic Red Team repo, and mount the image. The provided sample ISO simply has a Reports shortcut file in it. Reference: https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based-attack-from-nobelium/
-
-## Metadata
-
-- Atomic GUID: 002cca30-4778-4891-878a-aaffcfa502fa
-- Technique: T1553.005: Subvert Trust Controls: Mark-of-the-Web Bypass
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1553.005/T1553.005.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.005]]
+- [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553005-mark-of-the-web-bypass|T1553.005: Mark-of-the-Web Bypass]]
 
 ## Input Arguments
 

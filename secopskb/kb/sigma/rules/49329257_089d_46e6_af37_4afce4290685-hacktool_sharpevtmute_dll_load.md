@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_hktl_sharpevtmute.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_hktl_sharpevtmute.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - SharpEvtMute DLL Load
-
 Detects the load of EvtMuteHook.dll, a key component of SharpEvtHook, a tool that tampers with the Windows event logs
-
-## Metadata
-
-- Rule ID: 49329257-089d-46e6-af37-4afce4290685
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-09-07
-- Modified: 2024-11-23
-- Source Path: rules/windows/image_load/image_load_hktl_sharpevtmute.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the load of EvtMuteHook.dll, a key component of SharpEvtHook, a tool tha
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Detection
 

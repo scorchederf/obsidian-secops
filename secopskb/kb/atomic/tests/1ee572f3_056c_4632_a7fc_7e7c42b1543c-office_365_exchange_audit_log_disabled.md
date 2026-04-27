@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "1ee572f3-056c-4632-a7fc-7e7c42b1543c"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Office 365 - Exchange Audit Log Disabled
-
 You can use the Exchange Management Shell to enable or disable mailbox audit logging for a mailbox.
 Unified or Admin Audit logs are disabled via the Exchange Powershell cmdline.
 https://github.com/Azure/Azure-Sentinel/blob/master/Detections/OfficeActivity/exchange_auditlogdisabled.yaml
 
-## Metadata
-
-- Atomic GUID: 1ee572f3-056c-4632-a7fc-7e7c42b1543c
-- Technique: T1562.008: Impair Defenses: Disable Cloud Logs
-- Platforms: office-365
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1562.008/T1562.008.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Input Arguments
 

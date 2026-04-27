@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_rclone_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_rclone_execution.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - Rclone Execution
-
 Detects execution of RClone utility for exfiltration as used by various ransomwares strains like REvil, Conti, FiveHands, etc
-
-## Metadata
-
-- Rule ID: e37db05d-d1f9-49c8-b464-cee1a4b11638
-- Status: test
-- Level: high
-- Author: Bhabesh Raj, Sittikorn S, Aaron Greetham (@beardofbinary) - NCC Group
-- Date: 2021-05-10
-- Modified: 2023-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_rclone_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects execution of RClone utility for exfiltration as used by various ransomwa
 
 ### Techniques
 
-- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567.002]]
+- [[kb/attack/techniques/T1567-exfiltration_over_web_service#^t1567002-exfiltration-to-cloud-storage|T1567.002: Exfiltration to Cloud Storage]]
 
 ## Detection
 

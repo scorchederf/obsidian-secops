@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_right_to_left_override.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_right_to_left_override.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Defense Evasion Via Right-to-Left Override
-
 Detects the presence of the "u202+E" character, which causes a terminal, browser, or operating system to render text in a right-to-left sequence.
 This character is used as an obfuscation and masquerading techniques by adversaries to trick users into opening malicious files.
-
-## Metadata
-
-- Rule ID: ad691d92-15f2-4181-9aa4-723c74f9ddc3
-- Status: test
-- Level: high
-- Author: Micah Babinski, @micahbabinski, Swachchhanda Shrawan Poudel (Nextron Systems), Luc Génaux
-- Date: 2023-02-15
-- Modified: 2026-03-20
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_right_to_left_override.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This character is used as an obfuscation and masquerading techniques by adversar
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.002]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036002-right-to-left-override|T1036.002: Right-to-Left Override]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "1f6743da-6ecc-4a93-b03f-dc357e4b313f"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Tamper with Windows Defender Registry - Reg.exe
-
 Disable Windows Defender by tampering with windows defender registry using the utility "reg.exe"
-
-## Metadata
-
-- Atomic GUID: 1f6743da-6ecc-4a93-b03f-dc357e4b313f
-- Technique: T1562.001: Impair Defenses: Disable or Modify Tools
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1562.001/T1562.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Executor
 

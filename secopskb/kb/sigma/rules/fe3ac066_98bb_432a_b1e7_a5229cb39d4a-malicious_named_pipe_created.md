@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_susp_malicious_namedpipes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_susp_malicious_namedpipes.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "critical"
 logsource: "windows / pipe_created"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious Named Pipe Created
-
 Detects the creation of a named pipe seen used by known APTs or malware.
-
-## Metadata
-
-- Rule ID: fe3ac066-98bb-432a-b1e7-a5229cb39d4a
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems), blueteam0ps, elhoim
-- Date: 2017-11-06
-- Modified: 2023-08-07
-- Source Path: rules/windows/pipe_created/pipe_created_susp_malicious_namedpipes.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the creation of a named pipe seen used by known APTs or malware.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

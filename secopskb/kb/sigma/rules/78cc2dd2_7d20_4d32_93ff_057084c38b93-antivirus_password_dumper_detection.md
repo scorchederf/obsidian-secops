@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/category/antivirus/av_password_dumper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/category/antivirus/av_password_dumper.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "stable"
 level: "critical"
 logsource: "antivirus"
@@ -24,20 +24,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Antivirus Password Dumper Detection
-
 Detects a highly relevant Antivirus alert that reports a password dumper.
 This event must not be ignored just because the AV has blocked the malware but investigate, how it came there in the first place.
-
-## Metadata
-
-- Rule ID: 78cc2dd2-7d20-4d32-93ff-057084c38b93
-- Status: stable
-- Level: critical
-- Author: Florian Roth (Nextron Systems), Arnim Rupp
-- Date: 2018-09-09
-- Modified: 2024-11-02
-- Source Path: rules/category/antivirus/av_password_dumper.yml
 
 ## Logsource
 
@@ -47,10 +35,10 @@ This event must not be ignored just because the AV has blocked the malware but i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558: Steal or Forge Kerberos Tickets]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 
 ## Detection
 

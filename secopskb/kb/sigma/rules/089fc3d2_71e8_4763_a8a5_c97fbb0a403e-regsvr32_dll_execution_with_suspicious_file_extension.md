@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_regsvr32_susp_extensions.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_extensions.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regsvr32 DLL Execution With Suspicious File Extension
-
 Detects the execution of REGSVR32.exe with DLL files masquerading as other files
-
-## Metadata
-
-- Rule ID: 089fc3d2-71e8-4763-a8a5-c97fbb0a403e
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), frack113
-- Date: 2021-11-29
-- Modified: 2025-08-27
-- Source Path: rules/windows/process_creation/proc_creation_win_regsvr32_susp_extensions.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of REGSVR32.exe with DLL files masquerading as other files
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_ntp_monlist.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_ntp_monlist.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - NTP Monlist Request
-
 Detects instances where an NTP service on an OpenCanary node has had a NTP monlist request.
-
-## Metadata
-
-- Rule ID: 7cded4b3-f09e-405a-b96f-24248433ba44
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_ntp_monlist.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects instances where an NTP service on an OpenCanary node has had a NTP monli
 
 ### Techniques
 
-- [[kb/attack/techniques/T1498-network_denial_of_service|T1498]]
+- [[kb/attack/techniques/T1498-network_denial_of_service|T1498: Network Denial of Service]]
 
 ## Detection
 

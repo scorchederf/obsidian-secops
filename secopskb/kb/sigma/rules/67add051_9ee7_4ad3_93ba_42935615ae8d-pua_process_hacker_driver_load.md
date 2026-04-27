@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/driver_load/driver_load_win_pua_process_hacker.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/driver_load/driver_load_win_pua_process_hacker.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / driver_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - Process Hacker Driver Load
-
 Detects driver load of the Process Hacker tool
-
-## Metadata
-
-- Rule ID: 67add051-9ee7-4ad3-93ba-42935615ae8d
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-11-16
-- Modified: 2024-11-23
-- Source Path: rules/windows/driver_load/driver_load_win_pua_process_hacker.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects driver load of the Process Hacker tool
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
 
 ## Detection
 

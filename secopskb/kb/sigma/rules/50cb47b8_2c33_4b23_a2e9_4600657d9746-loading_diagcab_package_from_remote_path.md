@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/diagnosis/scripted/win_diagnosis_scripted_load_remote_diagcab.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/diagnosis/scripted/win_diagnosis_scripted_load_remote_diagcab.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / diagnosis-scripted"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Loading Diagcab Package From Remote Path
-
 Detects loading of diagcab packages from a remote path, as seen in DogWalk vulnerability
-
-## Metadata
-
-- Rule ID: 50cb47b8-2c33-4b23-a2e9-4600657d9746
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-14
-- Source Path: rules/windows/builtin/diagnosis/scripted/win_diagnosis_scripted_load_remote_diagcab.yml
 
 ## Logsource
 

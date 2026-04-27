@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1567.003"
 attack_technique_name: "Exfiltration Over Web Service: Exfiltration to Text Storage Sites"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1567.003/T1567.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "c2e8ab6e-431e-460a-a2aa-3bc6a32022e3"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltrate data with HTTP POST to text storage sites - pastebin.com (Windows)
-
 This test uses HTTP POST to exfiltrate data to a remote text storage site. (pastebin)                             
 See https://web.archive.org/web/20201107203304/https://www.echosec.net/blog/what-is-pastebin-and-why-do-hackers-love-it
 
-## Metadata
-
-- Atomic GUID: c2e8ab6e-431e-460a-a2aa-3bc6a32022e3
-- Technique: T1567.003: Exfiltration Over Web Service: Exfiltration to Text Storage Sites
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1567.003/T1567.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567.003]]
+- [[kb/attack/techniques/T1567-exfiltration_over_web_service#^t1567003-exfiltration-to-text-storage-sites|T1567.003: Exfiltration to Text Storage Sites]]
 
 ## Input Arguments
 

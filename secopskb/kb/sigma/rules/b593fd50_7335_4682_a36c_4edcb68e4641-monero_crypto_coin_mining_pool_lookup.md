@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/dns/net_dns_pua_cryptocoin_mining_xmr.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/dns/net_dns_pua_cryptocoin_mining_xmr.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "stable"
 level: "high"
 logsource: "dns"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Monero Crypto Coin Mining Pool Lookup
-
 Detects suspicious DNS queries to Monero mining pools
-
-## Metadata
-
-- Rule ID: b593fd50-7335-4682-a36c-4edcb68e4641
-- Status: stable
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-10-24
-- Source Path: rules/network/dns/net_dns_pua_cryptocoin_mining_xmr.yml
 
 ## Logsource
 
@@ -43,8 +32,8 @@ Detects suspicious DNS queries to Monero mining pools
 
 ### Techniques
 
-- [[kb/attack/techniques/T1496-resource_hijacking|T1496]]
-- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567]]
+- [[kb/attack/techniques/T1496-resource_hijacking|T1496: Resource Hijacking]]
+- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
 
 ## Detection
 

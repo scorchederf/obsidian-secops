@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055.001"
 attack_technique_name: "Process Injection: Dynamic-link Library Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055.001/T1055.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "8b56f787-73d9-4f1d-87e8-d07e89cbc7f5"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - Get SYSTEM shell - Bind System Shell using UsoClient DLL load technique
-
 Get SYSTEM shell - Bind System Shell using UsoClient DLL load technique via function of WinPwn
-
-## Metadata
-
-- Atomic GUID: 8b56f787-73d9-4f1d-87e8-d07e89cbc7f5
-- Technique: T1055.001: Process Injection: Dynamic-link Library Injection
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1055.001/T1055.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 ## Executor
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_invoke_dnsexfiltration.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_invoke_dnsexfiltration.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Powershell DNSExfiltration
-
 DNSExfiltrator allows for transferring (exfiltrate) a file over a DNS request covert channel
-
-## Metadata
-
-- Rule ID: d59d7842-9a21-4bc6-ba98-64bfe0091355
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-01-07
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_invoke_dnsexfiltration.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ DNSExfiltrator allows for transferring (exfiltrate) a file over a DNS request co
 
 ### Techniques
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 
 ## Detection
 

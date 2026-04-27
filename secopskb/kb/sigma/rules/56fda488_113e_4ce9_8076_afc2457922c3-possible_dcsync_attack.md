@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/rpc_firewall/rpc_firewall_dcsync_attack.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/rpc_firewall/rpc_firewall_dcsync_attack.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "rpc_firewall / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Possible DCSync Attack
-
 Detects remote RPC calls to MS-DRSR from non DC hosts, which could indicate DCSync / DCShadow attacks.
-
-## Metadata
-
-- Rule ID: 56fda488-113e-4ce9-8076-afc2457922c3
-- Status: test
-- Level: high
-- Author: Sagie Dulce, Dekel Paz
-- Date: 2022-01-01
-- Source Path: rules/application/rpc_firewall/rpc_firewall_dcsync_attack.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Detects remote RPC calls to MS-DRSR from non DC hosts, which could indicate DCSy
 
 ### Techniques
 
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Detection
 

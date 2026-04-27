@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_webshell.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_webshell.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote Access Tool - ScreenConnect Server Web Shell Execution
-
 Detects potential web shell execution from the ScreenConnect server process.
-
-## Metadata
-
-- Rule ID: b19146a3-25d4-41b4-928b-1e2a92641b1b
-- Status: test
-- Level: high
-- Author: Jason Rathbun (Blackpoint Cyber)
-- Date: 2024-02-26
-- Source Path: rules/windows/process_creation/proc_creation_win_remote_access_tools_screenconnect_webshell.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potential web shell execution from the ScreenConnect server process.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 ## Detection
 

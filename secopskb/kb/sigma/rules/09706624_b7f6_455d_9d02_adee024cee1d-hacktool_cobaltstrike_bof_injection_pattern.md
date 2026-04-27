@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_access/proc_access_win_hktl_cobaltstrike_bof_injection_pattern.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_hktl_cobaltstrike_bof_injection_pattern.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_access"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - CobaltStrike BOF Injection Pattern
-
 Detects a typical pattern of a CobaltStrike BOF which inject into other processes
-
-## Metadata
-
-- Rule ID: 09706624-b7f6-455d-9d02-adee024cee1d
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems)
-- Date: 2021-08-04
-- Modified: 2023-11-28
-- Source Path: rules/windows/process_access/proc_access_win_hktl_cobaltstrike_bof_injection_pattern.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a typical pattern of a CobaltStrike BOF which inject into other processe
 
 ### Techniques
 
-- [[kb/attack/techniques/T1106-native_api|T1106]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1106-native_api|T1106: Native API]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

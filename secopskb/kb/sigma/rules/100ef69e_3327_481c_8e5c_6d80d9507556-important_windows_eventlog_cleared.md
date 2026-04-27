@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/microsoft_windows_eventlog/win_system_susp_eventlog_cleared.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/microsoft_windows_eventlog/win_system_susp_eventlog_cleared.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Important Windows Eventlog Cleared
-
 Detects the clearing of one of the Windows Core Eventlogs. e.g. caused by "wevtutil cl" command execution
-
-## Metadata
-
-- Rule ID: 100ef69e-3327-481c-8e5c-6d80d9507556
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Tim Shelton, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-05-17
-- Modified: 2023-11-15
-- Source Path: rules/windows/builtin/system/microsoft_windows_eventlog/win_system_susp_eventlog_cleared.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the clearing of one of the Windows Core Eventlogs. e.g. caused by "wevtu
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.001]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.007"
 attack_technique_name: "OS Credential Dumping: Proc Filesystem"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "sh"
 aliases:
   - "fa37b633-e097-4415-b2b8-c5bf4c86e423"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dump individual process memory with sh on FreeBSD (Local)
-
 Using `/proc/$PID/mem`, where $PID is the target process ID, use shell utilities to
 copy process memory to an external file so it can be searched or exfiltrated later.
 On FreeBSD procfs must be mounted.
 
-## Metadata
-
-- Atomic GUID: fa37b633-e097-4415-b2b8-c5bf4c86e423
-- Technique: T1003.007: OS Credential Dumping: Proc Filesystem
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1003.007/T1003.007.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.007]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003007-proc-filesystem|T1003.007: Proc Filesystem]]
 
 ## Input Arguments
 

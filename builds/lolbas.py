@@ -171,16 +171,43 @@ def build_attack_technique_lookup():
             continue
         attack_id = filename.split("-", 1)[0]
         if re.match(r"^T\d{4}$", attack_id):
-            lookup[attack_id] = os.path.splitext(filename)[0]
+            note_stem = os.path.splitext(filename)[0]
+            filepath = os.path.join(ATTACK_TECHNIQUES_DIR, filename)
+            try:
+                text = read_text_file(filepath)
+            except OSError:
+                text = ""
+            technique_name = ""
+            if text.startswith("---\n"):
+                end = text.find("\n---\n", 4)
+                if end != -1:
+                    data = yaml.safe_load(text[4:end]) or {}
+                    if isinstance(data, dict):
+                        technique_name = data.get("mitre_name", "")
+            lookup[attack_id] = {
+                "target": note_stem,
+                "label": attack_id + (": " + technique_name if technique_name else ""),
+            }
+            for match in re.finditer(r"^### (T\d{4}\.\d{3}): ([^\n]+)\n\n(\^[^\n]+)", text, flags=re.MULTILINE):
+                subtechnique_id = match.group(1)
+                subtechnique_name = match.group(2).strip()
+                anchor = match.group(3).strip()
+                lookup[subtechnique_id] = {
+                    "target": note_stem + "#" + anchor,
+                    "label": subtechnique_id + ": " + subtechnique_name,
+                }
     return lookup
 
 
 def make_attack_link(attack_id, attack_lookup):
     parent_id = attack_id.split(".", 1)[0]
-    target = attack_lookup.get(parent_id)
-    if not target:
+    link_info = attack_lookup.get(attack_id) or attack_lookup.get(parent_id)
+    if not link_info:
         return attack_id
-    return f"[[kb/attack/techniques/{target}|{attack_id}]]"
+    label = link_info.get("label") or attack_id
+    if attack_id != parent_id and attack_id not in attack_lookup:
+        label = attack_id
+    return f"[[kb/attack/techniques/{link_info['target']}|{label}]]"
 
 
 def extract_commands(data):
@@ -322,10 +349,8 @@ def build_lolbas_entry_note(item, attack_lookup):
 
     text = render_yaml(yaml_lines)
     text += build_page_start()
-    text += "# " + str(data.get("Name", "")) + "\n\n"
     if data.get("Description"):
         text += str(data["Description"]).strip() + "\n\n"
-    text += write_metadata_section(item)
     text += write_paths_section(data)
     text += write_commands_section(item, attack_lookup)
     text += write_detections_section(data)
@@ -350,11 +375,13 @@ def build_lolbas_indexes(entries, attack_lookup):
 
     text = build_page_start()
     text += "# LOLBAS\n\n"
+    text += "<!-- generated-source-description-start -->\n"
     text += "LOLBAS is the Living Off The Land Binaries, Scripts and Libraries project. It is a curated reference of legitimate Windows binaries, scripts, and libraries that can be abused for attacker tradecraft and should be understood by defenders.\n\n"
     text += "This vault imports LOLBAS YAML records into generated notes, maps entries to ATT&CK techniques where upstream mappings exist, and indexes entries by category and function for detection engineering and validation pivots.\n\n"
     text += "## Upstream\n\n"
     text += "- [LOLBAS website](" + LOLBAS_PROJECT_URL + ")\n"
     text += "- [LOLBAS repository](" + LOLBAS_REPO_URL + ")\n\n"
+    text += "<!-- generated-source-description-end -->\n\n"
     text += "## Areas\n\n"
     text += f"- [[kb/lolbas/entries/index|Entries]] ({len(entries)})\n"
     text += f"- [[kb/lolbas/categories/index|Entries by Category]] ({len(by_category)})\n"

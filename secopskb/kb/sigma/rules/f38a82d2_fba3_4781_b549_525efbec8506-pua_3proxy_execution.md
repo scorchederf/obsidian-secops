@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_3proxy_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_3proxy_execution.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - 3Proxy Execution
-
 Detects the use of 3proxy, a tiny free proxy server
-
-## Metadata
-
-- Rule ID: f38a82d2-fba3-4781-b549-525efbec8506
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-09-13
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_3proxy_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of 3proxy, a tiny free proxy server
 
 ### Techniques
 
-- [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
+- [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 
 ## Detection
 

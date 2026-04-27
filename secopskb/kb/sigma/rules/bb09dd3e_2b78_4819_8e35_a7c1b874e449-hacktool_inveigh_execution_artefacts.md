@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_hktl_inveigh_artefacts.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_hktl_inveigh_artefacts.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Inveigh Execution Artefacts
-
 Detects the presence and execution of Inveigh via dropped artefacts
-
-## Metadata
-
-- Rule ID: bb09dd3e-2b78-4819-8e35-a7c1b874e449
-- Status: test
-- Level: critical
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-10-24
-- Modified: 2024-06-27
-- Source Path: rules/windows/file/file_event/file_event_win_hktl_inveigh_artefacts.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the presence and execution of Inveigh via dropped artefacts
 
 ### Techniques
 
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219.002]]
+- [[kb/attack/techniques/T1219-remote_access_tools#^t1219002-remote-desktop-software|T1219.002: Remote Desktop Software]]
 
 ## Detection
 

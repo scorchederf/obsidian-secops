@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_registered_com_objects.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_registered_com_objects.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rundll32 Registered COM Objects
-
 load malicious registered COM objects
-
-## Metadata
-
-- Rule ID: f1edd233-30b5-4823-9e6a-c4171b24d316
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-02-13
-- Modified: 2023-02-09
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_registered_com_objects.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ load malicious registered COM objects
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 ## Detection
 

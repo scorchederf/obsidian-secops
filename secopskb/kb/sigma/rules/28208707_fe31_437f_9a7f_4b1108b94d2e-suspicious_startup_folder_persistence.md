@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_startup_folder_persistence.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_startup_folder_persistence.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -22,21 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Startup Folder Persistence
-
 Detects the creation of potentially malicious script and executable files in Windows startup folders, which is a common persistence technique used by threat actors.
 These files (.ps1, .vbs, .js, .bat, etc.) are automatically executed when a user logs in, making the Startup folder an attractive target for attackers.
 This technique is frequently observed in malvertising campaigns and malware distribution where attackers attempt to maintain long-term access to compromised systems.
-
-## Metadata
-
-- Rule ID: 28208707-fe31-437f-9a7f-4b1108b94d2e
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2022-08-10
-- Modified: 2025-10-12
-- Source Path: rules/windows/file/file_event/file_event_win_susp_startup_folder_persistence.yml
 
 ## Logsource
 
@@ -47,8 +35,8 @@ This technique is frequently observed in malvertising campaigns and malware dist
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

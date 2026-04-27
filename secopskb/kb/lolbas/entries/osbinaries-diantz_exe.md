@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Diantz.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Diantz.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Diantz.exe"
@@ -23,16 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Diantz.exe
-
 Binary that package existing files into a cabinet (.cab) file
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2020-08-08
-- Author: Tamir Yehuda
-- Source Path: yml/OSBinaries/Diantz.yml
 
 ## Paths
 
@@ -52,7 +43,7 @@ diantz.exe {PATH_ABSOLUTE:.exe} {PATH_ABSOLUTE}:targetFile.cab
 - Use Case: Hide data compressed into an Alternate Data Stream.
 - Privileges: User
 - Operating System: Windows XP, Windows vista, Windows 7, Windows 8, Windows 8.1.
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 2. Download
 
@@ -65,7 +56,7 @@ diantz.exe {PATH_SMB:.exe} {PATH_ABSOLUTE:.cab}
 - Use Case: Download and compress into a cab file.
 - Privileges: User
 - Operating System: Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 3. Execute
 
@@ -78,7 +69,7 @@ diantz /f {PATH:.ddf}
 - Use Case: Bypass command-line based detections
 - Privileges: User
 - Operating System: Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1036-masquerading|T1036]]
+- ATT&CK: [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detections
 

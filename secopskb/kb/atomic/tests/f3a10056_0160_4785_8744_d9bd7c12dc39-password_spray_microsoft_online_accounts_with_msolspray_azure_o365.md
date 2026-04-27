@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.003"
 attack_technique_name: "Brute Force: Password Spraying"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "f3a10056-0160-4785-8744-d9bd7c12dc39"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Password Spray Microsoft Online Accounts with MSOLSpray (Azure/O365)
-
 This test attempts to brute force a list of Microsoft Online (Azure/O365) users with a single password via the MSOLSpray Powershell module.
-
-## Metadata
-
-- Atomic GUID: f3a10056-0160-4785-8744-d9bd7c12dc39
-- Technique: T1110.003: Brute Force: Password Spraying
-- Platforms: azure-ad
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1110.003/T1110.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1110-brute_force|T1110.003]]
+- [[kb/attack/techniques/T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
 
 ## Input Arguments
 

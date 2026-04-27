@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_susp_download_run_key.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_susp_download_run_key.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Run Key from Download
-
 Detects the suspicious RUN keys created by software located in Download or temporary Outlook/Internet Explorer directories
-
-## Metadata
-
-- Rule ID: 9c5037d1-c568-49b3-88c7-9846a5bdc2be
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Swachchhanda Shrawan Poude (Nextron Systems)
-- Date: 2019-10-01
-- Modified: 2025-02-17
-- Source Path: rules/windows/registry/registry_event/registry_event_susp_download_run_key.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the suspicious RUN keys created by software located in Download or tempo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

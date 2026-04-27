@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mshta_susp_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_child_processes.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious MSHTA Child Process
-
 Detects a suspicious process spawning from an "mshta.exe" process, which could be indicative of a malicious HTA script execution
-
-## Metadata
-
-- Rule ID: 03cc0c25-389f-4bf8-b48d-11878079f1ca
-- Status: test
-- Level: high
-- Author: Michael Haag
-- Date: 2019-01-16
-- Modified: 2023-02-06
-- Source Path: rules/windows/process_creation/proc_creation_win_mshta_susp_child_processes.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious process spawning from an "mshta.exe" process, which could b
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 ## Detection
 

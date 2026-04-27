@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1057"
 attack_technique_name: "Process Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "b4ca838d-d013-4461-bf2c-f7132617b409"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Process Discovery - PC Hunter
-
 PC Hunter is a toolkit with access to hundreds of settings including kernels, kernel modules, processes, network, startup, and more. When abused, this tool can allow threat actors to effectively access sensitive processes, collect system information, and terminate security software.
-
-## Metadata
-
-- Atomic GUID: b4ca838d-d013-4461-bf2c-f7132617b409
-- Technique: T1057: Process Discovery
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1057/T1057.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1057-process_discovery|T1057]]
+- [[kb/attack/techniques/T1057-process_discovery|T1057: Process Discovery]]
 
 ## Input Arguments
 

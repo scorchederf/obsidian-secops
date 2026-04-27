@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1039"
 attack_technique_name: "Data from Network Shared Drive"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1039/T1039.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "7762e120-5879-44ff-97f8-008b401b9a98"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copy a sensitive File over Administrative share with Powershell
-
 Copy from sensitive File from the c$ of another LAN computer with powershell
 https://twitter.com/SBousseaden/status/1211636381086339073
 
-## Metadata
-
-- Atomic GUID: 7762e120-5879-44ff-97f8-008b401b9a98
-- Technique: T1039: Data from Network Shared Drive
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1039/T1039.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1039-data_from_network_shared_drive|T1039]]
+- [[kb/attack/techniques/T1039-data_from_network_shared_drive|T1039: Data from Network Shared Drive]]
 
 ## Input Arguments
 

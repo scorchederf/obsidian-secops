@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1125"
 attack_technique_name: "Video Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1125/T1125.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "6581e4a7-42e3-43c5-a0d2-5a0d62f9702a"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Registry artefact when application use webcam
-
 [can-you-track-processes-accessing-the-camera-and-microphone](https://svch0st.medium.com/can-you-track-processes-accessing-the-camera-and-microphone-7e6885b37072)
-
-## Metadata
-
-- Atomic GUID: 6581e4a7-42e3-43c5-a0d2-5a0d62f9702a
-- Technique: T1125: Video Capture
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1125/T1125.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1125-video_capture|T1125]]
+- [[kb/attack/techniques/T1125-video_capture|T1125: Video Capture]]
 
 ## Executor
 

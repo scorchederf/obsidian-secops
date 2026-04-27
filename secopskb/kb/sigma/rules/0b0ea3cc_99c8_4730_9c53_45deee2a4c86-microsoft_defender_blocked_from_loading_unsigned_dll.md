@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security_mitigations/win_security_mitigations_defender_load_unsigned_dll.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security_mitigations/win_security_mitigations_defender_load_unsigned_dll.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security-mitigations"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Microsoft Defender Blocked from Loading Unsigned DLL
-
 Detects Code Integrity (CI) engine blocking Microsoft Defender's processes (MpCmdRun and NisSrv) from loading unsigned DLLs which may be an attempt to sideload arbitrary DLL
-
-## Metadata
-
-- Rule ID: 0b0ea3cc-99c8-4730-9c53-45deee2a4c86
-- Status: test
-- Level: high
-- Author: Bhabesh Raj
-- Date: 2022-08-02
-- Modified: 2022-09-28
-- Source Path: rules/windows/builtin/security_mitigations/win_security_mitigations_defender_load_unsigned_dll.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects Code Integrity (CI) engine blocking Microsoft Defender's processes (MpCm
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

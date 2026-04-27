@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1135"
 attack_technique_name: "Network Share Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1135/T1135.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "b19d74b7-5e72-450a-8499-82e49e379d1a"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enumerate All Network Shares with Snaffler
-
 Snaffler is an open-source tool that has been used by various threat groups, including Scattered Spider/Muddled Libra, to enumerate accessible shares and credential-containing files within a domain. 
 [Reference](https://unit42.paloaltonetworks.com/muddled-libra/)
 
-## Metadata
-
-- Atomic GUID: b19d74b7-5e72-450a-8499-82e49e379d1a
-- Technique: T1135: Network Share Discovery
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1135/T1135.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1135-network_share_discovery|T1135]]
+- [[kb/attack/techniques/T1135-network_share_discovery|T1135: Network Share Discovery]]
 
 ## Input Arguments
 

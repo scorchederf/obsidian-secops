@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_windows_defender_tamper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_windows_defender_tamper.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable Windows Defender Functionalities Via Registry Keys
-
 Detects when attackers or tools disable Windows Defender functionalities via the Windows registry
-
-## Metadata
-
-- Rule ID: 0eb46774-f1ab-4a74-8238-1155855f2263
-- Status: test
-- Level: high
-- Author: AlertIQ, Ján Trenčanský, frack113, Nasreddine Bencherchali, Swachchhanda Shrawan Poudel
-- Date: 2022-08-01
-- Modified: 2024-10-07
-- Source Path: rules/windows/registry/registry_set/registry_set_windows_defender_tamper.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when attackers or tools disable Windows Defender functionalities via the
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

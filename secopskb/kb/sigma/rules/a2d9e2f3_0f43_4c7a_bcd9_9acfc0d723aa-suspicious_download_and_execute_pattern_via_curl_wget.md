@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_curl_wget_exec_tmp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_curl_wget_exec_tmp.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "linux / process_creation"
@@ -22,21 +22,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Download and Execute Pattern via Curl/Wget
-
 Detects suspicious use of command-line tools such as curl or wget to download remote
 content - particularly scripts - into temporary directories (e.g., /dev/shm, /tmp), followed by
 immediate execution, indicating potential malicious activity. This pattern is commonly used
 by malicious scripts, stagers, or downloaders in fileless or multi-stage Linux attacks.
-
-## Metadata
-
-- Rule ID: a2d9e2f3-0f43-4c7a-bcd9-9acfc0d723aa
-- Status: experimental
-- Level: high
-- Author: Aayush Gupta
-- Date: 2025-06-17
-- Source Path: rules/linux/process_creation/proc_creation_lnx_curl_wget_exec_tmp.yml
 
 ## Logsource
 
@@ -47,8 +36,8 @@ by malicious scripts, stagers, or downloaders in fileless or multi-stage Linux a
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
-- [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
+- [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203: Exploitation for Client Execution]]
 
 ## Detection
 

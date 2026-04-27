@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_auditctl_clear_rules.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_auditctl_clear_rules.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "experimental"
 level: "high"
 logsource: "linux / process_creation"
@@ -21,20 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Audit Rules Deleted Via Auditctl
-
 Detects the execution of 'auditctl' with the '-D' command line parameter, which deletes all configured audit rules and watches on Linux systems.
 This technique is commonly used by attackers to disable audit logging and cover their tracks by removing monitoring capabilities.
 Removal of audit rules can significantly impair detection of malicious activities on the affected system.
-
-## Metadata
-
-- Rule ID: bed26dea-4525-47f4-b24a-76e30e44ffb0
-- Status: experimental
-- Level: high
-- Author: Mohamed LAKRI
-- Date: 2025-10-17
-- Source Path: rules/linux/process_creation/proc_creation_lnx_auditctl_clear_rules.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ Removal of audit rules can significantly impair detection of malicious activitie
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.012]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562012-disable-or-modify-linux-audit-system|T1562.012: Disable or Modify Linux Audit System]]
 
 ## Detection
 

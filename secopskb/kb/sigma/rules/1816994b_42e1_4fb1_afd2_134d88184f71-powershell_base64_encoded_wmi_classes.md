@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_base64_wmi_classes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_base64_wmi_classes.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Base64 Encoded WMI Classes
-
 Detects calls to base64 encoded WMI class such as "Win32_ShadowCopy", "Win32_ScheduledJob", etc.
-
-## Metadata
-
-- Rule ID: 1816994b-42e1-4fb1-afd2-134d88184f71
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-01-30
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_base64_wmi_classes.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects calls to base64 encoded WMI class such as "Win32_ShadowCopy", "Win32_Sch
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Detection
 

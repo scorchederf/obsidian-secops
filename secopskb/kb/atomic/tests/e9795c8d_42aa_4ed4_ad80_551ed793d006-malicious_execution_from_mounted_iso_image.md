@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.003"
 attack_technique_name: "User Execution: Malicious Image"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.003/T1204.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "e9795c8d-42aa-4ed4-ad80-551ed793d006"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious Execution from Mounted ISO Image
-
 Adversaries may rely on a user running a malicious image to facilitate execution
-
-## Metadata
-
-- Atomic GUID: e9795c8d-42aa-4ed4-ad80-551ed793d006
-- Technique: T1204.003: User Execution: Malicious Image
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1204.003/T1204.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.003]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204003-malicious-image|T1204.003: Malicious Image]]
 
 ## Executor
 

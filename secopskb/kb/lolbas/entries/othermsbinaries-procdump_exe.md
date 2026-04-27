@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Procdump.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Procdump.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Procdump.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Procdump.exe
-
 SysInternals Memory Dump Tool
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2020-10-14
-- Author: Alfie Champion (@ajpc500)
-- Source Path: yml/OtherMSBinaries/Procdump.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ procdump.exe -md {PATH:.dll} explorer.exe
 - Use Case: Performs execution of unsigned DLL.
 - Privileges: User
 - Operating System: Windows 8.1 and higher, Windows Server 2012 and higher
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 2. Execute
 
@@ -60,7 +51,7 @@ procdump.exe -md {PATH:.dll} foobar
 - Use Case: Performs execution of unsigned DLL.
 - Privileges: User
 - Operating System: Windows 8.1 and higher, Windows Server 2012 and higher
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detections
 

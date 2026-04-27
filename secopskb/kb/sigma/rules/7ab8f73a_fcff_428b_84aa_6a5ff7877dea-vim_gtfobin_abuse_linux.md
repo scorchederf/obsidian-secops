@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_vim_shell_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_vim_shell_execution.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Vim GTFOBin Abuse - Linux
-
 Detects the use of "vim" and it's siblings commands to execute a shell or proxy commands.
 Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.
-
-## Metadata
-
-- Rule ID: 7ab8f73a-fcff-428b-84aa-6a5ff7877dea
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-12-28
-- Modified: 2024-09-02
-- Source Path: rules/linux/process_creation/proc_creation_lnx_vim_shell_execution.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Such behavior may be associated with privilege escalation, unauthorized command 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
+- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 
 ## Detection
 

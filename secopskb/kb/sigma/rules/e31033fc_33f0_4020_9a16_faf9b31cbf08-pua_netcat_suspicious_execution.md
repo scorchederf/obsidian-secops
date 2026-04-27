@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_netcat.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_netcat.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - Netcat Suspicious Execution
-
 Detects execution of Netcat. Adversaries may use a non-application layer protocol for communication between host and C2 server or among infected hosts within a network
-
-## Metadata
-
-- Rule ID: e31033fc-33f0-4020-9a16-faf9b31cbf08
-- Status: test
-- Level: high
-- Author: frack113, Florian Roth (Nextron Systems)
-- Date: 2021-07-21
-- Modified: 2023-02-08
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_netcat.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects execution of Netcat. Adversaries may use a non-application layer protoco
 
 ### Techniques
 
-- [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095]]
+- [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095: Non-Application Layer Protocol]]
 
 ## Detection
 

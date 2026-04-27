@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.002"
 attack_technique_name: "System Services: Service Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.002/T1569.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "004a5d68-627b-452d-af3d-43bd1fc75a3b"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Pipe Creation - PsExec Tool Execution From Suspicious Locations
-
 Requires PsExec tool installed. BlackCat Ransomeware tried to propagate by creating pipe using PsExec process executing from suspicious locations (In the particular case the legitimate PsExec executable is embedded within the Windows variant and is dropped in the victim’s %TEMP% directory). pon successful execution, PsExec will be executed from suspicious location and create a new pipe to execute CMD.
-
-## Metadata
-
-- Atomic GUID: 004a5d68-627b-452d-af3d-43bd1fc75a3b
-- Technique: T1569.002: System Services: Service Execution
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1569.002/T1569.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Dependencies
 

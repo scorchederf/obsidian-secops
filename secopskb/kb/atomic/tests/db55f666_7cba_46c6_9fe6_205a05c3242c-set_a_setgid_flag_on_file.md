@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "db55f666-7cba-46c6-9fe6-205a05c3242c"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Set a SetGID flag on file
-
 This test sets the SetGID flag on a file in Linux and macOS.
-
-## Metadata
-
-- Atomic GUID: db55f666-7cba-46c6-9fe6-205a05c3242c
-- Technique: T1548.001: Abuse Elevation Control Mechanism: Setuid and Setgid
-- Platforms: macos, linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1548.001/T1548.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.001]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548001-setuid-and-setgid|T1548.001: Setuid and Setgid]]
 
 ## Input Arguments
 

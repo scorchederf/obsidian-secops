@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_susp_file_sharing_domains_susp_folders.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_susp_file_sharing_domains_susp_folders.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / network_connection"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Network Communication Initiated To File Sharing Domains From Process Located In Suspicious Folder
-
 Detects executables located in potentially suspicious directories initiating network connections towards file sharing domains.
-
-## Metadata
-
-- Rule ID: e0f8ab85-0ac9-423b-a73a-81b3c7b1aa97
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2018-08-30
-- Modified: 2025-12-10
-- Source Path: rules/windows/network_connection/net_connection_win_susp_file_sharing_domains_susp_folders.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects executables located in potentially suspicious directories initiating net
 
 ### Techniques
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detection
 

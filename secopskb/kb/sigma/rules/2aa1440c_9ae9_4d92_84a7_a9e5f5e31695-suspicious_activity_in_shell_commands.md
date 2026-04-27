@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/lnx_shell_susp_commands.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/lnx_shell_susp_commands.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "linux"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Activity in Shell Commands
-
 Detects suspicious shell commands used in various exploit codes (see references)
-
-## Metadata
-
-- Rule ID: 2aa1440c-9ae9-4d92-84a7-a9e5f5e31695
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2017-08-21
-- Modified: 2021-11-27
-- Source Path: rules/linux/builtin/lnx_shell_susp_commands.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects suspicious shell commands used in various exploit codes (see references)
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_sharpldapwhoami.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_sharpldapwhoami.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - SharpLdapWhoami Execution
-
 Detects SharpLdapWhoami, a whoami alternative that queries the LDAP service on a domain controller
-
-## Metadata
-
-- Rule ID: d9367cbb-c2e0-47ce-bdc0-128cb6da898d
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-08-29
-- Modified: 2023-02-04
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_sharpldapwhoami.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects SharpLdapWhoami, a whoami alternative that queries the LDAP service on a
 
 ### Techniques
 
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Detection
 

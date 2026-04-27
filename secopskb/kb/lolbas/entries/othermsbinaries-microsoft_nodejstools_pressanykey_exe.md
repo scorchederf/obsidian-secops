@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Microsoft.NodejsTools.PressAnyKey.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Microsoft.NodejsTools.PressAnyKey.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Microsoft.NodejsTools.PressAnyKey.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Microsoft.NodejsTools.PressAnyKey.exe
-
 Part of the NodeJS Visual Studio tools.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2022-01-20
-- Author: mr.d0x
-- Source Path: yml/OtherMSBinaries/Microsoft.NodejsTools.PressAnyKey.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ Microsoft.NodejsTools.PressAnyKey.exe normal 1 {PATH:.exe}
 - Use Case: Spawn a new process via Microsoft.NodejsTools.PressAnyKey.exe.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detections
 

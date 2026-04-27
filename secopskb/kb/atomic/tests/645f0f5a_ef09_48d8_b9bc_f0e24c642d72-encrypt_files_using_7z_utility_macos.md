@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "645f0f5a-ef09-48d8-b9bc-f0e24c642d72"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Encrypt files using 7z utility - macOS
-
 This test encrypts the file(s) using the 7z utility
-
-## Metadata
-
-- Atomic GUID: 645f0f5a-ef09-48d8-b9bc-f0e24c642d72
-- Technique: T1486: Data Encrypted for Impact
-- Platforms: macos
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1486/T1486.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 ## Input Arguments
 

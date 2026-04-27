@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_office_outlook_susp_macro_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_office_outlook_susp_macro_creation.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -23,18 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Outlook Macro Created
-
 Detects the creation of a macro file for Outlook.
-
-## Metadata
-
-- Rule ID: 117d3d3a-755c-4a61-b23e-9171146d094c
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-02-08
-- Source Path: rules/windows/file/file_event/file_event_win_office_outlook_susp_macro_creation.yml
 
 ## Logsource
 
@@ -45,9 +34,9 @@ Detects the creation of a macro file for Outlook.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137]]
-- [[kb/attack/techniques/T1008-fallback_channels|T1008]]
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]]
+- [[kb/attack/techniques/T1137-office_application_startup|T1137: Office Application Startup]]
+- [[kb/attack/techniques/T1008-fallback_channels|T1008: Fallback Channels]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]]
 
 ## Detection
 

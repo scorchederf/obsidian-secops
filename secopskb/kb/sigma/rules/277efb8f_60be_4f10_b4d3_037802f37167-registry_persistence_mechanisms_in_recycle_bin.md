@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_persistence_recycle_bin.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_persistence_recycle_bin.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Registry Persistence Mechanisms in Recycle Bin
-
 Detects persistence registry keys for Recycle Bin
-
-## Metadata
-
-- Rule ID: 277efb8f-60be-4f10-b4d3-037802f37167
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-11-18
-- Modified: 2022-12-06
-- Source Path: rules/windows/registry/registry_event/registry_event_persistence_recycle_bin.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects persistence registry keys for Recycle Bin
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
 
 ## Detection
 

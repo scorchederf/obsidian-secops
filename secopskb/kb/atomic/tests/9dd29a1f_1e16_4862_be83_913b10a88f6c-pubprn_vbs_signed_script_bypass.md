@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1216.001"
 attack_technique_name: "Signed Script Proxy Execution: Pubprn"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1216.001/T1216.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "9dd29a1f-1e16-4862-be83-913b10a88f6c"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PubPrn.vbs Signed Script Bypass
-
 Executes the signed PubPrn.vbs script with options to download and execute an arbitrary payload.
-
-## Metadata
-
-- Atomic GUID: 9dd29a1f-1e16-4862-be83-913b10a88f6c
-- Technique: T1216.001: Signed Script Proxy Execution: Pubprn
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1216.001/T1216.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216.001]]
+- [[kb/attack/techniques/T1216-system_script_proxy_execution#^t1216001-pubprn|T1216.001: PubPrn]]
 
 ## Input Arguments
 

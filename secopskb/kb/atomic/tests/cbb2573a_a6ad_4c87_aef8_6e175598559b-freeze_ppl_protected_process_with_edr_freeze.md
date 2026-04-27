@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "cbb2573a-a6ad-4c87-aef8-6e175598559b"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Freeze PPL-protected process with EDR-Freeze
-
 This test utilizes the tool EDR-Freeze, which leverages the native Microsoft binary WerFaultSecure.exe to suspend processes protected by the Protected Process Light mechanism. PPL is a Windows security feature designed to safeguard critical system processes — such as those related to antivirus, credential protection, and system integrity — from tampering or inspection. These processes operate in a restricted environment that prevents access even from administrators or debugging tools, unless the accessing tool is signed and trusted by Microsoft. By using WerFaultSecure.exe, which is inherently trusted by the operating system, EDR-Freeze is able to bypass these restrictions and temporarily freeze PPL-protected processes for analysis or testing purposes.
-
-## Metadata
-
-- Atomic GUID: cbb2573a-a6ad-4c87-aef8-6e175598559b
-- Technique: T1562.001: Impair Defenses: Disable or Modify Tools
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1562.001/T1562.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Input Arguments
 

@@ -2,13 +2,13 @@
 
 # Atomic Tests by ATT&CK Technique
 
-## [[kb/attack/techniques/T1001-data_obfuscation|T1001.002]]
+## [[kb/attack/techniques/T1001-data_obfuscation#^t1001002-steganography|T1001.002: Steganography]]
 
 - [[kb/atomic/tests/04bb8e3d_1670_46ab_a3f1_5cee64da29b6-embedded_script_in_image_execution_via_extract_invoke_psimage|T1001.002: Embedded Script in Image Execution via Extract-Invoke-PSImage]]
 - [[kb/atomic/tests/4ff61684_ad91_405c_9fbc_048354ff1d07-execute_embedded_script_in_image_via_steganography|T1001.002: Execute Embedded Script in Image via Steganography]]
 - [[kb/atomic/tests/c7921449_8b62_4c4d_8a83_d9281ac0190b-steganographic_tarball_embedding|T1001.002: Steganographic Tarball Embedding]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+## [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 - [[kb/atomic/tests/9e2173c0_ba26_4cdf_b0ed_8c54b27e3ad6-credential_dumping_with_nppspy|T1003: Credential Dumping with NPPSpy]]
 - [[kb/atomic/tests/84113186_ed3c_4d0d_8a3c_8980c86c1f4a-dump_credential_manager_using_keymgr_dll_and_rundll32_exe|T1003: Dump Credential Manager using keymgr.dll and rundll32.exe]]
@@ -18,7 +18,7 @@
 - [[kb/atomic/tests/6c7a4fd3_5b0b_4b30_a93e_39411b25d889-retrieve_microsoft_iis_service_account_credentials_using_appcmd_using_list|T1003: Retrieve Microsoft IIS Service Account Credentials Using AppCmd (using list)]]
 - [[kb/atomic/tests/0b207037_813c_4444_ac3f_b597cf280a67-send_ntlm_hash_with_rpc_test_connection|T1003: Send NTLM Hash with RPC Test Connection]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 - [[kb/atomic/tests/7cede33f_0acd_44ef_9774_15511300b24b-create_mini_dump_of_lsass_exe_using_procdump|T1003.001: Create Mini Dump of LSASS.exe using ProcDump]]
 - [[kb/atomic/tests/9d0072c8_7cca_45c4_bd14_f852cfa35cf0-dump_lsass_with_createdump_exe_from_net_v5|T1003.001: Dump LSASS with createdump.exe from .Net v5]]
@@ -35,7 +35,7 @@
 - [[kb/atomic/tests/453acf13_1dbd_47d7_b28a_172ce9228023-offline_credential_theft_with_mimikatz|T1003.001: Offline Credential Theft With Mimikatz]]
 - [[kb/atomic/tests/66fb0bc1_3c3f_47e9_a298_550ecfefacbc-powershell_mimikatz|T1003.001: Powershell Mimikatz]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 
 - [[kb/atomic/tests/21df41be_cdd8_4695_a650_c3981113aa3c-dumping_of_sam_creds_and_secrets_reg_export|T1003.002: Dumping of SAM, creds, and secrets(Reg Export)]]
 - [[kb/atomic/tests/804f28fc_68fc_40da_b5a2_e9d0bce5c193-powerdump_hashes_and_usernames_from_registry|T1003.002: PowerDump Hashes and Usernames from Registry]]
@@ -46,7 +46,7 @@
 - [[kb/atomic/tests/eeb9751a_d598_42d3_b11c_c122d9c3f6c7-dump_volume_shadow_copy_hives_with_certutil|T1003.002: dump volume shadow copy hives with certutil]]
 - [[kb/atomic/tests/a90c2f4d_6726_444e_99d2_a00cd7c20480-esentutl_exe_sam_copy|T1003.002: esentutl.exe SAM copy]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 - [[kb/atomic/tests/f57cb283_c131_4e2f_8a6c_363d575748b2-copy_ntds_in_low_level_ntfs_acquisition_via_mft_parsing|T1003.003: Copy NTDS in low level NTFS acquisition via MFT parsing]]
 - [[kb/atomic/tests/c7be89f7_5d06_4321_9f90_8676a77e0502-copy_ntds_in_low_level_ntfs_acquisition_via_fsutil|T1003.003: Copy NTDS in low level NTFS acquisition via fsutil]]
@@ -60,28 +60,28 @@
 - [[kb/atomic/tests/dcebead7_6c28_4b4b_bf3c_79deb1b1fc7f-create_volume_shadow_copy_with_vssadmin|T1003.003: Create Volume Shadow Copy with vssadmin]]
 - [[kb/atomic/tests/2364e33d_ceab_4641_8468_bfb1d7cc2723-dump_active_directory_database_with_ntdsutil|T1003.003: Dump Active Directory Database with NTDSUtil]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
 
 - [[kb/atomic/tests/2dfa3bff_9a27_46db_ab75_7faefdaca732-dump_kerberos_tickets_from_lsa_using_dumper_ps1|T1003.004: Dump Kerberos Tickets from LSA using dumper.ps1]]
 - [[kb/atomic/tests/55295ab0_a703_433b_9ca4_ae13807de12f-dumping_lsa_secrets|T1003.004: Dumping LSA Secrets]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.005]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
 
 - [[kb/atomic/tests/56506854_89d6_46a3_9804_b7fde90791f9-cached_credential_dump_via_cmdkey|T1003.005: Cached Credential Dump via Cmdkey]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.006]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003006-dcsync|T1003.006: DCSync]]
 
 - [[kb/atomic/tests/129efd28_8497_4c87_a1b0_73b9a870ca3e-dcsync_active_directory|T1003.006: DCSync (Active Directory)]]
 - [[kb/atomic/tests/a0bced08_3fc5_4d8b_93b7_e8344739376e-run_dsinternals_get_adreplaccount|T1003.006: Run DSInternals Get-ADReplAccount]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.007]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003007-proc-filesystem|T1003.007: Proc Filesystem]]
 
 - [[kb/atomic/tests/a27418de_bdce_4ebd_b655_38f04842bf0c-capture_passwords_with_mimipenguin|T1003.007: Capture Passwords with MimiPenguin]]
 - [[kb/atomic/tests/437b2003_a20d_4ed8_834c_4964f24eec63-dump_individual_process_memory_with_python_local|T1003.007: Dump individual process memory with Python (Local)]]
 - [[kb/atomic/tests/7e91138a_8e74_456d_a007_973d67a0bb80-dump_individual_process_memory_with_sh_local|T1003.007: Dump individual process memory with sh (Local)]]
 - [[kb/atomic/tests/fa37b633_e097_4415_b2b8_c5bf4c86e423-dump_individual_process_memory_with_sh_on_freebsd_local|T1003.007: Dump individual process memory with sh on FreeBSD (Local)]]
 
-## [[kb/attack/techniques/T1003-os_credential_dumping|T1003.008]]
+## [[kb/attack/techniques/T1003-os_credential_dumping#^t1003008--etc-passwd-and--etc-shadow|T1003.008: /etc/passwd and /etc/shadow]]
 
 - [[kb/atomic/tests/5076874f_a8e6_4077_8ace_9e5ab54114a5-access_etc_master_passwd_local|T1003.008: Access /etc/master.passwd (Local)]]
 - [[kb/atomic/tests/60e860b6_8ae6_49db_ad07_5e73edd88f5d-access_etc_passwd_local|T1003.008: Access /etc/passwd (Local)]]
@@ -89,17 +89,17 @@
 - [[kb/atomic/tests/df1a55ae_019d_4120_bc35_94f4bc5c4b0a-access_etc_shadow_passwd_master_passwd_with_a_standard_bin_that_s_not_cat|T1003.008: Access /etc/{shadow,passwd,master.passwd} with a standard bin that's not cat]]
 - [[kb/atomic/tests/f5aa6543_6cb2_4fae_b9c2_b96e14721713-access_etc_shadow_passwd_master_passwd_with_shell_builtins|T1003.008: Access /etc/{shadow,passwd,master.passwd} with shell builtins]]
 
-## [[kb/attack/techniques/T1005-data_from_local_system|T1005]]
+## [[kb/attack/techniques/T1005-data_from_local_system|T1005: Data from Local System]]
 
 - [[kb/atomic/tests/cfb6d400_a269_4c06_a347_6d88d584d5f7-copy_apple_notes_database_files_using_applescript|T1005: Copy Apple Notes database files using AppleScript]]
 - [[kb/atomic/tests/00cbb875_7ae4_4cf1_b638_e543fd825300-find_and_dump_sqlite_databases_linux|T1005: Find and dump sqlite databases (Linux)]]
 - [[kb/atomic/tests/d3d9af44_b8ad_4375_8b0a_4bff4b7e419c-search_files_of_interest_and_save_them_to_a_single_zip_file_windows|T1005: Search files of interest and save them to a single zip file (Windows)]]
 
-## [[kb/attack/techniques/T1006-direct_volume_access|T1006]]
+## [[kb/attack/techniques/T1006-direct_volume_access|T1006: Direct Volume Access]]
 
 - [[kb/atomic/tests/88f6327e_51ec_4bbf_b2e8_3fea534eab8b-read_volume_boot_sector_via_dos_device_path_powershell|T1006: Read volume boot sector via DOS device path (PowerShell)]]
 
-## [[kb/attack/techniques/T1007-system_service_discovery|T1007]]
+## [[kb/attack/techniques/T1007-system_service_discovery|T1007: System Service Discovery]]
 
 - [[kb/atomic/tests/51f17016_d8fa_4360_888a_df4bf92c4a04-get_service_execution|T1007: Get-Service Execution]]
 - [[kb/atomic/tests/89676ba1_b1f8_47ee_b940_2e1a113ebc71-system_service_discovery|T1007: System Service Discovery]]
@@ -110,11 +110,11 @@
 - [[kb/atomic/tests/5f864a3f_8ce9_45c0_812c_bdf7d8aeacc3-system_service_discovery_net_exe|T1007: System Service Discovery - net.exe]]
 - [[kb/atomic/tests/f4b26bce_4c2c_46c0_bcc5_fce062d38bef-system_service_discovery_systemctl_service|T1007: System Service Discovery - systemctl/service]]
 
-## [[kb/attack/techniques/T1010-application_window_discovery|T1010]]
+## [[kb/attack/techniques/T1010-application_window_discovery|T1010: Application Window Discovery]]
 
 - [[kb/atomic/tests/fe94a1c3_3e22_4dc9_9fdf_3a8bdbc10dc4-list_process_main_windows_c_net|T1010: List Process Main Windows - C# .NET]]
 
-## [[kb/attack/techniques/T1012-query_registry|T1012]]
+## [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]]
 
 - [[kb/atomic/tests/5c784969_1d43_4ac7_8c3d_ed6d025ed10d-check_software_inventory_logging_sil_status_via_registry|T1012: Check Software Inventory Logging (SIL) status via Registry]]
 - [[kb/atomic/tests/0d80d088_a84c_4353_af1a_fc8b439f1564-enumerate_com_objects_in_registry_with_powershell|T1012: Enumerate COM Objects in Registry with Powershell]]
@@ -123,14 +123,14 @@
 - [[kb/atomic/tests/0434d081_bb32_42ce_bcbb_3548e4f2628f-query_registry_with_powershell_cmdlets|T1012: Query Registry with Powershell cmdlets]]
 - [[kb/atomic/tests/6fb4c4c5_f949_4fd2_8af5_ddbc61595223-reg_query_for_alwaysinstallelevated_status|T1012: Reg query for AlwaysInstallElevated status]]
 
-## [[kb/attack/techniques/T1014-rootkit|T1014]]
+## [[kb/attack/techniques/T1014-rootkit|T1014: Rootkit]]
 
 - [[kb/atomic/tests/dfb50072_e45a_4c75_a17e_a484809c8553-loadable_kernel_module_based_rootkit|T1014: Loadable Kernel Module based Rootkit]]
 - [[kb/atomic/tests/75483ef8_f10f_444a_bf02_62eb0e48db6f-loadable_kernel_module_based_rootkit|T1014: Loadable Kernel Module based Rootkit]]
 - [[kb/atomic/tests/0b996469_48c6_46e2_8155_a17f8b6c2247-loadable_kernel_module_based_rootkit_diamorphine|T1014: Loadable Kernel Module based Rootkit (Diamorphine)]]
 - [[kb/atomic/tests/1338bf0c_fd0c_48c0_9e65_329f18e2c0d3-dynamic_linker_based_rootkit_libprocesshider|T1014: dynamic-linker based rootkit (libprocesshider)]]
 
-## [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016]]
+## [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
 
 - [[kb/atomic/tests/9bb45dd7_c466_4f93_83a1_be30e56033ee-adfind_enumerate_active_directory_subnet_objects|T1016: Adfind - Enumerate Active Directory Subnet Objects]]
 - [[kb/atomic/tests/34557863_344a_468f_808b_a1bfb89b4fa9-dns_server_discovery_using_nslookup|T1016: DNS Server Discovery Using nslookup]]
@@ -142,7 +142,7 @@
 - [[kb/atomic/tests/dafaf052_5508_402d_bf77_51e0700c02e2-system_network_configuration_discovery_trickbot_style|T1016: System Network Configuration Discovery (TrickBot Style)]]
 - [[kb/atomic/tests/970ab6a1_0157_4f3f_9a73_ec4166754b23-system_network_configuration_discovery_on_windows|T1016: System Network Configuration Discovery on Windows]]
 
-## [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016.001]]
+## [[kb/attack/techniques/T1016-system_network_configuration_discovery#^t1016001-internet-connection-discovery|T1016.001: Internet Connection Discovery]]
 
 - [[kb/atomic/tests/f8160cde_4e16_4c8b_8450_6042d5363eb0-check_internet_connection_using_test_netconnection_in_powershell_icmp_ping|T1016.001: Check internet connection using Test-NetConnection in PowerShell (ICMP-Ping)]]
 - [[kb/atomic/tests/7c35779d_42ec_42ab_a283_6255b28e9d68-check_internet_connection_using_test_netconnection_in_powershell_tcp_http|T1016.001: Check internet connection using Test-NetConnection in PowerShell (TCP-HTTP)]]
@@ -150,11 +150,11 @@
 - [[kb/atomic/tests/e184b6bd_fb28_48aa_9a59_13012e33d7dc-check_internet_connection_using_ping_windows|T1016.001: Check internet connection using ping Windows]]
 - [[kb/atomic/tests/be8f4019_d8b6_434c_a814_53123cdcc11e-check_internet_connection_using_ping_freebsd_linux_or_macos|T1016.001: Check internet connection using ping freebsd, linux or macos]]
 
-## [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016.002]]
+## [[kb/attack/techniques/T1016-system_network_configuration_discovery#^t1016002-wi-fi-discovery|T1016.002: Wi-Fi Discovery]]
 
 - [[kb/atomic/tests/53cf1903_0fa7_4177_ab14_f358ae809eec-enumerate_stored_wi_fi_profiles_and_passwords_via_netsh|T1016.002: Enumerate Stored Wi-Fi Profiles And Passwords via netsh]]
 
-## [[kb/attack/techniques/T1018-remote_system_discovery|T1018]]
+## [[kb/attack/techniques/T1018-remote_system_discovery|T1018: Remote System Discovery]]
 
 - [[kb/atomic/tests/a889f5be_2d54_4050_bd05_884578748bb4-adfind_enumerate_active_directory_computer_objects|T1018: Adfind - Enumerate Active Directory Computer Objects]]
 - [[kb/atomic/tests/5838c31e_a0e2_4b9f_b60a_d79d2cb7995e-adfind_enumerate_active_directory_domain_controller_objects|T1018: Adfind - Enumerate Active Directory Domain Controller Objects]]
@@ -179,50 +179,50 @@
 - [[kb/atomic/tests/6db1f57f_d1d5_4223_8a66_55c9c65a9592-remote_system_discovery_ping_sweep|T1018: Remote System Discovery - ping sweep]]
 - [[kb/atomic/tests/96db2632_8417_4dbb_b8bb_a8b92ba391de-remote_system_discovery_sweep|T1018: Remote System Discovery - sweep]]
 
-## [[kb/attack/techniques/T1020-automated_exfiltration|T1020]]
+## [[kb/attack/techniques/T1020-automated_exfiltration|T1020: Automated Exfiltration]]
 
 - [[kb/atomic/tests/5b380e96_b0ef_4072_8a8e_f194cb9eb9ac-exfiltration_via_encrypted_ftp|T1020: Exfiltration via Encrypted FTP]]
 - [[kb/atomic/tests/9c780d3d_3a14_4278_8ee5_faaeb2ccfbe0-icedid_botnet_http_put|T1020: IcedID Botnet HTTP PUT]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 - [[kb/atomic/tests/74ace21e_a31c_4f7d_b540_53e4eb6d1f73-changing_rdp_port_to_non_standard_port_via_command_prompt|T1021.001: Changing RDP Port to Non Standard Port via Command_Prompt]]
 - [[kb/atomic/tests/2f840dd4_8a2e_4f44_beb3_6b2399ea3771-changing_rdp_port_to_non_standard_port_via_powershell|T1021.001: Changing RDP Port to Non Standard Port via Powershell]]
 - [[kb/atomic/tests/01d1c6c0_faf0_408e_b368_752a02285cb2-disable_nla_for_rdp_via_command_prompt|T1021.001: Disable NLA for RDP via Command Prompt]]
 - [[kb/atomic/tests/355d4632_8cb9_449d_91ce_b566d0253d3e-rdp_to_domaincontroller|T1021.001: RDP to DomainController]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.002]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
 
 - [[kb/atomic/tests/0eb03d41_79e4_4393_8e57_6344856be1cf-copy_and_execute_file_with_psexec|T1021.002: Copy and Execute File with PsExec]]
 - [[kb/atomic/tests/d41aaab5_bdfe_431d_a3d5_c29e9136ff46-execute_command_writing_output_to_local_admin_share|T1021.002: Execute command writing output to local Admin Share]]
 - [[kb/atomic/tests/514e9cd7_9207_4882_98b1_c8f791bae3c5-map_admin_share_powershell|T1021.002: Map Admin Share PowerShell]]
 - [[kb/atomic/tests/3386975b_367a_4fbb_9d77_4dcf3639ffd3-map_admin_share|T1021.002: Map admin share]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.003]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
 
 - [[kb/atomic/tests/505f24be_1c11_4694_b614_e01ae1cd2570-powershell_lateral_movement_using_excel_application_object|T1021.003: PowerShell Lateral Movement Using Excel Application Object]]
 - [[kb/atomic/tests/6dc74eb1_c9d6_4c53_b3b5_6f50ae339673-powershell_lateral_movement_using_mmc20|T1021.003: PowerShell Lateral Movement using MMC20]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.004]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
 
 - [[kb/atomic/tests/8f6c14d1_f13d_4616_b7fc_98cc69fe56ec-esxi_enable_ssh_via_powercli|T1021.004: ESXi - Enable SSH via PowerCLI]]
 - [[kb/atomic/tests/280812c8_4dae_43e9_a74e_1d08ab997c0e-esxi_enable_ssh_via_vim_cmd|T1021.004: ESXi - Enable SSH via VIM-CMD]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.005]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021005-vnc|T1021.005: VNC]]
 
 - [[kb/atomic/tests/8a930abe_841c_4d4f_a877_72e9fe90b9ea-enable_apple_remote_desktop_agent|T1021.005: Enable Apple Remote Desktop Agent]]
 
-## [[kb/attack/techniques/T1021-remote_services|T1021.006]]
+## [[kb/attack/techniques/T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
 
 - [[kb/atomic/tests/9059e8de_3d7d_4954_a322_46161880b9cf-enable_windows_remote_management|T1021.006: Enable Windows Remote Management]]
 - [[kb/atomic/tests/5295bd61_bd7e_4744_9d52_85962a4cf2d6-remote_code_execution_with_ps_credentials_using_invoke_command|T1021.006: Remote Code Execution with PS Credentials Using Invoke-Command]]
 - [[kb/atomic/tests/efe86d95_44c4_4509_ae42_7bfd9d1f5b3d-winrm_access_with_evil_winrm|T1021.006: WinRM Access with Evil-WinRM]]
 
-## [[kb/attack/techniques/T1025-data_from_removable_media|T1025]]
+## [[kb/attack/techniques/T1025-data_from_removable_media|T1025: Data from Removable Media]]
 
 - [[kb/atomic/tests/0b29f7e3_a050_44b7_bf05_9fb86af1ec2e-identify_documents_on_usb_and_removable_media_via_powershell|T1025: Identify Documents on USB and Removable Media via PowerShell]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 - [[kb/atomic/tests/e2d85e66_cb66_4ed7_93b1_833fc56c9319-dlp_evasion_via_sensitive_data_in_vba_macro_over_http|T1027: DLP Evasion via Sensitive Data in VBA Macro over HTTP]]
 - [[kb/atomic/tests/129edb75_d7b8_42cd_a8ba_1f3db64ec4ad-dlp_evasion_via_sensitive_data_in_vba_macro_over_email|T1027: DLP Evasion via Sensitive Data in VBA Macro over email]]
@@ -236,19 +236,19 @@
 - [[kb/atomic/tests/6683baf0_6e77_4f58_b114_814184ea8150-obfuscated_powershell_command_via_character_array|T1027: Obfuscated PowerShell Command via Character Array]]
 - [[kb/atomic/tests/7e47ee60_9dd1_4269_9c4f_97953b183268-snake_malware_encrypted_crmlog_file|T1027: Snake Malware Encrypted crmlog file]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.001]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027001-binary-padding|T1027.001: Binary Padding]]
 
 - [[kb/atomic/tests/ffe2346c_abd5_4b45_a713_bf5f1ebd573a-pad_binary_to_change_hash_linux_macos_dd|T1027.001: Pad Binary to Change Hash - Linux/macOS dd]]
 - [[kb/atomic/tests/e22a9e89_69c7_410f_a473_e6c212cd2292-pad_binary_to_change_hash_using_truncate_command_linux_macos|T1027.001: Pad Binary to Change Hash using truncate command - Linux/macOS]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.002]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027002-software-packing|T1027.002: Software Packing]]
 
 - [[kb/atomic/tests/4d46e16b_5765_4046_9f25_a600d3e65e4d-binary_packed_by_upx_with_modified_headers|T1027.002: Binary packed by UPX, with modified headers]]
 - [[kb/atomic/tests/f06197f8_ff46_48c2_a0c6_afc1b50665e1-binary_packed_by_upx_with_modified_headers_linux|T1027.002: Binary packed by UPX, with modified headers (linux)]]
 - [[kb/atomic/tests/b16ef901_00bb_4dda_b4fc_a04db5067e20-binary_simply_packed_by_upx|T1027.002: Binary simply packed by UPX]]
 - [[kb/atomic/tests/11c46cd8_e471_450e_acb8_52a1216ae6a4-binary_simply_packed_by_upx_linux|T1027.002: Binary simply packed by UPX (linux)]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.004]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027004-compile-after-delivery|T1027.004: Compile After Delivery]]
 
 - [[kb/atomic/tests/d0377aa6_850a_42b2_95f0_de558d80be57-c_compile|T1027.004: C compile]]
 - [[kb/atomic/tests/da97bb11_d6d0_4fc1_b445_e443d1346efe-cc_compile|T1027.004: CC compile]]
@@ -256,26 +256,26 @@
 - [[kb/atomic/tests/453614d8_3ba6_4147_acc0_7ec4b3e1faef-dynamic_c_compile|T1027.004: Dynamic C# Compile]]
 - [[kb/atomic/tests/78bd3fa7_773c_449e_a978_dc1f1500bc52-go_compile|T1027.004: Go compile]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.006]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027006-html-smuggling|T1027.006: HTML Smuggling]]
 
 - [[kb/atomic/tests/30cbeda4_08d9_42f1_8685_197fad677734-html_smuggling_remote_payload|T1027.006: HTML Smuggling Remote Payload]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.007]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027007-dynamic-api-resolution|T1027.007: Dynamic API Resolution]]
 
 - [[kb/atomic/tests/578025d5_faa9_4f6d_8390_aae739d507e1-dynamic_api_resolution_ninja_syscall|T1027.007: Dynamic API Resolution-Ninja-syscall]]
 
-## [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.013]]
+## [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027013-encrypted-encoded-file|T1027.013: Encrypted/Encoded File]]
 
 - [[kb/atomic/tests/7693ccaa_8d64_4043_92a5_a2eb70359535-decode_eicar_file_and_write_to_file|T1027.013: Decode Eicar File and Write to File]]
 - [[kb/atomic/tests/b404caaa_12ce_43c7_9214_62a531c044f7-decrypt_eicar_file_and_write_to_file|T1027.013: Decrypt Eicar File and Write to File]]
 - [[kb/atomic/tests/c2ca068a_eb1e_498f_9f93_3d554c455916-password_protected_zip_payload_extraction_and_execution|T1027.013: Password-Protected ZIP Payload Extraction and Execution]]
 
-## [[kb/attack/techniques/T1030-data_transfer_size_limits|T1030]]
+## [[kb/attack/techniques/T1030-data_transfer_size_limits|T1030: Data Transfer Size Limits]]
 
 - [[kb/atomic/tests/ab936c51_10f4_46ce_9144_e02137b2016a-data_transfer_size_limits|T1030: Data Transfer Size Limits]]
 - [[kb/atomic/tests/f0287b58_f4bc_40f6_87eb_692e126e7f8f-network_based_data_transfer_in_small_chunks|T1030: Network-Based Data Transfer in Small Chunks]]
 
-## [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+## [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 - [[kb/atomic/tests/29857f27_a36f_4f7e_8084_4557cd6207ca-find_computers_where_user_has_session_stealth_mode_powerview|T1033: Find computers where user has session - Stealth mode (PowerView)]]
 - [[kb/atomic/tests/1392bd0f_5d5a_429e_81d9_eb9d4d4d5b3b-getcurrent_user_with_powershell_script|T1033: GetCurrent User with PowerShell Script]]
@@ -285,12 +285,12 @@
 - [[kb/atomic/tests/ba38e193_37a6_4c41_b214_61b33277fe36-system_owner_user_discovery_using_command_prompt|T1033: System Owner/User Discovery Using Command Prompt]]
 - [[kb/atomic/tests/dcb6cdee_1fb0_4087_8bf8_88cfd136ba51-user_discovery_with_env_vars_powershell_script|T1033: User Discovery With Env Vars PowerShell Script]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036]]
+## [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 - [[kb/atomic/tests/4449c89b_ec82_43a4_89c1_91e2f1abeecc-malware_masquerading_and_execution_from_zip_file|T1036: Malware Masquerading and Execution from Zip File]]
 - [[kb/atomic/tests/51005ac7_52e2_45e0_bdab_d17c6d4916cd-system_file_copied_to_unusual_location|T1036: System File Copied to Unusual Location]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 - [[kb/atomic/tests/83810c46_f45e_4485_9ab6_8ed0e9e6ed7f-malicious_process_masquerading_as_lsm_exe|T1036.003: Malicious process Masquerading as LSM.exe]]
 - [[kb/atomic/tests/3a2a578b_0a01_46e4_92e3_62e2859b42f0-masquerading_cscript_exe_running_as_notepad_exe|T1036.003: Masquerading - cscript.exe running as notepad.exe]]
@@ -301,54 +301,54 @@
 - [[kb/atomic/tests/a315bfff_7a98_403b_b442_2ea1b255e556-masquerading_as_freebsd_or_linux_crond_process|T1036.003: Masquerading as FreeBSD or Linux crond process.]]
 - [[kb/atomic/tests/5ba5a3d1_cf3c_4499_968a_a93155d1f717-masquerading_as_windows_lsass_process|T1036.003: Masquerading as Windows LSASS process]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.004]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036004-masquerade-task-or-service|T1036.004: Masquerade Task or Service]]
 
 - [[kb/atomic/tests/b721c6ef_472c_4263_a0d9_37f1f4ecff66-creating_w32time_similar_named_service_using_sc|T1036.004: Creating W32Time similar named service using sc]]
 - [[kb/atomic/tests/f9f2fe59_96f7_4a7d_ba9f_a9783200d4c9-creating_w32time_similar_named_service_using_schtasks|T1036.004: Creating W32Time similar named service using schtasks]]
 - [[kb/atomic/tests/ad4b73c2_d6e2_4d8b_9868_4c6f55906e01-hiding_a_malicious_process_with_bind_mounts|T1036.004: Hiding a malicious process with bind mounts]]
 - [[kb/atomic/tests/f0e3aaea_5cd9_4db6_a077_631dd19b27a8-linux_rename_proc_pid_comm_using_prctl|T1036.004: linux rename /proc/pid/comm using prctl]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.005]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036005-match-legitimate-resource-name-or-location|T1036.005: Match Legitimate Resource Name or Location]]
 
 - [[kb/atomic/tests/812c3ab8_94b0_4698_a9bf_9420af23ce24-execute_a_process_from_a_directory_masquerading_as_the_current_parent_directory|T1036.005: Execute a process from a directory masquerading as the current parent directory]]
 - [[kb/atomic/tests/35eb8d16_9820_4423_a2a1_90c4f5edd9ca-masquerade_as_a_built_in_system_executable|T1036.005: Masquerade as a built-in system executable]]
 - [[kb/atomic/tests/03ae82a6_9fa0_465b_91df_124d8ca5c4e8-masquerading_cmd_exe_as_vedetector_exe|T1036.005: Masquerading cmd.exe as VEDetector.exe]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.006]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036006-space-after-filename|T1036.006: Space after Filename]]
 
 - [[kb/atomic/tests/b95ce2eb_a093_4cd8_938d_5258cef656ea-space_after_filename|T1036.006: Space After Filename]]
 - [[kb/atomic/tests/89a7dd26_e510_4c9f_9b15_f3bae333360f-space_after_filename_manual|T1036.006: Space After Filename (Manual)]]
 
-## [[kb/attack/techniques/T1036-masquerading|T1036.007]]
+## [[kb/attack/techniques/T1036-masquerading#^t1036007-double-file-extension|T1036.007: Double File Extension]]
 
 - [[kb/atomic/tests/c7fa0c3b_b57f_4cba_9118_863bf4e653fc-file_extension_masquerading|T1036.007: File Extension Masquerading]]
 
-## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.001]]
+## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037001-logon-script-(windows)|T1037.001: Logon Script (Windows)]]
 
 - [[kb/atomic/tests/d6042746_07d4_4c92_9ad8_e644c114a231-logon_scripts|T1037.001: Logon Scripts]]
 
-## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.002]]
+## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037002-login-hook|T1037.002: Login Hook]]
 
 - [[kb/atomic/tests/f047c7de_a2d9_406e_a62b_12a09d9516f4-logon_scripts_mac|T1037.002: Logon Scripts - Mac]]
 
-## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.004]]
+## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037004-rc-scripts|T1037.004: RC Scripts]]
 
 - [[kb/atomic/tests/97a48daa_8bca_4bc0_b1a9_c1d163e762de-rc_common|T1037.004: rc.common]]
 - [[kb/atomic/tests/c33f3d80_5f04_419b_a13a_854d1cbdbf3a-rc_common|T1037.004: rc.common]]
 - [[kb/atomic/tests/126f71af_e1c9_405c_94ef_26a47b16c102-rc_local|T1037.004: rc.local]]
 
-## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.005]]
+## [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037005-startup-items|T1037.005: Startup Items]]
 
 - [[kb/atomic/tests/134627c3_75db_410e_bff8_7a920075f198-add_file_to_local_library_startupitems|T1037.005: Add file to Local Library StartupItems]]
 - [[kb/atomic/tests/10cf5bec_49dd_4ebf_8077_8f47e420096f-add_launch_script_to_launch_agent|T1037.005: Add launch script to launch agent]]
 - [[kb/atomic/tests/fc369906_90c7_4a15_86fd_d37da624dde6-add_launch_script_to_launch_daemon|T1037.005: Add launch script to launch daemon]]
 
-## [[kb/attack/techniques/T1039-data_from_network_shared_drive|T1039]]
+## [[kb/attack/techniques/T1039-data_from_network_shared_drive|T1039: Data from Network Shared Drive]]
 
 - [[kb/atomic/tests/7762e120_5879_44ff_97f8_008b401b9a98-copy_a_sensitive_file_over_administrative_share_with_powershell|T1039: Copy a sensitive File over Administrative share with Powershell]]
 - [[kb/atomic/tests/6ed67921_1774_44ba_bac6_adb51ed60660-copy_a_sensitive_file_over_administrative_share_with_copy|T1039: Copy a sensitive File over Administrative share with copy]]
 
-## [[kb/attack/techniques/T1040-network_sniffing|T1040]]
+## [[kb/attack/techniques/T1040-network_sniffing|T1040: Network Sniffing]]
 
 - [[kb/atomic/tests/a3a0d4c9_c068_4563_a08d_583bd05b884c-filtered_packet_capture_freebsd_using_dev_bpfn_with_sudo|T1040: Filtered Packet Capture FreeBSD using /dev/bpfN with sudo]]
 - [[kb/atomic/tests/e2480aee_23f3_4f34_80ce_de221e27cd19-filtered_packet_capture_macos_using_dev_bpfn_with_sudo|T1040: Filtered Packet Capture macOS using /dev/bpfN with sudo]]
@@ -367,12 +367,12 @@
 - [[kb/atomic/tests/c67ba807_f48b_446e_b955_e4928cd1bf91-windows_internal_pktmon_capture|T1040: Windows Internal pktmon capture]]
 - [[kb/atomic/tests/855fb8b4_b8ab_4785_ae77_09f5df7bff55-windows_internal_pktmon_set_filter|T1040: Windows Internal pktmon set filter]]
 
-## [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041]]
+## [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041: Exfiltration Over C2 Channel]]
 
 - [[kb/atomic/tests/d1253f6e_c29b_49dc_b466_2147a6191932-c2_data_exfiltration|T1041: C2 Data Exfiltration]]
 - [[kb/atomic/tests/c9207f3e_213d_4cc7_ad2a_7697a7237df9-text_based_data_exfiltration_using_dns_subdomains|T1041: Text Based Data Exfiltration using DNS subdomains]]
 
-## [[kb/attack/techniques/T1046-network_service_discovery|T1046]]
+## [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]]
 
 - [[kb/atomic/tests/06eaafdb_8982_426e_8a31_d572da633caa-network_service_discovery_for_containers|T1046: Network Service Discovery for Containers]]
 - [[kb/atomic/tests/68e907da_2539_48f6_9fc9_257a78c05540-port_scan|T1046: Port Scan]]
@@ -387,7 +387,7 @@
 - [[kb/atomic/tests/bb037826_cbe8_4a41_93ea_b94059d6bb98-winpwn_fruit|T1046: WinPwn - fruit]]
 - [[kb/atomic/tests/54574908_f1de_4356_9021_8053dd57439a-winpwn_spoolvulnscan|T1046: WinPwn - spoolvulnscan]]
 
-## [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
+## [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
 
 - [[kb/atomic/tests/c510d25b_1667_467d_8331_a56d3e9bc4ff-application_uninstall_using_wmic|T1047: Application uninstall using WMIC]]
 - [[kb/atomic/tests/7db7a7f9_9531_4840_9b30_46220135441c-create_a_process_using_wmi_query_and_an_encoded_command|T1047: Create a Process using WMI Query and an Encoded Command]]
@@ -400,21 +400,21 @@
 - [[kb/atomic/tests/718aebaa_d0e0_471a_8241_c5afa69c7414-wmi_reconnaissance_software|T1047: WMI Reconnaissance Software]]
 - [[kb/atomic/tests/c107778c_dcf5_47c5_af2e_1d058a3df3ea-wmi_reconnaissance_users|T1047: WMI Reconnaissance Users]]
 
-## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048]]
+## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 
 - [[kb/atomic/tests/c943d285_ada3_45ca_b3aa_7cd6500c6a48-dnsexfiltration_doh|T1048: DNSExfiltration (doh)]]
 - [[kb/atomic/tests/a27916da_05f2_4316_a3ee_feec67a437be-exfiltrate_data_using_dns_queries_via_dig|T1048: Exfiltrate Data using DNS Queries via dig]]
 - [[kb/atomic/tests/f6786cc8_beda_4915_a4d6_ac2f193bb988-exfiltration_over_alternative_protocol_ssh|T1048: Exfiltration Over Alternative Protocol - SSH]]
 - [[kb/atomic/tests/7c3cb337_35ae_4d06_bf03_3032ed2ec268-exfiltration_over_alternative_protocol_ssh|T1048: Exfiltration Over Alternative Protocol - SSH]]
 
-## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.002]]
+## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048002-exfiltration-over-asymmetric-encrypted-non-c2-protocol|T1048.002: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol]]
 
 - [[kb/atomic/tests/4a4f31e2_46ea_4c26_ad89_f09ad1d5fe01-exfiltrate_data_https_using_curl_freebsd_linux_or_macos|T1048.002: Exfiltrate data HTTPS using curl freebsd,linux or macos]]
 - [[kb/atomic/tests/1cdf2fb0_51b6_4fd8_96af_77020d5f1bf0-exfiltrate_data_https_using_curl_windows|T1048.002: Exfiltrate data HTTPS using curl windows]]
 - [[kb/atomic/tests/8bec51da_7a6d_4346_b941_51eca448c4b0-exfiltrate_data_as_text_over_https_using_wget|T1048.002: Exfiltrate data as text over HTTPS using wget]]
 - [[kb/atomic/tests/7ccdfcfa_6707_46bc_b812_007ab6ff951c-exfiltrate_data_in_a_file_over_https_using_wget|T1048.002: Exfiltrate data in a file over HTTPS using wget]]
 
-## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+## [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 - [[kb/atomic/tests/c403b5a4_b5fc_49f2_b181_d1c80d27db45-exfiltration_over_alternative_protocol_dns|T1048.003: Exfiltration Over Alternative Protocol - DNS]]
 - [[kb/atomic/tests/b854eb97_bf9b_45ab_a1b5_b94e4880c56b-exfiltration_over_alternative_protocol_ftp_rclone|T1048.003: Exfiltration Over Alternative Protocol - FTP - Rclone]]
@@ -425,7 +425,7 @@
 - [[kb/atomic/tests/57799bc2_ad1e_4130_a793_fb0c385130ba-maze_ftp_upload|T1048.003: MAZE FTP Upload]]
 - [[kb/atomic/tests/3ea1f938_f80a_4305_9aa8_431bc4867313-python3_http_server|T1048.003: Python3 http.server]]
 
-## [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049]]
+## [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049: System Network Connections Discovery]]
 
 - [[kb/atomic/tests/96f974bb_a0da_4d87_a744_ff33e73367e9-system_discovery_using_sharpview|T1049: System Discovery using SharpView]]
 - [[kb/atomic/tests/0940a971_809a_48f1_9c4d_b1d785e96ee5-system_network_connections_discovery|T1049: System Network Connections Discovery]]
@@ -435,20 +435,20 @@
 - [[kb/atomic/tests/bcf05343_ef1d_4052_8a27_b00c9be42b9f-system_network_connections_discovery_via_ss_or_lsof_linux_macos|T1049: System Network Connections Discovery via ss or lsof (Linux/MacOS)]]
 - [[kb/atomic/tests/f069f0f1_baad_4831_aa2b_eddac4baac4a-system_network_connections_discovery_with_powershell|T1049: System Network Connections Discovery with PowerShell]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 - [[kb/atomic/tests/7266d898_ac82_4ec0_97c7_436075d0d08e-at_schedule_a_job|T1053.002: At - Schedule a job]]
 - [[kb/atomic/tests/9ddf2e5e_7e2c_46c2_9940_3c2ff29c7213-at_schedule_a_job_via_kubectl_in_a_pod|T1053.002: At - Schedule a job via kubectl in a Pod]]
 - [[kb/atomic/tests/4a6c0dc4_0f2a_4203_9298_a5a9bdc21ed8-at_exe_scheduled_task|T1053.002: At.exe Scheduled task]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.003]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053003-cron|T1053.003: Cron]]
 
 - [[kb/atomic/tests/078e69eb_d9fb_450e_b9d0_2e118217c846-cron_add_script_to_etc_cron_d_folder|T1053.003: Cron - Add script to /etc/cron.d folder]]
 - [[kb/atomic/tests/2d943c18_e74a_44bf_936f_25ade6cccab4-cron_add_script_to_var_spool_cron_crontabs_folder|T1053.003: Cron - Add script to /var/spool/cron/crontabs/ folder]]
 - [[kb/atomic/tests/b7d42afa_9086_4c8a_b7b0_8ea3faa6ebb0-cron_add_script_to_all_cron_subfolders|T1053.003: Cron - Add script to all cron subfolders]]
 - [[kb/atomic/tests/435057fb_74b1_410e_9403_d81baf194f75-cron_replace_crontab_with_referenced_file|T1053.003: Cron - Replace crontab with referenced file]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 - [[kb/atomic/tests/cd925593_fbb4_486d_8def_16cbdf944bf4-import_xml_schedule_task_with_hidden_attribute|T1053.005: Import XML Schedule Task with Hidden Attribute]]
 - [[kb/atomic/tests/dda6fc7b_c9a6_4c18_b98d_95ec6542af6d-powershell_modify_a_scheduled_task|T1053.005: PowerShell Modify A Scheduled Task]]
@@ -463,18 +463,18 @@
 - [[kb/atomic/tests/ecd3fa21_7792_41a2_8726_2c5c673414d3-task_scheduler_via_vba|T1053.005: Task Scheduler via VBA]]
 - [[kb/atomic/tests/e16b3b75_dc9e_4cde_a23d_dfa2d0507b3b-wmi_invoke_cimmethod_scheduled_task|T1053.005: WMI Invoke-CimMethod Scheduled Task]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.006]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053006-systemd-timers|T1053.006: Systemd Timers]]
 
 - [[kb/atomic/tests/f4983098_bb13_44fb_9b2c_46149961807b-create_systemd_service_and_timer|T1053.006: Create Systemd Service and Timer]]
 - [[kb/atomic/tests/d3eda496_1fc0_49e9_aff5_3bec5da9fa22-create_a_system_level_transient_systemd_service_and_timer|T1053.006: Create a system level transient systemd service and timer]]
 - [[kb/atomic/tests/3de33f5b_62e5_4e63_a2a0_6fd8808c80ec-create_a_user_level_transient_systemd_service_and_timer|T1053.006: Create a user level transient systemd service and timer]]
 
-## [[kb/attack/techniques/T1053-scheduled_task_job|T1053.007]]
+## [[kb/attack/techniques/T1053-scheduled_task_job#^t1053007-container-orchestration-job|T1053.007: Container Orchestration Job]]
 
 - [[kb/atomic/tests/f2fa019e_fb2a_4d28_9dc6_fd1a9b7f68c3-createcronjob|T1053.007: CreateCronjob]]
 - [[kb/atomic/tests/ddfb0bc1_3c3f_47e9_a298_550ecfefacbd-listcronjobs|T1053.007: ListCronjobs]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055]]
+## [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 - [[kb/atomic/tests/49543237_25db_497b_90df_d0a0a6e8fe2c-dirty_vanity_process_injection|T1055: Dirty Vanity process Injection]]
 - [[kb/atomic/tests/2871ed59_3837_4a52_9107_99500ebc87cb-process_injection_with_go_using_createthread_winapi|T1055: Process Injection with Go using CreateThread WinAPI]]
@@ -490,41 +490,41 @@
 - [[kb/atomic/tests/1c91e740_1729_4329_b779_feba6e71d048-shellcode_execution_via_vba|T1055: Shellcode execution via VBA]]
 - [[kb/atomic/tests/0128e48e_8c1a_433a_a11a_a5304734f1e1-uuid_custom_process_injection|T1055: UUID custom process Injection]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 - [[kb/atomic/tests/74496461_11a1_4982_b439_4d87a550d254-process_injection_via_mavinject_exe|T1055.001: Process Injection via mavinject.exe]]
 - [[kb/atomic/tests/8b56f787_73d9_4f1d_87e8_d07e89cbc7f5-winpwn_get_system_shell_bind_system_shell_using_usoclient_dll_load_technique|T1055.001: WinPwn - Get SYSTEM shell - Bind System Shell using UsoClient DLL load technique]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.002]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055002-portable-executable-injection|T1055.002: Portable Executable Injection]]
 
 - [[kb/atomic/tests/578025d5_faa9_4f6d_8390_aae739d503e1-portable_executable_injection|T1055.002: Portable Executable Injection]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.003]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055003-thread-execution-hijacking|T1055.003: Thread Execution Hijacking]]
 
 - [[kb/atomic/tests/578025d5_faa9_4f6d_8390_aae527d503e1-thread_execution_hijacking|T1055.003: Thread Execution Hijacking]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.004]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055004-asynchronous-procedure-call|T1055.004: Asynchronous Procedure Call]]
 
 - [[kb/atomic/tests/73785dd2_323b_4205_ab16_bb6f06677e14-earlybird_apc_queue_injection_in_go|T1055.004: EarlyBird APC Queue Injection in Go]]
 - [[kb/atomic/tests/611b39b7_e243_4c81_87a4_7145a90358b1-process_injection_via_c|T1055.004: Process Injection via C#]]
 - [[kb/atomic/tests/4cc571b1_f450_414a_850f_879baf36aa06-remote_process_injection_with_go_using_ntqueueapcthreadex_winapi|T1055.004: Remote Process Injection with Go using NtQueueApcThreadEx WinAPI]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.011]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055011-extra-window-memory-injection|T1055.011: Extra Window Memory Injection]]
 
 - [[kb/atomic/tests/93ca40d2_336c_446d_bcef_87f14d438018-process_injection_via_extra_window_memory_ewm_x64_executable|T1055.011: Process Injection via Extra Window Memory (EWM) x64 executable]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.012]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055012-process-hollowing|T1055.012: Process Hollowing]]
 
 - [[kb/atomic/tests/c8f98fe1_c89b_4c49_a7e3_d60ee4bc2f5a-process_hollowing_in_go_using_createprocessw_winapi|T1055.012: Process Hollowing in Go using CreateProcessW WinAPI]]
 - [[kb/atomic/tests/94903cc5_d462_498a_b919_b1e5ab155fee-process_hollowing_in_go_using_createprocessw_and_createpipe_winapis_t1055_012|T1055.012: Process Hollowing in Go using CreateProcessW and CreatePipe WinAPIs (T1055.012)]]
 - [[kb/atomic/tests/562427b4_39ef_4e8c_af88_463a78e70b9c-process_hollowing_using_powershell|T1055.012: Process Hollowing using PowerShell]]
 - [[kb/atomic/tests/3ad4a037_1598_4136_837c_4027e4fa319b-runpe_via_vba|T1055.012: RunPE via VBA]]
 
-## [[kb/attack/techniques/T1055-process_injection|T1055.015]]
+## [[kb/attack/techniques/T1055-process_injection#^t1055015-listplanting|T1055.015: ListPlanting]]
 
 - [[kb/atomic/tests/4f3c7502_b111_4dfe_8a6e_529307891a59-process_injection_listplanting|T1055.015: Process injection ListPlanting]]
 
-## [[kb/attack/techniques/T1056-input_capture|T1056.001]]
+## [[kb/attack/techniques/T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
 
 - [[kb/atomic/tests/a668edb9_334e_48eb_8c2e_5413a40867af-auditd_keylogger|T1056.001: Auditd keylogger]]
 - [[kb/atomic/tests/7f85a946_a0ea_48aa_b6ac_8ff539278258-bash_session_based_keylogger|T1056.001: Bash session based keylogger]]
@@ -535,17 +535,17 @@
 - [[kb/atomic/tests/aee3a097_4c5c_4fff_bbd3_0a705867ae29-macos_swift_keylogger|T1056.001: MacOS Swift Keylogger]]
 - [[kb/atomic/tests/81d7d2ad_d644_4b6a_bea7_28ffe43becca-sshd_pam_keylogger|T1056.001: SSHD PAM keylogger]]
 
-## [[kb/attack/techniques/T1056-input_capture|T1056.002]]
+## [[kb/attack/techniques/T1056-input_capture#^t1056002-gui-input-capture|T1056.002: GUI Input Capture]]
 
 - [[kb/atomic/tests/76628574_0bc1_4646_8fe2_8f4427b47d15-applescript_prompt_user_for_password|T1056.002: AppleScript - Prompt User for Password]]
 - [[kb/atomic/tests/b7037b89_947a_427a_ba29_e7e9f09bc045-applescript_spoofing_a_credential_prompt_using_osascript|T1056.002: AppleScript - Spoofing a credential prompt using osascript]]
 - [[kb/atomic/tests/2b162bfd_0928_4d4c_9ec3_4d9f88374b52-powershell_prompt_user_for_password|T1056.002: PowerShell - Prompt User for Password]]
 
-## [[kb/attack/techniques/T1056-input_capture|T1056.004]]
+## [[kb/attack/techniques/T1056-input_capture#^t1056004-credential-api-hooking|T1056.004: Credential API Hooking]]
 
 - [[kb/atomic/tests/de1934ea_1fbf_425b_8795_65fb27dd7e33-hook_powershell_tls_encrypt_decrypt_messages|T1056.004: Hook PowerShell TLS Encrypt/Decrypt Messages]]
 
-## [[kb/attack/techniques/T1057-process_discovery|T1057]]
+## [[kb/attack/techniques/T1057-process_discovery|T1057: Process Discovery]]
 
 - [[kb/atomic/tests/11ba69ee_902e_4a0f_b3b6_418aed7d7ddb-discover_specific_process_tasklist|T1057: Discover Specific Process - tasklist]]
 - [[kb/atomic/tests/4fd35378_39aa_481e_b7c4_e3bf49375c67-launch_taskmgr_from_cmd_to_view_running_processes|T1057: Launch Taskmgr from cmd to View running processes]]
@@ -557,11 +557,11 @@
 - [[kb/atomic/tests/c5806a4f_62b8_4900_980b_c7ec004e9908-process_discovery_tasklist|T1057: Process Discovery - tasklist]]
 - [[kb/atomic/tests/640cbf6d_659b_498b_ba53_f6dd1a1cc02c-process_discovery_wmic_process|T1057: Process Discovery - wmic process]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 - [[kb/atomic/tests/a9b93f17_31cb_435d_a462_5e838a2a6026-autoit_script_execution|T1059: AutoIt Script Execution]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 - [[kb/atomic/tests/686a9785_f99b_41d4_90df_66ed515f81d7-athpowershellcommandlineparameter_command_parameter_variations|T1059.001: ATHPowerShellCommandLineParameter -Command parameter variations]]
 - [[kb/atomic/tests/1c0a870f_dc74_49cf_9afc_eccc45e58790-athpowershellcommandlineparameter_command_parameter_variations_with_encoded_arguments|T1059.001: ATHPowerShellCommandLineParameter -Command parameter variations with encoded arguments]]
@@ -586,11 +586,11 @@
 - [[kb/atomic/tests/4099086c_1470_4223_8085_8186e1ed5948-soaphound_build_cache|T1059.001: SOAPHound - Build Cache]]
 - [[kb/atomic/tests/6a5b2a50_d037_4879_bf01_43d4d6cbf73f-soaphound_dump_bloodhound_data|T1059.001: SOAPHound - Dump BloodHound Data]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.002]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
 
 - [[kb/atomic/tests/3600d97d_81b9_4171_ab96_e4386506e2c2-applescript|T1059.002: AppleScript]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 - [[kb/atomic/tests/df81db1b_066c_4802_9bc8_b6d030c3ba8e-command_prompt_read_contents_from_cmd_file_and_execute|T1059.003: Command Prompt read contents from CMD file and execute]]
 - [[kb/atomic/tests/00682c9f_7df4_4df8_950b_6dcaaa3ad9af-command_prompt_writing_script_to_file_then_executes_it|T1059.003: Command prompt writing script to file then executes it]]
@@ -599,7 +599,7 @@
 - [[kb/atomic/tests/d0eb3597_a1b3_4d65_b33b_2cda8d397f20-suspicious_execution_via_windows_command_shell|T1059.003: Suspicious Execution via Windows Command Shell]]
 - [[kb/atomic/tests/127b4afe_2346_4192_815c_69042bec570e-writes_text_to_a_file_and_displays_it|T1059.003: Writes text to a file and displays it.]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
 
 - [[kb/atomic/tests/c7ac59cb_13cc_4622_81dc_6d2fee9bfac7-change_login_shell|T1059.004: Change login shell]]
 - [[kb/atomic/tests/b04ed73c_7d43_4dc8_b563_a2fc595cba1a-command_line_scripts|T1059.004: Command line scripts]]
@@ -619,29 +619,29 @@
 - [[kb/atomic/tests/bf23c7dc_1004_4949_8262_4c1d1ef87702-what_shells_are_available|T1059.004: What shells are available]]
 - [[kb/atomic/tests/e0742e38_6efe_4dd4_ba5c_2078095b6156-emacs_spawning_an_interactive_system_shell|T1059.004: emacs spawning an interactive system shell]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
 
 - [[kb/atomic/tests/e8209d5f_e42d_45e6_9c2f_633ac4f1eefa-encoded_vbs_code_execution|T1059.005: Encoded VBS code execution]]
 - [[kb/atomic/tests/8faff437_a114_4547_9a60_749652a03df6-extract_memory_via_vba|T1059.005: Extract Memory via VBA]]
 - [[kb/atomic/tests/1620de42_160a_4fe5_bbaf_d3fef0181ce9-visual_basic_script_execution_to_gather_local_computer_information|T1059.005: Visual Basic script execution to gather local computer information]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.006]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059006-python|T1059.006: Python]]
 
 - [[kb/atomic/tests/0b44d79b_570a_4b27_a31f_3bf2156e5eaa-execute_python_via_python_executables|T1059.006: Execute Python via Python executables]]
 - [[kb/atomic/tests/6c4d1dcb_33c7_4c36_a8df_c6cfd0408be8-execute_python_via_scripts|T1059.006: Execute Python via scripts]]
 - [[kb/atomic/tests/3a95cdb2_c6ea_4761_b24e_02b71889b8bb-execute_shell_script_via_python_s_command_mode_arguement|T1059.006: Execute shell script via python's command mode arguement]]
 - [[kb/atomic/tests/161d694c_b543_4434_85c3_c3a433e33792-python_pty_module_and_spawn_function_used_to_spawn_sh_or_bash|T1059.006: Python pty module and spawn function used to spawn sh or bash]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 - [[kb/atomic/tests/01d75adf_ca1b_4dd1_ac96_7c9550ad1035-jscript_execution_to_gather_local_computer_information_via_cscript|T1059.007: JScript execution to gather local computer information via cscript]]
 - [[kb/atomic/tests/0709945e_4fec_4c49_9faf_c3c292a74484-jscript_execution_to_gather_local_computer_information_via_wscript|T1059.007: JScript execution to gather local computer information via wscript]]
 
-## [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.010]]
+## [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059010-autohotkey-&-autoit|T1059.010: AutoHotKey & AutoIT]]
 
 - [[kb/atomic/tests/7b5d350e_f758_43cc_a761_8e3f6b052a03-autohotkey_script_execution|T1059.010: AutoHotKey script execution]]
 
-## [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
+## [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
 
 - [[kb/atomic/tests/1f454dd6_e134_44df_bebb_67de70fb6cd8-basic_permission_groups_discovery_windows_local|T1069.001: Basic Permission Groups Discovery Windows (Local)]]
 - [[kb/atomic/tests/952931a4_af0b_4335_bbbe_73c8c5b327ae-permission_groups_discovery_local|T1069.001: Permission Groups Discovery (Local)]]
@@ -651,7 +651,7 @@
 - [[kb/atomic/tests/69119e58_96db_4110_ad27_954e48f3bb13-wmiobject_group_discovery|T1069.001: WMIObject Group Discovery]]
 - [[kb/atomic/tests/7413be50_be8e_430f_ad4d_07bf197884b2-wmic_group_discovery|T1069.001: Wmic Group Discovery]]
 
-## [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
+## [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 
 - [[kb/atomic/tests/d58d749c_4450_4975_a9e9_8b1d562755c2-active_directory_domain_search_using_ldap_linux_ubuntu_macos|T1069.002: Active Directory Domain Search Using LDAP - Linux (Ubuntu)/macOS]]
 - [[kb/atomic/tests/22cf8cb9_adb1_4e8c_80ca_7c723dfc8784-active_directory_enumeration_with_ldifde|T1069.002: Active Directory Enumeration with LDIFDE]]
@@ -669,18 +669,18 @@
 - [[kb/atomic/tests/46352f40_f283_4fe5_b56d_d9a71750e145-get_domaingroupmember_with_powerview|T1069.002: Get-DomainGroupMember with PowerView]]
 - [[kb/atomic/tests/6d5d8c96_3d2a_4da9_9d6d_9a9d341899a7-permission_groups_discovery_powershell_domain|T1069.002: Permission Groups Discovery PowerShell (Domain)]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070]]
+## [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]]
 
 - [[kb/atomic/tests/96e86706_6afd_45b6_95d6_108d23eaf2e9-indicator_manipulation_using_fsutil|T1070: Indicator Manipulation using FSUtil]]
 - [[kb/atomic/tests/b4115c7a_0e92_47f0_a61e_17e7218b2435-indicator_removal_using_fsutil|T1070: Indicator Removal using FSUtil]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.001]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
 
 - [[kb/atomic/tests/1b682d84_f075_4f93_9a89_8a8de19ffd6e-clear_event_logs_via_vba|T1070.001: Clear Event Logs via VBA]]
 - [[kb/atomic/tests/e6abb60e_26b8_41da_8aae_0c35174b0967-clear_logs|T1070.001: Clear Logs]]
 - [[kb/atomic/tests/b13e9306_3351_4b4b_a6e8_477358b0b498-delete_system_logs_using_clear_eventlog|T1070.001: Delete System Logs Using Clear-EventLog]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.002]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
 
 - [[kb/atomic/tests/653d39cd_bae7_499a_898c_9fb96b8b5cd1-delete_log_files_using_built_in_log_utility|T1070.002: Delete log files using built-in log utility]]
 - [[kb/atomic/tests/c23bdb88_928d_493e_b46d_df2906a50941-delete_log_files_via_cat_utility_by_appending_dev_null_or_dev_zero|T1070.002: Delete log files via cat utility by appending /dev/null or /dev/zero]]
@@ -703,7 +703,7 @@
 - [[kb/atomic/tests/989cc1b1_3642_4260_a809_54f9dd559683-rm_rf|T1070.002: rm -rf]]
 - [[kb/atomic/tests/bd8ccc45_d632_481e_b7cf_c467627d68f9-rm_rf|T1070.002: rm -rf]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.003]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 
 - [[kb/atomic/tests/b1251c35_dcd3_4ea1_86da_36d27b54f31f-clear_bash_history_cat_dev_null|T1070.003: Clear Bash history (cat dev/null)]]
 - [[kb/atomic/tests/cbf506a5_dd78_43e5_be7e_a46b7c7a0a11-clear_bash_history_echo|T1070.003: Clear Bash history (echo)]]
@@ -720,7 +720,7 @@
 - [[kb/atomic/tests/1d0d9aa6_6111_4f89_927b_53e8afae7f94-set_custom_addtohistoryhandler_to_avoid_history_file_logging|T1070.003: Set Custom AddToHistoryHandler to Avoid History File Logging]]
 - [[kb/atomic/tests/53b03a54_4529_4992_852d_a00b4b7215a6-use_space_before_command_to_avoid_logging_to_history|T1070.003: Use Space Before Command to Avoid Logging to History]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.004]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070004-file-deletion|T1070.004: File Deletion]]
 
 - [[kb/atomic/tests/f723d13d_48dc_4317_9990_cf43a9ac0bf2-clears_recycle_bin_via_rd|T1070.004: Clears Recycle bin via rd]]
 - [[kb/atomic/tests/f3aa95fe_4f10_4485_ad26_abf22a764c52-delete_filesystem_linux|T1070.004: Delete Filesystem - Linux]]
@@ -734,7 +734,7 @@
 - [[kb/atomic/tests/ded937c4_2add_42f7_9c2c_c742b7a98698-delete_an_entire_folder_windows_cmd|T1070.004: Delete an entire folder - Windows cmd]]
 - [[kb/atomic/tests/039b4b10_2900_404b_b67f_4b6d49aa6499-overwrite_and_delete_a_file_with_shred|T1070.004: Overwrite and delete a file with shred]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.005]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070005-network-share-connection-removal|T1070.005: Network Share Connection Removal]]
 
 - [[kb/atomic/tests/14c38f32_6509_46d8_ab43_d53e32d2b131-add_network_share|T1070.005: Add Network Share]]
 - [[kb/atomic/tests/99c657aa_ebeb_4179_a665_69288fdd12b8-disable_administrative_share_creation_at_startup|T1070.005: Disable Administrative Share Creation at Startup]]
@@ -742,7 +742,7 @@
 - [[kb/atomic/tests/09210ad5_1ef2_4077_9ad3_7351e13e9222-remove_network_share|T1070.005: Remove Network Share]]
 - [[kb/atomic/tests/0512d214_9512_4d22_bde7_f37e058259b3-remove_network_share_powershell|T1070.005: Remove Network Share PowerShell]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.006]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070006-timestomp|T1070.006: Timestomp]]
 
 - [[kb/atomic/tests/7bcf83bf_f5ef_425c_9d9a_71618ad9ed12-event_log_manipulations_time_slipping_via_powershell|T1070.006: Event Log Manipulations- Time slipping via Powershell]]
 - [[kb/atomic/tests/87fffff4_d371_4057_a539_e3b24c37e564-macos_timestomp_date_modified|T1070.006: MacOS - Timestomp Date Modified]]
@@ -755,7 +755,7 @@
 - [[kb/atomic/tests/f8f6634d_93e1_4238_8510_f8a90a20dcf2-windows_modify_file_last_modified_timestamp_with_powershell|T1070.006: Windows - Modify file last modified timestamp with PowerShell]]
 - [[kb/atomic/tests/d7512c33_3a75_4806_9893_69abc3ccdd43-windows_timestomp_a_file|T1070.006: Windows - Timestomp a File]]
 
-## [[kb/attack/techniques/T1070-indicator_removal|T1070.008]]
+## [[kb/attack/techniques/T1070-indicator_removal#^t1070008-clear-mailbox-data|T1070.008: Clear Mailbox Data]]
 
 - [[kb/atomic/tests/25e2be0e_96f7_4417_bd16_a4a2500e3802-copy_and_delete_mailbox_data_on_linux|T1070.008: Copy and Delete Mailbox Data on Linux]]
 - [[kb/atomic/tests/d29f01ea_ac72_4efc_8a15_bea64b77fabf-copy_and_delete_mailbox_data_on_windows|T1070.008: Copy and Delete Mailbox Data on Windows]]
@@ -764,42 +764,42 @@
 - [[kb/atomic/tests/edddff85_fee0_499d_9501_7d4d2892e79b-copy_and_modify_mailbox_data_on_windows|T1070.008: Copy and Modify Mailbox Data on Windows]]
 - [[kb/atomic/tests/8a0b1579_5a36_483a_9cde_0236983e1665-copy_and_modify_mailbox_data_on_macos|T1070.008: Copy and Modify Mailbox Data on macOS]]
 
-## [[kb/attack/techniques/T1071-application_layer_protocol|T1071]]
+## [[kb/attack/techniques/T1071-application_layer_protocol|T1071: Application Layer Protocol]]
 
 - [[kb/atomic/tests/3b0df731_030c_4768_b492_2a3216d90e53-telnet_c2|T1071: Telnet C2]]
 
-## [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
+## [[kb/attack/techniques/T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 
 - [[kb/atomic/tests/dc3488b0_08c7_4fea_b585_905c83b48180-malicious_user_agents_cmd|T1071.001: Malicious User Agents - CMD]]
 - [[kb/atomic/tests/2d7c471a_e887_4b78_b0dc_b0df1f2e0658-malicious_user_agents_nix|T1071.001: Malicious User Agents - Nix]]
 - [[kb/atomic/tests/81c13829_f6c9_45b8_85a6_053366d55297-malicious_user_agents_powershell|T1071.001: Malicious User Agents - Powershell]]
 
-## [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
+## [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
 
 - [[kb/atomic/tests/e7bf9802_2e78_4db9_93b5_181b7bcd37d7-dns_c2|T1071.004: DNS C2]]
 - [[kb/atomic/tests/1700f5d6_5a44_487b_84de_bc66f507b0a6-dns_large_query_volume|T1071.004: DNS Large Query Volume]]
 - [[kb/atomic/tests/fef31710_223a_40ee_8462_a396d6b66978-dns_long_domain_query|T1071.004: DNS Long Domain Query]]
 - [[kb/atomic/tests/3efc144e_1af8_46bb_8ca2_1376bb6db8b6-dns_regular_beaconing|T1071.004: DNS Regular Beaconing]]
 
-## [[kb/attack/techniques/T1072-software_deployment_tools|T1072]]
+## [[kb/attack/techniques/T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 
 - [[kb/atomic/tests/2169e8b0_2ee7_44cb_8a6e_d816a5db7d8a-deploy_7_zip_using_chocolatey|T1072: Deploy 7-Zip Using Chocolatey]]
 - [[kb/atomic/tests/e447b83b_a698_4feb_bed1_a7aaf45c3443-pdq_deploy_rat|T1072: PDQ Deploy RAT]]
 - [[kb/atomic/tests/b4988cad_6ed2_434d_ace5_ea2670782129-radmin_viewer_utility|T1072: Radmin Viewer Utility]]
 
-## [[kb/attack/techniques/T1074-data_staged|T1074.001]]
+## [[kb/attack/techniques/T1074-data_staged#^t1074001-local-data-staging|T1074.001: Local Data Staging]]
 
 - [[kb/atomic/tests/107706a5_6f9f_451a_adae_bab8c667829f-stage_data_from_discovery_bat|T1074.001: Stage data from Discovery.bat]]
 - [[kb/atomic/tests/39ce0303_ae16_4b9e_bb5b_4f53e8262066-stage_data_from_discovery_sh|T1074.001: Stage data from Discovery.sh]]
 - [[kb/atomic/tests/a57fbe4b_3440_452a_88a7_943531ac872a-zip_a_folder_with_powershell_for_staging_in_temp|T1074.001: Zip a Folder with PowerShell for Staging in Temp]]
 
-## [[kb/attack/techniques/T1078-valid_accounts|T1078.001]]
+## [[kb/attack/techniques/T1078-valid_accounts#^t1078001-default-accounts|T1078.001: Default Accounts]]
 
 - [[kb/atomic/tests/aa6cb8c4_b582_4f8e_b677_37733914abda-activate_guest_account|T1078.001: Activate Guest Account]]
 - [[kb/atomic/tests/0315bdff_4178_47e9_81e4_f31a6d23f7e4-enable_guest_account_on_macos|T1078.001: Enable Guest Account on macOS]]
 - [[kb/atomic/tests/99747561_ed8d_47f2_9c91_1e5fde1ed6e0-enable_guest_account_with_rdp_capability_and_admin_privileges|T1078.001: Enable Guest account with RDP capability and admin privileges]]
 
-## [[kb/attack/techniques/T1078-valid_accounts|T1078.003]]
+## [[kb/attack/techniques/T1078-valid_accounts#^t1078003-local-accounts|T1078.003: Local Accounts]]
 
 - [[kb/atomic/tests/433842ba_e796_4fd5_a14f_95d3a1970875-add_a_new_existing_user_to_the_admin_group_using_dseditgroup_utility_macos|T1078.003: Add a new/existing user to the admin group using dseditgroup utility - macOS]]
 - [[kb/atomic/tests/02a91c34_8a5b_4bed_87af_501103eb5357-create_local_account_linux|T1078.003: Create local account (Linux)]]
@@ -815,13 +815,13 @@
 - [[kb/atomic/tests/e9fdb899_a980_4ba4_934b_486ad22e22f4-winpwn_loot_local_credentials_safetykatz|T1078.003: WinPwn - Loot local Credentials - Safetykatz]]
 - [[kb/atomic/tests/9e9fd066_453d_442f_88c1_ad7911d32912-winpwn_loot_local_credentials_powerhell_kittie|T1078.003: WinPwn - Loot local Credentials - powerhell kittie]]
 
-## [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+## [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 - [[kb/atomic/tests/348f4d14_4bd3_4f6b_bd8a_61237f78b3ac-azure_persistence_automation_runbook_created_or_modified|T1078.004: Azure Persistence Automation Runbook Created or Modified]]
 - [[kb/atomic/tests/9fdd83fd_bd53_46e5_a716_9dec89c8ae8e-creating_gcp_service_account_and_service_account_key|T1078.004: Creating GCP Service Account and Service Account Key]]
 - [[kb/atomic/tests/3a159042_69e6_4398_9a69_3308a4841c85-gcp_create_custom_iam_role|T1078.004: GCP - Create Custom IAM Role]]
 
-## [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
+## [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
 
 - [[kb/atomic/tests/26a18d3d_f8bc_486b_9a33_d6df5d78a594-azure_security_scan_with_skyark|T1082: Azure Security Scan with SkyArk]]
 - [[kb/atomic/tests/f2f91612_d904_49d7_87c2_6c165d23bead-bios_information_discovery_through_registry|T1082: BIOS Information Discovery through Registry]]
@@ -864,7 +864,7 @@
 - [[kb/atomic/tests/70e13ef4_5a74_47e4_9d16_760b41b0e2db-operating_system_discovery|T1082: operating system discovery ]]
 - [[kb/atomic/tests/c8d40da9_31bd_47da_a497_11ea55d1ef6c-sysctl_to_gather_macos_hardware_info|T1082: sysctl to gather macOS hardware info]]
 
-## [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
+## [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 
 - [[kb/atomic/tests/4a233a40_caf7_4cf1_890a_c6331bbc72cf-esxi_enumerate_vmdks_available_on_an_esxi_host|T1083: ESXi - Enumerate VMDKs available on an ESXi Host]]
 - [[kb/atomic/tests/2158908e_b7ef_4c21_8a83_3ce4dd05a924-file_and_directory_discovery_powershell|T1083: File and Directory Discovery (PowerShell)]]
@@ -876,7 +876,7 @@
 - [[kb/atomic/tests/95a21323_770d_434c_80cd_6f6fbf7af432-recursive_enumerate_files_and_directories_by_powershell|T1083: Recursive Enumerate Files And Directories By Powershell]]
 - [[kb/atomic/tests/c6c34f61_1c3e_40fb_8a58_d017d88286d8-simulating_maze_directory_enumeration|T1083: Simulating MAZE Directory Enumeration]]
 
-## [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
+## [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
 
 - [[kb/atomic/tests/9762ac6e_aa60_4449_a2f0_cbbd0e1fd22c-esxi_local_account_discovery_via_esxcli|T1087.001: ESXi - Local Account Discovery via ESXCLI]]
 - [[kb/atomic/tests/f8aab3dd_5990_4bf8_b8ab_2226c951696f-enumerate_all_accounts_local|T1087.001: Enumerate all accounts (Local)]]
@@ -890,7 +890,7 @@
 - [[kb/atomic/tests/c955a599_3653_4fe5_b631_f11c00eb0397-view_accounts_with_uid_0|T1087.001: View accounts with UID 0]]
 - [[kb/atomic/tests/fed9be70_0186_4bde_9f8a_20945f9370c2-view_sudoers_access|T1087.001: View sudoers access]]
 
-## [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
+## [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 
 - [[kb/atomic/tests/a54d497e_8dbe_4558_9895_44944baa395f-account_enumeration_with_ldapdomaindump|T1087.002: Account Enumeration with LDAPDomainDump]]
 - [[kb/atomic/tests/096b6d2a_b63f_4100_8fa0_525da4cd25ca-active_directory_domain_search|T1087.002: Active Directory Domain Search]]
@@ -917,31 +917,31 @@
 - [[kb/atomic/tests/b8a563d4_a836_4993_a74e_0a19b8481bfe-wevtutil_discover_ntlm_users_remote|T1087.002: Wevtutil - Discover NTLM Users Remote]]
 - [[kb/atomic/tests/ce483c35_c74b_45a7_a670_631d1e69db3d-winpwn_generaldomaininfo|T1087.002: WinPwn - generaldomaininfo]]
 
-## [[kb/attack/techniques/T1090-proxy|T1090.001]]
+## [[kb/attack/techniques/T1090-proxy#^t1090001-internal-proxy|T1090.001: Internal Proxy]]
 
 - [[kb/atomic/tests/0ac21132_4485_4212_a681_349e8a6637cd-connection_proxy|T1090.001: Connection Proxy]]
 - [[kb/atomic/tests/648d68c1_8bcd_4486_9abe_71c6655b6a2c-connection_proxy_for_macos_ui|T1090.001: Connection Proxy for macOS UI]]
 - [[kb/atomic/tests/b8223ea9_4be2_44a6_b50a_9657a3d4e72a-portproxy_reg_key|T1090.001: portproxy reg key]]
 
-## [[kb/attack/techniques/T1090-proxy|T1090.003]]
+## [[kb/attack/techniques/T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 
 - [[kb/atomic/tests/14d55ca0_920e_4b44_8425_37eedd72b173-psiphon|T1090.003: Psiphon]]
 - [[kb/atomic/tests/5ff9d047_6e9c_4357_b39b_5cf89d9b59c7-tor_proxy_usage_debian_ubuntu_freebsd|T1090.003: Tor Proxy Usage - Debian/Ubuntu/FreeBSD]]
 - [[kb/atomic/tests/12631354_fdbc_4164_92be_402527e748da-tor_proxy_usage_macos|T1090.003: Tor Proxy Usage - MacOS]]
 - [[kb/atomic/tests/7b9d85e5_c4ce_4434_8060_d3de83595e69-tor_proxy_usage_windows|T1090.003: Tor Proxy Usage - Windows]]
 
-## [[kb/attack/techniques/T1091-replication_through_removable_media|T1091]]
+## [[kb/attack/techniques/T1091-replication_through_removable_media|T1091: Replication Through Removable Media]]
 
 - [[kb/atomic/tests/d44b7297_622c_4be8_ad88_ec40d7563c75-usb_malware_spread_simulation|T1091: USB Malware Spread Simulation]]
 
-## [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095]]
+## [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095: Non-Application Layer Protocol]]
 
 - [[kb/atomic/tests/0268e63c_e244_42db_bef7_72a9e59fc1fc-icmp_c2|T1095: ICMP C2]]
 - [[kb/atomic/tests/8e139e1f_1f3a_4be7_901d_afae9738c064-linux_icmp_reverse_shell_using_icmp_cnc|T1095: Linux ICMP Reverse Shell using icmp-cnc]]
 - [[kb/atomic/tests/bcf0d1c1_3f6a_4847_b1c9_7ed4ea321f37-netcat_c2|T1095: Netcat C2]]
 - [[kb/atomic/tests/3e0e0e7f_6aa2_4a61_b61d_526c2cc9330e-powercat_c2|T1095: Powercat C2]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+## [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 - [[kb/atomic/tests/8822c3b0_d9f9_4daf_a043_49f110a31122-aws_create_a_group_and_add_a_user_to_that_group|T1098: AWS - Create a group and add a user to that group]]
 - [[kb/atomic/tests/5598f7cb_cf43_455e_883a_f6008c5d46af-admin_account_manipulate|T1098: Admin Account Manipulate]]
@@ -961,26 +961,26 @@
 - [[kb/atomic/tests/7ece1dea_49f1_4d62_bdcc_5801e3292510-gcp_delete_service_account_key|T1098: GCP - Delete Service Account Key]]
 - [[kb/atomic/tests/d5b886d9_d1c7_4b6e_a7b0_460041bf2823-password_change_on_directory_service_restore_mode_dsrm_account|T1098: Password Change on Directory Service Restore Mode (DSRM) Account]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.001]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098001-additional-cloud-credentials|T1098.001: Additional Cloud Credentials]]
 
 - [[kb/atomic/tests/8822c3b0_d9f9_4daf_a043_491160a31122-aws_create_access_key_and_secret_key|T1098.001: AWS - Create Access Key and Secret Key]]
 - [[kb/atomic/tests/a12b5531_acab_4618_a470_0dafb294a87a-azure_ad_application_hijacking_app_registration|T1098.001: Azure AD Application Hijacking - App Registration]]
 - [[kb/atomic/tests/b8e747c3_bdf7_4d71_bce2_f1df2a057406-azure_ad_application_hijacking_service_principal|T1098.001: Azure AD Application Hijacking - Service Principal]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.002]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098002-additional-email-delegate-permissions|T1098.002: Additional Email Delegate Permissions]]
 
 - [[kb/atomic/tests/17d046be_fdd0_4cbb_b5c7_55c85d9d0714-exo_full_access_mailbox_permission_granted_to_a_user|T1098.002: EXO - Full access mailbox permission granted to a user]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.003]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098003-additional-cloud-roles|T1098.003: Additional Cloud Roles]]
 
 - [[kb/atomic/tests/4d77f913_56f5_4a14_b4b1_bf7bb24298ad-azure_ad_add_company_administrator_role_to_a_user|T1098.003: Azure AD - Add Company Administrator Role to a user]]
 - [[kb/atomic/tests/14f3af20_61f1_45b8_ad31_4637815f3f44-simulate_post_bec_persistence_via_user_password_reset_followed_by_user_added_to_company_administrator_role|T1098.003: Simulate - Post BEC persistence via user password reset followed by user added to company administrator role]]
 
-## [[kb/attack/techniques/T1098-account_manipulation|T1098.004]]
+## [[kb/attack/techniques/T1098-account_manipulation#^t1098004-ssh-authorized-keys|T1098.004: SSH Authorized Keys]]
 
 - [[kb/atomic/tests/342cc723_127c_4d3a_8292_9c0c6b4ecadc-modify_ssh_authorized_keys|T1098.004: Modify SSH Authorized Keys]]
 
-## [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+## [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 - [[kb/atomic/tests/66ee226e_64cb_4dae_80e3_5bf5763e4a51-arbitrary_file_download_using_the_notepad_gup_exe_binary|T1105: Arbitrary file download using the Notepad++ GUP.exe binary]]
 - [[kb/atomic/tests/2b080b99_0deb_4d51_af0f_833d37c4ca6a-curl_download_file|T1105: Curl Download File]]
@@ -1022,7 +1022,7 @@
 - [[kb/atomic/tests/fa5a2759_41d7_4e13_a19c_e8f28a53566f-svchost_writing_a_file_to_a_unc_path|T1105: svchost writing a file to a UNC path]]
 - [[kb/atomic/tests/c99a829f_0bb8_4187_b2c6_d47d1df74cab-whois_file_download|T1105: whois file download]]
 
-## [[kb/attack/techniques/T1106-native_api|T1106]]
+## [[kb/attack/techniques/T1106-native_api|T1106: Native API]]
 
 - [[kb/atomic/tests/99be2089_c52d_4a4a_b5c3_261ee42c8b62-execution_through_api_createprocess|T1106: Execution through API - CreateProcess]]
 - [[kb/atomic/tests/ae56083f_28d0_417d_84da_df4242da1f7c-run_shellcode_via_syscall_in_go|T1106: Run Shellcode via Syscall in Go]]
@@ -1030,7 +1030,7 @@
 - [[kb/atomic/tests/ce4e76e6_de70_4392_9efe_b281fc2b4087-winpwn_get_system_shell_pop_system_shell_using_createprocess_technique|T1106: WinPwn - Get SYSTEM shell - Pop System Shell using CreateProcess technique]]
 - [[kb/atomic/tests/e1f93a06_1649_4f07_89a8_f57279a7d60e-winpwn_get_system_shell_pop_system_shell_using_namedpipe_impersonation_technique|T1106: WinPwn - Get SYSTEM shell - Pop System Shell using NamedPipe Impersonation technique]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110.001]]
+## [[kb/attack/techniques/T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
 
 - [[kb/atomic/tests/c2969434_672b_4ec8_8df0_bbb91f40e250-brute_force_credentials_of_single_active_directory_domain_user_via_ldap_against_domain_controller_ntlm_or_kerberos|T1110.001: Brute Force Credentials of single Active Directory domain user via LDAP against domain controller (NTLM or Kerberos)]]
 - [[kb/atomic/tests/09480053_2f98_4854_be6e_71ae5f672224-brute_force_credentials_of_single_active_directory_domain_users_via_smb|T1110.001: Brute Force Credentials of single Active Directory domain users via SMB]]
@@ -1041,11 +1041,11 @@
 - [[kb/atomic/tests/abcde488_e083_4ee7_bc85_a5684edd7541-sudo_brute_force_freebsd|T1110.001: SUDO Brute Force - FreeBSD]]
 - [[kb/atomic/tests/4097bc00_5eeb_4d56_aaf9_287d60351d95-sudo_brute_force_redhat|T1110.001: SUDO Brute Force - Redhat]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110.002]]
+## [[kb/attack/techniques/T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]]
 
 - [[kb/atomic/tests/6d27df5d_69d4_4c91_bc33_5983ffe91692-password_cracking_with_hashcat|T1110.002: Password Cracking with Hashcat]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110.003]]
+## [[kb/attack/techniques/T1110-brute_force#^t1110003-password-spraying|T1110.003: Password Spraying]]
 
 - [[kb/atomic/tests/9c10d16b_20b1_403a_8e67_50ef7117ed4e-aws_password_spray_an_aws_using_goawsconsolespray|T1110.003: AWS - Password Spray an AWS using GoAWSConsoleSpray]]
 - [[kb/atomic/tests/263ae743_515f_4786_ac7d_41ef3a0d4b2b-password_spray_domainpasswordspray|T1110.003: Password Spray (DomainPasswordSpray)]]
@@ -1057,14 +1057,14 @@
 - [[kb/atomic/tests/a8aa2d3e_1c52_4016_bc73_0f8854cfa80a-password_spray_all_azure_ad_users_with_a_single_password|T1110.003: Password spray all Azure AD users with a single password]]
 - [[kb/atomic/tests/5ccf4bbd_7bf6_43fc_83ac_d9e38aff1d82-winpwn_domainpasswordspray_attacks|T1110.003: WinPwn - DomainPasswordSpray Attacks]]
 
-## [[kb/attack/techniques/T1110-brute_force|T1110.004]]
+## [[kb/attack/techniques/T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
 
 - [[kb/atomic/tests/4852c630_87a9_409b_bb5e_5dc12c9ebcde-brute_force_credential_stuffing_using_kerbrute_tool|T1110.004: Brute Force:Credential Stuffing using Kerbrute Tool]]
 - [[kb/atomic/tests/a790d50e_7ebf_48de_8daa_d9367e0911d4-ssh_credential_stuffing_from_freebsd|T1110.004: SSH Credential Stuffing From FreeBSD]]
 - [[kb/atomic/tests/4f08197a_2a8a_472d_9589_cd2895ef22ad-ssh_credential_stuffing_from_linux|T1110.004: SSH Credential Stuffing From Linux]]
 - [[kb/atomic/tests/d546a3d9_0be5_40c7_ad82_5a7d79e1b66b-ssh_credential_stuffing_from_macos|T1110.004: SSH Credential Stuffing From MacOS]]
 
-## [[kb/attack/techniques/T1112-modify_registry|T1112]]
+## [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 - [[kb/atomic/tests/599f3b5c_0323_44ed_bb63_4551623bf675-abusing_mycomputer_disk_backup_path_for_persistence|T1112: Abusing MyComputer Disk Backup Path for Persistence]]
 - [[kb/atomic/tests/f2915249_4485_42e2_96b7_9bf34328d497-abusing_mycomputer_disk_cleanup_path_for_persistence|T1112: Abusing MyComputer Disk Cleanup Path for Persistence]]
@@ -1157,7 +1157,7 @@
 - [[kb/atomic/tests/795d3248_0394_4d4d_8e86_4e8df2a2693f-windows_modify_show_compress_color_and_info_tip_registry|T1112: Windows Modify Show Compress Color And Info Tip Registry]]
 - [[kb/atomic/tests/95b25212_91a7_42ff_9613_124aca6845a8-windows_powershell_logging_disabled|T1112: Windows Powershell Logging Disabled]]
 
-## [[kb/attack/techniques/T1113-screen_capture|T1113]]
+## [[kb/attack/techniques/T1113-screen_capture|T1113: Screen Capture]]
 
 - [[kb/atomic/tests/9cd1cccb_91e4_4550_9139_e20a586fcea1-capture_linux_desktop_using_import_tool|T1113: Capture Linux Desktop using Import Tool]]
 - [[kb/atomic/tests/18397d87_38aa_4443_a098_8a48a8ca5d8d-capture_linux_desktop_using_import_tool_freebsd|T1113: Capture Linux Desktop using Import Tool (freebsd)]]
@@ -1170,19 +1170,19 @@
 - [[kb/atomic/tests/8206dd0c_faf6_4d74_ba13_7fbe13dce6ac-x_windows_capture|T1113: X Windows Capture]]
 - [[kb/atomic/tests/562f3bc2_74e8_46c5_95c7_0e01f9ccc65c-x_windows_capture_freebsd|T1113: X Windows Capture (freebsd)]]
 
-## [[kb/attack/techniques/T1114-email_collection|T1114.001]]
+## [[kb/attack/techniques/T1114-email_collection#^t1114001-local-email-collection|T1114.001: Local Email Collection]]
 
 - [[kb/atomic/tests/3f1b5096_0139_4736_9b78_19bcb02bb1cb-email_collection_with_powershell_get_inbox|T1114.001: Email Collection with PowerShell Get-Inbox]]
 
-## [[kb/attack/techniques/T1114-email_collection|T1114.002]]
+## [[kb/attack/techniques/T1114-email_collection#^t1114002-remote-email-collection|T1114.002: Remote Email Collection]]
 
 - [[kb/atomic/tests/36657d95_d9d6_4fbf_8a31_f4085607bafd-office365_remote_mail_collected|T1114.002: Office365 - Remote Mail Collected]]
 
-## [[kb/attack/techniques/T1114-email_collection|T1114.003]]
+## [[kb/attack/techniques/T1114-email_collection#^t1114003-email-forwarding-rule|T1114.003: Email Forwarding Rule]]
 
 - [[kb/atomic/tests/3234117e_151d_4254_9150_3d0bac41e38c-office365_email_forwarding|T1114.003: Office365 - Email Forwarding]]
 
-## [[kb/attack/techniques/T1115-clipboard_data|T1115]]
+## [[kb/attack/techniques/T1115-clipboard_data|T1115: Clipboard Data]]
 
 - [[kb/atomic/tests/ee363e53_b083_4230_aff3_f8d955f2d5bb-add_or_copy_content_to_clipboard_with_xclip|T1115: Add or copy content to clipboard with xClip]]
 - [[kb/atomic/tests/9c8d5a72_9c98_48d3_b9bf_da2cc43bdf52-collect_clipboard_data_via_vba|T1115: Collect Clipboard Data via VBA]]
@@ -1190,27 +1190,27 @@
 - [[kb/atomic/tests/1ac2247f_65f8_4051_b51f_b0ccdfaaa5ff-execute_commands_from_clipboard|T1115: Execute commands from clipboard]]
 - [[kb/atomic/tests/0cd14633_58d4_4422_9ede_daa2c9474ae7-utilize_clipboard_to_store_or_execute_commands_from|T1115: Utilize Clipboard to store or execute commands from]]
 
-## [[kb/attack/techniques/T1119-automated_collection|T1119]]
+## [[kb/attack/techniques/T1119-automated_collection|T1119: Automated Collection]]
 
 - [[kb/atomic/tests/cb379146_53f1_43e0_b884_7ce2c635ff5b-automated_collection_command_prompt|T1119: Automated Collection Command Prompt]]
 - [[kb/atomic/tests/634bd9b9_dc83_4229_b19f_7f83ba9ad313-automated_collection_powershell|T1119: Automated Collection PowerShell]]
 - [[kb/atomic/tests/aa1180e2_f329_4e1e_8625_2472ec0bfaf3-recon_information_for_export_with_command_prompt|T1119: Recon information for export with Command Prompt]]
 - [[kb/atomic/tests/c3f6d794_50dd_482f_b640_0384fbb7db26-recon_information_for_export_with_powershell|T1119: Recon information for export with PowerShell]]
 
-## [[kb/attack/techniques/T1120-peripheral_device_discovery|T1120]]
+## [[kb/attack/techniques/T1120-peripheral_device_discovery|T1120: Peripheral Device Discovery]]
 
 - [[kb/atomic/tests/5c876daf_db1e_41cf_988d_139a7443ccd4-get_printer_device_list_via_powershell_command|T1120: Get Printer Device List via PowerShell Command]]
 - [[kb/atomic/tests/424e18fd_48b8_4201_8d3a_bf591523a686-peripheral_device_discovery_via_fsutil|T1120: Peripheral Device Discovery via fsutil]]
 - [[kb/atomic/tests/2cb4dbf2_2dca_4597_8678_4d39d207a3a5-win32_pnpentity_hardware_inventory|T1120: Win32_PnPEntity Hardware Inventory]]
 - [[kb/atomic/tests/cb6e76ca_861e_4a7f_be08_564caa3e6f75-winpwn_printercheck|T1120: WinPwn - printercheck]]
 
-## [[kb/attack/techniques/T1123-audio_capture|T1123]]
+## [[kb/attack/techniques/T1123-audio_capture|T1123: Audio Capture]]
 
 - [[kb/atomic/tests/7a21cce2_6ada_4f7c_afd9_e1e9c481e44a-registry_artefact_when_application_use_microphone|T1123: Registry artefact when application use microphone]]
 - [[kb/atomic/tests/c7a0bb71_70ce_4a53_b115_881f241b795b-using_quicktime_player|T1123: using Quicktime Player]]
 - [[kb/atomic/tests/9c3ad250_b185_4444_b5a9_d69218a10c95-using_device_audio_capture_commandlet|T1123: using device audio capture commandlet]]
 
-## [[kb/attack/techniques/T1124-system_time_discovery|T1124]]
+## [[kb/attack/techniques/T1124-system_time_discovery|T1124: System Time Discovery]]
 
 - [[kb/atomic/tests/25c5d1f1_a24b_494a_a6c5_5f50a1ae7f47-discover_system_time_zone_via_registry|T1124: Discover System Time Zone via Registry]]
 - [[kb/atomic/tests/20aba24b_e61f_4b26_b4ce_4784f763ca20-system_time_discovery|T1124: System Time Discovery]]
@@ -1219,35 +1219,35 @@
 - [[kb/atomic/tests/f449c933_0891_407f_821e_7916a21a1a6f-system_time_discovery_in_freebsd_macos|T1124: System Time Discovery in FreeBSD/macOS]]
 - [[kb/atomic/tests/53ead5db_7098_4111_bb3f_563be390e72e-system_time_with_windows_time_command|T1124: System Time with Windows time Command]]
 
-## [[kb/attack/techniques/T1125-video_capture|T1125]]
+## [[kb/attack/techniques/T1125-video_capture|T1125: Video Capture]]
 
 - [[kb/atomic/tests/6581e4a7_42e3_43c5_a0d2_5a0d62f9702a-registry_artefact_when_application_use_webcam|T1125: Registry artefact when application use webcam]]
 
-## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 - [[kb/atomic/tests/3fc9fea2_871d_414d_8ef6_02e85e322b80-lolbin_jsc_exe_compile_javascript_to_dll|T1127: Lolbin Jsc.exe compile javascript to dll]]
 - [[kb/atomic/tests/1ec1c269_d6bd_49e7_b71b_a461f7fa7bc8-lolbin_jsc_exe_compile_javascript_to_exe|T1127: Lolbin Jsc.exe compile javascript to exe]]
 
-## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+## [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 - [[kb/atomic/tests/58742c0f_cb01_44cd_a60b_fb26e8871c93-msbuild_bypass_using_inline_tasks_c|T1127.001: MSBuild Bypass Using Inline Tasks (C#)]]
 - [[kb/atomic/tests/ab042179_c0c5_402f_9bc8_42741f5ce359-msbuild_bypass_using_inline_tasks_vb|T1127.001: MSBuild Bypass Using Inline Tasks (VB)]]
 
-## [[kb/attack/techniques/T1129-shared_modules|T1129]]
+## [[kb/attack/techniques/T1129-shared_modules|T1129: Shared Modules]]
 
 - [[kb/atomic/tests/7f843046_abf2_443f_b880_07a83cf968ec-esxi_install_a_custom_vib_on_an_esxi_host|T1129: ESXi - Install a custom VIB on an ESXi host]]
 
-## [[kb/attack/techniques/T1132-data_encoding|T1132.001]]
+## [[kb/attack/techniques/T1132-data_encoding#^t1132001-standard-encoding|T1132.001: Standard Encoding]]
 
 - [[kb/atomic/tests/2d97c626_7652_449e_a986_b02d9051c298-base64_encoded_data_freebsd|T1132.001: Base64 Encoded data (freebsd)]]
 - [[kb/atomic/tests/1164f70f_9a88_4dff_b9ff_dc70e7bf0c25-base64_encoded_data|T1132.001: Base64 Encoded data.]]
 - [[kb/atomic/tests/c3ed6d2a_e3ad_400d_ad78_bbfdbfeacc08-xor_encoded_data|T1132.001: XOR Encoded data.]]
 
-## [[kb/attack/techniques/T1133-external_remote_services|T1133]]
+## [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
 
 - [[kb/atomic/tests/4c8db261_a58b_42a6_a866_0a294deedde4-running_chrome_vpn_extensions_via_the_registry_2_vpn_extension|T1133: Running Chrome VPN Extensions via the Registry 2 vpn extension]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.001]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134001-token-impersonation-theft|T1134.001: Token Impersonation/Theft]]
 
 - [[kb/atomic/tests/9c6d799b_c111_4749_a42f_ec2f8cb51448-bad_potato|T1134.001: Bad Potato]]
 - [[kb/atomic/tests/f095e373_b936_4eb4_8d22_f47ccbfbe64a-juicy_potato|T1134.001: Juicy Potato]]
@@ -1255,12 +1255,12 @@
 - [[kb/atomic/tests/90db9e27_8e7c_4c04_b602_a45927884966-named_pipe_client_impersonation|T1134.001: Named pipe client impersonation]]
 - [[kb/atomic/tests/34f0a430_9d04_4d98_bcb5_1989f14719f0-sedebugprivilege_token_duplication|T1134.001: `SeDebugPrivilege` token duplication]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.002]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134002-create-process-with-token|T1134.002: Create Process with Token]]
 
 - [[kb/atomic/tests/dbf4f5a9_b8e0_46a3_9841_9ad71247239e-access_token_manipulation|T1134.002: Access Token Manipulation]]
 - [[kb/atomic/tests/ccf4ac39_ec93_42be_9035_90e2f26bcd92-winpwn_get_system_shell_pop_system_shell_using_token_manipulation_technique|T1134.002: WinPwn - Get SYSTEM shell - Pop System Shell using Token Manipulation technique]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.004]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134004-parent-pid-spoofing|T1134.004: Parent PID Spoofing]]
 
 - [[kb/atomic/tests/14920ebd_1d61_491a_85e0_fe98efe37f25-parent_pid_spoofing_spawn_from_current_process|T1134.004: Parent PID Spoofing - Spawn from Current Process]]
 - [[kb/atomic/tests/2988133e_561c_4e42_a15f_6281e6a9b2db-parent_pid_spoofing_spawn_from_new_process|T1134.004: Parent PID Spoofing - Spawn from New Process]]
@@ -1268,11 +1268,11 @@
 - [[kb/atomic/tests/e9f2b777_3123_430b_805d_5cedc66ab591-parent_pid_spoofing_spawn_from_svchost_exe|T1134.004: Parent PID Spoofing - Spawn from svchost.exe]]
 - [[kb/atomic/tests/069258f4_2162_46e9_9a25_c9c6c56150d2-parent_pid_spoofing_using_powershell|T1134.004: Parent PID Spoofing using PowerShell]]
 
-## [[kb/attack/techniques/T1134-access_token_manipulation|T1134.005]]
+## [[kb/attack/techniques/T1134-access_token_manipulation#^t1134005-sid-history-injection|T1134.005: SID-History Injection]]
 
 - [[kb/atomic/tests/6bef32e5_9456_4072_8f14_35566fb85401-injection_sid_history_with_mimikatz|T1134.005: Injection SID-History with mimikatz]]
 
-## [[kb/attack/techniques/T1135-network_share_discovery|T1135]]
+## [[kb/attack/techniques/T1135-network_share_discovery|T1135: Network Share Discovery]]
 
 - [[kb/atomic/tests/d1fa2a69_b0a2_4e8a_9112_529b00c19a41-enumerate_all_network_shares_with_sharpshares|T1135: Enumerate All Network Shares with SharpShares]]
 - [[kb/atomic/tests/b19d74b7_5e72_450a_8499_82e49e379d1a-enumerate_all_network_shares_with_snaffler|T1135: Enumerate All Network Shares with Snaffler]]
@@ -1287,7 +1287,7 @@
 - [[kb/atomic/tests/ab39a04f_0c93_4540_9ff2_83f862c385ae-view_available_share_drives|T1135: View available share drives]]
 - [[kb/atomic/tests/987901d1_5b87_4558_a6d9_cffcabc638b8-winpwn_shareenumeration|T1135: WinPwn - shareenumeration]]
 
-## [[kb/attack/techniques/T1136-create_account|T1136.001]]
+## [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 - [[kb/atomic/tests/d9efa6c7_6518_42b2_809a_4f2a8e242b9b-create_a_linux_user_via_kubectl_in_a_pod|T1136.001: Create a Linux user via kubectl in a Pod]]
 - [[kb/atomic/tests/fda74566_a604_4581_a4cc_fbbe21d66559-create_a_new_windows_admin_user|T1136.001: Create a new Windows admin user]]
@@ -1300,7 +1300,7 @@
 - [[kb/atomic/tests/40d8eabd_e394_46f6_8785_b9bfa1d011d2-create_a_user_account_on_a_linux_system|T1136.001: Create a user account on a Linux system]]
 - [[kb/atomic/tests/01993ba5_1da3_4e15_a719_b690d4f0f0b2-create_a_user_account_on_a_macos_system|T1136.001: Create a user account on a MacOS system]]
 
-## [[kb/attack/techniques/T1136-create_account|T1136.002]]
+## [[kb/attack/techniques/T1136-create_account#^t1136002-domain-account|T1136.002: Domain Account]]
 
 - [[kb/atomic/tests/562aa072_524e_459a_ba2b_91f1afccf5ab-active_directory_create_admin_account|T1136.002: Active Directory Create Admin Account]]
 - [[kb/atomic/tests/8c992cb3_a46e_4fd5_b005_b1bab185af31-active_directory_create_user_account_non_elevated|T1136.002: Active Directory Create User Account (Non-elevated)]]
@@ -1308,29 +1308,29 @@
 - [[kb/atomic/tests/fcec2963_9951_4173_9bfa_98d8b7834e62-create_a_new_windows_domain_admin_user|T1136.002: Create a new Windows domain admin user]]
 - [[kb/atomic/tests/dc7726d2_8ccb_4cc6_af22_0d5afb53a548-create_a_new_account_similar_to_anonymous_logon|T1136.002: Create a new account similar to ANONYMOUS LOGON]]
 
-## [[kb/attack/techniques/T1136-create_account|T1136.003]]
+## [[kb/attack/techniques/T1136-create_account#^t1136003-cloud-account|T1136.003: Cloud Account]]
 
 - [[kb/atomic/tests/8d1c2368_b503_40c9_9057_8e42f21c58ad-aws_create_a_new_iam_user|T1136.003: AWS - Create a new IAM user]]
 - [[kb/atomic/tests/e62d23ef_3153_4837_8625_fa4a3829134d-azure_ad_create_a_new_user|T1136.003: Azure AD - Create a new user]]
 - [[kb/atomic/tests/228c7498_be31_48e9_83b7_9cb906504ec8-azure_ad_create_a_new_user_via_azure_cli|T1136.003: Azure AD - Create a new user via Azure CLI]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137]]
+## [[kb/attack/techniques/T1137-office_application_startup|T1137: Office Application Startup]]
 
 - [[kb/atomic/tests/bfe6ac15_c50b_4c4f_a186_0fc6b8ba936c-office_application_startup_outlook_as_a_c2|T1137: Office Application Startup - Outlook as a C2]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.001]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137001-office-template-macros|T1137.001: Office Template Macros]]
 
 - [[kb/atomic/tests/940db09e_80b6_4dd0_8d4d_7764f89b47a8-injecting_a_macro_into_the_word_normal_dotm_template_for_persistence_via_powershell|T1137.001: Injecting a Macro into the Word Normal.dotm Template for Persistence via PowerShell]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.002]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137002-office-test|T1137.002: Office Test]]
 
 - [[kb/atomic/tests/c3e35b58_fe1c_480b_b540_7600fb612563-office_application_startup_test_persistence_hkcu|T1137.002: Office Application Startup Test Persistence (HKCU)]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.004]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137004-outlook-home-page|T1137.004: Outlook Home Page]]
 
 - [[kb/atomic/tests/7a91ad51_e6d2_4d43_9471_f26362f5738e-install_outlook_home_page_persistence|T1137.004: Install Outlook Home Page Persistence]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.005]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137005-outlook-rules|T1137.005: Outlook Rules]]
 
 - [[kb/atomic/tests/b0bd3d76_a57c_4699_83f4_8cd798dd09bd-outlook_rule_auto_forward_emails_to_external_address_via_com_object|T1137.005: Outlook Rule - Auto-Forward Emails to External Address via COM Object]]
 - [[kb/atomic/tests/cb814cf8_24f2_41dc_a1cd_1c2073276d4a-outlook_rule_create_rule_with_obfuscated_blank_name_mapi_evasion|T1137.005: Outlook Rule - Create Rule with Obfuscated Blank Name (MAPI Evasion)]]
@@ -1338,7 +1338,7 @@
 - [[kb/atomic/tests/ffadc988_b682_4a68_bd7e_4803666be637-outlook_rule_subject_trigger_with_deletepermanently_action_via_com_object|T1137.005: Outlook Rule - Subject Trigger with DeletePermanently Action via COM Object]]
 - [[kb/atomic/tests/5ff5249a_5807_480e_ab52_c430497a8a25-outlook_rules_enumerate_existing_rules_via_powershell_com_object|T1137.005: Outlook Rules - Enumerate Existing Rules via PowerShell COM Object]]
 
-## [[kb/attack/techniques/T1137-office_application_startup|T1137.006]]
+## [[kb/attack/techniques/T1137-office_application_startup#^t1137006-add-ins|T1137.006: Add-ins]]
 
 - [[kb/atomic/tests/441b1a0f_a771_428a_8af0_e99e4698cda3-code_executed_via_excel_add_in_file_xll|T1137.006: Code Executed Via Excel Add-in File (XLL)]]
 - [[kb/atomic/tests/9c307886_9fef_41d5_b344_073a0f5b2f5f-persistent_code_execution_via_excel_add_in_file_xll|T1137.006: Persistent Code Execution Via Excel Add-in File (XLL)]]
@@ -1346,7 +1346,7 @@
 - [[kb/atomic/tests/f89e58f9_2b49_423b_ac95_1f3e7cfd8277-persistent_code_execution_via_powerpoint_vba_add_in_file_ppam|T1137.006: Persistent Code Execution Via PowerPoint VBA Add-in File (PPAM)]]
 - [[kb/atomic/tests/95408a99_4fa7_4cd6_a7ef_cb65f86351cf-persistent_code_execution_via_word_add_in_file_wll|T1137.006: Persistent Code Execution Via Word Add-in File (WLL)]]
 
-## [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+## [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 - [[kb/atomic/tests/6604d964_b9f6_4d4b_8ce8_499829a14d0a-base64_decoding_with_perl|T1140: Base64 decoding with Perl]]
 - [[kb/atomic/tests/356dc0e8_684f_4428_bb94_9313998ad608-base64_decoding_with_python|T1140: Base64 decoding with Python]]
@@ -1360,35 +1360,35 @@
 - [[kb/atomic/tests/3a15c372_67c1_4430_ac8e_ec06d641ce4d-linux_base64_encoded_shebang_in_cli|T1140: Linux Base64 Encoded Shebang in CLI]]
 - [[kb/atomic/tests/c3b65cd5_ee51_4e98_b6a3_6cbdec138efc-xor_decoding_and_command_execution_using_python|T1140: XOR decoding and command execution using Python]]
 
-## [[kb/attack/techniques/T1176-software_extensions|T1176]]
+## [[kb/attack/techniques/T1176-software_extensions|T1176: Software Extensions]]
 
 - [[kb/atomic/tests/3ecd790d_2617_4abf_9a8c_4e8d47da9ee1-chrome_chromium_developer_mode|T1176: Chrome/Chromium (Developer Mode)]]
 - [[kb/atomic/tests/3d456e2b_a7db_4af8_b5b3_720e7c4d9da5-edge_chromium_addon_vpn|T1176: Edge Chromium Addon - VPN]]
 - [[kb/atomic/tests/cb790029_17e6_4c43_b96f_002ce5f10938-firefox|T1176: Firefox]]
 - [[kb/atomic/tests/7a714703_9f6b_461c_b06d_e6aeac650f27-google_chrome_load_unpacked_extension_with_command_line|T1176: Google Chrome Load Unpacked Extension With Command Line]]
 
-## [[kb/attack/techniques/T1187-forced_authentication|T1187]]
+## [[kb/attack/techniques/T1187-forced_authentication|T1187: Forced Authentication]]
 
 - [[kb/atomic/tests/485ce873_2e65_4706_9c7e_ae3ab9e14213-petitpotam|T1187: PetitPotam]]
 - [[kb/atomic/tests/81cfdd7f_1f41_4cc5_9845_bb5149438e37-trigger_an_authenticated_rpc_call_to_a_target_server_with_no_sign_flag_set|T1187: Trigger an authenticated RPC call to a target server with no Sign flag set]]
 - [[kb/atomic/tests/7f06b25c_799e_40f1_89db_999c9cc84317-winpwn_powersharppack_retrieving_ntlm_hashes_without_touching_lsass|T1187: WinPwn - PowerSharpPack - Retrieving NTLM Hashes without Touching LSASS]]
 
-## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195]]
+## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195: Supply Chain Compromise]]
 
 - [[kb/atomic/tests/82a9f001_94c5_495e_9ed5_f530dbded5e2-octopus_scanner_malware_open_source_supply_chain|T1195: Octopus Scanner Malware Open Source Supply Chain]]
 
-## [[kb/attack/techniques/T1195-supply_chain_compromise|T1195.002]]
+## [[kb/attack/techniques/T1195-supply_chain_compromise#^t1195002-compromise-software-supply-chain|T1195.002: Compromise Software Supply Chain]]
 
 - [[kb/atomic/tests/a9604672_cd46_493b_b58f_fd4124c22dd3-simulate_npm_package_installation_on_a_linux_system|T1195.002: Simulate npm package installation on a Linux system]]
 
-## [[kb/attack/techniques/T1197-bits_jobs|T1197]]
+## [[kb/attack/techniques/T1197-bits_jobs|T1197: BITS Jobs]]
 
 - [[kb/atomic/tests/afb5e09e_e385_4dee_9a94_6ee60979d114-bits_download_using_desktopimgdownldr_exe_cmd|T1197: Bits download using desktopimgdownldr.exe (cmd)]]
 - [[kb/atomic/tests/f63b8bc4_07e5_4112_acba_56f646f3f0bc-bitsadmin_download_powershell|T1197: Bitsadmin Download (PowerShell)]]
 - [[kb/atomic/tests/3c73d728_75fb_4180_a12f_6712864d7421-bitsadmin_download_cmd|T1197: Bitsadmin Download (cmd)]]
 - [[kb/atomic/tests/62a06ec5_5754_47d2_bcfc_123d8314c6ae-persist_download_execute|T1197: Persist, Download, & Execute]]
 
-## [[kb/attack/techniques/T1201-password_policy_discovery|T1201]]
+## [[kb/attack/techniques/T1201-password_policy_discovery|T1201: Password Policy Discovery]]
 
 - [[kb/atomic/tests/b2698b33_984c_4a1c_93bb_e4ba72a0babb-enumerate_active_directory_password_policy_with_get_addefaultdomainpasswordpolicy|T1201: Enumerate Active Directory Password Policy with get-addefaultdomainpasswordpolicy]]
 - [[kb/atomic/tests/15330820_d405_450b_bd08_16b5be5be9f4-examine_aws_password_policy|T1201: Examine AWS Password Policy]]
@@ -1403,7 +1403,7 @@
 - [[kb/atomic/tests/3177f4da_3d4b_4592_8bdc_aa23d0b2e843-get_domainpolicy_with_powerview|T1201: Get-DomainPolicy with PowerView]]
 - [[kb/atomic/tests/510cc97f_56ac_4cd3_a198_d3218c23d889-use_of_secedit_exe_to_export_the_local_security_policy_including_the_password_policy|T1201: Use of SecEdit.exe to export the local security policy (including the password policy)]]
 
-## [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+## [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 - [[kb/atomic/tests/de323a93_2f18_4bd5_ba60_d6fca6aeff76-indirect_command_execution_runmru_dialog|T1202: Indirect Command Execution - RunMRU Dialog]]
 - [[kb/atomic/tests/0fd14730_6226_4f5e_8d67_43c65f1be940-indirect_command_execution_scriptrunner_exe|T1202: Indirect Command Execution - Scriptrunner.exe]]
@@ -1411,7 +1411,7 @@
 - [[kb/atomic/tests/8b34a448_40d9_4fc3_a8c8_4bb286faf7dc-indirect_command_execution_forfiles_exe|T1202: Indirect Command Execution - forfiles.exe]]
 - [[kb/atomic/tests/cecfea7a_5f03_4cdd_8bc8_6f7c22862440-indirect_command_execution_pcalua_exe|T1202: Indirect Command Execution - pcalua.exe]]
 
-## [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+## [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 - [[kb/atomic/tests/3f3120f0_7e50_4be2_88ae_54c61230cb9f-clickfix_campaign_abuse_runmru_to_launch_mshta_via_powershell|T1204.002: ClickFix Campaign - Abuse RunMRU to Launch mshta via PowerShell]]
 - [[kb/atomic/tests/4ea1fc97_8a46_4b4e_ba48_af43d2a98052-excel_4_macro|T1204.002: Excel 4 Macro]]
@@ -1427,24 +1427,24 @@
 - [[kb/atomic/tests/02f35d62_9fdc_4a97_b899_a5d9a876d295-potentially_unwanted_applications_pua|T1204.002: Potentially Unwanted Applications (PUA)]]
 - [[kb/atomic/tests/22386853_f68d_4b50_a362_de235127c443-simulate_click_fix_via_downloaded_bat_file|T1204.002: Simulate Click-Fix via Downloaded BAT File]]
 
-## [[kb/attack/techniques/T1204-user_execution|T1204.003]]
+## [[kb/attack/techniques/T1204-user_execution#^t1204003-malicious-image|T1204.003: Malicious Image]]
 
 - [[kb/atomic/tests/e9795c8d_42aa_4ed4_ad80_551ed793d006-malicious_execution_from_mounted_iso_image|T1204.003: Malicious Execution from Mounted ISO Image]]
 
-## [[kb/attack/techniques/T1207-rogue_domain_controller|T1207]]
+## [[kb/attack/techniques/T1207-rogue_domain_controller|T1207: Rogue Domain Controller]]
 
 - [[kb/atomic/tests/0f4c5eb0_98a0_4496_9c3d_656b4f2bc8f6-dcshadow_active_directory|T1207: DCShadow (Active Directory)]]
 
-## [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+## [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 - [[kb/atomic/tests/275d963d_3f36_476c_8bef_a2a3960ee6eb-syncappvpublishingserver_signed_script_powershell_command_execution|T1216: SyncAppvPublishingServer Signed Script PowerShell Command Execution]]
 - [[kb/atomic/tests/2a8f2d3c_3dec_4262_99dd_150cb2a4d63a-manage_bde_wsf_signed_script_command_execution|T1216: manage-bde.wsf Signed Script Command Execution]]
 
-## [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216.001]]
+## [[kb/attack/techniques/T1216-system_script_proxy_execution#^t1216001-pubprn|T1216.001: PubPrn]]
 
 - [[kb/atomic/tests/9dd29a1f_1e16_4862_be83_913b10a88f6c-pubprn_vbs_signed_script_bypass|T1216.001: PubPrn.vbs Signed Script Bypass]]
 
-## [[kb/attack/techniques/T1217-browser_information_discovery|T1217]]
+## [[kb/attack/techniques/T1217-browser_information_discovery|T1217: Browser Information Discovery]]
 
 - [[kb/atomic/tests/74094120_e1f5_47c9_b162_a418a0f624d5-extract_edge_browsing_history|T1217: Extract Edge Browsing History]]
 - [[kb/atomic/tests/cfe6315c_4945_40f7_b5a4_48f7af2262af-extract_chrome_browsing_history|T1217: Extract chrome Browsing History]]
@@ -1458,7 +1458,7 @@
 - [[kb/atomic/tests/4312cdbc_79fc_4a9c_becc_53d49c734bc5-list_mozilla_firefox_bookmarks_on_windows_with_command_prompt|T1217: List Mozilla Firefox bookmarks on Windows with command prompt]]
 - [[kb/atomic/tests/5fc528dd_79de_47f5_8188_25572b7fafe0-list_safari_bookmarks_on_macos|T1217: List Safari Bookmarks on MacOS]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 - [[kb/atomic/tests/0e1483ba_8f0c_425d_b8c6_42736e058eaa-diskshadow_command_execution|T1218: DiskShadow Command Execution]]
 - [[kb/atomic/tests/54ad7d5a_a1b5_472c_b6c4_f8090fb2daef-infdefaultinstall_exe_inf_execution|T1218: InfDefaultInstall.exe .inf Execution]]
@@ -1477,7 +1477,7 @@
 - [[kb/atomic/tests/7816c252_b728_4ea6_a683_bd9441ca0b71-system_binary_proxy_execution_wlrmdr_lolbin|T1218: System Binary Proxy Execution - Wlrmdr Lolbin]]
 - [[kb/atomic/tests/c426dacf_575d_4937_8611_a148a86a5e61-mavinject_inject_dll_into_running_process|T1218: mavinject - Inject DLL into running process]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.001]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218001-compiled-html-file|T1218.001: Compiled HTML File]]
 
 - [[kb/atomic/tests/5cb87818_0d7c_4469_b7ef_9224107aebe8-compiled_html_help_local_payload|T1218.001: Compiled HTML Help Local Payload]]
 - [[kb/atomic/tests/0f8af516_9818_4172_922b_42986ef1e81d-compiled_html_help_remote_payload|T1218.001: Compiled HTML Help Remote Payload]]
@@ -1488,16 +1488,16 @@
 - [[kb/atomic/tests/4f83adda_f5ec_406d_b318_9773c9ca92e5-invoke_chm_with_script_engine_and_help_topic|T1218.001: Invoke CHM with Script Engine and Help Topic]]
 - [[kb/atomic/tests/29d6f0d7_be63_4482_8827_ea77126c1ef7-invoke_chm_with_default_shortcut_command_execution|T1218.001: Invoke CHM with default Shortcut Command Execution]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.002]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218002-control-panel|T1218.002: Control Panel]]
 
 - [[kb/atomic/tests/037e9d8a_9e46_4255_8b33_2ae3b545ca6f-control_panel_items|T1218.002: Control Panel Items]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 - [[kb/atomic/tests/34e63321_9683_496b_bbc1_7566bc55e624-cmstp_executing_remote_scriptlet|T1218.003: CMSTP Executing Remote Scriptlet]]
 - [[kb/atomic/tests/748cb4f6_2fb3_4e97_b7ad_b22635a09ab0-cmstp_executing_uac_bypass|T1218.003: CMSTP Executing UAC Bypass]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.004]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218004-installutil|T1218.004: InstallUtil]]
 
 - [[kb/atomic/tests/ffd9c807_d402_47d2_879d_f915cf2a3a94-checkifinstallable_method_call|T1218.004: CheckIfInstallable method call]]
 - [[kb/atomic/tests/d43a5bde_ae28_4c55_a850_3f4c80573503-installhelper_method_call|T1218.004: InstallHelper method call]]
@@ -1508,7 +1508,7 @@
 - [[kb/atomic/tests/9b7a7cfc_dd2e_43f5_a885_c0a3c270dd93-installutil_class_constructor_method_call|T1218.004: InstallUtil class constructor method call]]
 - [[kb/atomic/tests/559e6d06_bb42_4307_bff7_3b95a8254bad-installutil_evasive_invocation|T1218.004: InstallUtil evasive invocation]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
 
 - [[kb/atomic/tests/39ceed55_f653_48ac_bd19_aceceaf525db-invoke_html_application_direct_download_from_uri|T1218.005: Invoke HTML Application - Direct download from URI]]
 - [[kb/atomic/tests/d3eaaf6a_cdb1_44a9_9ede_b6c337d0d840-invoke_html_application_jscript_engine_with_inline_protocol_handler|T1218.005: Invoke HTML Application - JScript Engine with Inline Protocol Handler]]
@@ -1521,7 +1521,7 @@
 - [[kb/atomic/tests/906865c3_e05f_4acc_85c4_fbc185455095-mshta_executes_vbscript_to_execute_malicious_command|T1218.005: Mshta executes VBScript to execute malicious command]]
 - [[kb/atomic/tests/8707a805_2b76_4f32_b1c0_14e558205772-mshta_used_to_execute_powershell|T1218.005: Mshta used to Execute PowerShell]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.007]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
 
 - [[kb/atomic/tests/628fa796_76c5_44c3_93aa_b9d8214fd568-msiexec_exe_execute_local_msi_file_with_an_embedded_dll|T1218.007: Msiexec.exe - Execute Local MSI file with an embedded DLL]]
 - [[kb/atomic/tests/ed3fa08a_ca18_4009_973e_03d13014d0e8-msiexec_exe_execute_local_msi_file_with_an_embedded_exe|T1218.007: Msiexec.exe - Execute Local MSI file with an embedded EXE]]
@@ -1535,17 +1535,17 @@
 - [[kb/atomic/tests/882082f0_27c6_4eec_a43c_9aa80bccdb30-wmi_win32_product_class_execute_local_msi_file_with_embedded_jscript|T1218.007: WMI Win32_Product Class - Execute Local MSI file with embedded JScript]]
 - [[kb/atomic/tests/cf470d9a_58e7_43e5_b0d2_805dffc05576-wmi_win32_product_class_execute_local_msi_file_with_embedded_vbscript|T1218.007: WMI Win32_Product Class - Execute Local MSI file with embedded VBScript]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.008]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218008-odbcconf|T1218.008: Odbcconf]]
 
 - [[kb/atomic/tests/2430498b_06c0_4b92_a448_8ad263c388e2-odbcconf_exe_execute_arbitrary_dll|T1218.008: Odbcconf.exe - Execute Arbitrary DLL]]
 - [[kb/atomic/tests/331ce274_f9c9_440b_9f8c_a1006e1fce0b-odbcconf_exe_load_response_file|T1218.008: Odbcconf.exe - Load Response File]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.009]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218009-regsvcs-regasm|T1218.009: Regsvcs/Regasm]]
 
 - [[kb/atomic/tests/71bfbfac_60b1_4fc0_ac8b_2cedbbdcb112-regasm_uninstall_method_call_test|T1218.009: Regasm Uninstall Method Call Test]]
 - [[kb/atomic/tests/fd3c1c6a_02d2_4b72_82d9_71c527abb126-regsvcs_uninstall_method_call_test|T1218.009: Regsvcs Uninstall Method Call Test]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 - [[kb/atomic/tests/1ae5ea1f_0a4e_4e54_b2f5_4ac328a7f421-regsvr32_registering_non_dll|T1218.010: Regsvr32 Registering Non DLL]]
 - [[kb/atomic/tests/9d71c492_ea2e_4c08_af16_c6994cdf029f-regsvr32_silent_dll_install_call_dllregisterserver|T1218.010: Regsvr32 Silent DLL Install Call DllRegisterServer]]
@@ -1553,7 +1553,7 @@
 - [[kb/atomic/tests/08ffca73_9a3d_471a_aeb0_68b4aa3ab37b-regsvr32_local_dll_execution|T1218.010: Regsvr32 local DLL execution]]
 - [[kb/atomic/tests/c9d0c4ef_8a96_4794_a75b_3d3a5e6f2a36-regsvr32_remote_com_scriptlet_execution|T1218.010: Regsvr32 remote COM scriptlet execution]]
 
-## [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+## [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 - [[kb/atomic/tests/22cfde89_befe_4e15_9753_47306b37a6e3-execution_of_hta_and_vbs_files_using_rundll32_and_url_dll|T1218.011: Execution of HTA and VBS Files using Rundll32 and URL.dll]]
 - [[kb/atomic/tests/ae3a8605_b26e_457c_b6b3_2702fd335bac-execution_of_non_dll_using_rundll32_exe|T1218.011: Execution of non-dll using rundll32.exe]]
@@ -1572,7 +1572,7 @@
 - [[kb/atomic/tests/83a95136_a496_423c_81d3_1c6750133917-rundll32_with_desk_cpl|T1218.011: Rundll32 with desk.cpl]]
 - [[kb/atomic/tests/2d5029f0_ae20_446f_8811_e7511b58e8b6-running_dll_with_init_extension_and_function|T1218.011: Running DLL with .init extension and function]]
 
-## [[kb/attack/techniques/T1219-remote_access_tools|T1219]]
+## [[kb/attack/techniques/T1219-remote_access_tools|T1219: Remote Access Tools]]
 
 - [[kb/atomic/tests/0ae9e327_3251_465a_a53b_485d4e3f58fa-ammyy_admin_software_execution|T1219: Ammyy Admin Software Execution]]
 - [[kb/atomic/tests/6b8b7391_5c0a_4f8c_baee_78d8ce0ce330-anydesk_files_detected_test_on_windows|T1219: AnyDesk Files Detected Test on Windows]]
@@ -1590,24 +1590,24 @@
 - [[kb/atomic/tests/42e51815_a6cc_4c75_b970_3f0ff54b610e-ultravnc_execution|T1219: UltraVNC Execution]]
 - [[kb/atomic/tests/19acf63b_55c4_4b6a_8552_00a8865105c8-ultraviewer_rat_execution|T1219: UltraViewer - RAT Execution]]
 
-## [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+## [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 - [[kb/atomic/tests/ca23bfb2_023f_49c5_8802_e66997de462d-msxsl_bypass_using_local_files|T1220: MSXSL Bypass using local files]]
 - [[kb/atomic/tests/a7c3ab07_52fb_49c8_ab6d_e9c6d4a0a985-msxsl_bypass_using_remote_files|T1220: MSXSL Bypass using remote files]]
 - [[kb/atomic/tests/1b237334_3e21_4a0c_8178_b8c996124988-wmic_bypass_using_local_xsl_file|T1220: WMIC bypass using local XSL file]]
 - [[kb/atomic/tests/7f5be499_33be_4129_a560_66021f379b9b-wmic_bypass_using_remote_xsl_file|T1220: WMIC bypass using remote XSL file]]
 
-## [[kb/attack/techniques/T1221-template_injection|T1221]]
+## [[kb/attack/techniques/T1221-template_injection|T1221: Template Injection]]
 
 - [[kb/atomic/tests/1489e08a_82c7_44ee_b769_51b72d03521d-winword_remote_template_injection|T1221: WINWORD Remote Template Injection]]
 
-## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222]]
+## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222: File and Directory Permissions Modification]]
 
 - [[kb/atomic/tests/6cd715aa_20ac_4be1_a8f1_dda7bae160bd-enable_local_and_remote_symbolic_links_via_powershell|T1222: Enable Local and Remote Symbolic Links via Powershell]]
 - [[kb/atomic/tests/6c4ac96f_d4fa_44f4_83ca_56d8f4a55c02-enable_local_and_remote_symbolic_links_via_fsutil|T1222: Enable Local and Remote Symbolic Links via fsutil]]
 - [[kb/atomic/tests/78bef0d4_57fb_417d_a67a_b75ae02ea3ab-enable_local_and_remote_symbolic_links_via_reg_exe|T1222: Enable Local and Remote Symbolic Links via reg.exe]]
 
-## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.001]]
+## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222001-windows-file-and-directory-permissions-modification|T1222.001: Windows File and Directory Permissions Modification]]
 
 - [[kb/atomic/tests/ac7e6118_473d_41ec_9ac0_ef4f1d1ed2f6-grant_full_access_to_folder_for_everyone_ryuk_ransomware_style|T1222.001: Grant Full Access to folder for Everyone - Ryuk Ransomware Style]]
 - [[kb/atomic/tests/a8568b10_9ab9_4140_a523_1c72e0176924-subinacl_execution|T1222.001: SubInAcl Execution]]
@@ -1616,7 +1616,7 @@
 - [[kb/atomic/tests/32b979da_7b68_42c9_9a99_0e39900fc36c-attrib_hide_file|T1222.001: attrib - hide file]]
 - [[kb/atomic/tests/a8206bcc_f282_40a9_a389_05d9c0263485-cacls_grant_permission_to_specified_user_or_group_recursively|T1222.001: cacls - Grant permission to specified user or group recursively]]
 
-## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.002]]
+## [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222002-linux-and-mac-file-and-directory-permissions-modification|T1222.002: Linux and Mac File and Directory Permissions Modification]]
 
 - [[kb/atomic/tests/973631cf_6680_4ffa_a053_045e1b6b67ab-chmod_through_c_script|T1222.002: Chmod through c script]]
 - [[kb/atomic/tests/da40b5fe_3098_4b3b_a410_ff177e49ee2e-chmod_through_c_script_freebsd|T1222.002: Chmod through c script (freebsd)]]
@@ -1633,7 +1633,7 @@
 - [[kb/atomic/tests/b78598be_ff39_448f_a463_adbf2a5b7848-chown_change_file_or_folder_ownership_and_group_recursively|T1222.002: chown - Change file or folder ownership and group recursively]]
 - [[kb/atomic/tests/3b015515_b3d8_44e9_b8cd_6fa84faf30b2-chown_change_file_or_folder_ownership_recursively|T1222.002: chown - Change file or folder ownership recursively]]
 
-## [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
+## [[kb/attack/techniques/T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
 
 - [[kb/atomic/tests/d1c73b96_ab87_4031_bad8_0e1b3b8bf3ec-adfind_enumerate_active_directory_ous|T1482: Adfind - Enumerate Active Directory OUs]]
 - [[kb/atomic/tests/15fe436d_e771_4ff3_b655_2dca9ba52834-adfind_enumerate_active_directory_trusts|T1482: Adfind - Enumerate Active Directory Trusts]]
@@ -1644,16 +1644,16 @@
 - [[kb/atomic/tests/4700a710_c821_4e17_a3ec_9e4c81d6845f-windows_discover_domain_trusts_with_dsquery|T1482: Windows - Discover domain trusts with dsquery]]
 - [[kb/atomic/tests/2e22641d_0498_48d2_b9ff_c71e496ccdbe-windows_discover_domain_trusts_with_nltest|T1482: Windows - Discover domain trusts with nltest]]
 
-## [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification|T1484.001]]
+## [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification#^t1484001-group-policy-modification|T1484.001: Group Policy Modification]]
 
 - [[kb/atomic/tests/b51eae65_5441_4789_b8e8_64783c26c1d1-lockbit_black_modify_group_policy_settings_powershell|T1484.001: LockBit Black - Modify Group policy settings -Powershell]]
 - [[kb/atomic/tests/9ab80952_74ee_43da_a98c_1e740a985f28-lockbit_black_modify_group_policy_settings_cmd|T1484.001: LockBit Black - Modify Group policy settings -cmd]]
 
-## [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification|T1484.002]]
+## [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification#^t1484002-trust-modification|T1484.002: Trust Modification]]
 
 - [[kb/atomic/tests/8906c5d0_3ee5_4f63_897a_f6cafd3fdbb7-add_federation_to_azure_ad|T1484.002: Add Federation to Azure AD]]
 
-## [[kb/attack/techniques/T1485-data_destruction|T1485]]
+## [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 - [[kb/atomic/tests/1207ddff_f25b_41b3_aa0e_7c26d2b546d1-esxi_delete_vm_snapshots|T1485: ESXi - Delete VM Snapshots]]
 - [[kb/atomic/tests/38deee99_fd65_4031_bec8_bfa4f9f26146-freebsd_macos_linux_overwrite_file_with_dd|T1485: FreeBSD/macOS/Linux - Overwrite file with DD]]
@@ -1661,7 +1661,7 @@
 - [[kb/atomic/tests/321fd25e_0007_417f_adec_33232252be19-overwrite_deleted_data_on_c_drive|T1485: Overwrite deleted data on C drive]]
 - [[kb/atomic/tests/476419b5_aebf_4366_a131_ae3e8dae5fc2-windows_overwrite_file_with_sysinternals_sdelete|T1485: Windows - Overwrite file with SysInternals SDelete]]
 
-## [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+## [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 - [[kb/atomic/tests/ab3f793f_2dcc_4da5_9c71_34988307263f-akira_ransomware_drop_files_with_akira_extension_and_ransomnote|T1486: Akira Ransomware drop Files with .akira Extension and Ransomnote]]
 - [[kb/atomic/tests/44b68e11_9da2_4d45_a0d9_893dabd60f30-data_encrypt_using_diskcryptor|T1486: Data Encrypt Using DiskCryptor]]
@@ -1674,7 +1674,7 @@
 - [[kb/atomic/tests/1a01f6b8_b1e8_418e_bbe3_78a6f822759e-encrypt_files_using_openssl_utility_macos|T1486: Encrypt files using openssl utility - macOS]]
 - [[kb/atomic/tests/649349c7_9abf_493b_a7a2_b1aa4d141528-purelocker_ransom_note|T1486: PureLocker Ransom Note]]
 
-## [[kb/attack/techniques/T1489-service_stop|T1489]]
+## [[kb/attack/techniques/T1489-service_stop|T1489: Service Stop]]
 
 - [[kb/atomic/tests/6e76f56f_2373_4a6c_a63f_98b7b72761f1-abuse_of_linux_magic_system_request_key_for_send_a_sigterm_to_all_processes|T1489: Abuse of linux magic system request key for Send a SIGTERM to all processes]]
 - [[kb/atomic/tests/332f4c76_7e96_41a6_8cc2_7361c49db8be-linux_stop_service_by_killing_process_using_kill|T1489: Linux - Stop service by killing process using kill]]
@@ -1685,7 +1685,7 @@
 - [[kb/atomic/tests/21dfb440_830d_4c86_a3e5_2a491d5a8d04-windows_stop_service_using_service_controller|T1489: Windows - Stop service using Service Controller]]
 - [[kb/atomic/tests/41274289_ec9c_4213_bea4_e43c4aa57954-windows_stop_service_using_net_exe|T1489: Windows - Stop service using net.exe]]
 
-## [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+## [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 - [[kb/atomic/tests/66e647d1_8741_4e43_b7c1_334760c2047f-disable_system_restore_through_registry|T1490: Disable System Restore Through Registry]]
 - [[kb/atomic/tests/ed952f70_91d4_445a_b7ff_30966bfb1aff-disable_time_machine|T1490: Disable Time Machine]]
@@ -1701,19 +1701,19 @@
 - [[kb/atomic/tests/263ba6cb_ea2b_41c9_9d4e_b652dadd002c-windows_wbadmin_delete_windows_backup_catalog|T1490: Windows - wbadmin Delete Windows Backup Catalog]]
 - [[kb/atomic/tests/584331dd_75bc_4c02_9e0b_17f5fd81c748-windows_wbadmin_delete_systemstatebackup|T1490: Windows - wbadmin Delete systemstatebackup]]
 
-## [[kb/attack/techniques/T1491-defacement|T1491.001]]
+## [[kb/attack/techniques/T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
 
 - [[kb/atomic/tests/ffcbfaab_c9ff_470b_928c_f086b326089b-configure_legalnoticecaption_and_legalnoticetext_registry_keys_to_display_ransom_message|T1491.001: Configure LegalNoticeCaption and LegalNoticeText registry keys to display ransom message]]
 - [[kb/atomic/tests/30905f21_34f3_4504_8b4c_f7a5e314b810-esxi_change_welcome_message_on_direct_console_user_interface_dcui|T1491.001: ESXi - Change Welcome Message on Direct Console User Interface (DCUI)]]
 - [[kb/atomic/tests/30558d53_9d76_41c4_9267_a7bd5184bed3-replace_desktop_wallpaper|T1491.001: Replace Desktop Wallpaper]]
 - [[kb/atomic/tests/0eeb68ce_e64c_4420_8d53_ad5bdc6f86d5-windows_display_a_simulated_ransom_note_via_notepad_non_destructive|T1491.001: Windows - Display a simulated ransom note via Notepad (non-destructive)]]
 
-## [[kb/attack/techniques/T1496-resource_hijacking|T1496]]
+## [[kb/attack/techniques/T1496-resource_hijacking|T1496: Resource Hijacking]]
 
 - [[kb/atomic/tests/904a5a0e_fb02_490d_9f8d_0e256eb37549-freebsd_macos_linux_simulate_cpu_load_with_yes|T1496: FreeBSD/macOS/Linux - Simulate CPU Load with Yes]]
 - [[kb/atomic/tests/44315fb0_f78d_4cef_b10f_cf21c1fe2c75-windows_simulate_cpu_load_with_powershell|T1496: Windows - Simulate CPU Load with PowerShell]]
 
-## [[kb/attack/techniques/T1497-virtualization_sandbox_evasion|T1497.001]]
+## [[kb/attack/techniques/T1497-virtualization_sandbox_evasion#^t1497001-system-checks|T1497.001: System Checks]]
 
 - [[kb/atomic/tests/2b73cd9b_b2fb_4357_b9d7_c73c41d9e945-check_if_system_integrity_protection_is_enabled|T1497.001: Check if System Integrity Protection is enabled]]
 - [[kb/atomic/tests/e129d73b_3e03_4ae9_bf1e_67fc8921e0fd-detect_virtualization_environment_freebsd|T1497.001: Detect Virtualization Environment (FreeBSD)]]
@@ -1724,29 +1724,29 @@
 - [[kb/atomic/tests/4a41089a_48e0_47aa_82cb_5b81a463bc78-detect_virtualization_environment_via_wmi_manufacturer_model_listing_windows|T1497.001: Detect Virtualization Environment via WMI Manufacturer/Model Listing (Windows)]]
 - [[kb/atomic/tests/a960185f_aef6_4547_8350_d1ce16680d09-detect_virtualization_environment_via_ioreg|T1497.001: Detect Virtualization Environment via ioreg]]
 
-## [[kb/attack/techniques/T1497-virtualization_sandbox_evasion|T1497.003]]
+## [[kb/attack/techniques/T1497-virtualization_sandbox_evasion#^t1497003-time-based-checks|T1497.003: Time Based Checks]]
 
 - [[kb/atomic/tests/8b87dd03_8204_478c_bac3_3959f6528de3-delay_execution_with_ping|T1497.003: Delay execution with ping]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.002]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505002-transport-agent|T1505.002: Transport Agent]]
 
 - [[kb/atomic/tests/43e92449_ff60_46e9_83a3_1a38089df94d-install_ms_exchange_transport_agent_persistence|T1505.002: Install MS Exchange Transport Agent Persistence]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 - [[kb/atomic/tests/0a2ce662_1efa_496f_a472_2fe7b080db16-web_shell_written_to_disk|T1505.003: Web Shell Written to Disk]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.004]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505004-iis-components|T1505.004: IIS Components]]
 
 - [[kb/atomic/tests/53adbdfa_8200_490c_871c_d3b1ab3324b2-install_iis_module_using_appcmd_exe|T1505.004: Install IIS Module using AppCmd.exe]]
 - [[kb/atomic/tests/cc3381fb_4bd0_405c_a8e4_6cacfac3b06c-install_iis_module_using_powershell_cmdlet_new_webglobalmodule|T1505.004: Install IIS Module using PowerShell Cmdlet New-WebGlobalModule]]
 
-## [[kb/attack/techniques/T1505-server_software_component|T1505.005]]
+## [[kb/attack/techniques/T1505-server_software_component#^t1505005-terminal-services-dll|T1505.005: Terminal Services DLL]]
 
 - [[kb/atomic/tests/18136e38_0530_49b2_b309_eed173787471-modify_terminal_services_dll_path|T1505.005: Modify Terminal Services DLL Path]]
 - [[kb/atomic/tests/0b2eadeb_4a64_4449_9d43_3d999f4a317b-simulate_patching_termsrv_dll|T1505.005: Simulate Patching termsrv.dll]]
 
-## [[kb/attack/techniques/T1518-software_discovery|T1518]]
+## [[kb/attack/techniques/T1518-software_discovery|T1518: Software Discovery]]
 
 - [[kb/atomic/tests/c49978f6_bd6e_4221_ad2c_9e3e30cc1e3b-applications_installed|T1518: Applications Installed]]
 - [[kb/atomic/tests/68981660_6670_47ee_a5fa_7e74806420a4-find_and_display_internet_explorer_browser_version|T1518: Find and Display Internet Explorer Browser Version]]
@@ -1755,7 +1755,7 @@
 - [[kb/atomic/tests/7e79a1b6_519e_433c_ad55_3ff293667101-winpwn_dotnetsearch|T1518: WinPwn - Dotnetsearch]]
 - [[kb/atomic/tests/0bb64470_582a_4155_bde2_d6003a95ed34-winpwn_powersql|T1518: WinPwn - powerSQL]]
 
-## [[kb/attack/techniques/T1518-software_discovery|T1518.001]]
+## [[kb/attack/techniques/T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]
 
 - [[kb/atomic/tests/e31564c8_4c60_40cd_a8f4_9261307e8336-get_windows_defender_exclusion_settings_using_wmic|T1518.001: Get Windows Defender exclusion settings using WMIC]]
 - [[kb/atomic/tests/f92a380f_ced9_491f_b338_95a991418ce2-security_software_discovery|T1518.001: Security Software Discovery]]
@@ -1769,18 +1769,18 @@
 - [[kb/atomic/tests/23b91cd2_c99c_4002_9e41_317c63e024a2-security_software_discovery_ps_linux|T1518.001: Security Software Discovery - ps (Linux)]]
 - [[kb/atomic/tests/ba62ce11_e820_485f_9c17_6f3c857cd840-security_software_discovery_ps_macos|T1518.001: Security Software Discovery - ps (macOS)]]
 
-## [[kb/attack/techniques/T1526-cloud_service_discovery|T1526]]
+## [[kb/attack/techniques/T1526-cloud_service_discovery|T1526: Cloud Service Discovery]]
 
 - [[kb/atomic/tests/aa8b9bcc_46fa_4a59_9237_73c7b93a980c-aws_enumerate_common_cloud_services|T1526: AWS - Enumerate common cloud services]]
 - [[kb/atomic/tests/1e40bb1d_195e_401e_a86b_c192f55e005c-azure_dump_subscription_data_with_microburst|T1526: Azure - Dump Subscription Data with MicroBurst]]
 - [[kb/atomic/tests/58f57c8f_db14_4e62_a4d3_5aaf556755d7-azure_enumerate_common_cloud_services|T1526: Azure - Enumerate common cloud services]]
 
-## [[kb/attack/techniques/T1528-steal_application_access_token|T1528]]
+## [[kb/attack/techniques/T1528-steal_application_access_token|T1528: Steal Application Access Token]]
 
 - [[kb/atomic/tests/9a5352e4_56e5_45c2_9b3f_41a46d3b3a43-azure_functions_code_upload_functions_code_injection_via_blob_upload|T1528: Azure - Functions code upload - Functions code injection via Blob upload]]
 - [[kb/atomic/tests/67aaf4cb_54ce_42e2_ab56_e0a9bcc089b1-azure_functions_code_upload_functions_code_injection_via_file_share_modification_to_retrieve_the_functions_identity_access_token|T1528: Azure - Functions code upload - Functions code injection via File Share modification to retrieve the Functions identity access token]]
 
-## [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529]]
+## [[kb/attack/techniques/T1529-system_shutdown_reboot|T1529: System Shutdown/Reboot]]
 
 - [[kb/atomic/tests/d2a1f4bc_a064_4223_8281_a086dce5423c-abuse_of_linux_magic_system_request_key_for_reboot|T1529: Abuse of Linux Magic System Request Key for Reboot]]
 - [[kb/atomic/tests/189f7d6e_9442_4160_9bc3_5e4104d93ece-esxi_avoslocker_enumerates_vms_and_forcefully_kills_vms|T1529: ESXi - Avoslocker enumerates VMs and forcefully kills VMs]]
@@ -1799,12 +1799,12 @@
 - [[kb/atomic/tests/73a90cd2_48a2_4ac5_8594_2af35fa909fa-shutdown_system_via_poweroff_freebsd_linux|T1529: Shutdown System via `poweroff` - FreeBSD/Linux]]
 - [[kb/atomic/tests/4963a81e_a3ad_4f02_adda_812343b351de-shutdown_system_via_shutdown_freebsd_macos_linux|T1529: Shutdown System via `shutdown` - FreeBSD/macOS/Linux]]
 
-## [[kb/attack/techniques/T1530-data_from_cloud_storage|T1530]]
+## [[kb/attack/techniques/T1530-data_from_cloud_storage|T1530: Data from Cloud Storage]]
 
 - [[kb/atomic/tests/979356b9_b588_4e49_bba4_c35517c484f5-aws_scan_for_anonymous_access_to_s3|T1530: AWS - Scan for Anonymous Access to S3]]
 - [[kb/atomic/tests/67374845_b4c8_4204_adcc_9b217b65d4f1-azure_dump_azure_storage_account_objects_via_azure_cli|T1530: Azure - Dump Azure Storage Account Objects via Azure CLI]]
 
-## [[kb/attack/techniques/T1531-account_access_removal|T1531]]
+## [[kb/attack/techniques/T1531-account_access_removal|T1531: Account Access Removal]]
 
 - [[kb/atomic/tests/4f577511_dc1c_4045_bcb8_75d2457f01f4-azure_ad_delete_user_via_azure_ad_powershell|T1531: Azure AD - Delete user via Azure AD PowerShell]]
 - [[kb/atomic/tests/c955c1c7_3145_4a22_af2d_63eea0d967f0-azure_ad_delete_user_via_azure_cli|T1531: Azure AD - Delete user via Azure CLI]]
@@ -1815,7 +1815,7 @@
 - [[kb/atomic/tests/d3812c4e_30ee_466a_a0aa_07e355b561d6-delete_user_via_sysadminctl_utility|T1531: Delete User via sysadminctl utility]]
 - [[kb/atomic/tests/43f71395_6c37_498e_ab17_897d814a0947-remove_account_from_domain_admin_group|T1531: Remove Account From Domain Admin Group]]
 
-## [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539]]
+## [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539: Steal Web Session Cookie]]
 
 - [[kb/atomic/tests/e57ba07b_3a33_40cd_a892_748273b9b49a-copy_safari_binarycookies_files_using_applescript|T1539: Copy Safari BinaryCookies files using AppleScript]]
 - [[kb/atomic/tests/26a6b840_4943_4965_8df5_ef1f9a282440-steal_chrome_cookies_windows|T1539: Steal Chrome Cookies (Windows)]]
@@ -1823,23 +1823,23 @@
 - [[kb/atomic/tests/b647f4ee_88de_40ac_9419_f17fac9489a7-steal_chrome_v127_cookies_via_remote_debugging_windows|T1539: Steal Chrome v127+ cookies via Remote Debugging (Windows)]]
 - [[kb/atomic/tests/4b437357_f4e9_4c84_9fa6_9bcee6f826aa-steal_firefox_cookies_windows|T1539: Steal Firefox Cookies (Windows)]]
 
-## [[kb/attack/techniques/T1542-pre-os_boot|T1542.001]]
+## [[kb/attack/techniques/T1542-pre-os_boot#^t1542001-system-firmware|T1542.001: System Firmware]]
 
 - [[kb/atomic/tests/b8a49f03_e3c4_40f2_b7bb_9e8f8fdddbf1-uefi_persistence_via_wpbbin_exe_file_creation|T1542.001: UEFI Persistence via Wpbbin.exe File Creation]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.001]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543001-launch-agent|T1543.001: Launch Agent]]
 
 - [[kb/atomic/tests/11979f23_9b9d_482a_9935_6fc9cd022c3e-event_monitor_daemon_persistence|T1543.001: Event Monitor Daemon Persistence]]
 - [[kb/atomic/tests/a5983dee_bf6c_4eaf_951c_dbc1a7b90900-launch_agent|T1543.001: Launch Agent]]
 - [[kb/atomic/tests/66774fa8_c562_4bae_a58d_5264a0dd9dd7-launch_agent_root_directory|T1543.001: Launch Agent - Root Directory]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.002]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543002-systemd-service|T1543.002: Systemd Service]]
 
 - [[kb/atomic/tests/760fe8d2_79d9_494f_905e_a239a3df86f6-create_sysv_service|T1543.002: Create SysV Service]]
 - [[kb/atomic/tests/d9e4f24f_aa67_4c6e_bcbf_85622b697a7c-create_systemd_service|T1543.002: Create Systemd Service]]
 - [[kb/atomic/tests/c35ac4a8_19de_43af_b9f8_755da7e89c89-create_systemd_service_file_enable_the_service_modify_and_reload_the_service|T1543.002: Create Systemd Service file,  Enable the service , Modify and Reload the service.]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 - [[kb/atomic/tests/ed366cde_7d12_49df_a833_671904770b9f-modify_fax_service_to_run_powershell|T1543.003: Modify Fax service to run PowerShell]]
 - [[kb/atomic/tests/1f896ce4_8070_4959_8a25_2658856a70c9-modify_service_to_run_arbitrary_binary_powershell|T1543.003: Modify Service to Run Arbitrary Binary (Powershell)]]
@@ -1848,11 +1848,11 @@
 - [[kb/atomic/tests/491a4af6_a521_4b74_b23b_f7b3f1ee9e77-service_installation_powershell|T1543.003: Service Installation PowerShell]]
 - [[kb/atomic/tests/ef0581fd_528e_4662_87bc_4c2affb86940-tinyturla_backdoor_service_w64time|T1543.003: TinyTurla backdoor service w64time]]
 
-## [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.004]]
+## [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543004-launch-daemon|T1543.004: Launch Daemon]]
 
 - [[kb/atomic/tests/03ab8df5_3a6b_4417_b6bd_bb7a5cfd74cf-launch_daemon|T1543.004: Launch Daemon]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546]]
+## [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]]
 
 - [[kb/atomic/tests/17d1a3cc_3373_495a_857a_e5dd005fb302-adding_custom_debugger_for_windows_error_reporting|T1546: Adding custom debugger for Windows Error Reporting]]
 - [[kb/atomic/tests/36b8dbf9_59b1_4e9b_a3bb_36e80563ef01-hkcu_persistence_using_commandprocessor_autorun_key_without_elevation|T1546: HKCU - Persistence using CommandProcessor AutoRun key (Without Elevation)]]
@@ -1864,21 +1864,21 @@
 - [[kb/atomic/tests/aca9ae16_7425_4b6d_8c30_cad306fdbd5b-persistence_with_custom_autodialdll|T1546: Persistence with Custom AutodialDLL]]
 - [[kb/atomic/tests/adae83d3_0df6_45e7_b2c3_575f91584577-wmi_invoke_cimmethod_start_process|T1546: WMI Invoke-CimMethod Start Process]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.001]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546001-change-default-file-association|T1546.001: Change Default File Association]]
 
 - [[kb/atomic/tests/10a08978_2045_4d62_8c42_1957bbbea102-change_default_file_association|T1546.001: Change Default File Association]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.002]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546002-screensaver|T1546.002: Screensaver]]
 
 - [[kb/atomic/tests/281201e7_de41_4dc9_b73d_f288938cbb64-set_arbitrary_binary_as_screensaver|T1546.002: Set Arbitrary Binary as Screensaver]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 - [[kb/atomic/tests/fecd0dfd_fb55_45fa_a10b_6250272d0832-persistence_via_wmi_event_subscription_activescripteventconsumer|T1546.003: Persistence via WMI Event Subscription - ActiveScriptEventConsumer]]
 - [[kb/atomic/tests/3c64f177_28e2_49eb_a799_d767b24dd1e0-persistence_via_wmi_event_subscription_commandlineeventconsumer|T1546.003: Persistence via WMI Event Subscription - CommandLineEventConsumer]]
 - [[kb/atomic/tests/29786d7e_8916_4de6_9c55_be7b093b2706-windows_mofcomp_exe_load_mof_file|T1546.003: Windows MOFComp.exe Load MOF File]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.004]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546004-unix-shell-configuration-modification|T1546.004: Unix Shell Configuration Modification]]
 
 - [[kb/atomic/tests/94500ae1_7e31_47e3_886b_c328da46872f-add_command_to_bash_profile|T1546.004: Add command to .bash_profile]]
 - [[kb/atomic/tests/0a898315_4cfa_4007_bafe_33a4646d115f-add_command_to_bashrc|T1546.004: Add command to .bashrc]]
@@ -1888,18 +1888,18 @@
 - [[kb/atomic/tests/37ad2f24_7c53_4a50_92da_427a4ad13f58-create_append_to_bash_logout|T1546.004: Create/Append to .bash_logout]]
 - [[kb/atomic/tests/8fe2ccfd_f079_4c03_b1a9_bd9b362b67d4-system_shell_profile_scripts|T1546.004: System shell profile scripts]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.005]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546005-trap|T1546.005: Trap]]
 
 - [[kb/atomic/tests/a74b2e07_5952_4c03_8b56_56274b076b61-trap_exit|T1546.005: Trap EXIT]]
 - [[kb/atomic/tests/be1a5d70_6865_44aa_ab50_42244c9fd16f-trap_exit_freebsd|T1546.005: Trap EXIT (freebsd)]]
 - [[kb/atomic/tests/a547d1ba_1d7a_4cc5_a9cb_8d65e8809636-trap_sigint|T1546.005: Trap SIGINT]]
 - [[kb/atomic/tests/ade10242_1eac_43df_8412_be0d4c704ada-trap_sigint_freebsd|T1546.005: Trap SIGINT (freebsd)]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.007]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546007-netsh-helper-dll|T1546.007: Netsh Helper DLL]]
 
 - [[kb/atomic/tests/3244697d_5a3a_4dfc_941c_550f69f91a4d-netsh_helper_dll_registration|T1546.007: Netsh Helper DLL Registration]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 - [[kb/atomic/tests/444ff124_4c83_4e28_8df6_6efd3ece6bd4-atbroker_exe_at_executes_arbitrary_command_via_registry_key|T1546.008: Atbroker.exe (AT) Executes Arbitrary Command via Registry Key]]
 - [[kb/atomic/tests/3309f53e_b22b_4eb6_8fd2_a6cf58b355a9-attaches_command_prompt_as_a_debugger_to_a_list_of_target_processes|T1546.008: Attaches Command Prompt as a Debugger to a List of Target Processes]]
@@ -1912,42 +1912,42 @@
 - [[kb/atomic/tests/934e90cf_29ca_48b3_863c_411737ad44e3-replace_binary_of_sticky_keys|T1546.008: Replace binary of sticky keys]]
 - [[kb/atomic/tests/1db380da_3422_481d_a3c8_6d5770dba580-replace_utilman_exe_ease_of_access_binary_with_cmd_exe|T1546.008: Replace utilman.exe (Ease of Access Binary) with cmd.exe]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.009]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546009-appcert-dlls|T1546.009: AppCert DLLs]]
 
 - [[kb/atomic/tests/a5ad6104_5bab_4c43_b295_b4c44c7c6b05-create_registry_persistence_via_appcert_dll|T1546.009: Create registry persistence via AppCert DLL]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.010]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546010-appinit-dlls|T1546.010: AppInit DLLs]]
 
 - [[kb/atomic/tests/a58d9386_3080_4242_ab5f_454c16503d18-install_appinit_shim|T1546.010: Install AppInit Shim]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.011]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546011-application-shimming|T1546.011: Application Shimming]]
 
 - [[kb/atomic/tests/9ab27e22_ee62_4211_962b_d36d9a0e6a18-application_shim_installation|T1546.011: Application Shim Installation]]
 - [[kb/atomic/tests/aefd6866_d753_431f_a7a4_215ca7e3f13d-new_shim_database_files_created_in_the_default_shim_database_directory|T1546.011: New shim database files created in the default shim database directory]]
 - [[kb/atomic/tests/9b6a06f9_ab5e_4e8d_8289_1df4289db02f-registry_key_creation_and_or_modification_events_for_sdb|T1546.011: Registry key creation and/or modification events for SDB]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.012]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546012-image-file-execution-options-injection|T1546.012: Image File Execution Options Injection]]
 
 - [[kb/atomic/tests/13117939_c9b2_4a43_999e_0a543df92f0d-globalflags_in_image_file_execution_options|T1546.012: GlobalFlags in Image File Execution Options]]
 - [[kb/atomic/tests/fdda2626_5234_4c90_b163_60849a24c0b8-ifeo_add_debugger|T1546.012: IFEO Add Debugger]]
 - [[kb/atomic/tests/46b1f278_c8ee_4aa5_acce_65e77b11f3c1-ifeo_global_flags|T1546.012: IFEO Global Flags]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.013]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546013-powershell-profile|T1546.013: PowerShell Profile]]
 
 - [[kb/atomic/tests/090e5aa5_32b6_473b_a49b_21e843a56896-append_malicious_start_process_cmdlet|T1546.013: Append malicious start-process cmdlet]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.014]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546014-emond|T1546.014: Emond]]
 
 - [[kb/atomic/tests/23c9c127_322b_4c75_95ca_eff464906114-persistance_with_event_monitor_emond|T1546.014: Persistance with Event Monitor - emond]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 - [[kb/atomic/tests/48117158_d7be_441b_bc6a_d9e36e47b52b-com_hijacking_inprocserver32|T1546.015: COM Hijacking - InprocServer32]]
 - [[kb/atomic/tests/123520cc_e998_471b_a920_bd28e3feafa0-com_hijacking_with_rundll32_local_server_switch|T1546.015: COM Hijacking with RunDLL32 (Local Server Switch)]]
 - [[kb/atomic/tests/33eacead_f117_4863_8eb0_5c6304fbfaa9-com_hijacking_via_treatas|T1546.015: COM hijacking via TreatAs]]
 - [[kb/atomic/tests/752191b1_7c71_445c_9dbe_21bb031b18eb-powershell_execute_com_object|T1546.015: Powershell Execute COM Object]]
 
-## [[kb/attack/techniques/T1546-event_triggered_execution|T1546.018]]
+## [[kb/attack/techniques/T1546-event_triggered_execution#^t1546018-python-startup-hooks|T1546.018: Python Startup Hooks]]
 
 - [[kb/atomic/tests/a58c066d_f2f0_42a2_ab70_30af73f89e66-python_startup_hook_atomic_hook_pth_linux|T1546.018: Python Startup Hook - atomic_hook.pth (Linux)]]
 - [[kb/atomic/tests/57289962_21dc_4501_b756_80cd30608d9f-python_startup_hook_atomic_hook_pth_windows|T1546.018: Python Startup Hook - atomic_hook.pth (Windows)]]
@@ -1955,13 +1955,13 @@
 - [[kb/atomic/tests/6e78084a_a433_4702_a838_cc7b765d87e8-python_startup_hook_usercustomize_py_linux_macos|T1546.018: Python Startup Hook - usercustomize.py (Linux / MacOS)]]
 - [[kb/atomic/tests/05cc7a2c_ce32_46f2_a358_f27f76718c39-python_startup_hook_usercustomize_py_windows|T1546.018: Python Startup Hook - usercustomize.py (Windows)]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
 
 - [[kb/atomic/tests/cb01b3da_b0e7_4e24_bf6d_de5223526785-add_a_driver|T1547: Add a driver]]
 - [[kb/atomic/tests/5cb0b071_8a5a_412f_839d_116beb2ed9f7-driver_installation_using_pnputil_exe|T1547: Driver Installation Using pnputil.exe]]
 - [[kb/atomic/tests/fdd45306_74f6_4ade_9a97_0a4895961228-leverage_virtual_channels_to_execute_custom_dll_during_successful_rdp_session|T1547: Leverage Virtual Channels to execute custom DLL during successful RDP session]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 - [[kb/atomic/tests/24e55612_85f6_4bd6_ae74_a73d02e3441d-add_executable_shortcut_link_to_user_startup_folder|T1547.001: Add Executable Shortcut Link to User Startup Folder]]
 - [[kb/atomic/tests/bda6a3d6_7aa7_4e89_908b_306772e9662f-add_persistance_via_recycle_bin|T1547.001: Add persistance via Recycle bin]]
@@ -1984,16 +1984,16 @@
 - [[kb/atomic/tests/9dc7767b_30c1_4cc4_b999_50cab5e27891-systembc_malware_as_a_service_registry|T1547.001: SystemBC Malware-as-a-Service Registry]]
 - [[kb/atomic/tests/14fdc3f1_6fc3_4556_8d36_aa89d9d42d02-secedit_used_to_create_a_run_key_in_the_hklm_hive|T1547.001: secedit used to create a Run key in the HKLM Hive]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.002]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547002-authentication-package|T1547.002: Authentication Package]]
 
 - [[kb/atomic/tests/be2590e8_4ac3_47ac_b4b5_945820f2fbe9-authentication_package|T1547.002: Authentication Package]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.003]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547003-time-providers|T1547.003: Time Providers]]
 
 - [[kb/atomic/tests/df1efab7_bc6d_4b88_8be9_91f55ae017aa-create_a_new_time_provider|T1547.003: Create a new time provider]]
 - [[kb/atomic/tests/29e0afca_8d1d_471a_8d34_25512fc48315-edit_an_existing_time_provider|T1547.003: Edit an existing time provider]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.004]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547004-winlogon-helper-dll|T1547.004: Winlogon Helper DLL]]
 
 - [[kb/atomic/tests/95a3c42f_8c88_4952_ad60_13b81d929a9d-winlogon_hklm_shell_key_persistence_powershell|T1547.004: Winlogon HKLM Shell Key Persistence - PowerShell]]
 - [[kb/atomic/tests/f9b8daff_8fa7_4e6a_a1a7_7c14675a545b-winlogon_hklm_userinit_key_persistence_powershell|T1547.004: Winlogon HKLM Userinit Key Persistence - PowerShell]]
@@ -2001,53 +2001,53 @@
 - [[kb/atomic/tests/bf9f9d65_ee4d_4c3e_a843_777d04f19c38-winlogon_shell_key_persistence_powershell|T1547.004: Winlogon Shell Key Persistence - PowerShell]]
 - [[kb/atomic/tests/fb32c935_ee2e_454b_8fa3_1c46b42e8dfb-winlogon_userinit_key_persistence_powershell|T1547.004: Winlogon Userinit Key Persistence - PowerShell]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.005]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547005-security-support-provider|T1547.005: Security Support Provider]]
 
 - [[kb/atomic/tests/afdfd7e3_8a0b_409f_85f7_886fdf249c9e-modify_hklm_system_currentcontrolset_control_lsa_security_support_provider_configuration_in_registry|T1547.005: Modify HKLM:\System\CurrentControlSet\Control\Lsa Security Support Provider configuration in registry]]
 - [[kb/atomic/tests/de3f8e74_3351_4fdb_a442_265dbf231738-modify_hklm_system_currentcontrolset_control_lsa_osconfig_security_support_provider_configuration_in_registry|T1547.005: Modify HKLM:\System\CurrentControlSet\Control\Lsa\OSConfig Security Support Provider configuration in registry]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.006]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547006-kernel-modules-and-extensions|T1547.006: Kernel Modules and Extensions]]
 
 - [[kb/atomic/tests/687dcb93_9656_4853_9c36_9977315e9d23-linux_load_kernel_module_via_insmod|T1547.006: Linux - Load Kernel Module via insmod]]
 - [[kb/atomic/tests/f0007753_beb3_41ea_9948_760785e4c1e5-macos_load_kernel_module_via_kextmanagerloadkextwithurl|T1547.006: MacOS - Load Kernel Module via KextManagerLoadKextWithURL()]]
 - [[kb/atomic/tests/f4391089_d3a5_4dd1_ab22_0419527f2672-macos_load_kernel_module_via_kextload_and_kmutil|T1547.006: MacOS - Load Kernel Module via kextload and kmutil]]
 - [[kb/atomic/tests/e5cb5564_cc7b_4050_86e8_f2d9eec1941f-snake_malware_kernel_driver_comadmin|T1547.006: Snake Malware Kernel Driver Comadmin]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.007]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547007-re-opened-applications|T1547.007: Re-opened Applications]]
 
 - [[kb/atomic/tests/766b6c3c_9353_4033_8b7e_38b309fa3a93-append_to_existing_loginwindow_for_re_opened_applications|T1547.007: Append to existing loginwindow for Re-Opened Applications]]
 - [[kb/atomic/tests/5fefd767_ef54_4ac6_84d3_751ab85e8aba-copy_in_loginwindow_plist_for_re_opened_applications|T1547.007: Copy in loginwindow.plist for Re-Opened Applications]]
 - [[kb/atomic/tests/5f5b71da_e03f_42e7_ac98_d63f9e0465cb-re_opened_applications_using_loginhook|T1547.007: Re-Opened Applications using LoginHook]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.008]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547008-lsass-driver|T1547.008: LSASS Driver]]
 
 - [[kb/atomic/tests/8ecef16d_d289_46b4_917b_0dba6dc81cf1-modify_registry_to_load_arbitrary_dll_into_lsass_lsadbextpt|T1547.008: Modify Registry to load Arbitrary DLL into LSASS - LsaDbExtPt]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.009]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547009-shortcut-modification|T1547.009: Shortcut Modification]]
 
 - [[kb/atomic/tests/cfdc954d_4bb0_4027_875b_a1893ce406f2-create_shortcut_to_cmd_in_startup_folders|T1547.009: Create shortcut to cmd in startup folders]]
 - [[kb/atomic/tests/ce4fc678_364f_4282_af16_2fb4c78005ce-shortcut_modification|T1547.009: Shortcut Modification]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.010]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547010-port-monitors|T1547.010: Port Monitors]]
 
 - [[kb/atomic/tests/d34ef297_f178_4462_871e_9ce618d44e50-add_port_monitor_persistence_in_registry|T1547.010: Add Port Monitor persistence in Registry]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.012]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547012-print-processors|T1547.012: Print Processors]]
 
 - [[kb/atomic/tests/f7d38f47_c61b_47cc_a59d_fc0368f47ed0-print_processors|T1547.012: Print Processors]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.014]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547014-active-setup|T1547.014: Active Setup]]
 
 - [[kb/atomic/tests/deff4586_0517_49c2_981d_bbea24d48d71-hklm_add_atomic_test_key_to_launch_executable_as_part_of_user_setup|T1547.014: HKLM - Add atomic_test key to launch executable as part of user setup]]
 - [[kb/atomic/tests/39e417dd_4fed_4d9c_ae3a_ba433b4d0e9a-hklm_add_malicious_stubpath_value_to_existing_active_setup_entry|T1547.014: HKLM - Add malicious StubPath value to existing Active Setup Entry]]
 - [[kb/atomic/tests/04d55cef_f283_40ba_ae2a_316bc3b5e78c-hklm_re_execute_internet_explorer_core_fonts_stubpath_payload_by_decreasing_version_number|T1547.014: HKLM - re-execute 'Internet Explorer Core Fonts' StubPath payload by decreasing version number]]
 
-## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.015]]
+## [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547015-login-items|T1547.015: Login Items]]
 
 - [[kb/atomic/tests/716e756a_607b_41f3_8204_b214baf37c1d-add_macos_loginitem_using_applescript|T1547.015: Add macOS LoginItem using Applescript]]
 - [[kb/atomic/tests/ec5d76ef_82fe_48da_b931_bdb25a62bc65-persistence_by_modifying_windows_terminal_profile|T1547.015: Persistence by modifying Windows Terminal profile]]
 
-## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.001]]
+## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548001-setuid-and-setgid|T1548.001: Setuid and Setgid]]
 
 - [[kb/atomic/tests/3fb46e17_f337_4c14_9f9a_a471946533e2-do_reconnaissance_for_files_that_have_the_setgid_bit_set|T1548.001: Do reconnaissance for files that have the setgid bit set]]
 - [[kb/atomic/tests/8e36da01_cd29_45fd_be72_8a0fcaad4481-do_reconnaissance_for_files_that_have_the_setuid_bit_set|T1548.001: Do reconnaissance for files that have the setuid bit set]]
@@ -2060,7 +2060,7 @@
 - [[kb/atomic/tests/759055b3_3885_4582_a8ec_c00c9d64dd79-set_a_setuid_flag_on_file|T1548.001: Set a SetUID flag on file]]
 - [[kb/atomic/tests/9be9b827_ff47_4e1b_bef8_217db6fb7283-set_a_setuid_flag_on_file_freebsd|T1548.001: Set a SetUID flag on file (freebsd)]]
 
-## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 - [[kb/atomic/tests/f7a35090_6f7f_4f64_bb47_d657bf5b10c1-bypass_uac_by_mocking_trusted_directories|T1548.002: Bypass UAC by Mocking Trusted Directories]]
 - [[kb/atomic/tests/3c51abf2_44bf_42d8_9111_dc96ff66750f-bypass_uac_using_computerdefaults_powershell|T1548.002: Bypass UAC using ComputerDefaults (PowerShell)]]
@@ -2090,7 +2090,7 @@
 - [[kb/atomic/tests/f3c145f9_3c8d_422c_bd99_296a17a8f567-winpwn_uac_bypass_ccmstp_technique|T1548.002: WinPwn - UAC Bypass ccmstp technique]]
 - [[kb/atomic/tests/964d8bf8_37bc_4fd3_ba36_ad13761ebbcc-winpwn_uac_magic|T1548.002: WinPwn - UAC Magic]]
 
-## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.003]]
+## [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548003-sudo-and-sudo-caching|T1548.003: Sudo and Sudo Caching]]
 
 - [[kb/atomic/tests/91a60b03_fb75_4d24_a42e_2eb8956e8de1-disable_tty_tickets_for_sudo_caching|T1548.003: Disable tty_tickets for sudo caching]]
 - [[kb/atomic/tests/4df6a0fe_2bdd_4be8_8618_a6a19654a57a-disable_tty_tickets_for_sudo_caching_freebsd|T1548.003: Disable tty_tickets for sudo caching (freebsd)]]
@@ -2099,23 +2099,23 @@
 - [[kb/atomic/tests/a7b17659_dd5e_46f7_b7d1_e6792c91d0bc-unlimited_sudo_cache_timeout|T1548.003: Unlimited sudo cache timeout]]
 - [[kb/atomic/tests/a83ad6e8_6f24_4d7f_8f44_75f8ab742991-unlimited_sudo_cache_timeout_freebsd|T1548.003: Unlimited sudo cache timeout (freebsd)]]
 
-## [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.002]]
+## [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550002-pass-the-hash|T1550.002: Pass the Hash]]
 
 - [[kb/atomic/tests/f8757545_b00a_4e4e_8cfb_8cfb961ee713-invoke_wmiexec_pass_the_hash|T1550.002: Invoke-WMIExec Pass the Hash]]
 - [[kb/atomic/tests/ec23cef9_27d9_46e4_a68d_6f75f7b86908-mimikatz_pass_the_hash|T1550.002: Mimikatz Pass the Hash]]
 - [[kb/atomic/tests/eb05b028_16c8_4ad8_adea_6f5b219da9a9-crackmapexec_pass_the_hash|T1550.002: crackmapexec Pass the Hash]]
 
-## [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.003]]
+## [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 
 - [[kb/atomic/tests/dbf38128_7ba7_4776_bedf_cc2eed432098-mimikatz_kerberos_ticket_attack|T1550.003: Mimikatz Kerberos Ticket Attack]]
 - [[kb/atomic/tests/a2fc4ec5_12c6_4fb4_b661_961f23f359cb-rubeus_kerberos_pass_the_ticket|T1550.003: Rubeus Kerberos Pass The Ticket]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552]]
+## [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]]
 
 - [[kb/atomic/tests/a21118de_b11e_4ebd_b655_42f11142df0c-aws_retrieve_ec2_password_data_using_stratus|T1552: AWS - Retrieve EC2 Password Data using stratus]]
 - [[kb/atomic/tests/f9c3d0ab_479b_4019_945f_22ace2b1731a-search_for_passwords_in_powershell_history|T1552: Search for Passwords in Powershell History]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 - [[kb/atomic/tests/367d4004_5fc0_446d_823f_960c74ae52c3-access_unattend_xml|T1552.001: Access unattend.xml]]
 - [[kb/atomic/tests/9e507bb8_1d30_4e3b_a49b_cb5727d7ea79-extract_browser_and_system_credentials_with_lazagne|T1552.001: Extract Browser and System credentials with LaZagne]]
@@ -2135,17 +2135,17 @@
 - [[kb/atomic/tests/75f66e03_37d3_4704_9520_3210efbe33ce-winpwn_powershellsensitive|T1552.001: WinPwn - powershellsensitive]]
 - [[kb/atomic/tests/114dd4e3_8d1c_4ea7_bb8d_8d8f6aca21f0-winpwn_sensitivefiles|T1552.001: WinPwn - sensitivefiles]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.002]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]
 
 - [[kb/atomic/tests/b6ec082c_7384_46b3_a111_9a9b8b14e5e7-enumeration_for_credentials_in_registry|T1552.002: Enumeration for Credentials in Registry]]
 - [[kb/atomic/tests/af197fd7_e868_448e_9bd5_05d1bcd9d9e5-enumeration_for_putty_credentials_in_registry|T1552.002: Enumeration for PuTTY Credentials in Registry]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.003]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552003-shell-history|T1552.003: Shell History]]
 
 - [[kb/atomic/tests/3cfde62b_7c33_4b26_a61e_755d6131c8ce-search_through_bash_history|T1552.003: Search Through Bash History]]
 - [[kb/atomic/tests/d87d3b94_05b4_40f2_a80f_99864ffa6803-search_through_sh_history|T1552.003: Search Through sh History]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.004]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552004-private-keys|T1552.004: Private Keys]]
 
 - [[kb/atomic/tests/78e95057_d429_4e66_8f82_0f060c1ac96f-adfs_token_signing_and_encryption_certificates_theft_local|T1552.004: ADFS token signing and encryption certificates theft - Local]]
 - [[kb/atomic/tests/cab413d8_9e4a_4b8d_9b84_c985bd73a442-adfs_token_signing_and_encryption_certificates_theft_remote|T1552.004: ADFS token signing and encryption certificates theft - Remote]]
@@ -2162,31 +2162,31 @@
 - [[kb/atomic/tests/7617f689_bbd8_44bc_adcd_6f8968897848-export_root_certificate_with_export_pfxcertificate|T1552.004: Export Root Certificate with Export-PFXCertificate]]
 - [[kb/atomic/tests/520ce462_7ca7_441e_b5a5_f8347f632696-private_keys|T1552.004: Private Keys]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.005]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552005-cloud-instance-metadata-api|T1552.005: Cloud Instance Metadata API]]
 
 - [[kb/atomic/tests/cc99e772_4e18_4f1f_b422_c5cdd1bfd7b7-azure_dump_azure_instance_metadata_from_virtual_machines|T1552.005: Azure - Dump Azure Instance Metadata from Virtual Machines]]
 - [[kb/atomic/tests/ae9b2e3e_efa1_4483_86e2_fae529ab9fb6-azure_search_azure_ad_user_attributes_for_passwords|T1552.005: Azure - Search Azure AD User Attributes for Passwords]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.006]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552006-group-policy-preferences|T1552.006: Group Policy Preferences]]
 
 - [[kb/atomic/tests/e9584f82_322c_474a_b831_940fd8b4455c-gpp_passwords_get_gpppassword|T1552.006: GPP Passwords (Get-GPPPassword)]]
 - [[kb/atomic/tests/870fe8fb_5e23_4f5f_b89d_dd7fe26f3b5f-gpp_passwords_findstr|T1552.006: GPP Passwords (findstr)]]
 
-## [[kb/attack/techniques/T1552-unsecured_credentials|T1552.007]]
+## [[kb/attack/techniques/T1552-unsecured_credentials#^t1552007-container-api|T1552.007: Container API]]
 
 - [[kb/atomic/tests/788e0019_a483_45da_bcfe_96353d46820f-cat_the_contents_of_a_kubernetes_service_account_token_file|T1552.007: Cat the contents of a Kubernetes service account token file]]
 - [[kb/atomic/tests/31e794c4_48fd_4a76_aca4_6587c155bc11-list_all_secrets|T1552.007: List All Secrets]]
 - [[kb/atomic/tests/43c3a49d_d15c_45e6_b303_f6e177e44a9a-listsecrets|T1552.007: ListSecrets]]
 
-## [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.001]]
+## [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553001-gatekeeper-bypass|T1553.001: Gatekeeper Bypass]]
 
 - [[kb/atomic/tests/fb3d46c6_9480_4803_8d7d_ce676e1f1a9b-gatekeeper_bypass|T1553.001: Gatekeeper Bypass]]
 
-## [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.003]]
+## [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553003-sip-and-trust-provider-hijacking|T1553.003: SIP and Trust Provider Hijacking]]
 
 - [[kb/atomic/tests/e12f5d8d_574a_4e9d_8a84_c0e8b4a8a675-sip_subject_interface_package_hijacking_via_custom_dll|T1553.003: SIP (Subject Interface Package) Hijacking via Custom DLL]]
 
-## [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.004]]
+## [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
 
 - [[kb/atomic/tests/ca20a3f1_42b5_4e21_ad3f_1049199ec2e0-add_root_certificate_to_currentuser_certificate_store|T1553.004: Add Root Certificate to CurrentUser Certificate Store]]
 - [[kb/atomic/tests/9c096ec4_fd42_419d_a762_d64cc950627e-install_root_ca_on_centos_rhel|T1553.004: Install root CA on CentOS/RHEL]]
@@ -2196,18 +2196,18 @@
 - [[kb/atomic/tests/5fdb1a7a_a93c_4fbe_aa29_ddd9ef94ed1f-install_root_ca_on_windows_with_certutil|T1553.004: Install root CA on Windows with certutil]]
 - [[kb/atomic/tests/cc4a0b8c_426f_40ff_9426_4e10e5bf4c49-install_root_ca_on_macos|T1553.004: Install root CA on macOS]]
 
-## [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.005]]
+## [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553005-mark-of-the-web-bypass|T1553.005: Mark-of-the-Web Bypass]]
 
 - [[kb/atomic/tests/c2587b8d_743d_4985_aa50_c83394eaeb68-execute_lnk_file_from_iso|T1553.005: Execute LNK file from ISO]]
 - [[kb/atomic/tests/002cca30_4778_4891_878a_aaffcfa502fa-mount_iso_image|T1553.005: Mount ISO image]]
 - [[kb/atomic/tests/42f22b00_0242_4afc_a61b_0da05041f9cc-mount_an_iso_image_and_run_executable_from_the_iso|T1553.005: Mount an ISO image and run executable from the ISO]]
 - [[kb/atomic/tests/64b12afc_18b8_4d3f_9eab_7f6cae7c73f9-remove_the_zone_identifier_alternate_data_stream|T1553.005: Remove the Zone.Identifier alternate data stream]]
 
-## [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.006]]
+## [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553006-code-signing-policy-modification|T1553.006: Code Signing Policy Modification]]
 
 - [[kb/atomic/tests/bb6b51e1_ab92_45b5_aeea_e410d06405f8-code_signing_policy_modification|T1553.006: Code Signing Policy Modification]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
 
 - [[kb/atomic/tests/8fd5a296_6772_4766_9991_ff4e92af7240-dump_credentials_from_windows_credential_manager_with_powershell_web_credentials|T1555: Dump credentials from Windows Credential Manager With PowerShell [web Credentials]]]
 - [[kb/atomic/tests/c89becbe_1758_4e7d_a0f4_97d2188a23e3-dump_credentials_from_windows_credential_manager_with_powershell_windows_credentials|T1555: Dump credentials from Windows Credential Manager With PowerShell [windows Credentials]]]
@@ -2218,14 +2218,14 @@
 - [[kb/atomic/tests/afe369c2_b42e_447f_98a3_fb1f4e2b8552-winpwn_loot_local_credentials_wifi_credentials|T1555: WinPwn - Loot local Credentials - Wifi Credentials]]
 - [[kb/atomic/tests/079ee2e9_6f16_47ca_a635_14efcd994118-winpwn_loot_local_credentials_lazagne|T1555: WinPwn - Loot local Credentials - lazagne]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.001]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555001-keychain|T1555.001: Keychain]]
 
 - [[kb/atomic/tests/5c32102a_c508_49d3_978f_288f8a9f6617-copy_keychain_using_cat_utility|T1555.001: Copy Keychain using cat utility]]
 - [[kb/atomic/tests/1864fdec_ff86_4452_8c30_f12507582a93-export_certificate_item_s|T1555.001: Export Certificate Item(s)]]
 - [[kb/atomic/tests/e544bbcb_c4e0_4bd0_b614_b92131635f59-import_certificate_item_s_into_keychain|T1555.001: Import Certificate Item(s) into Keychain]]
 - [[kb/atomic/tests/88e1fa00_bf63_4e5b_a3e1_e2ea51c8cca6-keychain_dump|T1555.001: Keychain Dump]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.003]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555003-credentials-from-web-browsers|T1555.003: Credentials from Web Browsers]]
 
 - [[kb/atomic/tests/6f2c5c87_a4d5_4898_9bd1_47a55ecaf1dd-browserstealer_chrome_firefox_microsoft_edge|T1555.003: BrowserStealer (Chrome / Firefox / Microsoft Edge)]]
 - [[kb/atomic/tests/dc9cd677_c70f_4df5_bd1c_f114af3c2381-decrypt_mozilla_passwords_with_firepwd_py|T1555.003: Decrypt Mozilla Passwords with Firepwd.py]]
@@ -2245,44 +2245,44 @@
 - [[kb/atomic/tests/ec1d0b37_f659_4186_869f_31a554891611-winpwn_loot_local_credentials_mimi_kittenz|T1555.003: WinPwn - Loot local Credentials - mimi-kittenz]]
 - [[kb/atomic/tests/e5e3d639_6ea8_4408_9ecd_d5a286268ca0-winpwn_powersharppack_sharpweb_for_browser_credentials|T1555.003: WinPwn - PowerSharpPack - Sharpweb for Browser Credentials]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.004]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555004-windows-credential-manager|T1555.004: Windows Credential Manager]]
 
 - [[kb/atomic/tests/9c2dd36d_5c8b_4b29_8d72_a11b0d5d7439-access_saved_credentials_via_vaultcmd|T1555.004: Access Saved Credentials via VaultCmd]]
 - [[kb/atomic/tests/fa714db1_63dd_479e_a58e_7b2b52ca5997-winpwn_loot_local_credentials_invoke_wcmdump|T1555.004: WinPwn - Loot local Credentials - Invoke-WCMDump]]
 
-## [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.006]]
+## [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555006-cloud-secrets-management-stores|T1555.006: Cloud Secrets Management Stores]]
 
 - [[kb/atomic/tests/1b83cddb_eaa7_45aa_98a5_85fb0a8807ea-azure_dump_all_azure_key_vaults_with_microburst|T1555.006: Azure - Dump All Azure Key Vaults with Microburst]]
 
-## [[kb/attack/techniques/T1556-modify_authentication_process|T1556.001]]
+## [[kb/attack/techniques/T1556-modify_authentication_process#^t1556001-domain-controller-authentication|T1556.001: Domain Controller Authentication]]
 
 - [[kb/atomic/tests/0ee8081f_e9a7_4a2e_a23f_68473023184f-skeleton_key_via_mimikatz|T1556.001: Skeleton Key via Mimikatz]]
 
-## [[kb/attack/techniques/T1556-modify_authentication_process|T1556.002]]
+## [[kb/attack/techniques/T1556-modify_authentication_process#^t1556002-password-filter-dll|T1556.002: Password Filter DLL]]
 
 - [[kb/atomic/tests/91580da6_bc6e_431b_8b88_ac77180005f2-install_additional_authentication_packages|T1556.002: Install Additional Authentication Packages]]
 - [[kb/atomic/tests/a7961770_beb5_4134_9674_83d7e1fa865c-install_and_register_password_filter_dll|T1556.002: Install and Register Password Filter DLL]]
 
-## [[kb/attack/techniques/T1556-modify_authentication_process|T1556.003]]
+## [[kb/attack/techniques/T1556-modify_authentication_process#^t1556003-pluggable-authentication-modules|T1556.003: Pluggable Authentication Modules]]
 
 - [[kb/atomic/tests/65208808_3125_4a2e_8389_a0a00e9ab326-malicious_pam_module|T1556.003: Malicious PAM module]]
 - [[kb/atomic/tests/4b9dde80_ae22_44b1_a82a_644bf009eb9c-malicious_pam_rule|T1556.003: Malicious PAM rule]]
 - [[kb/atomic/tests/b17eacac_282d_4ca8_a240_46602cf863e3-malicious_pam_rule_freebsd|T1556.003: Malicious PAM rule (freebsd)]]
 
-## [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557.001]]
+## [[kb/attack/techniques/T1557-adversary-in-the-middle#^t1557001-llmnr-nbt-ns-poisoning-and-smb-relay|T1557.001: LLMNR/NBT-NS Poisoning and SMB Relay]]
 
 - [[kb/atomic/tests/deecd55f_afe0_4a62_9fba_4d1ba2deb321-llmnr_poisoning_with_inveigh_powershell|T1557.001: LLMNR Poisoning with Inveigh (PowerShell)]]
 
-## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.001]]
+## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558001-golden-ticket|T1558.001: Golden Ticket]]
 
 - [[kb/atomic/tests/e42d33cd_205c_4acf_ab59_a9f38f6bad9c-crafting_active_directory_golden_tickets_with_rubeus|T1558.001: Crafting Active Directory golden tickets with Rubeus]]
 - [[kb/atomic/tests/9726592a_dabc_4d4d_81cd_44070008b3af-crafting_active_directory_golden_tickets_with_mimikatz|T1558.001: Crafting Active Directory golden tickets with mimikatz]]
 
-## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.002]]
+## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558002-silver-ticket|T1558.002: Silver Ticket]]
 
 - [[kb/atomic/tests/385e59aa_113e_4711_84d9_f637aef01f2c-crafting_active_directory_silver_tickets_with_mimikatz|T1558.002: Crafting Active Directory silver tickets with mimikatz]]
 
-## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
+## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
 
 - [[kb/atomic/tests/e6f4affd_d826_4871_9a62_6c9004b8fe06-extract_all_accounts_in_use_as_spn_using_setspn|T1558.003: Extract all accounts in use as SPN using setspn]]
 - [[kb/atomic/tests/988539bc_2ed7_4e62_aec6_7c5cf6680863-request_a_single_ticket_via_powershell|T1558.003: Request A Single Ticket via PowerShell]]
@@ -2292,13 +2292,13 @@
 - [[kb/atomic/tests/78d10e20_c874_45f2_a9df_6fea0120ec27-winpwn_kerberoasting|T1558.003: WinPwn - Kerberoasting]]
 - [[kb/atomic/tests/29094950_2c96_4cbd_b5e4_f7c65079678f-winpwn_powersharppack_kerberoasting_using_rubeus|T1558.003: WinPwn - PowerSharpPack - Kerberoasting Using Rubeus]]
 
-## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.004]]
+## [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558004-as-rep-roasting|T1558.004: AS-REP Roasting]]
 
 - [[kb/atomic/tests/d6139549_7b72_4e48_9ea1_324fc9bdf88a-get_domainuser_with_powerview|T1558.004: Get-DomainUser with PowerView]]
 - [[kb/atomic/tests/615bd568_2859_41b5_9aed_61f6a88e48dd-rubeus_asreproast|T1558.004: Rubeus asreproast]]
 - [[kb/atomic/tests/8c385f88_4d47_4c9a_814d_93d9deec8c71-winpwn_powersharppack_kerberoasting_using_rubeus|T1558.004: WinPwn - PowerSharpPack - Kerberoasting Using Rubeus]]
 
-## [[kb/attack/techniques/T1559-inter-process_communication|T1559]]
+## [[kb/attack/techniques/T1559-inter-process_communication|T1559: Inter-Process Communication]]
 
 - [[kb/atomic/tests/bd13b9fc_b758_496a_b81a_397462f82c72-cobalt_strike_artifact_kit_pipe|T1559: Cobalt Strike Artifact Kit pipe]]
 - [[kb/atomic/tests/830c8b6c_7a70_4f40_b975_8bbe74558acd-cobalt_strike_lateral_movement_psexec_psh_pipe|T1559: Cobalt Strike Lateral Movement (psexec_psh) pipe]]
@@ -2306,17 +2306,17 @@
 - [[kb/atomic/tests/7a48f482_246f_4aeb_9837_21c271ebf244-cobalt_strike_post_exploitation_pipe_4_2_and_later|T1559: Cobalt Strike post-exploitation pipe (4.2 and later)]]
 - [[kb/atomic/tests/8dbfc15c_527b_4ab0_a272_019f469d367f-cobalt_strike_post_exploitation_pipe_before_4_2|T1559: Cobalt Strike post-exploitation pipe (before 4.2)]]
 
-## [[kb/attack/techniques/T1559-inter-process_communication|T1559.002]]
+## [[kb/attack/techniques/T1559-inter-process_communication#^t1559002-dynamic-data-exchange|T1559.002: Dynamic Data Exchange]]
 
 - [[kb/atomic/tests/cf91174c_4e74_414e_bec0_8d60a104d181-ddeauto|T1559.002: DDEAUTO]]
 - [[kb/atomic/tests/f592ba2a_e9e8_4d62_a459_ef63abd819fd-execute_commands|T1559.002: Execute Commands]]
 - [[kb/atomic/tests/47c21fb6_085e_4b0d_b4d2_26d72c3830b3-execute_powershell_script_via_word_dde|T1559.002: Execute PowerShell script via Word DDE]]
 
-## [[kb/attack/techniques/T1560-archive_collected_data|T1560]]
+## [[kb/attack/techniques/T1560-archive_collected_data|T1560: Archive Collected Data]]
 
 - [[kb/atomic/tests/41410c60_614d_4b9d_b66e_b0192dd9c597-compress_data_for_exfiltration_with_powershell|T1560: Compress Data for Exfiltration With PowerShell]]
 
-## [[kb/attack/techniques/T1560-archive_collected_data|T1560.001]]
+## [[kb/attack/techniques/T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 
 - [[kb/atomic/tests/d1334303_59cb_4a03_8313_b3e24d02c198-compress_data_and_lock_with_password_for_exfiltration_with_7zip|T1560.001: Compress Data and lock with password for Exfiltration with 7zip]]
 - [[kb/atomic/tests/8dd61a55_44c6_43cc_af0c_8bdda276860c-compress_data_and_lock_with_password_for_exfiltration_with_winrar|T1560.001: Compress Data and lock with password for Exfiltration with winrar]]
@@ -2331,20 +2331,20 @@
 - [[kb/atomic/tests/36c62584_d360_41d6_886f_d194654be7c2-esxi_remove_syslog_remote_ip|T1560.001: ESXi - Remove Syslog remote IP]]
 - [[kb/atomic/tests/a743e3a6_e8b2_4a30_abe7_ca85d201b5d3-encrypts_collected_data_with_aes_256_and_base64|T1560.001: Encrypts collected data with AES-256 and Base64]]
 
-## [[kb/attack/techniques/T1560-archive_collected_data|T1560.002]]
+## [[kb/attack/techniques/T1560-archive_collected_data#^t1560002-archive-via-library|T1560.002: Archive via Library]]
 
 - [[kb/atomic/tests/391f5298_b12d_4636_8482_35d9c17d53a8-compressing_data_using_gzip_in_python_freebsd_linux|T1560.002: Compressing data using GZip in Python (FreeBSD/Linux)]]
 - [[kb/atomic/tests/c75612b2_9de0_4d7c_879c_10d7b077072d-compressing_data_using_bz2_in_python_freebsd_linux|T1560.002: Compressing data using bz2 in Python (FreeBSD/Linux)]]
 - [[kb/atomic/tests/e86f1b4b_fcc1_4a2a_ae10_b49da01458db-compressing_data_using_tarfile_in_python_freebsd_linux|T1560.002: Compressing data using tarfile in Python (FreeBSD/Linux)]]
 - [[kb/atomic/tests/001a042b_859f_44d9_bf81_fd1c4e2200b0-compressing_data_using_zipfile_in_python_freebsd_linux|T1560.002: Compressing data using zipfile in Python (FreeBSD/Linux)]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+## [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 - [[kb/atomic/tests/12e5551c_8d5c_408e_b3e4_63f53b03379f-disable_journal_logging_via_sed_utility|T1562: Disable journal logging via sed utility]]
 - [[kb/atomic/tests/c3a377f9_1203_4454_aa35_9d391d34768f-disable_journal_logging_via_systemctl_utility|T1562: Disable journal logging via systemctl utility]]
 - [[kb/atomic/tests/40075d5f_3a70_4c66_9125_f72bee87247d-windows_disable_lsa_protection|T1562: Windows Disable LSA Protection]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 - [[kb/atomic/tests/695eed40_e949_40e5_b306_b4031e4154bd-amsi_bypass_amsi_initfailed|T1562.001: AMSI Bypass - AMSI InitFailed]]
 - [[kb/atomic/tests/728eca7b_0444_4f6f_ac36_437e3d751dc0-amsi_bypass_create_amsienable_reg_key|T1562.001: AMSI Bypass - Create AMSIEnable Reg Key]]
@@ -2406,7 +2406,7 @@
 - [[kb/atomic/tests/7869d7a3_3a30_4d2c_a5d2_f1cd9c34ce66-winpwn_kill_the_event_log_services_for_stealth|T1562.001: WinPwn - Kill the event log services for stealth]]
 - [[kb/atomic/tests/b9bbae2c_2ba6_4cf3_b452_8e8f908696f3-office_365_disable_antiphishrule|T1562.001: office-365-Disable-AntiPhishRule]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 - [[kb/atomic/tests/913c0e4e_4b37_4b78_ad0b_90e7b25010f6-clear_windows_audit_policy_config|T1562.002: Clear Windows Audit Policy Config]]
 - [[kb/atomic/tests/b26a3340_dad7_4360_9176_706269c74103-disable_event_logging_with_wevtutil|T1562.002: Disable Event Logging with wevtutil]]
@@ -2419,7 +2419,7 @@
 - [[kb/atomic/tests/8e81d090_0cd6_4d46_863c_eec11311298f-modify_event_log_channel_access_permissions_via_registry_powershell|T1562.002: Modify Event Log Channel Access Permissions via Registry - PowerShell]]
 - [[kb/atomic/tests/85e6eff8_3ed4_4e03_ae50_aa6a404898a5-modify_event_log_channel_access_permissions_via_registry_2_powershell|T1562.002: Modify Event Log Channel Access Permissions via Registry 2 - PowerShell]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.003]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
 
 - [[kb/atomic/tests/878794f7_c511_4199_a950_8c28b3ed8e5b-clear_bash_history|T1562.003: Clear bash history]]
 - [[kb/atomic/tests/95f5c72f_6dfe_45f3_a8c1_d8faa07176fa-disable_windows_command_line_auditing_using_powershell_cmdlet|T1562.003: Disable Windows Command Line Auditing using Powershell Cmdlet]]
@@ -2434,7 +2434,7 @@
 - [[kb/atomic/tests/f12acddb_7502_4ce6_a146_5b62c59592f1-setting_the_histignore_environment_variable|T1562.003: Setting the HISTIGNORE environment variable]]
 - [[kb/atomic/tests/386d3850_2ce7_4508_b56b_c0558922c814-setting_the_histsize_environment_variable|T1562.003: Setting the HISTSIZE environment variable]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 - [[kb/atomic/tests/8b23cae1_66c1_41c5_b79d_e095b6098b5b-add_and_delete_packet_filter_rules|T1562.004: Add and delete Packet Filter rules]]
 - [[kb/atomic/tests/b2563a4e_c4b8_429c_8d47_d5bcb227ba7a-add_and_delete_ufw_firewall_rules|T1562.004: Add and delete UFW firewall rules]]
@@ -2462,7 +2462,7 @@
 - [[kb/atomic/tests/419cca0c_fa52_4572_b0d7_bc7c6f388a27-tail_the_ufw_firewall_log_file|T1562.004: Tail the UFW firewall log file]]
 - [[kb/atomic/tests/8a95b832_2c2a_494d_9cb0_dc9dd97c8bad-turn_off_ufw_logging|T1562.004: Turn off UFW logging]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
 
 - [[kb/atomic/tests/cedaf7e7_28ee_42ab_ba13_456abd35d1bd-auditing_configuration_changes_on_freebsd_host|T1562.006: Auditing Configuration Changes on FreeBSD Host]]
 - [[kb/atomic/tests/212cfbcf_4770_4980_bc21_303e37abd0e3-auditing_configuration_changes_on_linux_host|T1562.006: Auditing Configuration Changes on Linux Host]]
@@ -2479,7 +2479,7 @@
 - [[kb/atomic/tests/6b8ca3ab_5980_4321_80c3_bcd77c8daed8-logging_configuration_changes_on_freebsd_host|T1562.006: Logging Configuration Changes on FreeBSD Host]]
 - [[kb/atomic/tests/7d40bc58_94c7_4fbb_88d9_ebce9fcdb60c-logging_configuration_changes_on_linux_host|T1562.006: Logging Configuration Changes on Linux Host]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 - [[kb/atomic/tests/9c10dc6b_20bd_403a_8e67_50ef7d07ed4e-aws_cloudtrail_changes|T1562.008: AWS - CloudTrail Changes]]
 - [[kb/atomic/tests/22d89a2f_d475_4895_b2d4_68626d49c029-aws_cloudtrail_logs_impairment_through_s3_lifecycle_rule_using_stratus|T1562.008: AWS - CloudTrail Logs Impairment Through S3 Lifecycle Rule using Stratus]]
@@ -2493,26 +2493,26 @@
 - [[kb/atomic/tests/1ee572f3_056c_4632_a7fc_7e7c42b1543c-office_365_exchange_audit_log_disabled|T1562.008: Office 365 - Exchange Audit Log Disabled]]
 - [[kb/atomic/tests/c9a2f6fe_7197_488c_af6d_10c782121ca6-office_365_set_audit_bypass_for_a_mailbox|T1562.008: Office 365 - Set Audit Bypass For a Mailbox]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.009]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562009-safe-mode-boot|T1562.009: Safe Mode Boot]]
 
 - [[kb/atomic/tests/2a78362e_b79a_4482_8e24_be397bce4d85-safe_mode_boot|T1562.009: Safe Mode Boot]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.010]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562010-downgrade-attack|T1562.010: Downgrade Attack]]
 
 - [[kb/atomic/tests/14d55b96_b2f5_428d_8fed_49dc4d9dd616-esxi_change_vib_acceptance_level_to_communitysupported_via_esxcli|T1562.010: ESXi - Change VIB acceptance level to CommunitySupported via ESXCLI]]
 - [[kb/atomic/tests/062f92c9_28b1_4391_a5f8_9d8ca6852091-esxi_change_vib_acceptance_level_to_communitysupported_via_powercli|T1562.010: ESXi - Change VIB acceptance level to CommunitySupported via PowerCLI]]
 - [[kb/atomic/tests/47c96489_2f55_4774_a6df_39faff428f6f-powershell_version_2_downgrade|T1562.010: PowerShell Version 2 Downgrade]]
 
-## [[kb/attack/techniques/T1562-impair_defenses|T1562.012]]
+## [[kb/attack/techniques/T1562-impair_defenses#^t1562012-disable-or-modify-linux-audit-system|T1562.012: Disable or Modify Linux Audit System]]
 
 - [[kb/atomic/tests/33a29ab1_cabb_407f_9448_269041bf2856-delete_all_auditd_rules_using_auditctl|T1562.012: Delete all auditd rules using auditctl]]
 - [[kb/atomic/tests/7906f0a6_b527_46ee_9026_6e81a9184e08-disable_auditd_using_auditctl|T1562.012: Disable auditd using auditctl]]
 
-## [[kb/attack/techniques/T1563-remote_service_session_hijacking|T1563.002]]
+## [[kb/attack/techniques/T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
 
 - [[kb/atomic/tests/a37ac520_b911_458e_8aed_c5f1576d9f46-rdp_hijacking|T1563.002: RDP hijacking]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+## [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 - [[kb/atomic/tests/2748ab4a_1e0b_4cf2_a2b0_8ef765bec7be-command_execution_with_nircmd|T1564: Command Execution with NirCmd]]
 - [[kb/atomic/tests/2ec63cc2_4975_41a6_bf09_dffdfb610778-create_a_hidden_user_called|T1564: Create a Hidden User Called "$"]]
@@ -2520,7 +2520,7 @@
 - [[kb/atomic/tests/333c7de0_6fbe_42aa_ac2b_c7e40b18246a-create_and_hide_a_service_with_sc_exe|T1564: Create and Hide a Service with sc.exe]]
 - [[kb/atomic/tests/6afe288a_8a8b_4d33_a629_8d03ba9dad3a-extract_binary_files_via_vba|T1564: Extract binary files via VBA]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.001]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564001-hidden-files-and-directories|T1564.001: Hidden Files and Directories]]
 
 - [[kb/atomic/tests/dadb792e_4358_4d8d_9207_b771faa0daa5-create_windows_hidden_file_with_attrib|T1564.001: Create Windows Hidden File with Attrib]]
 - [[kb/atomic/tests/7f66d539_4fbe_4cfa_9a56_4a2bf660c58a-create_windows_hidden_file_with_powershell|T1564.001: Create Windows Hidden File with powershell]]
@@ -2533,19 +2533,19 @@
 - [[kb/atomic/tests/cddb9098_3b47_4e01_9d3b_6f5f323288a9-mac_hidden_file|T1564.001: Mac Hidden file]]
 - [[kb/atomic/tests/9a1ec7da_b892_449f_ad68_67066d04380c-show_all_hidden_files|T1564.001: Show all hidden files]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.002]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564002-hidden-users|T1564.002: Hidden Users]]
 
 - [[kb/atomic/tests/173126b7_afe4_45eb_8680_fa9f6400431c-create_hidden_user_in_registry|T1564.002: Create Hidden User in Registry]]
 - [[kb/atomic/tests/de87ed7b_52c3_43fd_9554_730f695e7f31-create_hidden_user_using_ishidden_option|T1564.002: Create Hidden User using IsHidden option]]
 - [[kb/atomic/tests/4238a7f0_a980_4fff_98a2_dfc0a363d507-create_hidden_user_using_uniqueid_500|T1564.002: Create Hidden User using UniqueID < 500]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.003]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
 
 - [[kb/atomic/tests/0ad9ab92_c48c_4f08_9b20_9633277c4646-headless_browser_accessing_mockbin|T1564.003: Headless Browser Accessing Mockbin]]
 - [[kb/atomic/tests/f151ee37_9e2b_47e6_80e4_550b9f999b7a-hidden_window|T1564.003: Hidden Window]]
 - [[kb/atomic/tests/5510d22f_2595_4911_8456_4d630c978616-hidden_window_conhost_execution|T1564.003: Hidden Window-Conhost Execution]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 - [[kb/atomic/tests/8822c3b0_d9f9_4daf_a043_49f4602364f4-alternate_data_streams_ads|T1564.004: Alternate Data Streams (ADS)]]
 - [[kb/atomic/tests/0045ea16_ed3c_4d4c_a9ee_15e44d1560d1-create_ads_powershell|T1564.004: Create ADS PowerShell]]
@@ -2553,43 +2553,43 @@
 - [[kb/atomic/tests/3e6791e7_232c_481c_a680_a52f86b83fdf-create_hidden_directory_via_index_allocation|T1564.004: Create Hidden Directory via $index_allocation]]
 - [[kb/atomic/tests/2ab75061_f5d5_4c1a_b666_ba2a50df5b02-store_file_in_alternate_data_stream_ads|T1564.004: Store file in Alternate Data Stream (ADS)]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.006]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564006-run-virtual-instance|T1564.006: Run Virtual Instance]]
 
 - [[kb/atomic/tests/fb8d4d7e_f5a4_481c_8867_febf13f8b6d3-create_and_start_hyper_v_virtual_machine|T1564.006: Create and start Hyper-V virtual machine]]
 - [[kb/atomic/tests/88b81702_a1c0_49a9_95b2_2dd53d755767-create_and_start_virtualbox_virtual_machine|T1564.006: Create and start VirtualBox virtual machine]]
 - [[kb/atomic/tests/c59f246a_34f8_4e4d_9276_c295ef9ba0dd-register_portable_virtualbox|T1564.006: Register Portable Virtualbox]]
 
-## [[kb/attack/techniques/T1564-hide_artifacts|T1564.008]]
+## [[kb/attack/techniques/T1564-hide_artifacts#^t1564008-email-hiding-rules|T1564.008: Email Hiding Rules]]
 
 - [[kb/atomic/tests/30f7d3d1_78e2_4bf0_9efa_a175b5fce2a9-new_inbox_rule_to_hide_e_mail_in_m365|T1564.008: New-Inbox Rule to Hide E-mail in M365]]
 
-## [[kb/attack/techniques/T1566-phishing|T1566.001]]
+## [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 - [[kb/atomic/tests/114ccff9_ae6d_4547_9ead_4cd69f687306-download_macro_enabled_phishing_attachment|T1566.001: Download Macro-Enabled Phishing Attachment]]
 - [[kb/atomic/tests/cbb6799a_425c_4f83_9194_5447a909d67f-word_spawned_a_command_shell_and_used_an_ip_address_in_the_command_line|T1566.001: Word spawned a command shell and used an IP address in the command line]]
 
-## [[kb/attack/techniques/T1566-phishing|T1566.002]]
+## [[kb/attack/techniques/T1566-phishing#^t1566002-spearphishing-link|T1566.002: Spearphishing Link]]
 
 - [[kb/atomic/tests/bc177ef9_6a12_4ebc_a2ec_d41e19c2791d-paste_and_run_technique|T1566.002: Paste and run technique]]
 
-## [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567.002]]
+## [[kb/attack/techniques/T1567-exfiltration_over_web_service#^t1567002-exfiltration-to-cloud-storage|T1567.002: Exfiltration to Cloud Storage]]
 
 - [[kb/atomic/tests/a4b74723_5cee_4300_91c3_5e34166909b4-exfiltrate_data_with_rclone_to_cloud_storage_aws_s3|T1567.002: Exfiltrate data with rclone to cloud Storage - AWS S3]]
 - [[kb/atomic/tests/8529ee44_279a_4a19_80bf_b846a40dda58-exfiltrate_data_with_rclone_to_cloud_storage_mega_windows|T1567.002: Exfiltrate data with rclone to cloud Storage - Mega (Windows)]]
 
-## [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567.003]]
+## [[kb/attack/techniques/T1567-exfiltration_over_web_service#^t1567003-exfiltration-to-text-storage-sites|T1567.003: Exfiltration to Text Storage Sites]]
 
 - [[kb/atomic/tests/c2e8ab6e_431e_460a_a2aa_3bc6a32022e3-exfiltrate_data_with_http_post_to_text_storage_sites_pastebin_com_windows|T1567.003: Exfiltrate data with HTTP POST to text storage sites - pastebin.com (Windows)]]
 
-## [[kb/attack/techniques/T1568-dynamic_resolution|T1568.002]]
+## [[kb/attack/techniques/T1568-dynamic_resolution#^t1568002-domain-generation-algorithms|T1568.002: Domain Generation Algorithms]]
 
 - [[kb/atomic/tests/cc367493_3a00_4c4a_a685_16b73339167c-dga_simulation_python|T1568.002: DGA Simulation (Python)]]
 
-## [[kb/attack/techniques/T1569-system_services|T1569.001]]
+## [[kb/attack/techniques/T1569-system_services#^t1569001-launchctl|T1569.001: Launchctl]]
 
 - [[kb/atomic/tests/6fb61988_724e_4755_a595_07743749d4e2-launchctl|T1569.001: Launchctl]]
 
-## [[kb/attack/techniques/T1569-system_services|T1569.002]]
+## [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 - [[kb/atomic/tests/31eb7828_97d7_4067_9c1e_c6feb85edc4b-blackcat_pre_encryption_cmds_with_lateral_movement|T1569.002: BlackCat pre-encryption cmds with Lateral Movement]]
 - [[kb/atomic/tests/2382dee2_a75f_49aa_9378_f52df6ed3fb1-execute_a_command_as_a_service|T1569.002: Execute a Command as a Service]]
@@ -2600,7 +2600,7 @@
 - [[kb/atomic/tests/a5d8cdeb_be90_43a9_8b26_cc618deac1e0-use_remcom_to_execute_a_command_on_a_remote_host|T1569.002: Use RemCom to execute a command on a remote host]]
 - [[kb/atomic/tests/edbcd8c9_3639_4844_afad_455c91e95a35-psexec_py_impacket|T1569.002: psexec.py (Impacket)]]
 
-## [[kb/attack/techniques/T1569-system_services|T1569.003]]
+## [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 - [[kb/atomic/tests/e58c8723_5503_4533_b642_535cd20ec648-create_and_enable_a_malicious_systemd_service_unit|T1569.003: Create and Enable a Malicious systemd Service Unit]]
 - [[kb/atomic/tests/dce49381_a26b_4d95_bdfa_c607ffe8bee5-create_systemd_service_unit_from_dev_shm_unusual_location|T1569.003: Create systemd Service Unit from /dev/shm (Unusual Location)]]
@@ -2611,17 +2611,17 @@
 - [[kb/atomic/tests/6fec8560_ff64_4bbf_bc79_734fea48f7ca-masquerade_malicious_service_as_legitimate_system_service|T1569.003: Masquerade Malicious Service as Legitimate System Service]]
 - [[kb/atomic/tests/6123928f_6389_4914_8d25_a5d69bd657fa-modify_existing_systemd_service_to_execute_malicious_command|T1569.003: Modify Existing systemd Service to Execute Malicious Command]]
 
-## [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570]]
+## [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
 
 - [[kb/atomic/tests/183235ca_8e6c_422c_88c2_3aa28c4825d9-exfiltration_over_smb_over_quic_net_use|T1570: Exfiltration Over SMB over QUIC (NET USE)]]
 - [[kb/atomic/tests/d8d13303_159e_4f33_89f4_9f07812d016f-exfiltration_over_smb_over_quic_new_smbmapping|T1570: Exfiltration Over SMB over QUIC (New-SmbMapping)]]
 
-## [[kb/attack/techniques/T1571-non-standard_port|T1571]]
+## [[kb/attack/techniques/T1571-non-standard_port|T1571: Non-Standard Port]]
 
 - [[kb/atomic/tests/5db21e1d_dd9c_4a50_b885_b1e748912767-testing_usage_of_uncommonly_used_port|T1571: Testing usage of uncommonly used port]]
 - [[kb/atomic/tests/21fe622f_8e53_4b31_ba83_6d333c2583f4-testing_usage_of_uncommonly_used_port_with_powershell|T1571: Testing usage of uncommonly used port with PowerShell]]
 
-## [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
+## [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 
 - [[kb/atomic/tests/228c336a_2f79_4043_8aef_bfa453a611d5-cloudflare_tunnels_linux_macos|T1572: Cloudflare tunnels (Linux/macOS)]]
 - [[kb/atomic/tests/ae9ef4b0_d8c1_49d4_8758_06206f19af0a-dns_over_https_large_query_volume|T1572: DNS over HTTPS Large Query Volume]]
@@ -2631,11 +2631,11 @@
 - [[kb/atomic/tests/b877943f_0377_44f4_8477_f79db7f07c4d-vscode_tunnels_linux_macos|T1572: VSCode tunnels (Linux/macOS)]]
 - [[kb/atomic/tests/4cdc9fc7_53fb_4894_9f0c_64836943ea60-run_ngrok|T1572: run ngrok]]
 
-## [[kb/attack/techniques/T1573-encrypted_channel|T1573]]
+## [[kb/attack/techniques/T1573-encrypted_channel|T1573: Encrypted Channel]]
 
 - [[kb/atomic/tests/21caf58e_87ad_440c_a6b8_3ac259964003-openssl_c2|T1573: OpenSSL C2]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 - [[kb/atomic/tests/8549ad4b_b5df_4a2d_a3d7_2aee9e7052a3-dll_search_order_hijacking_amsi_dll|T1574.001: DLL Search Order Hijacking - amsi.dll]]
 - [[kb/atomic/tests/c095ad8e_4469_4d33_be9d_6f6d1fb21585-dll_search_order_hijacking_dll_sideloading_of_keyscramblerie_dll_via_keyscrambler_exe|T1574.001: DLL Search Order Hijacking,DLL Sideloading Of KeyScramblerIE.DLL Via KeyScrambler.EXE]]
@@ -2644,84 +2644,84 @@
 - [[kb/atomic/tests/46ed938b_c617_429a_88dc_d49b5c9ffedb-phantom_dll_hijacking_winappxrt_dll|T1574.001: Phantom Dll Hijacking - WinAppXRT.dll]]
 - [[kb/atomic/tests/5898902d_c5ad_479a_8545_6f5ab3cfc87f-phantom_dll_hijacking_ualapi_dll|T1574.001: Phantom Dll Hijacking - ualapi.dll]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.006]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574006-dynamic-linker-hijacking|T1574.006: Dynamic Linker Hijacking]]
 
 - [[kb/atomic/tests/4d66029d_7355_43fd_93a4_b63ba92ea1be-dylib_injection_via_dyld_insert_libraries|T1574.006: Dylib Injection via DYLD_INSERT_LIBRARIES]]
 - [[kb/atomic/tests/39cb0e67_dd0d_4b74_a74b_c072db7ae991-shared_library_injection_via_etc_ld_so_preload|T1574.006: Shared Library Injection via /etc/ld.so.preload]]
 - [[kb/atomic/tests/bc219ff7_789f_4d51_9142_ecae3397deae-shared_library_injection_via_ld_preload|T1574.006: Shared Library Injection via LD_PRELOAD]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.008]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574008-path-interception-by-search-order-hijacking|T1574.008: Path Interception by Search Order Hijacking]]
 
 - [[kb/atomic/tests/1561de08_0b4b_498e_8261_e922f3494aae-powershell_persistence_via_hijacking_default_modules_get_variable_exe|T1574.008: powerShell Persistence via hijacking default modules - Get-Variable.exe]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.009]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574009-path-interception-by-unquoted-path|T1574.009: Path Interception by Unquoted Path]]
 
 - [[kb/atomic/tests/2770dea7_c50f_457b_84c4_c40a47460d9f-execution_of_program_exe_as_service_with_unquoted_service_path|T1574.009: Execution of program.exe as service with unquoted service path]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 - [[kb/atomic/tests/f38e9eea_e1d7_4ba6_b716_584791963827-service_imagepath_change_with_reg_exe|T1574.011: Service ImagePath Change with reg.exe]]
 - [[kb/atomic/tests/f7536d63_7fd4_466f_89da_7e48d550752a-service_registry_permissions_weakness|T1574.011: Service Registry Permissions Weakness]]
 
-## [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.012]]
+## [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574012-cor-profiler|T1574.012: COR_PROFILER]]
 
 - [[kb/atomic/tests/79d57242_bbef_41db_b301_9d01d9f6e817-registry_free_process_scope_cor_profiler|T1574.012: Registry-free process scope COR_PROFILER]]
 - [[kb/atomic/tests/f373b482_48c8_4ce4_85ed_d40c8b3f7310-system_scope_cor_profiler|T1574.012: System Scope COR_PROFILER]]
 - [[kb/atomic/tests/9d5f89dc_c3a5_4f8a_a4fc_a6ed02e7cb5a-user_scope_cor_profiler|T1574.012: User scope COR_PROFILER]]
 
-## [[kb/attack/techniques/T1578-modify_cloud_compute_infrastructure|T1578.001]]
+## [[kb/attack/techniques/T1578-modify_cloud_compute_infrastructure#^t1578001-create-snapshot|T1578.001: Create Snapshot]]
 
 - [[kb/atomic/tests/a3c09662_85bb_4ea8_b15b_6dc8a844e236-aws_create_snapshot_from_ebs_volume|T1578.001: AWS - Create Snapshot from EBS Volume]]
 - [[kb/atomic/tests/89e69b4b_3458_4ec6_b819_b3008debc1bc-azure_create_snapshot_from_managed_disk|T1578.001: Azure - Create Snapshot from Managed Disk]]
 - [[kb/atomic/tests/e6fbc036_91e7_4ad3_b9cb_f7210f40dd5d-gcp_create_snapshot_from_persistent_disk|T1578.001: GCP - Create Snapshot from Persistent Disk]]
 
-## [[kb/attack/techniques/T1580-cloud_infrastructure_discovery|T1580]]
+## [[kb/attack/techniques/T1580-cloud_infrastructure_discovery|T1580: Cloud Infrastructure Discovery]]
 
 - [[kb/atomic/tests/99ee161b_dcb1_4276_8ecb_7cfdcb207820-aws_ec2_enumeration_from_cloud_instance|T1580: AWS - EC2 Enumeration from Cloud Instance]]
 - [[kb/atomic/tests/99b38f24_5acc_4aa3_85e5_b7f97a5d37ac-aws_ec2_security_group_enumeration|T1580: AWS - EC2 Security Group Enumeration]]
 
-## [[kb/attack/techniques/T1592-gather_victim_host_information|T1592.001]]
+## [[kb/attack/techniques/T1592-gather_victim_host_information#^t1592001-hardware|T1592.001: Hardware]]
 
 - [[kb/atomic/tests/d430bf85_b656_40e7_b238_42db01df0183-enumerate_plugnplay_camera|T1592.001: Enumerate PlugNPlay Camera]]
 
-## [[kb/attack/techniques/T1595-active_scanning|T1595.003]]
+## [[kb/attack/techniques/T1595-active_scanning#^t1595003-wordlist-scanning|T1595.003: Wordlist Scanning]]
 
 - [[kb/atomic/tests/89a83c3e_0b39_4c80_99f5_c2aa084098bd-web_server_wordlist_scan|T1595.003: Web Server Wordlist Scan]]
 
-## [[kb/attack/techniques/T1606-forge_web_credentials|T1606.002]]
+## [[kb/attack/techniques/T1606-forge_web_credentials#^t1606002-saml-tokens|T1606.002: SAML Tokens]]
 
 - [[kb/atomic/tests/b16a03bc_1089_4dcc_ad98_30fe8f3a2b31-golden_saml|T1606.002: Golden SAML]]
 
-## [[kb/attack/techniques/T1609-container_administration_command|T1609]]
+## [[kb/attack/techniques/T1609-container_administration_command|T1609: Container Administration Command]]
 
 - [[kb/atomic/tests/900e2c49_221b_42ec_ae3c_4717e41e6219-docker_exec_into_container|T1609: Docker Exec Into Container]]
 - [[kb/atomic/tests/d03bfcd3_ed87_49c8_8880_44bb772dea4b-execintocontainer|T1609: ExecIntoContainer]]
 
-## [[kb/attack/techniques/T1610-deploy_container|T1610]]
+## [[kb/attack/techniques/T1610-deploy_container|T1610: Deploy Container]]
 
 - [[kb/atomic/tests/59aa6f26_7620_417e_9318_589e0fb7a372-deploy_docker_container|T1610: Deploy Docker container]]
 
-## [[kb/attack/techniques/T1611-escape_to_host|T1611]]
+## [[kb/attack/techniques/T1611-escape_to_host|T1611: Escape to Host]]
 
 - [[kb/atomic/tests/0b2f9520_a17a_4671_9dba_3bd034099fff-deploy_container_using_nsenter_container_escape|T1611: Deploy container using nsenter container escape]]
 - [[kb/atomic/tests/6c499943_b098_4bc6_8d38_0956fc182984-mount_host_filesystem_to_escape_privileged_docker_container|T1611: Mount host filesystem to escape privileged Docker container]]
 - [[kb/atomic/tests/39fab1bc_fcb9_406f_bc2e_fe03e42ff0e4-privilege_escalation_via_docker_volume_mapping|T1611: Privilege Escalation via Docker Volume Mapping]]
 
-## [[kb/attack/techniques/T1612-build_image_on_host|T1612]]
+## [[kb/attack/techniques/T1612-build_image_on_host|T1612: Build Image on Host]]
 
 - [[kb/atomic/tests/2db30061_589d_409b_b125_7b473944f9b3-build_image_on_host|T1612: Build Image On Host]]
 
-## [[kb/attack/techniques/T1613-container_and_resource_discovery|T1613]]
+## [[kb/attack/techniques/T1613-container_and_resource_discovery|T1613: Container and Resource Discovery]]
 
 - [[kb/atomic/tests/ea2255df_d781_493b_9693_ac328f9afc3f-docker_container_and_resource_discovery|T1613: Docker Container and Resource Discovery]]
 - [[kb/atomic/tests/fc631702_3f03_4f2b_8d8a_6b3d055580a1-podman_container_and_resource_discovery|T1613: Podman Container and Resource Discovery]]
 
-## [[kb/attack/techniques/T1614-system_location_discovery|T1614]]
+## [[kb/attack/techniques/T1614-system_location_discovery|T1614: System Location Discovery]]
 
 - [[kb/atomic/tests/fe53e878_10a3_477b_963e_4367348f5af5-get_geolocation_info_through_ip_lookup_services_using_curl_windows|T1614: Get geolocation info through IP-Lookup services using curl Windows]]
 - [[kb/atomic/tests/552b4db3_8850_412c_abce_ab5cc8a86604-get_geolocation_info_through_ip_lookup_services_using_curl_freebsd_linux_or_macos|T1614: Get geolocation info through IP-Lookup services using curl freebsd, linux or macos]]
 
-## [[kb/attack/techniques/T1614-system_location_discovery|T1614.001]]
+## [[kb/attack/techniques/T1614-system_location_discovery#^t1614001-system-language-discovery|T1614.001: System Language Discovery]]
 
 - [[kb/atomic/tests/cb8f7cdc_36c4_4ed0_befc_7ad7d24dfd7a-discover_system_language_by_environment_variable_query|T1614.001: Discover System Language by Environment Variable Query]]
 - [[kb/atomic/tests/631d4cf1_42c9_4209_8fe9_6bd4de9421be-discover_system_language_by_registry_query|T1614.001: Discover System Language by Registry Query]]
@@ -2734,7 +2734,7 @@
 - [[kb/atomic/tests/837d609b_845e_4519_90ce_edc3b4b0e138-discover_system_language_with_locale|T1614.001: Discover System Language with locale]]
 - [[kb/atomic/tests/07ce871a_b3c3_44a3_97fa_a20118fdc7c9-discover_system_language_with_localectl|T1614.001: Discover System Language with localectl]]
 
-## [[kb/attack/techniques/T1615-group_policy_discovery|T1615]]
+## [[kb/attack/techniques/T1615-group_policy_discovery|T1615: Group Policy Discovery]]
 
 - [[kb/atomic/tests/0976990f_53b1_4d3f_a185_6df5be429d3b-display_group_policy_information_via_gpresult|T1615: Display group policy information via gpresult]]
 - [[kb/atomic/tests/4e524c4e_0e02_49aa_8df5_93f3f7959b9f-get_domaingpo_to_display_group_policy_information_via_powerview|T1615: Get-DomainGPO to display group policy information via PowerView]]
@@ -2742,38 +2742,38 @@
 - [[kb/atomic/tests/bc25c04b_841e_4965_855f_d1f645d7ab73-winpwn_gpoaudit|T1615: WinPwn - GPOAudit]]
 - [[kb/atomic/tests/7230d01a_0a72_4bd5_9d7f_c6d472bc6a59-winpwn_gporemoteaccesspolicy|T1615: WinPwn - GPORemoteAccessPolicy]]
 
-## [[kb/attack/techniques/T1619-cloud_storage_object_discovery|T1619]]
+## [[kb/attack/techniques/T1619-cloud_storage_object_discovery|T1619: Cloud Storage Object Discovery]]
 
 - [[kb/atomic/tests/3c7094f8_71ec_4917_aeb8_a633d7ec4ef5-aws_s3_enumeration|T1619: AWS S3 Enumeration]]
 - [[kb/atomic/tests/3dab4bcc_667f_4459_aea7_4162dd2d6590-azure_enumerate_azure_blobs_with_microburst|T1619: Azure - Enumerate Azure Blobs with MicroBurst]]
 - [[kb/atomic/tests/070322a4_2c60_4c50_8ffb_c450a34fe7bf-azure_enumerate_storage_account_objects_via_shared_key_authorization_using_azure_cli|T1619: Azure - Enumerate Storage Account Objects via Shared Key authorization using Azure CLI]]
 - [[kb/atomic/tests/146af1f1_b74e_4aa7_9895_505eb559b4b0-azure_scan_for_anonymous_access_to_azure_storage_powershell|T1619: Azure - Scan for Anonymous Access to Azure Storage (Powershell)]]
 
-## [[kb/attack/techniques/T1620-reflective_code_loading|T1620]]
+## [[kb/attack/techniques/T1620-reflective_code_loading|T1620: Reflective Code Loading]]
 
 - [[kb/atomic/tests/56b9589c_9170_4682_8c3d_33b86ecb5119-winpwn_reflectively_load_mimik_tz_into_memory|T1620: WinPwn - Reflectively load Mimik@tz into memory]]
 
-## [[kb/attack/techniques/T1622-debugger_evasion|T1622]]
+## [[kb/attack/techniques/T1622-debugger_evasion|T1622: Debugger Evasion]]
 
 - [[kb/atomic/tests/58bd8c8d_3a1a_4467_a69c_439c75469b07-detect_a_debugger_presence_in_the_machine|T1622: Detect a Debugger Presence in the Machine]]
 
-## [[kb/attack/techniques/T1647-plist_file_modification|T1647]]
+## [[kb/attack/techniques/T1647-plist_file_modification|T1647: Plist File Modification]]
 
 - [[kb/atomic/tests/394a538e_09bb_4a4a_95d1_b93cf12682a8-plist_modification|T1647: Plist Modification]]
 
-## [[kb/attack/techniques/T1648-serverless_execution|T1648]]
+## [[kb/attack/techniques/T1648-serverless_execution|T1648: Serverless Execution]]
 
 - [[kb/atomic/tests/87a4a141_c2bb_49d1_a604_8679082d8b91-lambda_function_hijack|T1648: Lambda Function Hijack]]
 
-## [[kb/attack/techniques/T1649-steal_or_forge_authentication_certificates|T1649]]
+## [[kb/attack/techniques/T1649-steal_or_forge_authentication_certificates|T1649: Steal or Forge Authentication Certificates]]
 
 - [[kb/atomic/tests/eb121494_82d1_4148_9e2b_e624e03fbf3d-staging_local_certificates_via_export_certificate|T1649: Staging Local Certificates via Export-Certificate]]
 
-## [[kb/attack/techniques/T1651-cloud_administration_command|T1651]]
+## [[kb/attack/techniques/T1651-cloud_administration_command|T1651: Cloud Administration Command]]
 
 - [[kb/atomic/tests/a3cc9c95_c160_4b86_af6f_84fba87bfd30-aws_run_command_and_control|T1651: AWS Run Command (and Control)]]
 
-## [[kb/attack/techniques/T1652-device_driver_discovery|T1652]]
+## [[kb/attack/techniques/T1652-device_driver_discovery|T1652: Device Driver Discovery]]
 
 - [[kb/atomic/tests/235b30a2_e5b1_441f_9705_be6231c88ddd-device_driver_discovery|T1652: Device Driver Discovery]]
 - [[kb/atomic/tests/d57dfc9e_ed9a_418e_88f8_b59c85f8cfd1-device_driver_discovery_linux|T1652: Device Driver Discovery (Linux)]]
@@ -2781,12 +2781,12 @@
 - [[kb/atomic/tests/c63bbe52_6f17_4832_b221_f07ba8b1736f-find_kernel_extensions_macos|T1652: Find Kernel Extensions (macOS)]]
 - [[kb/atomic/tests/71eab73d_5d7d_4681_9a72_7873489a5b85-list_loaded_kernel_extensions_macos|T1652: List loaded kernel extensions (macOS)]]
 
-## [[kb/attack/techniques/T1654-log_enumeration|T1654]]
+## [[kb/attack/techniques/T1654-log_enumeration|T1654: Log Enumeration]]
 
 - [[kb/atomic/tests/fef0ace1_3550_4bf1_a075_9fea55a778dd-enumerate_windows_security_log_via_wevtutil|T1654: Enumerate Windows Security Log via WevtUtil]]
 - [[kb/atomic/tests/a9030b20_dd4b_4405_875e_3462c6078fdc-get_eventlog_to_enumerate_windows_security_log|T1654: Get-EventLog To Enumerate Windows Security Log]]
 
-## [[kb/attack/techniques/T1659-content_injection|T1659]]
+## [[kb/attack/techniques/T1659-content_injection|T1659: Content Injection]]
 
 - [[kb/atomic/tests/9b360eaf_c778_4f07_a6e7_895c4f01ac1c-mitm_proxy_injection|T1659: MITM Proxy Injection]]
 - [[kb/atomic/tests/dcc2ca85_a21c_43a4_acc7_7314d4e5891c-mitm_proxy_injection_windows|T1659: MITM Proxy Injection (Windows)]]

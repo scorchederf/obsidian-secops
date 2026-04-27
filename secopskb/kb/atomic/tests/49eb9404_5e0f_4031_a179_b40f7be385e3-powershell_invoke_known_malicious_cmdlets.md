@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "49eb9404-5e0f-4031-a179-b40f7be385e3"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Invoke Known Malicious Cmdlets
-
 Powershell execution of known Malicious PowerShell Cmdlets
-
-## Metadata
-
-- Atomic GUID: 49eb9404-5e0f-4031-a179-b40f7be385e3
-- Technique: T1059.001: Command and Scripting Interpreter: PowerShell
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1059.001/T1059.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Input Arguments
 

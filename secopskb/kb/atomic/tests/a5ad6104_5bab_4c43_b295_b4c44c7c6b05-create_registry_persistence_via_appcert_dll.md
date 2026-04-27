@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.009"
 attack_technique_name: "Event Triggered Execution: AppCert DLLs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.009/T1546.009.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "a5ad6104-5bab-4c43-b295-b4c44c7c6b05"
@@ -20,27 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create registry persistence via AppCert DLL
-
 Creates a new 'AtomicTest' value pointing to an AppCert DLL in the AppCertDlls registry key. 
 Once the computer restarted, the DLL will be loaded in multiple processes and write an 
 'AtomicTest.txt' file in C:\Users\Public\ to validate that the DLL executed succesfully.
 
 Reference: https://skanthak.homepage.t-online.de/appcert.html
 
-## Metadata
-
-- Atomic GUID: a5ad6104-5bab-4c43-b295-b4c44c7c6b05
-- Technique: T1546.009: Event Triggered Execution: AppCert DLLs
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1546.009/T1546.009.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.009]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546009-appcert-dlls|T1546.009: AppCert DLLs]]
 
 ## Input Arguments
 

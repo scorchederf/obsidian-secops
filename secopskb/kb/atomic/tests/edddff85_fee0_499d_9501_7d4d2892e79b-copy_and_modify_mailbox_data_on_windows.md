@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.008"
 attack_technique_name: "Email Collection: Mailbox Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.008/T1070.008.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "edddff85-fee0-499d-9501-7d4d2892e79b"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copy and Modify Mailbox Data on Windows
-
 Copies and modifies mail data on Windows
-
-## Metadata
-
-- Atomic GUID: edddff85-fee0-499d-9501-7d4d2892e79b
-- Technique: T1070.008: Email Collection: Mailbox Manipulation
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1070.008/T1070.008.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.008]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070008-clear-mailbox-data|T1070.008: Clear Mailbox Data]]
 
 ## Executor
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "00682c9f-7df4-4df8-950b-6dcaaa3ad9af"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Command prompt writing script to file then executes it
-
 Simulate DarkGate malware's second stage by writing a VBscript to disk directly from the command prompt then executing it.
     The script will execute 'whoami' then exit.
 
-## Metadata
-
-- Atomic GUID: 00682c9f-7df4-4df8-950b-6dcaaa3ad9af
-- Technique: T1059.003: Command and Scripting Interpreter: Windows Command Shell
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1059.003/T1059.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Input Arguments
 

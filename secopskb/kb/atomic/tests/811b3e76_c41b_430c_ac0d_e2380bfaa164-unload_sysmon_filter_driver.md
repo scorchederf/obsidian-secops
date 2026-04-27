@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.001"
 attack_technique_name: "Impair Defenses: Disable or Modify Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.001/T1562.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "811b3e76-c41b-430c-ac0d-e2380bfaa164"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Unload Sysmon Filter Driver
-
 Unloads the Sysinternals Sysmon filter driver without stopping the Sysmon service. To verify successful execution,
 run the prereq_command's and it should fail with an error of "sysmon filter must be loaded".
 
-## Metadata
-
-- Atomic GUID: 811b3e76-c41b-430c-ac0d-e2380bfaa164
-- Technique: T1562.001: Impair Defenses: Disable or Modify Tools
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1562.001/T1562.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Input Arguments
 

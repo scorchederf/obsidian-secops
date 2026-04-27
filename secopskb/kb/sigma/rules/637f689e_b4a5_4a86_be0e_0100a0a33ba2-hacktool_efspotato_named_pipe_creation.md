@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_hktl_efspotato.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_hktl_efspotato.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / pipe_created"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - EfsPotato Named Pipe Creation
-
 Detects the pattern of a pipe name as used by the hack tool EfsPotato
-
-## Metadata
-
-- Rule ID: 637f689e-b4a5-4a86-be0e-0100a0a33ba2
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-08-23
-- Modified: 2023-12-21
-- Source Path: rules/windows/pipe_created/pipe_created_hktl_efspotato.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the pattern of a pipe name as used by the hack tool EfsPotato
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

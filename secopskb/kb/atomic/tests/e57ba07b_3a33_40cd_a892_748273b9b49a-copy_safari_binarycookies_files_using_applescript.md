@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1539"
 attack_technique_name: "Steal Web Session Cookie"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1539/T1539.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "e57ba07b-3a33-40cd-a892-748273b9b49a"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copy Safari BinaryCookies files using AppleScript
-
 This command will copy Safari BinaryCookies files using AppleScript as seen in Atomic Stealer.
-
-## Metadata
-
-- Atomic GUID: e57ba07b-3a33-40cd-a892-748273b9b49a
-- Technique: T1539: Steal Web Session Cookie
-- Platforms: macos
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1539/T1539.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539]]
+- [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539: Steal Web Session Cookie]]
 
 ## Input Arguments
 

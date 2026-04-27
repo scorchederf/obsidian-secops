@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_ads_stored_dll_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_ads_stored_dll_execution.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Rundll32 Execution With DLL Stored In ADS
-
 Detects execution of rundll32 where the DLL being called is stored in an Alternate Data Stream (ADS).
-
-## Metadata
-
-- Rule ID: 9248c7e1-2bf3-4661-a22c-600a8040b446
-- Status: test
-- Level: high
-- Author: Harjot Singh, '@cyb3rjy0t'
-- Date: 2023-01-21
-- Modified: 2023-02-08
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_ads_stored_dll_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects execution of rundll32 where the DLL being called is stored in an Alterna
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ## Detection
 

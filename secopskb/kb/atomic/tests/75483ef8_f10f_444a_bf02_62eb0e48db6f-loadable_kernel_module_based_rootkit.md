@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1014"
 attack_technique_name: "Rootkit"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1014/T1014.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "sh"
 aliases:
   - "75483ef8-f10f-444a-bf02-62eb0e48db6f"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Loadable Kernel Module based Rootkit
-
 Loadable Kernel Module based Rootkit
-
-## Metadata
-
-- Atomic GUID: 75483ef8-f10f-444a-bf02-62eb0e48db6f
-- Technique: T1014: Rootkit
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: bash
-- Source Path: atomics/T1014/T1014.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1014-rootkit|T1014]]
+- [[kb/attack/techniques/T1014-rootkit|T1014: Rootkit]]
 
 ## Input Arguments
 

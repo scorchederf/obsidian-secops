@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/identity_protection/azure_identity_protection_inbox_forwarding_rule.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/identity_protection/azure_identity_protection_inbox_forwarding_rule.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "azure / riskdetection"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Inbox Forwarding Identity Protection
-
 Indicates suspicious rules such as an inbox rule that forwards a copy of all emails to an external address
-
-## Metadata
-
-- Rule ID: 27e4f1d6-ae72-4ea0-8a67-77a73a289c3d
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'
-- Date: 2023-09-03
-- Source Path: rules/cloud/azure/identity_protection/azure_identity_protection_inbox_forwarding_rule.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Indicates suspicious rules such as an inbox rule that forwards a copy of all ema
 
 ### Techniques
 
-- [[kb/attack/techniques/T1114-email_collection|T1114.003]]
+- [[kb/attack/techniques/T1114-email_collection#^t1114003-email-forwarding-rule|T1114.003: Email Forwarding Rule]]
 
 ## Detection
 

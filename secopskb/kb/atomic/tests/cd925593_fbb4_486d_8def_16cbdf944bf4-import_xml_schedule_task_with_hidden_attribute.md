@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.005"
 attack_technique_name: "Scheduled Task/Job: Scheduled Task"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "cd925593-fbb4-486d-8def-16cbdf944bf4"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Import XML Schedule Task with Hidden Attribute
-
 Create an scheduled task that executes calc.exe after user login from XML that contains hidden setting attribute. 
 This technique was seen several times in tricbot malware and also with the targetted attack campaigne the industroyer2.
 
-## Metadata
-
-- Atomic GUID: cd925593-fbb4-486d-8def-16cbdf944bf4
-- Technique: T1053.005: Scheduled Task/Job: Scheduled Task
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1053.005/T1053.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Input Arguments
 

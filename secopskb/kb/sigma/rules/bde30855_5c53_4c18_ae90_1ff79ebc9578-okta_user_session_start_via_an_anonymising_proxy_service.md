@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/identity/okta/okta_user_session_start_via_anonymised_proxy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/identity/okta/okta_user_session_start_via_anonymised_proxy.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "okta / okta"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Okta User Session Start Via An Anonymising Proxy Service
-
 Detects when an Okta user session starts where the user is behind an anonymising proxy service.
-
-## Metadata
-
-- Rule ID: bde30855-5c53-4c18-ae90-1ff79ebc9578
-- Status: test
-- Level: high
-- Author: kelnage
-- Date: 2023-09-07
-- Source Path: rules/identity/okta/okta_user_session_start_via_anonymised_proxy.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects when an Okta user session starts where the user is behind an anonymising
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
 
 ## Detection
 

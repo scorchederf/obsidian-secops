@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/webserver_generic/web_xss_in_access_logs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/webserver_generic/web_xss_in_access_logs.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "webserver"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cross Site Scripting Strings
-
 Detects XSS attempts injected via GET requests in access logs
-
-## Metadata
-
-- Rule ID: 65354b83-a2ea-4ea6-8414-3ab38be0d409
-- Status: test
-- Level: high
-- Author: Saw Win Naung, Nasreddine Bencherchali
-- Date: 2021-08-15
-- Modified: 2022-06-14
-- Source Path: rules/web/webserver_generic/web_xss_in_access_logs.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects XSS attempts injected via GET requests in access logs
 
 ### Techniques
 
-- [[kb/attack/techniques/T1189-drive-by_compromise|T1189]]
+- [[kb/attack/techniques/T1189-drive-by_compromise|T1189: Drive-by Compromise]]
 
 ## Detection
 

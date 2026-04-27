@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_metasploit_authentication.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_metasploit_authentication.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Metasploit SMB Authentication
-
 Alerts on Metasploit host's authentications on the domain.
-
-## Metadata
-
-- Rule ID: 72124974-a68b-4366-b990-d30e0b2a190d
-- Status: test
-- Level: high
-- Author: Chakib Gzenayi (@Chak092), Hosni Mribah
-- Date: 2020-05-06
-- Modified: 2024-01-25
-- Source Path: rules/windows/builtin/security/win_security_metasploit_authentication.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Alerts on Metasploit host's authentications on the domain.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_shellcode_b64.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_shellcode_b64.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell ShellCode
-
 Detects Base64 encoded Shellcode
-
-## Metadata
-
-- Rule ID: 16b37b70-6fcf-4814-a092-c36bd3aafcbd
-- Status: test
-- Level: high
-- Author: David Ledbetter (shellcode), Florian Roth (Nextron Systems)
-- Date: 2018-11-17
-- Modified: 2024-01-25
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_shellcode_b64.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ Detects Base64 encoded Shellcode
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

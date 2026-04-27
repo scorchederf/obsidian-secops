@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1114.003"
 attack_technique_name: "Email Collection: Email Forwarding Rule"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1114.003/T1114.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "3234117e-151d-4254-9150-3d0bac41e38c"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Office365 - Email Forwarding
-
 Creates a new Inbox Rule to forward emails to an external user via the "ForwardTo" property of the New-InboxRule Powershell cmdlet.
-
-## Metadata
-
-- Atomic GUID: 3234117e-151d-4254-9150-3d0bac41e38c
-- Technique: T1114.003: Email Collection: Email Forwarding Rule
-- Platforms: office-365
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1114.003/T1114.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1114-email_collection|T1114.003]]
+- [[kb/attack/techniques/T1114-email_collection#^t1114003-email-forwarding-rule|T1114.003: Email Forwarding Rule]]
 
 ## Input Arguments
 

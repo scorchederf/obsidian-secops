@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_office_uncommon_file_startup.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_office_uncommon_file_startup.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Uncommon File Created In Office Startup Folder
-
 Detects the creation of a file with an uncommon extension in an Office application startup folder
-
-## Metadata
-
-- Rule ID: a10a2c40-2c4d-49f8-b557-1a946bc55d9d
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-06-05
-- Modified: 2023-12-13
-- Source Path: rules/windows/file/file_event/file_event_win_office_uncommon_file_startup.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the creation of a file with an uncommon extension in an Office applicati
 
 ### Techniques
 
-- [[kb/attack/techniques/T1587-develop_capabilities|T1587.001]]
+- [[kb/attack/techniques/T1587-develop_capabilities#^t1587001-malware|T1587.001: Malware]]
 
 ## Detection
 

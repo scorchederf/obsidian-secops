@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_vscode_tunnel_renamed_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vscode_tunnel_renamed_execution.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed Visual Studio Code Tunnel Execution
-
 Detects renamed Visual Studio Code tunnel execution. Attackers can abuse this functionality to establish a C2 channel
-
-## Metadata
-
-- Rule ID: 2cf29f11-e356-4f61-98c0-1bdb9393d6da
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-09-28
-- Modified: 2025-10-29
-- Source Path: rules/windows/process_creation/proc_creation_win_vscode_tunnel_renamed_execution.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects renamed Visual Studio Code tunnel execution. Attackers can abuse this fu
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
+- [[kb/attack/techniques/T1219-remote_access_tools|T1219: Remote Access Tools]]
 
 ## Detection
 

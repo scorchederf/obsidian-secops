@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_http_post_login_attempt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_http_post_login_attempt.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - HTTP POST Login Attempt
-
 Detects instances where an HTTP service on an OpenCanary node has had login attempt via Form POST.
-
-## Metadata
-
-- Rule ID: af1ac430-df6b-4b38-b976-0b52f07a0252
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_http_post_login_attempt.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects instances where an HTTP service on an OpenCanary node has had login atte
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 ## Detection
 

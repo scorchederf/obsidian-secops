@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-04-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-04-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-04-002"
   - "Quick execution of a series of suspicious commands"
@@ -66,20 +66,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-04-002: Quick execution of a series of suspicious commands
-
-## Metadata
-
-- CAR ID: CAR-2013-04-002
-- Submission Date: 2013/04/11
-- Information Domain: Analytic, Host
-- Analytic Type: TTP
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Certain commands are frequently used by malicious actors and infrequently used by normal users. By looking for execution of these commands in short periods of time, we can not only see when a malicious user was on the system but also get an idea of what they were doing.
 
   Commands of interest:
@@ -117,45 +103,45 @@ The host on which the commands were executed, the time of execution, and what co
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087]] (coverage: Low; tactics: TA0007)
-  - [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
-  - [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]] (coverage: Low; tactics: TA0006)
-  - [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069]] (coverage: Low; tactics: TA0007)
-  - [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
-  - [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
-- [[kb/attack/techniques/T1057-process_discovery|T1057]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1021-remote_services|T1021]] (coverage: Low; tactics: TA0008)
-  - [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]] (coverage: Low; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Low; tactics: TA0005)
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: Low; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
-- [[kb/attack/techniques/T1018-remote_system_discovery|T1018]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1569-system_services|T1569]] (coverage: Low; tactics: TA0002)
-  - [[kb/attack/techniques/T1569-system_services|T1569.002]]
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]] (coverage: Low; tactics: TA0003, TA0004, TA0002)
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
-- [[kb/attack/techniques/T1029-scheduled_transfer|T1029]] (coverage: Low; tactics: TA0010)
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1007-system_service_discovery|T1007]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1010-application_window_discovery|T1010]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1518-software_discovery|T1518]] (coverage: Low; tactics: TA0007)
-  - [[kb/attack/techniques/T1518-software_discovery|T1518.001]]
-- [[kb/attack/techniques/T1046-network_service_discovery|T1046]] (coverage: Low; tactics: TA0007)
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]] (coverage: Low; tactics: TA0005)
-  - [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
-  - [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]] (coverage: Low; tactics: TA0006)
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]] (coverage: Moderate; tactics: TA0002)
-  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1012-query_registry|T1012]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]] (coverage: Low; tactics: TA0007)
+  - [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
+  - [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]] (coverage: Low; tactics: TA0006)
+  - [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069: Permission Groups Discovery]] (coverage: Low; tactics: TA0007)
+  - [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
+  - [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[kb/attack/techniques/T1057-process_discovery|T1057: Process Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]] (coverage: Low; tactics: TA0008)
+  - [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]] (coverage: Low; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Low; tactics: TA0005)
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: Low; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
+- [[kb/attack/techniques/T1018-remote_system_discovery|T1018: Remote System Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1569-system_services|T1569: System Services]] (coverage: Low; tactics: TA0002)
+  - [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]] (coverage: Low; tactics: TA0003, TA0004, TA0002)
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+- [[kb/attack/techniques/T1029-scheduled_transfer|T1029: Scheduled Transfer]] (coverage: Low; tactics: TA0010)
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1007-system_service_discovery|T1007: System Service Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1049-system_network_connections_discovery|T1049: System Network Connections Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1010-application_window_discovery|T1010: Application Window Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1518-software_discovery|T1518: Software Discovery]] (coverage: Low; tactics: TA0007)
+  - [[kb/attack/techniques/T1518-software_discovery#^t1518001-security-software-discovery|T1518.001: Security Software Discovery]]
+- [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]] (coverage: Low; tactics: TA0007)
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]] (coverage: Low; tactics: TA0005)
+  - [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
+  - [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]] (coverage: Low; tactics: TA0006)
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]] (coverage: Moderate; tactics: TA0002)
+  - [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]] (coverage: Low; tactics: TA0007)
 
 ## Implementations
 

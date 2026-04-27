@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1123"
 attack_technique_name: "Audio Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1123/T1123.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "c7a0bb71-70ce-4a53-b115-881f241b795b"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# using Quicktime Player
-
 Use AppleScript to get Quicktime Player to record an audio file from the default microphone.
 
 Should create a non-empty m4a file with sound from the microphone.
@@ -29,17 +27,9 @@ Should create a non-empty m4a file with sound from the microphone.
 - requires Automation permissions but no additional microphone permissions
 - saves file in /tmp by default. Other locations likely to require more permissions.
 
-## Metadata
-
-- Atomic GUID: c7a0bb71-70ce-4a53-b115-881f241b795b
-- Technique: T1123: Audio Capture
-- Platforms: macos
-- Executor: sh
-- Source Path: atomics/T1123/T1123.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1123-audio_capture|T1123]]
+- [[kb/attack/techniques/T1123-audio_capture|T1123: Audio Capture]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1132.001"
 attack_technique_name: "Data Encoding: Standard Encoding"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1132.001/T1132.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "2d97c626-7652-449e-a986-b02d9051c298"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Base64 Encoded data (freebsd)
-
 Utilizing a common technique for posting base64 encoded data.
-
-## Metadata
-
-- Atomic GUID: 2d97c626-7652-449e-a986-b02d9051c298
-- Technique: T1132.001: Data Encoding: Standard Encoding
-- Platforms: linux
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1132.001/T1132.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1132-data_encoding|T1132.001]]
+- [[kb/attack/techniques/T1132-data_encoding#^t1132001-standard-encoding|T1132.001: Standard Encoding]]
 
 ## Input Arguments
 

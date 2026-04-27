@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "eb0ba433-63e5-4a8c-a9f0-27c4192e1336"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enable Proxy Settings
-
 A modification registry to enable proxy settings. This technique was seen in DarkGate malware as part of its installation.
-
-## Metadata
-
-- Atomic GUID: eb0ba433-63e5-4a8c-a9f0-27c4192e1336
-- Technique: T1112: Modify Registry
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1112/T1112.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Executor
 

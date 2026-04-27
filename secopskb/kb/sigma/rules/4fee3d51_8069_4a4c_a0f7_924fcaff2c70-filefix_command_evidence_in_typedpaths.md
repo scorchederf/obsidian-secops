@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_filefix_typedpath_commands.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_filefix_typedpath_commands.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "experimental"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# FileFix - Command Evidence in TypedPaths
-
 Detects commonly-used chained commands and strings in the most recent 'url' value of the 'TypedPaths' key, which could be indicative of a user being targeted by the FileFix technique.
-
-## Metadata
-
-- Rule ID: 4fee3d51-8069-4a4c-a0f7-924fcaff2c70
-- Status: experimental
-- Level: high
-- Author: Alfie Champion (delivr.to), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-07-05
-- Modified: 2025-11-19
-- Source Path: rules/windows/registry/registry_set/registry_set_filefix_typedpath_commands.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects commonly-used chained commands and strings in the most recent 'url' valu
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.004]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204004-malicious-copy-and-paste|T1204.004: Malicious Copy and Paste]]
 
 ## Detection
 

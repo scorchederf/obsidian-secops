@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1485"
 attack_technique_name: "Data Destruction"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1485/T1485.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "476419b5-aebf-4366-a131-ae3e8dae5fc2"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows - Overwrite file with SysInternals SDelete
-
 Overwrites and deletes a file using SysInternals SDelete. Upon successful execution, "Files deleted: 1" will be displayed in
 the powershell session along with other information about the file that was deleted.
 
-## Metadata
-
-- Atomic GUID: 476419b5-aebf-4366-a131-ae3e8dae5fc2
-- Technique: T1485: Data Destruction
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1485/T1485.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1485-data_destruction|T1485]]
+- [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 ## Input Arguments
 

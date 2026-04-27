@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "af1800cf-9f9d-4fd1-a709-14b1e6de020d"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mimikatz - Cradlecraft PsSendKeys
-
 Run mimikatz via PsSendKeys. Upon execution, automated actions will take place to open file explorer, open notepad and input code, then mimikatz dump info will be displayed.
-
-## Metadata
-
-- Atomic GUID: af1800cf-9f9d-4fd1-a709-14b1e6de020d
-- Technique: T1059.001: Command and Scripting Interpreter: PowerShell
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1059.001/T1059.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Executor
 

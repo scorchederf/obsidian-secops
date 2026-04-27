@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wmic_squiblytwo_bypass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmic_squiblytwo_bypass.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -24,24 +24,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Remote SquiblyTwo Technique Execution
-
 Detects potential execution of the SquiblyTwo technique that leverages Windows Management Instrumentation (WMI)
 to execute malicious code remotely. This technique bypasses application whitelisting by using wmic.exe to process
 malicious XSL (eXtensible Stylesheet Language) scripts that can contain embedded JScript or VBScript.
 The attack typically works by fetching XSL content from a remote source (using HTTP/HTTPS) and executing it
 with full trust privileges directly in memory, avoiding disk-based detection mechanisms. This is a common
 LOLBin (Living Off The Land Binary) technique used for defense evasion and code execution.
-
-## Metadata
-
-- Rule ID: 8d63dadf-b91b-4187-87b6-34a1114577ea
-- Status: test
-- Level: high
-- Author: Markus Neis, Florian Roth, Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2019-01-16
-- Modified: 2026-01-24
-- Source Path: rules/windows/process_creation/proc_creation_win_wmic_squiblytwo_bypass.yml
 
 ## Logsource
 
@@ -52,10 +40,10 @@ LOLBin (Living Off The Land Binary) technique used for defense evasion and code 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
-- [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
+- [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 ## Detection
 

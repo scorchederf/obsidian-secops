@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_narrator_feedback_persistance.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_narrator_feedback_persistance.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Narrator's Feedback-Hub Persistence
-
 Detects abusing Windows 10 Narrator's Feedback-Hub
-
-## Metadata
-
-- Rule ID: f663a6d9-9d1b-49b8-b2b1-0637914d199a
-- Status: test
-- Level: high
-- Author: Dmitriy Lifanov, oscd.community
-- Date: 2019-10-25
-- Modified: 2022-03-26
-- Source Path: rules/windows/registry/registry_event/registry_event_narrator_feedback_persistance.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects abusing Windows 10 Narrator's Feedback-Hub
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

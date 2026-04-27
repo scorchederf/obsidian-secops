@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_bypass_uac_using_delegateexecute.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_bypass_uac_using_delegateexecute.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC Using DelegateExecute
-
 Bypasses User Account Control using a fileless method
-
-## Metadata
-
-- Rule ID: 46dd5308-4572-4d12-aa43-8938f0184d4f
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-01-05
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_bypass_uac_using_delegateexecute.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Bypasses User Account Control using a fileless method
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

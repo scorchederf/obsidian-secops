@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_user_shell_folders_registry_modification.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_user_shell_folders_registry_modification.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,20 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# User Shell Folders Registry Modification via CommandLine
-
 Detects modifications to User Shell Folders registry values via reg.exe or PowerShell, which could indicate persistence attempts.
 Attackers may modify User Shell Folders registry values to point to malicious executables or scripts that will be executed during startup.
 This technique is often used to maintain persistence on a compromised system by ensuring that malicious payloads are executed automatically.
-
-## Metadata
-
-- Rule ID: 8f3ab69a-aa22-4943-aa58-e0a52fdf6818
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2026-01-05
-- Source Path: rules/windows/process_creation/proc_creation_win_user_shell_folders_registry_modification.yml
 
 ## Logsource
 
@@ -46,8 +35,8 @@ This technique is often used to maintain persistence on a compromised system by 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

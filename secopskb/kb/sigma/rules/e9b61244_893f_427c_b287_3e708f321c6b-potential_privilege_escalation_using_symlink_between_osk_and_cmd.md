@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmd_mklink_osk_cmd.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_mklink_osk_cmd.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Privilege Escalation Using Symlink Between Osk and Cmd
-
 Detects the creation of a symbolic link between "cmd.exe" and the accessibility on-screen keyboard binary (osk.exe) using "mklink". This technique provides an elevated command prompt to the user from the login screen without the need to log in.
-
-## Metadata
-
-- Rule ID: e9b61244-893f-427c-b287-3e708f321c6b
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-12-11
-- Modified: 2022-12-20
-- Source Path: rules/windows/process_creation/proc_creation_win_cmd_mklink_osk_cmd.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the creation of a symbolic link between "cmd.exe" and the accessibility 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 ## Detection
 

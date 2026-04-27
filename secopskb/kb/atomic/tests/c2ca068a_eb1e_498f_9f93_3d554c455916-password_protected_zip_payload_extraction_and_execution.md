@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027.013"
 attack_technique_name: "Obfuscated Files or Information: Encrypted/Encoded File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027.013/T1027.013.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "bash"
 aliases:
   - "c2ca068a-eb1e-498f-9f93-3d554c455916"
@@ -21,26 +21,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Password-Protected ZIP Payload Extraction and Execution
-
 Extracts and executes a script from a password-protected ZIP archive.
 This technique is commonly used by malware families like Emotet and QBot to deliver payloads
 via email attachments where the password is provided in the message body.
 The encrypted ZIP evades static file analysis until extracted at runtime.
 Upon successful execution, displays confirmation and system information.
 
-## Metadata
-
-- Atomic GUID: c2ca068a-eb1e-498f-9f93-3d554c455916
-- Technique: T1027.013: Obfuscated Files or Information: Encrypted/Encoded File
-- Platforms: linux, macos
-- Executor: bash
-- Dependency Executor: bash
-- Source Path: atomics/T1027.013/T1027.013.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.013]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027013-encrypted-encoded-file|T1027.013: Encrypted/Encoded File]]
 
 ## Input Arguments
 

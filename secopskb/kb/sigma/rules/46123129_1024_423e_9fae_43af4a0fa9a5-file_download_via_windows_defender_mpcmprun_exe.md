@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mpcmdrun_download_arbitrary_file.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mpcmdrun_download_arbitrary_file.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# File Download Via Windows Defender MpCmpRun.EXE
-
 Detects the use of Windows Defender MpCmdRun.EXE to download files
-
-## Metadata
-
-- Rule ID: 46123129-1024-423e-9fae-43af4a0fa9a5
-- Status: test
-- Level: high
-- Author: Matthew Matchen
-- Date: 2020-09-04
-- Modified: 2023-11-09
-- Source Path: rules/windows/process_creation/proc_creation_win_mpcmdrun_download_arbitrary_file.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the use of Windows Defender MpCmdRun.EXE to download files
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1484.002"
 attack_technique_name: "Domain Trust Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1484.002/T1484.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "8906c5d0-3ee5-4f63-897a-f6cafd3fdbb7"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Add Federation to Azure AD
-
 Add a new federated domain to Azure AD using PowerShell.
 The malicious domain to be federated must be configured beforehand (outside of the scope of this test):
     1. Open Azure Portal
     2. Add a new "custom domain name"
     3. Verify the domain by following instructions (i.e. create the requested DNS record)
 
-## Metadata
-
-- Atomic GUID: 8906c5d0-3ee5-4f63-897a-f6cafd3fdbb7
-- Technique: T1484.002: Domain Trust Modification
-- Platforms: azure-ad
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1484.002/T1484.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification|T1484.002]]
+- [[kb/attack/techniques/T1484-domain_or_tenant_policy_modification#^t1484002-trust-modification|T1484.002: Trust Modification]]
 
 ## Input Arguments
 

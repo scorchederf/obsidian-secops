@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_schtasks_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_schtasks_execution.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,20 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed Schtasks Execution
-
 Detects the execution of renamed schtasks.exe binary, which is a legitimate Windows utility used for scheduling tasks.
 One of the very common persistence techniques is schedule malicious tasks using schtasks.exe.
 Since, it is heavily abused, it is also heavily monitored by security products. To evade detection, threat actors may rename the schtasks.exe binary to schedule their malicious tasks.
-
-## Metadata
-
-- Rule ID: f91e51c9-f344-4b32-969b-0b6f6b8537d4
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-27
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_schtasks_execution.yml
 
 ## Logsource
 
@@ -46,8 +35,8 @@ Since, it is heavily abused, it is also heavily monitored by security products. 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

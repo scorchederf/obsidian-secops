@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1095"
 attack_technique_name: "Non-Application Layer Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1095/T1095.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "manual"
 aliases:
   - "8e139e1f-1f3a-4be7-901d-afae9738c064"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Linux ICMP Reverse Shell using icmp-cnc
-
 ICMP C2 (Command and Control) utilizes the Internet Control Message Protocol (ICMP), traditionally used for network diagnostics, as a covert communication channel for attackers. By using ICMP, adversaries can send commands, exfiltrate data, or maintain access to compromised systems without triggering network detection systems.
 This method allows attackers to communicate and control compromised devices while remaining undetected.
 
@@ -32,17 +30,9 @@ For more details, check this blog: [ICMP Reverse Shell Blog](https://cryptsus.co
 - Binaries work on Ubuntu 22.04.5 LTS; for CentOS Stream or other, use the Python file from the GitHub link [https://github.com/krabelize/icmpdoor].
 - Root access is required.
 
-## Metadata
-
-- Atomic GUID: 8e139e1f-1f3a-4be7-901d-afae9738c064
-- Technique: T1095: Non-Application Layer Protocol
-- Platforms: linux
-- Executor: manual
-- Source Path: atomics/T1095/T1095.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095]]
+- [[kb/attack/techniques/T1095-non-application_layer_protocol|T1095: Non-Application Layer Protocol]]
 
 ## Executor
 

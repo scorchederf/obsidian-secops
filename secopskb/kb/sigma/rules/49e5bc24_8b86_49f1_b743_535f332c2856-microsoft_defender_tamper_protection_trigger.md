@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/windefend/win_defender_tamper_protection_trigger.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/windefend/win_defender_tamper_protection_trigger.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "stable"
 level: "high"
 logsource: "windows / windefend"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Microsoft Defender Tamper Protection Trigger
-
 Detects blocked attempts to change any of Defender's settings such as "Real Time Monitoring" and "Behavior Monitoring"
-
-## Metadata
-
-- Rule ID: 49e5bc24-8b86-49f1-b743-535f332c2856
-- Status: stable
-- Level: high
-- Author: Bhabesh Raj, Nasreddine Bencherchali
-- Date: 2021-07-05
-- Modified: 2022-12-06
-- Source Path: rules/windows/builtin/windefend/win_defender_tamper_protection_trigger.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects blocked attempts to change any of Defender's settings such as "Real Time
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

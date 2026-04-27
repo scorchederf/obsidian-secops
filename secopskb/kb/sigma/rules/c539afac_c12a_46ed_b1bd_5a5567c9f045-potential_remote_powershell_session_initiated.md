@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_susp_remote_powershell_session.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_susp_remote_powershell_session.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / network_connection"
@@ -22,20 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Remote PowerShell Session Initiated
-
 Detects a process that initiated a network connection over ports 5985 or 5986 from a non-network service account.
 This could potentially indicates a remote PowerShell connection.
-
-## Metadata
-
-- Rule ID: c539afac-c12a-46ed-b1bd-5a5567c9f045
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez @Cyb3rWard0g
-- Date: 2019-09-12
-- Modified: 2024-02-02
-- Source Path: rules/windows/network_connection/net_connection_win_susp_remote_powershell_session.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ This could potentially indicates a remote PowerShell connection.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
-- [[kb/attack/techniques/T1021-remote_services|T1021.006]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
 
 ## Detection
 

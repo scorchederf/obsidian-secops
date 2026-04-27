@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-05-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-05-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-05-002"
   - "Suspicious Run Locations"
@@ -26,20 +26,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-05-002: Suspicious Run Locations
-
-## Metadata
-
-- CAR ID: CAR-2013-05-002
-- Submission Date: 2013/05/07
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 In Windows, files should never execute out of certain directory locations. Any of these locations may exist for a variety of reasons, and executables may be present in the directory but should not execute. As a result, some defenders make the mistake of ignoring these directories and assuming that a process will never run from one. There are known TTPs that have taken advantage of this fact to go undetected. This fact should inform defenders to monitor these directories more closely, knowing that they should never contain running processes.
 
 Monitors the directories
@@ -51,7 +37,7 @@ Monitors the directories
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]] (coverage: Low; tactics: TA0005)
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]] (coverage: Low; tactics: TA0005)
 
 ## Implementations
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/execve/lnx_auditd_binary_padding.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/execve/lnx_auditd_binary_padding.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Binary Padding - Linux
-
 Adversaries may use binary padding to add junk data and change the on-disk representation of malware.
 This rule detect using dd and truncate to add a junk data to file.
-
-## Metadata
-
-- Rule ID: c52a914f-3d8b-4b2a-bb75-b3991e75f8ba
-- Status: test
-- Level: high
-- Author: Igor Fits, oscd.community
-- Date: 2020-10-13
-- Modified: 2023-05-03
-- Source Path: rules/linux/auditd/execve/lnx_auditd_binary_padding.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This rule detect using dd and truncate to add a junk data to file.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027001-binary-padding|T1027.001: Binary Padding]]
 
 ## Detection
 

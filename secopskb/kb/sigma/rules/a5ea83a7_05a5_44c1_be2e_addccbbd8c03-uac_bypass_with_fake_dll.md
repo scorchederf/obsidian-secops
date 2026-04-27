@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_uac_bypass_via_dism.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_uac_bypass_via_dism.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# UAC Bypass With Fake DLL
-
 Attempts to load dismcore.dll after dropping it
-
-## Metadata
-
-- Rule ID: a5ea83a7-05a5-44c1-be2e-addccbbd8c03
-- Status: test
-- Level: high
-- Author: oscd.community, Dmitry Uchakin
-- Date: 2020-10-06
-- Modified: 2022-12-25
-- Source Path: rules/windows/image_load/image_load_uac_bypass_via_dism.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Attempts to load dismcore.dll after dropping it
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

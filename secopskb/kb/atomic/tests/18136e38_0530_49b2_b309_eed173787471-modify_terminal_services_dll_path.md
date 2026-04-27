@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.005"
 attack_technique_name: "Server Software Component: Terminal Services DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.005/T1505.005.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "18136e38-0530-49b2-b309-eed173787471"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Modify Terminal Services DLL Path
-
 This atomic test simulates the modification of the ServiceDll value in HKLM\System\CurrentControlSet\services\TermService\Parameters. This technique may be leveraged by adversaries to establish persistence by loading a patched version of the DLL containing malicious code.
-
-## Metadata
-
-- Atomic GUID: 18136e38-0530-49b2-b309-eed173787471
-- Technique: T1505.005: Server Software Component: Terminal Services DLL
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1505.005/T1505.005.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.005]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505005-terminal-services-dll|T1505.005: Terminal Services DLL]]
 
 ## Executor
 

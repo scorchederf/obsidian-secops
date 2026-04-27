@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_portscan_nmap_xmas_scan.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_portscan_nmap_xmas_scan.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "opencanary / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - NMAP XMAS Scan
-
 Detects instances where an OpenCanary node has been targeted by a NMAP XMAS Scan
-
-## Metadata
-
-- Rule ID: d7553d7b-f485-479c-b192-cdac6edd83a4
-- Status: experimental
-- Level: high
-- Author: Marco Pedrinazzi (@pedrinazziM)
-- Date: 2026-01-06
-- Source Path: rules/application/opencanary/opencanary_portscan_nmap_xmas_scan.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects instances where an OpenCanary node has been targeted by a NMAP XMAS Scan
 
 ### Techniques
 
-- [[kb/attack/techniques/T1046-network_service_discovery|T1046]]
+- [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]]
 
 ## Detection
 

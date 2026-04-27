@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -24,19 +24,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Webshell Detection With Command Line Keywords
-
 Detects certain command line parameters often used during reconnaissance activity via web shells
-
-## Metadata
-
-- Rule ID: bed2a484-9348-4143-8a8a-b801c979301c
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro, Anton Kutepov, oscd.community, Chad Hudson, Matt Anderson
-- Date: 2017-01-01
-- Modified: 2024-12-14
-- Source Path: rules/windows/process_creation/proc_creation_win_webshell_recon_commands_and_processes.yml
 
 ## Logsource
 
@@ -47,10 +35,10 @@ Detects certain command line parameters often used during reconnaissance activit
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
-- [[kb/attack/techniques/T1018-remote_system_discovery|T1018]]
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
+- [[kb/attack/techniques/T1018-remote_system_discovery|T1018: Remote System Discovery]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
+- [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]]
 
 ## Detection
 

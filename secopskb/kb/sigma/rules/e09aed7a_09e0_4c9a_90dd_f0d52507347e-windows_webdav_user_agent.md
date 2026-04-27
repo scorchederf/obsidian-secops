@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/proxy_generic/proxy_downloadcradle_webdav.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/proxy_generic/proxy_downloadcradle_webdav.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "proxy"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows WebDAV User Agent
-
 Detects WebDav DownloadCradle
-
-## Metadata
-
-- Rule ID: e09aed7a-09e0-4c9a-90dd-f0d52507347e
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2018-04-06
-- Modified: 2021-11-27
-- Source Path: rules/web/proxy_generic/proxy_downloadcradle_webdav.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects WebDav DownloadCradle
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 
 ## Detection
 

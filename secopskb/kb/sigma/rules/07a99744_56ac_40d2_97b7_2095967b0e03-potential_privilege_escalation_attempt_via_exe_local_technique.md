@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_system32_local_folder_privilege_escalation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_system32_local_folder_privilege_escalation.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Privilege Escalation Attempt Via .Exe.Local Technique
-
 Detects potential privilege escalation attempt via the creation of the "*.Exe.Local" folder inside the "System32" directory in order to sideload "comctl32.dll"
-
-## Metadata
-
-- Rule ID: 07a99744-56ac-40d2-97b7-2095967b0e03
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Subhash P (@pbssubhash)
-- Date: 2022-12-16
-- Modified: 2022-12-19
-- Source Path: rules/windows/file/file_event/file_event_win_system32_local_folder_privilege_escalation.yml
 
 ## Logsource
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_xordump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_xordump.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - XORDump Execution
-
 Detects suspicious use of XORDump process memory dumping utility
-
-## Metadata
-
-- Rule ID: 66e563f9-1cbd-4a22-a957-d8b7c0f44372
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-01-28
-- Modified: 2023-02-08
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_xordump.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects suspicious use of XORDump process memory dumping utility
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

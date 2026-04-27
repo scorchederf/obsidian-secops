@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_reg_dumping_sensitive_hives.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_reg_dumping_sensitive_hives.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dumping of Sensitive Hives Via Reg.EXE
-
 Detects the usage of "reg.exe" in order to dump sensitive registry hives. This includes SAM, SYSTEM and SECURITY hives.
-
-## Metadata
-
-- Rule ID: fd877b94-9bb5-4191-bb25-d79cbd93c167
-- Status: test
-- Level: high
-- Author: Teymur Kheirkhabarov, Endgame, JHasenbusch, Daniil Yugoslavskiy, oscd.community, frack113
-- Date: 2019-10-22
-- Modified: 2023-12-13
-- Source Path: rules/windows/process_creation/proc_creation_win_reg_dumping_sensitive_hives.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects the usage of "reg.exe" in order to dump sensitive registry hives. This i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.005]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
 
 ## Detection
 

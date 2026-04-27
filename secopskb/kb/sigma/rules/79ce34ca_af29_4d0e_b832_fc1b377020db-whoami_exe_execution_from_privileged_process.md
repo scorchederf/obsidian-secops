@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_whoami_execution_from_high_priv_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_whoami_execution_from_high_priv_process.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Whoami.EXE Execution From Privileged Process
-
 Detects the execution of "whoami.exe" by privileged accounts that are often abused by threat actors
-
-## Metadata
-
-- Rule ID: 79ce34ca-af29-4d0e-b832-fc1b377020db
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Teymur Kheirkhabarov
-- Date: 2022-01-28
-- Modified: 2023-12-04
-- Source Path: rules/windows/process_creation/proc_creation_win_whoami_execution_from_high_priv_process.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of "whoami.exe" by privileged accounts that are often abus
 
 ### Techniques
 
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/identity/okta/okta_new_behaviours_admin_console.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/identity/okta/okta_new_behaviours_admin_console.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "okta / okta"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Okta New Admin Console Behaviours
-
 Detects when Okta identifies new activity in the Admin Console.
-
-## Metadata
-
-- Rule ID: a0b38b70-3cb5-484b-a4eb-c4d8e7bcc0a9
-- Status: test
-- Level: high
-- Author: kelnage
-- Date: 2023-09-07
-- Modified: 2024-06-26
-- Source Path: rules/identity/okta/okta_new_behaviours_admin_console.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when Okta identifies new activity in the Admin Console.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_wab_dllpath_reg_change.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_wab_dllpath_reg_change.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Execution DLL of Choice Using WAB.EXE
-
 This rule detects that the path to the DLL written in the registry is different from the default one. Launched WAB.exe tries to load the DLL from Registry.
-
-## Metadata
-
-- Rule ID: fc014922-5def-4da9-a0fc-28c973f41bfb
-- Status: test
-- Level: high
-- Author: oscd.community, Natalia Shornikova
-- Date: 2020-10-13
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_wab_dllpath_reg_change.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ This rule detects that the path to the DLL written in the registry is different 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

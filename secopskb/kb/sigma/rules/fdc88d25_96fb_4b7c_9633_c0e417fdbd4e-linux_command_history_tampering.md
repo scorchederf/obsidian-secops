@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/lnx_shell_clear_cmd_history.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/lnx_shell_clear_cmd_history.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "linux"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Linux Command History Tampering
-
 Detects commands that try to clear or tamper with the Linux command history.
 This technique is used by threat actors in order to evade defenses and execute commands without them being recorded in files such as "bash_history" or "zsh_history".
-
-## Metadata
-
-- Rule ID: fdc88d25-96fb-4b7c-9633-c0e417fdbd4e
-- Status: test
-- Level: high
-- Author: Patrick Bareiss
-- Date: 2019-03-24
-- Modified: 2024-04-17
-- Source Path: rules/linux/builtin/lnx_shell_clear_cmd_history.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ This technique is used by threat actors in order to evade defenses and execute c
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.003]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070003-clear-command-history|T1070.003: Clear Command History]]
 
 ## Detection
 

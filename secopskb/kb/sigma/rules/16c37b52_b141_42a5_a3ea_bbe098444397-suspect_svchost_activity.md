@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_svchost_execution_with_no_cli_flags.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_svchost_execution_with_no_cli_flags.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspect Svchost Activity
-
 It is extremely abnormal for svchost.exe to spawn without any CLI arguments and is normally observed when a malicious process spawns the process and injects code into the process memory space.
-
-## Metadata
-
-- Rule ID: 16c37b52-b141-42a5-a3ea-bbe098444397
-- Status: test
-- Level: high
-- Author: David Burkett, @signalblur
-- Date: 2019-12-28
-- Modified: 2022-06-27
-- Source Path: rules/windows/process_creation/proc_creation_win_svchost_execution_with_no_cli_flags.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ It is extremely abnormal for svchost.exe to spawn without any CLI arguments and 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

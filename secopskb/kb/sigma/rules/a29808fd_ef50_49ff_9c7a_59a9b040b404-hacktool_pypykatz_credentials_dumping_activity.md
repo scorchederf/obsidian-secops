@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_pypykatz.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_pypykatz.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Pypykatz Credentials Dumping Activity
-
 Detects the usage of "pypykatz" to obtain stored credentials. Adversaries may attempt to extract credential material from the Security Account Manager (SAM) database through Windows registry where the SAM database is stored
-
-## Metadata
-
-- Rule ID: a29808fd-ef50-49ff-9c7a-59a9b040b404
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-01-05
-- Modified: 2023-02-05
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_pypykatz.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the usage of "pypykatz" to obtain stored credentials. Adversaries may at
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 
 ## Detection
 

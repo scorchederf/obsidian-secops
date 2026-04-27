@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_remote_thread/create_remote_thread_win_hktl_cobaltstrike.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_remote_thread/create_remote_thread_win_hktl_cobaltstrike.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / create_remote_thread"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Potential CobaltStrike Process Injection
-
 Detects a potential remote threat creation with certain characteristics which are typical for Cobalt Strike beacons
-
-## Metadata
-
-- Rule ID: 6309645e-122d-4c5b-bb2b-22e4f9c2fa42
-- Status: test
-- Level: high
-- Author: Olaf Hartong, Florian Roth (Nextron Systems), Aleksey Potapov, oscd.community
-- Date: 2018-11-30
-- Modified: 2023-05-05
-- Source Path: rules/windows/create_remote_thread/create_remote_thread_win_hktl_cobaltstrike.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a potential remote threat creation with certain characteristics which ar
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 ## Detection
 

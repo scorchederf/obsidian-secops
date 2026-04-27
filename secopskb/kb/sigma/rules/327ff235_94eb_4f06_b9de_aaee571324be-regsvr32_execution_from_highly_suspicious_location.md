@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_regsvr32_susp_exec_path_2.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regsvr32_susp_exec_path_2.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regsvr32 Execution From Highly Suspicious Location
-
 Detects execution of regsvr32 where the DLL is located in a highly suspicious locations
-
-## Metadata
-
-- Rule ID: 327ff235-94eb-4f06-b9de-aaee571324be
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-26
-- Source Path: rules/windows/process_creation/proc_creation_win_regsvr32_susp_exec_path_2.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects execution of regsvr32 where the DLL is located in a highly suspicious lo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Detection
 

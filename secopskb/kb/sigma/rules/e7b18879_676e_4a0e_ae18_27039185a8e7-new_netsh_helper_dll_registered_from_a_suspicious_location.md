@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_netsh_help_dll_persistence_susp_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_netsh_help_dll_persistence_susp_location.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New Netsh Helper DLL Registered From A Suspicious Location
-
 Detects changes to the Netsh registry key to add a new DLL value that is located on a suspicious location. This change might be an indication of a potential persistence attempt by adding a malicious Netsh helper
-
-## Metadata
-
-- Rule ID: e7b18879-676e-4a0e-ae18-27039185a8e7
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-11-28
-- Source Path: rules/windows/registry/registry_set/registry_set_netsh_help_dll_persistence_susp_location.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects changes to the Netsh registry key to add a new DLL value that is located
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.007]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546007-netsh-helper-dll|T1546.007: Netsh Helper DLL]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.008"
 attack_technique_name: "Hijack Execution Flow: Path Interception by Search Order Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.008/T1574.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "1561de08-0b4b-498e-8261-e922f3494aae"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# powerShell Persistence via hijacking default modules - Get-Variable.exe
-
 Colibri leverages PowerShell in a unique way to maintain persistence after a reboot. Depending on the Windows version, Colibri drops its copy in %APPDATA%\Local\Microsoft\WindowsApps and 
 names it Get-Variable.exe for Windows 10 and above.
 https://blog.malwarebytes.com/threat-intelligence/2022/04/colibri-loader-combines-task-scheduler-and-powershell-in-clever-persistence-technique/
 
-## Metadata
-
-- Atomic GUID: 1561de08-0b4b-498e-8261-e922f3494aae
-- Technique: T1574.008: Hijack Execution Flow: Path Interception by Search Order Hijacking
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1574.008/T1574.008.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.008]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574008-path-interception-by-search-order-hijacking|T1574.008: Path Interception by Search Order Hijacking]]
 
 ## Executor
 

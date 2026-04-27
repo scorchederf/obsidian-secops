@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Eventvwr.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Eventvwr.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Eventvwr.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Eventvwr.exe
-
 Displays Windows Event Logs in a GUI window.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-11-01
-- Author: Jacob Gajek
-- Source Path: yml/OSBinaries/Eventvwr.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ eventvwr.exe
 - Use Case: Execute a binary or script as a high-integrity process without a UAC prompt.
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ### 2. UAC Bypass
 
@@ -61,7 +52,7 @@ ysoserial.exe -o raw -f BinaryFormatter - g DataSet -c "{CMD}" > RecentViews & c
 - Use Case: Execute a command to bypass security restrictions that limit the use of command-line interpreters.
 - Privileges: Administrator
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10
-- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detections
 

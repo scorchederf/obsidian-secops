@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.002"
 attack_technique_name: "Scheduled Task/Job: At"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.002/T1053.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "bash"
 aliases:
   - "9ddf2e5e-7e2c-46c2-9940-3c2ff29c7213"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# At - Schedule a job via kubectl in a Pod
-
 Launches a short-lived Ubuntu pod, installs the `at` utility, starts the `atd` daemon,
 and submits a job with `at`. The pod is deleted after execution.
 
-## Metadata
-
-- Atomic GUID: 9ddf2e5e-7e2c-46c2-9940-3c2ff29c7213
-- Technique: T1053.002: Scheduled Task/Job: At
-- Platforms: containers
-- Executor: bash
-- Elevation Required: False
-- Source Path: atomics/T1053.002/T1053.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 ## Input Arguments
 

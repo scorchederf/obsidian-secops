@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_malicious_commandlets.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_malicious_commandlets.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -28,19 +28,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious PowerShell Commandlets - ScriptBlock
-
 Detects Commandlet names from well-known PowerShell exploitation frameworks
-
-## Metadata
-
-- Rule ID: 89819aa4-bbd6-46bc-88ec-c7f7fe30efa6
-- Status: test
-- Level: high
-- Author: Sean Metcalf, Florian Roth, Bartlomiej Czyz @bczyz1, oscd.community, Nasreddine Bencherchali, Tim Shelton, Mustafa Kaan Demir, Georg Lauenstein, Max Altgelt, Tobias Michalski, Austin Songer
-- Date: 2017-03-05
-- Modified: 2025-12-10
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_malicious_commandlets.yml
 
 ## Logsource
 
@@ -52,14 +40,14 @@ Detects Commandlet names from well-known PowerShell exploitation frameworks
 
 ### Techniques
 
-- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
+- [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069: Permission Groups Discovery]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

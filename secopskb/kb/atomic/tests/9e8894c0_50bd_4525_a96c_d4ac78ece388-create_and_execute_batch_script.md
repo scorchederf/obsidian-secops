@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.003"
 attack_technique_name: "Command and Scripting Interpreter: Windows Command Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.003/T1059.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "9e8894c0-50bd-4525-a96c-d4ac78ece388"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create and Execute Batch Script
-
 Creates and executes a simple batch script. Upon execution, CMD will briefly launch to run the batch script then close again.
-
-## Metadata
-
-- Atomic GUID: 9e8894c0-50bd-4525-a96c-d4ac78ece388
-- Technique: T1059.003: Command and Scripting Interpreter: Windows Command Shell
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1059.003/T1059.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Input Arguments
 

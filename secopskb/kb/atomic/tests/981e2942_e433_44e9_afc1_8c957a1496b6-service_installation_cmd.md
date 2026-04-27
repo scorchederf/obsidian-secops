@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.003"
 attack_technique_name: "Create or Modify System Process: Windows Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "981e2942-e433-44e9-afc1-8c957a1496b6"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Service Installation CMD
-
 Download an executable from github and start it as a service.
 Upon successful execution, powershell will download `AtomicService.exe` from github. cmd.exe will spawn sc.exe which will create and start the service. Results will output via stdout.
 
-## Metadata
-
-- Atomic GUID: 981e2942-e433-44e9-afc1-8c957a1496b6
-- Technique: T1543.003: Create or Modify System Process: Windows Service
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1543.003/T1543.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Input Arguments
 

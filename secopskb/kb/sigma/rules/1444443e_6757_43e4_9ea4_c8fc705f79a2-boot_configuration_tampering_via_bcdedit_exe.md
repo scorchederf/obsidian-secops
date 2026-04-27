@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_bcdedit_boot_conf_tamper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bcdedit_boot_conf_tamper.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "stable"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Boot Configuration Tampering Via Bcdedit.EXE
-
 Detects the use of the bcdedit command to tamper with the boot configuration data. This technique is often times used by malware or attackers as a destructive way before launching ransomware.
-
-## Metadata
-
-- Rule ID: 1444443e-6757-43e4-9ea4-c8fc705f79a2
-- Status: stable
-- Level: high
-- Author: E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.community
-- Date: 2019-10-24
-- Modified: 2023-02-15
-- Source Path: rules/windows/process_creation/proc_creation_win_bcdedit_boot_conf_tamper.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of the bcdedit command to tamper with the boot configuration dat
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

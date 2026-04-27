@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1563.002"
 attack_technique_name: "Remote Service Session Hijacking: RDP Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1563.002/T1563.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "a37ac520-b911-458e-8aed-c5f1576d9f46"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RDP hijacking
-
 [RDP hijacking](https://medium.com/@networksecurity/rdp-hijacking-how-to-hijack-rds-and-remoteapp-sessions-transparently-to-move-through-an-da2a1e73a5f6) - how to hijack RDS and RemoteApp sessions transparently to move through an organization
-
-## Metadata
-
-- Atomic GUID: a37ac520-b911-458e-8aed-c5f1576d9f46
-- Technique: T1563.002: Remote Service Session Hijacking: RDP Hijacking
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1563.002/T1563.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1563-remote_service_session_hijacking|T1563.002]]
+- [[kb/attack/techniques/T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
 
 ## Input Arguments
 

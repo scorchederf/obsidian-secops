@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_w32tm.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_w32tm.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Use of W32tm as Timer
-
 When configured with suitable command line arguments, w32tm can act as a delay mechanism
-
-## Metadata
-
-- Rule ID: 6da2c9f5-7c53-401b-aacb-92c040ce1215
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-09-25
-- Source Path: rules/windows/process_creation/proc_creation_win_w32tm.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ When configured with suitable command line arguments, w32tm can act as a delay m
 
 ### Techniques
 
-- [[kb/attack/techniques/T1124-system_time_discovery|T1124]]
+- [[kb/attack/techniques/T1124-system_time_discovery|T1124: System Time Discovery]]
 
 ## Detection
 

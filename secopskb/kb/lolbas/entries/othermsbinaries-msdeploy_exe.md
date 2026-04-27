@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Msdeploy.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Msdeploy.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Msdeploy.exe"
@@ -22,16 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Msdeploy.exe
-
 Microsoft tool used to deploy Web Applications.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OtherMSBinaries/Msdeploy.yml
 
 ## Paths
 
@@ -57,7 +48,7 @@ msdeploy.exe -verb:sync -source:RunCommand -dest:runCommand="{PATH_ABSOLUTE:.bat
 - Use Case: Local execution of batch file using msdeploy.exe.
 - Privileges: User
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11, Windows Server
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 2. AWL Bypass
 
@@ -70,7 +61,7 @@ msdeploy.exe -verb:sync -source:RunCommand -dest:runCommand="{PATH_ABSOLUTE:.bat
 - Use Case: Local execution of batch file using msdeploy.exe.
 - Privileges: User
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11, Windows Server
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ### 3. Copy
 
@@ -83,7 +74,7 @@ msdeploy.exe -verb:sync -source:filePath={PATH_ABSOLUTE:.source.ext} -dest:fileP
 - Use Case: Copy file.
 - Privileges: User
 - Operating System: Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11, Windows Server
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

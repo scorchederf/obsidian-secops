@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_hktl_diagtrack_eop.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_hktl_diagtrack_eop.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / pipe_created"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - DiagTrackEoP Default Named Pipe
-
 Detects creation of default named pipe used by the DiagTrackEoP POC, a tool that abuses "SeImpersonate" privilege.
-
-## Metadata
-
-- Rule ID: 1f7025a6-e747-4130-aac4-961eb47015f1
-- Status: test
-- Level: critical
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-03
-- Modified: 2023-08-07
-- Source Path: rules/windows/pipe_created/pipe_created_hktl_diagtrack_eop.yml
 
 ## Logsource
 

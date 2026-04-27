@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.003"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Kerberoasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.003/T1558.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "78d10e20-c874-45f2-a9df-6fea0120ec27"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - Kerberoasting
-
 Kerberoasting technique via function of WinPwn
-
-## Metadata
-
-- Atomic GUID: 78d10e20-c874-45f2-a9df-6fea0120ec27
-- Technique: T1558.003: Steal or Forge Kerberos Tickets: Kerberoasting
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1558.003/T1558.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
 
 ## Executor
 

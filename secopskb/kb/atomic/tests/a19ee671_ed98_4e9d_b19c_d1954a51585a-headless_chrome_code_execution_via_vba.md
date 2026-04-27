@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "a19ee671-ed98-4e9d-b19c-d1954a51585a"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Headless Chrome code execution via VBA
-
 This module uses Google Chrome combined with ScriptControl to achieve code execution. It spawns a local
 webserver hosting our malicious payload. Headless Google Chrome will then reach out to this webserver
 and pull down the script and execute it. By default the payload will execute calc.exe on the system.
 
-## Metadata
-
-- Atomic GUID: a19ee671-ed98-4e9d-b19c-d1954a51585a
-- Technique: T1204.002: User Execution: Malicious File
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1204.002/T1204.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 ## Dependencies
 

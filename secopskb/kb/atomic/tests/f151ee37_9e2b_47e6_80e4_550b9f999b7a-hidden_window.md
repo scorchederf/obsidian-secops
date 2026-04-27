@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.003"
 attack_technique_name: "Hide Artifacts: Hidden Window"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.003/T1564.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "f151ee37-9e2b-47e6-80e4-550b9f999b7a"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Hidden Window
-
 Launch PowerShell with the "-WindowStyle Hidden" argument to conceal PowerShell windows by setting the WindowStyle parameter to hidden.
 Upon execution a hidden PowerShell window will launch calc.exe
 
-## Metadata
-
-- Atomic GUID: f151ee37-9e2b-47e6-80e4-550b9f999b7a
-- Technique: T1564.003: Hide Artifacts: Hidden Window
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1564.003/T1564.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.003]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564003-hidden-window|T1564.003: Hidden Window]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1491.001"
 attack_technique_name: "Defacement: Internal Defacement"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1491.001/T1491.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "30905f21-34f3-4504-8b4c-f7a5e314b810"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Change Welcome Message on Direct Console User Interface (DCUI)
-
 Changes the ESXi welcome message to potentially display ransom information.
 [Reference](https://lolesxi-project.github.io/LOLESXi/lolesxi/Binaries/esxcli/#change%20display%20information)
 
-## Metadata
-
-- Atomic GUID: 30905f21-34f3-4504-8b4c-f7a5e314b810
-- Technique: T1491.001: Defacement: Internal Defacement
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1491.001/T1491.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1491-defacement|T1491.001]]
+- [[kb/attack/techniques/T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
 
 ## Input Arguments
 

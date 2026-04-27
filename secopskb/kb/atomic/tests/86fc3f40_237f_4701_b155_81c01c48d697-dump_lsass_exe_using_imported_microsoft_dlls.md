@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "86fc3f40-237f-4701-b155-81c01c48d697"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dump LSASS.exe using imported Microsoft DLLs
-
 The memory of lsass.exe is often dumped for offline credential theft attacks. This can be achieved by
 importing built-in DLLs and calling exported functions. Xordump will re-read the resulting minidump 
 file and delete it immediately to avoid brittle EDR detections that signature lsass minidump files.
 
 Upon successful execution, you should see the following file created $env:TEMP\lsass-xordump.t1003.001.dmp.
 
-## Metadata
-
-- Atomic GUID: 86fc3f40-237f-4701-b155-81c01c48d697
-- Technique: T1003.001: OS Credential Dumping: LSASS Memory
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1003.001/T1003.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Input Arguments
 

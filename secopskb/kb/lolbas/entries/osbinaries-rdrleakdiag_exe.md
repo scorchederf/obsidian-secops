@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Rdrleakdiag.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Rdrleakdiag.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "rdrleakdiag.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# rdrleakdiag.exe
-
 Microsoft Windows resource leak diagnostic tool
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2022-05-18
-- Author: John Dwyer
-- Source Path: yml/OSBinaries/Rdrleakdiag.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ rdrleakdiag.exe /p 940 /o {PATH_ABSOLUTE:folder} /fullmemdmp /wait 1
 - Use Case: Dump process by PID.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ### 2. Dump
 
@@ -62,7 +53,7 @@ rdrleakdiag.exe /p 832 /o {PATH_ABSOLUTE:folder} /fullmemdmp /wait 1
 - Use Case: Dump LSASS process.
 - Privileges: Administrator
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ### 3. Dump
 
@@ -75,7 +66,7 @@ rdrleakdiag.exe /p 832 /o {PATH_ABSOLUTE:folder} /fullmemdmp /snap
 - Use Case: Dump LSASS process mutliple times.
 - Privileges: Administrator
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detections
 

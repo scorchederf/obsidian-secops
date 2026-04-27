@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "5202ee05-c420-4148-bf5e-fd7f7d24850c"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Office Generic Payload Download
-
 This Test uses a VBA macro to launch Powershell which will download a file from a user defined web server.
 Required input agruments are c2_domain and file_name
 Execution is handled by [Invoke-MalDoc](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1204.002/src/Invoke-MalDoc.ps1) to load and execute VBA code into Excel or Word documents.
 Example for c2 server located at 127.0.0.1 for the file test.txt which is nested below the parent directory in the tests/my-test folder
 Example input args for file in root directory c2-domain = 127.0.0.1, file-name = test.txt
 
-## Metadata
-
-- Atomic GUID: 5202ee05-c420-4148-bf5e-fd7f7d24850c
-- Technique: T1204.002: User Execution: Malicious File
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1204.002/T1204.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 ## Input Arguments
 

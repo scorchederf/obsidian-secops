@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/wmi_event/sysmon_wmi_susp_scripting.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/wmi_event/sysmon_wmi_susp_scripting.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / wmi_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Scripting in a WMI Consumer
-
 Detects suspicious commands that are related to scripting/powershell in WMI Event Consumers
-
-## Metadata
-
-- Rule ID: fe21810c-2a8c-478f-8dd3-5a287fb2a0e0
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Jonhnathan Ribeiro
-- Date: 2019-04-15
-- Modified: 2023-09-09
-- Source Path: rules/windows/wmi_event/sysmon_wmi_susp_scripting.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious commands that are related to scripting/powershell in WMI Even
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
 
 ## Detection
 

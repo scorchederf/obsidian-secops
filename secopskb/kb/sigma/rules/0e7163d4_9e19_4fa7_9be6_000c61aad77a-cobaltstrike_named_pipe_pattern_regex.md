@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_hktl_cobaltstrike_re.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_hktl_cobaltstrike_re.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "windows / pipe_created"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CobaltStrike Named Pipe Pattern Regex
-
 Detects the creation of a named pipe matching a pattern used by CobaltStrike Malleable C2 profiles
-
-## Metadata
-
-- Rule ID: 0e7163d4-9e19-4fa7-9be6-000c61aad77a
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-07-30
-- Modified: 2022-12-31
-- Source Path: rules/windows/pipe_created/pipe_created_hktl_cobaltstrike_re.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the creation of a named pipe matching a pattern used by CobaltStrike Mal
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

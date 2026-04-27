@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_desktop_txt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_desktop_txt.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Creation TXT File in User Desktop
-
 Ransomware create txt file in the user Desktop
-
-## Metadata
-
-- Rule ID: caf02a0a-1e1c-4552-9b48-5e070bd88d11
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-12-26
-- Source Path: rules/windows/file/file_event/file_event_win_susp_desktop_txt.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Ransomware create txt file in the user Desktop
 
 ### Techniques
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 ## Detection
 

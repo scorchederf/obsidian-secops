@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.003"
 attack_technique_name: "Account Manipulation: Additional Cloud Roles"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.003/T1098.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "4d77f913-56f5-4a14-b4b1-bf7bb24298ad"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure AD - Add Company Administrator Role to a user
-
 Add an existing Azure user account the Company Administrator Role.
-
-## Metadata
-
-- Atomic GUID: 4d77f913-56f5-4a14-b4b1-bf7bb24298ad
-- Technique: T1098.003: Account Manipulation: Additional Cloud Roles
-- Platforms: azure-ad
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1098.003/T1098.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098.003]]
+- [[kb/attack/techniques/T1098-account_manipulation#^t1098003-additional-cloud-roles|T1098.003: Additional Cloud Roles]]
 
 ## Input Arguments
 

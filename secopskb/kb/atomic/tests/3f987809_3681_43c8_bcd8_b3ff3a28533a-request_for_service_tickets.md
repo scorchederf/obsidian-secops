@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.003"
 attack_technique_name: "Steal or Forge Kerberos Tickets: Kerberoasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.003/T1558.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "3f987809-3681-43c8-bcd8-b3ff3a28533a"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Request for service tickets
-
 This test uses the Powershell Empire Module: Invoke-Kerberoast.ps1
 The following are further sources and credits for this attack:
 [Kerberoasting Without Mimikatz source] (https://www.harmj0y.net/blog/powershell/kerberoasting-without-mimikatz/)
@@ -29,17 +27,9 @@ The following are further sources and credits for this attack:
 when executed successfully , the test displays available services with their hashes. 
 If the testing domain doesn't have any service principal name configured, there is no output
 
-## Metadata
-
-- Atomic GUID: 3f987809-3681-43c8-bcd8-b3ff3a28533a
-- Technique: T1558.003: Steal or Forge Kerberos Tickets: Kerberoasting
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1558.003/T1558.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.003]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558003-kerberoasting|T1558.003: Kerberoasting]]
 
 ## Dependencies
 

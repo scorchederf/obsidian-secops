@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.004"
 attack_technique_name: "Impair Defenses: Disable or Modify System Firewall"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "9fd99609-1854-4f3c-b47b-97d9a5972bd1"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Stop/Start UFW firewall systemctl
-
 Stop the Uncomplicated Firewall (UFW) if installed, using systemctl.
-
-## Metadata
-
-- Atomic GUID: 9fd99609-1854-4f3c-b47b-97d9a5972bd1
-- Technique: T1562.004: Impair Defenses: Disable or Modify System Firewall
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1562.004/T1562.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 ## Dependencies
 

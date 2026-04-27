@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564"
 attack_technique_name: "Hide Artifacts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564/T1564.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "2748ab4a-1e0b-4cf2-a2b0-8ef765bec7be"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Command Execution with NirCmd
-
 NirCmd is used by threat actors to execute commands, which can include recon and privilege escalation via running commands via the SYSTEM account
 See https://www.kroll.com/en/insights/publications/cyber/black-basta-technical-analysis
 
-## Metadata
-
-- Atomic GUID: 2748ab4a-1e0b-4cf2-a2b0-8ef765bec7be
-- Technique: T1564: Hide Artifacts
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1564/T1564.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 ## Input Arguments
 

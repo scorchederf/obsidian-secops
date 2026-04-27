@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious MSDT Parent Process
-
 Detects msdt.exe executed by a suspicious parent as seen in CVE-2022-30190 / Follina exploitation
-
-## Metadata
-
-- Rule ID: 7a74da6b-ea76-47db-92cc-874ad90df734
-- Status: test
-- Level: high
-- Author: Nextron Systems
-- Date: 2022-06-01
-- Modified: 2023-02-06
-- Source Path: rules/windows/process_creation/proc_creation_win_msdt_susp_parent.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects msdt.exe executed by a suspicious parent as seen in CVE-2022-30190 / Fol
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

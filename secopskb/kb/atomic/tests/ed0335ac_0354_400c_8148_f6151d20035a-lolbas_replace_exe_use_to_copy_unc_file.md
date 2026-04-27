@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "ed0335ac-0354-400c-8148-f6151d20035a"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Lolbas replace.exe use to copy UNC file
-
 Copy UNC file to destination
 Reference: https://lolbas-project.github.io/lolbas/Binaries/Replace/
 
-## Metadata
-
-- Atomic GUID: ed0335ac-0354-400c-8148-f6151d20035a
-- Technique: T1105: Ingress Tool Transfer
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1105/T1105.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Input Arguments
 

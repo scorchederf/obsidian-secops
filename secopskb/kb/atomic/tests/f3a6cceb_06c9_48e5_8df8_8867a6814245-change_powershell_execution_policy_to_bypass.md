@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "f3a6cceb-06c9-48e5-8df8-8867a6814245"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Change Powershell Execution Policy to Bypass
-
 Attackers need to change the powershell execution policy in order to run their malicious powershell scripts.
 They can either specify it during the execution of the powershell script or change the registry value for it.
 
-## Metadata
-
-- Atomic GUID: f3a6cceb-06c9-48e5-8df8-8867a6814245
-- Technique: T1112: Modify Registry
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1112/T1112.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Input Arguments
 

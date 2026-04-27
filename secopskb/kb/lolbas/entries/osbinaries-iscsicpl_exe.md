@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Iscsicpl.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Iscsicpl.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "iscsicpl.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# iscsicpl.exe
-
 Microsoft iSCSI Initiator Control Panel tool
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2025-08-17
-- Author: Ekitji
-- Source Path: yml/OSBinaries/Iscsicpl.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ c:\windows\syswow64\iscsicpl.exe
 - Use Case: Execute a custom DLL via a trusted high-integrity process without a UAC prompt.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ### 2. UAC Bypass
 
@@ -61,7 +52,7 @@ iscsicpl.exe
 - Use Case: Execute a binary or script as a high-integrity process without a UAC prompt.
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- ATT&CK: [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detections
 

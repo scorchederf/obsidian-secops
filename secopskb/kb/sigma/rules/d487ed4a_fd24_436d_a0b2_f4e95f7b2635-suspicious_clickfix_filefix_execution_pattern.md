@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_execution.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious ClickFix/FileFix Execution Pattern
-
 Detects suspicious execution patterns where users are tricked into running malicious commands via clipboard manipulation, either through the Windows Run dialog (ClickFix) or File Explorer address bar (FileFix).
 Attackers leverage social engineering campaigns—such as fake CAPTCHA challenges or urgent alerts—encouraging victims to paste clipboard contents, often executing mshta.exe, powershell.exe, or similar commands to infect systems.
-
-## Metadata
-
-- Rule ID: d487ed4a-fd24-436d-a0b2-f4e95f7b2635
-- Status: experimental
-- Level: high
-- Author: montysecurity, Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-19
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_clickfix_filefix_execution.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ Attackers leverage social engineering campaigns—such as fake CAPTCHA challenge
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.001]]
-- [[kb/attack/techniques/T1204-user_execution|T1204.004]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204001-malicious-link|T1204.001: Malicious Link]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204004-malicious-copy-and-paste|T1204.004: Malicious Copy and Paste]]
 
 ## Detection
 

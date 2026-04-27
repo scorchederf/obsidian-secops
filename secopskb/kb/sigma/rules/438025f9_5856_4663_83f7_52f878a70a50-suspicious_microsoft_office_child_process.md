@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Microsoft Office Child Process
-
 Detects a suspicious process spawning from one of the Microsoft Office suite products (Word, Excel, PowerPoint, Publisher, Visio, etc.)
-
-## Metadata
-
-- Rule ID: 438025f9-5856-4663-83f7-52f878a70a50
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Markus Neis, FPT.EagleEye Team, Vadim Khrykov, Cyb3rEng, Michael Haag, Christopher Peacock @securepeacock, @scythe_io
-- Date: 2018-04-06
-- Modified: 2023-04-24
-- Source Path: rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects a suspicious process spawning from one of the Microsoft Office suite pro
 
 ### Techniques
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Detection
 

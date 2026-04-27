@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1114.002"
 attack_technique_name: "Email Collection: Remote Email Collection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1114.002/T1114.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "36657d95-d9d6-4fbf-8a31-f4085607bafd"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Office365 - Remote Mail Collected
-
 Create and register an entra application that downloads emails from a tenant's Office 365 mailboxes using the Microsoft Graph API app-only access. This can be used by an adversary to collect an organization's sensitive information.
-
-## Metadata
-
-- Atomic GUID: 36657d95-d9d6-4fbf-8a31-f4085607bafd
-- Technique: T1114.002: Email Collection: Remote Email Collection
-- Platforms: office-365
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1114.002/T1114.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1114-email_collection|T1114.002]]
+- [[kb/attack/techniques/T1114-email_collection#^t1114002-remote-email-collection|T1114.002: Remote Email Collection]]
 
 ## Input Arguments
 

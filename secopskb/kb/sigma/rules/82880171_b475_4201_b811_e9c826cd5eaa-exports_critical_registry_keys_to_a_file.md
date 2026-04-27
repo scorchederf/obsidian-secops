@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_regedit_export_critical_keys.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regedit_export_critical_keys.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exports Critical Registry Keys To a File
-
 Detects the export of a crital Registry key to a file.
-
-## Metadata
-
-- Rule ID: 82880171-b475-4201-b811-e9c826cd5eaa
-- Status: test
-- Level: high
-- Author: Oddvar Moe, Sander Wiebing, oscd.community
-- Date: 2020-10-12
-- Modified: 2024-03-13
-- Source Path: rules/windows/process_creation/proc_creation_win_regedit_export_critical_keys.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the export of a crital Registry key to a file.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1012-query_registry|T1012]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_googleupdate_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_googleupdate_susp_child_process.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potentially Suspicious GoogleUpdate Child Process
-
 Detects potentially suspicious child processes of "GoogleUpdate.exe"
-
-## Metadata
-
-- Rule ID: 84b1ecf9-6eff-4004-bafb-bae5c0e251b2
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-15
-- Modified: 2023-05-22
-- Source Path: rules/windows/process_creation/proc_creation_win_googleupdate_susp_child_process.yml
 
 ## Logsource
 

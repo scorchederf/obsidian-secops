@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_c3_rundll32_pattern.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_c3_rundll32_pattern.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - F-Secure C3 Load by Rundll32
-
 F-Secure C3 produces DLLs with a default exported StartNodeRelay function.
-
-## Metadata
-
-- Rule ID: b18c9d4c-fac9-4708-bd06-dd5bfacf200f
-- Status: test
-- Level: critical
-- Author: Alfie Champion (ajpc500)
-- Date: 2021-06-02
-- Modified: 2023-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_c3_rundll32_pattern.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ F-Secure C3 produces DLLs with a default exported StartNodeRelay function.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detection
 

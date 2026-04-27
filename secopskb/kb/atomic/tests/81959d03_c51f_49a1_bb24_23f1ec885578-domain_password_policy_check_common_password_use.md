@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098"
 attack_technique_name: "Account Manipulation"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "81959d03-c51f-49a1-bb24-23f1ec885578"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Domain Password Policy Check: Common Password Use
-
 Attempt to change the password of the current domain user in order to check password policy. Ideally, you would only run this atomic test to verify that your password policy is blocking the use of the new password.
 If the password is succesfully changed to the new password, the credential file will be updated to reflect the new password. You can then run the atomic manually and specify a new password of your choosing, however the
 password policy will likely prevent you from setting the password back to what it was.
 
-## Metadata
-
-- Atomic GUID: 81959d03-c51f-49a1-bb24-23f1ec885578
-- Technique: T1098: Account Manipulation
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1098/T1098.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Input Arguments
 

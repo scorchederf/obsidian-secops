@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_reg_bitlocker.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_reg_bitlocker.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Reg Add BitLocker
-
 Detects suspicious addition to BitLocker related registry keys via the reg.exe utility
-
-## Metadata
-
-- Rule ID: 0e0255bf-2548-47b8-9582-c0955c9283f5
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-11-15
-- Modified: 2022-09-09
-- Source Path: rules/windows/process_creation/proc_creation_win_reg_bitlocker.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious addition to BitLocker related registry keys via the reg.exe u
 
 ### Techniques
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 ## Detection
 

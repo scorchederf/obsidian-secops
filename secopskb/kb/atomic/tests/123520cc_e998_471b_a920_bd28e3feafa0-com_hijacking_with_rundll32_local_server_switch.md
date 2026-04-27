@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.015"
 attack_technique_name: "Event Triggered Execution: Component Object Model Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.015/T1546.015.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "123520cc-e998-471b-a920-bd28e3feafa0"
@@ -20,25 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# COM Hijacking with RunDLL32 (Local Server Switch)
-
 This test uses PowerShell to hijack a reference to a Component Object Model by creating registry values under InprocServer32 key in the HKCU hive then calling the Class ID to be executed via "rundll32.exe -localserver [clsid]". 
 This method is generally used as an alternative to 'rundll32.exe -sta [clsid]' to execute dll's while evading detection. 
 Reference: https://www.hexacorn.com/blog/2020/02/13/run-lola-bin-run/
 Upon successful execution of this test with the default options, whenever certain apps are opened (for example, Notepad), a calculator window will also be opened.
 
-## Metadata
-
-- Atomic GUID: 123520cc-e998-471b-a920-bd28e3feafa0
-- Technique: T1546.015: Event Triggered Execution: Component Object Model Hijacking
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1546.015/T1546.015.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 ## Input Arguments
 

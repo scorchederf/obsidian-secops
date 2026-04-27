@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_velociraptor_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_velociraptor_child_process.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Velociraptor Child Process
-
 Detects the suspicious use of the Velociraptor DFIR tool to execute other tools or download additional payloads, as seen in a campaign where it was abused for remote access and to stage further attacks.
-
-## Metadata
-
-- Rule ID: 4bc90587-e6ca-4b41-be0b-ed4d04e4ed0c
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-08-29
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_velociraptor_child_process.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the suspicious use of the Velociraptor DFIR tool to execute other tools 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219]]
+- [[kb/attack/techniques/T1219-remote_access_tools|T1219: Remote Access Tools]]
 
 ## Detection
 

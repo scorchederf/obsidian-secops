@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "c9a2f6fe-7197-488c-af6d-10c782121ca6"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Office 365 - Set Audit Bypass For a Mailbox
-
 Use Exchange Management Shell to Mailbox auditing to bypass. It will prevent any mailbox audit logging entries being generated for the target e-mail box.
 https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailboxauditbypassassociation?view=exchange-ps
 
-## Metadata
-
-- Atomic GUID: c9a2f6fe-7197-488c-af6d-10c782121ca6
-- Technique: T1562.008: Impair Defenses: Disable Cloud Logs
-- Platforms: office-365
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1562.008/T1562.008.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Input Arguments
 

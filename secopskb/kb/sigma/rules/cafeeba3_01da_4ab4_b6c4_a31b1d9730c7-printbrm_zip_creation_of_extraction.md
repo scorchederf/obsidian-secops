@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_lolbin_printbrm.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_printbrm.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PrintBrm ZIP Creation of Extraction
-
 Detects the execution of the LOLBIN PrintBrm.exe, which can be used to create or extract ZIP files. PrintBrm.exe should not be run on a normal workstation.
-
-## Metadata
-
-- Rule ID: cafeeba3-01da-4ab4-b6c4-a31b1d9730c7
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-05-02
-- Source Path: rules/windows/process_creation/proc_creation_win_lolbin_printbrm.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects the execution of the LOLBIN PrintBrm.exe, which can be used to create or
 
 ### Techniques
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ## Detection
 

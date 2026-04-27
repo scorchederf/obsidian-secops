@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055"
 attack_technique_name: "Process Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055/T1055.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "69534efc-d5f5-4550-89e6-12c6457b9edd"
@@ -19,8 +19,6 @@ tags:
 ---
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
-
-# Remote Process Injection with Go using CreateRemoteThread WinAPI
 
 Leverages the Windows CreateRemoteThread function from Kernel32.dll to execute shellocde in a remote process.
 
@@ -38,18 +36,9 @@ Steps taken with this technique
  - References:
   - https://www.ired.team/offensive-security/code-injection-process-injection/process-injection
 
-## Metadata
-
-- Atomic GUID: 69534efc-d5f5-4550-89e6-12c6457b9edd
-- Technique: T1055: Process Injection
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1055/T1055.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Input Arguments
 

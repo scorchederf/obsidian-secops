@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.008"
 attack_technique_name: "Event Triggered Execution: Accessibility Features"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.008/T1546.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "7125eba8-7b30-426b-9147-781d152be6fb"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Auto-start application on user logon
-
 Executes code specified in the registry on new user logon session automatically by registration of new AT and modification of configuration value.
 This test will register new AT named malware_test with code for cmd.exe and add a configuration value for the code to be run during user logon session.
 
-## Metadata
-
-- Atomic GUID: 7125eba8-7b30-426b-9147-781d152be6fb
-- Technique: T1546.008: Event Triggered Execution: Accessibility Features
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1546.008/T1546.008.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 ## Executor
 

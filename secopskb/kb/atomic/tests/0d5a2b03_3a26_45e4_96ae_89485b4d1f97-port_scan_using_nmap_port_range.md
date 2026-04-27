@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "0d5a2b03-3a26-45e4-96ae-89485b4d1f97"
@@ -21,23 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Port Scan using nmap (Port range)
-
 Scan multiple ports to check for listening ports with nmap
-
-## Metadata
-
-- Atomic GUID: 0d5a2b03-3a26-45e4-96ae-89485b4d1f97
-- Technique: T1046: Network Service Discovery
-- Platforms: linux, macos
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1046/T1046.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1046-network_service_discovery|T1046]]
+- [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]]
 
 ## Input Arguments
 

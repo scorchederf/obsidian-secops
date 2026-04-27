@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_data_exfiltration_via_cli.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_data_exfiltration_via_cli.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Data Exfiltration Activity Via CommandLine Tools
-
 Detects the use of various CLI utilities exfiltrating data via web requests
-
-## Metadata
-
-- Rule ID: 7d1aaf3d-4304-425c-b7c3-162055e0b3ab
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-02
-- Modified: 2025-10-19
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_data_exfiltration_via_cli.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of various CLI utilities exfiltrating data via web requests
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

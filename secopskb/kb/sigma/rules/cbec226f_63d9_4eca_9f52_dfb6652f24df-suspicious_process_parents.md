@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_parents.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_parents.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Process Parents
-
 Detects suspicious parent processes that should not have any children or should only have a single possible child program
-
-## Metadata
-
-- Rule ID: cbec226f-63d9-4eca-9f52-dfb6652f24df
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-03-21
-- Modified: 2022-09-08
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_parents.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious parent processes that should not have any children or should 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detection
 

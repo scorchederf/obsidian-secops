@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.002"
 attack_technique_name: "Create Process with Token"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.002/T1134.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ccf4ac39-ec93-42be-9035-90e2f26bcd92"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - Get SYSTEM shell - Pop System Shell using Token Manipulation technique
-
 Get SYSTEM shell - Pop System Shell using Token Manipulation technique via function of WinPwn
-
-## Metadata
-
-- Atomic GUID: ccf4ac39-ec93-42be-9035-90e2f26bcd92
-- Technique: T1134.002: Create Process with Token
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1134.002/T1134.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.002]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134002-create-process-with-token|T1134.002: Create Process with Token]]
 
 ## Executor
 

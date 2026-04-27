@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.005"
 attack_technique_name: "Access Token Manipulation: SID-History Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.005/T1134.005.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "6bef32e5-9456-4072-8f14-35566fb85401"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Injection SID-History with mimikatz
-
 Adversaries may use SID-History Injection to escalate privileges and bypass access controls. Must be run on domain controller
-
-## Metadata
-
-- Atomic GUID: 6bef32e5-9456-4072-8f14-35566fb85401
-- Technique: T1134.005: Access Token Manipulation: SID-History Injection
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1134.005/T1134.005.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.005]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134005-sid-history-injection|T1134.005: SID-History Injection]]
 
 ## Input Arguments
 

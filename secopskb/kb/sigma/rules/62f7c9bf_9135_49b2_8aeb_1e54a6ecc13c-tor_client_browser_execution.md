@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_browsers_tor_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_tor_execution.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Tor Client/Browser Execution
-
 Detects the use of Tor or Tor-Browser to connect to onion routing networks
-
-## Metadata
-
-- Rule ID: 62f7c9bf-9135-49b2-8aeb-1e54a6ecc13c
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-02-20
-- Modified: 2025-10-27
-- Source Path: rules/windows/process_creation/proc_creation_win_browsers_tor_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of Tor or Tor-Browser to connect to onion routing networks
 
 ### Techniques
 
-- [[kb/attack/techniques/T1090-proxy|T1090.003]]
+- [[kb/attack/techniques/T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.001"
 attack_technique_name: "Event Triggered Execution: Change Default File Association"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.001/T1546.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "10a08978-2045-4d62-8c42-1957bbbea102"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Change Default File Association
-
 Change Default File Association From cmd.exe of hta to notepad.
 
 Upon successful execution, cmd.exe will change the file association of .hta to notepad.exe.
 
-## Metadata
-
-- Atomic GUID: 10a08978-2045-4d62-8c42-1957bbbea102
-- Technique: T1546.001: Event Triggered Execution: Change Default File Association
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1546.001/T1546.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.001]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546001-change-default-file-association|T1546.001: Change Default File Association]]
 
 ## Input Arguments
 

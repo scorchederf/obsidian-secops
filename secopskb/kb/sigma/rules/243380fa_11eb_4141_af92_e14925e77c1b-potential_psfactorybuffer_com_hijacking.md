@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_persistence_comhijack_psfactorybuffer.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_persistence_comhijack_psfactorybuffer.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential PSFactoryBuffer COM Hijacking
-
 Detects changes to the PSFactory COM InProcServer32 registry. This technique was used by RomCom to create persistence storing a malicious DLL.
-
-## Metadata
-
-- Rule ID: 243380fa-11eb-4141-af92-e14925e77c1b
-- Status: test
-- Level: high
-- Author: BlackBerry Threat Research and Intelligence Team - @Joseliyo_Jstnk
-- Date: 2023-06-07
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_persistence_comhijack_psfactorybuffer.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects changes to the PSFactory COM InProcServer32 registry. This technique was
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.001"
 attack_technique_name: "Input Capture: Keylogging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.001/T1056.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "a668edb9-334e-48eb-8c2e-5413a40867af"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Auditd keylogger
-
 The linux audit tool auditd can be used to capture 32 and 64 bit command execution and place the command in the /var/log/audit/audit.log audit log.
-
-## Metadata
-
-- Atomic GUID: a668edb9-334e-48eb-8c2e-5413a40867af
-- Technique: T1056.001: Input Capture: Keylogging
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1056.001/T1056.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1056-input_capture|T1056.001]]
+- [[kb/attack/techniques/T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
 
 ## Dependencies
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_add_local_hidden_user.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_add_local_hidden_user.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Creation of a Local Hidden User Account by Registry
-
 Sysmon registry detection of a local hidden user account.
-
-## Metadata
-
-- Rule ID: 460479f3-80b7-42da-9c43-2cc1d54dbccd
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems)
-- Date: 2021-05-03
-- Modified: 2025-10-31
-- Source Path: rules/windows/registry/registry_event/registry_event_add_local_hidden_user.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Sysmon registry detection of a local hidden user account.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1136-create_account|T1136.001]]
+- [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.006"
 attack_technique_name: "Hijack Execution Flow: LD_PRELOAD"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.006/T1574.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "4d66029d-7355-43fd-93a4-b63ba92ea1be"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dylib Injection via DYLD_INSERT_LIBRARIES
-
 injects a dylib that opens calculator via env variable
-
-## Metadata
-
-- Atomic GUID: 4d66029d-7355-43fd-93a4-b63ba92ea1be
-- Technique: T1574.006: Hijack Execution Flow: LD_PRELOAD
-- Platforms: macos
-- Executor: bash
-- Elevation Required: False
-- Dependency Executor: bash
-- Source Path: atomics/T1574.006/T1574.006.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.006]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574006-dynamic-linker-hijacking|T1574.006: Dynamic Linker Hijacking]]
 
 ## Input Arguments
 

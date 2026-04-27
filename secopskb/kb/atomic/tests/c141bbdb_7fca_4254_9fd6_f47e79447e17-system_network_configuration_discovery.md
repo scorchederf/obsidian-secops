@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1016"
 attack_technique_name: "System Network Configuration Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1016/T1016.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "sh"
 aliases:
   - "c141bbdb-7fca-4254-9fd6-f47e79447e17"
@@ -21,23 +21,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# System Network Configuration Discovery
-
 Identify network configuration information.
 Upon successful execution, sh will spawn multiple commands and output will be via stdout.
 
-## Metadata
-
-- Atomic GUID: c141bbdb-7fca-4254-9fd6-f47e79447e17
-- Technique: T1016: System Network Configuration Discovery
-- Platforms: macos, linux
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1016/T1016.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016]]
+- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
 
 ## Dependencies
 

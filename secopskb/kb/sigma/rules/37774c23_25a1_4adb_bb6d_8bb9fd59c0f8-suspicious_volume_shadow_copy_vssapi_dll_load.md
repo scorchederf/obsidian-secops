@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_dll_vssapi_susp_load.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vssapi_susp_load.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Volume Shadow Copy Vssapi.dll Load
-
 Detects the image load of VSS DLL by uncommon executables
-
-## Metadata
-
-- Rule ID: 37774c23-25a1-4adb-bb6d-8bb9fd59c0f8
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-10-31
-- Modified: 2025-10-17
-- Source Path: rules/windows/image_load/image_load_dll_vssapi_susp_load.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the image load of VSS DLL by uncommon executables
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

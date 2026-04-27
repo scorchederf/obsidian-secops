@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1074.001"
 attack_technique_name: "Data Staged: Local Data Staging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1074.001/T1074.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "a57fbe4b-3440-452a-88a7-943531ac872a"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Zip a Folder with PowerShell for Staging in Temp
-
 Use living off the land tools to zip a file and stage it in the Windows temporary folder for later exfiltration. Upon execution, Verify that a zipped folder named Folder_to_zip.zip
 was placed in the temp directory.
 
-## Metadata
-
-- Atomic GUID: a57fbe4b-3440-452a-88a7-943531ac872a
-- Technique: T1074.001: Data Staged: Local Data Staging
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1074.001/T1074.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1074-data_staged|T1074.001]]
+- [[kb/attack/techniques/T1074-data_staged#^t1074001-local-data-staging|T1074.001: Local Data Staging]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_sensitive_file_access_shadowcopy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_sensitive_file_access_shadowcopy.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sensitive File Access Via Volume Shadow Copy Backup
-
 Detects a command that accesses the VolumeShadowCopy in order to extract sensitive files such as the Security or SAM registry hives or the AD database (ntds.dit)
-
-## Metadata
-
-- Rule ID: f57f8d16-1f39-4dcb-a604-6c73d9b54b3d
-- Status: test
-- Level: high
-- Author: Max Altgelt (Nextron Systems), Tobias Michalski (Nextron Systems)
-- Date: 2021-08-09
-- Modified: 2024-01-18
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_sensitive_file_access_shadowcopy.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a command that accesses the VolumeShadowCopy in order to extract sensiti
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

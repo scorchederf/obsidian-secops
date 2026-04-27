@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_msdt_arbitrary_command_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_msdt_arbitrary_command_execution.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Arbitrary Command Execution Using Msdt.EXE
-
 Detects processes leveraging the "ms-msdt" handler or the "msdt.exe" binary to execute arbitrary commands as seen in the follina (CVE-2022-30190) vulnerability
-
-## Metadata
-
-- Rule ID: 258fc8ce-8352-443a-9120-8a11e4857fa5
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-05-29
-- Modified: 2024-03-13
-- Source Path: rules/windows/process_creation/proc_creation_win_msdt_arbitrary_command_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects processes leveraging the "ms-msdt" handler or the "msdt.exe" binary to e
 
 ### Techniques
 
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detection
 

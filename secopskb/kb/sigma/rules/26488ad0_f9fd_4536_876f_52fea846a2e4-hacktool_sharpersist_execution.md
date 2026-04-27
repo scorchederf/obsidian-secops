@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_sharpersist.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_sharpersist.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - SharPersist Execution
-
 Detects the execution of the hacktool SharPersist - used to deploy various different kinds of persistence mechanisms
-
-## Metadata
-
-- Rule ID: 26488ad0-f9fd-4536-876f-52fea846a2e4
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-09-15
-- Modified: 2023-02-04
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_sharpersist.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of the hacktool SharPersist - used to deploy various diffe
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
 
 ## Detection
 

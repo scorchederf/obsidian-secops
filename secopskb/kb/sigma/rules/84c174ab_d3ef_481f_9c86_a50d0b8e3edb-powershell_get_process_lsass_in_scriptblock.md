@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_susp_getprocess_lsass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_susp_getprocess_lsass.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Get-Process LSASS in ScriptBlock
-
 Detects a Get-Process command on lsass process, which is in almost all cases a sign of malicious activity
-
-## Metadata
-
-- Rule ID: 84c174ab-d3ef-481f-9c86-a50d0b8e3edb
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-04-23
-- Modified: 2022-12-25
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_susp_getprocess_lsass.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects a Get-Process command on lsass process, which is in almost all cases a s
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

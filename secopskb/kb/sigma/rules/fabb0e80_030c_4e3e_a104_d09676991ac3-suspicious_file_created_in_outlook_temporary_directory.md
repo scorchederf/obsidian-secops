@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_office_outlook_susp_file_creation_in_temp_dir.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_office_outlook_susp_file_creation_in_temp_dir.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Created in Outlook Temporary Directory
-
 Detects the creation of files with suspicious file extensions in the temporary directory that Outlook uses when opening attachments.
 This can be used to detect spear-phishing campaigns that use suspicious files as attachments, which may contain malicious code.
-
-## Metadata
-
-- Rule ID: fabb0e80-030c-4e3e-a104-d09676991ac3
-- Status: experimental
-- Level: high
-- Author: Florian Roth (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-07-22
-- Source Path: rules/windows/file/file_event/file_event_win_office_outlook_susp_file_creation_in_temp_dir.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ This can be used to detect spear-phishing campaigns that use suspicious files as
 
 ### Techniques
 
-- [[kb/attack/techniques/T1566-phishing|T1566.001]]
+- [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 ## Detection
 

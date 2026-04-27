@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_powershell_startup_shortcuts.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_powershell_startup_shortcuts.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,22 +21,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Startup Shortcut Persistence Via PowerShell.EXE
-
 Detects PowerShell writing startup shortcuts.
 This procedure was highlighted in Red Canary Intel Insights Oct. 2021, "We frequently observe adversaries using PowerShell to write malicious .lnk files into the startup directory to establish persistence.
 Accordingly, this detection opportunity is likely to identify persistence mechanisms in multiple threats.
 In the context of Yellow Cockatoo, this persistence mechanism eventually launches the command-line script that leads to the installation of a malicious DLL"
-
-## Metadata
-
-- Rule ID: 92fa78e7-4d39-45f1-91a3-8b23f3f1088d
-- Status: test
-- Level: high
-- Author: Christopher Peacock '@securepeacock', SCYTHE
-- Date: 2021-10-24
-- Modified: 2023-02-23
-- Source Path: rules/windows/file/file_event/file_event_win_powershell_startup_shortcuts.yml
 
 ## Logsource
 
@@ -47,7 +35,7 @@ In the context of Yellow Cockatoo, this persistence mechanism eventually launche
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

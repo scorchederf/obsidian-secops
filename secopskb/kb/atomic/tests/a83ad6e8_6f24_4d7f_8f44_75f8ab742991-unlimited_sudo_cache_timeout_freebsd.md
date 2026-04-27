@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.003"
 attack_technique_name: "Abuse Elevation Control Mechanism: Sudo and Sudo Caching"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.003/T1548.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "a83ad6e8-6f24-4d7f-8f44-75f8ab742991"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Unlimited sudo cache timeout (freebsd)
-
 Sets sudo caching timestamp_timeout to a value for unlimited. This is dangerous to modify without using 'visudo', do not do this on a production system.
-
-## Metadata
-
-- Atomic GUID: a83ad6e8-6f24-4d7f-8f44-75f8ab742991
-- Technique: T1548.003: Abuse Elevation Control Mechanism: Sudo and Sudo Caching
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1548.003/T1548.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.003]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548003-sudo-and-sudo-caching|T1548.003: Sudo and Sudo Caching]]
 
 ## Dependencies
 

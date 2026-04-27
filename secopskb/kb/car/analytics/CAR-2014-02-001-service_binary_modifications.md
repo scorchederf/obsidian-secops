@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-02-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-02-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-02-001"
   - "Service Binary Modifications"
@@ -28,20 +28,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-02-001: Service Binary Modifications
-
-## Metadata
-
-- CAR ID: CAR-2014-02-001
-- Submission Date: 2014/02/14
-- Information Domain: Host
-- Analytic Type: Situational Awareness, TTP
-- Platforms: Windows
-- Data Subtypes: Registry File Process
-- Contributors: MITRE
-
-## Description
-
 Adversaries may modify the binary file for an existing service to achieve [Persistence](https://attack.mitre.org/tactics/TA0003) while potentially [evading defenses](https://attack.mitre.org/tactics/TA0005). If a newly created or modified runs as a service, it may indicate APT activity. However, services are frequently installed by legitimate software. A well-tuned baseline is essential to differentiating between benign and malicious service modifications.
 
 ### Output Description
@@ -50,12 +36,12 @@ The Service Name and approximate time in which changes occurred on each host
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]] (coverage: Moderate; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: Moderate; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.010]]
-- [[kb/attack/techniques/T1569-system_services|T1569]] (coverage: Moderate; tactics: TA0002)
-  - [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]] (coverage: Moderate; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: Moderate; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574010-services-file-permissions-weakness|T1574.010: Services File Permissions Weakness]]
+- [[kb/attack/techniques/T1569-system_services|T1569: System Services]] (coverage: Moderate; tactics: TA0002)
+  - [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Implementations
 

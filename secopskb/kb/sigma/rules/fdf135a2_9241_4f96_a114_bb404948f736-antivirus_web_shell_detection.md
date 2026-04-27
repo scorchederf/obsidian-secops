@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/category/antivirus/av_webshell.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/category/antivirus/av_webshell.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "antivirus"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Antivirus Web Shell Detection
-
 Detects a highly relevant Antivirus alert that reports a web shell.
 It's highly recommended to tune this rule to the specific strings used by your anti virus solution by downloading a big WebShell repository from e.g. github and checking the matches.
 This event must not be ignored just because the AV has blocked the malware but investigate, how it came there in the first place.
-
-## Metadata
-
-- Rule ID: fdf135a2-9241-4f96-a114-bb404948f736
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Arnim Rupp
-- Date: 2018-09-09
-- Modified: 2024-11-02
-- Source Path: rules/category/antivirus/av_webshell.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This event must not be ignored just because the AV has blocked the malware but i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

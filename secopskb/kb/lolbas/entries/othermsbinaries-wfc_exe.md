@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Wfc.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Wfc.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Wfc.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Wfc.exe
-
 The Workflow Command-line Compiler tool is included with the Windows Software Development Kit (SDK).
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2021-09-26
-- Author: Jimmy (@bohops)
-- Source Path: yml/OtherMSBinaries/Wfc.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ wfc.exe {PATH_ABSOLUTE:.xoml}
 - Use Case: Execute proxied payload with Microsoft signed binary to bypass WDAC policies
 - Privileges: User
 - Operating System: Windows 10 2004 (likely previous and newer versions as well)
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detections
 

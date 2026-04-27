@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-07-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-07-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-07-001"
   - "Suspicious Arguments"
@@ -32,20 +32,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-07-001: Suspicious Arguments
-
-## Metadata
-
-- CAR ID: CAR-2013-07-001
-- Submission Date: 2013/07/05
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Malicious actors may rename built-in commands or external tools, such as those provided by SysInternals, to better [blend in](https://attack.mitre.org/tactics/TA0005) with the environment. In those cases, the file path name is arbitrary and may blend in well with the background. If the arguments are closely inspected, it may be possible to infer what tools are running and understand what an adversary is doing. When any legitimate software shares the same command lines, it must be whitelisted according to the expected parameters.
 
 Any tool of interest with commonly known command line usage can be detecting by command line analysis. Known substrings of command lines include
@@ -62,10 +48,10 @@ Any tool of interest with commonly known command line usage can be detecting by 
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]] (coverage: Low; tactics: TA0006)
-  - [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
-- [[kb/attack/techniques/T1021-remote_services|T1021]] (coverage: Moderate; tactics: TA0008)
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]] (coverage: Moderate; tactics: TA0011, TA0008)
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]] (coverage: Low; tactics: TA0006)
+  - [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]] (coverage: Moderate; tactics: TA0008)
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]] (coverage: Moderate; tactics: TA0011, TA0008)
 
 ## Implementations
 

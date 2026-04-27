@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_office_startup_persistence.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_office_startup_persistence.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Persistence Via Microsoft Office Startup Folder
-
 Detects creation of Microsoft Office files inside of one of the default startup folders in order to achieve persistence.
-
-## Metadata
-
-- Rule ID: 0e20c89d-2264-44ae-8238-aeeaba609ece
-- Status: test
-- Level: high
-- Author: Max Altgelt (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-06-02
-- Modified: 2023-06-22
-- Source Path: rules/windows/file/file_event/file_event_win_office_startup_persistence.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects creation of Microsoft Office files inside of one of the default startup 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137]]
+- [[kb/attack/techniques/T1137-office_application_startup|T1137: Office Application Startup]]
 
 ## Detection
 

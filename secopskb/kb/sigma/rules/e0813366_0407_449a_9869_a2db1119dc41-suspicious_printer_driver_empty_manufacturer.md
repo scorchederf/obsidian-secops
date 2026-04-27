@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_susp_printer_driver.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_susp_printer_driver.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Printer Driver Empty Manufacturer
-
 Detects a suspicious printer driver installation with an empty Manufacturer value
-
-## Metadata
-
-- Rule ID: e0813366-0407-449a-9869-a2db1119dc41
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2020-07-01
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_susp_printer_driver.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious printer driver installation with an empty Manufacturer valu
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]]
 
 ## Detection
 

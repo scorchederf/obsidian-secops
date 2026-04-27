@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_aspnet_compiler_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_aspnet_compiler_susp_child_process.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Child Process of AspNetCompiler
-
 Detects potentially suspicious child processes of "aspnet_compiler.exe".
-
-## Metadata
-
-- Rule ID: 9ccba514-7cb6-4c5c-b377-700758f2f120
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-08-14
-- Source Path: rules/windows/process_creation/proc_creation_win_aspnet_compiler_susp_child_process.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potentially suspicious child processes of "aspnet_compiler.exe".
 
 ### Techniques
 
-- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detection
 

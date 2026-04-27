@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-11-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-11-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-11-002"
   - "Registry Edit with Modification of Userinit, Shell or Notify"
@@ -28,27 +28,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify
-
-## Metadata
-
-- CAR ID: CAR-2021-11-002
-- Submission Date: 2021/11/28
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process, Registry
-- Contributors: Lucas Heiligenstein
-
-## Description
-
 Detection of modification of the registry key values of `Notify`, `Userinit`, and `Shell` located in `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\` and `HKEY_LOCAL_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`. When a user logs on, the Registry key values of `Notify`, `Userinit` and `Shell` are used to load dedicated Windows component. Attackers may insert malicious payload following the legitimate value to launch a malicious payload.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]] (coverage: Medium; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.004]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Medium; tactics: TA0005)
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]] (coverage: Medium; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547004-winlogon-helper-dll|T1547.004: Winlogon Helper DLL]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Medium; tactics: TA0005)
 
 ## Implementations
 

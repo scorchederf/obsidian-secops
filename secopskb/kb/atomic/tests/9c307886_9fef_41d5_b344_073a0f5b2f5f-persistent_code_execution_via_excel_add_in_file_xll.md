@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.006"
 attack_technique_name: "Office Application Startup: Add-ins"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.006/T1137.006.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "9c307886-9fef-41d5-b344-073a0f5b2f5f"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Persistent Code Execution Via Excel Add-in File (XLL)
-
 Creates an Excel Add-in file (XLL) and sets a registry key to make it run automatically when Excel is started
 The sample XLL provided launches the notepad as a proof-of-concept for persistent execution from Office.
 
-## Metadata
-
-- Atomic GUID: 9c307886-9fef-41d5-b344-073a0f5b2f5f
-- Technique: T1137.006: Office Application Startup: Add-ins
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1137.006/T1137.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.006]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137006-add-ins|T1137.006: Add-ins]]
 
 ## Dependencies
 

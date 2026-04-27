@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059"
 attack_technique_name: "Command and Scripting Interpreter"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059/T1059.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "a9b93f17-31cb-435d-a462-5e838a2a6026"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AutoIt Script Execution
-
 An adversary may attempt to execute suspicious or malicious script using AutoIt software instead of regular terminal like powershell or cmd. Calculator will popup when the script is executed successfully.
-
-## Metadata
-
-- Atomic GUID: a9b93f17-31cb-435d-a462-5e838a2a6026
-- Technique: T1059: Command and Scripting Interpreter
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1059/T1059.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Input Arguments
 

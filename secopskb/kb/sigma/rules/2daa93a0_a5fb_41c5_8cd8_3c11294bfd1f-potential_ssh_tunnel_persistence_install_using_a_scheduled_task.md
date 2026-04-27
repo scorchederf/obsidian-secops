@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_schtasks_openssh_tunnelling.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_openssh_tunnelling.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential SSH Tunnel Persistence Install Using A Scheduled Task
-
 Detects the creation of new scheduled tasks via commandline, using Schtasks.exe. This rule detects tasks creating that call OpenSSH, which may indicate the creation of reverse SSH tunnel to the attacker's server.
-
-## Metadata
-
-- Rule ID: 2daa93a0-a5fb-41c5-8cd8-3c11294bfd1f
-- Status: experimental
-- Level: high
-- Author: Rory Duncan
-- Date: 2025-07-14
-- Source Path: rules/windows/process_creation/proc_creation_win_schtasks_openssh_tunnelling.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the creation of new scheduled tasks via commandline, using Schtasks.exe.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

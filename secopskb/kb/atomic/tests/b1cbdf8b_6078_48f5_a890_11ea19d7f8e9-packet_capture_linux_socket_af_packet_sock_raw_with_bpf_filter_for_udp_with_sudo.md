@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "bash"
 aliases:
   - "b1cbdf8b-6078-48f5-a890-11ea19d7f8e9"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Packet Capture Linux socket AF_PACKET,SOCK_RAW with BPF filter for UDP with sudo
-
 Captures packets with domain=AF_PACKET,type=SOCK_RAW for a few seconds.
 Sets a BPF filter on the socket to filter for UDP traffic.
 
-## Metadata
-
-- Atomic GUID: b1cbdf8b-6078-48f5-a890-11ea19d7f8e9
-- Technique: T1040: Network Sniffing
-- Platforms: linux
-- Executor: bash
-- Elevation Required: True
-- Dependency Executor: bash
-- Source Path: atomics/T1040/T1040.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1040-network_sniffing|T1040]]
+- [[kb/attack/techniques/T1040-network_sniffing|T1040: Network Sniffing]]
 
 ## Input Arguments
 

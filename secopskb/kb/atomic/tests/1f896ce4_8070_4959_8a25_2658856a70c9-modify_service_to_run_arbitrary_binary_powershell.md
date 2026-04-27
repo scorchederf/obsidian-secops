@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1543.003"
 attack_technique_name: "Create or Modify System Process: Windows Service"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "1f896ce4-8070-4959-8a25-2658856a70c9"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Modify Service to Run Arbitrary Binary (Powershell)
-
 This test will use PowerShell to temporarily modify a service to run an arbitrary executable by changing its binary path and will then revert the binary path change, restoring the service to its original state.
 This technique was previously observed through SnapMC's use of Powerspolit's invoke-serviceabuse function. 
 [Reference](https://blog.fox-it.com/2021/10/11/snapmc-skips-ransomware-steals-data/)
 
-## Metadata
-
-- Atomic GUID: 1f896ce4-8070-4959-8a25-2658856a70c9
-- Technique: T1543.003: Create or Modify System Process: Windows Service
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1543.003/T1543.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Input Arguments
 

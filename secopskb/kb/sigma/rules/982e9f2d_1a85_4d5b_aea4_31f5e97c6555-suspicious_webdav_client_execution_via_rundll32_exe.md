@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_webdav_client_susp_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_webdav_client_susp_execution.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious WebDav Client Execution Via Rundll32.EXE
-
 Detects "svchost.exe" spawning "rundll32.exe" with command arguments like C:\windows\system32\davclnt.dll,DavSetCookie. This could be an indicator of exfiltration or use of WebDav to launch code (hosted on WebDav Server) or potentially a sign of exploitation of CVE-2023-23397
-
-## Metadata
-
-- Rule ID: 982e9f2d-1a85-4d5b-aea4-31f5e97c6555
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), Florian Roth (Nextron Systems)
-- Date: 2023-03-16
-- Modified: 2023-09-18
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_webdav_client_susp_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects "svchost.exe" spawning "rundll32.exe" with command arguments like C:\win
 
 ### Techniques
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 ## Detection
 

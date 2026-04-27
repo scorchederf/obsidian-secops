@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_uac_bypass_icmluautil.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_icmluautil.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# UAC Bypass via ICMLuaUtil
-
 Detects the pattern of UAC Bypass using ICMLuaUtil Elevated COM interface
-
-## Metadata
-
-- Rule ID: 49f2f17b-b4c8-4172-a68b-d5bf95d05130
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Elastic (idea)
-- Date: 2022-09-13
-- Modified: 2022-09-27
-- Source Path: rules/windows/process_creation/proc_creation_win_uac_bypass_icmluautil.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the pattern of UAC Bypass using ICMLuaUtil Elevated COM interface
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

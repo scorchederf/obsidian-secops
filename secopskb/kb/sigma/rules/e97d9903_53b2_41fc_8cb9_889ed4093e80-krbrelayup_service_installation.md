@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/service_control_manager/win_system_krbrelayup_service_installation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_krbrelayup_service_installation.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# KrbRelayUp Service Installation
-
 Detects service creation from KrbRelayUp tool used for privilege escalation in Windows domain environments where LDAP signing is not enforced (the default settings)
-
-## Metadata
-
-- Rule ID: e97d9903-53b2-41fc-8cb9-889ed4093e80
-- Status: test
-- Level: high
-- Author: Sittikorn S, Tim Shelton
-- Date: 2022-05-11
-- Modified: 2022-10-05
-- Source Path: rules/windows/builtin/system/service_control_manager/win_system_krbrelayup_service_installation.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects service creation from KrbRelayUp tool used for privilege escalation in W
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
 
 ## Detection
 

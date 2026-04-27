@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mstsc_run_local_rpd_file_susp_parent.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_run_local_rpd_file_susp_parent.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mstsc.EXE Execution From Uncommon Parent
-
 Detects potential RDP connection via Mstsc using a local ".rdp" file located in suspicious locations.
-
-## Metadata
-
-- Rule ID: ff3b6b39-e765-42f9-bb2c-ea6761e0e0f6
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-04-18
-- Source Path: rules/windows/process_creation/proc_creation_win_mstsc_run_local_rpd_file_susp_parent.yml
 
 ## Logsource
 

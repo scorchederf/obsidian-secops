@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555.006"
 attack_technique_name: "Credentials from Password Stores: Cloud Secrets Management Stores"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555.006/T1555.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "1b83cddb-eaa7-45aa-98a5-85fb0a8807ea"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Dump All Azure Key Vaults with Microburst
-
 Upon successful execution of this test, the names, locations, and contents of key vaults within an Azure account will be output to a file.
 See - https://www.netspi.com/blog/technical/cloud-penetration-testing/a-beginners-guide-to-gathering-azure-passwords/
 
-## Metadata
-
-- Atomic GUID: 1b83cddb-eaa7-45aa-98a5-85fb0a8807ea
-- Technique: T1555.006: Credentials from Password Stores: Cloud Secrets Management Stores
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1555.006/T1555.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555.006]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores#^t1555006-cloud-secrets-management-stores|T1555.006: Cloud Secrets Management Stores]]
 
 ## Input Arguments
 

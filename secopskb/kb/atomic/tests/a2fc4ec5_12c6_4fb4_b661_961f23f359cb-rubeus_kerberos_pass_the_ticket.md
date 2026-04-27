@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1550.003"
 attack_technique_name: "Use Alternate Authentication Material: Pass the Ticket"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1550.003/T1550.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "a2fc4ec5-12c6-4fb4-b661-961f23f359cb"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rubeus Kerberos Pass The Ticket
-
 Requesting a TGT on a remote system and retrieving it locally before requesting a service ticket with it. This is a Pass-The-Ticket attack because the TGT is obtained on the remote system, then used from a different machine (local).
 PsExec is used to execute commands on the remote system, and the "C$" admin share is used to retrieve the TGT, so the current user must have admin rights remotely and other PsExec prerequisites must be met.
 
-## Metadata
-
-- Atomic GUID: a2fc4ec5-12c6-4fb4-b661-961f23f359cb
-- Technique: T1550.003: Use Alternate Authentication Material: Pass the Ticket
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1550.003/T1550.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1550-use_alternate_authentication_material|T1550.003]]
+- [[kb/attack/techniques/T1550-use_alternate_authentication_material#^t1550003-pass-the-ticket|T1550.003: Pass the Ticket]]
 
 ## Input Arguments
 

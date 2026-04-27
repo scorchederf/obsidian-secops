@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_schtasks_delete.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_delete.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Delete Important Scheduled Task
-
 Detects when adversaries stop services or processes by deleting their respective scheduled tasks in order to conduct data destructive activities
-
-## Metadata
-
-- Rule ID: dbc1f800-0fe0-4bc0-9c66-292c2abe3f78
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-09-09
-- Source Path: rules/windows/process_creation/proc_creation_win_schtasks_delete.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects when adversaries stop services or processes by deleting their respective
 
 ### Techniques
 
-- [[kb/attack/techniques/T1489-service_stop|T1489]]
+- [[kb/attack/techniques/T1489-service_stop|T1489: Service Stop]]
 
 ## Detection
 

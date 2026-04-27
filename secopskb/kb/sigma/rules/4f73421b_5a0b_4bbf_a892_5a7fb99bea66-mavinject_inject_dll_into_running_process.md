@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_lolbin_mavinject_process_injection.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_lolbin_mavinject_process_injection.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mavinject Inject DLL Into Running Process
-
 Detects process injection using the signed Windows tool "Mavinject" via the "INJECTRUNNING" flag
-
-## Metadata
-
-- Rule ID: 4f73421b-5a0b-4bbf-a892-5a7fb99bea66
-- Status: test
-- Level: high
-- Author: frack113, Florian Roth
-- Date: 2021-07-12
-- Modified: 2022-12-05
-- Source Path: rules/windows/process_creation/proc_creation_win_lolbin_mavinject_process_injection.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects process injection using the signed Windows tool "Mavinject" via the "INJ
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.013]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218013-mavinject|T1218.013: Mavinject]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_amsi_registry_tampering.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_amsi_registry_tampering.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,20 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows AMSI Related Registry Tampering Via CommandLine
-
 Detects tampering of AMSI (Anti-Malware Scan Interface) related registry values via command line tools such as reg.exe or PowerShell.
 AMSI provides a generic interface for applications and services to integrate with antimalware products.
 Adversaries may disable AMSI to evade detection of malicious scripts and code execution.
-
-## Metadata
-
-- Rule ID: 7dbbcac2-57a0-45ac-b306-ff30a8bd2981
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-12-25
-- Source Path: rules/windows/process_creation/proc_creation_win_amsi_registry_tampering.yml
 
 ## Logsource
 
@@ -46,8 +35,8 @@ Adversaries may disable AMSI to evade detection of malicious scripts and code ex
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.001"
 attack_technique_name: "Brute Force: Password Guessing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.001/T1110.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ed6c2c87-bba6-4a28-ac6e-c8af3d6c2ab5"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Brute Force Until Account Lockout
-
 An adversary may attempt to brute force the password of privilleged account for privilege escalation.
 In the process, the TA may lock the account, which can be used for detection. [Reference](https://news.sophos.com/en-us/2022/07/14/blackcat-ransomware-attacks-not-merely-a-byproduct-of-bad-luck/#:~:text=A%20ransomware%20group%20attacking%20large,internal%20systems%20after%20establishing%20a)
 
-## Metadata
-
-- Atomic GUID: ed6c2c87-bba6-4a28-ac6e-c8af3d6c2ab5
-- Technique: T1110.001: Brute Force: Password Guessing
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1110.001/T1110.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1110-brute_force|T1110.001]]
+- [[kb/attack/techniques/T1110-brute_force#^t1110001-password-guessing|T1110.001: Password Guessing]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1037.002"
 attack_technique_name: "Boot or Logon Initialization Scripts: Logon Script (Mac)"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1037.002/T1037.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "manual"
 aliases:
   - "f047c7de-a2d9-406e-a62b-12a09d9516f4"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Logon Scripts - Mac
-
 Mac logon script
-
-## Metadata
-
-- Atomic GUID: f047c7de-a2d9-406e-a62b-12a09d9516f4
-- Technique: T1037.002: Boot or Logon Initialization Scripts: Logon Script (Mac)
-- Platforms: macos
-- Executor: manual
-- Source Path: atomics/T1037.002/T1037.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.002]]
+- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037002-login-hook|T1037.002: Login Hook]]
 
 ## Executor
 

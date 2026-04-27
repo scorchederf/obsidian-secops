@@ -126,16 +126,44 @@ def build_attack_technique_lookup():
             continue
         attack_id = filename.split("-", 1)[0]
         if re.match(r"^T\d{4}$", attack_id):
-            lookup[attack_id] = os.path.splitext(filename)[0]
+            note_stem = os.path.splitext(filename)[0]
+            filepath = os.path.join(ATTACK_TECHNIQUES_DIR, filename)
+            try:
+                text = read_text_file(filepath)
+            except OSError:
+                text = ""
+            technique_name = ""
+            if text.startswith("---\n"):
+                end = text.find("\n---\n", 4)
+                if end != -1:
+                    data = yaml.safe_load(text[4:end]) or {}
+                    if isinstance(data, dict):
+                        technique_name = data.get("mitre_name", "")
+            lookup[attack_id] = {
+                "target": note_stem,
+                "label": attack_id + (": " + technique_name if technique_name else ""),
+            }
+
+            for match in re.finditer(r"^### (T\d{4}\.\d{3}): ([^\n]+)\n\n(\^[^\n]+)", text, flags=re.MULTILINE):
+                subtechnique_id = match.group(1)
+                subtechnique_name = match.group(2).strip()
+                anchor = match.group(3).strip()
+                lookup[subtechnique_id] = {
+                    "target": note_stem + "#" + anchor,
+                    "label": subtechnique_id + ": " + subtechnique_name,
+                }
     return lookup
 
 
 def make_attack_link(attack_id, attack_lookup):
     parent_id = attack_id.split(".", 1)[0]
-    target = attack_lookup.get(parent_id)
-    if not target:
+    link_info = attack_lookup.get(attack_id) or attack_lookup.get(parent_id)
+    if not link_info:
         return attack_id
-    return f"[[kb/attack/techniques/{target}|{attack_id}]]"
+    label = link_info.get("label") or attack_id
+    if attack_id != parent_id and attack_id not in attack_lookup:
+        label = attack_id
+    return f"[[kb/attack/techniques/{link_info['target']}|{label}]]"
 
 
 def make_car_filename(analytic):
@@ -324,11 +352,9 @@ def build_car_note(analytic, attack_lookup, car_lookup):
 
     text = render_yaml(yaml_lines)
     text += build_page_start()
-    text += f"# {car_id}: {title}\n\n"
-    text += write_metadata_section(analytic)
     if analytic.get("description"):
         description = replace_car_relative_links(str(analytic["description"]).strip(), car_lookup)
-        text += "## Description\n\n" + description + "\n\n"
+        text += description + "\n\n"
     text += write_coverage_section(analytic, attack_lookup)
     text += write_implementations_section(analytic, car_lookup)
     text += write_simple_list_section("Data Model References", analytic.get("data_model_references"))
@@ -349,7 +375,13 @@ def build_car_indexes(analytics):
 
     text = build_page_start()
     text += "# CAR\n\n"
-    text += "MITRE Cyber Analytics Repository analytics generated from the upstream CAR YAML source.\n\n"
+    text += "<!-- generated-source-description-start -->\n"
+    text += "MITRE Cyber Analytics Repository is a library of analytics that describe how to detect adversary behavior using data models, logic, and implementations. This vault imports CAR analytics from the upstream YAML source and maps them to ATT&CK techniques where CAR provides coverage metadata.\n\n"
+    text += "Use CAR pages as analytic design references, then pivot from ATT&CK technique pages into related Sigma rules, Atomic Red Team tests, LOLBAS entries, and other validation or detection content.\n\n"
+    text += "## Upstream\n\n"
+    text += "- [MITRE CAR](https://car.mitre.org/)\n"
+    text += "- [CAR repository](https://github.com/mitre-attack/car)\n"
+    text += "<!-- generated-source-description-end -->\n\n"
     text += "## Areas\n\n"
     text += f"- [[kb/car/analytics/index|Analytics]] ({len(analytics)})\n"
     text += f"- [[kb/car/techniques/index|Analytics by ATT&CK Technique]] ({len(by_technique)})\n"

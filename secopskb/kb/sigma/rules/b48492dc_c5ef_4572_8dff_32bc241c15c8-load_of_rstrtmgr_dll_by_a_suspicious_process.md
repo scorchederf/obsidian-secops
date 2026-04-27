@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_dll_rstrtmgr_suspicious_load.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_rstrtmgr_suspicious_load.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -22,20 +22,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Load Of RstrtMgr.DLL By A Suspicious Process
-
 Detects the load of RstrtMgr DLL (Restart Manager) by a suspicious process.
 This library has been used during ransomware campaigns to kill processes that would prevent file encryption by locking them (e.g. Conti ransomware, Cactus ransomware). It has also recently been seen used by the BiBi wiper for Windows.
 It could also be used for anti-analysis purposes by shut downing specific processes.
-
-## Metadata
-
-- Rule ID: b48492dc-c5ef-4572-8dff-32bc241c15c8
-- Status: test
-- Level: high
-- Author: Luc Génaux
-- Date: 2023-11-28
-- Source Path: rules/windows/image_load/image_load_dll_rstrtmgr_suspicious_load.yml
 
 ## Logsource
 
@@ -46,8 +35,8 @@ It could also be used for anti-analysis purposes by shut downing specific proces
 
 ### Techniques
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_disable_event_auditing_critical.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_disable_event_auditing_critical.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Important Windows Event Auditing Disabled
-
 Detects scenarios where system auditing for important events such as "Process Creation" or "Logon" events is disabled.
-
-## Metadata
-
-- Rule ID: ab4561b1-6c7e-48a7-ad08-087cfb9ce8f1
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-06-20
-- Modified: 2023-11-17
-- Source Path: rules/windows/builtin/security/win_security_disable_event_auditing_critical.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects scenarios where system auditing for important events such as "Process Cr
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Detection
 

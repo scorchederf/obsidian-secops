@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/HonorableMentions/GfxDownloadWrapper.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/HonorableMentions/GfxDownloadWrapper.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "HonorableMentions"
 aliases:
   - "GfxDownloadWrapper.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# GfxDownloadWrapper.exe
-
 Remote file download used by the Intel Graphics Control Panel, receives as first parameter a URL and a destination file path.
-
-## Metadata
-
-- Category: HonorableMentions
-- Created: 2019-12-27
-- Author: Jesus Galvez
-- Source Path: yml/HonorableMentions/GfxDownloadWrapper.yml
 
 ## Paths
 
@@ -202,7 +193,7 @@ C:\Windows\System32\DriverStore\FileRepository\igdlh64.inf_amd64_[0-9]+\GfxDownl
 - Use Case: Download file from internet
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

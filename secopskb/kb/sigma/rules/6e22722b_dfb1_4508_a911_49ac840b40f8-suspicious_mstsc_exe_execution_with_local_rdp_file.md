@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mstsc_run_local_rdp_file_susp_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_run_local_rdp_file_susp_location.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Mstsc.EXE Execution With Local RDP File
-
 Detects potential RDP connection via Mstsc using a local ".rdp" file located in suspicious locations.
-
-## Metadata
-
-- Rule ID: 6e22722b-dfb1-4508-a911-49ac840b40f8
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-04-18
-- Source Path: rules/windows/process_creation/proc_creation_win_mstsc_run_local_rdp_file_susp_location.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects potential RDP connection via Mstsc using a local ".rdp" file located in 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1219-remote_access_tools|T1219.002]]
+- [[kb/attack/techniques/T1219-remote_access_tools#^t1219002-remote-desktop-software|T1219.002: Remote Desktop Software]]
 
 ## Detection
 

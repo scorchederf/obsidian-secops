@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/bitbucket/audit/bitbucket_audit_unauthorized_access_detected.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/bitbucket/audit/bitbucket_audit_unauthorized_access_detected.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "bitbucket / audit"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bitbucket Unauthorized Access To A Resource
-
 Detects unauthorized access attempts to a resource.
-
-## Metadata
-
-- Rule ID: 7215374a-de4f-4b33-8ba5-70804c9251d3
-- Status: test
-- Level: critical
-- Author: Muhammad Faisal (@faisalusuf)
-- Date: 2024-02-25
-- Source Path: rules/application/bitbucket/audit/bitbucket_audit_unauthorized_access_detected.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Detects unauthorized access attempts to a resource.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1586-compromise_accounts|T1586]]
+- [[kb/attack/techniques/T1586-compromise_accounts|T1586: Compromise Accounts]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/syslog/lnx_syslog_susp_named.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/syslog/lnx_syslog_susp_named.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "linux / syslog"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Named Error
-
 Detects suspicious DNS error messages that indicate a fatal or suspicious error that could be caused by exploiting attempts
-
-## Metadata
-
-- Rule ID: c8e35e96-19ce-4f16-aeb6-fd5588dc5365
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2018-02-20
-- Modified: 2022-10-05
-- Source Path: rules/linux/builtin/syslog/lnx_syslog_susp_named.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious DNS error messages that indicate a fatal or suspicious error 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_disabled_microsoft_defender_eventlog.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_disabled_microsoft_defender_eventlog.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disabled Windows Defender Eventlog
-
 Detects the disabling of the Windows Defender eventlog as seen in relation to Lockbit 3.0 infections
-
-## Metadata
-
-- Rule ID: fcddca7c-b9c0-4ddf-98da-e1e2d18b0157
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-07-04
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_disabled_microsoft_defender_eventlog.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the disabling of the Windows Defender eventlog as seen in relation to Lo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

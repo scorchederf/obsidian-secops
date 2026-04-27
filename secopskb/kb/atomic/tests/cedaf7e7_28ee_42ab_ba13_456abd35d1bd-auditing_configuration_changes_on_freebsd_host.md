@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.006"
 attack_technique_name: "Impair Defenses: Indicator Blocking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.006/T1562.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "cedaf7e7-28ee-42ab-ba13-456abd35d1bd"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Auditing Configuration Changes on FreeBSD Host
-
 Emulates modification of auditd configuration files
-
-## Metadata
-
-- Atomic GUID: cedaf7e7-28ee-42ab-ba13-456abd35d1bd
-- Technique: T1562.006: Impair Defenses: Indicator Blocking
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1562.006/T1562.006.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.006]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562006-indicator-blocking|T1562.006: Indicator Blocking]]
 
 ## Input Arguments
 

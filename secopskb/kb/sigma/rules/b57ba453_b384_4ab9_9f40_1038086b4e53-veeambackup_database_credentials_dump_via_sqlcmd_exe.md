@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_sqlcmd_veeam_dump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sqlcmd_veeam_dump.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# VeeamBackup Database Credentials Dump Via Sqlcmd.EXE
-
 Detects dump of credentials in VeeamBackup dbo
-
-## Metadata
-
-- Rule ID: b57ba453-b384-4ab9-9f40-1038086b4e53
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-12-20
-- Modified: 2023-02-13
-- Source Path: rules/windows/process_creation/proc_creation_win_sqlcmd_veeam_dump.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects dump of credentials in VeeamBackup dbo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1005-data_from_local_system|T1005]]
+- [[kb/attack/techniques/T1005-data_from_local_system|T1005: Data from Local System]]
 
 ## Detection
 

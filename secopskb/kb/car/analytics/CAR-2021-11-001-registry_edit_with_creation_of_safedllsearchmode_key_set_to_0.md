@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-11-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-11-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-11-001"
   - "Registry Edit with Creation of SafeDllSearchMode Key Set to 0"
@@ -28,27 +28,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0
-
-## Metadata
-
-- CAR ID: CAR-2021-11-001
-- Submission Date: 2021/11/24
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process, Registry
-- Contributors: Lucas Heiligenstein
-
-## Description
-
 Detection of creation of registry key HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SafeDllSearchMode. The key SafeDllSearchMode, if set to 0, will block the Windows mechanism for the search DLL order and adversaries may execute their own malicious dll.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: Medium; tactics: TA0003, TA0004, TA0005)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Medium; tactics: TA0005)
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: Medium; tactics: TA0003, TA0004, TA0005)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Medium; tactics: TA0005)
 
 ## Implementations
 

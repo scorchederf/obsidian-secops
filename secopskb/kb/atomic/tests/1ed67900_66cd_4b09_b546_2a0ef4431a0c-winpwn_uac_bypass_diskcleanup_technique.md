@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.002"
 attack_technique_name: "Abuse Elevation Control Mechanism: Bypass User Account Control"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.002/T1548.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "1ed67900-66cd-4b09-b546-2a0ef4431a0c"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - UAC Bypass DiskCleanup technique
-
 UAC bypass using DiskCleanup technique via function of WinPwn
-
-## Metadata
-
-- Atomic GUID: 1ed67900-66cd-4b09-b546-2a0ef4431a0c
-- Technique: T1548.002: Abuse Elevation Control Mechanism: Bypass User Account Control
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1548.002/T1548.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Executor
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.001"
 attack_technique_name: "Create Account: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "2170d9b5-bacd-4819-a952-da76dae0815f"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create a new Windows admin user via .NET
-
 Creates a new admin user in a powershell session without using net.exe
-
-## Metadata
-
-- Atomic GUID: 2170d9b5-bacd-4819-a952-da76dae0815f
-- Technique: T1136.001: Create Account: Local Account
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1136.001/T1136.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1136-create_account|T1136.001]]
+- [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
 
 ## Executor
 

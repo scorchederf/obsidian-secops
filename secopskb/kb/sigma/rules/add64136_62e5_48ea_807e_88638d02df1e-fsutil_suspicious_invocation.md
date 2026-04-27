@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_fsutil_usage.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_fsutil_usage.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "stable"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,20 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Fsutil Suspicious Invocation
-
 Detects suspicious parameters of fsutil (deleting USN journal, configuring it with small size, etc).
 Might be used by ransomwares during the attack (seen by NotPetya and others).
-
-## Metadata
-
-- Rule ID: add64136-62e5-48ea-807e-88638d02df1e
-- Status: stable
-- Level: high
-- Author: Ecco, E.M. Anhaus, oscd.community
-- Date: 2019-09-26
-- Modified: 2023-09-09
-- Source Path: rules/windows/process_creation/proc_creation_win_fsutil_usage.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ Might be used by ransomwares during the attack (seen by NotPetya and others).
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070]]
-- [[kb/attack/techniques/T1485-data_destruction|T1485]]
+- [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]]
+- [[kb/attack/techniques/T1485-data_destruction|T1485: Data Destruction]]
 
 ## Detection
 

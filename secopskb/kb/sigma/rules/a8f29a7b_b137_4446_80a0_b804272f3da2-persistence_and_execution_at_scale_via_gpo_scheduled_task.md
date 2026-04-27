@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_gpo_scheduledtasks.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_gpo_scheduledtasks.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Persistence and Execution at Scale via GPO Scheduled Task
-
 Detect lateral movement using GPO scheduled task, usually used to deploy ransomware at scale
-
-## Metadata
-
-- Rule ID: a8f29a7b-b137-4446-80a0-b804272f3da2
-- Status: test
-- Level: high
-- Author: Samir Bousseaden
-- Date: 2019-04-03
-- Modified: 2024-09-04
-- Source Path: rules/windows/builtin/security/win_security_gpo_scheduledtasks.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detect lateral movement using GPO scheduled task, usually used to deploy ransomw
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

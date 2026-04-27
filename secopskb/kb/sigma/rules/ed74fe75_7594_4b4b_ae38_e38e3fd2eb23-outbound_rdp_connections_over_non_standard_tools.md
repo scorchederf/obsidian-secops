@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/network_connection/net_connection_win_rdp_outbound_over_non_standard_tools.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_rdp_outbound_over_non_standard_tools.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / network_connection"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Outbound RDP Connections Over Non-Standard Tools
-
 Detects Non-Standard tools initiating a connection over port 3389 indicating possible lateral movement.
 An initial baseline is required before using this utility to exclude third party RDP tooling that you might use.
-
-## Metadata
-
-- Rule ID: ed74fe75-7594-4b4b-ae38-e38e3fd2eb23
-- Status: test
-- Level: high
-- Author: Markus Neis
-- Date: 2019-05-15
-- Modified: 2024-02-09
-- Source Path: rules/windows/network_connection/net_connection_win_rdp_outbound_over_non_standard_tools.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ An initial baseline is required before using this utility to exclude third party
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 ## Detection
 

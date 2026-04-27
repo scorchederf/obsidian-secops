@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_werfaultsecure_abuse.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_werfaultsecure_abuse.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,24 +22,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PPL Tampering Via WerFaultSecure
-
 Detects potential abuse of WerFaultSecure.exe to dump Protected Process Light (PPL) processes like LSASS or to freeze security solutions (EDR/antivirus).
 This technique is used by tools such as EDR-Freeze and WSASS to bypass PPL protections and access sensitive information or disable security software.
 Distinct command line patterns help identify the specific tool:
 - WSASS usage typically shows: "WSASS.exe WerFaultSecure.exe [PID]" in ParentCommandLine
 - EDR-Freeze usage typically shows: "EDR-Freeze_[version].exe [PID] [timeout]" in ParentCommandLine
 Legitimate debugging operations using WerFaultSecure are rare in production environments and should be investigated.
-
-## Metadata
-
-- Rule ID: 1f0b4cac-9c81-41f4-95d0-8475ff46b3e2
-- Status: experimental
-- Level: high
-- Author: Jason (https://github.com/0xbcf)
-- Date: 2025-09-23
-- Modified: 2025-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_werfaultsecure_abuse.yml
 
 ## Logsource
 
@@ -50,8 +38,8 @@ Legitimate debugging operations using WerFaultSecure are rare in production envi
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

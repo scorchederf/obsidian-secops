@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.005"
 attack_technique_name: "Server Software Component: Terminal Services DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.005/T1505.005.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "0b2eadeb-4a64-4449-9d43-3d999f4a317b"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Simulate Patching termsrv.dll
-
 Simulates patching of termsrv.dll by making a benign change to the file and replacing it with the original afterwards.
 Before we can make the modifications we need to take ownership of the file and grant ourselves the necessary permissions.
 
-## Metadata
-
-- Atomic GUID: 0b2eadeb-4a64-4449-9d43-3d999f4a317b
-- Technique: T1505.005: Server Software Component: Terminal Services DLL
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1505.005/T1505.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.005]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505005-terminal-services-dll|T1505.005: Terminal Services DLL]]
 
 ## Executor
 

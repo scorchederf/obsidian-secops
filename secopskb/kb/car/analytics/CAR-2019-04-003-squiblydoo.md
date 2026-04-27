@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2019-04-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2019-04-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2019-04-003"
   - "Squiblydoo"
@@ -27,28 +27,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2019-04-003: Squiblydoo
-
-## Metadata
-
-- CAR ID: CAR-2019-04-003
-- Submission Date: 2019/04/24
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 Squiblydoo is a specific usage of regsvr32.dll to load a COM scriptlet directly from the internet and execute it in a way that bypasses application whitelisting. It can be seen by looking for regsvr32.exe executions that load the scrobj.dll (which execute the COM scriptlet) or, if that is too noisy, those that also load content directly via HTTP or HTTPS.
 
 Squiblydoo was first written up by Casey Smith at Red Canary, though that blog post is no longer accessible.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Implementations
 

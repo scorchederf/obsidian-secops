@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552"
 attack_technique_name: "Unsecured Credentials"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552/T1552.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "a21118de-b11e-4ebd-b655-42f11142df0c"
@@ -22,23 +22,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - Retrieve EC2 Password Data using stratus
-
 This atomic runs an API call GetPasswordData from a role that does not have permission to do so. This simulates an attacker attempting to retrieve RDP passwords on a high number of Windows EC2 instances. This atomic test leverages a tool called stratus-red-team built by DataDog (https://github.com/DataDog/stratus-red-team). Stratus Red Team is a self-contained binary. You can use it to easily detonate offensive attack techniques against a live cloud environment. Ref: https://stratus-red-team.cloud/attack-techniques/AWS/aws.credential-access.ec2-get-password-data/
-
-## Metadata
-
-- Atomic GUID: a21118de-b11e-4ebd-b655-42f11142df0c
-- Technique: T1552: Unsecured Credentials
-- Platforms: linux, macos, iaas:aws
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1552/T1552.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552]]
+- [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]]
 
 ## Input Arguments
 

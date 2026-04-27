@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.003"
 attack_technique_name: "Event Triggered Execution: Windows Management Instrumentation Event Subscription"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.003/T1546.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "29786d7e-8916-4de6-9c55-be7b093b2706"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows MOFComp.exe Load MOF File
-
 The following Atomic will utilize MOFComp.exe to load a local MOF file.
 The Managed Object Format (MOF) compiler parses a file containing MOF statements and adds the classes and class instances defined in the file to the WMI repository. 
 To query for the class:  gwmi __eventfilter -namespace root\subscription
 A successful execution will add the class to WMI root namespace.
 Reference: https://pentestlab.blog/2020/01/21/persistence-wmi-event-subscription/ and https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/.
 
-## Metadata
-
-- Atomic GUID: 29786d7e-8916-4de6-9c55-be7b093b2706
-- Technique: T1546.003: Event Triggered Execution: Windows Management Instrumentation Event Subscription
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1546.003/T1546.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 ## Input Arguments
 

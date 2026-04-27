@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1056.004"
 attack_technique_name: "Input Capture: Credential API Hooking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1056.004/T1056.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "de1934ea-1fbf-425b-8795-65fb27dd7e33"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Hook PowerShell TLS Encrypt/Decrypt Messages
-
 Hooks functions in PowerShell to read TLS Communications
-
-## Metadata
-
-- Atomic GUID: de1934ea-1fbf-425b-8795-65fb27dd7e33
-- Technique: T1056.004: Input Capture: Credential API Hooking
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1056.004/T1056.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1056-input_capture|T1056.004]]
+- [[kb/attack/techniques/T1056-input_capture#^t1056004-credential-api-hooking|T1056.004: Credential API Hooking]]
 
 ## Input Arguments
 

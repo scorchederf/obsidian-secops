@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1611"
 attack_technique_name: "Escape to Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1611/T1611.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "6c499943-b098-4bc6-8d38-0956fc182984"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mount host filesystem to escape privileged Docker container
-
 This technique abuses privileged Docker containers to mount the host's filesystem and then create a cron job to launch a reverse shell as the host's superuser.
 The container running the test needs be privileged.  It may take up to a minute for this to run due to how often crond triggers a job.
 Dev note: the echo to create cron_filename is broken up to prevent localized execution of hostname and id by Powershell.
 
-## Metadata
-
-- Atomic GUID: 6c499943-b098-4bc6-8d38-0956fc182984
-- Technique: T1611: Escape to Host
-- Platforms: containers
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1611/T1611.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1611-escape_to_host|T1611]]
+- [[kb/attack/techniques/T1611-escape_to_host|T1611: Escape to Host]]
 
 ## Input Arguments
 

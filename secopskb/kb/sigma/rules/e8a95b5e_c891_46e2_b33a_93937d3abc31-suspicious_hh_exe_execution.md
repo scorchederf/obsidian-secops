@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hh_susp_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_susp_execution.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -31,19 +31,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious HH.EXE Execution
-
 Detects a suspicious execution of a Microsoft HTML Help (HH.exe)
-
-## Metadata
-
-- Rule ID: e8a95b5e-c891-46e2-b33a-93937d3abc31
-- Status: test
-- Level: high
-- Author: Maxim Pavlunin
-- Date: 2020-04-01
-- Modified: 2023-04-12
-- Source Path: rules/windows/process_creation/proc_creation_win_hh_susp_execution.yml
 
 ## Logsource
 
@@ -54,17 +42,17 @@ Detects a suspicious execution of a Microsoft HTML Help (HH.exe)
 
 ### Techniques
 
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.001]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
-- [[kb/attack/techniques/T1566-phishing|T1566]]
-- [[kb/attack/techniques/T1566-phishing|T1566.001]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059005-visual-basic|T1059.005: Visual Basic]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218001-compiled-html-file|T1218.001: Compiled HTML File]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
+- [[kb/attack/techniques/T1566-phishing|T1566: Phishing]]
+- [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 ## Detection
 

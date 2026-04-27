@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "05e8942e-f04f-460a-b560-f7781257feec"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copy and Compress AppData Folder
-
 Copies the AppData folder, compresses it, and cleans up temporary files.
-
-## Metadata
-
-- Atomic GUID: 05e8942e-f04f-460a-b560-f7781257feec
-- Technique: T1560.001: Archive Collected Data: Archive via Utility
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1560.001/T1560.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1560-archive_collected_data|T1560.001]]
+- [[kb/attack/techniques/T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 
 ## Input Arguments
 

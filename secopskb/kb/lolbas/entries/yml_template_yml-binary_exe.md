@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "YML-Template.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/YML-Template.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "YML-Template.yml"
 aliases:
   - "Binary.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Binary.exe
-
 Something general about the binary
-
-## Metadata
-
-- Category: YML-Template.yml
-- Created: 1970-01-01
-- Author: The name of the person that created this file
-- Source Path: YML-Template.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ The command
 - Use Case: A description of the usecase
 - Privileges: Required privs
 - Operating System: Windows 10 1803, Windows 10 1703
-- ATT&CK: [[kb/attack/techniques/T1055-process_injection|T1055]]
+- ATT&CK: [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ### 2. AWL Bypass
 
@@ -63,7 +54,7 @@ The second command
 - Use Case: A description of the usecase
 - Privileges: Required privs
 - Operating System: Windows 10 All
-- ATT&CK: [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- ATT&CK: [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Detections
 

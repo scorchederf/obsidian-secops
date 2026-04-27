@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1001.002"
 attack_technique_name: "Data Obfuscation via Steganography"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1001.002/T1001.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "c7921449-8b62-4c4d-8a83-d9281ac0190b"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Steganographic Tarball Embedding
-
 This atomic test, named "Steganographic Tarball Embedding", simulates the technique of data obfuscation via steganography by embedding a tar archive file (tarball) 
 within an image.
 
@@ -33,19 +31,9 @@ file within the image, utilizing steganography techniques for data obfuscation.
 This atomic test simulates the technique of data obfuscation via steganography, enabling attackers to clandestinely transfer files across systems undetected. 
 By embedding the tarball file within the image, adversaries can obscure their activities, facilitating covert communication and data exfiltration.
 
-## Metadata
-
-- Atomic GUID: c7921449-8b62-4c4d-8a83-d9281ac0190b
-- Technique: T1001.002: Data Obfuscation via Steganography
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1001.002/T1001.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1001-data_obfuscation|T1001.002]]
+- [[kb/attack/techniques/T1001-data_obfuscation#^t1001002-steganography|T1001.002: Steganography]]
 
 ## Input Arguments
 

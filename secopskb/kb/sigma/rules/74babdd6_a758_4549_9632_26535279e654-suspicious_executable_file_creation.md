@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_executable_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_executable_creation.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Executable File Creation
-
 Detect creation of suspicious executable file names.
 Some strings look for suspicious file extensions, others look for filenames that exploit unquoted service paths.
-
-## Metadata
-
-- Rule ID: 74babdd6-a758-4549-9632-26535279e654
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-09-05
-- Modified: 2023-12-11
-- Source Path: rules/windows/file/file_event/file_event_win_susp_executable_creation.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Some strings look for suspicious file extensions, others look for filenames that
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 ## Detection
 

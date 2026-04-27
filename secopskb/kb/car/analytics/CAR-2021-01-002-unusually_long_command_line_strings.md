@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-01-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-01-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-01-002"
   - "Unusually Long Command Line Strings"
@@ -23,25 +23,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-01-002: Unusually Long Command Line Strings
-
-## Metadata
-
-- CAR ID: CAR-2021-01-002
-- Submission Date: 2020/11/27
-- Information Domain: Host
-- Analytic Type: Anomaly
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Cyware Labs
-
-## Description
-
 Often, after a threat actor gains access to a system, they will attempt to run some kind of malware to further infect the victim machine. These malware often have long command line strings, which could be a possible indicator of attack. Here, we use sysmon and Splunk to first find the average command string length and search for command strings that stretch over multiple lines, thus identifying anomalies and possibly malicious commands.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]] (coverage: Low; tactics: TA0002)
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]] (coverage: Low; tactics: TA0002)
 
 ## Implementations
 

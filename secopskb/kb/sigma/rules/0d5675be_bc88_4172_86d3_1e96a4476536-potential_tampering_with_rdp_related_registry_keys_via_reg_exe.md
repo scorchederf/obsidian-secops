@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_reg_rdp_keys_tamper.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_reg_rdp_keys_tamper.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Tampering With RDP Related Registry Keys Via Reg.EXE
-
 Detects the execution of "reg.exe" for enabling/disabling the RDP service on the host by tampering with the 'CurrentControlSet\Control\Terminal Server' values
-
-## Metadata
-
-- Rule ID: 0d5675be-bc88-4172-86d3-1e96a4476536
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems), @Kostastsale, TheDFIRReport
-- Date: 2022-02-12
-- Modified: 2025-11-22
-- Source Path: rules/windows/process_creation/proc_creation_win_reg_rdp_keys_tamper.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the execution of "reg.exe" for enabling/disabling the RDP service on the
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

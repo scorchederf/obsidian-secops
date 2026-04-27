@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_pingcastle_script_parent.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_pingcastle_script_parent.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - PingCastle Execution From Potentially Suspicious Parent
-
 Detects the execution of PingCastle, a tool designed to quickly assess the Active Directory security level via a script located in a potentially suspicious or uncommon location.
-
-## Metadata
-
-- Rule ID: b37998de-a70b-4f33-b219-ec36bf433dc0
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), X__Junior (Nextron Systems)
-- Date: 2024-01-11
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_pingcastle_script_parent.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the execution of PingCastle, a tool designed to quickly assess the Activ
 
 ### Techniques
 
-- [[kb/attack/techniques/T1595-active_scanning|T1595]]
+- [[kb/attack/techniques/T1595-active_scanning|T1595: Active Scanning]]
 
 ## Detection
 

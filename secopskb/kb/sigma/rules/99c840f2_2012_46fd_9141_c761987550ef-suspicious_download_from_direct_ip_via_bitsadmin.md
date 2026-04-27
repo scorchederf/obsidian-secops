@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_bitsadmin_download_direct_ip.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bitsadmin_download_direct_ip.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Download From Direct IP Via Bitsadmin
-
 Detects usage of bitsadmin downloading a file using an URL that contains an IP
-
-## Metadata
-
-- Rule ID: 99c840f2-2012-46fd-9141-c761987550ef
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-06-28
-- Modified: 2023-02-15
-- Source Path: rules/windows/process_creation/proc_creation_win_bitsadmin_download_direct_ip.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects usage of bitsadmin downloading a file using an URL that contains an IP
 
 ### Techniques
 
-- [[kb/attack/techniques/T1197-bits_jobs|T1197]]
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1197-bits_jobs|T1197: BITS Jobs]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ### Software Tags
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Mmc.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Mmc.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Mmc.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mmc.exe
-
 Load snap-ins to locally and remotely manage Windows systems
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-12-04
-- Author: @bohops
-- Source Path: yml/OSBinaries/Mmc.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ mmc.exe -Embedding {PATH_ABSOLUTE:.msc}
 - Use Case: Configure a snap-in to load a COM custom class (CLSID) that has been added to the registry
 - Privileges: User
 - Operating System: Windows 10 (and possibly earlier versions), Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.014]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218014-mmc|T1218.014: MMC]]
 
 ### 2. UAC Bypass
 
@@ -63,7 +54,7 @@ mmc.exe gpedit.msc
 - Use Case: Modify HKCU\Environment key in Registry with COR profiler values then launch MMC to load the payload DLL.
 - Privileges: Administrator
 - Operating System: Windows 10 (and possibly earlier versions), Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.014]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218014-mmc|T1218.014: MMC]]
 
 ### 3. Download
 
@@ -76,7 +67,7 @@ mmc.exe -Embedding {PATH_ABSOLUTE:.msc}
 - Use Case: Download file from Internet
 - Privileges: User
 - Operating System: Windows 10 (and possibly earlier versions), Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.014]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218014-mmc|T1218.014: MMC]]
 
 ## Detections
 

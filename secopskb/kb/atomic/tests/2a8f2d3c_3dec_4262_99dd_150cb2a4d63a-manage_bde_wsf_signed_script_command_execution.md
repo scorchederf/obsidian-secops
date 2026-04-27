@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1216"
 attack_technique_name: "Signed Script Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1216/T1216.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "2a8f2d3c-3dec-4262-99dd-150cb2a4d63a"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# manage-bde.wsf Signed Script Command Execution
-
 Executes the signed manage-bde.wsf script with options to execute an arbitrary command.
-
-## Metadata
-
-- Atomic GUID: 2a8f2d3c-3dec-4262-99dd-150cb2a4d63a
-- Technique: T1216: Signed Script Proxy Execution
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1216/T1216.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ## Input Arguments
 

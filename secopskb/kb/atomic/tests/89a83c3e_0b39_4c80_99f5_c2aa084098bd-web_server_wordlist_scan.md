@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1595.003"
 attack_technique_name: "Active Scanning: Wordlist Scanning"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1595.003/T1595.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "89a83c3e-0b39-4c80-99f5-c2aa084098bd"
@@ -22,21 +22,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Web Server Wordlist Scan
-
 This test will scan a target system with a wordlist of common directories and file paths.
-
-## Metadata
-
-- Atomic GUID: 89a83c3e-0b39-4c80-99f5-c2aa084098bd
-- Technique: T1595.003: Active Scanning: Wordlist Scanning
-- Platforms: windows, linux, macos
-- Executor: powershell
-- Source Path: atomics/T1595.003/T1595.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1595-active_scanning|T1595.003]]
+- [[kb/attack/techniques/T1595-active_scanning#^t1595003-wordlist-scanning|T1595.003: Wordlist Scanning]]
 
 ## Input Arguments
 

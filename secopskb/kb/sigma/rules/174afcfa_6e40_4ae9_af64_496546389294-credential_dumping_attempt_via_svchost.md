@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_access/proc_access_win_svchost_credential_dumping.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_svchost_credential_dumping.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_access"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Credential Dumping Attempt Via Svchost
-
 Detects when a process tries to access the memory of svchost to potentially dump credentials.
-
-## Metadata
-
-- Rule ID: 174afcfa-6e40-4ae9-af64-496546389294
-- Status: test
-- Level: high
-- Author: Florent Labouyrie
-- Date: 2021-04-30
-- Modified: 2022-10-09
-- Source Path: rules/windows/process_access/proc_access_win_svchost_credential_dumping.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when a process tries to access the memory of svchost to potentially dump
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]]
 
 ## Detection
 

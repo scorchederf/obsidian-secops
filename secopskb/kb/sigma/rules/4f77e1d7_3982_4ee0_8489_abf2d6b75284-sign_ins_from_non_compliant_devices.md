@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/signin_logs/azure_ad_sign_ins_from_noncompliant_devices.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/signin_logs/azure_ad_sign_ins_from_noncompliant_devices.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "azure / signinlogs"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sign-ins from Non-Compliant Devices
-
 Monitor and alert for sign-ins where the device was non-compliant.
-
-## Metadata
-
-- Rule ID: 4f77e1d7-3982-4ee0-8489-abf2d6b75284
-- Status: test
-- Level: high
-- Author: Michael Epping, '@mepples21'
-- Date: 2022-06-28
-- Source Path: rules/cloud/azure/signin_logs/azure_ad_sign_ins_from_noncompliant_devices.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Monitor and alert for sign-ins where the device was non-compliant.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

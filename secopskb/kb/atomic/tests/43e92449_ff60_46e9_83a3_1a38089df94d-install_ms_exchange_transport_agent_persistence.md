@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.002"
 attack_technique_name: "Server Software Component: Transport Agent"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.002/T1505.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "43e92449-ff60-46e9-83a3-1a38089df94d"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Install MS Exchange Transport Agent Persistence
-
 Install a Microsoft Exchange Transport Agent for persistence. This requires execution from an Exchange Client Access Server and the creation of a DLL with specific exports. Seen in use by Turla.
 More details- https://docs.microsoft.com/en-us/exchange/transport-agents-exchange-2013-help
 
-## Metadata
-
-- Atomic GUID: 43e92449-ff60-46e9-83a3-1a38089df94d
-- Technique: T1505.002: Server Software Component: Transport Agent
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1505.002/T1505.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.002]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505002-transport-agent|T1505.002: Transport Agent]]
 
 ## Input Arguments
 

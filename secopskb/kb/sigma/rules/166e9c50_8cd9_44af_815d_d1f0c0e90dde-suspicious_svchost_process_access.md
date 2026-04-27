@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_access/proc_access_win_svchost_susp_access_request.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_svchost_susp_access_request.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_access"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Svchost Process Access
-
 Detects suspicious access to the "svchost" process such as that used by Invoke-Phantom to kill the thread of the Windows event logging service.
-
-## Metadata
-
-- Rule ID: 166e9c50-8cd9-44af-815d-d1f0c0e90dde
-- Status: test
-- Level: high
-- Author: Tim Burrell
-- Date: 2020-01-02
-- Modified: 2023-01-30
-- Source Path: rules/windows/process_access/proc_access_win_svchost_susp_access_request.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious access to the "svchost" process such as that used by Invoke-P
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Spool Service Child Process
-
 Detects suspicious print spool service (spoolsv.exe) child processes.
-
-## Metadata
-
-- Rule ID: dcdbc940-0bff-46b2-95f3-2d73f848e33b
-- Status: test
-- Level: high
-- Author: Justin C. (@endisphotic), @dreadphones (detection), Thomas Patzke (Sigma rule)
-- Date: 2021-07-11
-- Modified: 2024-12-01
-- Source Path: rules/windows/process_creation/proc_creation_win_spoolsv_susp_child_processes.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects suspicious print spool service (spoolsv.exe) child processes.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203]]
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
+- [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203: Exploitation for Client Execution]]
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 
 ## Detection
 

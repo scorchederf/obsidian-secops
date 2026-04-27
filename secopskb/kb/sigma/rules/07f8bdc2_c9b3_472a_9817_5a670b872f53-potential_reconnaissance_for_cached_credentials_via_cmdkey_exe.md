@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmdkey_recon.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmdkey_recon.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Reconnaissance For Cached Credentials Via Cmdkey.EXE
-
 Detects usage of cmdkey to look for cached credentials on the system
-
-## Metadata
-
-- Rule ID: 07f8bdc2-c9b3-472a-9817-5a670b872f53
-- Status: test
-- Level: high
-- Author: jmallette, Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2019-01-16
-- Modified: 2024-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_cmdkey_recon.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects usage of cmdkey to look for cached credentials on the system
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.005]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
 
 ## Detection
 

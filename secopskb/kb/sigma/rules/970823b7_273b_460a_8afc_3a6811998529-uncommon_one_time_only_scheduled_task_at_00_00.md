@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_schtasks_one_time_only_midnight_task.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_schtasks_one_time_only_midnight_task.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Uncommon One Time Only Scheduled Task At 00:00
-
 Detects scheduled task creation events that include suspicious actions, and is run once at 00:00
-
-## Metadata
-
-- Rule ID: 970823b7-273b-460a-8afc-3a6811998529
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems)
-- Date: 2022-07-15
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_schtasks_one_time_only_midnight_task.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects scheduled task creation events that include suspicious actions, and is r
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

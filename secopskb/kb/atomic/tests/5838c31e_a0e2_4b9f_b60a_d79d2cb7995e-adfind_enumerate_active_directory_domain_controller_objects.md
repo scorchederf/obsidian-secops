@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1018"
 attack_technique_name: "Remote System Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "5838c31e-a0e2-4b9f-b60a-d79d2cb7995e"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Adfind - Enumerate Active Directory Domain Controller Objects
-
 Adfind tool can be used for reconnaissance in an Active directory environment. This example has been documented by ransomware actors enumerating Active Directory Domain Controller Objects
 reference- http://www.joeware.net/freetools/tools/adfind/, https://www.fireeye.com/blog/threat-research/2019/04/pick-six-intercepting-a-fin6-intrusion.html
 
-## Metadata
-
-- Atomic GUID: 5838c31e-a0e2-4b9f-b60a-d79d2cb7995e
-- Technique: T1018: Remote System Discovery
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1018/T1018.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1018-remote_system_discovery|T1018]]
+- [[kb/attack/techniques/T1018-remote_system_discovery|T1018: Remote System Discovery]]
 
 ## Input Arguments
 

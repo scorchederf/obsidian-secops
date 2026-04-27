@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1027"
 attack_technique_name: "Obfuscated Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027/T1027.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "manual"
 aliases:
   - "e68b945c-52d0-4dd9-a5e8-d173d70c448f"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Obfuscated Command Line using special Unicode characters
-
 This is an obfuscated certutil command that when executed downloads a file from the web. Adapted from T1105. Obfuscation includes special options chars (unicode hyphens), character substitution (e.g. ᶠ) and character insertion (including the usage of the right-to-left 0x202E and left-to-right 0x202D override characters).
 Reference:
 https://wietze.github.io/blog/windows-command-line-obfuscation
 
-## Metadata
-
-- Atomic GUID: e68b945c-52d0-4dd9-a5e8-d173d70c448f
-- Technique: T1027: Obfuscated Files or Information
-- Platforms: windows
-- Executor: manual
-- Source Path: atomics/T1027/T1027.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Input Arguments
 

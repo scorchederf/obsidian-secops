@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_powershell_logging_disabled.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_powershell_logging_disabled.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Logging Disabled Via Registry Key Tampering
-
 Detects changes to the registry for the currently logged-in user. In order to disable PowerShell module logging, script block logging or transcription and script execution logging
-
-## Metadata
-
-- Rule ID: fecfd1a1-cc78-4313-a1ea-2ee2e8ec27a7
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-04-02
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_powershell_logging_disabled.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects changes to the registry for the currently logged-in user. In order to di
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564001-hidden-files-and-directories|T1564.001: Hidden Files and Directories]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

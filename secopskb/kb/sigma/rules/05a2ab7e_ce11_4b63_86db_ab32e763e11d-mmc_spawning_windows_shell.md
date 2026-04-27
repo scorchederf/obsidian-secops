@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mmc_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mmc_susp_child_process.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MMC Spawning Windows Shell
-
 Detects a Windows command line executable started from MMC
-
-## Metadata
-
-- Rule ID: 05a2ab7e-ce11-4b63-86db-ab32e763e11d
-- Status: test
-- Level: high
-- Author: Karneades, Swisscom CSIRT
-- Date: 2019-08-05
-- Modified: 2022-07-14
-- Source Path: rules/windows/process_creation/proc_creation_win_mmc_susp_child_process.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a Windows command line executable started from MMC
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.003]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
 
 ## Detection
 

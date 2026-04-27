@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_sysinternals_procdump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_sysinternals_procdump.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed ProcDump Execution
-
 Detects the execution of a renamed ProcDump executable.
 This often done by attackers or malware in order to evade defensive mechanisms.
-
-## Metadata
-
-- Rule ID: 4a0b2c7e-7cb2-495d-8b63-5f268e7bfd67
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2019-11-18
-- Modified: 2024-06-25
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_sysinternals_procdump.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This often done by attackers or malware in order to evade defensive mechanisms.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Detection
 

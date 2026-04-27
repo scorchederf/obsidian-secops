@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.001"
 attack_technique_name: "Account Manipulation: Additional Cloud Credentials"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.001/T1098.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "b8e747c3-bdf7-4d71-bce2-f1df2a057406"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure AD Application Hijacking - Service Principal
-
 Add a certificate to an Application through its Service Principal. The certificate can then be used to authenticate as the application.
 This can be used for persistence, and also for privilege escalation by benefiting from the Application's rights.
 An account with high-enough Azure AD privileges is needed, such as Global Administrator or Application Administrator. The account authentication must be without MFA.
 
-## Metadata
-
-- Atomic GUID: b8e747c3-bdf7-4d71-bce2-f1df2a057406
-- Technique: T1098.001: Account Manipulation: Additional Cloud Credentials
-- Platforms: azure-ad
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1098.001/T1098.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098.001]]
+- [[kb/attack/techniques/T1098-account_manipulation#^t1098001-additional-cloud-credentials|T1098.001: Additional Cloud Credentials]]
 
 ## Input Arguments
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSScripts/Cl_invocation.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSScripts/Cl_invocation.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSScripts"
 aliases:
   - "CL_Invocation.ps1"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CL_Invocation.ps1
-
 Aero diagnostics script
-
-## Metadata
-
-- Category: OSScripts
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSScripts/Cl_invocation.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ Import the PowerShell Diagnostic CL_Invocation script and call SyncInvoke to lau
 - Use Case: Proxy execution
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ## Detections
 

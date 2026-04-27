@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Microsoft OneNote Child Process
-
 Detects suspicious child processes of the Microsoft OneNote application. This may indicate an attempt to execute malicious embedded objects from a .one file.
-
-## Metadata
-
-- Rule ID: c27515df-97a9-4162-8a60-dc0eeb51b775
-- Status: test
-- Level: high
-- Author: Tim Rauch (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), Elastic (idea)
-- Date: 2022-10-21
-- Modified: 2023-02-10
-- Source Path: rules/windows/process_creation/proc_creation_win_office_onenote_susp_child_processes.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects suspicious child processes of the Microsoft OneNote application. This ma
 
 ### Techniques
 
-- [[kb/attack/techniques/T1566-phishing|T1566]]
-- [[kb/attack/techniques/T1566-phishing|T1566.001]]
+- [[kb/attack/techniques/T1566-phishing|T1566: Phishing]]
+- [[kb/attack/techniques/T1566-phishing#^t1566001-spearphishing-attachment|T1566.001: Spearphishing Attachment]]
 
 ## Detection
 

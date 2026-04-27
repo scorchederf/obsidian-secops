@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1491.001"
 attack_technique_name: "Defacement: Internal Defacement"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1491.001/T1491.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "0eeb68ce-e64c-4420-8d53-ad5bdc6f86d5"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows - Display a simulated ransom note via Notepad (non-destructive)
-
 Creates a temporary ransom-note text file and opens it in Notepad to
 simulate ransomware "note display" behavior without making destructive
 changes. SAFE and non-destructive.
 
-## Metadata
-
-- Atomic GUID: 0eeb68ce-e64c-4420-8d53-ad5bdc6f86d5
-- Technique: T1491.001: Defacement: Internal Defacement
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: command_prompt
-- Source Path: atomics/T1491.001/T1491.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1491-defacement|T1491.001]]
+- [[kb/attack/techniques/T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_lsass_default_dump_file_names.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_lsass_default_dump_file_names.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LSASS Process Memory Dump Files
-
 Detects creation of files with names used by different memory dumping tools to create a memory dump of the LSASS process memory, which contains user credentials.
-
-## Metadata
-
-- Rule ID: a5a2d357-1ab8-4675-a967-ef9990a59391
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-11-15
-- Modified: 2024-10-08
-- Source Path: rules/windows/file/file_event/file_event_win_lsass_default_dump_file_names.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects creation of files with names used by different memory dumping tools to c
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

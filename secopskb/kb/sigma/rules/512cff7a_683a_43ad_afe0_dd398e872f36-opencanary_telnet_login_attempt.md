@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_telnet_login_attempt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_telnet_login_attempt.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - Telnet Login Attempt
-
 Detects instances where a Telnet service on an OpenCanary node has had a login attempt.
-
-## Metadata
-
-- Rule ID: 512cff7a-683a-43ad-afe0-dd398e872f36
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_telnet_login_attempt.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects instances where a Telnet service on an OpenCanary node has had a login a
 
 ### Techniques
 
-- [[kb/attack/techniques/T1133-external_remote_services|T1133]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]]
+- [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
 
 ## Detection
 

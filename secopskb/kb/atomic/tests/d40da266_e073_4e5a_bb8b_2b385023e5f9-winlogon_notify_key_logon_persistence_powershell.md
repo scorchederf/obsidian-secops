@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.004"
 attack_technique_name: "Boot or Logon Autostart Execution: Winlogon Helper DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.004/T1547.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "d40da266-e073-4e5a-bb8b-2b385023e5f9"
@@ -20,25 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Winlogon Notify Key Logon Persistence - PowerShell
-
 PowerShell code to set Winlogon Notify key to execute a notification package DLL at logon.
 
 Upon successful execution, PowerShell will modify a registry value to execute atomicNotificationPackage.dll upon logon.
 
 Please note that Winlogon Notifications have been removed as of Windows Vista / Windows Server 2008 and that this test thus only applies to erlier versions of Windows.
 
-## Metadata
-
-- Atomic GUID: d40da266-e073-4e5a-bb8b-2b385023e5f9
-- Technique: T1547.004: Boot or Logon Autostart Execution: Winlogon Helper DLL
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1547.004/T1547.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.004]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547004-winlogon-helper-dll|T1547.004: Winlogon Helper DLL]]
 
 ## Input Arguments
 

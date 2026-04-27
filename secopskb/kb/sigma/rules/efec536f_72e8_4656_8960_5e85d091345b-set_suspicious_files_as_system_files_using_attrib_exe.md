@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_attrib_system_susp_paths.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_attrib_system_susp_paths.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Set Suspicious Files as System Files Using Attrib.EXE
-
 Detects the usage of attrib with the "+s" option to set scripts or executables located in suspicious locations as system files to hide them from users and make them unable to be deleted with simple rights. The rule limits the search to specific extensions and directories to avoid FPs
-
-## Metadata
-
-- Rule ID: efec536f-72e8-4656-8960-5e85d091345b
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-06-28
-- Modified: 2023-03-14
-- Source Path: rules/windows/process_creation/proc_creation_win_attrib_system_susp_paths.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the usage of attrib with the "+s" option to set scripts or executables l
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.001]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564001-hidden-files-and-directories|T1564.001: Hidden Files and Directories]]
 
 ## Detection
 

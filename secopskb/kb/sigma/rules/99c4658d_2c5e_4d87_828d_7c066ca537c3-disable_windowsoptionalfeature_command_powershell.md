@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_disable_windows_optional_feature.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_disable_windows_optional_feature.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable-WindowsOptionalFeature Command PowerShell
-
 Detect built in PowerShell cmdlet Disable-WindowsOptionalFeature, Deployment Image Servicing and Management tool.
 Similar to DISM.exe, this cmdlet is used to enumerate, install, uninstall, configure, and update features and packages in Windows images
-
-## Metadata
-
-- Rule ID: 99c4658d-2c5e-4d87-828d-7c066ca537c3
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-09-10
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_disable_windows_optional_feature.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ Similar to DISM.exe, this cmdlet is used to enumerate, install, uninstall, confi
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_susp_recon_indicators.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_susp_recon_indicators.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Linux Recon Indicators
-
 Detects events with patterns found in commands used for reconnaissance on linux systems
-
-## Metadata
-
-- Rule ID: 0cf7a157-8879-41a2-8f55-388dd23746b7
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-06-20
-- Source Path: rules/linux/process_creation/proc_creation_lnx_susp_recon_indicators.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects events with patterns found in commands used for reconnaissance on linux 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1592-gather_victim_host_information|T1592.004]]
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+- [[kb/attack/techniques/T1592-gather_victim_host_information#^t1592004-client-configurations|T1592.004: Client Configurations]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 ## Detection
 

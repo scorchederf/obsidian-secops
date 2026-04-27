@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218"
 attack_technique_name: "Signed Binary Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/T1218.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "0e1483ba-8f0c-425d-b8c6-42736e058eaa"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DiskShadow Command Execution
-
 Emulates attack with a DiskShadow.exe (LOLBIN installed by default on Windows) being used to execute arbitrary commands Reference: https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-database-extraction/
-
-## Metadata
-
-- Atomic GUID: 0e1483ba-8f0c-425d-b8c6-42736e058eaa
-- Technique: T1218: Signed Binary Proxy Execution
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1218/T1218.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Input Arguments
 

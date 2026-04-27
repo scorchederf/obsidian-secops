@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/At.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/At.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "At.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# At.exe
-
 Schedule periodic tasks
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2019-09-20
-- Author: Freddie Barr-Smith
-- Source Path: yml/OSBinaries/At.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ C:\Windows\System32\at.exe 09:00 /interactive /every:m,t,w,th,f,s,su {CMD}
 - Use Case: Create a recurring task, to eg. to keep reverse shell session(s) alive
 - Privileges: Local Admin
 - Operating System: Windows 7 or older
-- ATT&CK: [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+- ATT&CK: [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 ## Detections
 

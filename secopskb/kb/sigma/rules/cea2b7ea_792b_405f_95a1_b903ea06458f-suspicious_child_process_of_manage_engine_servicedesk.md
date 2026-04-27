@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Child Process Of Manage Engine ServiceDesk
-
 Detects suspicious child processes of the "Manage Engine ServiceDesk Plus" Java web service
-
-## Metadata
-
-- Rule ID: cea2b7ea-792b-405f-95a1-b903ea06458f
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2023-01-18
-- Modified: 2023-08-29
-- Source Path: rules/windows/process_creation/proc_creation_win_java_manageengine_susp_child_process.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious child processes of the "Manage Engine ServiceDesk Plus" Java 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1102-web_service|T1102]]
+- [[kb/attack/techniques/T1102-web_service|T1102: Web Service]]
 
 ## Detection
 

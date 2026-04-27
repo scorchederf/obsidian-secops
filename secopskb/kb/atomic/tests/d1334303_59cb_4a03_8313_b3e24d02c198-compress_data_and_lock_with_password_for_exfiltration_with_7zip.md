@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1560.001"
 attack_technique_name: "Archive Collected Data: Archive via Utility"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1560.001/T1560.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "d1334303-59cb-4a03-8313-b3e24d02c198"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Compress Data and lock with password for Exfiltration with 7zip
-
 Note: This test requires 7zip installation
-
-## Metadata
-
-- Atomic GUID: d1334303-59cb-4a03-8313-b3e24d02c198
-- Technique: T1560.001: Archive Collected Data: Archive via Utility
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Source Path: atomics/T1560.001/T1560.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1560-archive_collected_data|T1560.001]]
+- [[kb/attack/techniques/T1560-archive_collected_data#^t1560001-archive-via-utility|T1560.001: Archive via Utility]]
 
 ## Input Arguments
 

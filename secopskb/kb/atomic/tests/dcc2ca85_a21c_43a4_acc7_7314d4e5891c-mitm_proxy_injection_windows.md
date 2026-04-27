@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1659"
 attack_technique_name: "Content Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1659/T1659.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "dcc2ca85-a21c-43a4-acc7-7314d4e5891c"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MITM Proxy Injection (Windows)
-
 Start mitmdump proxy with injection script in the background.
-
-## Metadata
-
-- Atomic GUID: dcc2ca85-a21c-43a4-acc7-7314d4e5891c
-- Technique: T1659: Content Injection
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1659/T1659.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1659-content_injection|T1659]]
+- [[kb/attack/techniques/T1659-content_injection|T1659: Content Injection]]
 
 ## Dependencies
 

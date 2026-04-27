@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_ad_object_writedac_access.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_ad_object_writedac_access.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AD Object WriteDAC Access
-
 Detects WRITE_DAC access to a domain object
-
-## Metadata
-
-- Rule ID: 028c7842-4243-41cd-be6f-12f3cf1a26c7
-- Status: test
-- Level: critical
-- Author: Roberto Rodriguez @Cyb3rWard0g
-- Date: 2019-09-12
-- Modified: 2021-11-27
-- Source Path: rules/windows/builtin/security/win_security_ad_object_writedac_access.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects WRITE_DAC access to a domain object
 
 ### Techniques
 
-- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.001]]
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222001-windows-file-and-directory-permissions-modification|T1222.001: Windows File and Directory Permissions Modification]]
 
 ## Detection
 

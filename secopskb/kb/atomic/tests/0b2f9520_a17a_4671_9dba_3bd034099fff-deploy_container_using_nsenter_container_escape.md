@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1611"
 attack_technique_name: "Escape to Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1611/T1611.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "0b2f9520-a17a-4671-9dba-3bd034099fff"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Deploy container using nsenter container escape
-
 In this escape `kubectl` is used to launch a new pod, with a container that has the host pids mapped into the container (`hostPID:true`). It uses the alpine linux container image. It runs with privilege on the host (`privileged:true`). When the container is launched the command `nsenter --mount=/proc/1/ns/mnt -- /bin/bash` is ran. Since the host processes have been mapped into the container, the container enters the host namespace, escaping the container.
 
 Additional Details:
 - https://twitter.com/mauilion/status/1129468485480751104
 - https://securekubernetes.com/scenario_2_attack/
 
-## Metadata
-
-- Atomic GUID: 0b2f9520-a17a-4671-9dba-3bd034099fff
-- Technique: T1611: Escape to Host
-- Platforms: containers
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1611/T1611.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1611-escape_to_host|T1611]]
+- [[kb/attack/techniques/T1611-escape_to_host|T1611: Escape to Host]]
 
 ## Dependencies
 

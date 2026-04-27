@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Pnputil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Pnputil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Pnputil.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Pnputil.exe
-
 Used for installing drivers
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2020-12-25
-- Author: Hai vaknin (lux)
-- Source Path: yml/OSBinaries/Pnputil.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ pnputil.exe -i -a {PATH_ABSOLUTE:.inf}
 - Use Case: Add malicious driver
 - Privileges: Administrator
 - Operating System: Windows 7, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]]
+- ATT&CK: [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]]
 
 ## Detections
 

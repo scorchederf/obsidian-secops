@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.010"
 attack_technique_name: "Impair Defenses: Downgrade Attack"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.010/T1562.010.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "14d55b96-b2f5-428d-8fed-49dc4d9dd616"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Change VIB acceptance level to CommunitySupported via ESXCLI
-
 An adversary will change the VIB acceptance level to CommunitySupported to downgrade the acceptance criteria via ESXCLI. Afterwards an adversary may proceed to installing malicious VIBs on the host.
 [Reference](https://www.mandiant.com/resources/blog/esxi-hypervisors-detection-hardening)
 
-## Metadata
-
-- Atomic GUID: 14d55b96-b2f5-428d-8fed-49dc4d9dd616
-- Technique: T1562.010: Impair Defenses: Downgrade Attack
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1562.010/T1562.010.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.010]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562010-downgrade-attack|T1562.010: Downgrade Attack]]
 
 ## Input Arguments
 

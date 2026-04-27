@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_dctask64_arbitrary_command_and_dll_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dctask64_arbitrary_command_and_dll_execution.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ManageEngine Endpoint Central Dctask64.EXE Potential Abuse
-
 Detects the execution of "dctask64.exe", a signed binary by ZOHO Corporation part of ManageEngine Endpoint Central.
 This binary can be abused for DLL injection, arbitrary command and process execution.
-
-## Metadata
-
-- Rule ID: 6345b048-8441-43a7-9bed-541133633d7a
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2020-01-28
-- Modified: 2025-01-22
-- Source Path: rules/windows/process_creation/proc_creation_win_dctask64_arbitrary_command_and_dll_execution.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This binary can be abused for DLL injection, arbitrary command and process execu
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
 
 ## Detection
 

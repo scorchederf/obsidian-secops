@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/msexchange/win_exchange_proxyshell_certificate_generation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/msexchange/win_exchange_proxyshell_certificate_generation.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "critical"
 logsource: "windows / msexchange-management"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Certificate Request Export to Exchange Webserver
-
 Detects a write of an Exchange CSR to an untypical directory or with aspx name suffix which can be used to place a webshell
-
-## Metadata
-
-- Rule ID: b7bc7038-638b-4ffd-880c-292c692209ef
-- Status: test
-- Level: critical
-- Author: Max Altgelt (Nextron Systems)
-- Date: 2021-08-23
-- Modified: 2023-01-23
-- Source Path: rules/windows/builtin/msexchange/win_exchange_proxyshell_certificate_generation.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a write of an Exchange CSR to an untypical directory or with aspx name s
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

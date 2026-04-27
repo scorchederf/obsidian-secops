@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mshta_susp_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mshta_susp_execution.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,22 +23,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MSHTA Execution with Suspicious File Extensions
-
 Detects execution of mshta.exe with file types that looks like they do not typically represent HTA (HTML Application) content,
 such as .png, .jpg, .zip, .pdf, and others, which are often polyglots. MSHTA is a legitimate Windows utility for executing HTML Applications
 containing VBScript or JScript. Threat actors often abuse this lolbin utility to download and
 execute malicious scripts disguised as benign files or hosted under misleading extensions to evade detection.
-
-## Metadata
-
-- Rule ID: cc7abbd0-762b-41e3-8a26-57ad50d2eea3
-- Status: test
-- Level: high
-- Author: Diego Perez (@darkquassar), Markus Neis, Swisscom (Improve Rule), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2019-02-22
-- Modified: 2025-05-12
-- Source Path: rules/windows/process_creation/proc_creation_win_mshta_susp_execution.yml
 
 ## Logsource
 
@@ -49,9 +37,9 @@ execute malicious scripts disguised as benign files or hosted under misleading e
 
 ### Techniques
 
-- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218005-mshta|T1218.005: Mshta]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 ## Detection
 

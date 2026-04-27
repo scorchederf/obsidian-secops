@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_susp_script_dotnet_clr_dll_load.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_susp_script_dotnet_clr_dll_load.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DotNet CLR DLL Loaded By Scripting Applications
-
 Detects .NET CLR DLLs being loaded by scripting applications such as wscript or cscript. This could be an indication of potential suspicious execution.
-
-## Metadata
-
-- Rule ID: 4508a70e-97ef-4300-b62b-ff27992990ea
-- Status: test
-- Level: high
-- Author: omkar72, oscd.community
-- Date: 2020-10-14
-- Modified: 2023-02-23
-- Source Path: rules/windows/image_load/image_load_susp_script_dotnet_clr_dll_load.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects .NET CLR DLLs being loaded by scripting applications such as wscript or 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

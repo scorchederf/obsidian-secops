@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.018"
 attack_technique_name: "Event Triggered Execution: Python Startup Hooks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.018/T1546.018.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "57289962-21dc-4501-b756-80cd30608d9f"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Python Startup Hook - atomic_hook.pth (Windows)
-
 Executes code by placing a .pth file in the site-packages directory. 
 Supports python.exe and python3.exe via input arguments.
 
-## Metadata
-
-- Atomic GUID: 57289962-21dc-4501-b756-80cd30608d9f
-- Technique: T1546.018: Event Triggered Execution: Python Startup Hooks
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1546.018/T1546.018.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.018]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546018-python-startup-hooks|T1546.018: Python Startup Hooks]]
 
 ## Input Arguments
 

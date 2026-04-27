@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "3180f7d5-52c0-4493-9ea0-e3431a84773f"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# rsync remote file copy (pull)
-
 Utilize rsync to perform a remote file copy (pull)
-
-## Metadata
-
-- Atomic GUID: 3180f7d5-52c0-4493-9ea0-e3431a84773f
-- Technique: T1105: Ingress Tool Transfer
-- Platforms: linux, macos
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1105/T1105.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Input Arguments
 

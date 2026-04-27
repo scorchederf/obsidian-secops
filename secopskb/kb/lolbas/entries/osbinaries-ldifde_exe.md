@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Ldifde.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Ldifde.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Ldifde.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Ldifde.exe
-
 Creates, modifies, and deletes LDAP directory objects.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2022-08-31
-- Author: Grzegorz Tworek
-- Source Path: yml/OSBinaries/Ldifde.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ Ldifde -i -f {PATH:.ldf}
 - Use Case: Download file from Internet
 - Privileges: Administrator
 - Operating System: Windows Server with AD Domain Services role,  Windows 10 with AD LDS role.
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

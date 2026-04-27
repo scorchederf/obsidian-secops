@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1539"
 attack_technique_name: "Steal Web Session Cookie"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1539/T1539.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "4b437357-f4e9-4c84-9fa6-9bcee6f826aa"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Steal Firefox Cookies (Windows)
-
 This test queries Firefox's cookies.sqlite database to steal the cookie data contained within it, similar to Zloader/Zbot's cookie theft function. 
 Note: If Firefox is running, the process will be killed to ensure that the DB file isn't locked. 
 See https://www.malwarebytes.com/resources/files/2020/05/the-silent-night-zloader-zbot_final.pdf.
 
-## Metadata
-
-- Atomic GUID: 4b437357-f4e9-4c84-9fa6-9bcee6f826aa
-- Technique: T1539: Steal Web Session Cookie
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1539/T1539.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539]]
+- [[kb/attack/techniques/T1539-steal_web_session_cookie|T1539: Steal Web Session Cookie]]
 
 ## Input Arguments
 

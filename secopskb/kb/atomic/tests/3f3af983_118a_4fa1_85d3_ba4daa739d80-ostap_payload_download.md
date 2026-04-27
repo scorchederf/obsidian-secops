@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1204.002"
 attack_technique_name: "User Execution: Malicious File"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "3f3af983-118a-4fa1-85d3-ba4daa739d80"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OSTap Payload Download
-
 Uses cscript //E:jscript to download a file
-
-## Metadata
-
-- Atomic GUID: 3f3af983-118a-4fa1-85d3-ba4daa739d80
-- Technique: T1204.002: User Execution: Malicious File
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1204.002/T1204.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.002]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204002-malicious-file|T1204.002: Malicious File]]
 
 ## Input Arguments
 

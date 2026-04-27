@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hh_chm_remote_download_or_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hh_chm_remote_download_or_execution.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote CHM File Download/Execution Via HH.EXE
-
 Detects the usage of "hh.exe" to execute/download remotely hosted ".chm" files.
-
-## Metadata
-
-- Rule ID: f57c58b3-ee69-4ef5-9041-455bf39aaa89
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-09-29
-- Modified: 2024-01-31
-- Source Path: rules/windows/process_creation/proc_creation_win_hh_chm_remote_download_or_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the usage of "hh.exe" to execute/download remotely hosted ".chm" files.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.001]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218001-compiled-html-file|T1218.001: Compiled HTML File]]
 
 ## Detection
 

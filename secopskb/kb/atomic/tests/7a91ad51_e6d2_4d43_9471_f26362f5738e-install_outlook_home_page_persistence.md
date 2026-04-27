@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.004"
 attack_technique_name: "Office Application Startup: Outlook Home Page"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.004/T1137.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "7a91ad51-e6d2-4d43-9471-f26362f5738e"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Install Outlook Home Page Persistence
-
 This test simulates persistence being added to a host via the Outlook Home Page functionality. This causes Outlook to retrieve URL containing a malicious payload every time the targeted folder is viewed.
 
 Triggering the payload requires manually opening Outlook and viewing the targetted folder (e.g. Inbox).
 
-## Metadata
-
-- Atomic GUID: 7a91ad51-e6d2-4d43-9471-f26362f5738e
-- Technique: T1137.004: Office Application Startup: Outlook Home Page
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Source Path: atomics/T1137.004/T1137.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.004]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137004-outlook-home-page|T1137.004: Outlook Home Page]]
 
 ## Input Arguments
 

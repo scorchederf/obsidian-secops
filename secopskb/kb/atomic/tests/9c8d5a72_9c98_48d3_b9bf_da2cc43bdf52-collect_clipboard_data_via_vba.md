@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1115"
 attack_technique_name: "Clipboard Data"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1115/T1115.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "9c8d5a72-9c98-48d3-b9bf-da2cc43bdf52"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Collect Clipboard Data via VBA
-
 This module copies the data stored in the user's clipboard and writes it to a file, $env:TEMP\atomic_T1115_clipboard_data.txt
-
-## Metadata
-
-- Atomic GUID: 9c8d5a72-9c98-48d3-b9bf-da2cc43bdf52
-- Technique: T1115: Clipboard Data
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1115/T1115.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1115-clipboard_data|T1115]]
+- [[kb/attack/techniques/T1115-clipboard_data|T1115: Clipboard Data]]
 
 ## Input Arguments
 

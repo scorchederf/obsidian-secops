@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.003"
 attack_technique_name: "OS Credential Dumping: NTDS"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.003/T1003.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "f57cb283-c131-4e2f-8a6c-363d575748b2"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copy NTDS in low level NTFS acquisition via MFT parsing
-
 This test is intended to be run on a domain Controller.
 
 UnderlayCopy is a PowerShell utility for low-level NTFS acquisition and dumping protected, locked system artifacts (for example: SAM, SYSTEM, NTDS.dit, registry hives, and other files that are normally inaccessible while Windows is running).
 
-## Metadata
-
-- Atomic GUID: f57cb283-c131-4e2f-8a6c-363d575748b2
-- Technique: T1003.003: OS Credential Dumping: NTDS
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1003.003/T1003.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Input Arguments
 

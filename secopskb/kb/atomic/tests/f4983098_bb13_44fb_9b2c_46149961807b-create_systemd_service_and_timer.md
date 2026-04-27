@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.006"
 attack_technique_name: "Scheduled Task/Job: Systemd Timers"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.006/T1053.006.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "bash"
 aliases:
   - "f4983098-bb13-44fb-9b2c-46149961807b"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create Systemd Service and Timer
-
 This test creates Systemd service and timer then starts and enables the Systemd timer
-
-## Metadata
-
-- Atomic GUID: f4983098-bb13-44fb-9b2c-46149961807b
-- Technique: T1053.006: Scheduled Task/Job: Systemd Timers
-- Platforms: linux
-- Executor: bash
-- Elevation Required: True
-- Source Path: atomics/T1053.006/T1053.006.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.006]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053006-systemd-timers|T1053.006: Systemd Timers]]
 
 ## Input Arguments
 

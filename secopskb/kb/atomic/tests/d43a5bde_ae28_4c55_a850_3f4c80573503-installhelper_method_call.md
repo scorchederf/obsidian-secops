@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.004"
 attack_technique_name: "Signed Binary Proxy Execution: InstallUtil"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.004/T1218.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "d43a5bde-ae28-4c55-a850-3f4c80573503"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# InstallHelper method call
-
 Executes the InstallHelper class constructor runner instead of executing InstallUtil. Upon execution, no output will be displayed if the test
 executed successfuly.
 
-## Metadata
-
-- Atomic GUID: d43a5bde-ae28-4c55-a850-3f4c80573503
-- Technique: T1218.004: Signed Binary Proxy Execution: InstallUtil
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1218.004/T1218.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.004]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218004-installutil|T1218.004: InstallUtil]]
 
 ## Input Arguments
 

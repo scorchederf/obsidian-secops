@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_classic/posh_pc_exe_calling_ps.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_classic/posh_pc_exe_calling_ps.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / ps_classic_start"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Called from an Executable Version Mismatch
-
 Detects PowerShell called from an executable by the version mismatch method
-
-## Metadata
-
-- Rule ID: c70e019b-1479-4b65-b0cc-cd0c6093a599
-- Status: test
-- Level: high
-- Author: Sean Metcalf (source), Florian Roth (Nextron Systems)
-- Date: 2017-03-05
-- Modified: 2023-10-27
-- Source Path: rules/windows/powershell/powershell_classic/posh_pc_exe_calling_ps.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects PowerShell called from an executable by the version mismatch method
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

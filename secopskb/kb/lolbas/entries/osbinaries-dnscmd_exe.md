@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Dnscmd.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Dnscmd.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Dnscmd.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dnscmd.exe
-
 A command-line interface for managing DNS servers
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Dnscmd.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ dnscmd.exe dc1.lab.int /config /serverlevelplugindll {PATH_SMB:.dll}
 - Use Case: Remotely inject dll to dns server
 - Privileges: DNS admin
 - Operating System: Windows server
-- ATT&CK: [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
+- ATT&CK: [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
 
 ## Detections
 

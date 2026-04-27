@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/pipe_created/pipe_created_hktl_generic_cred_dump_tools_pipes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/pipe_created/pipe_created_hktl_generic_cred_dump_tools_pipes.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / pipe_created"
@@ -24,19 +24,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Credential Dumping Tools Named Pipe Created
-
 Detects well-known credential dumping tools execution via specific named pipe creation
-
-## Metadata
-
-- Rule ID: 961d0ba2-3eea-4303-a930-2cf78bbfcc5e
-- Status: test
-- Level: critical
-- Author: Teymur Kheirkhabarov, oscd.community
-- Date: 2019-11-01
-- Modified: 2023-08-07
-- Source Path: rules/windows/pipe_created/pipe_created_hktl_generic_cred_dump_tools_pipes.yml
 
 ## Logsource
 
@@ -48,10 +36,10 @@ Detects well-known credential dumping tools execution via specific named pipe cr
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.005]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003005-cached-domain-credentials|T1003.005: Cached Domain Credentials]]
 
 ## Detection
 

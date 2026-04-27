@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_account_discovery.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_account_discovery.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AD Privileged Users or Groups Reconnaissance
-
 Detect priv users or groups recon based on 4661 eventid and known privileged users or groups SIDs
-
-## Metadata
-
-- Rule ID: 35ba1d85-724d-42a3-889f-2e2362bcaf23
-- Status: test
-- Level: high
-- Author: Samir Bousseaden
-- Date: 2019-04-03
-- Modified: 2022-07-13
-- Source Path: rules/windows/builtin/security/win_security_account_discovery.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detect priv users or groups recon based on 4661 eventid and known privileged use
 
 ### Techniques
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 
 ## Detection
 

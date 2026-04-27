@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Diskshadow.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Diskshadow.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Diskshadow.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Diskshadow.exe
-
 Diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS).
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Diskshadow.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ diskshadow.exe /s {PATH:.txt}
 - Use Case: Use diskshadow to exfiltrate data from VSS such as NTDS.dit
 - Privileges: User
 - Operating System: Windows server
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ diskshadow> exec {PATH:.exe}
 - Use Case: Use diskshadow to bypass defensive counter measures
 - Privileges: User
 - Operating System: Windows server
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detections
 

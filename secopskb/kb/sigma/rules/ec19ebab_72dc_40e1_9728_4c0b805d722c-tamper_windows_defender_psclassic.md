@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_classic/posh_pc_tamper_windows_defender_set_mp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_classic/posh_pc_tamper_windows_defender_set_mp.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / ps_classic_provider_start"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Tamper Windows Defender - PSClassic
-
 Attempting to disable scheduled scanning and other parts of Windows Defender ATP or set default actions to allow.
-
-## Metadata
-
-- Rule ID: ec19ebab-72dc-40e1-9728-4c0b805d722c
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-06-07
-- Modified: 2024-01-02
-- Source Path: rules/windows/powershell/powershell_classic/posh_pc_tamper_windows_defender_set_mp.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Attempting to disable scheduled scanning and other parts of Windows Defender ATP
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

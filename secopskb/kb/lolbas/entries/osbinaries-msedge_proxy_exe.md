@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/msedge_proxy.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/msedge_proxy.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "msedge_proxy.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# msedge_proxy.exe
-
 Microsoft Edge Browser
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2023-08-18
-- Author: Mert Daş
-- Source Path: yml/OSBinaries/msedge_proxy.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe {REMOTEURL:.z
 - Use Case: Download file from the internet
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 2. Execute
 
@@ -62,7 +53,7 @@ C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe --disable-gpu
 - Use Case: Executes a process under a trusted Microsoft signed binary
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.015]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218015-electron-applications|T1218.015: Electron Applications]]
 
 ## Detections
 

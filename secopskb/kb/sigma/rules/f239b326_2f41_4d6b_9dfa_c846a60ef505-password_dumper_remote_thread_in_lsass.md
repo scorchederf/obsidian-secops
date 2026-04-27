@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_remote_thread/create_remote_thread_win_susp_password_dumper_lsass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_remote_thread/create_remote_thread_win_susp_password_dumper_lsass.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "stable"
 level: "high"
 logsource: "windows / create_remote_thread"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Password Dumper Remote Thread in LSASS
-
 Detects password dumper activity by monitoring remote thread creation EventID 8 in combination with the lsass.exe process as TargetImage.
 The process in field Process is the malicious program. A single execution can lead to hundreds of events.
-
-## Metadata
-
-- Rule ID: f239b326-2f41-4d6b-9dfa-c846a60ef505
-- Status: stable
-- Level: high
-- Author: Thomas Patzke
-- Date: 2017-02-19
-- Modified: 2021-06-21
-- Source Path: rules/windows/create_remote_thread/create_remote_thread_win_susp_password_dumper_lsass.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ The process in field Process is the malicious program. A single execution can le
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ### Software Tags
 

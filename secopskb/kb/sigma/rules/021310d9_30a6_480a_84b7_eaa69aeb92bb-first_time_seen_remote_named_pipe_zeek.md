@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/zeek/zeek_smb_converted_win_lm_namedpipe.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/zeek/zeek_smb_converted_win_lm_namedpipe.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "zeek / smb_files"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# First Time Seen Remote Named Pipe - Zeek
-
 This detection excludes known namped pipes accessible remotely and notify on newly observed ones, may help to detect lateral movement and remote exec using named pipes
-
-## Metadata
-
-- Rule ID: 021310d9-30a6-480a-84b7-eaa69aeb92bb
-- Status: test
-- Level: high
-- Author: Samir Bousseaden, @neu5ron, Tim Shelton
-- Date: 2020-04-02
-- Modified: 2022-12-27
-- Source Path: rules/network/zeek/zeek_smb_converted_win_lm_namedpipe.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ This detection excludes known namped pipes accessible remotely and notify on new
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
 
 ## Detection
 

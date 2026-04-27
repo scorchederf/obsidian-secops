@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.015"
 attack_technique_name: "Boot or Logon Autostart Execution: Login Items"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.015/T1547.015.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ec5d76ef-82fe-48da-b931-bdb25a62bc65"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Persistence by modifying Windows Terminal profile
-
 Modify Windows Terminal settings.json file to gain persistence. [Twitter Post](https://twitter.com/nas_bench/status/1550836225652686848)
-
-## Metadata
-
-- Atomic GUID: ec5d76ef-82fe-48da-b931-bdb25a62bc65
-- Technique: T1547.015: Boot or Logon Autostart Execution: Login Items
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1547.015/T1547.015.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.015]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547015-login-items|T1547.015: Login Items]]
 
 ## Input Arguments
 

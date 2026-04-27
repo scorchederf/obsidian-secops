@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_system_user_anomaly.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_user_anomaly.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious SYSTEM User Process Creation
-
 Detects a suspicious process creation as SYSTEM user (suspicious program or command line parameter)
-
-## Metadata
-
-- Rule ID: 2617e7ed-adb7-40ba-b0f3-8f9945fe6c09
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), David ANDRE (additional keywords)
-- Date: 2021-12-20
-- Modified: 2025-10-19
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_system_user_anomaly.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects a suspicious process creation as SYSTEM user (suspicious program or comm
 
 ### Techniques
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027]]
+- [[kb/attack/techniques/T1134-access_token_manipulation|T1134: Access Token Manipulation]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027: Obfuscated Files or Information]]
 
 ## Detection
 

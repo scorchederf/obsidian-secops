@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/firewall_as/win_firewall_as_add_rule_susp_folder.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/firewall_as/win_firewall_as_add_rule_susp_folder.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / firewall-as"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New Firewall Rule Added In Windows Firewall Exception List For Potential Suspicious Application
-
 Detects the addition of a new rule to the Windows Firewall exception list for an application located in a potentially suspicious location.
-
-## Metadata
-
-- Rule ID: 9e2575e7-2cb9-4da1-adc8-ed94221dca5e
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2023-02-26
-- Modified: 2024-05-10
-- Source Path: rules/windows/builtin/firewall_as/win_firewall_as_add_rule_susp_folder.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the addition of a new rule to the Windows Firewall exception list for an
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 ## Detection
 

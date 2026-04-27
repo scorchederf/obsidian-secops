@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_cobaltstrike_bloopers_modules.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_cobaltstrike_bloopers_modules.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Operator Bloopers Cobalt Strike Modules
-
 Detects Cobalt Strike module/commands accidentally entered in CMD shell
-
-## Metadata
-
-- Rule ID: 4f154fb6-27d1-4813-a759-78b93e0b9c48
-- Status: test
-- Level: high
-- Author: _pete_0, TheDFIRReport
-- Date: 2022-05-06
-- Modified: 2023-01-30
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_cobaltstrike_bloopers_modules.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects Cobalt Strike module/commands accidentally entered in CMD shell
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1072"
 attack_technique_name: "Software Deployment Tools"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1072/T1072.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "2169e8b0-2ee7-44cb-8a6e-d816a5db7d8a"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Deploy 7-Zip Using Chocolatey
-
 An adversary may use Chocolatey to remotely deploy the 7-Zip file archiver utility.
-
-## Metadata
-
-- Atomic GUID: 2169e8b0-2ee7-44cb-8a6e-d816a5db7d8a
-- Technique: T1072: Software Deployment Tools
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1072/T1072.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1072-software_deployment_tools|T1072]]
+- [[kb/attack/techniques/T1072-software_deployment_tools|T1072: Software Deployment Tools]]
 
 ## Dependencies
 

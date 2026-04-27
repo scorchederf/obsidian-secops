@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_net_ntlm_downgrade.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_net_ntlm_downgrade.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# NetNTLM Downgrade Attack - Registry
-
 Detects NetNTLM downgrade attack
-
-## Metadata
-
-- Rule ID: d67572a0-e2ec-45d6-b8db-c100d14b8ef2
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), wagga, Nasreddine Bencherchali (Splunk STRT)
-- Date: 2018-03-20
-- Modified: 2024-12-03
-- Source Path: rules/windows/registry/registry_event/registry_event_net_ntlm_downgrade.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects NetNTLM downgrade attack
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

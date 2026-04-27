@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_silentprocessexit_lsass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_silentprocessexit_lsass.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "critical"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Credential Dumping Via LSASS SilentProcessExit Technique
-
 Detects changes to the Registry in which a monitor program gets registered to dump the memory of the lsass.exe process
-
-## Metadata
-
-- Rule ID: 55e29995-75e7-451a-bef0-6225e2f13597
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-02-26
-- Modified: 2022-12-19
-- Source Path: rules/windows/registry/registry_event/registry_event_silentprocessexit_lsass.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects changes to the Registry in which a monitor program gets registered to du
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

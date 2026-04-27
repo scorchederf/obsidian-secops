@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1037.004"
 attack_technique_name: "Boot or Logon Initialization Scripts: Rc.common"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1037.004/T1037.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "bash"
 aliases:
   - "c33f3d80-5f04-419b-a13a-854d1cbdbf3a"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# rc.common
-
 Modify rc.common
-
-## Metadata
-
-- Atomic GUID: c33f3d80-5f04-419b-a13a-854d1cbdbf3a
-- Technique: T1037.004: Boot or Logon Initialization Scripts: Rc.common
-- Platforms: linux
-- Executor: bash
-- Elevation Required: True
-- Source Path: atomics/T1037.004/T1037.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.004]]
+- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037004-rc-scripts|T1037.004: RC Scripts]]
 
 ## Executor
 

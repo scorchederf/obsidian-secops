@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_mstsc_rdp_hijack_shadowing.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_mstsc_rdp_hijack_shadowing.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential MSTSC Shadowing Activity
-
 Detects RDP session hijacking by using MSTSC shadowing
-
-## Metadata
-
-- Rule ID: 6ba5a05f-b095-4f0a-8654-b825f4f16334
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2020-01-24
-- Modified: 2023-02-05
-- Source Path: rules/windows/process_creation/proc_creation_win_mstsc_rdp_hijack_shadowing.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects RDP session hijacking by using MSTSC shadowing
 
 ### Techniques
 
-- [[kb/attack/techniques/T1563-remote_service_session_hijacking|T1563.002]]
+- [[kb/attack/techniques/T1563-remote_service_session_hijacking#^t1563002-rdp-hijacking|T1563.002: RDP Hijacking]]
 
 ## Detection
 

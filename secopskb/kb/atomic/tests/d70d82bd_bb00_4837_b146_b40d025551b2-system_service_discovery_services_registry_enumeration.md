@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1007"
 attack_technique_name: "System Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1007/T1007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "d70d82bd-bb00-4837-b146-b40d025551b2"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# System Service Discovery - Services Registry Enumeration
-
 Enumerates Windows services by reading the Services registry key
 (HKLM\SYSTEM\CurrentControlSet\Services) instead of using Service Control
 Manager APIs or CLI tools such as sc.exe or Get-Service.
 
-## Metadata
-
-- Atomic GUID: d70d82bd-bb00-4837-b146-b40d025551b2
-- Technique: T1007: System Service Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1007/T1007.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1007-system_service_discovery|T1007]]
+- [[kb/attack/techniques/T1007-system_service_discovery|T1007: System Service Discovery]]
 
 ## Executor
 

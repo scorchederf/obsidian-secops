@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1046"
 attack_technique_name: "Network Service Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "05df2a79-dba6-4088-a804-9ca0802ca8e4"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Port-Scanning /24 Subnet with PowerShell
-
 Scanning common ports in a /24 subnet. If no IP address for the target subnet is specified the test tries to determine the attacking machine's "primary" IPv4 address first and then scans that address with a /24 netmask.
 The connection attempts to use a timeout parameter in milliseconds to speed up the scan. Please note the atomic might not print any output until the scans are completed.
 
-## Metadata
-
-- Atomic GUID: 05df2a79-dba6-4088-a804-9ca0802ca8e4
-- Technique: T1046: Network Service Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1046/T1046.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1046-network_service_discovery|T1046]]
+- [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]]
 
 ## Input Arguments
 

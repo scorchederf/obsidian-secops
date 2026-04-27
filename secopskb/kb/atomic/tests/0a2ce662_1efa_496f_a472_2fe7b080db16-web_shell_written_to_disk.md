@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1505.003"
 attack_technique_name: "Server Software Component: Web Shell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1505.003/T1505.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "0a2ce662-1efa-496f-a472-2fe7b080db16"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Web Shell Written to Disk
-
 This test simulates an adversary leveraging Web Shells by simulating the file modification to disk.
 Idea from APTSimulator.
 cmd.aspx source - https://github.com/tennc/webshell/blob/master/fuzzdb-webshell/asp/cmd.aspx
 
-## Metadata
-
-- Atomic GUID: 0a2ce662-1efa-496f-a472-2fe7b080db16
-- Technique: T1505.003: Server Software Component: Web Shell
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1505.003/T1505.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Input Arguments
 

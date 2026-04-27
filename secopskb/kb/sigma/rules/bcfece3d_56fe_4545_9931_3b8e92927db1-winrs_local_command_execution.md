@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_winrs_local_command_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_winrs_local_command_execution.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Winrs Local Command Execution
-
 Detects the execution of Winrs.exe where it is used to execute commands locally.
 Commands executed this way are launched under Winrshost.exe and can represent proxy execution used for defense evasion or lateral movement.
-
-## Metadata
-
-- Rule ID: bcfece3d-56fe-4545-9931-3b8e92927db1
-- Status: experimental
-- Level: high
-- Author: Liran Ravich, Nasreddine Bencherchali
-- Date: 2025-10-22
-- Source Path: rules/windows/process_creation/proc_creation_win_winrs_local_command_execution.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ Commands executed this way are launched under Winrshost.exe and can represent pr
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.006]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021006-windows-remote-management|T1021.006: Windows Remote Management]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

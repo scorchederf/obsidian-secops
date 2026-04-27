@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.002"
 attack_technique_name: "Permission Groups Discovery: Domain Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.002/T1069.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "22cf8cb9-adb1-4e8c-80ca-7c723dfc8784"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Active Directory Enumeration with LDIFDE
-
 Output information from Active Directory to a specified file. [Ldifde](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731033(v=ws.11)) is a CLI tool for creating, modifying and deleting directory objects.
 The test is derived from the CISA Report on Voly Typhoon. Reference: https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
 
-## Metadata
-
-- Atomic GUID: 22cf8cb9-adb1-4e8c-80ca-7c723dfc8784
-- Technique: T1069.002: Permission Groups Discovery: Domain Groups
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1069.002/T1069.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 
 ## Input Arguments
 

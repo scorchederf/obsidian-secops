@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1090.001"
 attack_technique_name: "Proxy: Internal Proxy"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1090.001/T1090.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "b8223ea9-4be2-44a6-b50a-9657a3d4e72a"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# portproxy reg key
-
 Adds a registry key to set up a proxy on the endpoint at HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PortProxy\v4tov4
 Upon execution there will be a new proxy entry in netsh
 netsh interface portproxy show all
 
-## Metadata
-
-- Atomic GUID: b8223ea9-4be2-44a6-b50a-9657a3d4e72a
-- Technique: T1090.001: Proxy: Internal Proxy
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1090.001/T1090.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1090-proxy|T1090.001]]
+- [[kb/attack/techniques/T1090-proxy#^t1090001-internal-proxy|T1090.001: Internal Proxy]]
 
 ## Input Arguments
 

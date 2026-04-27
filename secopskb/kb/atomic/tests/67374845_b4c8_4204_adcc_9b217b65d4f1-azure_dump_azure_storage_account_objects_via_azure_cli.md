@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1530"
 attack_technique_name: "Data from Cloud Storage Object"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1530/T1530.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "67374845-b4c8-4204-adcc-9b217b65d4f1"
@@ -20,27 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Dump Azure Storage Account Objects via Azure CLI
-
 This test dumps the content of the storage account objects present in the file defined in file_shares_csv_file_path. Note that this file is created in the atomic test T1619 "Azure - Enumerate Storage Account Objects via Key-based authentication using Azure CLI". When created manually, it must contain the columns "ResourceGroup","StorageAccountName", "FileShareName", "ContainerName", "BlobName".
 
 Requirements:
     - The test is intended to be executed in interactive mode (with -Interactive parameter) in order to complete the az login command when MFA is required.
     - The EntraID user must have the role "Storage Account Contributor", or a role with similar permissions.
 
-## Metadata
-
-- Atomic GUID: 67374845-b4c8-4204-adcc-9b217b65d4f1
-- Technique: T1530: Data from Cloud Storage Object
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1530/T1530.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1530-data_from_cloud_storage|T1530]]
+- [[kb/attack/techniques/T1530-data_from_cloud_storage|T1530: Data from Cloud Storage]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_taskkill_sep.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_taskkill_sep.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Taskkill Symantec Endpoint Protection
-
 Detects one of the possible scenarios for disabling Symantec Endpoint Protection.
 Symantec Endpoint Protection antivirus software services incorrectly implement the protected service mechanism.
 As a result, the NT AUTHORITY/SYSTEM user can execute the taskkill /im command several times ccSvcHst.exe /f, thereby killing the process belonging to the service, and thus shutting down the service.
-
-## Metadata
-
-- Rule ID: 4a6713f6-3331-11ed-a261-0242ac120002
-- Status: test
-- Level: high
-- Author: Ilya Krestinichev, Florian Roth (Nextron Systems)
-- Date: 2022-09-13
-- Source Path: rules/windows/process_creation/proc_creation_win_taskkill_sep.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ As a result, the NT AUTHORITY/SYSTEM user can execute the taskkill /im command s
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

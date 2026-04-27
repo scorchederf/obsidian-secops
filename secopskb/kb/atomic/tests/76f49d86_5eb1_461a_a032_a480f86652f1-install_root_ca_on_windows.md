@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.004"
 attack_technique_name: "Subvert Trust Controls: Install Root Certificate"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.004/T1553.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "76f49d86-5eb1-461a-a032-a480f86652f1"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Install root CA on Windows
-
 Creates a root CA with Powershell
-
-## Metadata
-
-- Atomic GUID: 76f49d86-5eb1-461a-a032-a480f86652f1
-- Technique: T1553.004: Subvert Trust Controls: Install Root Certificate
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1553.004/T1553.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.004]]
+- [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
 
 ## Input Arguments
 

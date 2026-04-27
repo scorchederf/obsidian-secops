@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_import_cert_susp_locations.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_import_cert_susp_locations.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Root Certificate Installed From Susp Locations
-
 Adversaries may install a root certificate on a compromised system to avoid warnings when connecting to adversary controlled web servers.
-
-## Metadata
-
-- Rule ID: 5f6a601c-2ecb-498b-9c33-660362323afa
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-09-09
-- Modified: 2023-01-16
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_import_cert_susp_locations.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Adversaries may install a root certificate on a compromised system to avoid warn
 
 ### Techniques
 
-- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.004]]
+- [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553004-install-root-certificate|T1553.004: Install Root Certificate]]
 
 ## Detection
 

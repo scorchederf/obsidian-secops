@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC via CMSTP
-
 Detect commandline usage of Microsoft Connection Manager Profile Installer (cmstp.exe) to install specially formatted local .INF files
-
-## Metadata
-
-- Rule ID: e66779cc-383e-4224-a3a4-267eeb585c40
-- Status: test
-- Level: high
-- Author: E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.community
-- Date: 2019-10-24
-- Modified: 2022-08-30
-- Source Path: rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detect commandline usage of Microsoft Connection Manager Profile Installer (cmst
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 ## Detection
 

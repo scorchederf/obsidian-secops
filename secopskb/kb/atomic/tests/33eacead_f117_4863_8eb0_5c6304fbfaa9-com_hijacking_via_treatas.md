@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.015"
 attack_technique_name: "Event Triggered Execution: Component Object Model Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.015/T1546.015.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "33eacead-f117-4863-8eb0-5c6304fbfaa9"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# COM hijacking via TreatAs
-
 This test first create a custom CLSID class pointing to the Windows Script Component runtime DLL. This DLL looks for the ScriptletURL key to get the location of the script to execute.
 Then, it hijacks the CLSID for the Work Folders Logon Synchronization to establish persistence on user logon by creating the 'TreatAs' with the malicious CLSID as default value. The
 test is validated by running 'rundll32.exe -sta "AtomicTest"' to avoid logging out.
@@ -32,17 +30,9 @@ https://youtu.be/3gz1QmiMhss?t=1251
 
 https://github.com/enigma0x3/windows-operating-system-archaeology
 
-## Metadata
-
-- Atomic GUID: 33eacead-f117-4863-8eb0-5c6304fbfaa9
-- Technique: T1546.015: Event Triggered Execution: Component Object Model Hijacking
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1546.015/T1546.015.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 ## Executor
 

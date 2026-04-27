@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1548.001"
 attack_technique_name: "Abuse Elevation Control Mechanism: Setuid and Setgid"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1548.001/T1548.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "dd580455-d84b-481b-b8b0-ac96f3b1dc4c"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Make and modify binary from C source (freebsd)
-
 Make, change owner, and change file attributes on a C source code file
-
-## Metadata
-
-- Atomic GUID: dd580455-d84b-481b-b8b0-ac96f3b1dc4c
-- Technique: T1548.001: Abuse Elevation Control Mechanism: Setuid and Setgid
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1548.001/T1548.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.001]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548001-setuid-and-setgid|T1548.001: Setuid and Setgid]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/webserver_generic/web_sql_injection_in_access_logs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/webserver_generic/web_sql_injection_in_access_logs.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "webserver"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# SQL Injection Strings In URI
-
 Detects potential SQL injection attempts via GET requests in access logs.
-
-## Metadata
-
-- Rule ID: 5513deaf-f49a-46c2-a6c8-3f111b5cb453
-- Status: test
-- Level: high
-- Author: Saw Win Naung, Nasreddine Bencherchali (Nextron Systems), Thurein Oo (Yoma Bank)
-- Date: 2020-02-22
-- Modified: 2023-09-04
-- Source Path: rules/web/webserver_generic/web_sql_injection_in_access_logs.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects potential SQL injection attempts via GET requests in access logs.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
 
 ## Detection
 

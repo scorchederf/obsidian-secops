@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_msdt_susp_directories.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_msdt_susp_directories.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# File Creation In Suspicious Directory By Msdt.EXE
-
 Detects msdt.exe creating files in suspicious directories which could be a sign of exploitation of either Follina or Dogwalk vulnerabilities
-
-## Metadata
-
-- Rule ID: 318557a5-150c-4c8d-b70e-a9910e199857
-- Status: test
-- Level: high
-- Author: Vadim Varganov, Florian Roth (Nextron Systems)
-- Date: 2022-08-24
-- Modified: 2023-02-23
-- Source Path: rules/windows/file/file_event/file_event_win_msdt_susp_directories.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects msdt.exe creating files in suspicious directories which could be a sign 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

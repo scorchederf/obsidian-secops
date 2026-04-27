@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-01-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-01-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-01-002"
   - "Autorun Differences"
@@ -42,48 +42,34 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-01-002: Autorun Differences
-
-## Metadata
-
-- CAR ID: CAR-2013-01-002
-- Submission Date: 2013/01/25
-- Information Domain: Analytic, Host
-- Analytic Type: Situational Awareness, TTP
-- Platforms: Windows
-- Data Subtypes: Registry
-- Contributors: MITRE
-
-## Description
-
 The Sysinternals tool [Autoruns](../sensors/autoruns) checks the registry and file system for known identify persistence mechanisms. It will output any tools identified, including built-in or added-on Microsoft functionality and third party software. Many of these locations are known by adversaries and used to obtain [Persistence](https://attack.mitre.org/tactics/TA0003). Running Autoruns periodically in an environment makes it possible to collect and monitor its output for differences, which may include the removal or addition of persistent tools. Depending on the persistence mechanism and location, legitimate software may be more likely to make changes than an adversary tool. Thus, this analytic may result in significant noise in a highly dynamic environment. While Autoruns is a convenient method to scan for programs using persistence mechanisms its scanning nature does not conform well to streaming based analytics. This analytic could be replaced with one that draws from sensors that collect registry and file information if streaming analytics are desired.
 
 Utilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). Primarily not a detection analytic by itself but through analysis of results by an analyst can be used for such. Building another analytic on top of this one identifying unusual entries would likely be a beneficial alternative.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543.003]]
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.010]]
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.004]]
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574]] (coverage: Moderate; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.007]]
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.008]]
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.009]]
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.010]]
-  - [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]] (coverage: Moderate; tactics: TA0004, TA0003)
-  - [[kb/attack/techniques/T1546-event_triggered_execution|T1546.001]]
-  - [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
-  - [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
-  - [[kb/attack/techniques/T1546-event_triggered_execution|T1546.010]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Moderate; tactics: TA0003, TA0002)
-- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.001]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1543-create_or_modify_system_process#^t1543003-windows-service|T1543.003: Windows Service]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547010-port-monitors|T1547.010: Port Monitors]]
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547004-winlogon-helper-dll|T1547.004: Winlogon Helper DLL]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574: Hijack Execution Flow]] (coverage: Moderate; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574007-path-interception-by-path-environment-variable|T1574.007: Path Interception by PATH Environment Variable]]
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574008-path-interception-by-search-order-hijacking|T1574.008: Path Interception by Search Order Hijacking]]
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574009-path-interception-by-unquoted-path|T1574.009: Path Interception by Unquoted Path]]
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574010-services-file-permissions-weakness|T1574.010: Services File Permissions Weakness]]
+  - [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]] (coverage: Moderate; tactics: TA0004, TA0003)
+  - [[kb/attack/techniques/T1546-event_triggered_execution#^t1546001-change-default-file-association|T1546.001: Change Default File Association]]
+  - [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
+  - [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
+  - [[kb/attack/techniques/T1546-event_triggered_execution#^t1546010-appinit-dlls|T1546.010: AppInit DLLs]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Moderate; tactics: TA0003, TA0002)
+- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037001-logon-script-(windows)|T1037.001: Logon Script (Windows)]]
 
 ## D3FEND Mappings
 

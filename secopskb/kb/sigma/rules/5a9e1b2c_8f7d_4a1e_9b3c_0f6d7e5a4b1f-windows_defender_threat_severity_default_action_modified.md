@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_defender_threat_action_modified.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_defender_threat_action_modified.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "experimental"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,20 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Defender Threat Severity Default Action Modified
-
 Detects modifications or creations of Windows Defender's default threat action settings based on severity to 'allow' or take 'no action'.
 This is a highly suspicious configuration change that effectively disables Defender's ability to automatically mitigate threats of a certain severity level,
 allowing malicious software to run unimpeded. An attacker might use this technique to bypass defenses before executing payloads.
-
-## Metadata
-
-- Rule ID: 5a9e1b2c-8f7d-4a1e-9b3c-0f6d7e5a4b1f
-- Status: experimental
-- Level: high
-- Author: Matt Anderson (Huntress)
-- Date: 2025-07-11
-- Source Path: rules/windows/registry/registry_event/registry_event_defender_threat_action_modified.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ allowing malicious software to run unimpeded. An attacker might use this techniq
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

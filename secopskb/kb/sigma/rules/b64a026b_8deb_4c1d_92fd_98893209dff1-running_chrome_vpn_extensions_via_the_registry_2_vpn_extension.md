@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_chrome_extension.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_chrome_extension.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Running Chrome VPN Extensions via the Registry 2 VPN Extension
-
 Running Chrome VPN Extensions via the Registry install 2 vpn extension
-
-## Metadata
-
-- Rule ID: b64a026b-8deb-4c1d-92fd-98893209dff1
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-12-28
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_chrome_extension.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Running Chrome VPN Extensions via the Registry install 2 vpn extension
 
 ### Techniques
 
-- [[kb/attack/techniques/T1133-external_remote_services|T1133]]
+- [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
 
 ## Detection
 

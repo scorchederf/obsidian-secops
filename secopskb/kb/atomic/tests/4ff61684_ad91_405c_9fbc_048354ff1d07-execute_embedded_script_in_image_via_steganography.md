@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1001.002"
 attack_technique_name: "Data Obfuscation via Steganography"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1001.002/T1001.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "sh"
 aliases:
   - "4ff61684-ad91-405c-9fbc-048354ff1d07"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Execute Embedded Script in Image via Steganography
-
 This atomic test demonstrates the execution of an embedded script in an image file using steganography techniques. The script is first encoded in base64 and then embedded within the pixels of the image. The modified image is created, and the script is extracted and executed on the target system.
-
-## Metadata
-
-- Atomic GUID: 4ff61684-ad91-405c-9fbc-048354ff1d07
-- Technique: T1001.002: Data Obfuscation via Steganography
-- Platforms: linux
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1001.002/T1001.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1001-data_obfuscation|T1001.002]]
+- [[kb/attack/techniques/T1001-data_obfuscation#^t1001002-steganography|T1001.002: Steganography]]
 
 ## Input Arguments
 

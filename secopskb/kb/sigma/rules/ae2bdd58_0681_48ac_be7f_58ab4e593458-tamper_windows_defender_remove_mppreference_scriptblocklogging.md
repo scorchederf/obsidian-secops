@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_tamper_windows_defender_rem_mp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_tamper_windows_defender_rem_mp.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Tamper Windows Defender Remove-MpPreference - ScriptBlockLogging
-
 Detects attempts to remove Windows Defender configuration using the 'MpPreference' cmdlet
-
-## Metadata
-
-- Rule ID: ae2bdd58-0681-48ac-be7f-58ab4e593458
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-05
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_tamper_windows_defender_rem_mp.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Detects attempts to remove Windows Defender configuration using the 'MpPreferenc
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

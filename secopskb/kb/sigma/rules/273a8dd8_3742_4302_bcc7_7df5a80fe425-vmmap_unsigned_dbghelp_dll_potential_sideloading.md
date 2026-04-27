@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_vmmap_dbghelp_unsigned.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_vmmap_dbghelp_unsigned.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# VMMap Unsigned Dbghelp.DLL Potential Sideloading
-
 Detects potential DLL sideloading of an unsigned dbghelp.dll by the Sysinternals VMMap.
-
-## Metadata
-
-- Rule ID: 273a8dd8-3742-4302-bcc7-7df5a80fe425
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-07-28
-- Modified: 2023-09-05
-- Source Path: rules/windows/image_load/image_load_side_load_vmmap_dbghelp_unsigned.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potential DLL sideloading of an unsigned dbghelp.dll by the Sysinternals
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

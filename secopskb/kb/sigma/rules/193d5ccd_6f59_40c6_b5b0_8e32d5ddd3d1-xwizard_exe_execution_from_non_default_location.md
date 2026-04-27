@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_xwizard_execution_non_default_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_xwizard_execution_non_default_location.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Xwizard.EXE Execution From Non-Default Location
-
 Detects the execution of Xwizard tool from a non-default directory.
 When executed from a non-default directory, this utility can be abused in order to side load a custom version of "xwizards.dll".
-
-## Metadata
-
-- Rule ID: 193d5ccd-6f59-40c6-b5b0-8e32d5ddd3d1
-- Status: test
-- Level: high
-- Author: Christian Burkard (Nextron Systems)
-- Date: 2021-09-20
-- Modified: 2024-08-15
-- Source Path: rules/windows/process_creation/proc_creation_win_xwizard_execution_non_default_location.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ When executed from a non-default directory, this utility can be abused in order 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

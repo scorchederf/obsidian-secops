@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1553.005"
 attack_technique_name: "Subvert Trust Controls: Mark-of-the-Web Bypass"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1553.005/T1553.005.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "42f22b00-0242-4afc-a61b-0da05041f9cc"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Mount an ISO image and run executable from the ISO
-
 Mounts an ISO image downloaded from internet to evade Mark-of-the-Web and run hello.exe executable from the ISO. 
 Upon successful execution, powershell will download the .iso from the Atomic Red Team repo, mount the image, and run the executable from the ISO image that will open command prompt echoing "Hello, World!". 
 ISO provided by:https://twitter.com/mattifestation/status/1398323532988399620 Reference:https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based-attack-from-nobelium/,
 
-## Metadata
-
-- Atomic GUID: 42f22b00-0242-4afc-a61b-0da05041f9cc
-- Technique: T1553.005: Subvert Trust Controls: Mark-of-the-Web Bypass
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1553.005/T1553.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1553-subvert_trust_controls|T1553.005]]
+- [[kb/attack/techniques/T1553-subvert_trust_controls#^t1553005-mark-of-the-web-bypass|T1553.005: Mark-of-the-Web Bypass]]
 
 ## Input Arguments
 

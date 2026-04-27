@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Verclsid.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Verclsid.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Verclsid.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Verclsid.exe
-
 Used to verify a COM object before it is instantiated by Windows Explorer
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-12-04
-- Author: @bohops
-- Source Path: yml/OSBinaries/Verclsid.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ verclsid.exe /S /C {CLSID}
 - Use Case: Run a COM object created in registry to evade defensive counter measures
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.012]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218012-verclsid|T1218.012: Verclsid]]
 
 ## Detections
 

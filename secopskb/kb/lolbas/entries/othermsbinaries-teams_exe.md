@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Teams.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Teams.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Teams.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Teams.exe
-
 Electron runtime binary which runs the Teams application
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2022-01-17
-- Author: Andrew Kisliakov
-- Source Path: yml/OtherMSBinaries/Teams.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ teams.exe
 - Use Case: Execute JavaScript code
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.015]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218015-electron-applications|T1218.015: Electron Applications]]
 
 ### 2. Execute
 
@@ -60,7 +51,7 @@ teams.exe
 - Use Case: Execute JavaScript code
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.015]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218015-electron-applications|T1218.015: Electron Applications]]
 
 ### 3. Execute
 
@@ -73,7 +64,7 @@ teams.exe --disable-gpu-sandbox --gpu-launcher="{CMD} &&"
 - Use Case: Executes a process under a trusted Microsoft signed binary
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.015]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218015-electron-applications|T1218.015: Electron Applications]]
 
 ## Detections
 

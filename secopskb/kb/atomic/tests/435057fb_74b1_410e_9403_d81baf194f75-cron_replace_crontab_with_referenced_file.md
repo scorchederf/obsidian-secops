@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.003"
 attack_technique_name: "Scheduled Task/Job: Cron"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.003/T1053.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "435057fb-74b1-410e-9403-d81baf194f75"
@@ -21,21 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cron - Replace crontab with referenced file
-
 This test replaces the current user's crontab file with the contents of the referenced file. This technique was used by numerous IoT automated exploitation attacks.
-
-## Metadata
-
-- Atomic GUID: 435057fb-74b1-410e-9403-d81baf194f75
-- Technique: T1053.003: Scheduled Task/Job: Cron
-- Platforms: linux, macos
-- Executor: sh
-- Source Path: atomics/T1053.003/T1053.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.003]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053003-cron|T1053.003: Cron]]
 
 ## Input Arguments
 

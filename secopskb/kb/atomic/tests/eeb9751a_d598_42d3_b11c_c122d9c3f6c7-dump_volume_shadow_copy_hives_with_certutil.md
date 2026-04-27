@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.002"
 attack_technique_name: "OS Credential Dumping: Security Account Manager"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.002/T1003.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "eeb9751a-d598-42d3-b11c-c122d9c3f6c7"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# dump volume shadow copy hives with certutil
-
 Dump hives from volume shadow copies with the certutil utility, exploiting a vulnerability known as "HiveNightmare" or "SeriousSAM".
 This can be done with a non-admin user account. [CVE-2021-36934](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36934)
 
-## Metadata
-
-- Atomic GUID: eeb9751a-d598-42d3-b11c-c122d9c3f6c7
-- Technique: T1003.002: OS Credential Dumping: Security Account Manager
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Source Path: atomics/T1003.002/T1003.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
 
 ## Input Arguments
 

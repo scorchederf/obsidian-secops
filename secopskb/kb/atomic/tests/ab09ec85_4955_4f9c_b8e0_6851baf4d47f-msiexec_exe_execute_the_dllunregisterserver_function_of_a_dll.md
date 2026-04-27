@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.007"
 attack_technique_name: "Signed Binary Proxy Execution: Msiexec"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.007/T1218.007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "ab09ec85-4955-4f9c-b8e0-6851baf4d47f"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Msiexec.exe - Execute the DllUnregisterServer function of a DLL
-
 Loads a DLL into msiexec.exe and calls its DllUnregisterServer function. Note: the DLL included in the "bin" folder is only built for 64-bit, so this won't work on a 32-bit OS.
-
-## Metadata
-
-- Atomic GUID: ab09ec85-4955-4f9c-b8e0-6851baf4d47f
-- Technique: T1218.007: Signed Binary Proxy Execution: Msiexec
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1218.007/T1218.007.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.007]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218007-msiexec|T1218.007: Msiexec]]
 
 ## Input Arguments
 

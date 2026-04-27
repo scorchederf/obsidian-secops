@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_alert_ad_user_backdoors.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_alert_ad_user_backdoors.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Active Directory User Backdoors
-
 Detects scenarios where one can control another users or computers account without having to use their credentials.
-
-## Metadata
-
-- Rule ID: 300bac00-e041-4ee2-9c36-e262656a6ecc
-- Status: test
-- Level: high
-- Author: @neu5ron
-- Date: 2017-04-13
-- Modified: 2024-02-26
-- Source Path: rules/windows/builtin/security/win_security_alert_ad_user_backdoors.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects scenarios where one can control another users or computers account witho
 
 ### Techniques
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

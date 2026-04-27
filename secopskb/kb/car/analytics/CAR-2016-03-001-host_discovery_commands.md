@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2016-03-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2016-03-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2016-03-001"
   - "Host Discovery Commands"
@@ -38,20 +38,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2016-03-001: Host Discovery Commands
-
-## Metadata
-
-- CAR ID: CAR-2016-03-001
-- Submission Date: 2016/03/24
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 When entering on a host for the first time, an adversary may try to [discover](https://attack.mitre.org/tactics/TA0007) information about the host. There are several built-in Windows commands that can be used to learn about the software configurations, active users, administrators, and networking configuration. These commands should be monitored to identify when an adversary is learning information about the system and environment. The information returned may impact choices an adversary can make when [establishing persistence](https://attack.mitre.org/tactics/TA0003), [escalating privileges](https://attack.mitre.org/tactics/TA0004), or [moving laterally](https://attack.mitre.org/tactics/TA0008).
 
 Because these commands are built in, they may be run frequently by power users or even by normal users. Thus, an analytic looking at this information should have well-defined white- or blacklists, and should consider looking at an anomaly detection approach, so that this information can be learned dynamically.
@@ -73,17 +59,17 @@ Within the built-in Windows Commands:
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087]] (coverage: Moderate; tactics: TA0007)
-  - [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
-  - [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069]] (coverage: Moderate; tactics: TA0007)
-  - [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
-  - [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
-- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016]] (coverage: Moderate; tactics: TA0007)
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]] (coverage: Moderate; tactics: TA0007)
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]] (coverage: Moderate; tactics: TA0007)
-- [[kb/attack/techniques/T1057-process_discovery|T1057]] (coverage: Moderate; tactics: TA0007)
-- [[kb/attack/techniques/T1007-system_service_discovery|T1007]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]] (coverage: Moderate; tactics: TA0007)
+  - [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
+  - [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069: Permission Groups Discovery]] (coverage: Moderate; tactics: TA0007)
+  - [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
+  - [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1057-process_discovery|T1057: Process Discovery]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1007-system_service_discovery|T1007: System Service Discovery]] (coverage: Moderate; tactics: TA0007)
 
 ## Implementations
 

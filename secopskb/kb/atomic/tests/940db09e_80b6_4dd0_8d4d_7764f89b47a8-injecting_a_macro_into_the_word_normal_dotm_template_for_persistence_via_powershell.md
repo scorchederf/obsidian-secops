@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1137.001"
 attack_technique_name: "Office Application Startup: Office Template Macros."
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1137.001/T1137.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "940db09e-80b6-4dd0-8d4d-7764f89b47a8"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Injecting a Macro into the Word Normal.dotm Template for Persistence via PowerShell
-
 Injects a Macro in the Word default template "Normal.dotm" and makes it execute each time that Word is opened. In this test, the Macro creates a sheduled task to open Calc.exe every evening.
-
-## Metadata
-
-- Atomic GUID: 940db09e-80b6-4dd0-8d4d-7764f89b47a8
-- Technique: T1137.001: Office Application Startup: Office Template Macros.
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1137.001/T1137.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1137-office_application_startup|T1137.001]]
+- [[kb/attack/techniques/T1137-office_application_startup#^t1137001-office-template-macros|T1137.001: Office Template Macros]]
 
 ## Dependencies
 

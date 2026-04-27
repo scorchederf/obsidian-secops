@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.002"
 attack_technique_name: "Brute Force: Password Cracking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.002/T1110.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "6d27df5d-69d4-4c91-bc33-5983ffe91692"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Password Cracking with Hashcat
-
 Execute Hashcat.exe with provided SAM file from registry of Windows and Password list to crack against
-
-## Metadata
-
-- Atomic GUID: 6d27df5d-69d4-4c91-bc33-5983ffe91692
-- Technique: T1110.002: Brute Force: Password Cracking
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1110.002/T1110.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1110-brute_force|T1110.002]]
+- [[kb/attack/techniques/T1110-brute_force#^t1110002-password-cracking|T1110.002: Password Cracking]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wuauclt_dll_loading.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wuauclt_dll_loading.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Proxy Execution Via Wuauclt.EXE
-
 Detects the use of the Windows Update Client binary (wuauclt.exe) for proxy execution.
-
-## Metadata
-
-- Rule ID: af77cf95-c469-471c-b6a0-946c685c4798
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), Florian Roth (Nextron Systems), Sreeman, FPT.EagleEye Team
-- Date: 2020-10-12
-- Modified: 2023-11-11
-- Source Path: rules/windows/process_creation/proc_creation_win_wuauclt_dll_loading.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of the Windows Update Client binary (wuauclt.exe) for proxy exec
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

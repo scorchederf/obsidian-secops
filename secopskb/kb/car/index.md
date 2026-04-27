@@ -2,7 +2,16 @@
 
 # CAR
 
-MITRE Cyber Analytics Repository analytics generated from the upstream CAR YAML source.
+<!-- generated-source-description-start -->
+MITRE Cyber Analytics Repository is a library of analytics that describe how to detect adversary behavior using data models, logic, and implementations. This vault imports CAR analytics from the upstream YAML source and maps them to ATT&CK techniques where CAR provides coverage metadata.
+
+Use CAR pages as analytic design references, then pivot from ATT&CK technique pages into related Sigma rules, Atomic Red Team tests, LOLBAS entries, and other validation or detection content.
+
+## Upstream
+
+- [MITRE CAR](https://car.mitre.org/)
+- [CAR repository](https://github.com/mitre-attack/car)
+<!-- generated-source-description-end -->
 
 ## Areas
 

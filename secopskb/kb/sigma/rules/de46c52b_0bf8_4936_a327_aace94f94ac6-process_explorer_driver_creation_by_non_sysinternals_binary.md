@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_sysinternals_procexp_driver_susp_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_sysinternals_procexp_driver_susp_creation.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Process Explorer Driver Creation By Non-Sysinternals Binary
-
 Detects creation of the Process Explorer drivers by processes other than Process Explorer (procexp) itself.
 Hack tools or malware may use the Process Explorer driver to elevate privileges, drops it to disk for a few moments, runs a service using that driver and removes it afterwards.
-
-## Metadata
-
-- Rule ID: de46c52b-0bf8-4936-a327-aace94f94ac6
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2023-05-05
-- Source Path: rules/windows/file/file_event/file_event_win_sysinternals_procexp_driver_susp_creation.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Hack tools or malware may use the Process Explorer driver to elevate privileges,
 
 ### Techniques
 
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_delete/file_delete_win_delete_exchange_powershell_logs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_delete/file_delete_win_delete_exchange_powershell_logs.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / file_delete"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exchange PowerShell Cmdlet History Deleted
-
 Detects the deletion of the Exchange PowerShell cmdlet History logs which may indicate an attempt to destroy forensic evidence
-
-## Metadata
-
-- Rule ID: a55349d8-9588-4c5a-8e3b-1925fe2a4ffe
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-10-26
-- Modified: 2022-12-30
-- Source Path: rules/windows/file/file_delete/file_delete_win_delete_exchange_powershell_logs.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the deletion of the Exchange PowerShell cmdlet History logs which may in
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070]]
+- [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]]
 
 ## Detection
 

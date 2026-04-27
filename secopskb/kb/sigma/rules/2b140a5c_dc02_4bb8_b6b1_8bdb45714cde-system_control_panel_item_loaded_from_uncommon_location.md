@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_cpl_from_non_system_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_cpl_from_non_system_location.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# System Control Panel Item Loaded From Uncommon Location
-
 Detects image load events of system control panel items (.cpl) from uncommon or non-system locations that may indicate DLL sideloading or other abuse techniques.
-
-## Metadata
-
-- Rule ID: 2b140a5c-dc02-4bb8-b6b1-8bdb45714cde
-- Status: test
-- Level: high
-- Author: Anish Bogati
-- Date: 2024-01-09
-- Modified: 2026-02-17
-- Source Path: rules/windows/image_load/image_load_side_load_cpl_from_non_system_location.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects image load events of system control panel items (.cpl) from uncommon or 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

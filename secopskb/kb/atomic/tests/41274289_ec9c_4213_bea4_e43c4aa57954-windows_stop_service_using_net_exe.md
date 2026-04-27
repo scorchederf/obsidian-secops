@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1489"
 attack_technique_name: "Service Stop"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1489/T1489.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "41274289-ec9c-4213-bea4-e43c4aa57954"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows - Stop service using net.exe
-
 Stops a specified service using the net.exe command. Upon execution, if the service was running "The Print Spooler service was stopped successfully."
 will be displayed. If the service was not running, "The Print Spooler service is not started." will be displayed and it can be
 started by running the cleanup command.
 
-## Metadata
-
-- Atomic GUID: 41274289-ec9c-4213-bea4-e43c4aa57954
-- Technique: T1489: Service Stop
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1489/T1489.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1489-service_stop|T1489]]
+- [[kb/attack/techniques/T1489-service_stop|T1489: Service Stop]]
 
 ## Input Arguments
 

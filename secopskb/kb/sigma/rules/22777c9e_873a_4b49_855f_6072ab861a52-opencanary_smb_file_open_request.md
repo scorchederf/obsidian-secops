@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_smb_file_open.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_smb_file_open.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - SMB File Open Request
-
 Detects instances where an SMB service on an OpenCanary node has had a file open request.
-
-## Metadata
-
-- Rule ID: 22777c9e-873a-4b49-855f-6072ab861a52
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_smb_file_open.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects instances where an SMB service on an OpenCanary node has had a file open
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021]]
-- [[kb/attack/techniques/T1005-data_from_local_system|T1005]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]]
+- [[kb/attack/techniques/T1005-data_from_local_system|T1005: Data from Local System]]
 
 ## Detection
 

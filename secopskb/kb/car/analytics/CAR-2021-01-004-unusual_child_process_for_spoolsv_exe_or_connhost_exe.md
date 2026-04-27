@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-01-004/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-01-004.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-01-004"
   - "Unusual Child Process for Spoolsv.Exe or Connhost.Exe"
@@ -23,25 +23,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-01-004: Unusual Child Process for Spoolsv.Exe or Connhost.Exe
-
-## Metadata
-
-- CAR ID: CAR-2021-01-004
-- Submission Date: 2020/12/03
-- Information Domain: Host
-- Analytic Type: Anomaly
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Cyware Labs
-
-## Description
-
 After gaining initial access to a system, threat actors attempt to escalate privileges as they may be operating within a lower privileged process which does not allow them to access protected information or carry out tasks which require higher permissions. A common way of escalating privileges in a system is by externally invoking and exploiting spoolsv or connhost executables, both of which are legitimate Windows applications. This query searches for an invocation of either of these executables by a user, thus alerting us of any potentially malicious activity.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]] (coverage: Low; tactics: TA0004)
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]] (coverage: Low; tactics: TA0004)
 
 ## Implementations
 

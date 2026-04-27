@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1105"
 attack_technique_name: "Ingress Tool Transfer"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "3dd6a6cf-9c78-462c-bd75-e9b54fc8925b"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Download a file with OneDrive Standalone Updater
-
 Uses OneDrive Standalone Updater to download a file from a specified URL by setting up the required registry keys.
 This technique can be used to download files without executing anomalous executables.
 Reference: https://lolbas-project.github.io/lolbas/Binaries/OneDriveStandaloneUpdater/
 
-## Metadata
-
-- Atomic GUID: 3dd6a6cf-9c78-462c-bd75-e9b54fc8925b
-- Technique: T1105: Ingress Tool Transfer
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1105/T1105.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Input Arguments
 

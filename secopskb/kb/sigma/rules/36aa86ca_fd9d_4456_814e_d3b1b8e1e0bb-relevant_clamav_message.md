@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/clamav/lnx_clamav_relevant_message.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/clamav/lnx_clamav_relevant_message.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "stable"
 level: "high"
 logsource: "linux / clamav"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Relevant ClamAV Message
-
 Detects relevant ClamAV messages
-
-## Metadata
-
-- Rule ID: 36aa86ca-fd9d-4456-814e-d3b1b8e1e0bb
-- Status: stable
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2017-03-01
-- Source Path: rules/linux/builtin/clamav/lnx_clamav_relevant_message.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects relevant ClamAV messages
 
 ### Techniques
 
-- [[kb/attack/techniques/T1588-obtain_capabilities|T1588.001]]
+- [[kb/attack/techniques/T1588-obtain_capabilities#^t1588001-malware|T1588.001: Malware]]
 
 ## Detection
 

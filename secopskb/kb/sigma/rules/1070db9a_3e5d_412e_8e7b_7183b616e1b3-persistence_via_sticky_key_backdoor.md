@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_cmd_sticky_keys_replace.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_cmd_sticky_keys_replace.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Persistence Via Sticky Key Backdoor
-
 By replacing the sticky keys executable with the local admins CMD executable, an attacker is able to access a privileged windows console session without authenticating to the system.
 When the sticky keys are "activated" the privilleged shell is launched.
-
-## Metadata
-
-- Rule ID: 1070db9a-3e5d-412e-8e7b-7183b616e1b3
-- Status: test
-- Level: critical
-- Author: Sreeman
-- Date: 2020-02-18
-- Modified: 2023-03-07
-- Source Path: rules/windows/process_creation/proc_creation_win_cmd_sticky_keys_replace.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ When the sticky keys are "activated" the privilleged shell is launched.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 ## Detection
 

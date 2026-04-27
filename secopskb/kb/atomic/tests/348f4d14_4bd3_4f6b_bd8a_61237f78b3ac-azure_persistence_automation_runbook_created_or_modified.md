@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1078.004"
 attack_technique_name: "Valid Accounts: Cloud Accounts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.004/T1078.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "348f4d14-4bd3-4f6b-bd8a-61237f78b3ac"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure Persistence Automation Runbook Created or Modified
-
 Identifies when an Azure Automation runbook is created or modified. An adversary may create or modify an Azure
 Automation runbook to execute malicious code and maintain persistence in their target's environment.
 
-## Metadata
-
-- Atomic GUID: 348f4d14-4bd3-4f6b-bd8a-61237f78b3ac
-- Technique: T1078.004: Valid Accounts: Cloud Accounts
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1078.004/T1078.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Input Arguments
 

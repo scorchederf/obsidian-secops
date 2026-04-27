@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_odbcconf_response_file_susp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_odbcconf_response_file_susp.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Response File Execution Via Odbcconf.EXE
-
 Detects execution of "odbcconf" with the "-f" flag in order to load a response file with a non-".rsp" extension.
-
-## Metadata
-
-- Rule ID: 2d32dd6f-3196-4093-b9eb-1ad8ab088ca5
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-22
-- Modified: 2024-03-13
-- Source Path: rules/windows/process_creation/proc_creation_win_odbcconf_response_file_susp.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects execution of "odbcconf" with the "-f" flag in order to load a response f
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.008]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218008-odbcconf|T1218.008: Odbcconf]]
 
 ## Detection
 

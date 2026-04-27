@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.004"
 attack_technique_name: "Hide Artifacts: NTFS File Attributes"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.004/T1564.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "0045ea16-ed3c-4d4c-a9ee-15e44d1560d1"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create ADS PowerShell
-
 Create an Alternate Data Stream with PowerShell. Write access is required. To verify execution, run the command "ls -Recurse | %{ gi $_.Fullname -stream *} | where stream -ne ':$Data' | Select-Object pschildname"
 in the %temp% directory to view all files with hidden data streams. To view the data in the alternate data stream, run "notepad.exe T1564.004_has_ads_powershell.txt:adstest.txt" in the %temp% folder.
 
-## Metadata
-
-- Atomic GUID: 0045ea16-ed3c-4d4c-a9ee-15e44d1560d1
-- Technique: T1564.004: Hide Artifacts: NTFS File Attributes
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1564.004/T1564.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_at_interactive_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_at_interactive_execution.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Interactive AT Job
-
 Detects an interactive AT job, which may be used as a form of privilege escalation.
-
-## Metadata
-
-- Rule ID: 60fc936d-2eb0-4543-8a13-911c750a1dfc
-- Status: test
-- Level: high
-- Author: E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.community
-- Date: 2019-10-24
-- Modified: 2021-11-27
-- Source Path: rules/windows/process_creation/proc_creation_win_at_interactive_execution.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects an interactive AT job, which may be used as a form of privilege escalati
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wget_download_susp_file_sharing_domains.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wget_download_susp_file_sharing_domains.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious File Download From File Sharing Domain Via Wget.EXE
-
 Detects potentially suspicious file downloads from file sharing domains using wget.exe
-
-## Metadata
-
-- Rule ID: a0d7e4d2-bede-4141-8896-bc6e237e977c
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-05
-- Modified: 2025-12-10
-- Source Path: rules/windows/process_creation/proc_creation_win_wget_download_susp_file_sharing_domains.yml
 
 ## Logsource
 

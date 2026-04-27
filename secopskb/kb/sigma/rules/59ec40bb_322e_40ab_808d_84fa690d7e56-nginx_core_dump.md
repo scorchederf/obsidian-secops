@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/product/nginx/web_nginx_core_dump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/product/nginx/web_nginx_core_dump.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "nginx"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Nginx Core Dump
-
 Detects a core dump of a crashing Nginx worker process, which could be a signal of a serious problem or exploitation attempts.
-
-## Metadata
-
-- Rule ID: 59ec40bb-322e-40ab-808d-84fa690d7e56
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-05-31
-- Modified: 2023-05-08
-- Source Path: rules/web/product/nginx/web_nginx_core_dump.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects a core dump of a crashing Nginx worker process, which could be a signal 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1499-endpoint_denial_of_service|T1499.004]]
+- [[kb/attack/techniques/T1499-endpoint_denial_of_service#^t1499004-application-or-system-exploitation|T1499.004: Application or System Exploitation]]
 
 ## Detection
 

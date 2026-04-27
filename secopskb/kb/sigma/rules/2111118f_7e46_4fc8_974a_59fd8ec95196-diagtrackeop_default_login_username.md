@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/account_management/win_security_diagtrack_eop_default_login_username.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/account_management/win_security_diagtrack_eop_default_login_username.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / security"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DiagTrackEoP Default Login Username
-
 Detects the default "UserName" used by the DiagTrackEoP POC
-
-## Metadata
-
-- Rule ID: 2111118f-7e46-4fc8-974a-59fd8ec95196
-- Status: test
-- Level: critical
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-08-03
-- Source Path: rules/windows/builtin/security/account_management/win_security_diagtrack_eop_default_login_username.yml
 
 ## Logsource
 

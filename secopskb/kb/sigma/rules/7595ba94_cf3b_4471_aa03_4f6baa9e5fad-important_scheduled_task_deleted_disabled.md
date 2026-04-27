@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_susp_scheduled_task_delete_or_disable.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_susp_scheduled_task_delete_or_disable.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Important Scheduled Task Deleted/Disabled
-
 Detects when adversaries stop services or processes by deleting or disabling their respective scheduled tasks in order to conduct data destructive activities
-
-## Metadata
-
-- Rule ID: 7595ba94-cf3b-4471-aa03-4f6baa9e5fad
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-12-05
-- Modified: 2023-03-13
-- Source Path: rules/windows/builtin/security/win_security_susp_scheduled_task_delete_or_disable.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects when adversaries stop services or processes by deleting or disabling the
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

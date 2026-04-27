@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1486"
 attack_technique_name: "Data Encrypted for Impact"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1486/T1486.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ab3f793f-2dcc-4da5-9c71-34988307263f"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Akira Ransomware drop Files with .akira Extension and Ransomnote
-
 Dropping 100 files with random content and .akira File Extension and the Akira Ransomnote to c:\
-
-## Metadata
-
-- Atomic GUID: ab3f793f-2dcc-4da5-9c71-34988307263f
-- Technique: T1486: Data Encrypted for Impact
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1486/T1486.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 ## Executor
 

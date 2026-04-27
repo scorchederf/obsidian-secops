@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_access/proc_access_win_hktl_sysmonente.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_hktl_sysmonente.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_access"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - SysmonEnte Execution
-
 Detects the use of SysmonEnte, a tool to attack the integrity of Sysmon
-
-## Metadata
-
-- Rule ID: d29ada0f-af45-4f27-8f32-f7b77c3dbc4e
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-09-07
-- Modified: 2023-11-28
-- Source Path: rules/windows/process_access/proc_access_win_hktl_sysmonente.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of SysmonEnte, a tool to attack the integrity of Sysmon
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Detection
 

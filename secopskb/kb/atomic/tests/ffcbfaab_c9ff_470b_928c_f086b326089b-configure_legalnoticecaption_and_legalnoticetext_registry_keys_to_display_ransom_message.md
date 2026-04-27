@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1491.001"
 attack_technique_name: "Defacement: Internal Defacement"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1491.001/T1491.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "ffcbfaab-c9ff-470b-928c-f086b326089b"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Configure LegalNoticeCaption and LegalNoticeText registry keys to display ransom message
-
 Display ransom message to users at system start-up by configuring registry keys HKLM\SOFTWARE\Micosoft\Windows\CurrentVersion\Policies\System\LegalNoticeCaption and HKLM\SOFTWARE\Micosoft\Windows\CurrentVersion\Policies\System\LegalNoticeText.
 
 [SynAck Ransomware](https://www.trendmicro.com/vinfo/es/security/news/cybercrime-and-digital-threats/synack-ransomware-leverages-process-doppelg-nging-for-evasion-and-infection), 
@@ -33,18 +31,9 @@ Display ransom message to users at system start-up by configuring registry keys 
 [Reedemer Ransomware](https://blog.cyble.com/2022/07/20/redeemer-ransomware-back-action/),
 [Kangaroo Ransomware](https://www.bleepingcomputer.com/news/security/the-kangaroo-ransomware-not-only-encrypts-your-data-but-tries-to-lock-you-out-of-windows/)
 
-## Metadata
-
-- Atomic GUID: ffcbfaab-c9ff-470b-928c-f086b326089b
-- Technique: T1491.001: Defacement: Internal Defacement
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1491.001/T1491.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1491-defacement|T1491.001]]
+- [[kb/attack/techniques/T1491-defacement#^t1491001-internal-defacement|T1491.001: Internal Defacement]]
 
 ## Input Arguments
 

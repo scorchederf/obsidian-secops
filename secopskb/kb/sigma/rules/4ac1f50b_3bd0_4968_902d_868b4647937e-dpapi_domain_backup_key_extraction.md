@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_dpapi_domain_backupkey_extraction.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_dpapi_domain_backupkey_extraction.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DPAPI Domain Backup Key Extraction
-
 Detects tools extracting LSA secret DPAPI domain backup key from Domain Controllers
-
-## Metadata
-
-- Rule ID: 4ac1f50b-3bd0-4968-902d-868b4647937e
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez @Cyb3rWard0g
-- Date: 2019-06-20
-- Modified: 2022-02-24
-- Source Path: rules/windows/builtin/security/win_security_dpapi_domain_backupkey_extraction.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects tools extracting LSA secret DPAPI domain backup key from Domain Controll
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
 
 ## Detection
 

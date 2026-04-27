@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.001"
 attack_technique_name: "Access Token Manipulation: Token Impersonation/Theft"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.001/T1134.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "f095e373-b936-4eb4-8d22-f47ccbfbe64a"
@@ -20,26 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Juicy Potato
-
 This Atomic utilizes Juicy Potato to obtain privilege escalation. 
 Upon successful execution of this test, a vulnerable CLSID will be used to execute a process with system permissions.
 This tactic has been previously observed in SnapMC Ransomware, amongst numerous other campaigns. 
 [Reference](https://blog.fox-it.com/2021/10/11/snapmc-skips-ransomware-steals-data/)
 
-## Metadata
-
-- Atomic GUID: f095e373-b936-4eb4-8d22-f47ccbfbe64a
-- Technique: T1134.001: Access Token Manipulation: Token Impersonation/Theft
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1134.001/T1134.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.001]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134001-token-impersonation-theft|T1134.001: Token Impersonation/Theft]]
 
 ## Input Arguments
 

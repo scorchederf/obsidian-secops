@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2019-08-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2019-08-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2019-08-002"
   - "Active Directory Dumping via NTDSUtil"
@@ -27,28 +27,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2019-08-002: Active Directory Dumping via NTDSUtil
-
-## Metadata
-
-- CAR ID: CAR-2019-08-002
-- Submission Date: 2019/08/13
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: File
-- Contributors: Tony Lambert/Red Canary
-
-## Description
-
 The NTDSUtil tool may be used to dump a Microsoft Active Directory database to disk for processing with a credential access tool such as Mimikatz. This is performed by launching `ntdsutil.exe` as a privileged user with command line arguments indicating that media should be created for offline Active Directory installation and specifying a folder path. This process will create a copy of the Active Directory database, `ntds.dit`, to the specified folder path.
 
 This requires filesystem data to determine whether files have been created.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]] (coverage: Low; tactics: TA0006)
-  - [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]] (coverage: Low; tactics: TA0006)
+  - [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Implementations
 

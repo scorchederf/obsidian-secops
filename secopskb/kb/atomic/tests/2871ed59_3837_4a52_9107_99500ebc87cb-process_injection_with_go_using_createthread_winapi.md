@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055"
 attack_technique_name: "Process Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055/T1055.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "2871ed59-3837-4a52-9107-99500ebc87cb"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Process Injection with Go using CreateThread WinAPI
-
 This program executes shellcode in the current process using the following steps
 1. Allocate memory for the shellcode with VirtualAlloc setting the page permissions to Read/Write
 2. Use the RtlCopyMemory macro to copy the shellcode to the allocated memory space
@@ -33,18 +31,9 @@ This program leverages the functions from golang.org/x/sys/windows to call Windo
 
 - PoC Credit: (https://github.com/Ne0nd0g/go-shellcode#createthread)
 
-## Metadata
-
-- Atomic GUID: 2871ed59-3837-4a52-9107-99500ebc87cb
-- Technique: T1055: Process Injection
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1055/T1055.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Executor
 

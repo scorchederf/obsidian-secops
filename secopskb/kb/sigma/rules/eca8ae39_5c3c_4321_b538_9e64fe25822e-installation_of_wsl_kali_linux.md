@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wsl_kali_linux_installation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wsl_kali_linux_installation.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Installation of WSL Kali-Linux
-
 Detects installation of Kali Linux distribution through Windows Subsystem for Linux (WSL).
 Attackers may use Kali Linux WSL to leverage its penetration testing tools and capabilities for malicious purposes.
-
-## Metadata
-
-- Rule ID: eca8ae39-5c3c-4321-b538-9e64fe25822e
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-10-10
-- Source Path: rules/windows/process_creation/proc_creation_win_wsl_kali_linux_installation.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Attackers may use Kali Linux WSL to leverage its penetration testing tools and c
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Detection
 

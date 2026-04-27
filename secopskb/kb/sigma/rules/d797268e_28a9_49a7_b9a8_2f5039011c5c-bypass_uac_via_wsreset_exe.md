@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_uac_bypass_wsreset.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_wsreset.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bypass UAC via WSReset.exe
-
 Detects use of WSReset.exe to bypass User Account Control (UAC). Adversaries use this technique to execute privileged processes.
-
-## Metadata
-
-- Rule ID: d797268e-28a9-49a7-b9a8-2f5039011c5c
-- Status: test
-- Level: high
-- Author: E.M. Anhaus (originally from Atomic Blue Detections, Tony Lambert), oscd.community, Florian Roth
-- Date: 2019-10-24
-- Modified: 2022-05-13
-- Source Path: rules/windows/process_creation/proc_creation_win_uac_bypass_wsreset.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects use of WSReset.exe to bypass User Account Control (UAC). Adversaries use
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

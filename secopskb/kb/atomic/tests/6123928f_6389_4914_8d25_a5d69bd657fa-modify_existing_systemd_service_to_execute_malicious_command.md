@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "6123928f-6389-4914-8d25-a5d69bd657fa"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Modify Existing systemd Service to Execute Malicious Command
-
 Creates a service unit file that initially runs a benign command, then modifies the
 ExecStart directive using sed to substitute a malicious command before reloading and
 restarting the service. Adversaries may hijack existing services to blend in with normal
@@ -30,19 +28,9 @@ service activity and avoid triggering detections focused solely on new service c
 This technique reflects the tradecraft observed in more sophisticated intrusions where
 blending into existing process trees is a priority over creating net-new services.
 
-## Metadata
-
-- Atomic GUID: 6123928f-6389-4914-8d25-a5d69bd657fa
-- Technique: T1569.003: System Services: Systemctl
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1569.003/T1569.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.003]]
+- [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 ## Input Arguments
 

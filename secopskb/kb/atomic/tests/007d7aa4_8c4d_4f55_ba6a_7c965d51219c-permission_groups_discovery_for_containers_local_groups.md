@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1069.001"
 attack_technique_name: "Permission Groups Discovery: Local Groups"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.001/T1069.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "007d7aa4-8c4d-4f55-ba6a-7c965d51219c"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Permission Groups Discovery for Containers- Local Groups
-
 Attackers may try to obtain a list of services that are operating on remote hosts and local network infrastructure devices, in order to identify potential vulnerabilities that can be exploited through remote software attacks. They typically use tools to conduct port and vulnerability scans in order to obtain this information.
-
-## Metadata
-
-- Atomic GUID: 007d7aa4-8c4d-4f55-ba6a-7c965d51219c
-- Technique: T1069.001: Permission Groups Discovery: Local Groups
-- Platforms: containers
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1069.001/T1069.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
 
 ## Dependencies
 

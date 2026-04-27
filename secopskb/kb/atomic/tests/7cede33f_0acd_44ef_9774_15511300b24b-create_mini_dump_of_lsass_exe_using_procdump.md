@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "7cede33f-0acd-44ef-9774-15511300b24b"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create Mini Dump of LSASS.exe using ProcDump
-
 The memory of lsass.exe is often dumped for offline credential theft attacks. This can be achieved with Sysinternals
 ProcDump. This particular method uses -mm to produce a mini dump of lsass.exe
 
@@ -29,19 +27,9 @@ Upon successful execution, you should see the following file created c:\windows\
 
 If you see a message saying "procdump.exe is not recognized as an internal or external command", try using the  get-prereq_commands to download and install the ProcDump tool first.
 
-## Metadata
-
-- Atomic GUID: 7cede33f-0acd-44ef-9774-15511300b24b
-- Technique: T1003.001: OS Credential Dumping: LSASS Memory
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1003.001/T1003.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Input Arguments
 

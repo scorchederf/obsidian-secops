@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# System File Execution Location Anomaly
-
 Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.
-
-## Metadata
-
-- Rule ID: e4a6b256-3e47-40fc-89d2-7a477edd6915
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2017-11-27
-- Modified: 2026-02-12
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_system_exe_anomaly.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of a Windows system binary that is usually located in the 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detection
 

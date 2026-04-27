@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.014"
 attack_technique_name: "Active Setup"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.014/T1547.014.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "04d55cef-f283-40ba-ae2a-316bc3b5e78c"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HKLM - re-execute 'Internet Explorer Core Fonts' StubPath payload by decreasing version number
-
 This test will decrease the version number of the 'Internet Explorer Core Fonts' (UUID {C9E9A340-D1F1-11D0-821E-444553540600}) registry key for the current user, 
 which will force the StubPath payload (if set) to execute.
 
-## Metadata
-
-- Atomic GUID: 04d55cef-f283-40ba-ae2a-316bc3b5e78c
-- Technique: T1547.014: Active Setup
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1547.014/T1547.014.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.014]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547014-active-setup|T1547.014: Active Setup]]
 
 ## Executor
 

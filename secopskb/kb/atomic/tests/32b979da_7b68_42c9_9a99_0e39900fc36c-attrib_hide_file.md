@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1222.001"
 attack_technique_name: "File and Directory Permissions Modification: Windows File and Directory Permissions Modification"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1222.001/T1222.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "32b979da-7b68-42c9-9a99-0e39900fc36c"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# attrib - hide file
-
 Attackers leverage an existing Windows binary, attrib.exe, to mark specific files or folder as hidden by using specific flags so that
 the victim does not see the file.
 
-## Metadata
-
-- Atomic GUID: 32b979da-7b68-42c9-9a99-0e39900fc36c
-- Technique: T1222.001: File and Directory Permissions Modification: Windows File and Directory Permissions Modification
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1222.001/T1222.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222.001]]
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification#^t1222001-windows-file-and-directory-permissions-modification|T1222.001: Windows File and Directory Permissions Modification]]
 
 ## Input Arguments
 

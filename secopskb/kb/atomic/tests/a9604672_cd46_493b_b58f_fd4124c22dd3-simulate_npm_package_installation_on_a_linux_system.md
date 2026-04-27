@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1195.002"
 attack_technique_name: "Compromise Software Supply Chain"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1195.002/T1195.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "bash"
 aliases:
   - "a9604672-cd46-493b-b58f-fd4124c22dd3"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Simulate npm package installation on a Linux system
-
 Launches a short‑lived Kubernetes pod using the Node 18 image, initializes a minimal npm project in /tmp/test, and installs the specified npm package without audit/fund/package‑lock options, simulating potentially suspicious package retrieval (e.g., typosquatting/dependency confusion) from within a container. The pod is deleted after execution.
-
-## Metadata
-
-- Atomic GUID: a9604672-cd46-493b-b58f-fd4124c22dd3
-- Technique: T1195.002: Compromise Software Supply Chain
-- Platforms: containers, linux
-- Executor: bash
-- Elevation Required: False
-- Source Path: atomics/T1195.002/T1195.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1195-supply_chain_compromise|T1195.002]]
+- [[kb/attack/techniques/T1195-supply_chain_compromise#^t1195002-compromise-software-supply-chain|T1195.002: Compromise Software Supply Chain]]
 
 ## Input Arguments
 

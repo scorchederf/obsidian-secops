@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.006"
 attack_technique_name: "Run Virtual Instance"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "88b81702-a1c0-49a9-95b2-2dd53d755767"
@@ -20,27 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create and start VirtualBox virtual machine
-
 Create a simple VirtualBox VM and start up the machine
 Cleanup command stops and deletes the newly created VM and associated files
 https://www.virtualbox.org/manual/ch08.html#vboxmanage-startvm
 https://news.sophos.com/en-us/2020/05/21/ragnar-locker-ransomware-deploys-virtual-machine-to-dodge-security/
 https://attack.mitre.org/techniques/T1564/006/
 
-## Metadata
-
-- Atomic GUID: 88b81702-a1c0-49a9-95b2-2dd53d755767
-- Technique: T1564.006: Run Virtual Instance
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1564.006/T1564.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.006]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564006-run-virtual-instance|T1564.006: Run Virtual Instance]]
 
 ## Input Arguments
 

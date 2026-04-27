@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/dns/net_dns_external_service_interaction_domains.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/dns/net_dns_external_service_interaction_domains.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "dns"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNS Query to External Service Interaction Domains
-
 Detects suspicious DNS queries to external service interaction domains often used for out-of-band interactions after successful RCE
-
-## Metadata
-
-- Rule ID: aff715fa-4dd5-497a-8db3-910bea555566
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Matt Kelly (list of domains)
-- Date: 2022-06-07
-- Modified: 2026-01-24
-- Source Path: rules/network/dns/net_dns_external_service_interaction_domains.yml
 
 ## Logsource
 
@@ -44,8 +32,8 @@ Detects suspicious DNS queries to external service interaction domains often use
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
-- [[kb/attack/techniques/T1595-active_scanning|T1595.002]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
+- [[kb/attack/techniques/T1595-active_scanning#^t1595002-vulnerability-scanning|T1595.002: Vulnerability Scanning]]
 
 ## Detection
 

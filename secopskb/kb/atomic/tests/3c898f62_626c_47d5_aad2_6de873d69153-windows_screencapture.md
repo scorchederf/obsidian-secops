@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1113"
 attack_technique_name: "Screen Capture"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1113/T1113.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "3c898f62-626c-47d5-aad2-6de873d69153"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Screencapture
-
 Use Psr.exe binary to collect screenshots of user display. Test will do left mouse click to simulate user behaviour
-
-## Metadata
-
-- Atomic GUID: 3c898f62-626c-47d5-aad2-6de873d69153
-- Technique: T1113: Screen Capture
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1113/T1113.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1113-screen_capture|T1113]]
+- [[kb/attack/techniques/T1113-screen_capture|T1113: Screen Capture]]
 
 ## Input Arguments
 

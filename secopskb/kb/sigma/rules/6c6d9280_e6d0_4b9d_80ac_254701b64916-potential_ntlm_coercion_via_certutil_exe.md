@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_certutil_ntlm_coercion.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_certutil_ntlm_coercion.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential NTLM Coercion Via Certutil.EXE
-
 Detects possible NTLM coercion via certutil using the 'syncwithWU' flag
-
-## Metadata
-
-- Rule ID: 6c6d9280-e6d0-4b9d-80ac-254701b64916
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-09-01
-- Modified: 2023-02-14
-- Source Path: rules/windows/process_creation/proc_creation_win_certutil_ntlm_coercion.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects possible NTLM coercion via certutil using the 'syncwithWU' flag
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

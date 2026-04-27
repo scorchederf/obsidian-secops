@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_filefix_execution_pattern.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_filefix_execution_pattern.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,21 +21,10 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious FileFix Execution Pattern
-
 Detects suspicious FileFix execution patterns where users are tricked into running malicious commands through browser file upload dialog manipulation.
 This attack typically begins when users visit malicious websites impersonating legitimate services or news platforms,
 which may display fake CAPTCHA challenges or direct instructions to open file explorer and paste clipboard content.
 The clipboard content usually contains commands that download and execute malware, such as information stealing tools.
-
-## Metadata
-
-- Rule ID: b5b29e4e-31fa-4fdf-b058-296e7a1aa0c2
-- Status: experimental
-- Level: high
-- Author: 0xFustang, Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-11-24
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_filefix_execution_pattern.yml
 
 ## Logsource
 
@@ -46,7 +35,7 @@ The clipboard content usually contains commands that download and execute malwar
 
 ### Techniques
 
-- [[kb/attack/techniques/T1204-user_execution|T1204.004]]
+- [[kb/attack/techniques/T1204-user_execution#^t1204004-malicious-copy-and-paste|T1204.004: Malicious Copy and Paste]]
 
 ## Detection
 

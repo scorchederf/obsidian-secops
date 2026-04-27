@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_msdt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_msdt.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed Msdt.EXE Execution
-
 Detects the execution of a renamed "Msdt.exe" binary
-
-## Metadata
-
-- Rule ID: bd1c6866-65fc-44b2-be51-5588fcff82b9
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems)
-- Date: 2022-06-03
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_msdt.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of a renamed "Msdt.exe" binary
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.003]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036003-rename-legitimate-utilities|T1036.003: Rename Legitimate Utilities]]
 
 ## Detection
 

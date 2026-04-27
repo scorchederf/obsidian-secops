@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_run_script_from_ads.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_run_script_from_ads.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Run PowerShell Script from ADS
-
 Detects PowerShell script execution from Alternate Data Stream (ADS)
-
-## Metadata
-
-- Rule ID: 45a594aa-1fbd-4972-a809-ff5a99dd81b8
-- Status: test
-- Level: high
-- Author: Sergey Soldatov, Kaspersky Lab, oscd.community
-- Date: 2019-10-30
-- Modified: 2022-07-14
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_run_script_from_ads.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects PowerShell script execution from Alternate Data Stream (ADS)
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ## Detection
 

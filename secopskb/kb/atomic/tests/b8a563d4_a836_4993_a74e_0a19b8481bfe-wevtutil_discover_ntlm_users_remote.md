@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.002"
 attack_technique_name: "Account Discovery: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.002/T1087.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "b8a563d4-a836-4993-a74e-0a19b8481bfe"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Wevtutil - Discover NTLM Users Remote
-
 This test discovers users who have authenticated against a Domain Controller via NTLM. 
 This is done remotely via wmic and captures the event code 4776 from the domain controller and stores the ouput in C:\temp. [Reference](https://www.reliaquest.com/blog/socgholish-fakeupdates/)
 
-## Metadata
-
-- Atomic GUID: b8a563d4-a836-4993-a74e-0a19b8481bfe
-- Technique: T1087.002: Account Discovery: Domain Account
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1087.002/T1087.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 
 ## Executor
 

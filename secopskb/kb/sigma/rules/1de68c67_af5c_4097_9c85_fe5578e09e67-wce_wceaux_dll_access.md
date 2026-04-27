@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_mal_wceaux_dll.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_mal_wceaux_dll.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "critical"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WCE wceaux.dll Access
-
 Detects wceaux.dll access while WCE pass-the-hash remote command execution on source host
-
-## Metadata
-
-- Rule ID: 1de68c67-af5c-4097-9c85-fe5578e09e67
-- Status: test
-- Level: critical
-- Author: Thomas Patzke
-- Date: 2017-06-14
-- Modified: 2025-01-30
-- Source Path: rules/windows/builtin/security/win_security_mal_wceaux_dll.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects wceaux.dll access while WCE pass-the-hash remote command execution on so
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ### Software Tags
 

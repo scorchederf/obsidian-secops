@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_mavinject.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_mavinject.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed Mavinject.EXE Execution
-
 Detects the execution of a renamed version of the "Mavinject" process. Which can be abused to perform process injection using the "/INJECTRUNNING" flag
-
-## Metadata
-
-- Rule ID: e6474a1b-5390-49cd-ab41-8d88655f7394
-- Status: test
-- Level: high
-- Author: frack113, Florian Roth
-- Date: 2022-12-05
-- Modified: 2023-02-03
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_mavinject.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the execution of a renamed version of the "Mavinject" process. Which can
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.013]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218013-mavinject|T1218.013: Mavinject]]
 
 ## Detection
 

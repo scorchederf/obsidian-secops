@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_token_obfuscation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_token_obfuscation.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Powershell Token Obfuscation - Process Creation
-
 Detects TOKEN OBFUSCATION technique from Invoke-Obfuscation
-
-## Metadata
-
-- Rule ID: deb9b646-a508-44ee-b7c9-d8965921c6b6
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-12-27
-- Modified: 2024-08-11
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_token_obfuscation.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects TOKEN OBFUSCATION technique from Invoke-Obfuscation
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.009]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027009-embedded-payloads|T1027.009: Embedded Payloads]]
 
 ## Detection
 

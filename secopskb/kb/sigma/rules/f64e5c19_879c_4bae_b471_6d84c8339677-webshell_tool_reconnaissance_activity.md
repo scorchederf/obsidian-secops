@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_webshell_tool_recon.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_webshell_tool_recon.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Webshell Tool Reconnaissance Activity
-
 Detects processes spawned from web servers (PHP, Tomcat, IIS, etc.) that perform reconnaissance looking for the existence of popular scripting tools (perl, python, wget) on the system via the help commands
-
-## Metadata
-
-- Rule ID: f64e5c19-879c-4bae-b471-6d84c8339677
-- Status: test
-- Level: high
-- Author: Cian Heasley, Florian Roth (Nextron Systems)
-- Date: 2020-07-22
-- Modified: 2023-11-09
-- Source Path: rules/windows/process_creation/proc_creation_win_webshell_tool_recon.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects processes spawned from web servers (PHP, Tomcat, IIS, etc.) that perform
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

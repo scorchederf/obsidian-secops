@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-10-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-10-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-10-002"
   - "DLL Injection via Load Library"
@@ -27,20 +27,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-10-002: DLL Injection via Load Library
-
-## Metadata
-
-- CAR ID: CAR-2013-10-002
-- Submission Date: 2013/10/07
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process DLL
-- Contributors: MITRE
-
-## Description
-
 Microsoft Windows allows for processes to remotely create threads within other processes of the same privilege level. This functionality is provided via the Windows API [CreateRemoteThread](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682437.aspx). Both Windows and third-party software use this ability for legitimate purposes. For example, the Windows process [csrss.exe](https://en.wikipedia.org/wiki/Client/Server_Runtime_Subsystem) creates threads in programs to send signals to registered callback routines. Both adversaries and host-based security software use this functionality to [inject DLLs](https://attack.mitre.org/techniques/T1055), but for very different purposes. An adversary is likely to inject into a program to [evade defenses](https://attack.mitre.org/tactics/TA0005) or [bypass User Account Control](https://attack.mitre.org/techniques/T1548/002), but a security program might do this to gain increased monitoring of API calls. One of the most common methods of [DLL Injection](https://attack.mitre.org/techniques/T1055) is through the Windows API [LoadLibrary](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684175.aspx).
 
 -   Allocate memory in the target program with [VirtualAllocEx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366890.aspx)
@@ -51,10 +37,10 @@ This behavior can be detected by looking for thread creations across processes, 
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]] (coverage: Moderate; tactics: TA0005)
-  - [[kb/attack/techniques/T1055-process_injection|T1055.001]]
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548]] (coverage: Moderate; tactics: TA0004)
-  - [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]] (coverage: Moderate; tactics: TA0005)
+  - [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548: Abuse Elevation Control Mechanism]] (coverage: Moderate; tactics: TA0004)
+  - [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Implementations
 

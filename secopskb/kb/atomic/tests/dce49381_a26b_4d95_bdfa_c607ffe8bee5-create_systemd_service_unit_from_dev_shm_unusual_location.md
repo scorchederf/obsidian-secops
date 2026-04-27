@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "dce49381-a26b-4d95-bdfa-c607ffe8bee5"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create systemd Service Unit from /dev/shm (Unusual Location)
-
 Creates a systemd service unit file in /dev/shm and loads it using systemctl.
 /dev/shm is a memory-backed filesystem that is world-writable on most Linux systems
 and does not persist across reboots, making it particularly attractive to adversaries
@@ -30,19 +28,9 @@ seeking to execute transient payloads while evading file-based forensic detectio
 This technique has been observed in post-exploitation scenarios where attackers
 deliberately avoid writing to disk-backed locations to limit forensic artefacts.
 
-## Metadata
-
-- Atomic GUID: dce49381-a26b-4d95-bdfa-c607ffe8bee5
-- Technique: T1569.003: System Services: Systemctl
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1569.003/T1569.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.003]]
+- [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_sc_sdset_hide_sevices.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_sc_sdset_hide_sevices.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Service DACL Abuse To Hide Services Via Sc.EXE
-
 Detects usage of the "sc.exe" utility adding a new service with special permission seen used by threat actors which makes the service hidden and unremovable.
-
-## Metadata
-
-- Rule ID: a537cfc3-4297-4789-92b5-345bfd845ad0
-- Status: test
-- Level: high
-- Author: Andreas Hunkeler (@Karneades)
-- Date: 2021-12-20
-- Modified: 2022-08-08
-- Source Path: rules/windows/process_creation/proc_creation_win_sc_sdset_hide_sevices.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects usage of the "sc.exe" utility adding a new service with special permissi
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 ## Detection
 

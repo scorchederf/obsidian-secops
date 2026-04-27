@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_defender_default_action_modified.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_defender_default_action_modified.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Defender Threat Severity Default Action Set to 'Allow' or 'NoAction'
-
 Detects the use of PowerShell to execute the 'Set-MpPreference' cmdlet to configure Windows Defender's threat severity default action to 'Allow' (value '6') or 'NoAction' (value '9').
 This is a highly suspicious configuration change that effectively disables Defender's ability to automatically mitigate threats of a certain severity level.
 An attacker might use this technique via the command line to bypass defenses before executing payloads.
-
-## Metadata
-
-- Rule ID: 1e8a9b4d-3c2a-4f9b-8d1e-7c6a5b4f3d2e
-- Status: experimental
-- Level: high
-- Author: Matt Anderson (Huntress)
-- Date: 2025-07-11
-- Source Path: rules/windows/process_creation/proc_creation_win_defender_default_action_modified.yml
 
 ## Logsource
 
@@ -45,7 +34,7 @@ An attacker might use this technique via the command line to bypass defenses bef
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

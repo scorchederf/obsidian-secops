@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_bloodhound_collection.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_bloodhound_collection.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -26,19 +26,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# BloodHound Collection Files
-
 Detects default file names outputted by the BloodHound collection tool SharpHound
-
-## Metadata
-
-- Rule ID: 02773bed-83bf-469f-b7ff-e676e7d78bab
-- Status: test
-- Level: high
-- Author: C.J. May
-- Date: 2022-08-09
-- Modified: 2026-02-19
-- Source Path: rules/windows/file/file_event/file_event_win_bloodhound_collection.yml
 
 ## Logsource
 
@@ -49,12 +37,12 @@ Detects default file names outputted by the BloodHound collection tool SharpHoun
 
 ### Techniques
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
-- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
+- [[kb/attack/techniques/T1482-domain_trust_discovery|T1482: Domain Trust Discovery]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

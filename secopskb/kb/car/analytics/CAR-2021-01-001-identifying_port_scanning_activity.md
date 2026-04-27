@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-01-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-01-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-01-001"
   - "Identifying Port Scanning Activity"
@@ -24,25 +24,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-01-001: Identifying Port Scanning Activity
-
-## Metadata
-
-- CAR ID: CAR-2021-01-001
-- Submission Date: 2020/10/23
-- Information Domain: Network
-- Analytic Type: Situational Awareness
-- Platforms: Windows, Linux
-- Data Subtypes: Flow
-- Contributors: Cyware Labs
-
-## Description
-
 After compromising an initial machine, adversaries commonly attempt to laterally move across the network. The first step to attempt the lateral movement often involves conducting host identification, port and service scans on the internal network via the compromised machine using tools such as Nmap, Cobalt Strike, etc.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1046-network_service_discovery|T1046]] (coverage: Moderate; tactics: TA0007)
+- [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]] (coverage: Moderate; tactics: TA0007)
 
 ## Implementations
 

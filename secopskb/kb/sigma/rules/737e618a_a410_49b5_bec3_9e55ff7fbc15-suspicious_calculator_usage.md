@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_calc_uncommon_exec.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_calc_uncommon_exec.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Calculator Usage
-
 Detects suspicious use of 'calc.exe' with command line parameters or in a suspicious directory, which is likely caused by some PoC or detection evasion.
-
-## Metadata
-
-- Rule ID: 737e618a-a410-49b5-bec3-9e55ff7fbc15
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2019-02-09
-- Modified: 2023-11-09
-- Source Path: rules/windows/process_creation/proc_creation_win_calc_uncommon_exec.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious use of 'calc.exe' with command line parameters or in a suspic
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
 
 ## Detection
 

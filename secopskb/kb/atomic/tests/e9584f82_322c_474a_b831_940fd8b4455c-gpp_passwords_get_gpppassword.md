@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.006"
 attack_technique_name: "Unsecured Credentials: Group Policy Preferences"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.006/T1552.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "e9584f82-322c-474a-b831-940fd8b4455c"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# GPP Passwords (Get-GPPPassword)
-
 Look for the encrypted cpassword value within Group Policy Preference files on the Domain Controller.
 This test is intended to be run from a domain joined workstation, not on the Domain Controller itself.
 The Get-GPPPasswords.ps1 executed during this test can be obtained using the get-prereq_commands.
 
 Successful test execution will either display the credentials found in the GPP files or indicate "No preference files found".
 
-## Metadata
-
-- Atomic GUID: e9584f82-322c-474a-b831-940fd8b4455c
-- Technique: T1552.006: Unsecured Credentials: Group Policy Preferences
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1552.006/T1552.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.006]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552006-group-policy-preferences|T1552.006: Group Policy Preferences]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-09-004/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-09-004.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-09-004"
   - "Credentials in Files & Registry"
@@ -27,27 +27,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-09-004: Credentials in Files & Registry
-
-## Metadata
-
-- CAR ID: CAR-2020-09-004
-- Submission Date: 2020/09/10
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process, Registry
-- Contributors: Olaf Hartong
-
-## Description
-
 Adversaries may search the Windows Registry on compromised systems for insecurely stored credentials for credential access. This can be accomplished using the query functionality of the reg.exe system utility, by looking for keys and values that contain strings such as "password". In addition, adversaries may use toolkits such as [PowerSploit](https://powersploit.readthedocs.io/en/latest/) in order to dump credentials from various applications such as IIS.Accordingly, this analytic looks for invocations of reg.exe in this capacity as well as that of several powersploit modules with similar functionality.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552]] (coverage: Low; tactics: TA0006)
-  - [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
-  - [[kb/attack/techniques/T1552-unsecured_credentials|T1552.002]]
+- [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]] (coverage: Low; tactics: TA0006)
+  - [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
+  - [[kb/attack/techniques/T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]
 
 ## Implementations
 

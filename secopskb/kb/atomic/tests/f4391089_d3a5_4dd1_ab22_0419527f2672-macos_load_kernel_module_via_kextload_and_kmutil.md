@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.006"
 attack_technique_name: "Boot or Logon Autostart Execution: Kernel Modules and Extensions"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.006/T1547.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "bash"
 aliases:
   - "f4391089-d3a5-4dd1-ab22-0419527f2672"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MacOS - Load Kernel Module via kextload and kmutil
-
 This test uses the kextload and kmutil commands to load and unload a MacOS kernel module.
-
-## Metadata
-
-- Atomic GUID: f4391089-d3a5-4dd1-ab22-0419527f2672
-- Technique: T1547.006: Boot or Logon Autostart Execution: Kernel Modules and Extensions
-- Platforms: macos
-- Executor: bash
-- Elevation Required: True
-- Dependency Executor: bash
-- Source Path: atomics/T1547.006/T1547.006.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.006]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547006-kernel-modules-and-extensions|T1547.006: Kernel Modules and Extensions]]
 
 ## Input Arguments
 

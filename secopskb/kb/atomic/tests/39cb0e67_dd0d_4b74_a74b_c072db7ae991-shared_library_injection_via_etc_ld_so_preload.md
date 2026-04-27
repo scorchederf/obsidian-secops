@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.006"
 attack_technique_name: "Hijack Execution Flow: LD_PRELOAD"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.006/T1574.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "39cb0e67-dd0d-4b74-a74b-c072db7ae991"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Shared Library Injection via /etc/ld.so.preload
-
 This test adds a shared library to the `ld.so.preload` list to execute and intercept API calls. This technique was used by threat actor Rocke during the exploitation of Linux web servers. This requires the `glibc` package.
 
 Upon successful execution, bash will echo `../bin/T1574.006.so` to /etc/ld.so.preload.
 
-## Metadata
-
-- Atomic GUID: 39cb0e67-dd0d-4b74-a74b-c072db7ae991
-- Technique: T1574.006: Hijack Execution Flow: LD_PRELOAD
-- Platforms: linux
-- Executor: bash
-- Elevation Required: True
-- Dependency Executor: bash
-- Source Path: atomics/T1574.006/T1574.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.006]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574006-dynamic-linker-hijacking|T1574.006: Dynamic Linker Hijacking]]
 
 ## Input Arguments
 

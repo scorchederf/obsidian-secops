@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_pchunter.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_pchunter.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -25,19 +25,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - PCHunter Execution
-
 Detects suspicious use of PCHunter, a tool like Process Hacker to view and manipulate processes, kernel options and other low level stuff
-
-## Metadata
-
-- Rule ID: fca949cc-79ca-446e-8064-01aa7e52ece5
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali
-- Date: 2022-10-10
-- Modified: 2024-11-23
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_pchunter.yml
 
 ## Logsource
 
@@ -48,11 +36,11 @@ Detects suspicious use of PCHunter, a tool like Process Hacker to view and manip
 
 ### Techniques
 
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
-- [[kb/attack/techniques/T1057-process_discovery|T1057]]
-- [[kb/attack/techniques/T1012-query_registry|T1012]]
-- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
-- [[kb/attack/techniques/T1007-system_service_discovery|T1007]]
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
+- [[kb/attack/techniques/T1057-process_discovery|T1057: Process Discovery]]
+- [[kb/attack/techniques/T1012-query_registry|T1012: Query Registry]]
+- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
+- [[kb/attack/techniques/T1007-system_service_discovery|T1007: System Service Discovery]]
 
 ## Detection
 

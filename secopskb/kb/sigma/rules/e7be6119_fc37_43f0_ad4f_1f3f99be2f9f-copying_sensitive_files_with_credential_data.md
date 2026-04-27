@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_esentutl_sensitive_file_copy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_esentutl_sensitive_file_copy.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copying Sensitive Files with Credential Data
-
 Files with well-known filenames (sensitive files with credential data) copying
-
-## Metadata
-
-- Rule ID: e7be6119-fc37-43f0-ad4f-1f3f99be2f9f
-- Status: test
-- Level: high
-- Author: Teymur Kheirkhabarov, Daniil Yugoslavskiy, oscd.community
-- Date: 2019-10-22
-- Modified: 2024-06-04
-- Source Path: rules/windows/process_creation/proc_creation_win_esentutl_sensitive_file_copy.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Files with well-known filenames (sensitive files with credential data) copying
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### Software Tags
 

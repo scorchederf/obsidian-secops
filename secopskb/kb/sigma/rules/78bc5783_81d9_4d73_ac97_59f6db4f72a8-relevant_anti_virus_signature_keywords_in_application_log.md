@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/application/Other/win_av_relevant_match.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/application/Other/win_av_relevant_match.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / application"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Relevant Anti-Virus Signature Keywords In Application Log
-
 Detects potentially highly relevant antivirus events in the application log based on known virus signature names and malware keywords.
-
-## Metadata
-
-- Rule ID: 78bc5783-81d9-4d73-ac97-59f6db4f72a8
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Arnim Rupp
-- Date: 2017-02-19
-- Modified: 2024-12-25
-- Source Path: rules/windows/builtin/application/Other/win_av_relevant_match.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects potentially highly relevant antivirus events in the application log base
 
 ### Techniques
 
-- [[kb/attack/techniques/T1588-obtain_capabilities|T1588]]
+- [[kb/attack/techniques/T1588-obtain_capabilities|T1588: Obtain Capabilities]]
 
 ## Detection
 

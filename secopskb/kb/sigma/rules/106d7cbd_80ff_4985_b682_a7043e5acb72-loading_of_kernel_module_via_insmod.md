@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/syscall/lnx_auditd_load_module_insmod.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/syscall/lnx_auditd_load_module_insmod.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Loading of Kernel Module via Insmod
-
 Detects loading of kernel modules with insmod command.
 Loadable Kernel Modules (LKMs) are pieces of code that can be loaded and unloaded into the kernel upon demand.
 Adversaries may use LKMs to obtain persistence within the system or elevate the privileges.
-
-## Metadata
-
-- Rule ID: 106d7cbd-80ff-4985-b682-a7043e5acb72
-- Status: test
-- Level: high
-- Author: Pawel Mazur
-- Date: 2021-11-02
-- Modified: 2022-12-25
-- Source Path: rules/linux/auditd/syscall/lnx_auditd_load_module_insmod.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ Adversaries may use LKMs to obtain persistence within the system or elevate the 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.006]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547006-kernel-modules-and-extensions|T1547.006: Kernel Modules and Extensions]]
 
 ## Detection
 

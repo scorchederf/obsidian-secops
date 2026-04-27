@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.018"
 attack_technique_name: "Event Triggered Execution: Python Startup Hooks"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.018/T1546.018.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "6e78084a-a433-4702-a838-cc7b765d87e8"
@@ -21,24 +21,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Python Startup Hook - usercustomize.py (Linux / MacOS)
-
 Executes code via usercustomize.py. This is a per-user persistence mechanism 
 that does not require root privileges.
 
-## Metadata
-
-- Atomic GUID: 6e78084a-a433-4702-a838-cc7b765d87e8
-- Technique: T1546.018: Event Triggered Execution: Python Startup Hooks
-- Platforms: linux, macos
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1546.018/T1546.018.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.018]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546018-python-startup-hooks|T1546.018: Python Startup Hooks]]
 
 ## Input Arguments
 

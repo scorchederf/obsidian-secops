@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_guardduty_disruption.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_guardduty_disruption.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS GuardDuty Important Change
-
 Detects updates of the GuardDuty list of trusted IPs, perhaps to disable security alerts against malicious IPs.
-
-## Metadata
-
-- Rule ID: 6e61ee20-ce00-4f8d-8aee-bedd8216f7e3
-- Status: test
-- Level: high
-- Author: faloker
-- Date: 2020-02-11
-- Modified: 2022-10-09
-- Source Path: rules/cloud/aws/cloudtrail/aws_guardduty_disruption.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects updates of the GuardDuty list of trusted IPs, perhaps to disable securit
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

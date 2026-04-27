@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.001"
 attack_technique_name: "Account Discovery: Local Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "c955a599-3653-4fe5-b631-f11c00eb0397"
@@ -21,21 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# View accounts with UID 0
-
 View accounts with UID 0
-
-## Metadata
-
-- Atomic GUID: c955a599-3653-4fe5-b631-f11c00eb0397
-- Technique: T1087.001: Account Discovery: Local Account
-- Platforms: linux, macos
-- Executor: sh
-- Source Path: atomics/T1087.001/T1087.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087.001]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087001-local-account|T1087.001: Local Account]]
 
 ## Input Arguments
 

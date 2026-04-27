@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_susp_user_shell_folders.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_susp_user_shell_folders.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Modify User Shell Folders Startup Value
-
 Detect modification of the User Shell Folders registry values for Startup or Common Startup which could indicate persistence attempts.
 Attackers may modify User Shell Folders registry keys to point to malicious executables or scripts that will be executed during startup.
 This technique is often used to maintain persistence on a compromised system by ensuring that the malicious payload is executed automatically.
-
-## Metadata
-
-- Rule ID: 9c226817-8dc9-46c2-a58d-66655aafd7dc
-- Status: test
-- Level: high
-- Author: frack113, Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2022-10-01
-- Modified: 2026-01-05
-- Source Path: rules/windows/registry/registry_set/registry_set_susp_user_shell_folders.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ This technique is often used to maintain persistence on a compromised system by 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
 
 ## Detection
 

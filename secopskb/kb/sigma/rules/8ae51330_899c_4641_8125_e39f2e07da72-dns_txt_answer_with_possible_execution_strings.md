@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/dns/net_dns_susp_txt_exec_strings.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/dns/net_dns_susp_txt_exec_strings.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "dns"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNS TXT Answer with Possible Execution Strings
-
 Detects strings used in command execution in DNS TXT Answer
-
-## Metadata
-
-- Rule ID: 8ae51330-899c-4641-8125-e39f2e07da72
-- Status: test
-- Level: high
-- Author: Markus Neis
-- Date: 2018-08-08
-- Modified: 2021-11-27
-- Source Path: rules/network/dns/net_dns_susp_txt_exec_strings.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects strings used in command execution in DNS TXT Answer
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.004]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071004-dns|T1071.004: DNS]]
 
 ## Detection
 

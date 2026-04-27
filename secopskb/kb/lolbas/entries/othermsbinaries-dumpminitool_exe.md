@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/DumpMinitool.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/DumpMinitool.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "DumpMinitool.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DumpMinitool.exe
-
 Dump tool part Visual Studio 2022
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2022-01-20
-- Author: mr.d0x
-- Source Path: yml/OtherMSBinaries/DumpMinitool.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ DumpMinitool.exe --file {PATH_ABSOLUTE} --processId 1132 --dumpType Full
 - Use Case: Create memory dump and parse it offline
 - Privileges: Administrator
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detections
 

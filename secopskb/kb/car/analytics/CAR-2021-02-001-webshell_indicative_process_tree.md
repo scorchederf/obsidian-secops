@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-02-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-02-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-02-001"
   - "Webshell-Indicative Process Tree"
@@ -25,26 +25,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-02-001: Webshell-Indicative Process Tree
-
-## Metadata
-
-- CAR ID: CAR-2021-02-001
-- Submission Date: 2020/11/29
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Nichols Jasper
-
-## Description
-
 A web shell is a web script placed on an openly accessible web server to allow an adversary to use the server as a gatway in a network. As the shell operates, commands will be issued from within the web application into the broader server operating system. This analytic looks for host enumeration executables initiated by any web service that would not normally be executed within that environment.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component|T1505: Server Software Component]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Implementations
 

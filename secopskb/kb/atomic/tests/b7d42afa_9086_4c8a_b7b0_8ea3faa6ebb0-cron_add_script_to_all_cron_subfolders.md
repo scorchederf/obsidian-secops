@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1053.003"
 attack_technique_name: "Scheduled Task/Job: Cron"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.003/T1053.003.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "bash"
 aliases:
   - "b7d42afa-9086-4c8a-b7b0-8ea3faa6ebb0"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cron - Add script to all cron subfolders
-
 This test adds a script to /etc/cron.hourly, /etc/cron.daily, /etc/cron.monthly and /etc/cron.weekly folders configured to execute on a schedule. This technique was used by the threat actor Rocke during the exploitation of Linux web servers.
-
-## Metadata
-
-- Atomic GUID: b7d42afa-9086-4c8a-b7b0-8ea3faa6ebb0
-- Technique: T1053.003: Scheduled Task/Job: Cron
-- Platforms: macos, linux
-- Executor: bash
-- Elevation Required: True
-- Source Path: atomics/T1053.003/T1053.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.003]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053003-cron|T1053.003: Cron]]
 
 ## Input Arguments
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1020"
 attack_technique_name: "Automated Exfiltration"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1020/T1020.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "5b380e96-b0ef-4072-8a8e-f194cb9eb9ac"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltration via Encrypted FTP
-
 Simulates encrypted file transfer to an FTP server. For testing purposes, a free FTP testing portal is available at https://sftpcloud.io/tools/free-ftp-server, providing a temporary FTP server for 60 minutes. Use this service responsibly for testing and validation only.
-
-## Metadata
-
-- Atomic GUID: 5b380e96-b0ef-4072-8a8e-f194cb9eb9ac
-- Technique: T1020: Automated Exfiltration
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1020/T1020.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1020-automated_exfiltration|T1020]]
+- [[kb/attack/techniques/T1020-automated_exfiltration|T1020: Automated Exfiltration]]
 
 ## Input Arguments
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Wbadmin.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Wbadmin.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "wbadmin.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# wbadmin.exe
-
 Windows Backup Administration utility
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2024-04-05
-- Author: Chris Eastwood
-- Source Path: yml/OSBinaries/Wbadmin.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ wbadmin start backup -backupTarget:{PATH_ABSOLUTE:folder} -include:C:\Windows\NT
 - Use Case: Snapshoting of Active Directory NTDS.dit database
 - Privileges: Administrator, Backup Operators, SeBackupPrivilege
 - Operating System: Windows Server
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### 2. Dump
 
@@ -60,7 +51,7 @@ wbadmin start recovery -version:<VERSIONIDENTIFIER> -recoverytarget:{PATH_ABSOLU
 - Use Case: Dumping of Active Directory NTDS.dit database
 - Privileges: Administrator, Backup Operators, SeBackupPrivilege
 - Operating System: Windows Server
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detections
 

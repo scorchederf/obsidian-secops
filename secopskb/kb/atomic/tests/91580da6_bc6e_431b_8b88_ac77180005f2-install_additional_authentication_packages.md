@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1556.002"
 attack_technique_name: "Modify Authentication Process: Password Filter DLL"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1556.002/T1556.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "91580da6-bc6e-431b-8b88-ac77180005f2"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Install Additional Authentication Packages
-
 lsass.exe loads all DLLs specified by the Authentication Packages REG_MULTI_SZ value.
 Uses PowerShell to install and register a password filter DLL. Requires a reboot and administrative privileges.
 The binary in bin is https://www.virustotal.com/gui/file/95140c1ad39fd632d1c1300b246293297aa272ce6035eecc3da56e337200221d/detection
@@ -29,19 +27,9 @@ Source is in src folder.
 This does require a reboot to see the filter loaded into lsass.exe. 
 It does require Administrative privileges to import the clean registry values back into LSA, it is possible you may have to manually do this after for cleanup.
 
-## Metadata
-
-- Atomic GUID: 91580da6-bc6e-431b-8b88-ac77180005f2
-- Technique: T1556.002: Modify Authentication Process: Password Filter DLL
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1556.002/T1556.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1556-modify_authentication_process|T1556.002]]
+- [[kb/attack/techniques/T1556-modify_authentication_process#^t1556002-password-filter-dll|T1556.002: Password Filter DLL]]
 
 ## Input Arguments
 

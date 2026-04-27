@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_reverse_shell_connection.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_reverse_shell_connection.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "stable"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Powershell ReverseShell Connection
-
 Detects usage of the "TcpClient" class. Which can be abused to establish remote connections and reverse-shells. As seen used by the Nishang "Invoke-PowerShellTcpOneLine" reverse shell and other.
-
-## Metadata
-
-- Rule ID: edc2f8ae-2412-4dfd-b9d5-0c57727e70be
-- Status: stable
-- Level: high
-- Author: FPT.EagleEye, wagga, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2021-03-03
-- Modified: 2023-04-05
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_reverse_shell_connection.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects usage of the "TcpClient" class. Which can be abused to establish remote 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

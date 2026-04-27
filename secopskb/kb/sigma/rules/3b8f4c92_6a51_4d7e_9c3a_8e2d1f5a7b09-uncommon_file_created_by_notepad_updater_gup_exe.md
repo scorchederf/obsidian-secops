@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_gup_uncommon_file_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_gup_uncommon_file_creation.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "experimental"
 level: "high"
 logsource: "windows / file_event"
@@ -22,20 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Uncommon File Created by Notepad++ Updater Gup.EXE
-
 Detects when the Notepad++ updater (gup.exe) creates files in suspicious or uncommon locations.
 This could indicate potential exploitation of the updater component to deliver unwanted malware or unwarranted files.
-
-## Metadata
-
-- Rule ID: 3b8f4c92-6a51-4d7e-9c3a-8e2d1f5a7b09
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2026-02-03
-- Modified: 2026-03-16
-- Source Path: rules/windows/file/file_event/file_event_win_gup_uncommon_file_creation.yml
 
 ## Logsource
 
@@ -46,8 +34,8 @@ This could indicate potential exploitation of the updater component to deliver u
 
 ### Techniques
 
-- [[kb/attack/techniques/T1195-supply_chain_compromise|T1195.002]]
-- [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557]]
+- [[kb/attack/techniques/T1195-supply_chain_compromise#^t1195002-compromise-software-supply-chain|T1195.002: Compromise Software Supply Chain]]
+- [[kb/attack/techniques/T1557-adversary-in-the-middle|T1557: Adversary-in-the-Middle]]
 
 ## Detection
 

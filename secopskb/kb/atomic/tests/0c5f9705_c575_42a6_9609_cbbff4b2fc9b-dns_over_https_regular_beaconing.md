@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1572"
 attack_technique_name: "Protocol Tunneling"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1572/T1572.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "0c5f9705-c575-42a6-9609-cbbff4b2fc9b"
@@ -20,23 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNS over HTTPS Regular Beaconing
-
 This test simulates an infected host beaconing via DoH queries to a command and control server at regular intervals over time.
 This behaviour is typical of implants either in an idle state waiting for instructions or configured to use a low query volume over time to evade threshold based detection.
 A custom domain and sub-domain will need to be passed as input parameters for this test to work. Upon execution, DNS information about the domain will be displayed for each callout in a JSON format.
 
-## Metadata
-
-- Atomic GUID: 0c5f9705-c575-42a6-9609-cbbff4b2fc9b
-- Technique: T1572: Protocol Tunneling
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1572/T1572.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1572-protocol_tunneling|T1572]]
+- [[kb/attack/techniques/T1572-protocol_tunneling|T1572: Protocol Tunneling]]
 
 ## Input Arguments
 

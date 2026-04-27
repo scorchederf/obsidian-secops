@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_set_acl_susp_location.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_set_acl_susp_location.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Set-Acl On Windows Folder - PsScript
-
 Detects PowerShell scripts to set the ACL to a file in the Windows folder
-
-## Metadata
-
-- Rule ID: 3bf1d859-3a7e-44cb-8809-a99e066d3478
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-07-18
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_set_acl_susp_location.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Detects PowerShell scripts to set the ACL to a file in the Windows folder
 
 ### Techniques
 
-- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222]]
+- [[kb/attack/techniques/T1222-file_and_directory_permissions_modification|T1222: File and Directory Permissions Modification]]
 
 ## Detection
 

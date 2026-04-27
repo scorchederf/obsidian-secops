@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2014-11-008/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2014-11-008.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2014-11-008"
   - "Command Launched from WinLogon"
@@ -27,20 +27,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2014-11-008: Command Launched from WinLogon
-
-## Metadata
-
-- CAR ID: CAR-2014-11-008
-- Submission Date: 2014/11/19
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 An adversary can use [accessibility features](https://attack.mitre.org/techniques/T1546/008) (Ease of Access), such as StickyKeys or Utilman, to launch a command shell from the logon screen and gain SYSTEM access. Since an adversary does not have physical access to the machine, this technique must be run within [Remote Desktop](https://attack.mitre.org/techniques/T1021/001). To prevent an adversary from getting to the login screen without first authenticating, Network-Level Authentication (NLA) must be enabled. If a debugger is set up for one of the accessibility features, then it will intercept the process launch of the feature and instead execute a new command line. This analytic looks for instances of `cmd.exe` or `powershell.exe` launched directly from the logon process, `winlogon.exe`. It should be used in tandem with [[kb/car/analytics/CAR-2014-11-003-debuggers_for_accessibility_applications|CAR-2014-11-003]], which detects the accessibility programs in the command line.
 
 Several accessibility programs can be run using the Ease of Access center
@@ -53,8 +39,8 @@ Several accessibility programs can be run using the Ease of Access center
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546]] (coverage: Moderate; tactics: TA0004, TA0003)
-  - [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+- [[kb/attack/techniques/T1546-event_triggered_execution|T1546: Event Triggered Execution]] (coverage: Moderate; tactics: TA0004, TA0003)
+  - [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 ## Implementations
 

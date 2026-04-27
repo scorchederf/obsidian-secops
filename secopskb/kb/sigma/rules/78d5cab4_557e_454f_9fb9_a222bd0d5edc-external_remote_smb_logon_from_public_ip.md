@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/account_management/win_security_successful_external_remote_smb_login.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/account_management/win_security_successful_external_remote_smb_login.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# External Remote SMB Logon from Public IP
-
 Detects successful logon from public IP address via SMB. This can indicate a publicly-exposed SMB port.
-
-## Metadata
-
-- Rule ID: 78d5cab4-557e-454f-9fb9-a222bd0d5edc
-- Status: test
-- Level: high
-- Author: Micah Babinski (@micahbabinski), Zach Mathis (@yamatosecurity)
-- Date: 2023-01-19
-- Modified: 2024-03-11
-- Source Path: rules/windows/builtin/security/account_management/win_security_successful_external_remote_smb_login.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects successful logon from public IP address via SMB. This can indicate a pub
 
 ### Techniques
 
-- [[kb/attack/techniques/T1133-external_remote_services|T1133]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]]
-- [[kb/attack/techniques/T1110-brute_force|T1110]]
+- [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]]
+- [[kb/attack/techniques/T1110-brute_force|T1110: Brute Force]]
 
 ## Detection
 

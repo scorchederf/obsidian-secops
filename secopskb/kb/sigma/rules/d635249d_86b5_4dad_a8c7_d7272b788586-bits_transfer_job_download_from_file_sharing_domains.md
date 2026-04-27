@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/bits_client/win_bits_client_new_transfer_via_file_sharing_domains.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/bits_client/win_bits_client_new_transfer_via_file_sharing_domains.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / bits-client"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# BITS Transfer Job Download From File Sharing Domains
-
 Detects BITS transfer job downloading files from a file sharing domain.
-
-## Metadata
-
-- Rule ID: d635249d-86b5-4dad-a8c7-d7272b788586
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-06-28
-- Modified: 2025-12-10
-- Source Path: rules/windows/builtin/bits_client/win_bits_client_new_transfer_via_file_sharing_domains.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects BITS transfer job downloading files from a file sharing domain.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1197-bits_jobs|T1197]]
+- [[kb/attack/techniques/T1197-bits_jobs|T1197: BITS Jobs]]
 
 ## Detection
 

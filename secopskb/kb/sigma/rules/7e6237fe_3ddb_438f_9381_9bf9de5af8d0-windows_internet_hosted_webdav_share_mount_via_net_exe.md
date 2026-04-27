@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_net_use_mount_internet_share.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_net_use_mount_internet_share.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Windows Internet Hosted WebDav Share Mount Via Net.EXE
-
 Detects when an internet hosted webdav share is mounted using the "net.exe" utility
-
-## Metadata
-
-- Rule ID: 7e6237fe-3ddb-438f-9381-9bf9de5af8d0
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-02-21
-- Modified: 2023-07-25
-- Source Path: rules/windows/process_creation/proc_creation_win_net_use_mount_internet_share.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when an internet hosted webdav share is mounted using the "net.exe" util
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
 
 ## Detection
 

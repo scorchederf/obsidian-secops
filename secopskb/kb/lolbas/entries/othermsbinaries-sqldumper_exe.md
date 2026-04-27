@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Sqldumper.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Sqldumper.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Sqldumper.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sqldumper.exe
-
 Debugging utility included with Microsoft SQL.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OtherMSBinaries/Sqldumper.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ sqldumper.exe 464 0 0x0110
 - Use Case: Dump process using PID.
 - Privileges: Administrator
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ### 2. Dump
 
@@ -63,7 +54,7 @@ sqldumper.exe 540 0 0x01100:40
 - Use Case: Dump LSASS.exe to Mimikatz compatible dump using PID.
 - Privileges: Administrator
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detections
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Sigverif.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Sigverif.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Sigverif.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sigverif.exe
-
 File Signature Verification utility to verify digital signatures of files
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2021-11-08
-- Author: Moshe Kaplan
-- Source Path: yml/OSBinaries/Sigverif.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ sigverif.exe
 - Use Case: Execute arbitrary programs through a trusted Microsoft-signed binary to bypass application whitelisting.
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

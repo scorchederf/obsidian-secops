@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Installutil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Installutil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Installutil.exe"
@@ -22,16 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Installutil.exe
-
 The Installer tool is a command-line utility that allows you to install and uninstall server resources by executing the installer components in specified assemblies
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Installutil.yml
 
 ## Paths
 
@@ -53,7 +44,7 @@ InstallUtil.exe /logfile= /LogToConsole=false /U {PATH:.dll}
 - Use Case: Use to execute code and bypass application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.004]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218004-installutil|T1218.004: InstallUtil]]
 
 ### 2. Execute
 
@@ -66,7 +57,7 @@ InstallUtil.exe /logfile= /LogToConsole=false /U {PATH:.dll}
 - Use Case: Use to execute code and bypass application whitelisting
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.004]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218004-installutil|T1218.004: InstallUtil]]
 
 ### 3. Download
 
@@ -79,7 +70,7 @@ InstallUtil.exe {REMOTEURL}
 - Use Case: Downloads payload from remote server
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

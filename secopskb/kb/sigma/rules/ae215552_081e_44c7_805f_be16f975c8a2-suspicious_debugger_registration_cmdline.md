@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_registry_install_reg_debugger_backdoor.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_registry_install_reg_debugger_backdoor.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Debugger Registration Cmdline
-
 Detects the registration of a debugger for a program that is available in the logon screen (sticky key backdoor).
-
-## Metadata
-
-- Rule ID: ae215552-081e-44c7-805f-be16f975c8a2
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), oscd.community, Jonhnathan Ribeiro
-- Date: 2019-09-06
-- Modified: 2022-08-06
-- Source Path: rules/windows/process_creation/proc_creation_win_registry_install_reg_debugger_backdoor.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the registration of a debugger for a program that is available in the lo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.008]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546008-accessibility-features|T1546.008: Accessibility Features]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "6fec8560-ff64-4bbf-bc79-734fea48f7ca"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Masquerade Malicious Service as Legitimate System Service
-
 Creates a systemd service with a name and description closely resembling a legitimate
 system service to blend in with normal service activity. Adversaries may deliberately
 choose service names similar to well-known system services such as systemd-networkd,
@@ -32,19 +30,9 @@ This masquerading technique is particularly effective in environments where dete
 relies on service name allowlists or manual review of systemctl list-units output
 rather than behavioural analysis of service unit file contents and ExecStart paths.
 
-## Metadata
-
-- Atomic GUID: 6fec8560-ff64-4bbf-bc79-734fea48f7ca
-- Technique: T1569.003: System Services: Systemctl
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1569.003/T1569.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.003]]
+- [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 ## Input Arguments
 

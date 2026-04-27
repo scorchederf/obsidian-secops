@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.012"
 attack_technique_name: "Hijack Execution Flow: COR_PROFILER"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.012/T1574.012.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "9d5f89dc-c3a5-4f8a-a4fc-a6ed02e7cb5a"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# User scope COR_PROFILER
-
 Creates user scope environment variables and CLSID COM object to enable a .NET profiler (COR_PROFILER).
 The unmanaged profiler DLL (`T1574.012x64.dll`) executes when the CLR is loaded by the Event Viewer process.
 Additionally, the profiling DLL will inherit the integrity level of Event Viewer bypassing UAC and executing `notepad.exe` with high integrity.
@@ -30,18 +28,9 @@ the notepad process will not execute with high integrity.
 
 Reference: https://redcanary.com/blog/cor_profiler-for-persistence/
 
-## Metadata
-
-- Atomic GUID: 9d5f89dc-c3a5-4f8a-a4fc-a6ed02e7cb5a
-- Technique: T1574.012: Hijack Execution Flow: COR_PROFILER
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1574.012/T1574.012.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.012]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574012-cor-profiler|T1574.012: COR_PROFILER]]
 
 ## Input Arguments
 

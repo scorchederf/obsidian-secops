@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-02-008/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-02-008.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-02-008"
   - "Simultaneous Logins on a Host"
@@ -27,20 +27,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-02-008: Simultaneous Logins on a Host
-
-## Metadata
-
-- CAR ID: CAR-2013-02-008
-- Submission Date: 2013/02/18
-- Information Domain: Host
-- Analytic Type: Situational Awareness
-- Platforms: Windows, Linux, macOS
-- Data Subtypes: Login
-- Contributors: MITRE
-
-## Description
-
 Multiple users logged into a single machine at the same time, or even within the same hour, do not typically occur in networks we have observed.
 
 Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pre-Vista. Logoff events are 4634 for Windows Vista and above, 538 for pre-Vista.
@@ -48,9 +34,9 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078]] (coverage: Low; tactics: TA0001)
-  - [[kb/attack/techniques/T1078-valid_accounts|T1078.002]]
-  - [[kb/attack/techniques/T1078-valid_accounts|T1078.003]]
+- [[kb/attack/techniques/T1078-valid_accounts|T1078: Valid Accounts]] (coverage: Low; tactics: TA0001)
+  - [[kb/attack/techniques/T1078-valid_accounts#^t1078002-domain-accounts|T1078.002: Domain Accounts]]
+  - [[kb/attack/techniques/T1078-valid_accounts#^t1078003-local-accounts|T1078.003: Local Accounts]]
 
 ## Implementations
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Bcp.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Bcp.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Bcp.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Bcp.exe
-
 Microsoft SQL Server Bulk Copy Program utility for importing and exporting data between SQL Server instances and data files.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2025-11-13
-- Author: Mahir Ali Khan
-- Source Path: yml/OtherMSBinaries/Bcp.yml
 
 ## Paths
 
@@ -53,7 +44,7 @@ bcp "SELECT payload_data FROM database.dbo.payloads WHERE id=1" queryout "C:\Win
 - Use Case: Extract malicious executable from database storage to local file system for execution.
 - Privileges: User
 - Operating System: Windows
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ## Detections
 

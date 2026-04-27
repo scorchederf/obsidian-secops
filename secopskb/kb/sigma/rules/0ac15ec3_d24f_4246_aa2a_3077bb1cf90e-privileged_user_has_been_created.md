@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/lnx_privileged_user_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/lnx_privileged_user_creation.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "linux"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Privileged User Has Been Created
-
 Detects the addition of a new user to a privileged group such as "root" or "sudo"
-
-## Metadata
-
-- Rule ID: 0ac15ec3-d24f-4246-aa2a-3077bb1cf90e
-- Status: test
-- Level: high
-- Author: Pawel Mazur
-- Date: 2022-12-21
-- Modified: 2025-01-21
-- Source Path: rules/linux/builtin/lnx_privileged_user_creation.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the addition of a new user to a privileged group such as "root" or "sudo
 
 ### Techniques
 
-- [[kb/attack/techniques/T1136-create_account|T1136.001]]
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1136-create_account#^t1136001-local-account|T1136.001: Local Account]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

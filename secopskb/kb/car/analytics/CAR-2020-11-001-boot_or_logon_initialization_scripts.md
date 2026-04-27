@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-11-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-11-001"
   - "Boot or Logon Initialization Scripts"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-11-001: Boot or Logon Initialization Scripts
-
-## Metadata
-
-- CAR ID: CAR-2020-11-001
-- Submission Date: 2020/11/30
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Registry, Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Adversaries may schedule software to run whenever a user logs into the system; this is done to establish persistence and sometimes for lateral movement. This trigger is established through the registry key HKEY_CURRENT_USER\Environment*UserInitMprLogonScript*. This signature looks edits to existing keys or creation of new keys in that path. Users purposefully adding benign scripts to this path will result in false positives; that case is rare, however. There are other ways of running a script at startup or login that are not covered in this signature. Note that this signature overlaps with the Windows Sysinternals Autoruns tool, which would also show changes to this registry path.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037]] (coverage: Moderate; tactics: TA0003, TA0008)
-  - [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.001]]
+- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037: Boot or Logon Initialization Scripts]] (coverage: Moderate; tactics: TA0003, TA0008)
+  - [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037001-logon-script-(windows)|T1037.001: Logon Script (Windows)]]
 
 ## Implementations
 

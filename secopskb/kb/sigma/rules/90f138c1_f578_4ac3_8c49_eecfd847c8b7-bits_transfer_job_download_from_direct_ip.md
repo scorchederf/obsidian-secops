@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/bits_client/win_bits_client_new_transfer_via_ip_address.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/bits_client/win_bits_client_new_transfer_via_ip_address.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / bits-client"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# BITS Transfer Job Download From Direct IP
-
 Detects a BITS transfer job downloading file(s) from a direct IP address.
-
-## Metadata
-
-- Rule ID: 90f138c1-f578-4ac3-8c49-eecfd847c8b7
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-01-11
-- Modified: 2023-03-27
-- Source Path: rules/windows/builtin/bits_client/win_bits_client_new_transfer_via_ip_address.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a BITS transfer job downloading file(s) from a direct IP address.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1197-bits_jobs|T1197]]
+- [[kb/attack/techniques/T1197-bits_jobs|T1197: BITS Jobs]]
 
 ## Detection
 

@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Dsdbutil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Dsdbutil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "dsdbutil.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# dsdbutil.exe
-
 Dsdbutil is a command-line tool that is built into Windows Server. It is available if you have the AD LDS server role installed. Can be used as a command line utility to export Active Directory.
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2023-05-31
-- Author: Ekitji
-- Source Path: yml/OtherMSBinaries/Dsdbutil.yml
 
 ## Paths
 
@@ -48,7 +39,7 @@ dsdbutil.exe "activate instance ntds" "snapshot" "create" "quit" "quit"
 - Use Case: Snapshoting of Active Directory NTDS.dit database
 - Privileges: Administrator
 - Operating System: Windows Server 2012, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### 2. Dump
 
@@ -61,7 +52,7 @@ dsdbutil.exe "activate instance ntds" "snapshot" "mount {GUID}" "quit" "quit"
 - Use Case: Mounting the snapshot to access the ntds.dit with `copy c:\<Snap Volume>\windows\ntds\ntds.dit c:\users\administrator\desktop\ntds.dit.bak`
 - Privileges: Administrator
 - Operating System: Windows Server 2012, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### 3. Dump
 
@@ -74,7 +65,7 @@ dsdbutil.exe "activate instance ntds" "snapshot" "delete {GUID}" "quit" "quit"
 - Use Case: Deletes the snapshot
 - Privileges: Administrator
 - Operating System: Windows Server 2012, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### 4. Dump
 
@@ -87,7 +78,7 @@ dsdbutil.exe "activate instance ntds" "snapshot" "create" "list all" "mount 1" "
 - Use Case: Mounting the snapshot identifier 1 and accessing it with `copy c:\<Snap Volume>\windows\ntds\ntds.dit c:\users\administrator\desktop\ntds.dit.bak`
 - Privileges: Administrator
 - Operating System: Windows Server 2012, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ### 5. Dump
 
@@ -100,7 +91,7 @@ dsdbutil.exe "activate instance ntds" "snapshot" "list all" "delete 1" "quit" "q
 - Use Case: deletes the snapshot
 - Privileges: Administrator
 - Operating System: Windows Server 2012, Windows Server 2016, Windows Server 2019
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detections
 

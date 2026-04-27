@@ -2,6 +2,7 @@
 
 # LOLBAS
 
+<!-- generated-source-description-start -->
 LOLBAS is the Living Off The Land Binaries, Scripts and Libraries project. It is a curated reference of legitimate Windows binaries, scripts, and libraries that can be abused for attacker tradecraft and should be understood by defenders.
 
 This vault imports LOLBAS YAML records into generated notes, maps entries to ATT&CK techniques where upstream mappings exist, and indexes entries by category and function for detection engineering and validation pivots.
@@ -10,6 +11,8 @@ This vault imports LOLBAS YAML records into generated notes, maps entries to ATT
 
 - [LOLBAS website](https://lolbas-project.github.io/)
 - [LOLBAS repository](https://github.com/LOLBAS-Project/LOLBAS)
+
+<!-- generated-source-description-end -->
 
 ## Areas
 

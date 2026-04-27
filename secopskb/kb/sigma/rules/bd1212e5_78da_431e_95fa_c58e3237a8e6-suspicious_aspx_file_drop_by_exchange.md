@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_exchange_webshell_drop.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_exchange_webshell_drop.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious ASPX File Drop by Exchange
-
 Detects suspicious file type dropped by an Exchange component in IIS into a suspicious folder
-
-## Metadata
-
-- Rule ID: bd1212e5-78da-431e-95fa-c58e3237a8e6
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), MSTI (query, idea)
-- Date: 2022-10-01
-- Source Path: rules/windows/file/file_event/file_event_win_exchange_webshell_drop.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects suspicious file type dropped by an Exchange component in IIS into a susp
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

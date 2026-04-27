@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_malware_gobrat_grep_payload_discovery.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_malware_gobrat_grep_payload_discovery.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential GobRAT File Discovery Via Grep
-
 Detects the use of grep to discover specific files created by the GobRAT malware
-
-## Metadata
-
-- Rule ID: e34cfa0c-0a50-4210-9cb3-5632d08eb041
-- Status: test
-- Level: high
-- Author: Joseliyo Sanchez, @Joseliyo_Jstnk
-- Date: 2023-06-02
-- Source Path: rules/linux/process_creation/proc_creation_lnx_malware_gobrat_grep_payload_discovery.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the use of grep to discover specific files created by the GobRAT malware
 
 ### Techniques
 
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
 
 ## Detection
 

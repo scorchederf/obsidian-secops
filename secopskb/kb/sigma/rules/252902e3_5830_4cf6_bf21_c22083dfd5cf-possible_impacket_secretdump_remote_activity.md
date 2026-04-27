@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_impacket_secretdump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_impacket_secretdump.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Possible Impacket SecretDump Remote Activity
-
 Detect AD credential dumping using impacket secretdump HKTL
-
-## Metadata
-
-- Rule ID: 252902e3-5830-4cf6-bf21-c22083dfd5cf
-- Status: test
-- Level: high
-- Author: Samir Bousseaden, wagga
-- Date: 2019-04-03
-- Modified: 2022-08-11
-- Source Path: rules/windows/builtin/security/win_security_impacket_secretdump.yml
 
 ## Logsource
 
@@ -47,9 +35,9 @@ Detect AD credential dumping using impacket secretdump HKTL
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detection
 

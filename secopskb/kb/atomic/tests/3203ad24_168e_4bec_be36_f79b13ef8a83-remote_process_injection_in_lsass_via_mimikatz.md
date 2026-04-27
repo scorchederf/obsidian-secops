@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1055"
 attack_technique_name: "Process Injection"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1055/T1055.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "3203ad24-168e-4bec-be36-f79b13ef8a83"
@@ -20,27 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote Process Injection in LSASS via mimikatz
-
 Use mimikatz to remotely (via psexec) dump LSASS process content for RID 500 via code injection (new thread).
 Especially useful against domain controllers in Active Directory environments.
 It must be executed in the context of a user who is privileged on remote `machine`.
 
 The effect of `/inject` is explained in <https://blog.3or.de/mimikatz-deep-dive-on-lsadumplsa-patch-and-inject.html>
 
-## Metadata
-
-- Atomic GUID: 3203ad24-168e-4bec-be36-f79b13ef8a83
-- Technique: T1055: Process Injection
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1055/T1055.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Input Arguments
 

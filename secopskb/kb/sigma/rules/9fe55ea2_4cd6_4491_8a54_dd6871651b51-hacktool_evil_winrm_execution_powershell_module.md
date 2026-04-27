@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_module/posh_pm_hktl_evil_winrm_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_module/posh_pm_hktl_evil_winrm_execution.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / ps_module"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Evil-WinRm Execution - PowerShell Module
-
 Detects the execution of Evil-WinRM via PowerShell Module logs by leveraging the hardcoded strings inside the utility.
-
-## Metadata
-
-- Rule ID: 9fe55ea2-4cd6-4491-8a54-dd6871651b51
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2024-02-25
-- Source Path: rules/windows/powershell/powershell_module/posh_pm_hktl_evil_winrm_execution.yml
 
 ## Logsource
 

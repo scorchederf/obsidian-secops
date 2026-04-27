@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "7979dd41-2045-48b2-a54e-b1bc2415c9da"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable Windows Prefetch Through Registry
-
 Modify the registry of the machine to disable prefetch. Disabling prefetch will remove one artifact for evidence of application execution. Restart is required post modification
-
-## Metadata
-
-- Atomic GUID: 7979dd41-2045-48b2-a54e-b1bc2415c9da
-- Technique: T1112: Modify Registry
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1112/T1112.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Executor
 

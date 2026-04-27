@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_add_load_service_in_safe_mode.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_add_load_service_in_safe_mode.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Registry Persistence via Service in Safe Mode
-
 Detects the modification of the registry to allow a driver or service to persist in Safe Mode.
-
-## Metadata
-
-- Rule ID: 1547e27c-3974-43e2-a7d7-7f484fb928ec
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-04-04
-- Modified: 2025-10-22
-- Source Path: rules/windows/registry/registry_set/registry_set_add_load_service_in_safe_mode.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the modification of the registry to allow a driver or service to persist
 
 ### Techniques
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.001]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564001-hidden-files-and-directories|T1564.001: Hidden Files and Directories]]
 
 ## Detection
 

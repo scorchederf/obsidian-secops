@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_service_installation_by_unusal_client.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_service_installation_by_unusal_client.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Service Installed By Unusual Client - Security
-
 Detects a service installed by a client which has PID 0 or whose parent has PID 0
-
-## Metadata
-
-- Rule ID: c4e92a97-a9ff-4392-9d2d-7a4c642768ca
-- Status: test
-- Level: high
-- Author: Tim Rauch (Nextron Systems), Elastic (idea)
-- Date: 2022-09-15
-- Modified: 2023-01-04
-- Source Path: rules/windows/builtin/security/win_security_service_installation_by_unusal_client.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects a service installed by a client which has PID 0 or whose parent has PID 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543]]
+- [[kb/attack/techniques/T1543-create_or_modify_system_process|T1543: Create or Modify System Process]]
 
 ## Detection
 

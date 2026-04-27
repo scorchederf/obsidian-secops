@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/windefend/win_defender_asr_lsass_access.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/windefend/win_defender_asr_lsass_access.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / windefend"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LSASS Access Detected via Attack Surface Reduction
-
 Detects Access to LSASS Process
-
-## Metadata
-
-- Rule ID: a0a278fe-2c0e-4de2-ac3c-c68b08a9ba98
-- Status: test
-- Level: high
-- Author: Markus Neis
-- Date: 2018-08-26
-- Modified: 2022-08-13
-- Source Path: rules/windows/builtin/windefend/win_defender_asr_lsass_access.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects Access to LSASS Process
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

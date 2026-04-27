@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_gpg4win.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_gpg4win.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed Gpg.EXE Execution
-
 Detects the execution of a renamed "gpg.exe". Often used by ransomware and loaders to decrypt/encrypt data.
-
-## Metadata
-
-- Rule ID: ec0722a3-eb5c-4a56-8ab2-bf6f20708592
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), frack113
-- Date: 2023-08-09
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_gpg4win.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the execution of a renamed "gpg.exe". Often used by ransomware and loade
 
 ### Techniques
 
-- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486]]
+- [[kb/attack/techniques/T1486-data_encrypted_for_impact|T1486: Data Encrypted for Impact]]
 
 ## Detection
 

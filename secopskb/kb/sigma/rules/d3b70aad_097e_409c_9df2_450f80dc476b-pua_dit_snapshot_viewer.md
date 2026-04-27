@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_ditsnap.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_ditsnap.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - DIT Snapshot Viewer
-
 Detects the use of Ditsnap tool, an inspection tool for Active Directory database, ntds.dit.
-
-## Metadata
-
-- Rule ID: d3b70aad-097e-409c-9df2-450f80dc476b
-- Status: test
-- Level: high
-- Author: Furkan Caliskan (@caliskanfurkan_)
-- Date: 2020-07-04
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_ditsnap.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the use of Ditsnap tool, an inspection tool for Active Directory databas
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detection
 

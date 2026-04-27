@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_cp_passwd_or_shadow_tmp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_cp_passwd_or_shadow_tmp.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Copy Passwd Or Shadow From TMP Path
-
 Detects when the file "passwd" or "shadow" is copied from tmp path
-
-## Metadata
-
-- Rule ID: fa4aaed5-4fe0-498d-bbc0-08e3346387ba
-- Status: test
-- Level: high
-- Author: Joseliyo Sanchez, @Joseliyo_Jstnk
-- Date: 2023-01-31
-- Source Path: rules/linux/process_creation/proc_creation_lnx_cp_passwd_or_shadow_tmp.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects when the file "passwd" or "shadow" is copied from tmp path
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 ## Detection
 

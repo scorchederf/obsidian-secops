@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.015"
 attack_technique_name: "Event Triggered Execution: Component Object Model Hijacking"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.015/T1546.015.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "752191b1-7c71-445c-9dbe-21bb031b18eb"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Powershell Execute COM Object
-
 Use the PowerShell to execute COM CLSID object.
 Reference: https://pentestlab.blog/2020/05/20/persistence-com-hijacking/
 
-## Metadata
-
-- Atomic GUID: 752191b1-7c71-445c-9dbe-21bb031b18eb
-- Technique: T1546.015: Event Triggered Execution: Component Object Model Hijacking
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1546.015/T1546.015.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.015]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546015-component-object-model-hijacking|T1546.015: Component Object Model Hijacking]]
 
 ## Executor
 

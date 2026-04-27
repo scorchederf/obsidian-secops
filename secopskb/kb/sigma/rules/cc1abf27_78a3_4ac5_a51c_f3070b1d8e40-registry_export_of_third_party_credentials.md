@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_registry_export_of_thirdparty_creds.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_registry_export_of_thirdparty_creds.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "experimental"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Registry Export of Third-Party Credentials
-
 Detects the use of reg.exe to export registry paths associated with third-party credentials.
 Credential stealers have been known to use this technique to extract sensitive information from the registry.
-
-## Metadata
-
-- Rule ID: cc1abf27-78a3-4ac5-a51c-f3070b1d8e40
-- Status: experimental
-- Level: high
-- Author: Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2025-05-22
-- Source Path: rules/windows/process_creation/proc_creation_win_registry_export_of_thirdparty_creds.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Credential stealers have been known to use this technique to extract sensitive i
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.002]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552002-credentials-in-registry|T1552.002: Credentials in Registry]]
 
 ## Detection
 

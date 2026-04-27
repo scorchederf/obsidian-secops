@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1176"
 attack_technique_name: "Browser Extensions"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1176/T1176.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "7a714703-9f6b-461c-b06d-e6aeac650f27"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Google Chrome Load Unpacked Extension With Command Line
-
 This test loads an unpacked extension in Google Chrome with the `--load-extension` parameter. This technique was previously used by the Grandoreiro malware to load a malicious extension that would capture the browsing history, steal cookies and other user information. Other malwares also leverage this technique to hijack searches, steal passwords, inject ads, and more.
 
 References:
 https://attack.mitre.org/techniques/T1176/
 https://securityintelligence.com/posts/grandoreiro-malware-now-targeting-banks-in-spain/
 
-## Metadata
-
-- Atomic GUID: 7a714703-9f6b-461c-b06d-e6aeac650f27
-- Technique: T1176: Browser Extensions
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1176/T1176.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1176-software_extensions|T1176]]
+- [[kb/attack/techniques/T1176-software_extensions|T1176: Software Extensions]]
 
 ## Input Arguments
 

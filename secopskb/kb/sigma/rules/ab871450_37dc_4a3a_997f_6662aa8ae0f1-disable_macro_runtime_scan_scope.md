@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_disable_macroruntimescanscope.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_disable_macroruntimescanscope.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable Macro Runtime Scan Scope
-
 Detects tampering with the MacroRuntimeScanScope registry key to disable runtime scanning of enabled macros
-
-## Metadata
-
-- Rule ID: ab871450-37dc-4a3a-997f-6662aa8ae0f1
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-10-25
-- Modified: 2023-08-17
-- Source Path: rules/windows/registry/registry_set/registry_set_disable_macroruntimescanscope.yml
 
 ## Logsource
 

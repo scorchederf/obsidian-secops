@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "command_prompt"
 aliases:
   - "4060ee98-01ae-4c8e-8aad-af8300519cc7"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# System Information Discovery
-
 The script gathernetworkinfo.vbs is employed to collect system information such as the operating system, DNS details, firewall configuration, etc. Outputs are stored in c:\Windows\System32\config or c:\Windows\System32\reg. https://www.verboon.info/2011/06/the-gathernetworkinfo-vbs-script/
-
-## Metadata
-
-- Atomic GUID: 4060ee98-01ae-4c8e-8aad-af8300519cc7
-- Technique: T1082: System Information Discovery
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1082/T1082.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
 
 ## Executor
 

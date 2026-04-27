@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1112"
 attack_technique_name: "Modify Registry"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1112/T1112.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "65704cd4-6e36-4b90-b6c1-dc29a82c8e56"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# NetWire RAT Registry Key Creation
-
 NetWire continues to create its home key (HKCU\SOFTWARE\NetWire) as well as adding it into the auto-run group in the victim’s registry.
 See how NetWire malware - https://app.any.run/tasks/41ecdbde-4997-4301-a350-0270448b4c8f/
 
-## Metadata
-
-- Atomic GUID: 65704cd4-6e36-4b90-b6c1-dc29a82c8e56
-- Technique: T1112: Modify Registry
-- Platforms: windows
-- Executor: command_prompt
-- Source Path: atomics/T1112/T1112.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Executor
 

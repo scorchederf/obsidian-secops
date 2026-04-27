@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1555"
 attack_technique_name: "Credentials from Password Stores"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1555/T1555.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "234f9b7c-b53d-4f32-897b-b880a6c9ea7b"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Extract Windows Credential Manager via VBA
-
 This module will extract the credentials found within the Windows credential manager and dump
 them to $env:TEMP\windows-credentials.txt
 
-## Metadata
-
-- Atomic GUID: 234f9b7c-b53d-4f32-897b-b880a6c9ea7b
-- Technique: T1555: Credentials from Password Stores
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1555/T1555.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555]]
+- [[kb/attack/techniques/T1555-credentials_from_password_stores|T1555: Credentials from Password Stores]]
 
 ## Dependencies
 

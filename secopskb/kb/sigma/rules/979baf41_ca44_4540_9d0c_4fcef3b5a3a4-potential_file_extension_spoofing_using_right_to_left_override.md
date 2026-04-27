@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_right_to_left_override_extension_spoofing.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_right_to_left_override_extension_spoofing.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential File Extension Spoofing Using Right-to-Left Override
-
 Detects suspicious filenames that contain a right-to-left override character and a potentially spoofed file extensions.
-
-## Metadata
-
-- Rule ID: 979baf41-ca44-4540-9d0c-4fcef3b5a3a4
-- Status: test
-- Level: high
-- Author: Jonathan Peters (Nextron Systems), Florian Roth (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2024-11-17
-- Modified: 2026-03-20
-- Source Path: rules/windows/file/file_event/file_event_win_susp_right_to_left_override_extension_spoofing.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious filenames that contain a right-to-left override character and
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.002]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036002-right-to-left-override|T1036.002: Right-to-Left Override]]
 
 ## Detection
 

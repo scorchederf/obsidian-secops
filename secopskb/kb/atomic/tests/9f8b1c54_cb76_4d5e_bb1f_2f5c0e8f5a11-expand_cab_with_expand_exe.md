@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1140"
 attack_technique_name: "Deobfuscate/Decode Files or Information"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1140/T1140.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "9f8b1c54-cb76-4d5e-bb1f-2f5c0e8f5a11"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Expand CAB with expand.exe
-
 Uses expand.exe to extract a file from a CAB created locally. This simulates adversarial use of expand on cabinet archives.
 Upon success, art-expand-source.txt is extracted next to the CAB.
 
-## Metadata
-
-- Atomic GUID: 9f8b1c54-cb76-4d5e-bb1f-2f5c0e8f5a11
-- Technique: T1140: Deobfuscate/Decode Files or Information
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Source Path: atomics/T1140/T1140.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 ## Input Arguments
 

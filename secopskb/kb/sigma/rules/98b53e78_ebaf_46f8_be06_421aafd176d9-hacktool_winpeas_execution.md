@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_winpeas.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_winpeas.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - winPEAS Execution
-
 WinPEAS is a script that search for possible paths to escalate privileges on Windows hosts. The checks are explained on book.hacktricks.xyz
-
-## Metadata
-
-- Rule ID: 98b53e78-ebaf-46f8-be06-421aafd176d9
-- Status: test
-- Level: high
-- Author: Georg Lauenstein (sure[secure])
-- Date: 2022-09-19
-- Modified: 2023-03-23
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_winpeas.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ WinPEAS is a script that search for possible paths to escalate privileges on Win
 
 ### Techniques
 
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087]]
-- [[kb/attack/techniques/T1046-network_service_discovery|T1046]]
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
+- [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]]
+- [[kb/attack/techniques/T1046-network_service_discovery|T1046: Network Service Discovery]]
 
 ## Detection
 

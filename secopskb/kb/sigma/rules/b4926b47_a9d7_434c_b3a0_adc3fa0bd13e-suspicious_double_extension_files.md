@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_susp_double_extension.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_susp_double_extension.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Double Extension Files
-
 Detects dropped files with double extensions, which is often used by malware as a method to abuse the fact that Windows hide default extensions by default.
-
-## Metadata
-
-- Rule ID: b4926b47-a9d7-434c-b3a0-adc3fa0bd13e
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), frack113
-- Date: 2022-06-19
-- Modified: 2026-03-31
-- Source Path: rules/windows/file/file_event/file_event_win_susp_double_extension.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects dropped files with double extensions, which is often used by malware as 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.007]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036007-double-file-extension|T1036.007: Double File Extension]]
 
 ## Detection
 

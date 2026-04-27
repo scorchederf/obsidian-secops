@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes_remote.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes_remote.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Remote Child Process From Outlook
-
 Detects a suspicious child process spawning from Outlook where the image is located in a remote location (SMB/WebDav shares).
-
-## Metadata
-
-- Rule ID: e212d415-0e93-435f-9e1a-f29005bb4723
-- Status: test
-- Level: high
-- Author: Markus Neis, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2018-12-27
-- Modified: 2023-02-09
-- Source Path: rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes_remote.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a suspicious child process spawning from Outlook where the image is loca
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ## Detection
 

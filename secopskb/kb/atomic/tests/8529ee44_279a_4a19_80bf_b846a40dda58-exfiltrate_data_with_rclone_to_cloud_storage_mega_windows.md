@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1567.002"
 attack_technique_name: "Exfiltration Over Web Service: Exfiltration to Cloud Storage"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1567.002/T1567.002.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "8529ee44-279a-4a19-80bf-b846a40dda58"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Exfiltrate data with rclone to cloud Storage - Mega (Windows)
-
 This test uses rclone to exfiltrate data to a remote cloud storage instance. (Mega)
 See https://thedfirreport.com/2022/06/16/sans-ransomware-summit-2022-can-you-detect-this/
 
-## Metadata
-
-- Atomic GUID: 8529ee44-279a-4a19-80bf-b846a40dda58
-- Technique: T1567.002: Exfiltration Over Web Service: Exfiltration to Cloud Storage
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1567.002/T1567.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567.002]]
+- [[kb/attack/techniques/T1567-exfiltration_over_web_service#^t1567002-exfiltration-to-cloud-storage|T1567.002: Exfiltration to Cloud Storage]]
 
 ## Input Arguments
 

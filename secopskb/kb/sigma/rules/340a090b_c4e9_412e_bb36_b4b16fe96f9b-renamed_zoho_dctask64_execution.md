@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_renamed_dctask64.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_renamed_dctask64.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -24,20 +24,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Renamed ZOHO Dctask64 Execution
-
 Detects a renamed "dctask64.exe" execution, a signed binary by ZOHO Corporation part of ManageEngine Endpoint Central.
 This binary can be abused for DLL injection, arbitrary command and process execution.
-
-## Metadata
-
-- Rule ID: 340a090b-c4e9-412e-bb36-b4b16fe96f9b
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)
-- Date: 2020-01-28
-- Modified: 2025-01-22
-- Source Path: rules/windows/process_creation/proc_creation_win_renamed_dctask64.yml
 
 ## Logsource
 
@@ -48,10 +36,10 @@ This binary can be abused for DLL injection, arbitrary command and process execu
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
-- [[kb/attack/techniques/T1055-process_injection|T1055.001]]
-- [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
+- [[kb/attack/techniques/T1055-process_injection#^t1055001-dynamic-link-library-injection|T1055.001: Dynamic-link Library Injection]]
+- [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

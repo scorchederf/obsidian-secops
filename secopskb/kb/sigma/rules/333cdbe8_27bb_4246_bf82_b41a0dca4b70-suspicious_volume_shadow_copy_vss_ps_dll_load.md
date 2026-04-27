@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,21 +21,9 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Volume Shadow Copy VSS_PS.dll Load
-
 Detects the image load of vss_ps.dll by uncommon executables. This DLL is used by the Volume Shadow Copy Service (VSS) to manage shadow copies of files and volumes.
 It is often abused by attackers to delete or manipulate shadow copies, which can hinder forensic investigations and data recovery efforts.
 The fact that it is loaded by processes that are not typically associated with VSS operations can indicate suspicious activity.
-
-## Metadata
-
-- Rule ID: 333cdbe8-27bb-4246-bf82-b41a0dca4b70
-- Status: test
-- Level: high
-- Author: Markus Neis, @markus_neis
-- Date: 2021-07-07
-- Modified: 2025-07-11
-- Source Path: rules/windows/image_load/image_load_dll_vss_ps_susp_load.yml
 
 ## Logsource
 
@@ -46,7 +34,7 @@ The fact that it is loaded by processes that are not typically associated with V
 
 ### Techniques
 
-- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490]]
+- [[kb/attack/techniques/T1490-inhibit_system_recovery|T1490: Inhibit System Recovery]]
 
 ## Detection
 

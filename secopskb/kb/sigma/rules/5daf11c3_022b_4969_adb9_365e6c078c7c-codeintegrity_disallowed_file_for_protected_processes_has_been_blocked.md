@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/code_integrity/win_codeintegrity_blocked_protected_process_file.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/code_integrity/win_codeintegrity_blocked_protected_process_file.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / codeintegrity-operational"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CodeIntegrity - Disallowed File For Protected Processes Has Been Blocked
-
 Detects block events for files that are disallowed by code integrity for protected processes
-
-## Metadata
-
-- Rule ID: 5daf11c3-022b-4969-adb9-365e6c078c7c
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-06-06
-- Source Path: rules/windows/builtin/code_integrity/win_codeintegrity_blocked_protected_process_file.yml
 
 ## Logsource
 

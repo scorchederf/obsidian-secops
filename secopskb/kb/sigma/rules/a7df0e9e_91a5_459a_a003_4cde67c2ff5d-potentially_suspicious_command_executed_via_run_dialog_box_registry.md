@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_runmru_susp_command_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_runmru_susp_command_execution.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -21,19 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potentially Suspicious Command Executed Via Run Dialog Box - Registry
-
 Detects execution of commands via the run dialog box on Windows by checking values of the "RunMRU" registry key.
 This technique was seen being abused by threat actors to deceive users into pasting and executing malicious commands, often disguised as CAPTCHA verification steps.
-
-## Metadata
-
-- Rule ID: a7df0e9e-91a5-459a-a003-4cde67c2ff5d
-- Status: test
-- Level: high
-- Author: Ahmed Farouk, Nasreddine Bencherchali
-- Date: 2024-11-01
-- Source Path: rules/windows/registry/registry_set/registry_set_runmru_susp_command_execution.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ This technique was seen being abused by threat actors to deceive users into past
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

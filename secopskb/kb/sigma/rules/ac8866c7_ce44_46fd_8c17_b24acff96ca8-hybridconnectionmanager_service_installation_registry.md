@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_event/registry_event_hybridconnectionmgr_svc_installation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_event/registry_event_hybridconnectionmgr_svc_installation.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / registry_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HybridConnectionManager Service Installation - Registry
-
 Detects the installation of the Azure Hybrid Connection Manager service to allow remote code execution from Azure function.
-
-## Metadata
-
-- Rule ID: ac8866c7-ce44-46fd-8c17-b24acff96ca8
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
-- Date: 2021-04-12
-- Modified: 2022-11-27
-- Source Path: rules/windows/registry/registry_event/registry_event_hybridconnectionmgr_svc_installation.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the installation of the Azure Hybrid Connection Manager service to allow
 
 ### Techniques
 
-- [[kb/attack/techniques/T1608-stage_capabilities|T1608]]
+- [[kb/attack/techniques/T1608-stage_capabilities|T1608: Stage Capabilities]]
 
 ## Detection
 

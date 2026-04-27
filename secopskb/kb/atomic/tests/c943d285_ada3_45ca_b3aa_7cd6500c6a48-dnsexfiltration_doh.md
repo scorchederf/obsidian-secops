@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1048"
 attack_technique_name: "Exfiltration Over Alternative Protocol"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1048/T1048.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "c943d285-ada3-45ca-b3aa-7cd6500c6a48"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DNSExfiltration (doh)
-
 DNSExfiltrator enables the transfer (exfiltration) of a file over a DNS request covert channel. This is basically a data leak testing tool allowing to exfiltrate data over a covert channel.
 !!! Test will fail without a domain under your control with A record and NS record !!! 
 See this github page for more details - https://github.com/Arno0x/DNSExfiltrator
 
-## Metadata
-
-- Atomic GUID: c943d285-ada3-45ca-b3aa-7cd6500c6a48
-- Technique: T1048: Exfiltration Over Alternative Protocol
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1048/T1048.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048]]
+- [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048: Exfiltration Over Alternative Protocol]]
 
 ## Input Arguments
 

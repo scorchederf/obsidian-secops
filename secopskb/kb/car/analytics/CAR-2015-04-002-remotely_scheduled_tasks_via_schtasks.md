@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2015-04-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2015-04-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2015-04-002"
   - "Remotely Scheduled Tasks via Schtasks"
@@ -24,20 +24,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks
-
-## Metadata
-
-- CAR ID: CAR-2015-04-002
-- Submission Date: 2015/04/29
-- Information Domain: Host, Network
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Network API RPC, PCAP
-- Contributors: MITRE
-
-## Description
-
 An adversary can [move laterally](https://attack.mitre.org/tactics/TA0008) using the `schtasks` command to remotely [schedule tasks/jobs](https://attack.mitre.org/techniques/T1053). Although these events can be detected with command line analytics [[kb/car/analytics/CAR-2013-08-001-execution_with_schtasks|CAR-2013-08-001]], it is possible for an adversary to use the API directly, via the Task Scheduler GUI or with a scripting language such as [PowerShell](https://attack.mitre.org/techniques/T1059/001). In this cases, an additional source of data becomes necessary to detect adversarial behavior. When scheduled tasks are created remotely, Windows uses RPC (135/tcp) to communicate with the Task Scheduler on the remote machine. Once an RPC connection is established ([[kb/car/analytics/CAR-2014-05-001-rpc_activity|CAR-2014-05-001]]), the client communicates with the Scheduled Tasks endpoint, which runs within the service group netsvcs. With packet capture and the right packet decoders or byte-stream based signatures, remote invocations of these functions can be identified.
 
 Certain strings can be identifiers of the schtasks, by looking up the interface UUID of ITaskSchedulerService in different formats
@@ -50,8 +36,8 @@ This identifier is present three times during the RPC request phase. Any sensor 
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]] (coverage: Moderate; tactics: TA0002)
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]] (coverage: Moderate; tactics: TA0002)
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Implementations
 

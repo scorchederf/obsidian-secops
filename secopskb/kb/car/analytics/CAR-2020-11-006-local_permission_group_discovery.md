@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2020-11-006/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-006.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2020-11-006"
   - "Local Permission Group Discovery"
@@ -27,27 +27,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2020-11-006: Local Permission Group Discovery
-
-## Metadata
-
-- CAR ID: CAR-2020-11-006
-- Submission Date: 2020/11/30
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Olaf Hartong
-
-## Description
-
 Cyber actors frequently enumerate local or domain permissions groups. The net utility is usually used for this purpose. This analytic looks for any instances of net.exe, which is not normally used for benign purposes, although system administrator actions may trigger false positives.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069]] (coverage: Moderate; tactics: TA0007)
-  - [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.001]]
-  - [[kb/attack/techniques/T1069-permission_groups_discovery|T1069.002]]
+- [[kb/attack/techniques/T1069-permission_groups_discovery|T1069: Permission Groups Discovery]] (coverage: Moderate; tactics: TA0007)
+  - [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069001-local-groups|T1069.001: Local Groups]]
+  - [[kb/attack/techniques/T1069-permission_groups_discovery#^t1069002-domain-groups|T1069.002: Domain Groups]]
 
 ## Implementations
 

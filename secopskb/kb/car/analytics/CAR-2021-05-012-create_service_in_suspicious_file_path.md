@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-05-012/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-05-012.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-05-012"
   - "Create Service In Suspicious File Path"
@@ -26,28 +26,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-05-012: Create Service In Suspicious File Path
-
-## Metadata
-
-- CAR ID: CAR-2021-05-012
-- Submission Date: 2021/05/11
-- Update Date: 2021/04/05
-- Information Domain: Analytic
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: Splunk Threat Research <research@splunk.com>
-
-## Description
-
 This detection is to identify a creation of "user mode service" where the service file path is located in non-common service folder in windows.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1569-system_services|T1569]] (coverage: Moderate; tactics: TA0002)
-  - [[kb/attack/techniques/T1569-system_services|T1569.001]]
-  - [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1569-system_services|T1569: System Services]] (coverage: Moderate; tactics: TA0002)
+  - [[kb/attack/techniques/T1569-system_services#^t1569001-launchctl|T1569.001: Launchctl]]
+  - [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Implementations
 

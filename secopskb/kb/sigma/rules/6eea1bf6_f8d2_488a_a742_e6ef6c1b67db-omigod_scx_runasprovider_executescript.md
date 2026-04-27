@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executescript.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executescript.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -23,23 +23,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OMIGOD SCX RunAsProvider ExecuteScript
-
 Rule to detect the use of the SCX RunAsProvider ExecuteScript to execute any UNIX/Linux script using the /bin/sh shell.
 Script being executed gets created as a temp file in /tmp folder with a scx* prefix.
 Then it is invoked from the following directory /etc/opt/microsoft/scx/conf/tmpdir/.
 The file in that directory has the same prefix scx*. SCXcore, started as the Microsoft Operations Manager UNIX/Linux Agent, is now used in a host of products including
 Microsoft Operations Manager, Microsoft Azure, and Microsoft Operations Management Suite.
-
-## Metadata
-
-- Rule ID: 6eea1bf6-f8d2-488a-a742-e6ef6c1b67db
-- Status: test
-- Level: high
-- Author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC
-- Date: 2021-10-15
-- Modified: 2022-10-05
-- Source Path: rules/linux/process_creation/proc_creation_lnx_omigod_scx_runasprovider_executescript.yml
 
 ## Logsource
 
@@ -50,9 +38,9 @@ Microsoft Operations Manager, Microsoft Azure, and Microsoft Operations Manageme
 
 ### Techniques
 
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
-- [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203]]
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
+- [[kb/attack/techniques/T1203-exploitation_for_client_execution|T1203: Exploitation for Client Execution]]
 
 ## Detection
 

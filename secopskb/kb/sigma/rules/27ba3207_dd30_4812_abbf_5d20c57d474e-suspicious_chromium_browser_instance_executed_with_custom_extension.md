@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Chromium Browser Instance Executed With Custom Extension
-
 Detects a suspicious process spawning a Chromium based browser process with the 'load-extension' flag to start an instance with a custom extension
-
-## Metadata
-
-- Rule ID: 27ba3207-dd30-4812-abbf-5d20c57d474e
-- Status: test
-- Level: high
-- Author: Aedan Russell, frack113, X__Junior (Nextron Systems)
-- Date: 2022-06-19
-- Modified: 2023-11-28
-- Source Path: rules/windows/process_creation/proc_creation_win_browsers_chromium_susp_load_extension.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects a suspicious process spawning a Chromium based browser process with the 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1176-software_extensions|T1176.001]]
+- [[kb/attack/techniques/T1176-software_extensions#^t1176001-browser-extensions|T1176.001: Browser Extensions]]
 
 ## Detection
 

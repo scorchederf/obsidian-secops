@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1609"
 attack_technique_name: "Kubernetes Exec Into Container"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1609/T1609.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "900e2c49-221b-42ec-ae3c-4717e41e6219"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Docker Exec Into Container
-
 Attackers who have permissions, can run malicious commands in containers in the cluster using exec command (“docker exec”). In this method, attackers can use legitimate images, such as an OS image (e.g., Ubuntu) as a backdoor container, and run their malicious code remotely by using “docker exec”. Kinsing (Golang-based malware) was executed with an Ubuntu container entry point that runs shell scripts.
-
-## Metadata
-
-- Atomic GUID: 900e2c49-221b-42ec-ae3c-4717e41e6219
-- Technique: T1609: Kubernetes Exec Into Container
-- Platforms: containers
-- Executor: bash
-- Elevation Required: False
-- Source Path: atomics/T1609/T1609.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1609-container_administration_command|T1609]]
+- [[kb/attack/techniques/T1609-container_administration_command|T1609: Container Administration Command]]
 
 ## Dependencies
 

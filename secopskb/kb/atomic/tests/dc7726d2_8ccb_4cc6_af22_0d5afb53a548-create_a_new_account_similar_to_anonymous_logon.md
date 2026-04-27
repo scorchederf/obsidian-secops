@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1136.002"
 attack_technique_name: "Create Account: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.002/T1136.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "dc7726d2-8ccb-4cc6-af22-0d5afb53a548"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create a new account similar to ANONYMOUS LOGON
-
 Create a new account similar to ANONYMOUS LOGON in a command prompt.
-
-## Metadata
-
-- Atomic GUID: dc7726d2-8ccb-4cc6-af22-0d5afb53a548
-- Technique: T1136.002: Create Account: Domain Account
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Source Path: atomics/T1136.002/T1136.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1136-create_account|T1136.002]]
+- [[kb/attack/techniques/T1136-create_account#^t1136002-domain-account|T1136.002: Domain Account]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/webserver_generic/web_webshell_regeorg.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/webserver_generic/web_webshell_regeorg.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "webserver"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Webshell ReGeorg Detection Via Web Logs
-
 Certain strings in the uri_query field when combined with null referer and null user agent can indicate activity associated with the webshell ReGeorg.
-
-## Metadata
-
-- Rule ID: 2ea44a60-cfda-11ea-87d0-0242ac130003
-- Status: test
-- Level: high
-- Author: Cian Heasley
-- Date: 2020-08-04
-- Modified: 2023-01-02
-- Source Path: rules/web/webserver_generic/web_webshell_regeorg.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Certain strings in the uri_query field when combined with null referer and null 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

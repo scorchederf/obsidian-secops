@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Default PowerSploit/Empire Scheduled Task Creation
-
 Detects the creation of a schtask via PowerSploit or Empire Default Configuration.
-
-## Metadata
-
-- Rule ID: 56c217c3-2de2-479b-990f-5c109ba8458f
-- Status: test
-- Level: high
-- Author: Markus Neis, @Karneades
-- Date: 2018-03-06
-- Modified: 2023-03-03
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_powersploit_empire_default_schtasks.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the creation of a schtask via PowerSploit or Empire Default Configuratio
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ### Software Tags
 

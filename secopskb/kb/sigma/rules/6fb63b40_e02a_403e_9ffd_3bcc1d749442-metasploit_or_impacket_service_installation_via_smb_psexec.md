@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_metasploit_or_impacket_smb_psexec_service_install.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_metasploit_or_impacket_smb_psexec_service_install.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Metasploit Or Impacket Service Installation Via SMB PsExec
-
 Detects usage of Metasploit SMB PsExec (exploit/windows/smb/psexec) and Impacket psexec.py by triggering on specific service installation
-
-## Metadata
-
-- Rule ID: 6fb63b40-e02a-403e-9ffd-3bcc1d749442
-- Status: test
-- Level: high
-- Author: Bartlomiej Czyz, Relativity
-- Date: 2021-01-21
-- Modified: 2022-10-05
-- Source Path: rules/windows/builtin/security/win_security_metasploit_or_impacket_smb_psexec_service_install.yml
 
 ## Logsource
 
@@ -47,9 +35,9 @@ Detects usage of Metasploit SMB PsExec (exploit/windows/smb/psexec) and Impacket
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570]]
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[kb/attack/techniques/T1570-lateral_tool_transfer|T1570: Lateral Tool Transfer]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Detection
 

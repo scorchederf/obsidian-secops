@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1082"
 attack_technique_name: "System Information Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1082/T1082.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "3d256a2f-5e57-4003-8eb6-64d91b1da7ce"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# WinPwn - itm4nprivesc
-
 Discover Local Privilege Escalation possibilities using itm4nprivesc function of WinPwn
-
-## Metadata
-
-- Atomic GUID: 3d256a2f-5e57-4003-8eb6-64d91b1da7ce
-- Technique: T1082: System Information Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1082/T1082.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1082-system_information_discovery|T1082]]
+- [[kb/attack/techniques/T1082-system_information_discovery|T1082: System Information Discovery]]
 
 ## Executor
 

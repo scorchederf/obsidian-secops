@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wusa_susp_parent_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wusa_susp_parent_execution.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,20 +19,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Wusa.EXE Executed By Parent Process Located In Suspicious Location
-
 Detects execution of the "wusa.exe" (Windows Update Standalone Installer) utility by a parent process that is located in a suspicious location.
 Attackers could instantiate an instance of "wusa.exe" in order to bypass User Account Control (UAC). They can duplicate the access token from "wusa.exe" to gain elevated privileges.
-
-## Metadata
-
-- Rule ID: ef64fc9c-a45e-43cc-8fd8-7d75d73b4c99
-- Status: test
-- Level: high
-- Author: X__Junior (Nextron Systems)
-- Date: 2023-11-26
-- Modified: 2024-08-15
-- Source Path: rules/windows/process_creation/proc_creation_win_wusa_susp_parent_execution.yml
 
 ## Logsource
 

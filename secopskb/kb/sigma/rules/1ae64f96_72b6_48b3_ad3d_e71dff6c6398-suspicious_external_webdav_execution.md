@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/proxy_generic/proxy_webdav_external_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/proxy_generic/proxy_webdav_external_execution.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "proxy"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious External WebDAV Execution
-
 Detects executables launched from external WebDAV shares using the WebDAV Explorer integration, commonly seen in initial access campaigns.
-
-## Metadata
-
-- Rule ID: 1ae64f96-72b6-48b3-ad3d-e71dff6c6398
-- Status: test
-- Level: high
-- Author: Ahmed Farouk
-- Date: 2024-05-10
-- Source Path: rules/web/proxy_generic/proxy_webdav_external_execution.yml
 
 ## Logsource
 
@@ -43,8 +32,8 @@ Detects executables launched from external WebDAV shares using the WebDAV Explor
 
 ### Techniques
 
-- [[kb/attack/techniques/T1584-compromise_infrastructure|T1584]]
-- [[kb/attack/techniques/T1566-phishing|T1566]]
+- [[kb/attack/techniques/T1584-compromise_infrastructure|T1584: Compromise Infrastructure]]
+- [[kb/attack/techniques/T1566-phishing|T1566: Phishing]]
 
 ## Detection
 

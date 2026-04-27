@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_alert_active_directory_user_control.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_alert_active_directory_user_control.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Enabled User Right in AD to Control User Objects
-
 Detects scenario where if a user is assigned the SeEnableDelegationPrivilege right in Active Directory it would allow control of other AD user objects.
-
-## Metadata
-
-- Rule ID: 311b6ce2-7890-4383-a8c2-663a9f6b43cd
-- Status: test
-- Level: high
-- Author: @neu5ron
-- Date: 2017-07-30
-- Modified: 2021-12-02
-- Source Path: rules/windows/builtin/security/win_security_alert_active_directory_user_control.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects scenario where if a user is assigned the SeEnableDelegationPrivilege rig
 
 ### Techniques
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098]]
+- [[kb/attack/techniques/T1098-account_manipulation|T1098: Account Manipulation]]
 
 ## Detection
 

@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.005"
 attack_technique_name: "Unsecured Credentials: Cloud Instance Metadata API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.005/T1552.005.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "cc99e772-4e18-4f1f-b422-c5cdd1bfd7b7"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Dump Azure Instance Metadata from Virtual Machines
-
 This test invokes a web request to the default Instance Metadata API of 169.254.169.254 in order to dump the data contained within it to a file. 
 See: https://www.sans.org/blog/cloud-instance-metadata-services-imds-/
 
-## Metadata
-
-- Atomic GUID: cc99e772-4e18-4f1f-b422-c5cdd1bfd7b7
-- Technique: T1552.005: Unsecured Credentials: Cloud Instance Metadata API
-- Platforms: iaas:azure
-- Executor: powershell
-- Source Path: atomics/T1552.005/T1552.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.005]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552005-cloud-instance-metadata-api|T1552.005: Cloud Instance Metadata API]]
 
 ## Input Arguments
 

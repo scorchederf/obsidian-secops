@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_delete/registry_delete_removal_amsi_registry_key.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_delete/registry_delete_removal_amsi_registry_key.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / registry_delete"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Removal Of AMSI Provider Registry Keys
-
 Detects the deletion of AMSI provider registry key entries in HKLM\Software\Microsoft\AMSI. This technique could be used by an attacker in order to disable AMSI inspection.
-
-## Metadata
-
-- Rule ID: 41d1058a-aea7-4952-9293-29eaaf516465
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2021-06-07
-- Modified: 2025-10-07
-- Source Path: rules/windows/registry/registry_delete/registry_delete_removal_amsi_registry_key.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the deletion of AMSI provider registry key entries in HKLM\Software\Micr
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
 
 ## Detection
 

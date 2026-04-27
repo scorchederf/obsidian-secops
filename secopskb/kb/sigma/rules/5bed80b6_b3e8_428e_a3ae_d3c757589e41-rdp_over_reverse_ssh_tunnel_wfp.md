@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/security/win_security_rdp_reverse_tunnel.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_rdp_reverse_tunnel.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / security"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# RDP over Reverse SSH Tunnel WFP
-
 Detects svchost hosting RDP termsvcs communicating with the loopback address
-
-## Metadata
-
-- Rule ID: 5bed80b6-b3e8-428e-a3ae-d3c757589e41
-- Status: test
-- Level: high
-- Author: Samir Bousseaden
-- Date: 2019-02-16
-- Modified: 2022-09-02
-- Source Path: rules/windows/builtin/security/win_security_rdp_reverse_tunnel.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects svchost hosting RDP termsvcs communicating with the loopback address
 
 ### Techniques
 
-- [[kb/attack/techniques/T1090-proxy|T1090.001]]
-- [[kb/attack/techniques/T1090-proxy|T1090.002]]
-- [[kb/attack/techniques/T1021-remote_services|T1021.001]]
+- [[kb/attack/techniques/T1090-proxy#^t1090001-internal-proxy|T1090.001: Internal Proxy]]
+- [[kb/attack/techniques/T1090-proxy#^t1090002-external-proxy|T1090.002: External Proxy]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021001-remote-desktop-protocol|T1021.001: Remote Desktop Protocol]]
 
 ## Detection
 

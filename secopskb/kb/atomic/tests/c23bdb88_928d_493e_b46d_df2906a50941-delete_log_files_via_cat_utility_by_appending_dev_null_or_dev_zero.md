@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070.002"
 attack_technique_name: "Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.002/T1070.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "c23bdb88-928d-493e-b46d-df2906a50941"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Delete log files via cat utility by appending /dev/null or /dev/zero
-
 The first sub-test truncates the log file to zero bytes via /dev/null and the second sub-test fills the log file with null bytes(zeroes) via /dev/zero, using cat utility
-
-## Metadata
-
-- Atomic GUID: c23bdb88-928d-493e-b46d-df2906a50941
-- Technique: T1070.002: Indicator Removal on Host: Clear FreeBSD, Linux or Mac System Logs
-- Platforms: macos
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1070.002/T1070.002.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.002]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070002-clear-linux-or-mac-system-logs|T1070.002: Clear Linux or Mac System Logs]]
 
 ## Input Arguments
 

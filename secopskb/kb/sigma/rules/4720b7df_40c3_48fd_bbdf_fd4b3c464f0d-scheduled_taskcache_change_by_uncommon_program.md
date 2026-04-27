@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/registry/registry_set/registry_set_taskcache_entry.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_taskcache_entry.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / registry_set"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Scheduled TaskCache Change by Uncommon Program
-
 Monitor the creation of a new key under 'TaskCache' when a new scheduled task is registered by a process that is not svchost.exe, which is suspicious
-
-## Metadata
-
-- Rule ID: 4720b7df-40c3-48fd-bbdf-fd4b3c464f0d
-- Status: test
-- Level: high
-- Author: Syed Hasan (@syedhasan009)
-- Date: 2021-06-18
-- Modified: 2025-10-22
-- Source Path: rules/windows/registry/registry_set/registry_set_taskcache_entry.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Monitor the creation of a new key under 'TaskCache' when a new scheduled task is
 
 ### Techniques
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]]
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]]
+- [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Detection
 

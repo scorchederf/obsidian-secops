@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1087.002"
 attack_technique_name: "Account Discovery: Domain Account"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.002/T1087.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "95018438-454a-468c-a0fa-59c800149b59"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Automated AD Recon (ADRecon)
-
 ADRecon extracts and combines information about an AD environement into a report. Upon execution, an Excel file with all of the data will be generated and its
 path will be displayed.
 
-## Metadata
-
-- Atomic GUID: 95018438-454a-468c-a0fa-59c800149b59
-- Technique: T1087.002: Account Discovery: Domain Account
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1087.002/T1087.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1087-account_discovery|T1087.002]]
+- [[kb/attack/techniques/T1087-account_discovery#^t1087002-domain-account|T1087.002: Domain Account]]
 
 ## Input Arguments
 

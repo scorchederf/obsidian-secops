@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1547.010"
 attack_technique_name: "Boot or Logon Autostart Execution: Port Monitors"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.010/T1547.010.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "d34ef297-f178-4462-871e-9ce618d44e50"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Add Port Monitor persistence in Registry
-
 Add key-value pair to a Windows Port Monitor registry. On the subsequent reboot DLL will be execute under spoolsv with NT AUTHORITY/SYSTEM privilege.
-
-## Metadata
-
-- Atomic GUID: d34ef297-f178-4462-871e-9ce618d44e50
-- Technique: T1547.010: Boot or Logon Autostart Execution: Port Monitors
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Source Path: atomics/T1547.010/T1547.010.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.010]]
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547010-port-monitors|T1547.010: Port Monitors]]
 
 ## Input Arguments
 

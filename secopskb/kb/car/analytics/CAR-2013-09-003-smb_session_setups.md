@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-09-003/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-09-003.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-09-003"
   - "SMB Session Setups"
@@ -21,27 +21,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-09-003: SMB Session Setups
-
-## Metadata
-
-- CAR ID: CAR-2013-09-003
-- Submission Date: 2013/09/12
-- Information Domain: Network
-- Analytic Type: Situational Awareness
-- Platforms: 
-- Data Subtypes: PCAP
-- Contributors: MITRE
-
-## Description
-
 Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.
 
 This analytic monitors SMB activity that deals with user activity rather than file activity.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1187-forced_authentication|T1187]] (coverage: Low; tactics: TA0006)
+- [[kb/attack/techniques/T1187-forced_authentication|T1187: Forced Authentication]] (coverage: Low; tactics: TA0006)
 
 ## Implementations
 

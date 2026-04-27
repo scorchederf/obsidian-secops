@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_logman_disable_eventlog.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_logman_disable_eventlog.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Windows Trace ETW Session Tamper Via Logman.EXE
-
 Detects the execution of "logman" utility in order to disable or delete Windows trace sessions
-
-## Metadata
-
-- Rule ID: cd1f961e-0b96-436b-b7c6-38da4583ec00
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-02-11
-- Modified: 2023-02-21
-- Source Path: rules/windows/process_creation/proc_creation_win_logman_disable_eventlog.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the execution of "logman" utility in order to disable or delete Windows 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.001]]
-- [[kb/attack/techniques/T1070-indicator_removal|T1070.001]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562001-disable-or-modify-tools|T1562.001: Disable or Modify Tools]]
+- [[kb/attack/techniques/T1070-indicator_removal#^t1070001-clear-windows-event-logs|T1070.001: Clear Windows Event Logs]]
 
 ## Detection
 

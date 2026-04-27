@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_regini_ads.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_regini_ads.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Registry Modification From ADS Via Regini.EXE
-
 Detects the import of an alternate data stream with regini.exe, regini.exe can be used to modify registry keys.
-
-## Metadata
-
-- Rule ID: 77946e79-97f1-45a2-84b4-f37b5c0d8682
-- Status: test
-- Level: high
-- Author: Eli Salem, Sander Wiebing, oscd.community
-- Date: 2020-10-12
-- Modified: 2023-02-08
-- Source Path: rules/windows/process_creation/proc_creation_win_regini_ads.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the import of an alternate data stream with regini.exe, regini.exe can b
 
 ### Techniques
 
-- [[kb/attack/techniques/T1112-modify_registry|T1112]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]]
 
 ## Detection
 

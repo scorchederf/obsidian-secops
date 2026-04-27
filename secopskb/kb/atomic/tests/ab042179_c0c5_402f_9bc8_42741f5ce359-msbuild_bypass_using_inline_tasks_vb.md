@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1127.001"
 attack_technique_name: "Trusted Developer Utilities Proxy Execution: MSBuild"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127.001/T1127.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "ab042179-c0c5-402f-9bc8-42741f5ce359"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# MSBuild Bypass Using Inline Tasks (VB)
-
 Executes the code in a project file using msbuild.exe. The default Visual Basic example file (vb.xml) will simply print "Hello from a Visual Basic inline task!" to the screen.
-
-## Metadata
-
-- Atomic GUID: ab042179-c0c5-402f-9bc8-42741f5ce359
-- Technique: T1127.001: Trusted Developer Utilities Proxy Execution: MSBuild
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1127.001/T1127.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127.001]]
+- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution#^t1127001-msbuild|T1127.001: MSBuild]]
 
 ## Input Arguments
 

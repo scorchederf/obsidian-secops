@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_rundll32_process_dump_via_comsvcs.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_rundll32_process_dump_via_comsvcs.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Process Memory Dump Via Comsvcs.DLL
-
 Detects a process memory dump via "comsvcs.dll" using rundll32, covering multiple different techniques (ordinal, minidump function, etc.)
-
-## Metadata
-
-- Rule ID: 646ea171-dded-4578-8a4d-65e9822892e3
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems), Modexp, Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)
-- Date: 2020-02-18
-- Modified: 2025-02-23
-- Source Path: rules/windows/process_creation/proc_creation_win_rundll32_process_dump_via_comsvcs.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects a process memory dump via "comsvcs.dll" using rundll32, covering multipl
 
 ### Techniques
 
-- [[kb/attack/techniques/T1036-masquerading|T1036]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1036-masquerading|T1036: Masquerading]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

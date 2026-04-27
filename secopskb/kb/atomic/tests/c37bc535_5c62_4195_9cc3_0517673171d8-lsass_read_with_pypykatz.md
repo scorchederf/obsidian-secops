@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "c37bc535-5c62-4195-9cc3-0517673171d8"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LSASS read with pypykatz
-
 Parses secrets hidden in the LSASS process with python. Similar to mimikatz's sekurlsa::
 
 Python 3 must be installed, use the get_prereq_command's to meet the prerequisites for this test.
@@ -30,19 +28,9 @@ Successful execution of this test will display multiple usernames and passwords/
 
 Will create a Python virtual environment within the External Payloads folder that can be deleted manually post test execution.
 
-## Metadata
-
-- Atomic GUID: c37bc535-5c62-4195-9cc3-0517673171d8
-- Technique: T1003.001: OS Credential Dumping: LSASS Memory
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1003.001/T1003.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_vmware_vmtoolsd_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_vmware_vmtoolsd_susp_child_process.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# VMToolsd Suspicious Child Process
-
 Detects suspicious child process creations of VMware Tools process which may indicate persistence setup
-
-## Metadata
-
-- Rule ID: 5687f942-867b-4578-ade7-1e341c46e99a
-- Status: test
-- Level: high
-- Author: bohops, Bhabesh Raj
-- Date: 2021-10-08
-- Modified: 2023-07-25
-- Source Path: rules/windows/process_creation/proc_creation_win_vmware_vmtoolsd_susp_child_process.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects suspicious child process creations of VMware Tools process which may ind
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Detection
 

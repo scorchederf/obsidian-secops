@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_taskmgr_lsass_dump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_taskmgr_lsass_dump.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LSASS Process Memory Dump Creation Via Taskmgr.EXE
-
 Detects the creation of an "lsass.dmp" file by the taskmgr process. This indicates a manual dumping of the LSASS.exe process memory using Windows Task Manager.
-
-## Metadata
-
-- Rule ID: 69ca12af-119d-44ed-b50f-a47af0ebc364
-- Status: test
-- Level: high
-- Author: Swachchhanda Shrawan Poudel
-- Date: 2023-10-19
-- Source Path: rules/windows/file/file_event/file_event_win_taskmgr_lsass_dump.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the creation of an "lsass.dmp" file by the taskmgr process. This indicat
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Detection
 

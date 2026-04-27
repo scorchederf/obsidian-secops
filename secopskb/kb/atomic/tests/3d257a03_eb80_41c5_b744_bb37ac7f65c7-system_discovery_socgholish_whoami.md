@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1033"
 attack_technique_name: "System Owner/User Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1033/T1033.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "3d257a03-eb80-41c5-b744-bb37ac7f65c7"
@@ -20,24 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# System Discovery - SocGholish whoami
-
 SocGholish performs whoami discovery commands and outputs the results to a tmp file. 
 The test will generate a filename similar to the random one generated during execution and write the file to AppData\Temp.
 
 Reference: https://redcanary.com/threat-detection-report/threats/socgholish/
 
-## Metadata
-
-- Atomic GUID: 3d257a03-eb80-41c5-b744-bb37ac7f65c7
-- Technique: T1033: System Owner/User Discovery
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1033/T1033.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033]]
+- [[kb/attack/techniques/T1033-system_owner_user_discovery|T1033: System Owner/User Discovery]]
 
 ## Input Arguments
 

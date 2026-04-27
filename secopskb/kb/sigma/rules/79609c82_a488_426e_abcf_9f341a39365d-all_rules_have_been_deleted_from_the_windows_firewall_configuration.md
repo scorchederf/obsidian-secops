@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/firewall_as/win_firewall_as_delete_all_rules.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/firewall_as/win_firewall_as_delete_all_rules.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "windows / firewall-as"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# All Rules Have Been Deleted From The Windows Firewall Configuration
-
 Detects when a all the rules have been deleted from the Windows Defender Firewall configuration
-
-## Metadata
-
-- Rule ID: 79609c82-a488-426e-abcf-9f341a39365d
-- Status: test
-- Level: high
-- Author: frack113, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-01-17
-- Modified: 2024-01-22
-- Source Path: rules/windows/builtin/firewall_as/win_firewall_as_delete_all_rules.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects when a all the rules have been deleted from the Windows Defender Firewal
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 ## Detection
 

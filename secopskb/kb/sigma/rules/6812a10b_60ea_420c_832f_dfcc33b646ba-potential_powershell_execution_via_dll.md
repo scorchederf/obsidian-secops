@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_susp_powershell_execution_via_dll.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_susp_powershell_execution_via_dll.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:54"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential PowerShell Execution Via DLL
-
 Detects potential PowerShell execution from a DLL instead of the usual PowerShell process as seen used in PowerShdll.
 This detection assumes that PowerShell commands are passed via the CommandLine.
-
-## Metadata
-
-- Rule ID: 6812a10b-60ea-420c-832f-dfcc33b646ba
-- Status: test
-- Level: high
-- Author: Markus Neis, Nasreddine Bencherchali (Nextron Systems)
-- Date: 2018-08-25
-- Modified: 2024-03-07
-- Source Path: rules/windows/process_creation/proc_creation_win_susp_powershell_execution_via_dll.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ This detection assumes that PowerShell commands are passed via the CommandLine.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.011]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218011-rundll32|T1218.011: Rundll32]]
 
 ## Detection
 

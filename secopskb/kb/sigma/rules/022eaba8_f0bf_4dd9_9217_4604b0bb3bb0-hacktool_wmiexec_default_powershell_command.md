@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_wmiexec_default_powershell.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_wmiexec_default_powershell.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Wmiexec Default Powershell Command
-
 Detects the execution of PowerShell with a specific flag sequence that is used by the Wmiexec script
-
-## Metadata
-
-- Rule ID: 022eaba8-f0bf-4dd9-9217-4604b0bb3bb0
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-03-08
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_wmiexec_default_powershell.yml
 
 ## Logsource
 

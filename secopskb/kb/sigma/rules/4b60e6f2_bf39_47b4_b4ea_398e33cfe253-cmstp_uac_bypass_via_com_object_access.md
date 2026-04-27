@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp_com_object_access.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp_com_object_access.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "stable"
 level: "high"
 logsource: "windows / process_creation"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CMSTP UAC Bypass via COM Object Access
-
 Detects UAC Bypass Attempt Using Microsoft Connection Manager Profile Installer Autoelevate-capable COM Objects (e.g. UACMe ID of 41, 43, 58 or 65)
-
-## Metadata
-
-- Rule ID: 4b60e6f2-bf39-47b4-b4ea-398e33cfe253
-- Status: stable
-- Level: high
-- Author: Nik Seetharaman, Christian Burkard (Nextron Systems)
-- Date: 2019-07-31
-- Modified: 2024-12-01
-- Source Path: rules/windows/process_creation/proc_creation_win_uac_bypass_cmstp_com_object_access.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects UAC Bypass Attempt Using Microsoft Connection Manager Profile Installer 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 ## Detection
 

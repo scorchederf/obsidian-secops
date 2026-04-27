@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/audit_logs/azure_app_uri_modifications.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/audit_logs/azure_app_uri_modifications.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "azure / auditlogs"
@@ -22,19 +22,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Application URI Configuration Changes
-
 Detects when a configuration change is made to an applications URI.
 URIs for domain names that no longer exist (dangling URIs), not using HTTPS, wildcards at the end of the domain, URIs that are no unique to that app, or URIs that point to domains you do not control should be investigated.
-
-## Metadata
-
-- Rule ID: 0055ad1f-be85-4798-83cf-a6da17c993b3
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Bailey Bercik '@baileybercik'
-- Date: 2022-06-02
-- Source Path: rules/cloud/azure/audit_logs/azure_app_uri_modifications.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ URIs for domain names that no longer exist (dangling URIs), not using HTTPS, wil
 
 ### Techniques
 
-- [[kb/attack/techniques/T1528-steal_application_access_token|T1528]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1528-steal_application_access_token|T1528: Steal Application Access Token]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

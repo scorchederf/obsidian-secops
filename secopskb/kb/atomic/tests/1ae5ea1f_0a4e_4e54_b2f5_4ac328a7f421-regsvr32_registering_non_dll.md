@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1218.010"
 attack_technique_name: "Signed Binary Proxy Execution: Regsvr32"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "1ae5ea1f-0a4e-4e54-b2f5-4ac328a7f421"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Regsvr32 Registering Non DLL
-
 Replicating observed Gozi maldoc behavior registering a dll with an altered extension
-
-## Metadata
-
-- Atomic GUID: 1ae5ea1f-0a4e-4e54-b2f5-4ac328a7f421
-- Technique: T1218.010: Signed Binary Proxy Execution: Regsvr32
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: False
-- Dependency Executor: command_prompt
-- Source Path: atomics/T1218.010/T1218.010.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.010]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218010-regsvr32|T1218.010: Regsvr32]]
 
 ## Input Arguments
 

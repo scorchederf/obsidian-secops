@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/aws/cloudtrail/aws_iam_s3browser_loginprofile_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/aws/cloudtrail/aws_iam_s3browser_loginprofile_creation.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "aws / cloudtrail"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS IAM S3Browser LoginProfile Creation
-
 Detects S3 Browser utility performing reconnaissance looking for existing IAM Users without a LoginProfile defined then (when found) creating a LoginProfile.
-
-## Metadata
-
-- Rule ID: db014773-b1d3-46bd-ba26-133337c0ffee
-- Status: test
-- Level: high
-- Author: daniel.bohannon@permiso.io (@danielhbohannon)
-- Date: 2023-05-17
-- Source Path: rules/cloud/aws/cloudtrail/aws_iam_s3browser_loginprofile_creation.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects S3 Browser utility performing reconnaissance looking for existing IAM Us
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.009]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059009-cloud-api|T1059.009: Cloud API]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

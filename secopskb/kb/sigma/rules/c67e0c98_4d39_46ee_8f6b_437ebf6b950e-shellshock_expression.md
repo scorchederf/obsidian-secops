@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/builtin/lnx_shellshock.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/builtin/lnx_shellshock.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "linux"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Shellshock Expression
-
 Detects shellshock expressions in log files
-
-## Metadata
-
-- Rule ID: c67e0c98-4d39-46ee-8f6b-437ebf6b950e
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2017-03-14
-- Modified: 2022-10-09
-- Source Path: rules/linux/builtin/lnx_shellshock.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects shellshock expressions in log files
 
 ### Techniques
 
-- [[kb/attack/techniques/T1505-server_software_component|T1505.003]]
+- [[kb/attack/techniques/T1505-server_software_component#^t1505003-web-shell|T1505.003: Web Shell]]
 
 ## Detection
 

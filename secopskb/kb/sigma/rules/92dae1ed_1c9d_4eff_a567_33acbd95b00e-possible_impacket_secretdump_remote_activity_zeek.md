@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/network/zeek/zeek_smb_converted_win_impacket_secretdump.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/network/zeek/zeek_smb_converted_win_impacket_secretdump.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "zeek / smb_files"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Possible Impacket SecretDump Remote Activity - Zeek
-
 Detect AD credential dumping using impacket secretdump HKTL. Based on the SIGMA rules/windows/builtin/win_impacket_secretdump.yml
-
-## Metadata
-
-- Rule ID: 92dae1ed-1c9d-4eff-a567-33acbd95b00e
-- Status: test
-- Level: high
-- Author: Samir Bousseaden, @neu5ron
-- Date: 2020-03-19
-- Modified: 2021-11-27
-- Source Path: rules/network/zeek/zeek_smb_converted_win_impacket_secretdump.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detect AD credential dumping using impacket secretdump HKTL. Based on the SIGMA 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.002]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003002-security-account-manager|T1003.002: Security Account Manager]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detection
 

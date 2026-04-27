@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-05-004/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-05-004.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-05-004"
   - "Execution with AT"
@@ -28,27 +28,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-05-004: Execution with AT
-
-## Metadata
-
-- CAR ID: CAR-2013-05-004
-- Submission Date: 2013/05/13
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 In order to gain [persistence](https://attack.mitre.org/tactics/TA0003/), [privilege escalation](https://attack.mitre.org/tactics/TA0004/), or [remote execution](https://attack.mitre.org/tactics/TA0002/), an adversary may use the Windows built-in command AT (at.exe) to [schedule a command](https://attack.mitre.org/techniques/T1053/002) to be run at a specified time, date, and even host. This method has been used by adversaries and administrators alike. Its use may lead to detection of compromised hosts and compromised users if it is used to move laterally.
 The built-in Windows tool schtasks.exe ([[kb/car/analytics/CAR-2013-08-001-execution_with_schtasks|CAR-2013-08-001]]) offers greater flexibility when creating, modifying, and enumerating tasks. For these reasons, schtasks.exe is more commonly used by administrators, tools/scripts, and power users.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]] (coverage: Moderate; tactics: TA0002, TA0003, TA0004)
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.002]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]] (coverage: Moderate; tactics: TA0002, TA0003, TA0004)
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053002-at|T1053.002: At]]
 
 ## Implementations
 

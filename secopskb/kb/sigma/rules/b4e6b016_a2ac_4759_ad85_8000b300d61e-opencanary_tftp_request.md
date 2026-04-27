@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_tftp_request.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_tftp_request.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - TFTP Request
-
 Detects instances where a TFTP service on an OpenCanary node has had a request.
-
-## Metadata
-
-- Rule ID: b4e6b016-a2ac-4759-ad85-8000b300d61e
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_tftp_request.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects instances where a TFTP service on an OpenCanary node has had a request.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041]]
+- [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041: Exfiltration Over C2 Channel]]
 
 ## Detection
 

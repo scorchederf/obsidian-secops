@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/image_load/image_load_side_load_non_existent_dlls.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/image_load/image_load_side_load_non_existent_dlls.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / image_load"
@@ -21,20 +21,8 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential DLL Sideloading Of Non-Existent DLLs From System Folders
-
 Detects loading of specific system DLL files that are usually not present on the system (or at least not in system directories) but may be loaded by legitimate processes, potentially indicating phantom DLL hijacking attempts.
 Phantom DLL hijacking involves placing malicious DLLs with names of non-existent system binaries in locations where legitimate applications may search for them, leading to execution of the malicious DLLs.
-
-## Metadata
-
-- Rule ID: 6b98b92b-4f00-4f62-b4fe-4d1920215771
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems), SBousseaden
-- Date: 2022-12-09
-- Modified: 2026-01-24
-- Source Path: rules/windows/image_load/image_load_side_load_non_existent_dlls.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Phantom DLL hijacking involves placing malicious DLLs with names of non-existent
 
 ### Techniques
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.001]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574001-dll|T1574.001: DLL]]
 
 ## Detection
 

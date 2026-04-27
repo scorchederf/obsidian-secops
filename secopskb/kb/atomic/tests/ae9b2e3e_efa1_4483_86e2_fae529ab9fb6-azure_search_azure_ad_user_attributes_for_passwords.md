@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1552.005"
 attack_technique_name: "Unsecured Credentials: Cloud Instance Metadata API"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1552.005/T1552.005.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "ae9b2e3e-efa1-4483-86e2-fae529ab9fb6"
@@ -20,26 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Search Azure AD User Attributes for Passwords
-
 This test uses the MSOnline Powershell module to retrieve all user attributes for a specified account, which can sometimes contain unsecured credentials. 
 Upon successful execution, this test will scan all user attributes for any strings containing "password".
 Those unsecured credentials will be output to a text file, as well as the account that they are associated with and the user attribute in which they were found. 
 See: https://github.com/dafthack/CloudPentestCheatsheets/blob/master/cheatsheets/Azure.md
 
-## Metadata
-
-- Atomic GUID: ae9b2e3e-efa1-4483-86e2-fae529ab9fb6
-- Technique: T1552.005: Unsecured Credentials: Cloud Instance Metadata API
-- Platforms: azure-ad
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1552.005/T1552.005.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.005]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552005-cloud-instance-metadata-api|T1552.005: Cloud Instance Metadata API]]
 
 ## Input Arguments
 

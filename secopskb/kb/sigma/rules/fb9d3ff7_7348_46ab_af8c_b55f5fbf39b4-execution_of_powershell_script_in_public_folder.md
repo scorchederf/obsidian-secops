@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_powershell_public_folder.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_powershell_public_folder.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Execution of Powershell Script in Public Folder
-
 This rule detects execution of PowerShell scripts located in the "C:\Users\Public" folder
-
-## Metadata
-
-- Rule ID: fb9d3ff7-7348-46ab-af8c-b55f5fbf39b4
-- Status: test
-- Level: high
-- Author: Max Altgelt (Nextron Systems)
-- Date: 2022-04-06
-- Modified: 2022-07-14
-- Source Path: rules/windows/process_creation/proc_creation_win_powershell_public_folder.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ This rule detects execution of PowerShell scripts located in the "C:\Users\Publi
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

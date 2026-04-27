@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.004"
 attack_technique_name: "Event Triggered Execution: .bash_profile .bashrc and .shrc"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.004/T1546.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "94500ae1-7e31-47e3-886b-c328da46872f"
@@ -21,21 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Add command to .bash_profile
-
 Adds a command to the .bash_profile file of the current user
-
-## Metadata
-
-- Atomic GUID: 94500ae1-7e31-47e3-886b-c328da46872f
-- Technique: T1546.004: Event Triggered Execution: .bash_profile .bashrc and .shrc
-- Platforms: macos, linux
-- Executor: sh
-- Source Path: atomics/T1546.004/T1546.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.004]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546004-unix-shell-configuration-modification|T1546.004: Unix Shell Configuration Modification]]
 
 ## Input Arguments
 

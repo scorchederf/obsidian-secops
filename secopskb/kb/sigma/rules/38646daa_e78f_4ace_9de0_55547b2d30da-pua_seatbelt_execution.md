@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_pua_seatbelt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_pua_seatbelt.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PUA - Seatbelt Execution
-
 Detects the execution of the PUA/Recon tool Seatbelt via PE information of command line parameters
-
-## Metadata
-
-- Rule ID: 38646daa-e78f-4ace-9de0-55547b2d30da
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-10-18
-- Modified: 2023-02-04
-- Source Path: rules/windows/process_creation/proc_creation_win_pua_seatbelt.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects the execution of the PUA/Recon tool Seatbelt via PE information of comma
 
 ### Techniques
 
-- [[kb/attack/techniques/T1526-cloud_service_discovery|T1526]]
-- [[kb/attack/techniques/T1087-account_discovery|T1087]]
-- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083]]
+- [[kb/attack/techniques/T1526-cloud_service_discovery|T1526: Cloud Service Discovery]]
+- [[kb/attack/techniques/T1087-account_discovery|T1087: Account Discovery]]
+- [[kb/attack/techniques/T1083-file_and_directory_discovery|T1083: File and Directory Discovery]]
 
 ## Detection
 

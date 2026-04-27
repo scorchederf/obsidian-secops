@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -19,19 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious Shells Spawn by Java Utility Keytool
-
 Detects suspicious shell spawn from Java utility keytool process (e.g. adselfservice plus exploitation)
-
-## Metadata
-
-- Rule ID: 90fb5e62-ca1f-4e22-b42e-cc521874c938
-- Status: test
-- Level: high
-- Author: Andreas Hunkeler (@Karneades)
-- Date: 2021-12-22
-- Modified: 2023-01-21
-- Source Path: rules/windows/process_creation/proc_creation_win_java_keytool_susp_child_process.yml
 
 ## Logsource
 

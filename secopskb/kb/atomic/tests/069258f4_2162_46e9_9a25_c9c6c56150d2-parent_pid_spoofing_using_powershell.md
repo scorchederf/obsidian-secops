@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1134.004"
 attack_technique_name: "Access Token Manipulation: Parent PID Spoofing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1134.004/T1134.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "069258f4-2162-46e9-9a25-c9c6c56150d2"
@@ -20,26 +20,15 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Parent PID Spoofing using PowerShell
-
 This test uses PowerShell to replicates how Cobalt Strike does ppid spoofing and masquerade a spawned process.
 Upon execution, "Process C:\Program Files\Internet Explorer\iexplore.exe is spawned with pid ####" will be displayed and
 calc.exe will be launched.
 
 Credit to In Ming Loh (https://github.com/countercept/ppid-spoofing/blob/master/PPID-Spoof.ps1)
 
-## Metadata
-
-- Atomic GUID: 069258f4-2162-46e9-9a25-c9c6c56150d2
-- Technique: T1134.004: Access Token Manipulation: Parent PID Spoofing
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1134.004/T1134.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1134-access_token_manipulation|T1134.004]]
+- [[kb/attack/techniques/T1134-access_token_manipulation#^t1134004-parent-pid-spoofing|T1134.004: Parent PID Spoofing]]
 
 ## Input Arguments
 

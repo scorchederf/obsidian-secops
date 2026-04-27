@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_dism_enable_powershell_web_access_feature.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_dism_enable_powershell_web_access_feature.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Web Access Feature Enabled Via DISM
-
 Detects the use of DISM to enable the PowerShell Web Access feature, which could be used for remote access and potential abuse
-
-## Metadata
-
-- Rule ID: 7e8f2d3b-9c1a-4f67-b9e8-8d9006e0e51f
-- Status: test
-- Level: high
-- Author: Michael Haag
-- Date: 2024-09-03
-- Source Path: rules/windows/process_creation/proc_creation_win_dism_enable_powershell_web_access_feature.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the use of DISM to enable the PowerShell Web Access feature, which could
 
 ### Techniques
 
-- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism|T1548.002]]
+- [[kb/attack/techniques/T1548-abuse_elevation_control_mechanism#^t1548002-bypass-user-account-control|T1548.002: Bypass User Account Control]]
 
 ## Detection
 

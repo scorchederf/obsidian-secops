@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSScripts/Winrm.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSScripts/Winrm.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSScripts"
 aliases:
   - "winrm.vbs"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# winrm.vbs
-
 Script used for manage Windows RM settings
-
-## Metadata
-
-- Category: OSScripts
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSScripts/Winrm.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ winrm invoke Create wmicimv2/Win32_Process @{CommandLine="{CMD}"} -r:http://targ
 - Use Case: Proxy execution
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ winrm invoke Create wmicimv2/Win32_Service @{Name="Evil";DisplayName="Evil";Path
 - Use Case: Proxy execution
 - Privileges: Admin
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216]]
+- ATT&CK: [[kb/attack/techniques/T1216-system_script_proxy_execution|T1216: System Script Proxy Execution]]
 
 ### 3. AWL Bypass
 
@@ -76,7 +67,7 @@ Bypass AWL solutions by copying cscript.exe to an attacker-controlled location; 
 - Use Case: Execute arbitrary, unsigned code via XSL script
 - Privileges: User
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220]]
+- ATT&CK: [[kb/attack/techniques/T1220-xsl_script_processing|T1220: XSL Script Processing]]
 
 ## Detections
 

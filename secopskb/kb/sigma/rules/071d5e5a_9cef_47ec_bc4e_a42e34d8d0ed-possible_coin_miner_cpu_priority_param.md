@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/execve/lnx_auditd_coinminer.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/execve/lnx_auditd_coinminer.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "critical"
 logsource: "linux / auditd"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Possible Coin Miner CPU Priority Param
-
 Detects command line parameter very often used with coin miners
-
-## Metadata
-
-- Rule ID: 071d5e5a-9cef-47ec-bc4e-a42e34d8d0ed
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-10-09
-- Modified: 2022-12-25
-- Source Path: rules/linux/auditd/execve/lnx_auditd_coinminer.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects command line parameter very often used with coin miners
 
 ### Techniques
 
-- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068]]
+- [[kb/attack/techniques/T1068-exploitation_for_privilege_escalation|T1068: Exploitation for Privilege Escalation]]
 
 ## Detection
 

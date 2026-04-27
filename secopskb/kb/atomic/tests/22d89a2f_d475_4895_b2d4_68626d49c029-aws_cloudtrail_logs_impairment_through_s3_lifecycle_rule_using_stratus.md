@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.008"
 attack_technique_name: "Impair Defenses: Disable Cloud Logs"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.008/T1562.008.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "22d89a2f-d475-4895-b2d4-68626d49c029"
@@ -22,23 +22,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - CloudTrail Logs Impairment Through S3 Lifecycle Rule using Stratus
-
 This Atomic test will use the Stratus Red Team will first setup a CloudTrail logging into an S3 bucket and will then make an API call to update the lifecycle rule on that S3 bucket with an expiration date of 1 day. This will essentially delete all the logs after one day. Adversaries often do this actiivity to evade detection. Stratus Red Team is a self-contained binary. You can use it to easily detonate offensive attack techniques against a live cloud environment. ref: https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.cloudtrail-lifecycle-rule/
-
-## Metadata
-
-- Atomic GUID: 22d89a2f-d475-4895-b2d4-68626d49c029
-- Technique: T1562.008: Impair Defenses: Disable Cloud Logs
-- Platforms: linux, macos, iaas:aws
-- Executor: sh
-- Elevation Required: False
-- Dependency Executor: sh
-- Source Path: atomics/T1562.008/T1562.008.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.008]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562008-disable-or-modify-cloud-logs|T1562.008: Disable or Modify Cloud Logs]]
 
 ## Input Arguments
 

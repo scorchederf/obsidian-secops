@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1010"
 attack_technique_name: "Application Window Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1010/T1010.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "fe94a1c3-3e22-4dc9-9fdf-3a8bdbc10dc4"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# List Process Main Windows - C# .NET
-
 Compiles and executes C# code to list main window titles associated with each process.
 
 Upon successful execution, powershell will download the .cs from the Atomic Red Team repo, and cmd.exe will compile and execute T1010.exe. Upon T1010.exe execution, expected output will be via stdout.
 
-## Metadata
-
-- Atomic GUID: fe94a1c3-3e22-4dc9-9fdf-3a8bdbc10dc4
-- Technique: T1010: Application Window Discovery
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1010/T1010.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1010-application_window_discovery|T1010]]
+- [[kb/attack/techniques/T1010-application_window_discovery|T1010: Application Window Discovery]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wpbbin_potential_persistence.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wpbbin_potential_persistence.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# UEFI Persistence Via Wpbbin - ProcessCreation
-
 Detects execution of the binary "wpbbin" which is used as part of the UEFI based persistence method described in the reference section
-
-## Metadata
-
-- Rule ID: 4abc0ec4-db5a-412f-9632-26659cddf145
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-07-18
-- Source Path: rules/windows/process_creation/proc_creation_win_wpbbin_potential_persistence.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects execution of the binary "wpbbin" which is used as part of the UEFI based
 
 ### Techniques
 
-- [[kb/attack/techniques/T1542-pre-os_boot|T1542.001]]
+- [[kb/attack/techniques/T1542-pre-os_boot#^t1542001-system-firmware|T1542.001: System Firmware]]
 
 ## Detection
 

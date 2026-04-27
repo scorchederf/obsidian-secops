@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1497.003"
 attack_technique_name: "Time Based Evasion"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1497.003/T1497.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "sh"
 aliases:
   - "8b87dd03-8204-478c-bac3-3959f6528de3"
@@ -21,21 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Delay execution with ping
-
 Uses the ping command to introduce a delay before executing a malicious payload.
-
-## Metadata
-
-- Atomic GUID: 8b87dd03-8204-478c-bac3-3959f6528de3
-- Technique: T1497.003: Time Based Evasion
-- Platforms: linux, macos
-- Executor: sh
-- Source Path: atomics/T1497.003/T1497.003.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1497-virtualization_sandbox_evasion|T1497.003]]
+- [[kb/attack/techniques/T1497-virtualization_sandbox_evasion#^t1497003-time-based-checks|T1497.003: Time Based Checks]]
 
 ## Input Arguments
 

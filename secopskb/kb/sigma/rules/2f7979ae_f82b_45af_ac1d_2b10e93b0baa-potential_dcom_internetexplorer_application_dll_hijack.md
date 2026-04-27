@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_dcom_iertutil_dll_hijack.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_dcom_iertutil_dll_hijack.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "critical"
 logsource: "windows / file_event"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential DCOM InternetExplorer.Application DLL Hijack
-
 Detects potential DLL hijack of "iertutil.dll" found in the DCOM InternetExplorer.Application Class over the network
-
-## Metadata
-
-- Rule ID: 2f7979ae-f82b-45af-ac1d-2b10e93b0baa
-- Status: test
-- Level: critical
-- Author: Roberto Rodriguez @Cyb3rWard0g, Open Threat Research (OTR), wagga
-- Date: 2020-10-12
-- Modified: 2022-12-18
-- Source Path: rules/windows/file/file_event/file_event_win_dcom_iertutil_dll_hijack.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects potential DLL hijack of "iertutil.dll" found in the DCOM InternetExplore
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-- [[kb/attack/techniques/T1021-remote_services|T1021.003]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
 
 ## Detection
 

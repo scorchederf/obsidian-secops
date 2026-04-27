@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_sip_request.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_sip_request.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - SIP Request
-
 Detects instances where an SIP service on an OpenCanary node has had a SIP request.
-
-## Metadata
-
-- Rule ID: e30de276-68ec-435c-ab99-ef3befec6c61
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_sip_request.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects instances where an SIP service on an OpenCanary node has had a SIP reque
 
 ### Techniques
 
-- [[kb/attack/techniques/T1123-audio_capture|T1123]]
+- [[kb/attack/techniques/T1123-audio_capture|T1123: Audio Capture]]
 
 ## Detection
 

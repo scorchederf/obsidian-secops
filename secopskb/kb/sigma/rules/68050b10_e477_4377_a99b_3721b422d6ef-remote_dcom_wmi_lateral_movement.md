@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/rpc_firewall/rpc_firewall_remote_dcom_or_wmi.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/rpc_firewall/rpc_firewall_remote_dcom_or_wmi.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "rpc_firewall / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Remote DCOM/WMI Lateral Movement
-
 Detects remote RPC calls that performs remote DCOM operations. These could be abused for lateral movement via DCOM or WMI.
-
-## Metadata
-
-- Rule ID: 68050b10-e477-4377-a99b-3721b422d6ef
-- Status: test
-- Level: high
-- Author: Sagie Dulce, Dekel Paz
-- Date: 2022-01-01
-- Source Path: rules/application/rpc_firewall/rpc_firewall_remote_dcom_or_wmi.yml
 
 ## Logsource
 
@@ -45,8 +34,8 @@ Detects remote RPC calls that performs remote DCOM operations. These could be ab
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.003]]
-- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021003-distributed-component-object-model|T1021.003: Distributed Component Object Model]]
+- [[kb/attack/techniques/T1047-windows_management_instrumentation|T1047: Windows Management Instrumentation]]
 
 ## Detection
 

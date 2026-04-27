@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1098.002"
 attack_technique_name: "Account Manipulation: Additional Email Delegate Permissions"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098.002/T1098.002.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "17d046be-fdd0-4cbb-b5c7-55c85d9d0714"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# EXO - Full access mailbox permission granted to a user
-
 Give a nominated user, full mailbox delegation access of another user.
 This can be used by an adversary to maintain persistent access to a target's mailbox in M365.
 
-## Metadata
-
-- Atomic GUID: 17d046be-fdd0-4cbb-b5c7-55c85d9d0714
-- Technique: T1098.002: Account Manipulation: Additional Email Delegate Permissions
-- Platforms: office-365
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1098.002/T1098.002.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1098-account_manipulation|T1098.002]]
+- [[kb/attack/techniques/T1098-account_manipulation#^t1098002-additional-email-delegate-permissions|T1098.002: Additional Email Delegate Permissions]]
 
 ## Input Arguments
 

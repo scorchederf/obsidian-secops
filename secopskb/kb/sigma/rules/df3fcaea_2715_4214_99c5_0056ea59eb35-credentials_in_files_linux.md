@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/execve/lnx_auditd_find_cred_in_files.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/execve/lnx_auditd_find_cred_in_files.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Credentials In Files - Linux
-
 Detecting attempts to extract passwords with grep
-
-## Metadata
-
-- Rule ID: df3fcaea-2715-4214-99c5-0056ea59eb35
-- Status: test
-- Level: high
-- Author: Igor Fits, oscd.community
-- Date: 2020-10-15
-- Modified: 2023-04-30
-- Source Path: rules/linux/auditd/execve/lnx_auditd_find_cred_in_files.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detecting attempts to extract passwords with grep
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 ## Detection
 

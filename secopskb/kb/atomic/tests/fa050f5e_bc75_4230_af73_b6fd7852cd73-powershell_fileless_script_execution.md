@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "fa050f5e-bc75-4230-af73-b6fd7852cd73"
@@ -20,22 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Fileless Script Execution
-
 Execution of a PowerShell payload from the Windows Registry similar to that seen in fileless malware infections. Upon exection, open "C:\Windows\Temp" and verify that
 art-marker.txt is in the folder.
 
-## Metadata
-
-- Atomic GUID: fa050f5e-bc75-4230-af73-b6fd7852cd73
-- Technique: T1059.001: Command and Scripting Interpreter: PowerShell
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1059.001/T1059.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Executor
 

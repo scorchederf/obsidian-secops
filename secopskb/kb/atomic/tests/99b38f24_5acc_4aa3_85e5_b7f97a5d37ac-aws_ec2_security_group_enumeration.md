@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1580"
 attack_technique_name: "Cloud Infrastructure Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1580/T1580.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "99b38f24-5acc-4aa3-85e5-b7f97a5d37ac"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# AWS - EC2 Security Group Enumeration
-
 Simulate an attacker's action to enumerate EC2 Security Groups in a compromised AWS environment.
-
-## Metadata
-
-- Atomic GUID: 99b38f24-5acc-4aa3-85e5-b7f97a5d37ac
-- Technique: T1580: Cloud Infrastructure Discovery
-- Platforms: iaas:aws
-- Executor: command_prompt
-- Source Path: atomics/T1580/T1580.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1580-cloud_infrastructure_discovery|T1580]]
+- [[kb/attack/techniques/T1580-cloud_infrastructure_discovery|T1580: Cloud Infrastructure Discovery]]
 
 ## Input Arguments
 

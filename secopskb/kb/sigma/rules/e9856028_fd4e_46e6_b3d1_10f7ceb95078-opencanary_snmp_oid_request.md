@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_snmp_cmd.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_snmp_cmd.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - SNMP OID Request
-
 Detects instances where an SNMP service on an OpenCanary node has had an OID request.
-
-## Metadata
-
-- Rule ID: e9856028-fd4e-46e6-b3d1-10f7ceb95078
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_snmp_cmd.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects instances where an SNMP service on an OpenCanary node has had an OID req
 
 ### Techniques
 
-- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016]]
-- [[kb/attack/techniques/T1021-remote_services|T1021]]
+- [[kb/attack/techniques/T1016-system_network_configuration_discovery|T1016: System Network Configuration Discovery]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]]
 
 ## Detection
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/application_popup/win_system_application_sysmon_crash.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/application_popup/win_system_application_sysmon_crash.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sysmon Application Crashed
-
 Detects application popup reporting a failure of the Sysmon service
-
-## Metadata
-
-- Rule ID: 4d7f1827-1637-4def-8d8a-fd254f9454df
-- Status: test
-- Level: high
-- Author: Tim Shelton
-- Date: 2022-04-26
-- Modified: 2024-01-17
-- Source Path: rules/windows/builtin/system/application_popup/win_system_application_sysmon_crash.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects application popup reporting a failure of the Sysmon service
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
 
 ## Detection
 

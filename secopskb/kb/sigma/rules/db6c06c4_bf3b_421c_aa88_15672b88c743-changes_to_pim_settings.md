@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/audit_logs/azure_pim_change_settings.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/audit_logs/azure_pim_change_settings.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "azure / auditlogs"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Changes To PIM Settings
-
 Detects when changes are made to PIM roles
-
-## Metadata
-
-- Rule ID: db6c06c4-bf3b-421c-aa88-15672b88c743
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Yochana Henderson, '@Yochana-H'
-- Date: 2022-08-09
-- Source Path: rules/cloud/azure/audit_logs/azure_pim_change_settings.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects when changes are made to PIM roles
 
 ### Techniques
 
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

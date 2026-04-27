@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_net_cli_artefact.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_net_cli_artefact.yml"
-build_date: "2026-04-26 17:03:22"
+build_date: "2026-04-27 19:13:56"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious DotNET CLR Usage Log Artifact
-
 Detects the creation of Usage Log files by the CLR (clr.dll). These files are named after the executing process once the assembly is finished executing for the first time in the (user) session context.
-
-## Metadata
-
-- Rule ID: e0b06658-7d1d-4cd3-bf15-03467507ff7c
-- Status: test
-- Level: high
-- Author: frack113, omkar72, oscd.community, Wojciech Lesicki
-- Date: 2022-11-18
-- Modified: 2023-02-23
-- Source Path: rules/windows/file/file_event/file_event_win_net_cli_artefact.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects the creation of Usage Log files by the CLR (clr.dll). These files are na
 
 ### Techniques
 
-- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detection
 

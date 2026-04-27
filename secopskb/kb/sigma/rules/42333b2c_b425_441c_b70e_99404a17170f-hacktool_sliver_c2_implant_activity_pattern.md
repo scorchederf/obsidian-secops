@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_sliver_c2_execution_pattern.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_sliver_c2_execution_pattern.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Sliver C2 Implant Activity Pattern
-
 Detects process activity patterns as seen being used by Sliver C2 framework implants
-
-## Metadata
-
-- Rule ID: 42333b2c-b425-441c-b70e-99404a17170f
-- Status: test
-- Level: critical
-- Author: Nasreddine Bencherchali (Nextron Systems), Florian Roth (Nextron Systems)
-- Date: 2022-08-25
-- Modified: 2023-03-05
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_sliver_c2_execution_pattern.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects process activity patterns as seen being used by Sliver C2 framework impl
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059: Command and Scripting Interpreter]]
 
 ## Detection
 

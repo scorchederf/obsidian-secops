@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/macos/process_creation/proc_creation_macos_binary_padding.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/macos/process_creation/proc_creation_macos_binary_padding.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "macos / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Binary Padding - MacOS
-
 Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This rule detect using dd and truncate to add a junk data to file.
-
-## Metadata
-
-- Rule ID: 95361ce5-c891-4b0a-87ca-e24607884a96
-- Status: test
-- Level: high
-- Author: Igor Fits, Mikhail Larin, oscd.community
-- Date: 2020-10-19
-- Modified: 2023-02-17
-- Source Path: rules/macos/process_creation/proc_creation_macos_binary_padding.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Adversaries may use binary padding to add junk data and change the on-disk repre
 
 ### Techniques
 
-- [[kb/attack/techniques/T1027-obfuscated_files_or_information|T1027.001]]
+- [[kb/attack/techniques/T1027-obfuscated_files_or_information#^t1027001-binary-padding|T1027.001: Binary Padding]]
 
 ## Detection
 

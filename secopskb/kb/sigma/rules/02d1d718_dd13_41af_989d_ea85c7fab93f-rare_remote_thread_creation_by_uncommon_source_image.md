@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/create_remote_thread/create_remote_thread_win_susp_relevant_source_image.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/create_remote_thread/create_remote_thread_win_susp_relevant_source_image.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / create_remote_thread"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Rare Remote Thread Creation By Uncommon Source Image
-
 Detects uncommon processes creating remote threads.
-
-## Metadata
-
-- Rule ID: 02d1d718-dd13-41af-989d-ea85c7fab93f
-- Status: test
-- Level: high
-- Author: Perez Diego (@darkquassar), oscd.community
-- Date: 2019-10-27
-- Modified: 2025-12-08
-- Source Path: rules/windows/create_remote_thread/create_remote_thread_win_susp_relevant_source_image.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects uncommon processes creating remote threads.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1055-process_injection|T1055]]
+- [[kb/attack/techniques/T1055-process_injection|T1055: Process Injection]]
 
 ## Detection
 

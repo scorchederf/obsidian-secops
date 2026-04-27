@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/macos/process_creation/proc_creation_macos_tail_base64_decode_from_image.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/macos/process_creation/proc_creation_macos_tail_base64_decode_from_image.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "macos / process_creation"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Potential Base64 Decoded From Images
-
 Detects the use of tail to extract bytes at an offset from an image and then decode the base64 value to create a new file with the decoded content. The detected execution is a bash one-liner.
-
-## Metadata
-
-- Rule ID: 09a910bf-f71f-4737-9c40-88880ba5913d
-- Status: test
-- Level: high
-- Author: Joseliyo Sanchez, @Joseliyo_Jstnk
-- Date: 2023-12-20
-- Source Path: rules/macos/process_creation/proc_creation_macos_tail_base64_decode_from_image.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects the use of tail to extract bytes at an offset from an image and then dec
 
 ### Techniques
 
-- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140]]
+- [[kb/attack/techniques/T1140-deobfuscate_decode_files_or_information|T1140: Deobfuscate/Decode Files or Information]]
 
 ## Detection
 

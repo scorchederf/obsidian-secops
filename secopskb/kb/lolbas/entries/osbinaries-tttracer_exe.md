@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Tttracer.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Tttracer.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Tttracer.exe"
@@ -21,16 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Tttracer.exe
-
 Used by Windows 1809 and newer to Debug Time Travel
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2019-11-05
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Tttracer.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ tttracer.exe {PATH_ABSOLUTE:.exe}
 - Use Case: Spawn process using other binary
 - Privileges: Administrator
 - Operating System: Windows 10 1809 and newer, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ### 2. Dump
 
@@ -63,7 +54,7 @@ TTTracer.exe -dumpFull -attach {PID}
 - Use Case: Dump process by PID
 - Privileges: Administrator
 - Operating System: Windows 10 1809 and newer, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
+- ATT&CK: [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
 
 ## Detections
 

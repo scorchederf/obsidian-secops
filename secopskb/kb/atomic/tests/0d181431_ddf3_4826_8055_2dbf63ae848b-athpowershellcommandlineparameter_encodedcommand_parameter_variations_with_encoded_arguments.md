@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1059.001"
 attack_technique_name: "Command and Scripting Interpreter: PowerShell"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "0d181431-ddf3-4826-8055-2dbf63ae848b"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ATHPowerShellCommandLineParameter -EncodedCommand parameter variations with encoded arguments
-
 Executes powershell.exe with variations of the -EncodedCommand parameter with encoded arguments supplied
-
-## Metadata
-
-- Atomic GUID: 0d181431-ddf3-4826-8055-2dbf63ae848b
-- Technique: T1059.001: Command and Scripting Interpreter: PowerShell
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1059.001/T1059.001.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Input Arguments
 

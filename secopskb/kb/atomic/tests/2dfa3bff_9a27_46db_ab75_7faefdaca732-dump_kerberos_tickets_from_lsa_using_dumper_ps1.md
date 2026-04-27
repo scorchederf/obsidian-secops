@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.004"
 attack_technique_name: "OS Credential Dumping: LSA Secrets"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.004/T1003.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "2dfa3bff-9a27-46db-ab75-7faefdaca732"
@@ -20,25 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Dump Kerberos Tickets from LSA using dumper.ps1
-
 This tool allows you to dump Kerberos tickets from the LSA cache. Implemented via Add-Type.
 If the tool is run as a privileged user, it will automatically obtain NT AUTHORITY\SYSTEM privileges and then dump all tickets. If the tool is run as a non-privileged user, it will only dump tickets from the current logon session.
 Ref: https://github.com/MzHmO/PowershellKerberos/
 Author of dumper.ps1: Michael Zhmaylo (@MzHmO)
 
-## Metadata
-
-- Atomic GUID: 2dfa3bff-9a27-46db-ab75-7faefdaca732
-- Technique: T1003.004: OS Credential Dumping: LSA Secrets
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Source Path: atomics/T1003.004/T1003.004.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.004]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003004-lsa-secrets|T1003.004: LSA Secrets]]
 
 ## Executor
 

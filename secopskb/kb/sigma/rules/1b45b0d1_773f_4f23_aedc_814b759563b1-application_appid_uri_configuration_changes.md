@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/cloud/azure/audit_logs/azure_app_appid_uri_changes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/cloud/azure/audit_logs/azure_app_appid_uri_changes.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:50"
 status: "test"
 level: "high"
 logsource: "azure / auditlogs"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Application AppID Uri Configuration Changes
-
 Detects when a configuration change is made to an applications AppID URI.
-
-## Metadata
-
-- Rule ID: 1b45b0d1-773f-4f23-aedc-814b759563b1
-- Status: test
-- Level: high
-- Author: Mark Morowczynski '@markmorow', Bailey Bercik '@baileybercik'
-- Date: 2022-06-02
-- Source Path: rules/cloud/azure/audit_logs/azure_app_appid_uri_changes.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects when a configuration change is made to an applications AppID URI.
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552]]
-- [[kb/attack/techniques/T1078-valid_accounts|T1078.004]]
+- [[kb/attack/techniques/T1552-unsecured_credentials|T1552: Unsecured Credentials]]
+- [[kb/attack/techniques/T1078-valid_accounts#^t1078004-cloud-accounts|T1078.004: Cloud Accounts]]
 
 ## Detection
 

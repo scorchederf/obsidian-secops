@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1546.013"
 attack_technique_name: "Event Triggered Execution: PowerShell Profile"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.013/T1546.013.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "090e5aa5-32b6-473b-a49b-21e843a56896"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Append malicious start-process cmdlet
-
 Appends a start process cmdlet to the current user's powershell profile pofile that points to a malicious executable. Upon execution, calc.exe will be launched.
-
-## Metadata
-
-- Atomic GUID: 090e5aa5-32b6-473b-a49b-21e843a56896
-- Technique: T1546.013: Event Triggered Execution: PowerShell Profile
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1546.013/T1546.013.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.013]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546013-powershell-profile|T1546.013: PowerShell Profile]]
 
 ## Input Arguments
 

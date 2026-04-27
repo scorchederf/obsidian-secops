@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Vbc.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Vbc.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "vbc.exe"
@@ -19,16 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# vbc.exe
-
 Binary file used for compile vbs code
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2020-02-27
-- Author: Lior Adar
-- Source Path: yml/OSBinaries/Vbc.yml
 
 ## Paths
 
@@ -52,7 +43,7 @@ vbc.exe /target:exe {PATH_ABSOLUTE:.vb}
 - Use Case: Compile attacker code on system. Bypass defensive counter measures.
 - Privileges: User
 - Operating System: Windows 7, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ### 2. Compile
 
@@ -65,7 +56,7 @@ vbc -reference:Microsoft.VisualBasic.dll {PATH_ABSOLUTE:.vb}
 - Use Case: Compile attacker code on system. Bypass defensive counter measures.
 - Privileges: User
 - Operating System: Windows 7, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- ATT&CK: [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Detections
 

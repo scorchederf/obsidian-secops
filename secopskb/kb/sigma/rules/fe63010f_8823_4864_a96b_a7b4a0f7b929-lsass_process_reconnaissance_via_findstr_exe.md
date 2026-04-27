@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_findstr_lsass.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_findstr_lsass.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# LSASS Process Reconnaissance Via Findstr.EXE
-
 Detects findstring commands that include the keyword lsass, which indicates recon actviity for the LSASS process PID
-
-## Metadata
-
-- Rule ID: fe63010f-8823-4864-a96b-a7b4a0f7b929
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-08-12
-- Modified: 2024-06-04
-- Source Path: rules/windows/process_creation/proc_creation_win_findstr_lsass.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects findstring commands that include the keyword lsass, which indicates reco
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.006]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552006-group-policy-preferences|T1552.006: Group Policy Preferences]]
 
 ## Detection
 

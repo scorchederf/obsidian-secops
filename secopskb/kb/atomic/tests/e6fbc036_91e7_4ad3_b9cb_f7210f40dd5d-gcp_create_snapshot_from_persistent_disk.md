@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1578.001"
 attack_technique_name: "Modify Cloud Compute Infrastructure: Create Snapshot"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1578.001/T1578.001.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "e6fbc036-91e7-4ad3-b9cb-f7210f40dd5d"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# GCP - Create Snapshot from Persistent Disk
-
 Creates a snapshot of a persistent disk in GCP using the gcloud CLI.
 Emulates adversary behavior to gain access to volume data or replicate environment state.
 
-## Metadata
-
-- Atomic GUID: e6fbc036-91e7-4ad3-b9cb-f7210f40dd5d
-- Technique: T1578.001: Modify Cloud Compute Infrastructure: Create Snapshot
-- Platforms: iaas:gcp
-- Executor: sh
-- Elevation Required: False
-- Source Path: atomics/T1578.001/T1578.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1578-modify_cloud_compute_infrastructure|T1578.001]]
+- [[kb/attack/techniques/T1578-modify_cloud_compute_infrastructure#^t1578001-create-snapshot|T1578.001: Create Snapshot]]
 
 ## Input Arguments
 

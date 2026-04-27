@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_purplesharp_indicators.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_purplesharp_indicators.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "critical"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - PurpleSharp Execution
-
 Detects the execution of the PurpleSharp adversary simulation tool
-
-## Metadata
-
-- Rule ID: ff23ffbc-3378-435e-992f-0624dcf93ab4
-- Status: test
-- Level: critical
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-06-18
-- Modified: 2023-02-05
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_purplesharp_indicators.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects the execution of the PurpleSharp adversary simulation tool
 
 ### Techniques
 
-- [[kb/attack/techniques/T1587-develop_capabilities|T1587]]
+- [[kb/attack/techniques/T1587-develop_capabilities|T1587: Develop Capabilities]]
 
 ## Detection
 

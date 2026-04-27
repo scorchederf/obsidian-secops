@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1558.004"
 attack_technique_name: "Steal or Forge Kerberos Tickets: AS-REP Roasting"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1558.004/T1558.004.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "d6139549-7b72-4e48-9ea1-324fc9bdf88a"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Get-DomainUser with PowerView
-
 Utilizing PowerView, run Get-DomainUser to identify domain users. Upon execution, progress and info about users within the domain being scanned will be displayed.
-
-## Metadata
-
-- Atomic GUID: d6139549-7b72-4e48-9ea1-324fc9bdf88a
-- Technique: T1558.004: Steal or Forge Kerberos Tickets: AS-REP Roasting
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1558.004/T1558.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets|T1558.004]]
+- [[kb/attack/techniques/T1558-steal_or_forge_kerberos_tickets#^t1558004-as-rep-roasting|T1558.004: AS-REP Roasting]]
 
 ## Executor
 

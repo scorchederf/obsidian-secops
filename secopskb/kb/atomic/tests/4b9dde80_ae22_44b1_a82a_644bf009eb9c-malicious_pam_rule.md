@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1556.003"
 attack_technique_name: "Modify Authentication Process: Pluggable Authentication Modules"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1556.003/T1556.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "4b9dde80-ae22-44b1-a82a-644bf009eb9c"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious PAM rule
-
 Inserts a rule into a PAM config and then tests it.
 
 Upon successful execution, this test will insert a rule that allows every user to su to root without a password.
 
-## Metadata
-
-- Atomic GUID: 4b9dde80-ae22-44b1-a82a-644bf009eb9c
-- Technique: T1556.003: Modify Authentication Process: Pluggable Authentication Modules
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Source Path: atomics/T1556.003/T1556.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1556-modify_authentication_process|T1556.003]]
+- [[kb/attack/techniques/T1556-modify_authentication_process#^t1556003-pluggable-authentication-modules|T1556.003: Pluggable Authentication Modules]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/service_stop/lnx_auditd_disable_system_firewall.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/service_stop/lnx_auditd_disable_system_firewall.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Disable System Firewall
-
 Detects disabling of system firewalls which could be used by adversaries to bypass controls that limit usage of the network.
-
-## Metadata
-
-- Rule ID: 53059bc0-1472-438b-956a-7508a94a91f0
-- Status: test
-- Level: high
-- Author: Pawel Mazur
-- Date: 2022-01-22
-- Source Path: rules/linux/auditd/service_stop/lnx_auditd_disable_system_firewall.yml
 
 ## Logsource
 
@@ -43,7 +32,7 @@ Detects disabling of system firewalls which could be used by adversaries to bypa
 
 ### Techniques
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.004]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562004-disable-or-modify-system-firewall|T1562.004: Disable or Modify System Firewall]]
 
 ## Detection
 

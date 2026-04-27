@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/macos/process_creation/proc_creation_macos_jxa_in_memory_execution.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/macos/process_creation/proc_creation_macos_jxa_in_memory_execution.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "macos / process_creation"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# JXA In-memory Execution Via OSAScript
-
 Detects possible malicious execution of JXA in-memory via OSAScript
-
-## Metadata
-
-- Rule ID: f1408a58-0e94-4165-b80a-da9f96cf6fc3
-- Status: test
-- Level: high
-- Author: Sohan G (D4rkCiph3r)
-- Date: 2023-01-31
-- Source Path: rules/macos/process_creation/proc_creation_macos_jxa_in_memory_execution.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects possible malicious execution of JXA in-memory via OSAScript
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.002]]
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.007]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059002-applescript|T1059.002: AppleScript]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059007-javascript|T1059.007: JavaScript]]
 
 ## Detection
 

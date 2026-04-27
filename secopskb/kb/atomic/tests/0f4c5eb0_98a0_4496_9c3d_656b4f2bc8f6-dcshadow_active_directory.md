@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1207"
 attack_technique_name: "Rogue Domain Controller"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1207/T1207.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "0f4c5eb0-98a0-4496-9c3d-656b4f2bc8f6"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# DCShadow (Active Directory)
-
 Use Mimikatz DCShadow method to simulate behavior of an Active Directory Domain Controller and edit protected attribute.
 
 [DCShadow](https://www.dcshadow.com/)
@@ -33,19 +31,9 @@ Get-ADObject -LDAPFilter '(samaccountname=<user>)' -Properties badpwdcount | sel
 Need SYSTEM privileges locally (automatically obtained via PsExec, so running as admin is sufficient), and Domain Admin remotely.
 The easiest is to run elevated and as a Domain Admin user.
 
-## Metadata
-
-- Atomic GUID: 0f4c5eb0-98a0-4496-9c3d-656b4f2bc8f6
-- Technique: T1207: Rogue Domain Controller
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1207/T1207.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1207-rogue_domain_controller|T1207]]
+- [[kb/attack/techniques/T1207-rogue_domain_controller|T1207: Rogue Domain Controller]]
 
 ## Input Arguments
 

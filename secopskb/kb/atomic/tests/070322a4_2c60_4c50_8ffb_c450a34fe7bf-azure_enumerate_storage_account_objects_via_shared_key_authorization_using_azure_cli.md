@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1619"
 attack_technique_name: "Cloud Storage Object Discovery"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1619/T1619.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "070322a4-2c60-4c50-8ffb-c450a34fe7bf"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Azure - Enumerate Storage Account Objects via Shared Key authorization using Azure CLI
-
 This test enumerates all existing storage accounts and tries to fetch for each account the contained storage account objects. The access to storage objects is only possible if Shared Key authorization is enabled (e.g this is the case per default for storage objects creaded by Azure Function Apps).
 
 Requirements:
@@ -32,19 +30,9 @@ Output format: Csv file that contains the found storage account objects
 - Columns: ResourceGroup, StorageAccountName, FileShareName, ContainerName, BlobName, TableName, QueueName
 - The content of these columns is filled out depending on the object. Not-required columns are left empt. Example: For a blob object the ResourceGroup, StorageAccountName, ContainerName, BlobName are filled out, the other fields are left empty.
 
-## Metadata
-
-- Atomic GUID: 070322a4-2c60-4c50-8ffb-c450a34fe7bf
-- Technique: T1619: Cloud Storage Object Discovery
-- Platforms: iaas:azure
-- Executor: powershell
-- Elevation Required: False
-- Dependency Executor: powershell
-- Source Path: atomics/T1619/T1619.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1619-cloud_storage_object_discovery|T1619]]
+- [[kb/attack/techniques/T1619-cloud_storage_object_discovery|T1619: Cloud Storage Object Discovery]]
 
 ## Input Arguments
 

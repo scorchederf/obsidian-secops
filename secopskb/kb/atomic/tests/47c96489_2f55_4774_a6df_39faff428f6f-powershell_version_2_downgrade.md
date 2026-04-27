@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.010"
 attack_technique_name: "Impair Defenses: Downgrade Attack"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.010/T1562.010.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "47c96489-2f55-4774-a6df-39faff428f6f"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# PowerShell Version 2 Downgrade
-
 Executes outdated PowerShell Version 2 which does not support security features like AMSI. By default the atomic will attempt to execute the cmdlet Invoke-Mimikatz whether it exists or not, as this cmdlet will be blocked by AMSI when active.
-
-## Metadata
-
-- Atomic GUID: 47c96489-2f55-4774-a6df-39faff428f6f
-- Technique: T1562.010: Impair Defenses: Downgrade Attack
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1562.010/T1562.010.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.010]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562010-downgrade-attack|T1562.010: Downgrade Attack]]
 
 ## Input Arguments
 

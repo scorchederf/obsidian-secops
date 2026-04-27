@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1569.003"
 attack_technique_name: "System Services: Systemctl"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1569.003/T1569.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "e58c8723-5503-4533-b642-535cd20ec648"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create and Enable a Malicious systemd Service Unit
-
 Creates a new systemd service unit file in /etc/systemd/system/ and enables it using
 systemctl enable followed by systemctl start. Adversaries commonly abuse this workflow
 to establish persistence or execute arbitrary commands under the context of systemd.
@@ -31,19 +29,9 @@ daemon, enabling the service to survive reboots, and starting it immediately. Th
 consistent with techniques observed in ransomware precursor activity and post-exploitation
 frameworks targeting Linux infrastructure.
 
-## Metadata
-
-- Atomic GUID: e58c8723-5503-4533-b642-535cd20ec648
-- Technique: T1569.003: System Services: Systemctl
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1569.003/T1569.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1569-system_services|T1569.003]]
+- [[kb/attack/techniques/T1569-system_services#^t1569003-systemctl|T1569.003: Systemctl]]
 
 ## Input Arguments
 

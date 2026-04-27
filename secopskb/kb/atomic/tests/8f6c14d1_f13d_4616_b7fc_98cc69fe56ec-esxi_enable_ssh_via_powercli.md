@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1021.004"
 attack_technique_name: "Remote Services: SSH"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.004/T1021.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "powershell"
 aliases:
   - "8f6c14d1-f13d-4616-b7fc-98cc69fe56ec"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# ESXi - Enable SSH via PowerCLI
-
 An adversary enables the SSH service on a ESXi host to maintain persistent access to the host and to carryout subsequent operations.
-
-## Metadata
-
-- Atomic GUID: 8f6c14d1-f13d-4616-b7fc-98cc69fe56ec
-- Technique: T1021.004: Remote Services: SSH
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1021.004/T1021.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.004]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021004-ssh|T1021.004: SSH]]
 
 ## Input Arguments
 

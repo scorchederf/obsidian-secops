@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1133"
 attack_technique_name: "External Remote Services"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1133/T1133.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "powershell"
 aliases:
   - "4c8db261-a58b-42a6-a866-0a294deedde4"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Running Chrome VPN Extensions via the Registry 2 vpn extension
-
 Running Chrome VPN Extensions via the Registry install 2 vpn extension, please see "T1133\src\list of vpn extension.txt" to view complete list
-
-## Metadata
-
-- Atomic GUID: 4c8db261-a58b-42a6-a866-0a294deedde4
-- Technique: T1133: External Remote Services
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1133/T1133.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1133-external_remote_services|T1133]]
+- [[kb/attack/techniques/T1133-external_remote_services|T1133: External Remote Services]]
 
 ## Input Arguments
 

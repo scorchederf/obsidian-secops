@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1070"
 attack_technique_name: "Indicator Removal on Host"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070/T1070.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "96e86706-6afd-45b6-95d6-108d23eaf2e9"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Indicator Manipulation using FSUtil
-
 Finds a file by user name (if Disk Quotas are enabled), queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file. Upon execution, no output
 will be displayed. More information about fsutil can be found at https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-file
 - https://tria.ge/230601-x8x6bsgb24/behavioral2
 
-## Metadata
-
-- Atomic GUID: 96e86706-6afd-45b6-95d6-108d23eaf2e9
-- Technique: T1070: Indicator Removal on Host
-- Platforms: windows
-- Executor: powershell
-- Elevation Required: False
-- Source Path: atomics/T1070/T1070.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070]]
+- [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]]
 
 ## Input Arguments
 

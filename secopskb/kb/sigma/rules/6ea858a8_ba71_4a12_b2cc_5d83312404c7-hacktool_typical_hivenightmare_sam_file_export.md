@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/file/file_event/file_event_win_hktl_hivenightmare_file_exports.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_event/file_event_win_hktl_hivenightmare_file_exports.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / file_event"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Typical HiveNightmare SAM File Export
-
 Detects files written by the different tools that exploit HiveNightmare
-
-## Metadata
-
-- Rule ID: 6ea858a8-ba71-4a12-b2cc-5d83312404c7
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-07-23
-- Modified: 2024-06-27
-- Source Path: rules/windows/file/file_event/file_event_win_hktl_hivenightmare_file_exports.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects files written by the different tools that exploit HiveNightmare
 
 ### Techniques
 
-- [[kb/attack/techniques/T1552-unsecured_credentials|T1552.001]]
+- [[kb/attack/techniques/T1552-unsecured_credentials#^t1552001-credentials-in-files|T1552.001: Credentials In Files]]
 
 ## Detection
 

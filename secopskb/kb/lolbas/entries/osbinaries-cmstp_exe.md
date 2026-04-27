@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OSBinaries/Cmstp.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSBinaries/Cmstp.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OSBinaries"
 aliases:
   - "Cmstp.exe"
@@ -20,16 +20,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Cmstp.exe
-
 Installs or removes a Connection Manager service profile.
-
-## Metadata
-
-- Category: OSBinaries
-- Created: 2018-05-25
-- Author: Oddvar Moe
-- Source Path: yml/OSBinaries/Cmstp.yml
 
 ## Paths
 
@@ -49,7 +40,7 @@ cmstp.exe /ni /s {PATH_ABSOLUTE:.inf}
 - Use Case: Execute code hidden within an inf file. Download and run scriptlets from internet.
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 ### 2. AWL Bypass
 
@@ -62,7 +53,7 @@ cmstp.exe /ni /s {REMOTEURL:.inf}
 - Use Case: Execute code hidden within an inf file. Execute code directly from Internet.
 - Privileges: User
 - Operating System: Windows vista, Windows 7, Windows 8, Windows 8.1, Windows 10
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 ### 3. Execute
 
@@ -75,7 +66,7 @@ cmstp.exe /nf
 - Use Case: Proxy execution of a malicious DLL via registry modification.
 - Privileges: Administrator
 - Operating System: Windows 10, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218.003]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution#^t1218003-cmstp|T1218.003: CMSTP]]
 
 ## Detections
 

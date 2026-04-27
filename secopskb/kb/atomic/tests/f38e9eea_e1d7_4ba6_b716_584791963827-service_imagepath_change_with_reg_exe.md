@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1574.011"
 attack_technique_name: "Hijack Execution Flow: Services Registry Permissions Weakness"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.011/T1574.011.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "f38e9eea-e1d7-4ba6-b716-584791963827"
@@ -20,22 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Service ImagePath Change with reg.exe
-
 Change Service registry ImagePath of a bengin service to a malicious file
-
-## Metadata
-
-- Atomic GUID: f38e9eea-e1d7-4ba6-b716-584791963827
-- Technique: T1574.011: Hijack Execution Flow: Services Registry Permissions Weakness
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1574.011/T1574.011.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1574-hijack_execution_flow|T1574.011]]
+- [[kb/attack/techniques/T1574-hijack_execution_flow#^t1574011-services-registry-permissions-weakness|T1574.011: Services Registry Permissions Weakness]]
 
 ## Input Arguments
 

@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/process_creation/proc_creation_lnx_susp_history_delete.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_susp_history_delete.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "linux / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# History File Deletion
-
 Detects events in which a history file gets deleted, e.g. the ~/bash_history to remove traces of malicious activity
-
-## Metadata
-
-- Rule ID: 1182f3b3-e716-4efa-99ab-d2685d04360f
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2022-06-20
-- Modified: 2022-09-15
-- Source Path: rules/linux/process_creation/proc_creation_lnx_susp_history_delete.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects events in which a history file gets deleted, e.g. the ~/bash_history to 
 
 ### Techniques
 
-- [[kb/attack/techniques/T1565-data_manipulation|T1565.001]]
+- [[kb/attack/techniques/T1565-data_manipulation#^t1565001-stored-data-manipulation|T1565.001: Stored Data Manipulation]]
 
 ## Detection
 

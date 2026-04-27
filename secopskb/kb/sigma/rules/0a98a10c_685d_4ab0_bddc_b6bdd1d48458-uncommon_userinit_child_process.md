@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_userinit_uncommon_child_processes.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_userinit_uncommon_child_processes.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Uncommon Userinit Child Process
-
 Detects uncommon "userinit.exe" child processes, which could be a sign of uncommon shells or login scripts used for persistence.
-
-## Metadata
-
-- Rule ID: 0a98a10c-685d-4ab0-bddc-b6bdd1d48458
-- Status: test
-- Level: high
-- Author: Tom Ueltschi (@c_APT_ure), Tim Shelton
-- Date: 2019-01-12
-- Modified: 2023-11-14
-- Source Path: rules/windows/process_creation/proc_creation_win_userinit_uncommon_child_processes.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects uncommon "userinit.exe" child processes, which could be a sign of uncomm
 
 ### Techniques
 
-- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts|T1037.001]]
+- [[kb/attack/techniques/T1037-boot_or_logon_initialization_scripts#^t1037001-logon-script-(windows)|T1037.001: Logon Script (Windows)]]
 
 ## Detection
 

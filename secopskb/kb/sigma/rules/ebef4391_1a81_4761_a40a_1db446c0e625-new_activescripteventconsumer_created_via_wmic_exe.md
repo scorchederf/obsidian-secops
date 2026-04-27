@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_wmic_eventconsumer_creation.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_wmic_eventconsumer_creation.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# New ActiveScriptEventConsumer Created Via Wmic.EXE
-
 Detects WMIC executions in which an event consumer gets created. This could be used to establish persistence
-
-## Metadata
-
-- Rule ID: ebef4391-1a81-4761-a40a-1db446c0e625
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2021-06-25
-- Modified: 2023-02-14
-- Source Path: rules/windows/process_creation/proc_creation_win_wmic_eventconsumer_creation.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects WMIC executions in which an event consumer gets created. This could be u
 
 ### Techniques
 
-- [[kb/attack/techniques/T1546-event_triggered_execution|T1546.003]]
+- [[kb/attack/techniques/T1546-event_triggered_execution#^t1546003-windows-management-instrumentation-event-subscription|T1546.003: Windows Management Instrumentation Event Subscription]]
 
 ## Detection
 

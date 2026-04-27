@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_veeam_credential_dumping_script.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_veeam_credential_dumping_script.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:58"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -19,18 +19,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Veeam Backup Servers Credential Dumping Script Execution
-
 Detects execution of a PowerShell script that contains calls to the "Veeam.Backup" class, in order to dump stored credentials.
-
-## Metadata
-
-- Rule ID: 976d6e6f-a04b-4900-9713-0134a353e38b
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2023-05-04
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_veeam_credential_dumping_script.yml
 
 ## Logsource
 

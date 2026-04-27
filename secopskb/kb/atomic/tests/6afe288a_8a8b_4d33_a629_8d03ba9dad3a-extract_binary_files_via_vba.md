@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564"
 attack_technique_name: "Hide Artifacts"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564/T1564.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "powershell"
 aliases:
   - "6afe288a-8a8b-4d33-a629-8d03ba9dad3a"
@@ -20,8 +20,6 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Extract binary files via VBA
-
 This module extracts a binary (calc.exe) from inside of another binary. 
 
 In the wild maldoc authors will use this technique to hide binaries inside of files stored 
@@ -34,18 +32,9 @@ is the same document without all the malicious code. Document 1 will copy Docume
 and then "peek" inside of this document and pull out the oleObject.bin file. Contained inside of this
 oleObject.bin file is a payload that is parsed out and executed on the file system.
 
-## Metadata
-
-- Atomic GUID: 6afe288a-8a8b-4d33-a629-8d03ba9dad3a
-- Technique: T1564: Hide Artifacts
-- Platforms: windows
-- Executor: powershell
-- Dependency Executor: powershell
-- Source Path: atomics/T1564/T1564.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564]]
+- [[kb/attack/techniques/T1564-hide_artifacts|T1564: Hide Artifacts]]
 
 ## Dependencies
 

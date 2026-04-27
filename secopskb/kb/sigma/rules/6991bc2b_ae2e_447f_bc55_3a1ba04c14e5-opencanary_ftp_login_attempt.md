@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/application/opencanary/opencanary_ftp_login_attempt.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/application/opencanary/opencanary_ftp_login_attempt.yml"
-build_date: "2026-04-26 17:03:20"
+build_date: "2026-04-27 19:13:53"
 status: "test"
 level: "high"
 logsource: "opencanary / application"
@@ -22,18 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# OpenCanary - FTP Login Attempt
-
 Detects instances where an FTP service on an OpenCanary node has had a login attempt.
-
-## Metadata
-
-- Rule ID: 6991bc2b-ae2e-447f-bc55-3a1ba04c14e5
-- Status: test
-- Level: high
-- Author: Security Onion Solutions
-- Date: 2024-03-08
-- Source Path: rules/application/opencanary/opencanary_ftp_login_attempt.yml
 
 ## Logsource
 
@@ -44,8 +33,8 @@ Detects instances where an FTP service on an OpenCanary node has had a login att
 
 ### Techniques
 
-- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190]]
-- [[kb/attack/techniques/T1021-remote_services|T1021]]
+- [[kb/attack/techniques/T1190-exploit_public-facing_application|T1190: Exploit Public-Facing Application]]
+- [[kb/attack/techniques/T1021-remote_services|T1021: Remote Services]]
 
 ## Detection
 

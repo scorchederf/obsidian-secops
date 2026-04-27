@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_fltmc_unload_driver_sysmon.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_fltmc_unload_driver_sysmon.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -23,19 +23,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Sysmon Driver Unloaded Via Fltmc.EXE
-
 Detects possible Sysmon filter driver unloaded via fltmc.exe
-
-## Metadata
-
-- Rule ID: 4d7cda18-1b12-4e52-b45c-d28653210df8
-- Status: test
-- Level: high
-- Author: Kirill Kiryanov, oscd.community
-- Date: 2019-10-23
-- Modified: 2023-02-13
-- Source Path: rules/windows/process_creation/proc_creation_win_fltmc_unload_driver_sysmon.yml
 
 ## Logsource
 
@@ -46,9 +34,9 @@ Detects possible Sysmon filter driver unloaded via fltmc.exe
 
 ### Techniques
 
-- [[kb/attack/techniques/T1070-indicator_removal|T1070]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562]]
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.002]]
+- [[kb/attack/techniques/T1070-indicator_removal|T1070: Indicator Removal]]
+- [[kb/attack/techniques/T1562-impair_defenses|T1562: Impair Defenses]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562002-disable-windows-event-logging|T1562.002: Disable Windows Event Logging]]
 
 ## Detection
 

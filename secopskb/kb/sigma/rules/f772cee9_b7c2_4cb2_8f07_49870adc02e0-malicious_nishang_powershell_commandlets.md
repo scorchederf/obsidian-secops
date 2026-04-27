@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_nishang_malicious_commandlets.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_nishang_malicious_commandlets.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Malicious Nishang PowerShell Commandlets
-
 Detects Commandlet names and arguments from the Nishang exploitation framework
-
-## Metadata
-
-- Rule ID: f772cee9-b7c2-4cb2-8f07-49870adc02e0
-- Status: test
-- Level: high
-- Author: Alec Costello
-- Date: 2019-05-16
-- Modified: 2023-01-16
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_nishang_malicious_commandlets.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects Commandlet names and arguments from the Nishang exploitation framework
 
 ### Techniques
 
-- [[kb/attack/techniques/T1059-command_and_scripting_interpreter|T1059.001]]
+- [[kb/attack/techniques/T1059-command_and_scripting_interpreter#^t1059001-powershell|T1059.001: PowerShell]]
 
 ## Detection
 

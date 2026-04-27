@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2013-08-001/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2013-08-001.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2013-08-001"
   - "Execution with schtasks"
@@ -26,26 +26,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2013-08-001: Execution with schtasks
-
-## Metadata
-
-- CAR ID: CAR-2013-08-001
-- Submission Date: 2013/08/07
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process
-- Contributors: MITRE
-
-## Description
-
 The Windows built-in tool `schtasks.exe` provides the creation, modification, and running of [scheduled tasks](https://attack.mitre.org/techniques/T1053) on a local or remote computer. It is provided as a more flexible alternative to `at.exe`, described in [[kb/car/analytics/CAR-2013-05-004-execution_with_at|CAR-2013-05-004]]. Although used by adversaries, the tool is also legitimately used by administrators, scripts, and software configurations. The scheduled tasks tool can be used to gain [Persistence](https://attack.mitre.org/tactics/TA0003) and can be used in combination with a [Lateral Movement](https://attack.mitre.org/tactics/TA0008) technique to remotely gain [execution](https://attack.mitre.org/tactics/TA0002). Additionally, the command has parameters to specify the user and password responsible for creating the task, as well as the user and password combination that the task will run as. The `/s` flag specifies the remote system on which the task should be scheduled, usually indicating [Lateral Movement](https://attack.mitre.org/tactics/TA0008).
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1053-scheduled_task_job|T1053]] (coverage: Moderate; tactics: TA0003)
-  - [[kb/attack/techniques/T1053-scheduled_task_job|T1053.005]]
+- [[kb/attack/techniques/T1053-scheduled_task_job|T1053: Scheduled Task/Job]] (coverage: Moderate; tactics: TA0003)
+  - [[kb/attack/techniques/T1053-scheduled_task_job#^t1053005-scheduled-task|T1053.005: Scheduled Task]]
 
 ## Implementations
 

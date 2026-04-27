@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1564.006"
 attack_technique_name: "Run Virtual Instance"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1564.006/T1564.006.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "command_prompt"
 aliases:
   - "c59f246a-34f8-4e4d-9276-c295ef9ba0dd"
@@ -20,23 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Register Portable Virtualbox
-
 ransomware payloads via virtual machines (VM). 
 [Maze ransomware](https://threatpost.com/maze-ransomware-ragnar-locker-virtual-machine/159350/)
 
-## Metadata
-
-- Atomic GUID: c59f246a-34f8-4e4d-9276-c295ef9ba0dd
-- Technique: T1564.006: Run Virtual Instance
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1564.006/T1564.006.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1564-hide_artifacts|T1564.006]]
+- [[kb/attack/techniques/T1564-hide_artifacts#^t1564006-run-virtual-instance|T1564.006: Run Virtual Instance]]
 
 ## Input Arguments
 

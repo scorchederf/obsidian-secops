@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/linux/auditd/lnx_auditd_keylogging_with_pam_d.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/lnx_auditd_keylogging_with_pam_d.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:52"
 status: "test"
 level: "high"
 logsource: "linux / auditd"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Linux Keylogging with Pam.d
-
 Detect attempt to enable auditing of TTY input
-
-## Metadata
-
-- Rule ID: 49aae26c-450e-448b-911d-b3c13d178dfc
-- Status: test
-- Level: high
-- Author: Pawel Mazur
-- Date: 2021-05-24
-- Modified: 2022-12-18
-- Source Path: rules/linux/auditd/lnx_auditd_keylogging_with_pam_d.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detect attempt to enable auditing of TTY input
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003]]
-- [[kb/attack/techniques/T1056-input_capture|T1056.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping|T1003: OS Credential Dumping]]
+- [[kb/attack/techniques/T1056-input_capture#^t1056001-keylogging|T1056.001: Keylogging]]
 
 ## Detection
 

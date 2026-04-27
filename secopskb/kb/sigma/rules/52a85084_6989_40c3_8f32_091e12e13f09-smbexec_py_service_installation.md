@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/system/service_control_manager/win_system_hack_smbexec.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/system/service_control_manager/win_system_hack_smbexec.yml"
-build_date: "2026-04-26 17:03:24"
+build_date: "2026-04-27 19:13:59"
 status: "test"
 level: "high"
 logsource: "windows / system"
@@ -22,19 +22,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# smbexec.py Service Installation
-
 Detects the use of smbexec.py tool by detecting a specific service installation
-
-## Metadata
-
-- Rule ID: 52a85084-6989-40c3-8f32-091e12e13f09
-- Status: test
-- Level: high
-- Author: Omer Faruk Celik
-- Date: 2018-03-20
-- Modified: 2023-11-09
-- Source Path: rules/windows/builtin/system/service_control_manager/win_system_hack_smbexec.yml
 
 ## Logsource
 
@@ -45,8 +33,8 @@ Detects the use of smbexec.py tool by detecting a specific service installation
 
 ### Techniques
 
-- [[kb/attack/techniques/T1021-remote_services|T1021.002]]
-- [[kb/attack/techniques/T1569-system_services|T1569.002]]
+- [[kb/attack/techniques/T1021-remote_services#^t1021002-smb-windows-admin-shares|T1021.002: SMB/Windows Admin Shares]]
+- [[kb/attack/techniques/T1569-system_services#^t1569002-service-execution|T1569.002: Service Execution]]
 
 ## Detection
 

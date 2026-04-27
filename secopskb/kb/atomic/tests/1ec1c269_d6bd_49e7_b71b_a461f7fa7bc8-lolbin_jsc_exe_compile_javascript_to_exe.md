@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1127"
 attack_technique_name: "Trusted Developer Utilities Proxy Execution"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1127/T1127.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "command_prompt"
 aliases:
   - "1ec1c269-d6bd-49e7-b71b-a461f7fa7bc8"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Lolbin Jsc.exe compile javascript to exe
-
 Use jsc.exe to compile javascript code stored in scriptfile.js and output scriptfile.exe.
 https://lolbas-project.github.io/lolbas/Binaries/Jsc/
 https://www.phpied.com/make-your-javascript-a-windows-exe/
 
-## Metadata
-
-- Atomic GUID: 1ec1c269-d6bd-49e7-b71b-a461f7fa7bc8
-- Technique: T1127: Trusted Developer Utilities Proxy Execution
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1127/T1127.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127]]
+- [[kb/attack/techniques/T1127-trusted_developer_utilities_proxy_execution|T1127: Trusted Developer Utilities Proxy Execution]]
 
 ## Input Arguments
 

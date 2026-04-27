@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1040"
 attack_technique_name: "Network Sniffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1040/T1040.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "sh"
 aliases:
   - "c93f2492-9ebe-44b5-8b45-36574cccfe67"
@@ -20,25 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Packet Capture FreeBSD using tshark or tcpdump
-
 Perform a PCAP. Wireshark will be required for tshark. TCPdump may already be installed.
 
 Upon successful execution, tshark or tcpdump will execute and capture 5 packets on interface ens33.
 
-## Metadata
-
-- Atomic GUID: c93f2492-9ebe-44b5-8b45-36574cccfe67
-- Technique: T1040: Network Sniffing
-- Platforms: linux
-- Executor: sh
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1040/T1040.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1040-network_sniffing|T1040]]
+- [[kb/attack/techniques/T1040-network_sniffing|T1040: Network Sniffing]]
 
 ## Input Arguments
 

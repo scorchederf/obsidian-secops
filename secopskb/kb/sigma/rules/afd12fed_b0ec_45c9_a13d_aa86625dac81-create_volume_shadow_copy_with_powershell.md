@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/powershell/powershell_script/posh_ps_create_volume_shadow_copy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/powershell/powershell_script/posh_ps_create_volume_shadow_copy.yml"
-build_date: "2026-04-26 17:03:18"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / ps_script"
@@ -21,18 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Create Volume Shadow Copy with Powershell
-
 Adversaries may attempt to access or create a copy of the Active Directory domain database in order to steal credential information
-
-## Metadata
-
-- Rule ID: afd12fed-b0ec-45c9-a13d-aa86625dac81
-- Status: test
-- Level: high
-- Author: frack113
-- Date: 2022-01-12
-- Source Path: rules/windows/powershell/powershell_script/posh_ps_create_volume_shadow_copy.yml
 
 ## Logsource
 
@@ -44,7 +33,7 @@ Adversaries may attempt to access or create a copy of the Active Directory domai
 
 ### Techniques
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.003]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003003-ntds|T1003.003: NTDS]]
 
 ## Detection
 

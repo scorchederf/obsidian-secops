@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/web/proxy_generic/proxy_ua_susp.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/web/proxy_generic/proxy_ua_susp.yml"
-build_date: "2026-04-26 17:03:23"
+build_date: "2026-04-27 19:13:57"
 status: "test"
 level: "high"
 logsource: "proxy"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Suspicious User Agent
-
 Detects suspicious malformed user agent strings in proxy logs
-
-## Metadata
-
-- Rule ID: 7195a772-4b3f-43a4-a210-6a003d65caa1
-- Status: test
-- Level: high
-- Author: Florian Roth (Nextron Systems)
-- Date: 2017-07-08
-- Modified: 2022-10-31
-- Source Path: rules/web/proxy_generic/proxy_ua_susp.yml
 
 ## Logsource
 
@@ -43,7 +31,7 @@ Detects suspicious malformed user agent strings in proxy logs
 
 ### Techniques
 
-- [[kb/attack/techniques/T1071-application_layer_protocol|T1071.001]]
+- [[kb/attack/techniques/T1071-application_layer_protocol#^t1071001-web-protocols|T1071.001: Web Protocols]]
 
 ## Detection
 

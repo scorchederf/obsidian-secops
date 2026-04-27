@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1110.004"
 attack_technique_name: "Brute Force: Credential Stuffing"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.004/T1110.004.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:27"
 executor: "bash"
 aliases:
   - "4f08197a-2a8a-472d-9589-cd2895ef22ad"
@@ -20,23 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# SSH Credential Stuffing From Linux
-
 Using username,password combination from a password dump to login over SSH.
-
-## Metadata
-
-- Atomic GUID: 4f08197a-2a8a-472d-9589-cd2895ef22ad
-- Technique: T1110.004: Brute Force: Credential Stuffing
-- Platforms: linux
-- Executor: bash
-- Elevation Required: False
-- Dependency Executor: bash
-- Source Path: atomics/T1110.004/T1110.004.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1110-brute_force|T1110.004]]
+- [[kb/attack/techniques/T1110-brute_force#^t1110004-credential-stuffing|T1110.004: Credential Stuffing]]
 
 ## Input Arguments
 

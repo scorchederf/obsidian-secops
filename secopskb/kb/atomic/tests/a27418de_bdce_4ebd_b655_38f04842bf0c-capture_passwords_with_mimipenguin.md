@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.007"
 attack_technique_name: "OS Credential Dumping: Proc Filesystem"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "bash"
 aliases:
   - "a27418de-bdce-4ebd-b655-38f04842bf0c"
@@ -20,26 +20,14 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Capture Passwords with MimiPenguin
-
 MimiPenguin is a tool inspired by MimiKatz that targets Linux systems affected by CVE-2018-20781 (Ubuntu-based distros and certain versions of GNOME Keyring). 
 Upon successful execution on an affected system, MimiPenguin will retrieve passwords from memory and output them to a specified file. 
 See https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20781. 
 See https://www.tecmint.com/mimipenguin-hack-login-passwords-of-linux-users/#:~:text=Mimipenguin%20is%20a%20free%20and,tested%20on%20various%20Linux%20distributions.
 
-## Metadata
-
-- Atomic GUID: a27418de-bdce-4ebd-b655-38f04842bf0c
-- Technique: T1003.007: OS Credential Dumping: Proc Filesystem
-- Platforms: linux
-- Executor: bash
-- Elevation Required: True
-- Dependency Executor: sh
-- Source Path: atomics/T1003.007/T1003.007.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.007]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003007-proc-filesystem|T1003.007: Proc Filesystem]]
 
 ## Input Arguments
 

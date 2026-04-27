@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1036.007"
 attack_technique_name: "Masquerading: Double File Extension"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.007/T1036.007.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "c7fa0c3b-b57f-4cba-9118-863bf4e653fc"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# File Extension Masquerading
-
 download and execute a file masquerading as images or Office files. Upon execution 3 calc instances and 3 vbs windows will be launched.
 
 e.g SOME_LEGIT_NAME.[doc,docx,xls,xlsx,pdf,rtf,png,jpg,etc.].[exe,vbs,js,ps1,etc] (Quartelyreport.docx.exe)
 
-## Metadata
-
-- Atomic GUID: c7fa0c3b-b57f-4cba-9118-863bf4e653fc
-- Technique: T1036.007: Masquerading: Double File Extension
-- Platforms: windows
-- Executor: command_prompt
-- Dependency Executor: powershell
-- Source Path: atomics/T1036.007/T1036.007.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1036-masquerading|T1036.007]]
+- [[kb/attack/techniques/T1036-masquerading#^t1036007-double-file-extension|T1036.007: Double File Extension]]
 
 ## Input Arguments
 

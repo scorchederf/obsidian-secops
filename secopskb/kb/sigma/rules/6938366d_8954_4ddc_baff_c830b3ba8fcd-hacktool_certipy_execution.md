@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/process_creation/proc_creation_win_hktl_certipy.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_hktl_certipy.yml"
-build_date: "2026-04-26 17:03:19"
+build_date: "2026-04-27 19:13:51"
 status: "test"
 level: "high"
 logsource: "windows / process_creation"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# HackTool - Certipy Execution
-
 Detects Certipy execution, a tool for Active Directory Certificate Services enumeration and abuse based on PE metadata characteristics and common command line arguments.
-
-## Metadata
-
-- Rule ID: 6938366d-8954-4ddc-baff-c830b3ba8fcd
-- Status: test
-- Level: high
-- Author: pH-T (Nextron Systems), Sittikorn Sangrattanapitak
-- Date: 2023-04-17
-- Modified: 2024-10-08
-- Source Path: rules/windows/process_creation/proc_creation_win_hktl_certipy.yml
 
 ## Logsource
 
@@ -44,7 +32,7 @@ Detects Certipy execution, a tool for Active Directory Certificate Services enum
 
 ### Techniques
 
-- [[kb/attack/techniques/T1649-steal_or_forge_authentication_certificates|T1649]]
+- [[kb/attack/techniques/T1649-steal_or_forge_authentication_certificates|T1649: Steal or Forge Authentication Certificates]]
 
 ## Detection
 

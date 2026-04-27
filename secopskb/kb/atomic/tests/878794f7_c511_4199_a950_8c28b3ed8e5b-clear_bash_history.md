@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1562.003"
 attack_technique_name: "Impair Defenses: Impair Command History Logging"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.003/T1562.003.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "bash"
 aliases:
   - "878794f7-c511-4199-a950-8c28b3ed8e5b"
@@ -20,24 +20,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Clear bash history
-
 An attacker may clear the bash history cache and the history file as their last act before logging off to remove the record of their command line activities. 
 
 In this test we use the $HISTFILE variable throughout to 1. confirms the $HISTFILE variable is set 2. echo "" into it 3..5 confirm the file is empty 6 clear the history cache 7. confirm the history cache is empty. This is when the attacker would logoff.
 
-## Metadata
-
-- Atomic GUID: 878794f7-c511-4199-a950-8c28b3ed8e5b
-- Technique: T1562.003: Impair Defenses: Impair Command History Logging
-- Platforms: linux
-- Executor: bash
-- Elevation Required: False
-- Source Path: atomics/T1562.003/T1562.003.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1562-impair_defenses|T1562.003]]
+- [[kb/attack/techniques/T1562-impair_defenses#^t1562003-impair-command-history-logging|T1562.003: Impair Command History Logging]]
 
 ## Executor
 

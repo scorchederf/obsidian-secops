@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1571"
 attack_technique_name: "Non-Standard Port"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1571/T1571.yaml"
-build_date: "2026-04-26 17:02:13"
+build_date: "2026-04-27 19:12:28"
 executor: "sh"
 aliases:
   - "5db21e1d-dd9c-4a50-b885-b1e748912767"
@@ -21,22 +21,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Testing usage of uncommonly used port
-
 Testing uncommonly used port utilizing telnet.
-
-## Metadata
-
-- Atomic GUID: 5db21e1d-dd9c-4a50-b885-b1e748912767
-- Technique: T1571: Non-Standard Port
-- Platforms: linux, macos
-- Executor: sh
-- Dependency Executor: sh
-- Source Path: atomics/T1571/T1571.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1571-non-standard_port|T1571]]
+- [[kb/attack/techniques/T1571-non-standard_port|T1571: Non-Standard Port]]
 
 ## Input Arguments
 

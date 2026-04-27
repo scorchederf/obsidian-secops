@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1041"
 attack_technique_name: "Exfiltration Over C2 Channel"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1041/T1041.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:26"
 executor: "powershell"
 aliases:
   - "c9207f3e-213d-4cc7-ad2a-7697a7237df9"
@@ -20,21 +20,11 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Text Based Data Exfiltration using DNS subdomains
-
 Simulates an adversary using DNS tunneling to exfiltrate data over a Command and Control (C2) channel.
-
-## Metadata
-
-- Atomic GUID: c9207f3e-213d-4cc7-ad2a-7697a7237df9
-- Technique: T1041: Exfiltration Over C2 Channel
-- Platforms: windows
-- Executor: powershell
-- Source Path: atomics/T1041/T1041.yaml
 
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041]]
+- [[kb/attack/techniques/T1041-exfiltration_over_c2_channel|T1041: Exfiltration Over C2 Channel]]
 
 ## Input Arguments
 

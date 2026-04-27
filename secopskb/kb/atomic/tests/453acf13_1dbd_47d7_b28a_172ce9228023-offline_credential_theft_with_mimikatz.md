@@ -6,7 +6,7 @@ generated: "true"
 attack_technique_id: "T1003.001"
 attack_technique_name: "OS Credential Dumping: LSASS Memory"
 source_url: "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.001/T1003.001.yaml"
-build_date: "2026-04-26 17:02:12"
+build_date: "2026-04-27 19:12:25"
 executor: "command_prompt"
 aliases:
   - "453acf13-1dbd-47d7-b28a-172ce9228023"
@@ -20,24 +20,12 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Offline Credential Theft With Mimikatz
-
 The memory of lsass.exe is often dumped for offline credential theft attacks. Adversaries commonly perform this offline analysis with
 Mimikatz. This tool is available at https://github.com/gentilkiwi/mimikatz and can be obtained using the get-prereq_commands.
 
-## Metadata
-
-- Atomic GUID: 453acf13-1dbd-47d7-b28a-172ce9228023
-- Technique: T1003.001: OS Credential Dumping: LSASS Memory
-- Platforms: windows
-- Executor: command_prompt
-- Elevation Required: True
-- Dependency Executor: powershell
-- Source Path: atomics/T1003.001/T1003.001.yaml
-
 ## ATT&CK Mapping
 
-- [[kb/attack/techniques/T1003-os_credential_dumping|T1003.001]]
+- [[kb/attack/techniques/T1003-os_credential_dumping#^t1003001-lsass-memory|T1003.001: LSASS Memory]]
 
 ## Input Arguments
 

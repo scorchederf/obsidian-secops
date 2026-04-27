@@ -5,7 +5,7 @@ framework: "sigma"
 generated: "true"
 source_path: "rules/windows/builtin/dns_client/win_dns_client_tor_onion.yml"
 source_url: "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/dns_client/win_dns_client_tor_onion.yml"
-build_date: "2026-04-26 17:03:21"
+build_date: "2026-04-27 19:13:55"
 status: "test"
 level: "high"
 logsource: "windows / dns-client"
@@ -21,19 +21,7 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# Query Tor Onion Address - DNS Client
-
 Detects DNS resolution of an .onion address related to Tor routing networks
-
-## Metadata
-
-- Rule ID: 8384bd26-bde6-4da9-8e5d-4174a7a47ca2
-- Status: test
-- Level: high
-- Author: Nasreddine Bencherchali (Nextron Systems)
-- Date: 2022-02-20
-- Modified: 2025-09-12
-- Source Path: rules/windows/builtin/dns_client/win_dns_client_tor_onion.yml
 
 ## Logsource
 
@@ -45,7 +33,7 @@ Detects DNS resolution of an .onion address related to Tor routing networks
 
 ### Techniques
 
-- [[kb/attack/techniques/T1090-proxy|T1090.003]]
+- [[kb/attack/techniques/T1090-proxy#^t1090003-multi-hop-proxy|T1090.003: Multi-hop Proxy]]
 
 ## Detection
 

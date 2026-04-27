@@ -5,7 +5,7 @@ framework: "car"
 generated: "true"
 source_url: "https://car.mitre.org/analytics/CAR-2021-12-002/"
 repo_url: "https://github.com/mitre-attack/car/blob/master/analytics/CAR-2021-12-002.yaml"
-build_date: "2026-04-26 13:49:48"
+build_date: "2026-04-27 19:03:49"
 aliases:
   - "CAR-2021-12-002"
   - "Modification of Default Startup Folder in the Registry Key 'Common Startup'"
@@ -28,27 +28,13 @@ tags:
 
 [[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
-# CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'
-
-## Metadata
-
-- CAR ID: CAR-2021-12-002
-- Submission Date: 2021/12/06
-- Information Domain: Host
-- Analytic Type: TTP
-- Platforms: Windows
-- Data Subtypes: Process, Registry
-- Contributors: Lucas Heiligenstein
-
-## Description
-
 Detection of the modification of the registry key `Common Startup` located in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\` and `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\`. When a user logs on, any files located in the Startup Folder are launched. Attackers may modify these folders with other files in order to evade detection set on these default folders. This detection focuses on EventIDs 4688 and 1 for process creation and EventID 4657 for the modification of the Registry Keys.
 
 ## ATT&CK Coverage
 
-- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547]] (coverage: Medium; tactics: TA0003, TA0004)
-  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547.001]]
-- [[kb/attack/techniques/T1112-modify_registry|T1112]] (coverage: Medium; tactics: TA0005)
+- [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution|T1547: Boot or Logon Autostart Execution]] (coverage: Medium; tactics: TA0003, TA0004)
+  - [[kb/attack/techniques/T1547-boot_or_logon_autostart_execution#^t1547001-registry-run-keys---startup-folder|T1547.001: Registry Run Keys / Startup Folder]]
+- [[kb/attack/techniques/T1112-modify_registry|T1112: Modify Registry]] (coverage: Medium; tactics: TA0005)
 
 ## Implementations
 
