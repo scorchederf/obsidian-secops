@@ -32,7 +32,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -72,6 +72,11 @@ On network devices, adversaries may perform network captures using [[T1059-comma
 - [[kb/atomic/tests/a5b2f6a0_24b4_493e_9590_c699f75723ca-packet_capture_windows_command_prompt|Packet Capture Windows Command Prompt (command_prompt; windows)]]
 - [[kb/atomic/tests/b1cbdf8b_6078_48f5_a890_11ea19d7f8e9-packet_capture_linux_socket_af_packet_sock_raw_with_bpf_filter_for_udp_with_sudo|Packet Capture Linux socket AF_PACKET,SOCK_RAW with BPF filter for UDP with sudo (bash; linux)]]
 - 6 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-pktmon_exe|Pktmon.exe (Reconnaissance)]]
+- [[kb/lolbas/entries/othermsbinaries-nmcap_exe|Nmcap.exe (Reconnaissance)]]
 
 <!-- generated-detection-validation-end -->
 

@@ -8,7 +8,7 @@ The vault should keep ATT&CK as the primary behavior spine. Other sources should
 - CAR: analytic rationale and implementations mapped to ATT&CK.
 - Sigma: portable detection rules mapped to ATT&CK, logsource, product, and service.
 - Atomic Red Team: executable validation tests mapped to ATT&CK.
-- LOLBAS and GTFOBins: abused legitimate binaries mapped to ATT&CK and linked to tools, commands, and Sigma/CAR detections.
+- LOLBAS and GTFOBins: abused legitimate binaries mapped to ATT&CK and linked to tools, commands, and Sigma/CAR detections. LOLBAS is implemented under `kb/lolbas/`.
 - Splunk Security Content and Elastic Detection Rules: vendor-specific detection-as-code mapped to ATT&CK, data sources, and analytic stories.
 - Security Datasets: replayable evidence linked to ATT&CK, Sigma, Splunk, Elastic, and CAR validations.
 - Malware Behavior Catalog: malware-analysis behavior taxonomy linked to ATT&CK techniques and software pages.
@@ -59,6 +59,7 @@ The vault should keep ATT&CK as the primary behavior spine. Other sources should
 3. LOLBAS and GTFOBins
    - Parse project YAML/Markdown data.
    - Generate binary pages with functions, commands, ATT&CK mappings, and detection references.
+   - LOLBAS status: implemented in `kb/lolbas/`, with indexes by entry, category, function, and ATT&CK technique.
 
 4. PayloadsAllTheThings and InternalAllTheThings
    - Import Markdown chapters as curated technique/payload notes.
@@ -110,6 +111,7 @@ Use this checklist when adding the next source so the vault stays maintainable.
 
 5. Update source indexes and cross-links.
    - Source index.
+   - Each source `index.md` must include a short description of the framework/source, its upstream link, what was imported, and how the pages relate to ATT&CK, tools, detections, validation, or tradecraft. Avoid leaving generated indexes as bare link lists.
    - ATT&CK technique index.
    - Tool/protocol/topic index where useful.
    - Cross-links should be based on stable IDs, exact filenames, or conservative normalized names.

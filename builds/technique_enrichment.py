@@ -16,11 +16,13 @@ ATTACK_TECHNIQUES_DIR = os.path.join(VAULT_DIR, "kb", "attack", "techniques")
 CAR_ANALYTICS_DIR = os.path.join(VAULT_DIR, "kb", "car", "analytics")
 SIGMA_RULES_DIR = os.path.join(VAULT_DIR, "kb", "sigma", "rules")
 ATOMIC_TESTS_DIR = os.path.join(VAULT_DIR, "kb", "atomic", "tests")
+LOLBAS_ENTRIES_DIR = os.path.join(VAULT_DIR, "kb", "lolbas", "entries")
 
 SECTION_START = "<!-- generated-detection-validation-start -->"
 SECTION_END = "<!-- generated-detection-validation-end -->"
 MAX_SIGMA_RULES = 10
 MAX_ATOMIC_TESTS = 10
+MAX_LOLBAS_ENTRIES = 10
 
 
 def normalize_attack_id(attack_id):
@@ -121,6 +123,23 @@ def collect_atomic_links():
     return mapping
 
 
+def collect_lolbas_links():
+    mapping = defaultdict(list)
+    for filepath in list_markdown_files(LOLBAS_ENTRIES_DIR):
+        data = read_frontmatter(filepath)
+        title = data.get("title", "")
+        functions = ", ".join(data.get("functions", []) or [])
+        suffix = []
+        if functions:
+            suffix.append(functions)
+        label = title + (" (" + "; ".join(suffix) + ")" if suffix else "")
+        for attack_id in data.get("attack_technique_ids", []) or []:
+            parent_id = normalize_attack_id(attack_id)
+            if parent_id:
+                mapping[parent_id].append(make_note_link(filepath, label))
+    return mapping
+
+
 def write_limited_links(title, links, limit):
     if not links:
         return ""
@@ -137,14 +156,15 @@ def write_limited_links(title, links, limit):
     return text + "\n"
 
 
-def build_enrichment_section(attack_id, car_links, sigma_links, atomic_links):
-    if not car_links and not sigma_links and not atomic_links:
+def build_enrichment_section(attack_id, car_links, sigma_links, atomic_links, lolbas_links):
+    if not car_links and not sigma_links and not atomic_links and not lolbas_links:
         return ""
     text = SECTION_START + "\n"
     text += "## Detection & Validation\n\n"
     text += write_limited_links("CAR Analytics", car_links, 20)
     text += write_limited_links("Sigma Rules", sigma_links, MAX_SIGMA_RULES)
     text += write_limited_links("Atomic Tests", atomic_links, MAX_ATOMIC_TESTS)
+    text += write_limited_links("LOLBAS Entries", lolbas_links, MAX_LOLBAS_ENTRIES)
     text += SECTION_END + "\n\n"
     return text
 
@@ -173,6 +193,7 @@ def build_technique_enrichment():
     car_by_technique = collect_car_links()
     sigma_by_technique = collect_sigma_links()
     atomic_by_technique = collect_atomic_links()
+    lolbas_by_technique = collect_lolbas_links()
 
     changed = 0
     for attack_id, filepath in technique_files.items():
@@ -181,6 +202,7 @@ def build_technique_enrichment():
             car_by_technique.get(attack_id, []),
             sigma_by_technique.get(attack_id, []),
             atomic_by_technique.get(attack_id, []),
+            lolbas_by_technique.get(attack_id, []),
         )
         old_text = read_text_file(filepath)
         new_text = insert_enrichment(old_text, section)

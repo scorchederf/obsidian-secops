@@ -52,7 +52,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -104,6 +104,11 @@ Since some boot or logon autostart programs run with higher privileges, an adver
 - [[kb/atomic/tests/5b6768e4_44d2_44f0_89da_a01d1430fd5e-suspicious_bat_file_run_from_startup_folder|Suspicious bat file run from startup Folder (powershell; windows)]]
 - [[kb/atomic/tests/5cb0b071_8a5a_412f_839d_116beb2ed9f7-driver_installation_using_pnputil_exe|Driver Installation Using pnputil.exe (powershell; windows)]]
 - 40 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-pnputil_exe|Pnputil.exe (Execute)]]
+- [[kb/lolbas/entries/othermsbinaries-update_exe|Update.exe (Download, AWL Bypass, Execute)]]
 
 <!-- generated-detection-validation-end -->
 

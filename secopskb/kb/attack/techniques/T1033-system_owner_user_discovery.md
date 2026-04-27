@@ -60,7 +60,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -107,6 +107,10 @@ On network devices, [[T1059-command_and_scripting_interpreter#^t1059008-network-
 - [[kb/atomic/tests/4c4959bf_addf_4b4a_be86_8d09cc1857aa-system_owner_user_discovery|System Owner/User Discovery (command_prompt; windows)]]
 - [[kb/atomic/tests/ba38e193_37a6_4c41_b214_61b33277fe36-system_owner_user_discovery_using_command_prompt|System Owner/User Discovery Using Command Prompt (command_prompt; windows)]]
 - [[kb/atomic/tests/dcb6cdee_1fb0_4087_8bf8_88cfd136ba51-user_discovery_with_env_vars_powershell_script|User Discovery With Env Vars PowerShell Script (powershell; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/yml_template_yml-binary_exe|Binary.exe (Execute, AWL Bypass)]]
 
 <!-- generated-detection-validation-end -->
 

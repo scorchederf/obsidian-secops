@@ -45,7 +45,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -86,6 +86,11 @@ Command-line examples:(Citation: XSL Bypass Mar 2019)(Citation: LOLBAS Wmic)
 - [[kb/atomic/tests/7f5be499_33be_4129_a560_66021f379b9b-wmic_bypass_using_remote_xsl_file|WMIC bypass using remote XSL file (command_prompt; windows)]]
 - [[kb/atomic/tests/a7c3ab07_52fb_49c8_ab6d_e9c6d4a0a985-msxsl_bypass_using_remote_files|MSXSL Bypass using remote files (command_prompt; windows)]]
 - [[kb/atomic/tests/ca23bfb2_023f_49c5_8802_e66997de462d-msxsl_bypass_using_local_files|MSXSL Bypass using local files (command_prompt; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osscripts-winrm_vbs|winrm.vbs (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/othermsbinaries-msxsl_exe|msxsl.exe (Execute, AWL Bypass, Download, ADS)]]
 
 <!-- generated-detection-validation-end -->
 

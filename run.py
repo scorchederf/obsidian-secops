@@ -2,12 +2,14 @@ from builds.attack import build_attack
 from builds.atomic import build_atomic
 from builds.car import build_car
 from builds.indexes import build_indexes
+from builds.lolbas import build_lolbas
 from builds.sigma import build_sigma
 from builds.technique_enrichment import build_technique_enrichment
 from utils.compare_vaults import compare_vaults
 from utils.config import (
     BUILD_ATOMIC,
     BUILD_CAR,
+    BUILD_LOLBAS,
     BUILD_SIGMA,
     COMPARE_DIFF_FOLDER,
     COMPARE_REPORT_FILE,
@@ -26,6 +28,8 @@ def main():
         build_atomic()
     if BUILD_SIGMA:
         build_sigma()
+    if BUILD_LOLBAS:
+        build_lolbas()
     build_technique_enrichment()
     build_indexes()
     log("Starting vault verification", "INFO")

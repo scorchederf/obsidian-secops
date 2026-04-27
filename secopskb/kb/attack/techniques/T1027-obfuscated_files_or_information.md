@@ -45,7 +45,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -93,6 +93,10 @@ Adversaries may also abuse [[T1027-obfuscated_files_or_information#^t1027010-com
 - [[kb/atomic/tests/7693ccaa_8d64_4043_92a5_a2eb70359535-decode_eicar_file_and_write_to_file|Decode Eicar File and Write to File (powershell; windows, macos, linux)]]
 - [[kb/atomic/tests/78bd3fa7_773c_449e_a978_dc1f1500bc52-go_compile|Go compile (sh; linux, macos)]]
 - 17 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-certutil_exe|Certutil.exe (Download, ADS, Encode, Decode)]]
 
 <!-- generated-detection-validation-end -->
 

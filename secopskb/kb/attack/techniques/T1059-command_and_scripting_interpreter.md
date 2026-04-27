@@ -48,7 +48,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -103,6 +103,14 @@ Adversaries may abuse these technologies in various ways as a means of executing
 - [[kb/atomic/tests/161d694c_b543_4434_85c3_c3a433e33792-python_pty_module_and_spawn_function_used_to_spawn_sh_or_bash|Python pty module and spawn function used to spawn sh or bash (sh; linux)]]
 - [[kb/atomic/tests/1620de42_160a_4fe5_bbaf_d3fef0181ce9-visual_basic_script_execution_to_gather_local_computer_information|Visual Basic script execution to gather local computer information (powershell; windows)]]
 - 47 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/honorablementions-powershell_exe|Powershell.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-cmd_exe|Cmd.exe (ADS, Download, Upload)]]
+- [[kb/lolbas/entries/othermsbinaries-dotnet_exe|Dotnet.exe (AWL Bypass, Execute)]]
+- [[kb/lolbas/entries/othermsbinaries-fsi_exe|Fsi.exe (AWL Bypass)]]
+- [[kb/lolbas/entries/othermsbinaries-fsianycpu_exe|FsiAnyCpu.exe (AWL Bypass)]]
 
 <!-- generated-detection-validation-end -->
 

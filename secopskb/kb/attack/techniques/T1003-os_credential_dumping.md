@@ -76,7 +76,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -132,6 +132,20 @@ Several of the tools mentioned in associated sub-techniques may be used by both 
 - [[kb/atomic/tests/2364e33d_ceab_4641_8468_bfb1d7cc2723-dump_active_directory_database_with_ntdsutil|Dump Active Directory Database with NTDSUtil (command_prompt; windows)]]
 - [[kb/atomic/tests/2536dee2_12fb_459a_8c37_971844fa73be-dump_lsass_exe_memory_using_comsvcs_dll|Dump LSASS.exe Memory using comsvcs.dll (powershell; windows)]]
 - 44 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-diskshadow_exe|Diskshadow.exe (Dump, Execute)]]
+- [[kb/lolbas/entries/osbinaries-esentutl_exe|Esentutl.exe (Copy, ADS, Download)]]
+- [[kb/lolbas/entries/osbinaries-rdrleakdiag_exe|rdrleakdiag.exe (Dump)]]
+- [[kb/lolbas/entries/osbinaries-reg_exe|Reg.exe (ADS, Credentials)]]
+- [[kb/lolbas/entries/osbinaries-rpcping_exe|Rpcping.exe (Credentials)]]
+- [[kb/lolbas/entries/osbinaries-tttracer_exe|Tttracer.exe (Execute, Dump)]]
+- [[kb/lolbas/entries/osbinaries-wbadmin_exe|wbadmin.exe (Dump)]]
+- [[kb/lolbas/entries/oslibraries-comsvcs_dll|Comsvcs.dll (Dump)]]
+- [[kb/lolbas/entries/othermsbinaries-adplus_exe|adplus.exe (Dump, Execute)]]
+- [[kb/lolbas/entries/othermsbinaries-createdump_exe|Createdump.exe (Dump)]]
+- 5 more in the generated source index
 
 <!-- generated-detection-validation-end -->
 

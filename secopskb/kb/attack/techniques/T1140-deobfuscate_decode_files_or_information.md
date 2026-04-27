@@ -50,7 +50,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -95,6 +95,10 @@ Sometimes a user's action may be required to open it for deobfuscation or decryp
 - [[kb/atomic/tests/b6097712_c42e_4174_b8f2_4b1e1a5bbb3d-base64_decoding_with_shell_utilities_freebsd|Base64 decoding with shell utilities (freebsd) (sh; linux)]]
 - [[kb/atomic/tests/c3b65cd5_ee51_4e98_b6a3_6cbdec138efc-xor_decoding_and_command_execution_using_python|XOR decoding and command execution using Python (bash; linux, macos)]]
 - 1 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-certutil_exe|Certutil.exe (Download, ADS, Encode, Decode)]]
 
 <!-- generated-detection-validation-end -->
 

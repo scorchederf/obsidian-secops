@@ -61,7 +61,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -107,6 +107,10 @@ Adversaries may search compromised systems to find and obtain insecurely stored 
 - [[kb/atomic/tests/336b25bf_4514_4684_8924_474974f28137-certutil_exportpfx|CertUtil ExportPFX (powershell; windows)]]
 - [[kb/atomic/tests/367d4004_5fc0_446d_823f_960c74ae52c3-access_unattend_xml|Access unattend.xml (command_prompt; windows)]]
 - 34 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-findstr_exe|Findstr.exe (ADS, Credentials, Download)]]
 
 <!-- generated-detection-validation-end -->
 

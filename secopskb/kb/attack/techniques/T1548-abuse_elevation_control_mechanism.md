@@ -67,7 +67,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -116,6 +116,15 @@ Adversaries may circumvent mechanisms designed to control elevate privileges to 
 - [[kb/atomic/tests/2b61977b_ae2d_4ae4_89cb_5c36c89586be-winpwn_uac_bypass_dccwbypassuac_technique|WinPwn - UAC Bypass DccwBypassUAC technique (powershell; windows)]]
 - [[kb/atomic/tests/2bf9a018_4664_438a_b435_cc6f8c6f71b1-sudo_usage_freebsd|Sudo usage (freebsd) (sh; linux)]]
 - 33 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-computerdefaults_exe|ComputerDefaults.exe (UAC Bypass)]]
+- [[kb/lolbas/entries/osbinaries-eudcedit_exe|Eudcedit.exe (UAC Bypass)]]
+- [[kb/lolbas/entries/osbinaries-eventvwr_exe|Eventvwr.exe (UAC Bypass)]]
+- [[kb/lolbas/entries/osbinaries-iscsicpl_exe|iscsicpl.exe (UAC Bypass)]]
+- [[kb/lolbas/entries/osbinaries-odbcad32_exe|odbcad32.exe (UAC Bypass)]]
+- [[kb/lolbas/entries/osbinaries-wsreset_exe|Wsreset.exe (UAC Bypass)]]
 
 <!-- generated-detection-validation-end -->
 

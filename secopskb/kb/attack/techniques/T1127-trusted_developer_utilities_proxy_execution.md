@@ -41,7 +41,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -79,6 +79,20 @@ Smart App Control is a feature of Windows that blocks applications it considers 
 - [[kb/atomic/tests/3fc9fea2_871d_414d_8ef6_02e85e322b80-lolbin_jsc_exe_compile_javascript_to_dll|Lolbin Jsc.exe compile javascript to dll (command_prompt; windows)]]
 - [[kb/atomic/tests/58742c0f_cb01_44cd_a60b_fb26e8871c93-msbuild_bypass_using_inline_tasks_c|MSBuild Bypass Using Inline Tasks (C#) (command_prompt; windows)]]
 - [[kb/atomic/tests/ab042179_c0c5_402f_9bc8_42741f5ce359-msbuild_bypass_using_inline_tasks_vb|MSBuild Bypass Using Inline Tasks (VB) (command_prompt; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-aspnet_compiler_exe|Aspnet_Compiler.exe (AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-csc_exe|Csc.exe (Compile)]]
+- [[kb/lolbas/entries/osbinaries-dfsvc_exe|Dfsvc.exe (AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-ilasm_exe|Ilasm.exe (Compile)]]
+- [[kb/lolbas/entries/osbinaries-jsc_exe|Jsc.exe (Compile)]]
+- [[kb/lolbas/entries/osbinaries-microsoft_workflow_compiler_exe|Microsoft.Workflow.Compiler.exe (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-msbuild_exe|Msbuild.exe (AWL Bypass, Execute)]]
+- [[kb/lolbas/entries/osbinaries-ttdinject_exe|Ttdinject.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-tttracer_exe|Tttracer.exe (Execute, Dump)]]
+- [[kb/lolbas/entries/osbinaries-vbc_exe|vbc.exe (Compile)]]
+- 26 more in the generated source index
 
 <!-- generated-detection-validation-end -->
 

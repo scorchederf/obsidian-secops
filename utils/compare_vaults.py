@@ -44,12 +44,16 @@ def normalize_line(line):
         return None
     if stripped.startswith("- [[kb/atomic/index|Atomic]]"):
         return None
+    if stripped.startswith("- [[kb/lolbas/index|LOLBAS]]"):
+        return None
     if "[[kb/car/index|CAR]]" in line:
         line = line.replace(" • [[kb/car/index|CAR]]", "")
     if "[[kb/sigma/index|Sigma]]" in line:
         line = line.replace(" • [[kb/sigma/index|Sigma]]", "")
     if "[[kb/atomic/index|Atomic]]" in line:
         line = line.replace(" • [[kb/atomic/index|Atomic]]", "")
+    if "[[kb/lolbas/index|LOLBAS]]" in line:
+        line = line.replace(" • [[kb/lolbas/index|LOLBAS]]", "")
     line = line.replace("[[kb/tools/index|MITRE Tools]]", "[[kb/tools/index|Tools]]")
     line = line.replace("# MITRE Tools", "# Tools")
     for prefix in IGNORED_COMPARE_LINE_PREFIXES:

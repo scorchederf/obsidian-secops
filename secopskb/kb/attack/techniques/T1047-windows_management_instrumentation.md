@@ -43,7 +43,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -96,6 +96,10 @@ An adversary can use WMI to interact with local and remote systems and use it as
 - [[kb/atomic/tests/b3bdfc91_b33e_4c6d_a5c8_d64bee0276b3-wmi_execute_local_process|WMI Execute Local Process (command_prompt; windows)]]
 - [[kb/atomic/tests/c107778c_dcf5_47c5_af2e_1d058a3df3ea-wmi_reconnaissance_users|WMI Reconnaissance Users (command_prompt; windows)]]
 - [[kb/atomic/tests/c510d25b_1667_467d_8331_a56d3e9bc4ff-application_uninstall_using_wmic|Application uninstall using WMIC (command_prompt; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-wbemtest_exe|wbemtest.exe (Execute)]]
 
 <!-- generated-detection-validation-end -->
 

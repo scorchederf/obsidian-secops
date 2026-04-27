@@ -25,7 +25,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -63,6 +63,20 @@ Adversaries may abuse these features for [[TA0005-defense_evasion|TA0005: Defens
 - [[kb/atomic/tests/cecfea7a_5f03_4cdd_8bc8_6f7c22862440-indirect_command_execution_pcalua_exe|Indirect Command Execution - pcalua.exe (command_prompt; windows)]]
 - [[kb/atomic/tests/cf3391e0_b482_4b02_87fc_ca8362269b29-indirect_command_execution_conhost_exe|Indirect Command Execution - conhost.exe (command_prompt; windows)]]
 - [[kb/atomic/tests/de323a93_2f18_4bd5_ba60_d6fca6aeff76-indirect_command_execution_runmru_dialog|Indirect Command Execution - RunMRU Dialog (powershell; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-bash_exe|Bash.exe (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-conhost_exe|Conhost.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-diskshadow_exe|Diskshadow.exe (Dump, Execute)]]
+- [[kb/lolbas/entries/osbinaries-explorer_exe|Explorer.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-forfiles_exe|Forfiles.exe (Execute, ADS)]]
+- [[kb/lolbas/entries/osbinaries-ftp_exe|Ftp.exe (Execute, Download)]]
+- [[kb/lolbas/entries/osbinaries-msdt_exe|Msdt.exe (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-pcalua_exe|Pcalua.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-pcwrun_exe|Pcwrun.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-scriptrunner_exe|Scriptrunner.exe (Execute)]]
+- 13 more in the generated source index
 
 <!-- generated-detection-validation-end -->
 

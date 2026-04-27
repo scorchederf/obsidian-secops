@@ -1,6 +1,6 @@
 # Build Status
 
-Last stabilization pass: 2026-04-26
+Last stabilization pass: 2026-04-27
 
 ## Current Generated Sources
 
@@ -10,6 +10,7 @@ Last stabilization pass: 2026-04-26
 - CAR: 102 analytics
 - Sigma: 1,484 rules generated from filtered high/critical rules
 - Atomic Red Team: 1,790 tests
+- LOLBAS: 236 entries
 - ATT&CK technique enrichment: 169 technique pages with generated Detection & Validation sections
 
 ## Current Filters
@@ -19,11 +20,14 @@ Filters live in `utils/config.py`.
 - `BUILD_CAR = True`
 - `BUILD_ATOMIC = True`
 - `BUILD_SIGMA = True`
+- `BUILD_LOLBAS = True`
 - `SIGMA_LEVELS = ["critical", "high"]`
 - `SIGMA_PRODUCTS = []`
 - `SIGMA_STATUSES = []`
 - `ATOMIC_PLATFORMS = []`
 - `ATOMIC_EXECUTORS = []`
+- `LOLBAS_CATEGORIES = []`
+- `LOLBAS_FUNCTIONS = []`
 
 Empty filter lists mean include everything for that dimension.
 
@@ -45,12 +49,15 @@ Empty filter lists mean include everything for that dimension.
 
 ## Next Source Queue
 
-1. LOLBAS under `kb/lolbas/`
-2. GTFOBins under `kb/gtfobins/`
-3. PayloadsAllTheThings under `kb/payloads/`
-4. InternalAllTheThings under `kb/internal/`
-5. The Hacker Recipes under `kb/recipes/`
-6. Splunk Security Content under `kb/splunk/`
-7. Elastic Detection Rules under `kb/elastic/`
+1. GTFOBins under `kb/gtfobins/`
+2. PayloadsAllTheThings under `kb/payloads/`
+3. InternalAllTheThings under `kb/internal/`
+4. The Hacker Recipes under `kb/recipes/`
+5. Splunk Security Content under `kb/splunk/`
+6. Elastic Detection Rules under `kb/elastic/`
 
 See `data-source-integration-plan.md` for the design rules and continuation checklist.
+
+## Next Build Notes
+
+- Add a short framework/source description to every generated source `index.md`. The index should explain what the framework is, what kind of records were imported, where the upstream project lives, and how this vault relates it to ATT&CK, tools, detections, or validation. For example, the Atomic Red Team index should describe Atomic Red Team, link to the upstream project, summarize that tests are mapped to ATT&CK techniques, and point to platform/executor/technique indexes.

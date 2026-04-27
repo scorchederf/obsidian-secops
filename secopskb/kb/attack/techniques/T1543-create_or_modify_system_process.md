@@ -45,7 +45,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -100,6 +100,10 @@ Services, daemons, or agents may be created with administrator privileges but ex
 - [[kb/atomic/tests/c35ac4a8_19de_43af_b9f8_755da7e89c89-create_systemd_service_file_enable_the_service_modify_and_reload_the_service|Create Systemd Service file,  Enable the service , Modify and Reload the service. (bash; linux)]]
 - [[kb/atomic/tests/d9e4f24f_aa67_4c6e_bcbf_85622b697a7c-create_systemd_service|Create Systemd Service (bash; linux)]]
 - 3 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-dnscmd_exe|Dnscmd.exe (Execute)]]
 
 <!-- generated-detection-validation-end -->
 

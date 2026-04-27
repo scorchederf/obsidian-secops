@@ -68,7 +68,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -120,6 +120,20 @@ Similarly, on Linux systems adversaries may abuse trusted binaries such as `spli
 - [[kb/atomic/tests/1483fab9_4f52_4217_a9ce_daa9d7747cae-mshta_executes_javascript_scheme_fetch_remote_payload_with_getobject|Mshta executes JavaScript Scheme Fetch Remote Payload With GetObject (command_prompt; windows)]]
 - [[kb/atomic/tests/15756147_7470_4a83_87fb_bb5662526247-invoke_chm_shortcut_command_with_its_and_help_topic|Invoke CHM Shortcut Command with ITS and Help Topic (powershell; windows)]]
 - 71 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-addinutil_exe|AddinUtil.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-atbroker_exe|Atbroker.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-bash_exe|Bash.exe (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-bitsadmin_exe|Bitsadmin.exe (ADS, Download, Copy, Execute)]]
+- [[kb/lolbas/entries/osbinaries-certoc_exe|CertOC.exe (Execute, Download)]]
+- [[kb/lolbas/entries/osbinaries-change_exe|Change.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-cmstp_exe|Cmstp.exe (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/osbinaries-control_exe|Control.exe (ADS, Execute)]]
+- [[kb/lolbas/entries/osbinaries-customshellhost_exe|CustomShellHost.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-extexport_exe|Extexport.exe (Execute)]]
+- 77 more in the generated source index
 
 <!-- generated-detection-validation-end -->
 

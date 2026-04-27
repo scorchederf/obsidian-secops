@@ -72,7 +72,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -126,6 +126,11 @@ Adversaries may also impair routine operations that contribute to defensive hygi
 - [[kb/atomic/tests/1174b5df_2c33_490f_8854_f5eb80c907ca-block_cybersecurity_communication_by_leveraging_windows_name_resolution_policy_table|Block Cybersecurity communication by leveraging Windows Name Resolution Policy Table (powershell; windows)]]
 - [[kb/atomic/tests/11e65d8d_e7e4_470e_a3ff_82bc56ad938e-aws_guardduty_suspension_or_deletion|AWS - GuardDuty Suspension or Deletion (bash; iaas:aws)]]
 - 130 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-cipher_exe|Cipher.exe (Tamper)]]
+- [[kb/lolbas/entries/osbinaries-fltmc_exe|fltMC.exe (Tamper)]]
 
 <!-- generated-detection-validation-end -->
 

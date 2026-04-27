@@ -59,7 +59,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -114,6 +114,11 @@ Adversaries may use task scheduling to execute programs at system startup or on 
 - [[kb/atomic/tests/704333ca_cc12_4bcf_9916_101844881f54-scheduled_task_ghost_task_via_registry_key_manipulation|Scheduled Task ("Ghost Task") via Registry Key Manipulation (command_prompt; windows)]]
 - [[kb/atomic/tests/7266d898_ac82_4ec0_97c7_436075d0d08e-at_schedule_a_job|At - Schedule a job (sh; linux)]]
 - 14 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-at_exe|At.exe (Execute)]]
+- [[kb/lolbas/entries/osbinaries-schtasks_exe|Schtasks.exe (Execute)]]
 
 <!-- generated-detection-validation-end -->
 

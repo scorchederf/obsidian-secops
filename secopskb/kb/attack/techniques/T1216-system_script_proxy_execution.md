@@ -25,7 +25,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -50,6 +50,19 @@ Adversaries may use trusted scripts, often signed with certificates, to proxy th
 - [[kb/atomic/tests/275d963d_3f36_476c_8bef_a2a3960ee6eb-syncappvpublishingserver_signed_script_powershell_command_execution|SyncAppvPublishingServer Signed Script PowerShell Command Execution (command_prompt; windows)]]
 - [[kb/atomic/tests/2a8f2d3c_3dec_4262_99dd_150cb2a4d63a-manage_bde_wsf_signed_script_command_execution|manage-bde.wsf Signed Script Command Execution (command_prompt; windows)]]
 - [[kb/atomic/tests/9dd29a1f_1e16_4862_be83_913b10a88f6c-pubprn_vbs_signed_script_bypass|PubPrn.vbs Signed Script Bypass (command_prompt; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osscripts-cl_invocation_ps1|CL_Invocation.ps1 (Execute)]]
+- [[kb/lolbas/entries/osscripts-cl_loadassembly_ps1|CL_LoadAssembly.ps1 (Execute)]]
+- [[kb/lolbas/entries/osscripts-cl_mutexverifiers_ps1|CL_Mutexverifiers.ps1 (Execute)]]
+- [[kb/lolbas/entries/osscripts-launch_vsdevshell_ps1|Launch-VsDevShell.ps1 (Execute)]]
+- [[kb/lolbas/entries/osscripts-manage_bde_wsf|Manage-bde.wsf (Execute)]]
+- [[kb/lolbas/entries/osscripts-pester_bat|Pester.bat (Execute)]]
+- [[kb/lolbas/entries/osscripts-pubprn_vbs|Pubprn.vbs (Execute)]]
+- [[kb/lolbas/entries/osscripts-syncappvpublishingserver_vbs|Syncappvpublishingserver.vbs (Execute)]]
+- [[kb/lolbas/entries/osscripts-utilityfunctions_ps1|UtilityFunctions.ps1 (Execute)]]
+- [[kb/lolbas/entries/osscripts-winrm_vbs|winrm.vbs (Execute, AWL Bypass)]]
 
 <!-- generated-detection-validation-end -->
 

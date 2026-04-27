@@ -56,7 +56,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -98,6 +98,11 @@ Many IaaS and SaaS platforms (such as Microsoft Exchange, Microsoft SharePoint, 
 - [[kb/atomic/tests/8bec51da_7a6d_4346_b941_51eca448c4b0-exfiltrate_data_as_text_over_https_using_wget|Exfiltrate data as text over HTTPS using wget (sh; linux)]]
 - [[kb/atomic/tests/a27916da_05f2_4316_a3ee_feec67a437be-exfiltrate_data_using_dns_queries_via_dig|Exfiltrate Data using DNS Queries via dig (bash; macos, linux)]]
 - 6 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-cmd_exe|Cmd.exe (ADS, Download, Upload)]]
+- [[kb/lolbas/entries/othermsbinaries-testwindowremoteagent_exe|TestWindowRemoteAgent.exe (Upload)]]
 
 <!-- generated-detection-validation-end -->
 

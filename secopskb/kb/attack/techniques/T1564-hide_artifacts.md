@@ -58,7 +58,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -107,6 +107,20 @@ Adversaries may also attempt to hide artifacts associated with malicious behavio
 - [[kb/atomic/tests/333c7de0_6fbe_42aa_ac2b_c7e40b18246a-create_and_hide_a_service_with_sc_exe|Create and Hide a Service with sc.exe (command_prompt; windows)]]
 - [[kb/atomic/tests/3b7015f2_3144_4205_b799_b05580621379-hidden_files|Hidden files (sh; macos)]]
 - 20 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-bitsadmin_exe|Bitsadmin.exe (ADS, Download, Copy, Execute)]]
+- [[kb/lolbas/entries/osbinaries-certutil_exe|Certutil.exe (Download, ADS, Encode, Decode)]]
+- [[kb/lolbas/entries/osbinaries-cmd_exe|Cmd.exe (ADS, Download, Upload)]]
+- [[kb/lolbas/entries/osbinaries-cscript_exe|Cscript.exe (ADS)]]
+- [[kb/lolbas/entries/osbinaries-devicecredentialdeployment_exe|DeviceCredentialDeployment.exe (Conceal)]]
+- [[kb/lolbas/entries/osbinaries-diantz_exe|Diantz.exe (ADS, Download, Execute)]]
+- [[kb/lolbas/entries/osbinaries-esentutl_exe|Esentutl.exe (Copy, ADS, Download)]]
+- [[kb/lolbas/entries/osbinaries-expand_exe|Expand.exe (Download, Copy, ADS)]]
+- [[kb/lolbas/entries/osbinaries-extrac32_exe|Extrac32.exe (ADS, Download, Copy)]]
+- [[kb/lolbas/entries/osbinaries-findstr_exe|Findstr.exe (ADS, Credentials, Download)]]
+- 15 more in the generated source index
 
 <!-- generated-detection-validation-end -->
 

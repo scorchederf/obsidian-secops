@@ -30,7 +30,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -64,6 +64,11 @@ In cloud environments, adversaries may leverage access to delete cloud storage o
 - [[kb/atomic/tests/38deee99_fd65_4031_bec8_bfa4f9f26146-freebsd_macos_linux_overwrite_file_with_dd|FreeBSD/macOS/Linux - Overwrite file with DD (sh; linux, macos)]]
 - [[kb/atomic/tests/476419b5_aebf_4366_a131_ae3e8dae5fc2-windows_overwrite_file_with_sysinternals_sdelete|Windows - Overwrite file with SysInternals SDelete (powershell; windows)]]
 - [[kb/atomic/tests/4ac71389_40f4_448a_b73f_754346b3f928-gcp_delete_bucket|GCP - Delete Bucket (sh; iaas:gcp)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-cipher_exe|Cipher.exe (Tamper)]]
+- [[kb/lolbas/entries/osbinaries-fsutil_exe|Fsutil.exe (Tamper, Execute)]]
 
 <!-- generated-detection-validation-end -->
 

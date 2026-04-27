@@ -53,7 +53,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -105,6 +105,11 @@ More sophisticated samples may perform multiple process injections to segment mo
 - [[kb/atomic/tests/3ad4a037_1598_4136_837c_4027e4fa319b-runpe_via_vba|RunPE via VBA (powershell; windows)]]
 - [[kb/atomic/tests/49543237_25db_497b_90df_d0a0a6e8fe2c-dirty_vanity_process_injection|Dirty Vanity process Injection (powershell; windows)]]
 - 16 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/othermsbinaries-coregen_exe|coregen.exe (Execute, AWL Bypass)]]
+- [[kb/lolbas/entries/yml_template_yml-binary_exe|Binary.exe (Execute, AWL Bypass)]]
 
 <!-- generated-detection-validation-end -->
 

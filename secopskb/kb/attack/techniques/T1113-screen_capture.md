@@ -30,7 +30,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -58,6 +58,10 @@ Adversaries may attempt to take screen captures of the desktop to gather informa
 - [[kb/atomic/tests/9cd1cccb_91e4_4550_9139_e20a586fcea1-capture_linux_desktop_using_import_tool|Capture Linux Desktop using Import Tool (bash; linux)]]
 - [[kb/atomic/tests/deb7d358_5fbd_4dc4_aecc_ee0054d2d9a4-screencapture_silent|Screencapture (silent) (bash; macos)]]
 - [[kb/atomic/tests/e9313014_985a_48ef_80d9_cde604ffc187-windows_screen_capture_copyfromscreen|Windows Screen Capture (CopyFromScreen) (powershell; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-psr_exe|Psr.exe (Reconnaissance)]]
 
 <!-- generated-detection-validation-end -->
 

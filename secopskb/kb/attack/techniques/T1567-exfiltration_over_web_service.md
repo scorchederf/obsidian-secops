@@ -42,7 +42,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -76,6 +76,11 @@ Web service providers also commonly use SSL/TLS encryption, giving adversaries a
 - [[kb/atomic/tests/8529ee44_279a_4a19_80bf_b846a40dda58-exfiltrate_data_with_rclone_to_cloud_storage_mega_windows|Exfiltrate data with rclone to cloud Storage - Mega (Windows) (powershell; windows)]]
 - [[kb/atomic/tests/a4b74723_5cee_4300_91c3_5e34166909b4-exfiltrate_data_with_rclone_to_cloud_storage_aws_s3|Exfiltrate data with rclone to cloud Storage - AWS S3 (powershell; linux, macos)]]
 - [[kb/atomic/tests/c2e8ab6e_431e_460a_a2aa_3bc6a32022e3-exfiltrate_data_with_http_post_to_text_storage_sites_pastebin_com_windows|Exfiltrate data with HTTP POST to text storage sites - pastebin.com (Windows) (powershell; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-configsecuritypolicy_exe|ConfigSecurityPolicy.exe (Upload, Download)]]
+- [[kb/lolbas/entries/osbinaries-datasvcutil_exe|DataSvcUtil.exe (Upload)]]
 
 <!-- generated-detection-validation-end -->
 

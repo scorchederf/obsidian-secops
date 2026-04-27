@@ -82,7 +82,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -137,6 +137,10 @@ Since the execution can be proxied by an account with higher permissions, such a
 - [[kb/atomic/tests/2002f5ea_cd13_4c82_bf73_e46722e5dc5e-replace_narrator_exe_narrator_binary_with_cmd_exe|Replace Narrator.exe (Narrator binary) with cmd.exe (command_prompt; windows)]]
 - [[kb/atomic/tests/210be7ea_d841_40ec_b3e1_ff610bb62744-replace_atbroker_exe_app_switcher_binary_with_cmd_exe|Replace AtBroker.exe (App Switcher binary) with cmd.exe (command_prompt; windows)]]
 - 45 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-netsh_exe|Netsh.exe (Execute)]]
 
 <!-- generated-detection-validation-end -->
 

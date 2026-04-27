@@ -39,7 +39,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -86,6 +86,10 @@ Alternatively, by leveraging the `EfsRpcOpenFileRaw` function, an adversary can 
 - [[kb/atomic/tests/485ce873_2e65_4706_9c7e_ae3ab9e14213-petitpotam|PetitPotam (powershell; windows)]]
 - [[kb/atomic/tests/7f06b25c_799e_40f1_89db_999c9cc84317-winpwn_powersharppack_retrieving_ntlm_hashes_without_touching_lsass|WinPwn - PowerSharpPack - Retrieving NTLM Hashes without Touching LSASS (powershell; windows)]]
 - [[kb/atomic/tests/81cfdd7f_1f41_4cc5_9845_bb5149438e37-trigger_an_authenticated_rpc_call_to_a_target_server_with_no_sign_flag_set|Trigger an authenticated RPC call to a target server with no Sign flag set (powershell; windows)]]
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-rpcping_exe|Rpcping.exe (Credentials)]]
 
 <!-- generated-detection-validation-end -->
 

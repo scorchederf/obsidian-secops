@@ -41,7 +41,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -96,6 +96,20 @@ Files can also be transferred using various [[T1102-web_service|T1102: Web Servi
 - [[kb/atomic/tests/3d25f1f2_55cb_4a41_a523_d17ad4cfba19-windows_pull_file_using_sftp_exe|Windows pull file using sftp.exe (powershell; windows)]]
 - [[kb/atomic/tests/3dd6a6cf_9c78_462c_bd75_e9b54fc8925b-download_a_file_with_onedrive_standalone_updater|Download a file with OneDrive Standalone Updater (powershell; windows)]]
 - 29 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/honorablementions-gfxdownloadwrapper_exe|GfxDownloadWrapper.exe (Download)]]
+- [[kb/lolbas/entries/osbinaries-appinstaller_exe|AppInstaller.exe (Download)]]
+- [[kb/lolbas/entries/osbinaries-bitsadmin_exe|Bitsadmin.exe (ADS, Download, Copy, Execute)]]
+- [[kb/lolbas/entries/osbinaries-certoc_exe|CertOC.exe (Execute, Download)]]
+- [[kb/lolbas/entries/osbinaries-certreq_exe|CertReq.exe (Download, Upload)]]
+- [[kb/lolbas/entries/osbinaries-certutil_exe|Certutil.exe (Download, ADS, Encode, Decode)]]
+- [[kb/lolbas/entries/osbinaries-cmd_exe|Cmd.exe (ADS, Download, Upload)]]
+- [[kb/lolbas/entries/osbinaries-cmdl32_exe|cmdl32.exe (Download)]]
+- [[kb/lolbas/entries/osbinaries-configsecuritypolicy_exe|ConfigSecurityPolicy.exe (Upload, Download)]]
+- [[kb/lolbas/entries/osbinaries-desktopimgdownldr_exe|Desktopimgdownldr.exe (Download)]]
+- 48 more in the generated source index
 
 <!-- generated-detection-validation-end -->
 

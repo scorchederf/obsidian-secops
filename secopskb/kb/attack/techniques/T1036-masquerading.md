@@ -49,7 +49,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -99,6 +99,13 @@ Renaming abusable system utilities to evade security monitoring is also a form o
 - [[kb/atomic/tests/83810c46_f45e_4485_9ab6_8ed0e9e6ed7f-malicious_process_masquerading_as_lsm_exe|Malicious process Masquerading as LSM.exe (command_prompt; windows)]]
 - [[kb/atomic/tests/89a7dd26_e510_4c9f_9b15_f3bae333360f-space_after_filename_manual|Space After Filename (Manual) (manual; macos)]]
 - 10 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/osbinaries-colorcpl_exe|Colorcpl.exe (Copy)]]
+- [[kb/lolbas/entries/osbinaries-diantz_exe|Diantz.exe (ADS, Download, Execute)]]
+- [[kb/lolbas/entries/osbinaries-makecab_exe|Makecab.exe (ADS, Download, Execute)]]
+- [[kb/lolbas/entries/osbinaries-msbuild_exe|Msbuild.exe (AWL Bypass, Execute)]]
 
 <!-- generated-detection-validation-end -->
 

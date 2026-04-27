@@ -48,7 +48,7 @@ tags:
   - "offense"
 ---
 
-[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[workspaces/index|Notes]]
+[[index|Home]] • [[kb/attack/index|ATT&CK]] • [[kb/tools/index|Tools]] • [[kb/defend/index|D3FEND]] • [[kb/car/index|CAR]] • [[kb/sigma/index|Sigma]] • [[kb/atomic/index|Atomic]] • [[kb/lolbas/index|LOLBAS]] • [[workspaces/index|Notes]]
 
 ---
 
@@ -99,6 +99,10 @@ Removal of these indicators may interfere with event collection, reporting, or o
 - [[kb/atomic/tests/1602ff76_ed7f_4c94_b550_2f727b4782d4-overwrite_linux_mail_spool|Overwrite Linux Mail Spool (bash; linux)]]
 - [[kb/atomic/tests/1b682d84_f075_4f93_9a89_8a8de19ffd6e-clear_event_logs_via_vba|Clear Event Logs via VBA (powershell; windows)]]
 - 61 more in the generated source index
+
+### LOLBAS Entries
+
+- [[kb/lolbas/entries/othermsbinaries-update_exe|Update.exe (Download, AWL Bypass, Execute)]]
 
 <!-- generated-detection-validation-end -->
 
